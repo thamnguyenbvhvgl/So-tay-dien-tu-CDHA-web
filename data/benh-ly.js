@@ -61,8 +61,8 @@ window.SOTAY_BENHLY = [
       ]}
     ],
     hinhAnh: [
-      { src: "",
-        caption: "Ca bệnh thật của khoa — ảnh chỉ xem ở bản nội bộ (mở bằng mật khẩu).",
+      { enc: "images/benh-ly/cta-dm-chi-duoi-ktv-tham.enc", iter: 150000,
+        caption: "CTA động mạch chi dưới — ca lâm sàng của khoa (cần mật khẩu để xem).",
         nguon: "Ca lâm sàng của khoa CĐHA – BV Hùng Vương Gia Lai (CN. Nguyễn Hồng Thắm)." }
     ],
     nguon: "Ca lâm sàng khoa CĐHA – BV Hùng Vương Gia Lai."

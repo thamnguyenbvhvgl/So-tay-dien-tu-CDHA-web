@@ -366,6 +366,28 @@ mark { background: #ffe680; color: inherit; padding: 0 2px; border-radius: 3px; 
 }
 .img-missing small { opacity: .8; }
 
+/* ô ảnh ca bệnh thật — mã hóa, mở bằng mật khẩu (bản công khai) */
+.enc-panel {
+  display: flex; flex-direction: column; gap: 7px;
+  min-height: 120px; padding: 14px; text-align: center;
+  border: 1px dashed var(--brand); border-radius: 10px;
+  background: var(--surface-2); color: var(--text-soft);
+}
+.enc-panel .enc-lock { font-size: 13px; font-weight: 700; color: var(--brand-ink); }
+.enc-panel .enc-pass {
+  width: 100%; font-size: 15px; padding: 9px 10px;
+  border: 1.5px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--text);
+}
+.enc-panel .enc-pass:focus { outline: none; border-color: var(--cyan, var(--xq)); }
+.enc-panel .enc-btn {
+  font-size: 14px; font-weight: 600; padding: 8px 14px;
+  border: 1px solid var(--brand); background: var(--brand); color: #fff;
+  border-radius: 8px; cursor: pointer;
+}
+.enc-panel .enc-btn:disabled { opacity: .6; cursor: default; }
+.enc-panel .enc-msg { font-size: 12.5px; color: var(--danger); min-height: 16px; }
+
 /* băng ghi chú đầu phân hệ (mục Bệnh lý = tham khảo) */
 .view-note {
   background: var(--warn-bg); border: 1px solid var(--warn-line); color: var(--warn-ink);

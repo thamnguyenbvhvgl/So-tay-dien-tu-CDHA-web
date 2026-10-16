@@ -154,6 +154,53 @@
   var overlay    = $("detailOverlay");
   var detailBody = $("detailBody");
 
+  // --- Ảnh ca bệnh thật mã hóa (AES-256-CBC, mở bằng mật khẩu) -------------
+  // Chỉ dùng cho bản công khai: ảnh để ở dạng .enc = salt(16)|iv(16)|ciphertext.
+  function encDeriveKey(password, salt, iter) {
+    return crypto.subtle.importKey(
+      "raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]
+    ).then(function (base) {
+      return crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt: salt, iterations: iter, hash: "SHA-256" },
+        base, { name: "AES-CBC", length: 256 }, false, ["decrypt"]);
+    });
+  }
+  function wireEnc(root) {
+    var panels = root.querySelectorAll(".enc-panel");
+    Array.prototype.forEach.call(panels, function (p) {
+      var btn = p.querySelector(".enc-btn"),
+          inp = p.querySelector(".enc-pass"),
+          msg = p.querySelector(".enc-msg");
+      function open() {
+        var pwd = inp.value || "";
+        if (!pwd) { msg.textContent = "Nhập mật khẩu."; return; }
+        if (!window.crypto || !crypto.subtle) {
+          msg.textContent = "Trình duyệt không hỗ trợ giải mã (cần mở bằng HTTPS)."; return;
+        }
+        btn.disabled = true; msg.textContent = "Đang mở ảnh…";
+        var url = p.getAttribute("data-enc"),
+            iter = parseInt(p.getAttribute("data-iter"), 10) || 150000;
+        fetch(url).then(function (r) { return r.arrayBuffer(); }).then(function (ab) {
+          var b = new Uint8Array(ab);
+          return encDeriveKey(pwd, b.slice(0, 16), iter).then(function (key) {
+            return crypto.subtle.decrypt({ name: "AES-CBC", iv: b.slice(16, 32) }, key, b.slice(32));
+          });
+        }).then(function (plain) {
+          var u8 = new Uint8Array(plain);
+          if (!(u8[0] === 0x89 && u8[1] === 0x50)) throw new Error("magic");
+          var img = document.createElement("img");
+          img.src = URL.createObjectURL(new Blob([u8], { type: "image/png" }));
+          img.alt = "Ảnh ca bệnh thật"; img.loading = "lazy";
+          p.parentNode.replaceChild(img, p);
+        }).catch(function () {
+          btn.disabled = false; msg.textContent = "Sai mật khẩu hoặc không mở được ảnh.";
+        });
+      }
+      btn.addEventListener("click", open);
+      inp.addEventListener("keydown", function (e) { if (e.key === "Enter") open(); });
+    });
+  }
+
   function openDetail(it) {
     var h = "";
     h += '<h1 class="detail-title">' + esc(it.ten) + "</h1>";
@@ -184,6 +231,12 @@
         if (src) {
           hasReal = true;
           h += '<img loading="lazy" src="' + esc(src) + '" alt="' + cap + '">';
+        } else if (im.enc) {
+          h += '<div class="enc-panel" data-enc="' + esc(im.enc) + '" data-iter="' + (im.iter || 150000) + '">' +
+               '<div class="enc-lock">🔒 Ảnh ca bệnh thật — cần mật khẩu</div>' +
+               '<input type="password" class="enc-pass" placeholder="Nhập mật khẩu" autocomplete="off">' +
+               '<button type="button" class="enc-btn">Mở ảnh</button>' +
+               '<div class="enc-msg"></div></div>';
         } else {
           h += '<div class="img-missing">Chưa có ảnh<br><small>chèn ảnh được phép dùng</small></div>';
         }
@@ -199,6 +252,7 @@
       h += '<p class="detail-meta">Nguồn: ' + esc(it.nguon) + "</p>";
     }
     detailBody.innerHTML = h;
+    wireEnc(detailBody);
     overlay.hidden = false;
     document.body.style.overflow = "hidden";
     overlay.scrollTop = 0;
