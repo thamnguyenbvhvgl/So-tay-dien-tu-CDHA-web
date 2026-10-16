@@ -190,6 +190,47 @@ window.SOTAY_CONGCU = {
     ]
   },
 
+  /* --------------------------- 2c) THOÁT MẠCH THUỐC CẢN QUANG (extrav.) --- */
+  /* KHUNG theo tài liệu chuẩn chung (ACR Manual on Contrast Media; quy trình
+     xử trí thoát mạch thuốc cản quang). CHỜ TRƯỞNG KHOA DUYỆT trước khi dùng. */
+  thoatMach: {
+    chuaDuyet: true,
+    nguon: "Khung tham khảo theo tài liệu chuẩn (ACR Manual on Contrast Media). Chờ Trưởng khoa duyệt.",
+    luuYDau: "Khung tham khảo — CHƯA được duyệt. Khi xảy ra thoát mạch thực tế: báo bác sĩ ngay và theo quy trình của khoa.",
+    flow: [
+      { loai: "buoc", mau: "brand", tieuDe: "① NHẬN BIẾT sớm", items: [
+        "Trong/ngay sau khi tiêm: người bệnh đau, rát, căng tức, sưng tại vị trí tiêm.",
+        "Máy bơm báo áp lực cao, dòng thuốc chậm/ngừng; mất 'cảm giác' tĩnh mạch.",
+        "Da vùng tiêm căng bóng, lạnh, đổi màu."
+      ]},
+      { loai: "nhan", mau: "danger", tieuDe: "② NGỪNG TIÊM NGAY + báo bác sĩ", items: [
+        "Dừng bơm tiêm lập tức; chưa rút kim vội — thử hút ngược lượng thuốc còn lại qua kim nếu được, rồi rút kim.",
+        "Không ép/xoa mạnh vùng thoát mạch."
+      ]},
+      { loai: "buoc", mau: "", tieuDe: "③ Xử trí ban đầu", items: [
+        "Nâng cao chi tổn thương trên mức tim để giảm phù.",
+        "Chườm theo quy trình khoa (thường chườm ấm hỗ trợ hấp thu; một số nơi chườm lạnh giảm đau) — 15–60 phút, nhắc lại.",
+        "Đánh dấu ranh giới vùng sưng, theo dõi tiến triển."
+      ]},
+      { loai: "row", tieuDe: "④ ĐÁNH GIÁ MỨC ĐỘ", cot: [
+        { muc: "Nhẹ (đa số)", mau: "nhe", items: [
+          "Thể tích nhỏ, phù khu trú, không rối loạn tưới máu.",
+          "Theo dõi, trấn an; hướng dẫn dấu hiệu nặng; đa số tự hồi phục."
+        ]},
+        { muc: "Nặng / biến chứng", mau: "nguykich", items: [
+          "Thể tích lớn; phồng rộp, loét da; đau tăng nhanh.",
+          "Giảm/mất mạch, dị cảm, tê, giảm vận động → nguy cơ hội chứng chèn ép khoang.",
+          "→ HỘI CHẨN NGOẠI / PHẪU THUẬT TẠO HÌNH NGAY."
+        ]}
+      ]},
+      { loai: "buoc", mau: "", tieuDe: "⑤ THEO DÕI & DẶN DÒ", items: [
+        "Theo dõi tại chỗ 2–4 giờ; kiểm tra lại mạch, cảm giác, vận động, màu da.",
+        "Dặn người bệnh quay lại ngay nếu: đau tăng, tê bì, mất cảm giác, da đổi màu/phồng rộp.",
+        "Ghi hồ sơ: loại & thể tích thuốc ước tính thoát mạch, vị trí, xử trí, tình trạng khi ra về."
+      ]}
+    ]
+  },
+
   /* ------------------------------------------- 3) BẢNG KIỂM AN TOÀN MRI --- */
   /* Nội dung lấy từ chống chỉ định trong quy trình MRI của khoa (dữ liệu thật). */
   bangKiemMRI: {

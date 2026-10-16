@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sổ tay điện tử CĐHA — Giao diện mới</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* ===== KHUNG APP: nội dung (trái) + sidebar dọc (phải) ===== */
+  .appbar { position: sticky; top: 0; z-index: 30; background: var(--surface);
+            border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .appbar .inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center;
+                   gap: 12px; padding: 10px 16px; }
+  .appbar img { height: 38px; }
+  .appbar .t b { color: var(--brand-ink); font-size: 16px; }
+  .appbar .t span { display: block; color: var(--text-soft); font-size: 12px; }
+  .appbar .sp { flex: 1; }
+  .appbar a.home { color: var(--brand); text-decoration: none; font-weight: 600; font-size: 14px; }
+  .appbar .theme { width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
+                   background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
+
+  .shell { max-width: 1280px; margin: 14px auto; padding: 0 16px 36px;
+           display: grid; grid-template-columns: 1fr 248px; gap: 16px; align-items: start; }
+
+  /* --- SIDEBAR DỌC BÊN PHẢI --- */
+  .sidebar { position: sticky; top: 74px; display: flex; flex-direction: column; gap: 8px; }
+  .sidebar .cap { font-size: 11.5px; text-transform: uppercase; letter-spacing: .5px;
+                  color: var(--text-soft); font-weight: 700; padding: 2px 6px 4px; }
+  .navbtn { display: flex; align-items: center; gap: 11px; text-align: left; cursor: pointer;
+            border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px;
+            background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+  .navbtn .ico { width: 34px; height: 34px; flex: none; border-radius: 9px; display: grid;
+                 place-items: center; font-size: 18px; background: var(--surface-2); }
+  .navbtn .lbl b { font-size: 14.5px; display: block; line-height: 1.2; }
+  .navbtn .lbl span { font-size: 11.5px; color: var(--text-soft); }
+  .navbtn .no { margin-left: auto; font-weight: 800; color: var(--text-soft); font-size: 13px; }
+  .navbtn:hover { border-color: var(--brand); }
+  .navbtn.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .navbtn.active .ico { background: rgba(255,255,255,.2); }
+  .navbtn.active .lbl span, .navbtn.active .no { color: rgba(255,255,255,.85); }
+
+  /* --- NỘI DUNG CHÍNH + SUB-TABS NGANG --- */
+  .content { min-width: 0; background: var(--surface); border: 1px solid var(--line);
+             border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+  .subtabs { display: flex; gap: 6px; padding: 10px 12px; flex-wrap: wrap;
+             border-bottom: 1px solid var(--line); background: var(--surface-2); }
+  .subtab { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
+            padding: 8px 15px; border-radius: 999px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .subtab.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .panel { padding: 18px; min-height: 360px; }
+  .panel h2 { margin: 0 0 4px; font-size: 20px; color: var(--brand-ink); }
+  .panel .desc { color: var(--text-soft); font-size: 14px; margin: 0 0 16px; }
+
+  .stub { border: 1px dashed var(--line); border-radius: 12px; background: var(--surface-2);
+          padding: 22px; color: var(--text-soft); }
+  .stub b { color: var(--brand-ink); }
+  .stub ul { margin: 10px 0 0; padding-left: 20px; } .stub li { margin-bottom: 5px; font-size: 14px; }
+  .chip-soon { display:inline-block; font-size:11px; font-weight:700; color:var(--warn-ink);
+               background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:999px; padding:2px 9px; margin-left:6px; }
+
+  @media (max-width: 860px) {
+    .shell { grid-template-columns: 1fr; }
+    .sidebar { position: static; flex-direction: row; overflow-x: auto; gap: 8px; padding-bottom: 4px; }
+    .sidebar .cap { display: none; }
+    .navbtn { flex: 0 0 auto; min-width: 150px; }
+    .navbtn .no { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="topstrip" style="height:4px;background:linear-gradient(90deg,var(--xq),var(--ct) 55%,var(--brand))"></div>
+  <header class="appbar">
+    <div class="inner">
+      <img src="assets/logo-hvgl.png" alt="BV Hùng Vương Gia Lai">
+      <div class="t"><b>Sổ tay điện tử CĐHA</b><span>Khoa Chẩn đoán hình ảnh · giao diện mới</span></div>
+      <div class="sp"></div>
+      <a class="home" href="index.html">← Trang v1.0</a>
+      <button class="theme" id="themeBtn" title="Nền sáng/tối">🌙</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <!-- NỘI DUNG CHÍNH (trái) -->
+    <main class="content">
+      <nav class="subtabs" id="subtabs"></nav>
+      <section class="panel" id="panel"></section>
+    </main>
+
+    <!-- SIDEBAR DỌC (phải) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="cap">Danh mục chức năng</div>
+    </aside>
+  </div>
+
+  <script src="data/quy-trinh.js"></script>
+  <script src="data/cong-cu.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var QT = window.SOTAY_QUYTRINH || [];
+    var CONGCU = window.SOTAY_CONGCU || {};
+    function countMod(m) { return QT.filter(function (x) { return x.modality === m; }).length; }
+    function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+
+    // 5 danh mục lớn (sidebar) + sub-tabs của từng mục
+    var SECTIONS = [
+      { id:1, ico:"🚨", ten:"Công cụ khẩn cấp", en:"Emergency Toolkit", badge:"3",
+        subs:["Sốc phản vệ","Ngưng tuần hoàn (CPR)","Thoát mạch thuốc cản quang"] },
+      { id:2, ico:"🦴", ten:"Quy trình X-quang", en:"X-Ray Protocol", badge:String(countMod("X-quang")),
+        subs:["Chọn theo vùng cơ thể"] },
+      { id:3, ico:"🩻", ten:"Quy trình CT", en:"CT Protocol", badge:String(countMod("CT")),
+        subs:["Không tiêm (hình Nữ)","Có tiêm (hình Nam)","Máy tính liều CCTA"] },
+      { id:4, ico:"🧲", ten:"Quy trình MRI", en:"MRI Protocol", badge:String(countMod("MRI")),
+        subs:["Theo vùng giải phẫu"] },
+      { id:5, ico:"📋", ten:"Ca lâm sàng tham khảo", en:"Clinical Cases", badge:"",
+        subs:["Danh sách ca"] }
+    ];
+
+    var sidebar = document.getElementById("sidebar");
+    var subtabsBox = document.getElementById("subtabs");
+    var panel = document.getElementById("panel");
+    var curSec = null, curSub = 0;
+
+    SECTIONS.forEach(function (s) {
+      var b = el("button", "navbtn",
+        '<span class="ico">' + s.ico + '</span>' +
+        '<span class="lbl"><b>[' + s.id + '] ' + s.ten + '</b><span>' + s.en + '</span></span>' +
+        (s.badge ? '<span class="no">' + s.badge + '</span>' : ''));
+      b.setAttribute("data-sid", s.id);
+      b.onclick = function () { selectSection(s.id, 0); };
+      sidebar.appendChild(b);
+    });
+
+    function selectSection(id, sub) {
+      var s = SECTIONS.filter(function (x) { return x.id === id; })[0]; if (!s) return;
+      curSec = s; curSub = sub || 0;
+      Array.prototype.forEach.call(sidebar.querySelectorAll(".navbtn"), function (c) {
+        c.classList.toggle("active", c.getAttribute("data-sid") === String(id));
+      });
+      // sub-tabs
+      subtabsBox.innerHTML = "";
+      s.subs.forEach(function (name, i) {
+        var t = el("button", "subtab" + (i === curSub ? " active" : ""), esc(name));
+        t.onclick = function () { selectSection(id, i); };
+        subtabsBox.appendChild(t);
+      });
+      renderPanel(s, curSub);
+      try { history.replaceState(null, "", "#" + id); } catch (e) {}
+    }
+    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+    // Bước này: khung điều hướng — nội dung chi tiết sẽ dựng ở các bước sau.
+    var PLAN = {
+      1: { 0:["Phác đồ sốc phản vệ theo Thông tư 51/2017/TT-BYT (đã số hóa & duyệt) — sẽ gắn vào đây."],
+           1:["Phác đồ cấp cứu ngưng tuần hoàn CPR theo AHA 2020 (đã số hóa & duyệt) — sẽ gắn vào đây."],
+           2:["Xử trí thoát mạch thuốc cản quang (Extravasation) — <b>nội dung mới, chờ nguồn & Trưởng khoa duyệt.</b>"] },
+      2: { 0:["Hình người toàn thân → bấm vùng (Sọ, Cổ, Ngực, Bụng, Chậu, Chi trên, Chi dưới) → danh mục kỹ thuật + thông số (tư thế, hướng tia, kV, mAs, FFD, tiêu chuẩn).",
+              "Đã có sẵn ở <b>chon-protocol.html</b> — sẽ nhúng vào khung này."] },
+      3: { 0:["Hình <b>Nữ</b> — chọn protocol CT <b>KHÔNG tiêm thuốc</b> theo vùng."],
+           1:["Hình <b>Nam</b> — chọn protocol CT <b>CÓ tiêm thuốc</b> theo vùng."],
+           2:["Máy tính liều thuốc cản quang CTA động mạch vành (WB-IDR: cân nặng, ml/s, tổng thể tích) — đã có, sẽ gắn vào đây."] },
+      4: { 0:["Selector MRI theo vùng giải phẫu — <b>bố cục chi tiết cập nhật sau.</b>"] },
+      5: { 0:["Ngân hàng ca lâm sàng tham khảo (dấu hiệu bệnh lý XQ/CT/MRI). Ảnh ca thật bảo vệ bằng mật khẩu ở bản công khai."] }
+    };
+
+    // --- bộ vẽ "bản đồ quy trình" (dùng chung CSS .flow-* trong style.css) ---
+    function liList(items){ return "<ul>" + (items||[]).map(function(x){return "<li>"+esc(x)+"</li>";}).join("") + "</ul>"; }
+    function noticeEl(text, ok){ return el("div","notice"+(ok?" ok":""), esc(text)); }
+    function renderFlow(card, flow){
+      (flow||[]).forEach(function(b,i){
+        if(i>0) card.appendChild(el("div","flow-arrow","▼"));
+        if(b.loai==="row"){
+          if(b.tieuDe) card.appendChild(el("div","flow-rowtitle",esc(b.tieuDe)));
+          var row=el("div","flow-row");
+          (b.cot||[]).forEach(function(c){ row.appendChild(el("div","flow-col "+(c.mau||""),'<div class="flow-h">'+esc(c.muc)+"</div>"+liList(c.items))); });
+          card.appendChild(row);
+        } else {
+          var cls="flow-box "+(b.loai==="nhan"?"emph ":"")+(b.loai==="dich"?"goal ":"")+(b.mau||"");
+          card.appendChild(el("div",cls,'<div class="flow-h">'+esc(b.tieuDe)+"</div>"+(b.items&&b.items.length?liList(b.items):"")));
+        }
+      });
+    }
+
+    function renderPanel(s, sub) {
+      panel.innerHTML = "";
+      panel.appendChild(el("h2", null, '[' + s.id + '] ' + esc(s.ten)));
+      panel.appendChild(el("p","desc", esc(s.en) + ' — mục: <b>' + esc(s.subs[sub]) + '</b>'));
+
+      if (s.id === 1) { renderEmergency(sub); return; }
+      if (s.id === 2) { renderXquang(); return; }
+      if (s.id === 3) { renderCT(sub); return; }
+      if (s.id === 4) { iframePane("chon-protocol.html?embed=1&modality=MRI", "Protocol MRI"); return; }
+
+      var items = (PLAN[s.id] && PLAN[s.id][sub]) || ["(Nội dung sẽ được bổ sung.)"];
+      panel.appendChild(el("div","stub",
+        '<b>🔧 Khung điều hướng đã sẵn sàng.</b> Nội dung mục này sẽ được dựng ở bước tiếp theo:' + liList(items)));
+    }
+
+    function renderEmergency(sub) {
+      var map = [CONGCU.phanVe, CONGCU.ngungTuanHoan, CONGCU.thoatMach];
+      var titles = ["🚨 Phác đồ xử trí phản vệ", "❤️‍🩹 Cấp cứu ngưng tuần hoàn (CPR)", "💉 Xử trí thoát mạch thuốc cản quang"];
+      var p = map[sub] || {};
+      var card = el("div","tool-card");
+      card.appendChild(el("h2", null, titles[sub]));
+      if (p.nguon) card.appendChild(el("p","tool-desc", esc(p.nguon)));
+      if (p.luuYDau) card.appendChild(noticeEl(p.luuYDau, false));
+      if (p.flow) renderFlow(card, p.flow);
+      else card.appendChild(el("p","desc","(Chưa có nội dung.)"));
+      panel.appendChild(card);
+    }
+
+    function iframePane(src, title) {
+      var wrap = el("div");
+      wrap.style.height = "calc(100vh - 220px)"; wrap.style.minHeight = "560px";
+      wrap.innerHTML = '<iframe src="' + src + '" title="' + esc(title) + '" ' +
+        'style="width:100%;height:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg)"></iframe>';
+      panel.appendChild(wrap);
+    }
+    function renderXquang() { iframePane("chon-protocol.html?embed=1", "Chọn protocol X-quang"); }
+    function renderCT(sub) {
+      if (sub === 2) { renderCCTA(); return; }
+      var contrast = (sub === 1) ? 1 : 0, sex = (sub === 1) ? "nam" : "nu";
+      iframePane("chon-protocol.html?embed=1&modality=CT&contrast=" + contrast + "&sex=" + sex, "Protocol CT");
+    }
+
+    function field(label, inner) { return '<div class="field"><label>' + label + '</label>' + inner + '</div>'; }
+    function renderCCTA() {
+      var d = CONGCU.lieuCCTA || {};
+      var cn = d.canNang || {}, idr = d.idr || {}, tg = d.thoiGian || {};
+      var card = el("div", "tool-card");
+      card.appendChild(el("h2", null, "🫀 Máy tính liều thuốc CCTA (ĐM vành)"));
+      if (d.nguon) card.appendChild(el("p", "tool-desc", esc(d.nguon)));
+      var form = el("div");
+      form.innerHTML =
+        field("Cân nặng (kg)", '<input id="c_cn" type="number" value="' + (cn.macDinh||70) + '" min="' + (cn.min||20) + '" max="' + (cn.max||150) + '">') +
+        field("Hệ số thuốc IDR (gI/kg/s)", '<input id="c_idr" type="number" step="0.001" value="' + (idr.macDinh||0.021) + '" min="' + (idr.min||0.01) + '" max="' + (idr.max||0.03) + '">') +
+        field("Nồng độ i-ốt (mgI/ml)", '<select id="c_nd">' + (d.nongDo||[350]).map(function (v) { return '<option' + (v===d.nongDoMacDinh?' selected':'') + '>' + v + '</option>'; }).join('') + '</select>') +
+        field("Thời gian tiêm (giây)", '<input id="c_tg" type="number" value="' + (tg.macDinh||13) + '" min="' + (tg.min||10) + '" max="' + (tg.max||15) + '">');
+      card.appendChild(form);
+      card.appendChild(el("div", "calc-result",
+        '<div>Tốc độ tiêm: <span class="big" id="c_flow">—</span> ml/s</div>' +
+        '<div>Tổng thể tích: <span class="big" id="c_vol">—</span> ml</div>'));
+      if (d.bangThamChieu && d.bangThamChieu.length) {
+        var t = '<div class="sec"><h3>Bảng tham chiếu kVp &amp; IDR theo cân nặng</h3><div class="ref-table"><table><thead><tr><th>Cân nặng</th><th>BMI</th><th>kVp</th><th>IDR</th></tr></thead><tbody>';
+        d.bangThamChieu.forEach(function (r) { t += '<tr><td>' + esc(r.can) + '</td><td>' + esc(r.bmi) + '</td><td>' + esc(r.kvp) + '</td><td>' + esc(r.idr) + '</td></tr>'; });
+        card.appendChild(el("div", null, t + '</tbody></table></div></div>'));
+      }
+      if (d.luuY) card.appendChild(el("div", "sec", '<h3>Lưu ý</h3>' + liList(d.luuY)));
+      panel.appendChild(card);
+      function calc() {
+        var w = parseFloat((document.getElementById("c_cn")||{}).value) || 0;
+        var i = parseFloat((document.getElementById("c_idr")||{}).value) || 0;
+        var nd = parseFloat((document.getElementById("c_nd")||{}).value) || 350;
+        var tt = parseFloat((document.getElementById("c_tg")||{}).value) || 0;
+        var flow = (w * i) / (nd / 1000), vol = flow * tt;
+        document.getElementById("c_flow").textContent = flow ? flow.toFixed(1) : "—";
+        document.getElementById("c_vol").textContent = vol ? Math.round(vol) : "—";
+      }
+      ["c_cn","c_idr","c_nd","c_tg"].forEach(function (id) {
+        var e = document.getElementById(id); if (!e) return;
+        e.addEventListener("input", calc); e.addEventListener("change", calc);
+      });
+      calc();
+    }
+
+    // nền sáng/tối
+    var tb = document.getElementById("themeBtn"), root = document.documentElement;
+    try { if (localStorage.getItem("sotay-theme") === "dark") { root.setAttribute("data-theme","dark"); tb.textContent="☀️"; } } catch (e) {}
+    tb.onclick = function () {
+      var dark = root.getAttribute("data-theme") === "dark";
+      root.setAttribute("data-theme", dark ? "light" : "dark");
+      tb.textContent = dark ? "🌙" : "☀️";
+      try { localStorage.setItem("sotay-theme", dark ? "light" : "dark"); } catch (e) {}
+    };
+
+    var ini = parseInt((location.hash || "").replace("#", ""), 10);
+    selectSection((ini >= 1 && ini <= 5) ? ini : 1, 0); // mặc định: Công cụ khẩn cấp
+  })();
+  </script>
+</body>
+</html>
