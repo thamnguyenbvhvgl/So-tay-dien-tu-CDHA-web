@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mẫu giao diện – Sổ tay điện tử CĐHA (BV Hùng Vương Gia Lai)</title>
+<style>
+  /* ============================ BỘ MÀU THƯƠNG HIỆU BV HÙNG VƯƠNG GIA LAI == */
+  :root{
+    --navy:#15509c; --navy-ink:#0e3a73;   /* navy  – chủ đạo & MRI */
+    --cyan:#2ba9e0; --cyan-ink:#167ca8;    /* cyan  – X-quang */
+    --steel:#5b8fc9; --steel-ink:#3f6ea6;  /* thép  – CT */
+    --red:#d81f26;  --red-ink:#b11c1c;     /* đỏ    – cấp cứu */
+    --bg:#eef3fa; --surface:#ffffff; --surface-2:#f1f6fc;
+    --text:#16202e; --soft:#5a6679; --line:#d7e0ee;
+    --shadow:0 2px 12px rgba(16,40,80,.10); --radius:14px; --maxw:960px;
+  }
+  :root[data-theme="dark"]{
+    --navy:#5b9be8; --navy-ink:#a9cbf5; --cyan:#43c0f0; --cyan-ink:#8fdcff;
+    --steel:#86add8; --steel-ink:#b7d2f0; --red:#ff6b6b; --red-ink:#ff9a9a;
+    --bg:#0e1420; --surface:#18212f; --surface-2:#121a26;
+    --text:#e7edf6; --soft:#9fb0c6; --line:#2a3646;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--text);
+        font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif; line-height:1.5; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 16px; }
+
+  /* ----------------------------------------------------------------- HEADER */
+  .topstrip{ height:5px; background:linear-gradient(90deg,var(--cyan),var(--steel) 55%,var(--navy)); }
+  .header{ position:relative; background:var(--surface); border-bottom:1px solid var(--line); overflow:hidden; }
+  .header .deco{ position:absolute; right:-40px; top:-46px; width:210px; height:210px;
+                 background:url("assets/logo-mark.jpg") center/contain no-repeat; opacity:.06;
+                 transform:rotate(8deg); pointer-events:none; }
+  .header .bar{ display:flex; align-items:center; gap:14px; padding:12px 0; position:relative; z-index:1; }
+  .logo{ height:42px; width:auto; display:block; }
+  :root[data-theme="dark"] .logo{ background:#fff; padding:4px 7px; border-radius:8px; }
+  .titles{ border-left:2px solid var(--line); padding-left:14px; }
+  .titles .t1{ font-size:17px; font-weight:800; color:var(--navy-ink); letter-spacing:.2px; }
+  .titles .t2{ font-size:12.5px; color:var(--soft); }
+  .spacer{ flex:1; }
+  .theme-btn{ border:1px solid var(--line); background:var(--surface-2); color:var(--text);
+              width:40px; height:40px; border-radius:10px; font-size:18px; cursor:pointer; }
+
+  .searchrow{ padding:12px 0 4px; }
+  .search{ width:100%; font-size:16px; padding:12px 14px; border:2px solid var(--line);
+           border-radius:12px; background:var(--surface); color:var(--text); }
+  .search:focus{ outline:none; border-color:var(--cyan); }
+
+  /* ------------------------------------------------------------------ TABS */
+  .tabs{ display:flex; gap:8px; padding:12px 0 2px; flex-wrap:wrap; }
+  .tab{ border:1px solid var(--line); background:var(--surface); color:var(--soft);
+        padding:9px 16px; border-radius:999px; font-size:14px; font-weight:600; cursor:pointer; }
+  .tab.active{ background:var(--navy); color:#fff; border-color:var(--navy); }
+
+  /* diamond (quả trám) marker lấy từ logo */
+  .diamond{ display:inline-block; width:11px; height:11px; transform:rotate(45deg);
+            background:var(--accent,var(--navy)); border-radius:2px; margin-right:9px; flex:none; }
+
+  /* --------------------------------------------------- CHÚ THÍCH MÃ MÀU */
+  .legend{ display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 4px; }
+  .lg{ display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600;
+       background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:6px 12px; }
+  .lg .dot{ width:12px; height:12px; border-radius:50%; }
+
+  .sec-h{ display:flex; align-items:center; margin:22px 0 10px; font-size:15px;
+          font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--soft); }
+
+  /* ------------------------------------------------------------------ CARD */
+  .card{ background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--accent,var(--navy));
+         border-radius:var(--radius); padding:16px 18px; margin-bottom:14px; box-shadow:var(--shadow); }
+  .g-xq{ --accent:var(--cyan); --accent-ink:var(--cyan-ink); }
+  .g-ct{ --accent:var(--steel); --accent-ink:var(--steel-ink); }
+  .g-mri{ --accent:var(--navy); --accent-ink:var(--navy-ink); }
+  .g-cc{ --accent:var(--red); --accent-ink:var(--red-ink); }
+
+  .card-top{ display:flex; align-items:center; gap:10px; margin-bottom:4px; }
+  .badge{ font-size:11.5px; font-weight:800; letter-spacing:.4px; color:#fff;
+          background:var(--accent); padding:3px 10px; border-radius:999px; }
+  .card h3{ margin:0; font-size:18px; color:var(--text); }
+  .card .sub{ font-size:13px; color:var(--soft); margin:2px 0 12px; }
+
+  .params{ display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:8px; margin:0 0 12px; }
+  .param{ background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:8px 10px; }
+  .param .k{ font-size:11.5px; color:var(--soft); }
+  .param .v{ font-size:16px; font-weight:800; color:var(--accent-ink,var(--navy-ink)); }
+
+  .block{ margin-top:10px; }
+  .block .bh{ display:flex; align-items:center; font-size:13.5px; font-weight:700; color:var(--accent-ink,var(--navy-ink)); margin-bottom:5px; }
+  .block ul{ margin:0; padding-left:20px; }
+  .block li{ margin-bottom:4px; font-size:14px; }
+
+  /* --------------------------------------------- BẢN ĐỒ QUY TRÌNH CẤP CỨU */
+  .flow .fbox{ border:1px solid var(--line); border-left:5px solid var(--red); background:var(--surface-2);
+               border-radius:10px; padding:10px 14px; }
+  .flow .fbox.emph{ border-left-width:6px; }
+  .flow .fh{ font-weight:800; font-size:14.5px; color:var(--red-ink); margin-bottom:4px; }
+  .flow ul{ margin:0; padding-left:20px; } .flow li{ font-size:14px; margin-bottom:3px; }
+  .flow .arrow{ text-align:center; color:var(--soft); margin:4px 0; }
+  .frow{ display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
+  .fcol{ border:1px solid var(--line); border-top:5px solid var(--sev,var(--red)); background:var(--surface-2);
+         border-radius:10px; padding:10px 12px; }
+  .fcol.nhe{ --sev:#1b7f4b; } .fcol.nang{ --sev:#d98a00; } .fcol.nguy{ --sev:var(--red); }
+  .fcol .fh{ color:var(--sev); }
+
+  .note{ background:#fdeaea; border:1px solid #f0b4b4; color:var(--red-ink);
+         border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:600; margin-top:10px; }
+  :root[data-theme="dark"] .note{ background:#3a1b1b; border-color:#7a2f2f; }
+
+  .footer{ margin:26px 0 40px; padding-top:16px; border-top:1px solid var(--line);
+           color:var(--soft); font-size:12.5px; text-align:center; }
+  .footer b{ color:var(--navy-ink); }
+</style>
+</head>
+<body>
+  <div class="topstrip"></div>
+  <header class="header">
+    <div class="deco"></div>
+    <div class="wrap bar">
+      <img class="logo" src="assets/logo-hvgl.png" alt="Bệnh viện Hùng Vương Gia Lai">
+      <div class="titles">
+        <div class="t1">SỔ TAY ĐIỆN TỬ</div>
+        <div class="t2">Khoa Chẩn đoán hình ảnh</div>
+      </div>
+      <div class="spacer"></div>
+      <button class="theme-btn" id="themeBtn" title="Nền sáng/tối">🌙</button>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="searchrow">
+      <input class="search" placeholder="🔎 Gõ tên quy trình, vùng chụp… (gõ không dấu cũng ra)">
+    </div>
+
+    <div class="tabs">
+      <div class="tab active">① Quy trình</div>
+      <div class="tab">② Protocol CT/MRI</div>
+      <div class="tab">③ Bệnh lý</div>
+      <div class="tab">④ Công cụ cấp cứu</div>
+    </div>
+
+    <div class="legend">
+      <span class="lg"><span class="dot" style="background:var(--cyan)"></span>X-quang</span>
+      <span class="lg"><span class="dot" style="background:var(--steel)"></span>CT</span>
+      <span class="lg"><span class="dot" style="background:var(--navy)"></span>MRI</span>
+      <span class="lg"><span class="dot" style="background:var(--red)"></span>Cấp cứu</span>
+    </div>
+
+    <!-- ================================================= X-QUANG (cyan) -->
+    <div class="sec-h"><span class="diamond" style="--accent:var(--cyan)"></span>Kỹ thuật X-quang</div>
+    <div class="card g-xq">
+      <div class="card-top"><span class="badge">X-QUANG</span><h3>Khớp gối – thẳng (AP)</h3></div>
+      <div class="sub">Nguồn: QUY TRÌNH XQ khoa CĐHA · ảnh tư thế Clark's 12th ed.</div>
+      <div class="params">
+        <div class="param"><div class="k">Cỡ phim</div><div class="v">24 × 30 cm</div></div>
+        <div class="param"><div class="k">Điện thế</div><div class="v">60 kVp</div></div>
+        <div class="param"><div class="k">mAs</div><div class="v">12</div></div>
+        <div class="param"><div class="k">Khoảng cách (SID)</div><div class="v">100 cm</div></div>
+      </div>
+      <div class="block"><div class="bh"><span class="diamond" style="--accent:var(--cyan)"></span>Tư thế</div>
+        <ul><li>Người bệnh nằm ngửa, chân duỗi thẳng, xoay nhẹ chi vào trong 3–5°.</li>
+            <li>Tia trung tâm vuông góc, vào điểm giữa dưới xương bánh chè 1 cm.</li></ul></div>
+      <div class="block"><div class="bh"><span class="diamond" style="--accent:var(--cyan)"></span>Tiêu chuẩn ảnh đạt</div>
+        <ul><li>Khe khớp gối mở rõ, hai lồi cầu cân đối.</li>
+            <li>Bánh chè nằm giữa đầu dưới xương đùi.</li></ul></div>
+    </div>
+
+    <!-- ===================================================== CT (thép) -->
+    <div class="sec-h"><span class="diamond" style="--accent:var(--steel)"></span>Protocol CT</div>
+    <div class="card g-ct">
+      <div class="card-top"><span class="badge">CT</span><h3>CT sọ não – không tiêm thuốc</h3></div>
+      <div class="sub">Nguồn: QUY TRÌNH CLVT khoa CĐHA · số liệu chờ Trưởng khoa thẩm định.</div>
+      <div class="params">
+        <div class="param"><div class="k">Độ dày lát cắt</div><div class="v">5 mm</div></div>
+        <div class="param"><div class="k">Nền sọ</div><div class="v">3 mm</div></div>
+        <div class="param"><div class="k">Điện thế</div><div class="v">120 kV</div></div>
+        <div class="param"><div class="k">Cửa sổ nhu mô</div><div class="v">80 / 40</div></div>
+      </div>
+      <div class="block"><div class="bh"><span class="diamond" style="--accent:var(--steel)"></span>Chỉ định</div>
+        <ul><li>Chấn thương sọ não, đột quỵ, đau đầu nghi bất thường nội sọ.</li></ul></div>
+      <div class="block"><div class="bh"><span class="diamond" style="--accent:var(--steel)"></span>Các bước</div>
+        <ul><li>Cắt từ lỗ chẩm đến đỉnh sọ, song song đường OM.</li>
+            <li>Dựng cửa sổ nhu mô + cửa sổ xương (WW 2500 / WL 480).</li></ul></div>
+    </div>
+
+    <!-- ==================================================== MRI (navy) -->
+    <div class="sec-h"><span class="diamond" style="--accent:var(--navy)"></span>Protocol MRI</div>
+    <div class="card g-mri">
+      <div class="card-top"><span class="badge">MRI</span><h3>MRI sọ não – thường quy</h3></div>
+      <div class="sub">Nguồn: QUY TRÌNH MRI khoa CĐHA (SOP) · chờ Trưởng khoa phê duyệt.</div>
+      <div class="params">
+        <div class="param"><div class="k">Chuỗi xung</div><div class="v">T1 · T2 · FLAIR · DWI</div></div>
+        <div class="param"><div class="k">Độ dày</div><div class="v">5 mm</div></div>
+        <div class="param"><div class="k">Gadolinium</div><div class="v">0,1 mmol/kg</div></div>
+      </div>
+      <div class="block"><div class="bh"><span class="diamond" style="--accent:var(--navy)"></span>Chuỗi xung cơ bản</div>
+        <ul><li>Axial T1 SE, T2 FSE, FLAIR; DWI/ADC; Sagittal T1.</li>
+            <li>Tiêm Gd khi nghi u / viêm / di căn: T1 sau tiêm 3 hướng.</li></ul></div>
+    </div>
+
+    <!-- =============================================== CẤP CỨU (đỏ) -->
+    <div class="sec-h"><span class="diamond" style="--accent:var(--red)"></span>Công cụ cấp cứu</div>
+    <div class="card g-cc flow">
+      <div class="card-top"><span class="badge">CẤP CỨU</span><h3>🚨 Phác đồ xử trí phản vệ</h3></div>
+      <div class="sub">Theo Thông tư 51/2017/TT-BYT · trình bày dạng bản đồ quy trình.</div>
+      <div class="fbox emph"><div class="fh">① CHẨN ĐOÁN &amp; NGỪNG NGAY dị nguyên + gọi hỗ trợ</div>
+        <ul><li>Nghĩ đến phản vệ khi tổn thương ≥ 2 cơ quan hoặc tụt HA đột ngột.</li></ul></div>
+      <div class="arrow">▼</div>
+      <div class="frow">
+        <div class="fcol nhe"><div class="fh">Nhẹ – Độ I</div><ul><li>Chỉ triệu chứng da: mày đay, ngứa.</li></ul></div>
+        <div class="fcol nang"><div class="fh">Nặng – Độ II</div><ul><li>Khó thở, tức ngực, đau bụng, nôn.</li></ul></div>
+        <div class="fcol nguy"><div class="fh">Nguy kịch – Độ III</div><ul><li>Rít thanh quản, tím tái, tụt HA, rối loạn ý thức.</li></ul></div>
+      </div>
+      <div class="arrow">▼</div>
+      <div class="fbox emph"><div class="fh">② ADRENALIN tiêm bắp — Độ II & III</div>
+        <ul><li>Người lớn 1/2 ống; trẻ em 1/5–1/3 ống. Nhắc lại mỗi 3–5 phút.</li></ul></div>
+      <div class="note">⚠ Con số liều thuốc đang chờ Trưởng khoa thẩm định — KHÔNG dùng trên người bệnh trước khi duyệt.</div>
+    </div>
+
+    <div class="footer">
+      <b>Bệnh viện Hùng Vương Gia Lai</b> — Khoa Chẩn đoán hình ảnh · Sổ tay điện tử (bản mẫu giao diện)<br>
+      Chủ nhiệm: CN. Nguyễn Hồng Thắm
+    </div>
+  </div>
+
+<script>
+  (function(){
+    var btn = document.getElementById("themeBtn"), root = document.documentElement;
+    btn.addEventListener("click", function(){
+      var dark = root.getAttribute("data-theme") === "dark";
+      root.setAttribute("data-theme", dark ? "light" : "dark");
+      btn.textContent = dark ? "🌙" : "☀️";
+    });
+  })();
+</script>
+</body>
+</html>

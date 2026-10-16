@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tự kiểm tra dữ liệu – Sổ tay điện tử CĐHA</title>
+  <style>
+    :root { --ink:#16202e; --soft:#5a6679; --line:#c7d0de; --brand:#15509c;
+            --ok:#1b7f4b; --okbg:#e8f6ee; --warn:#8a5a00; --warnbg:#fff6e6;
+            --err:#b11c1c; --errbg:#fdeaea; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI",system-ui,Arial,sans-serif; color:var(--ink); background:#eef3fa; line-height:1.45; }
+    body::before { content:""; display:block; height:4px; background:linear-gradient(90deg,#2ba9e0,#5b8fc9 55%,#15509c); }
+    .phead { display:flex; align-items:center; gap:12px; margin:6px 0 10px; }
+    .phead img { height:40px; width:auto; }
+    .phead .pt { border-left:2px solid var(--line); padding-left:12px; }
+    .phead .pt b { color:var(--brand); font-size:15px; }
+    .phead .pt span { display:block; color:var(--soft); font-size:12px; }
+    .wrap { max-width:960px; margin:0 auto; padding:16px; }
+    h1 { font-size:20px; margin:0 0 2px; }
+    .sub { color:var(--soft); font-size:13px; margin:0 0 16px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:0 0 18px; }
+    .stat { border:1px solid var(--line); border-radius:10px; padding:12px; background:#fff; text-align:center; }
+    .stat .n { font-size:26px; font-weight:800; }
+    .stat .l { font-size:12.5px; color:var(--soft); }
+    .stat.ok .n{color:var(--ok);} .stat.warn .n{color:var(--warn);} .stat.err .n{color:var(--err);}
+    .banner { border-radius:10px; padding:12px 14px; font-size:14px; font-weight:600; margin:0 0 16px; }
+    .banner.ok{background:var(--okbg);color:var(--ok);border:1px solid #a7d8bd;}
+    .banner.bad{background:var(--errbg);color:var(--err);border:1px solid #f0b4b4;}
+    h2 { font-size:15px; margin:18px 0 6px; }
+    .issue { border:1px solid var(--line); border-left-width:5px; border-radius:8px; background:#fff; padding:8px 12px; margin:6px 0; font-size:13px; }
+    .issue.err{border-left-color:var(--err);} .issue.warn{border-left-color:var(--warn);} .issue.info{border-left-color:var(--brand);}
+    .issue .tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:20px;margin-right:6px;vertical-align:middle;}
+    .tag.err{background:var(--errbg);color:var(--err);} .tag.warn{background:var(--warnbg);color:var(--warn);} .tag.info{background:#e7f0fb;color:var(--brand);}
+    .issue b{color:var(--ink);} .issue .ma{color:var(--soft);font-size:11.5px;}
+    .hint { font-size:12.5px; color:var(--soft); }
+    a { color:var(--brand); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="phead">
+      <img src="assets/logo-hvgl.png" alt="Bệnh viện Hùng Vương Gia Lai">
+      <div class="pt"><b>Sổ tay điện tử CĐHA</b><span>Khoa Chẩn đoán hình ảnh</span></div>
+    </div>
+    <h1>🔎 Tự kiểm tra dữ liệu website</h1>
+    <p class="sub">Trang này tự quét toàn bộ nội dung đang dùng để phát hiện lỗi kỹ thuật (thiếu trường, trùng mã, ảnh hỏng, mục trống…). Mở trực tiếp, không sửa gì dữ liệu.</p>
+
+    <div id="banner" class="banner">Đang kiểm tra…</div>
+    <div class="cards" id="stats"></div>
+
+    <h2>Chi tiết cần xem (lỗi đỏ ưu tiên sửa trước)</h2>
+    <div id="list"></div>
+    <p class="hint" style="margin-top:18px">Kiểm tra số liệu chuyên môn (kV, mAs, liều…): dùng <a href="tham-dinh.html">Phiếu thẩm định</a>. Xem hiển thị thực tế: mở <a href="index.html">trang chính</a>.</p>
+  </div>
+
+  <script src="data/quy-trinh.js"></script>
+  <script src="data/benh-ly.js"></script>
+  <script src="data/cong-cu.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var QT = (window.SOTAY_QUYTRINH || []).concat(window.SOTAY_BENHLY || []);
+    function esc(s){ return (s||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+    var issues = [];
+    function add(sev, item, msg){ issues.push({sev:sev, id:item&&item.id, ten:item&&item.ten, msg:msg}); }
+
+    var VIEWS = { "xquang":1, "ct-mri":1, "benh-ly":1 };
+    var MODS = { "X-quang":1, "Siêu âm":1, "CT":1, "MRI":1 };
+    var ids = {};
+
+    QT.forEach(function (it, i) {
+      var tag = "mục #" + (i+1);
+      // bắt buộc
+      if (!it.id) add("err", it, "Thiếu mã id ("+tag+").");
+      else { if (ids[it.id]) add("err", it, "Mã id TRÙNG: " + it.id); ids[it.id] = 1; }
+      if (!it.ten) add("err", it, "Thiếu tên (ten).");
+      if (!it.phanHe) add("err", it, "Thiếu phanHe.");
+      else if (!VIEWS[it.phanHe]) add("err", it, "phanHe không hợp lệ: " + it.phanHe + " (chỉ dùng xquang / ct-mri / benh-ly).");
+      if (!it.modality) add("err", it, "Thiếu modality.");
+      else if (!MODS[it.modality]) add("warn", it, "modality lạ: " + it.modality + " (huy hiệu/màu có thể sai).");
+      if (!it.nhom) add("warn", it, "Thiếu nhom (sẽ không lọc được).");
+      if (!it.nguon) add("warn", it, "Thiếu nguồn (nguon).");
+
+      // thongSo
+      (it.thongSo || []).forEach(function (t, k) {
+        if (!t || t.ten == null || t.giaTri == null || t.ten === "" || t.giaTri === "")
+          add("warn", it, "Thông số #" + (k+1) + " thiếu tên hoặc giá trị.");
+      });
+      // noiDung
+      (it.noiDung || []).forEach(function (s, k) {
+        if (!s || !s.tieuDe) add("warn", it, "Mục nội dung #" + (k+1) + " thiếu tiêu đề.");
+        if (!s || !s.items || !s.items.length) add("warn", it, "Mục nội dung '" + (s&&s.tieuDe||"?") + "' không có dòng nào.");
+        (s && s.items || []).forEach(function (x) { if (x === "" || x == null) add("warn", it, "Có dòng nội dung rỗng trong '" + (s.tieuDe||"?") + "'."); });
+      });
+      // mục không có cả thongSo lẫn noiDung => gần như trống
+      if ((!it.thongSo || !it.thongSo.length) && (!it.noiDung || !it.noiDung.length))
+        add("warn", it, "Mục gần như trống (không có thông số lẫn nội dung).");
+    });
+
+    // kiểm tra ảnh (tải thử) — chỉ các src khác rỗng
+    var imgRefs = [];
+    QT.forEach(function (it) {
+      (it.hinhAnh || []).forEach(function (im) {
+        if (im && im.src) imgRefs.push({ it:it, src:im.src });
+        else if (im && (!im.src || im.src === "")) add("info", it, "Ô ảnh để trống (chờ bổ sung ảnh): " + (im && im.caption || ""));
+        if (im && im.src && !im.nguon && it.phanHe === "benh-ly") add("warn", it, "Ảnh bệnh lý thiếu trích dẫn nguồn ảnh (nguon).");
+      });
+    });
+
+    var imgDone = 0, imgBroken = 0;
+    function finish(){ renderAll(imgRefs.length, imgBroken); }
+    if (!imgRefs.length) finish();
+    imgRefs.forEach(function (r) {
+      var img = new Image();
+      img.onload = function(){ if(++imgDone === imgRefs.length) finish(); };
+      img.onerror = function(){ imgBroken++; add("err", r.it, "ẢNH HỎNG / sai đường dẫn: " + r.src); if(++imgDone === imgRefs.length) finish(); };
+      img.src = r.src;
+    });
+
+    function renderAll(imgTotal, broken){
+      var errs = issues.filter(function(x){return x.sev==="err";});
+      var warns = issues.filter(function(x){return x.sev==="warn";});
+      var infos = issues.filter(function(x){return x.sev==="info";});
+
+      var stats = document.getElementById("stats");
+      stats.innerHTML =
+        card("ok", QT.length, "Tổng số mục") +
+        card(errs.length?"err":"ok", errs.length, "Lỗi (phải sửa)") +
+        card(warns.length?"warn":"ok", warns.length, "Cảnh báo") +
+        card(broken?"err":"ok", imgTotal, "Ảnh đã kiểm (" + broken + " hỏng)");
+
+      var b = document.getElementById("banner");
+      if (errs.length || broken) { b.className="banner bad"; b.textContent = "❌ Có " + (errs.length) + " lỗi cần sửa" + (broken?(" và " + broken + " ảnh hỏng"):"") + "."; }
+      else { b.className="banner ok"; b.textContent = "✅ Không phát hiện lỗi kỹ thuật. " + warns.length + " cảnh báo nhẹ để tham khảo."; }
+
+      var html = "";
+      [["err",errs],["warn",warns],["info",infos]].forEach(function(grp){
+        grp[1].forEach(function(x){
+          html += '<div class="issue '+grp[0]+'"><span class="tag '+grp[0]+'">'+({err:"LỖI",warn:"CẢNH BÁO",info:"GHI CHÚ"}[grp[0]])+'</span>'
+            + '<b>'+esc(x.ten||"(không tên)")+'</b> <span class="ma">'+esc(x.id||"")+'</span><br>'+esc(x.msg)+'</div>';
+        });
+      });
+      if (!issues.length) html = '<div class="issue info"><span class="tag info">OK</span> Mọi mục đều đầy đủ trường bắt buộc, không có mục trống, không ảnh hỏng.</div>';
+      document.getElementById("list").innerHTML = html;
+    }
+    function card(cls,n,l){ return '<div class="stat '+cls+'"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>'; }
+  })();
+  </script>
+</body>
+</html>
