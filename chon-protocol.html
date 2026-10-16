@@ -43,6 +43,10 @@
   .bodyzone:hover { fill-opacity: .5; }
   .bodyzone.active { fill-opacity: .95; }
   .bodyfig text { pointer-events: none; fill: #fff; font: 800 11px system-ui; }
+  /* lớp khung xương mờ (chi tiết giải phẫu, không bấm) */
+  .skeleton { fill: none; stroke: #8ea0b6; stroke-width: 1.6; stroke-linecap: round; opacity: .5; pointer-events: none; }
+  :root[data-theme="dark"] .skeleton { stroke: #6b7e98; opacity: .55; }
+  .bodyfig.side .skeleton { display: none; }
   .bodyhint { text-align: center; font-size: 11.5px; color: var(--text-soft); margin: 0 0 10px; }
   /* nút Mặt trước / Mặt sau */
   .viewtoggle { display: flex; gap: 6px; justify-content: center; margin: 0 0 8px; }
@@ -54,6 +58,15 @@
   .spineseg { cursor: pointer; stroke: #fff; stroke-width: 1; fill-opacity: .9; }
   .spineseg:hover { stroke-width: 2; }
   .spinelink { font: 800 10px system-ui; fill: #fff; pointer-events: none; }
+  /* chế độ Nghiêng (cột sống) */
+  .bodyfig.side .bodyzone, .bodyfig.side .spine, .bodyfig.side > text { display: none; }
+  .bodyfig:not(.side) .sideview { display: none; }
+  .sidebody { fill: var(--surface-2); stroke: var(--line); stroke-width: 1.5; }
+  .spineseg2 { fill: none; stroke-width: 15; stroke-linecap: round; cursor: pointer; pointer-events: stroke; }
+  .spineseg2:hover { stroke-width: 19; }
+  .spineseg2.on { stroke-width: 19; }
+  .sidelabel { font: 700 10.5px system-ui; fill: var(--text-soft); pointer-events: none; }
+  .sidedisc { fill: #fff; opacity: .55; pointer-events: none; }
   .modebadge { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--brand-ink);
     background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; margin: 0 0 10px; }
   .modebadge b { font-size: 14px; }
@@ -137,8 +150,37 @@
           <div class="viewtoggle" id="viewtoggle">
             <button type="button" class="vbtn active" data-view="front">Mặt trước</button>
             <button type="button" class="vbtn" data-view="back">Mặt sau</button>
+            <button type="button" class="vbtn" data-view="side">Nghiêng (cột sống)</button>
           </div>
           <svg class="bodyfig" viewBox="0 0 220 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
+            <!-- KHUNG XƯƠNG mờ (giải phẫu cách điệu, không bấm) -->
+            <g class="skeleton">
+              <ellipse cx="110" cy="46" rx="17" ry="21"/>
+              <path d="M101,60 Q110,69 119,60"/>
+              <line x1="110" y1="74" x2="110" y2="242"/>
+              <line x1="104" y1="88"  x2="116" y2="88"/>
+              <line x1="104" y1="120" x2="116" y2="120"/>
+              <line x1="104" y1="150" x2="116" y2="150"/>
+              <line x1="104" y1="180" x2="116" y2="180"/>
+              <line x1="104" y1="208" x2="116" y2="208"/>
+              <path d="M96,106 L74,112"/>
+              <path d="M124,106 L146,112"/>
+              <path d="M106,116 C92,116 80,124 77,138"/>
+              <path d="M106,128 C90,127 76,136 74,152"/>
+              <path d="M106,140 C88,140 75,150 74,166"/>
+              <path d="M106,152 C89,152 78,162 79,176"/>
+              <path d="M114,116 C128,116 140,124 143,138"/>
+              <path d="M114,128 C130,127 144,136 146,152"/>
+              <path d="M114,140 C132,140 145,150 146,166"/>
+              <path d="M114,152 C131,152 142,162 141,176"/>
+              <path d="M88,198 C78,208 80,228 94,238 L110,246 L126,238 C140,228 142,208 132,198"/>
+              <line x1="55" y1="118" x2="49" y2="178"/>
+              <line x1="165" y1="118" x2="171" y2="178"/>
+              <line x1="92" y1="250" x2="88" y2="358"/>
+              <line x1="88" y1="360" x2="86" y2="462"/>
+              <line x1="128" y1="250" x2="132" y2="358"/>
+              <line x1="132" y1="360" x2="134" y2="462"/>
+            </g>
             <!-- tay (r6): cánh tay (trên) + cẳng tay/bàn tay (dưới) -->
             <path class="bodyzone" data-region="6" data-sub="tay-tren" fill="#d98a00" d="M63,116 C50,120 43,132 41,148 C39,166 39,181 40,183 L59,183 C58,166 58,146 66,143 C70,133 71,125 63,116 Z"/>
             <path class="bodyzone" data-region="6" data-sub="tay-duoi" fill="#e0a73a" d="M40,183 C38,201 37,218 40,228 C41,236 46,240 52,239 C59,238 60,229 59,219 C58,206 58,194 59,183 Z"/>
@@ -173,6 +215,20 @@
               <text class="spinelink" x="110" y="94"  text-anchor="middle">C</text>
               <text class="spinelink" x="110" y="150" text-anchor="middle">N</text>
               <text class="spinelink" x="110" y="212" text-anchor="middle">TL</text>
+            </g>
+            <g class="sideview">
+              <path class="sidebody" d="M100,22 C116,22 126,34 126,50 C126,61 121,69 114,72 C117,74 117,79 111,79 L94,79 C86,76 80,66 80,52 C80,36 87,22 100,22 Z"/>
+              <path class="sidebody" d="M90,79 C76,87 70,107 72,135 C70,167 74,201 86,227 C101,231 116,229 122,221 C128,209 128,189 124,171 C130,145 130,110 124,91 C119,81 106,76 94,79 Z"/>
+              <path class="sidebody" d="M84,225 C78,276 80,336 83,393 C80,433 78,462 86,478 L116,478 C122,462 120,433 118,395 C120,337 123,283 122,227 C112,233 98,233 84,225 Z"/>
+              <path class="sidebody" d="M86,478 L62,478 C59,478 59,471 62,470 L86,467 Z"/>
+              <path class="spineseg2" data-region="2" data-sub="cs-co"      stroke="#2ba9e0" d="M110,72 C106,84 104,94 106,104"/>
+              <path class="spineseg2" data-region="3" data-sub="cs-nguc"    stroke="#15509c" d="M106,104 C110,130 118,160 114,190"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-tl"      stroke="#7a3fc0" d="M114,190 C110,208 106,226 110,242"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-cungcut" stroke="#b05a2b" d="M110,242 C113,256 116,272 110,288"/>
+              <text class="sidelabel" x="140" y="92"  text-anchor="start">Cổ</text>
+              <text class="sidelabel" x="146" y="150" text-anchor="start">Ngực</text>
+              <text class="sidelabel" x="148" y="220" text-anchor="start">Thắt lưng</text>
+              <text class="sidelabel" x="142" y="272" text-anchor="start">Cùng–cụt</text>
             </g>
           </svg>
           <p class="bodyhint">Bấm vào vùng cơ thể, hoặc chọn ô bên dưới</p>
@@ -341,7 +397,8 @@
       // cột sống (mặt sau) — áp dụng cho mọi modality
       "cs-co":   { ten: "Cột sống cổ", allMod: true, re: /cột sống cổ|đốt sống cổ|c1|c2|cổ (thẳng|nghiêng|chếch|há miệng)/i },
       "cs-nguc": { ten: "Cột sống ngực", allMod: true, re: /cột sống ngực|đốt sống ngực|ngực (thẳng|nghiêng)/i },
-      "cs-tl":   { ten: "Cột sống thắt lưng – cùng cụt", allMod: true, re: /thắt lưng|l5|s1|cùng cụt|cùng – cụt/i }
+      "cs-tl":   { ten: "Cột sống thắt lưng", allMod: true, re: /thắt lưng|l5|s1/i },
+      "cs-cungcut": { ten: "Cột sống cùng – cụt", allMod: true, re: /cùng cụt|cùng – cụt|cùng-cụt|xương cùng|xương cụt/i }
     };
 
     REGIONS.forEach(function (r) {
@@ -365,7 +422,7 @@
       });
     });
     // bấm lên đốt cột sống (mặt sau)
-    Array.prototype.forEach.call(document.querySelectorAll(".spineseg"), function (s) {
+    Array.prototype.forEach.call(document.querySelectorAll(".spineseg, .spineseg2"), function (s) {
       s.addEventListener("click", function () {
         setRegion(parseInt(s.getAttribute("data-region"), 10), s.getAttribute("data-sub"));
       });
@@ -376,7 +433,11 @@
       b.addEventListener("click", function () {
         Array.prototype.forEach.call(vt.children, function (c) { c.classList.remove("active"); });
         b.classList.add("active");
-        if (fig) fig.classList.toggle("back", b.getAttribute("data-view") === "back");
+        if (fig) {
+          var v = b.getAttribute("data-view");
+          fig.classList.toggle("back", v === "back");
+          fig.classList.toggle("side", v === "side");
+        }
       });
     });
 
@@ -483,11 +544,12 @@
       try { localStorage.setItem("sotay-theme", dark ? "light" : "dark"); } catch (e) {}
     };
 
-    // mặt sau nếu ?view=back
-    if (P.view === "back" && fig) {
-      fig.classList.add("back");
-      if (vt) { var _f = vt.querySelector('[data-view="front"]'), _b = vt.querySelector('[data-view="back"]');
-        if (_f) _f.classList.remove("active"); if (_b) _b.classList.add("active"); }
+    // chọn chế độ xem theo ?view=front|back|side
+    if ((P.view === "back" || P.view === "side") && fig) {
+      fig.classList.add(P.view);
+      if (vt) Array.prototype.forEach.call(vt.children, function (c) {
+        c.classList.toggle("active", c.getAttribute("data-view") === P.view);
+      });
     }
     // tự chọn vùng đầu tiên cho dễ nhìn
     setRegion(1);
