@@ -19,10 +19,10 @@
   .appbar .theme { width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
                    background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
 
-  .shell { max-width: 1280px; margin: 14px auto; padding: 0 16px 36px;
-           display: grid; grid-template-columns: 1fr 248px; gap: 16px; align-items: start; }
+  .shell { max-width: 1560px; margin: 14px auto; padding: 0 16px 36px;
+           display: grid; grid-template-columns: 236px 1fr; gap: 16px; align-items: start; }
 
-  /* --- SIDEBAR DỌC BÊN PHẢI --- */
+  /* --- SIDEBAR DỌC BÊN TRÁI --- */
   .sidebar { position: sticky; top: 74px; display: flex; flex-direction: column; gap: 8px; }
   .sidebar .cap { font-size: 11.5px; text-transform: uppercase; letter-spacing: .5px;
                   color: var(--text-soft); font-weight: 700; padding: 2px 6px 4px; }
@@ -80,16 +80,16 @@
   </header>
 
   <div class="shell">
-    <!-- NỘI DUNG CHÍNH (trái) -->
+    <!-- SIDEBAR DỌC (TRÁI) — danh mục chức năng -->
+    <aside class="sidebar" id="sidebar">
+      <div class="cap">Danh mục chức năng</div>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH (phải) -->
     <main class="content">
       <nav class="subtabs" id="subtabs"></nav>
       <section class="panel" id="panel"></section>
     </main>
-
-    <!-- SIDEBAR DỌC (phải) -->
-    <aside class="sidebar" id="sidebar">
-      <div class="cap">Danh mục chức năng</div>
-    </aside>
   </div>
 
   <script src="data/quy-trinh.js"></script>

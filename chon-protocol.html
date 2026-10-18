@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
-  .pb-wrap { max-width: 1240px; margin: 0 auto; padding: 0 14px 30px; }
+  .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
   .pb-head { display: flex; align-items: center; gap: 12px; padding: 12px 0; flex-wrap: wrap; }
   .pb-head img { height: 38px; }
   .pb-head .t b { color: var(--brand-ink); font-size: 17px; }
@@ -17,7 +17,8 @@
   .pb-head .theme { width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
                     background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
 
-  .pb-grid { display: grid; grid-template-columns: 300px 1fr 1.15fr; gap: 14px; align-items: start; }
+  /* cột 1 (hình) + cột 2 (danh mục) gọn lại, cột 3 (thông số) rộng tối đa */
+  .pb-grid { display: grid; grid-template-columns: 220px 260px minmax(0, 1fr); gap: 14px; align-items: start; }
   .pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
             box-shadow: var(--shadow); overflow: hidden; }
   .pb-col > h2 { margin: 0; padding: 12px 14px; font-size: 13.5px; letter-spacing: .4px;
@@ -92,19 +93,22 @@
   .titem .en { display: block; font-size: 12px; color: var(--text-soft); margin-top: 1px; }
   .muted { color: var(--text-soft); font-size: 14px; padding: 10px 4px; }
 
-  /* cột 3: thông số kỹ thuật */
-  .pdetail h3 { margin: 0 0 2px; font-size: 18px; color: var(--brand-ink); }
+  /* cột 3: thông số kỹ thuật (rộng — nội dung chia nhiều cột để đỡ lăn chuột) */
+  .pdetail h3 { margin: 0 0 2px; font-size: 19px; color: var(--brand-ink); }
   .pdetail .meta { color: var(--text-soft); font-size: 12.5px; margin: 0 0 12px; }
-  .ptable { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 12px; }
+  /* bảng thông số nhanh: đóng khung, không kéo giãn hết chiều ngang */
+  .ptable { width: 100%; max-width: 560px; border-collapse: collapse; font-size: 13.5px; margin: 0 0 14px; }
   .ptable td { border: 1px solid var(--line); padding: 7px 10px; vertical-align: top; }
   .ptable td.k { width: 42%; color: var(--text-soft); background: var(--surface-2); font-weight: 600; }
   .ptable td.v { font-weight: 600; }
-  .psec { margin: 0 0 12px; }
+  /* các mục nội dung chảy thành 2–3 cột theo bề rộng (masonry bằng CSS columns) */
+  .psecs { column-width: 270px; column-gap: 26px; }
+  .psec { margin: 0 0 12px; break-inside: avoid; -webkit-column-break-inside: avoid; }
   .psec h4 { display:flex; align-items:center; gap:8px; margin: 0 0 5px; font-size: 13px; text-transform: uppercase;
              letter-spacing: .4px; color: var(--brand-ink); }
-  .psec h4::before { content:""; width:9px; height:9px; background:var(--brand); transform:rotate(45deg); border-radius:2px; }
+  .psec h4::before { content:""; width:9px; height:9px; background:var(--brand); transform:rotate(45deg); border-radius:2px; flex:none; }
   .psec ul { margin: 0; padding-left: 20px; } .psec li { margin-bottom: 4px; font-size: 13.5px; }
-  .pimg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .pimg { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin: 4px 0 12px; }
   .pimg img { width: 100%; border: 1px solid var(--line); border-radius: 9px; background:#fff; cursor: zoom-in; }
   .pimg figcaption { font-size: 11.5px; color: var(--text-soft); text-align: center; margin-top: 3px; }
 
@@ -118,7 +122,7 @@
 
   /* chế độ nhúng trong app.html (?embed=1): ẩn header riêng */
   :root[data-embed="1"] .topstrip, :root[data-embed="1"] .pb-head { display: none; }
-  :root[data-embed="1"] .pb-wrap { padding: 8px 10px 14px; }
+  :root[data-embed="1"] .pb-wrap { padding: 8px 10px 14px; max-width: none; }
 
   /* lightbox đơn giản */
   .lb { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: flex; align-items: center;
@@ -521,11 +525,15 @@
         });
         h += '</tbody></table>';
       }
-      (it.noiDung || []).forEach(function (s) {
-        h += '<div class="psec"><h4>' + esc(s.tieuDe) + '</h4><ul>';
-        (s.items || []).forEach(function (x) { h += '<li>' + esc(x) + '</li>'; });
-        h += '</ul></div>';
-      });
+      if (it.noiDung && it.noiDung.length) {
+        h += '<div class="psecs">';
+        it.noiDung.forEach(function (s) {
+          h += '<div class="psec"><h4>' + esc(s.tieuDe) + '</h4><ul>';
+          (s.items || []).forEach(function (x) { h += '<li>' + esc(x) + '</li>'; });
+          h += '</ul></div>';
+        });
+        h += '</div>';
+      }
       if (it.hinhAnh && it.hinhAnh.length) {
         var imgs = it.hinhAnh.filter(function (im) { return im && im.src; });
         if (imgs.length) {
