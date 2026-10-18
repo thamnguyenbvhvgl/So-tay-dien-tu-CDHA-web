@@ -17,7 +17,7 @@
   .pb-head .theme { width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
                     background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
 
-  .pb-grid { display: grid; grid-template-columns: 318px 1fr 1.15fr; gap: 14px; align-items: start; }
+  .pb-grid { display: grid; grid-template-columns: 300px 1fr 1.15fr; gap: 14px; align-items: start; }
   .pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
             box-shadow: var(--shadow); overflow: hidden; }
   .pb-col > h2 { margin: 0; padding: 12px 14px; font-size: 13.5px; letter-spacing: .4px;
@@ -26,7 +26,51 @@
   .pb-col > h2 small { display:block; font-weight:400; font-size:11px; opacity:.85; text-transform:none; letter-spacing:0; }
   .pb-body { padding: 12px; }
 
-  /* ===== CỘT 1: Hình giải phẫu thật + lớp vùng bấm ===== */
+  /* cột 1: ô vùng giải phẫu */
+  .regions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .rtile { display: flex; flex-direction: column; gap: 2px; text-align: left; cursor: pointer;
+           border: 1px solid var(--line); border-left: 5px solid var(--rc,#888); border-radius: 11px;
+           padding: 10px 11px; background: var(--surface-2); color: var(--text); }
+  .rtile .num { font-size: 18px; font-weight: 800; color: var(--rc,#888); line-height: 1; }
+  .rtile b { font-size: 13.5px; line-height: 1.2; }
+  .rtile span { font-size: 11px; color: var(--text-soft); line-height: 1.15; }
+  .rtile.active { background: var(--rc,#888); border-color: var(--rc,#888); }
+  .rtile.active .num, .rtile.active b, .rtile.active span { color: #fff; }
+
+  /* ===== hình giải phẫu SVG (silhouette da + bộ xương chi tiết) ===== */
+  .bodyfig { width: 100%; max-width: 200px; height: auto; margin: 2px auto 8px; display: block; }
+  .skin { fill: url(#skinG); stroke: #e3a888; stroke-width: 1.1; stroke-linejoin: round; }
+  :root[data-theme="dark"] .skinlayer { opacity: .95; }
+  .skel { opacity: .9; pointer-events: none; }
+  :root[data-theme="dark"] .skel { opacity: .82; }
+  .bone { fill: url(#boneG); stroke: #b19a6e; stroke-width: .6; stroke-linejoin: round; }
+  .bl { fill: none; stroke: #c3b188; stroke-width: 2.2; stroke-linecap: round; }
+  .joint { fill: #efe7d4; stroke: #b19a6e; stroke-width: .8; }
+  .bodyzone { fill-opacity: .17; stroke-width: 1.5; stroke-linejoin: round; cursor: pointer; transition: fill-opacity .14s; }
+  .bodyzone:hover { fill-opacity: .4; }
+  .bodyzone.active { fill-opacity: .55; }
+  .rnum { font: 800 12px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 2.4px; stroke-linejoin: round; pointer-events: none; }
+  :root[data-theme="dark"] .rnum { fill: #e3e9f1; stroke: #1b2430; }
+  .bodyhint { text-align: center; font-size: 11.5px; color: var(--text-soft); margin: 0 0 10px; }
+  /* nút Mặt trước / Mặt sau / Nghiêng */
+  .viewtoggle { display: flex; gap: 6px; justify-content: center; margin: 0 0 8px; flex-wrap: wrap; }
+  .vbtn { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
+          border-radius: 999px; padding: 5px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+  .vbtn.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+  /* cột sống (chỉ hiện ở mặt sau) */
+  .bodyfig:not(.back) .spine { display: none; }
+  .spineseg { cursor: pointer; stroke: #fff; stroke-width: 1; fill-opacity: .9; }
+  .spineseg:hover { stroke-width: 2; }
+  .spinelink { font: 800 10px system-ui; fill: #fff; pointer-events: none; }
+  /* chế độ Nghiêng (cột sống) */
+  .bodyfig.side .skinlayer, .bodyfig.side .skel, .bodyfig.side .bodyzone, .bodyfig.side .spine, .bodyfig.side .rnum { display: none; }
+  .bodyfig:not(.side) .sideview { display: none; }
+  .sidebody { fill: url(#skinG); stroke: #e3a888; stroke-width: 1.1; stroke-linejoin: round; }
+  .sideskel { fill: none; stroke: #c3b188; stroke-width: 1.6; stroke-linecap: round; opacity: .8; pointer-events: none; }
+  .spineseg2 { fill: none; stroke-width: 14; stroke-linecap: round; cursor: pointer; pointer-events: stroke; opacity: .82; }
+  .spineseg2:hover { stroke-width: 17; opacity: 1; }
+  .spineseg2.on { stroke-width: 17; opacity: 1; }
+  .sidelabel { font: 700 10.5px system-ui; fill: var(--text-soft); pointer-events: none; }
   .modebadge { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--brand-ink);
     background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; margin: 0 0 10px; }
   .modebadge b { font-size: 14px; }
@@ -35,54 +79,17 @@
   :root[data-theme="dark"] .modebadge.nu  { background:#3a2230; border-color:#6e3a53; color:#f3b9d2; }
   :root[data-theme="dark"] .modebadge.nam { background:#1a2a3e; border-color:#39557a; color:#aeccf0; }
 
-  .viewtoggle { display: flex; gap: 6px; justify-content: center; margin: 0 0 10px; }
-  .vbtn { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
-          border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 600; cursor: pointer; }
-  .vbtn.active { background: var(--brand); color: #fff; border-color: var(--brand); }
-
-  .figwrap { position: relative; width: 100%; max-width: 288px; margin: 0 auto 8px;
-             background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 6px; }
-  .bodyfig { width: 100%; height: auto; display: block; }
-  .bodyfig.hidden { display: none; }
-  .bodyfig image { pointer-events: none; }
-
-  .bodyzone { fill: var(--zc,#2b7cd6); fill-opacity: 0; stroke: var(--zc,#2b7cd6);
-              stroke-opacity: .22; stroke-width: 1.4; cursor: pointer; transition: fill-opacity .12s, stroke-opacity .12s; }
-  .bodyzone:hover { fill-opacity: .34; stroke-opacity: .95; }
-  .bodyzone.active { fill-opacity: .5; stroke-opacity: 1; stroke-width: 2.2; }
-  .bodyzone.empty { stroke-opacity: 0; fill-opacity: 0; cursor: default; pointer-events: none; }
-  /* đốt sống (chế độ nghiêng) nổi bật hơn */
-  .spinecap { stroke-width: 2.2; stroke-opacity: .55; fill-opacity: .25; rx: 7; }
-  .spinecap:hover { fill-opacity: .5; stroke-opacity: 1; }
-  .spinecap.active { fill-opacity: .68; stroke-opacity: 1; stroke-width: 3; }
-
-  .bodyhint { text-align: center; font-size: 11.5px; color: var(--text-soft); margin: 0 0 10px; }
-
-  /* hàng chip: cột sống + chuyên đề khác */
-  .chiprow { margin-top: 4px; }
-  .chiprow h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .4px; color: var(--text-soft);
-                margin: 10px 0 6px; font-weight: 700; }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: 12px; font-weight: 600;
-          border: 1px solid var(--line); border-left: 4px solid var(--zc,#888); border-radius: 999px;
-          padding: 5px 11px; background: var(--surface-2); color: var(--text); }
-  .chip .c { font-size: 11px; color: #fff; background: var(--zc,#888); border-radius: 999px; padding: 0 6px; font-weight: 700; }
-  .chip:hover { border-color: var(--zc,#888); }
-  .chip.active { background: var(--zc,#888); color: #fff; border-color: var(--zc,#888); }
-  .chip.active .c { background: rgba(255,255,255,.28); }
-  .chip.empty { opacity: .4; cursor: default; pointer-events: none; }
-
   /* cột 2: danh mục kỹ thuật */
-  .zonehead { font-size: 13px; color: var(--brand-ink); background: var(--surface-2);
-              border: 1px solid var(--line); border-left: 4px solid var(--zc,var(--brand)); border-radius: 8px;
-              padding: 8px 11px; margin-bottom: 10px; }
-  .zonehead b { font-size: 14.5px; }
-  .zonehead span { display: block; font-size: 11.5px; color: var(--text-soft); margin-top: 1px; }
+  .subnote { font-size: 12.5px; color: var(--brand-ink); background: var(--surface-2);
+             border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; margin-bottom: 8px; }
+  .subnote button { border: none; background: none; color: var(--danger); font-size: 12px;
+                    cursor: pointer; font-weight: 600; margin-left: 6px; }
   .tlist { display: flex; flex-direction: column; gap: 8px; }
   .titem { text-align: left; cursor: pointer; border: 1px solid var(--line); border-radius: 10px;
            padding: 11px 13px; background: var(--surface); color: var(--text); font-size: 14.5px; }
   .titem:hover { border-color: var(--brand); }
   .titem.active { background: var(--surface-2); border-color: var(--brand); border-left: 4px solid var(--brand); font-weight: 600; }
+  .titem .en { display: block; font-size: 12px; color: var(--text-soft); margin-top: 1px; }
   .muted { color: var(--text-soft); font-size: 14px; padding: 10px 4px; }
 
   /* cột 3: thông số kỹ thuật */
@@ -120,9 +127,11 @@
   .lb button { position: absolute; top: 14px; right: 16px; width: 44px; height: 44px; border-radius: 50%;
                border: none; background: rgba(255,255,255,.15); color: #fff; font-size: 22px; cursor: pointer; }
 
-  @media (max-width: 760px) {
+  @media (max-width: 700px) {
     .pb-grid { grid-template-columns: 1fr; }
+    .regions { grid-template-columns: 1fr 1fr 1fr; }
   }
+  @media (max-width: 560px) { .regions { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
@@ -144,16 +153,119 @@
           <div class="modebadge" id="modebadge"></div>
           <div class="viewtoggle" id="viewtoggle">
             <button type="button" class="vbtn active" data-view="front">Mặt trước</button>
-            <button type="button" class="vbtn" data-view="lateral">Nghiêng (cột sống)</button>
+            <button type="button" class="vbtn" data-view="back">Mặt sau</button>
+            <button type="button" class="vbtn" data-view="side">Nghiêng (cột sống)</button>
           </div>
-          <div class="figwrap" id="figwrap"><!-- SVG hình người dựng bằng JS --></div>
-          <p class="bodyhint">Bấm vào vùng giải phẫu trên hình, hoặc chọn ô bên dưới.</p>
-          <div class="chiprow">
-            <h3>Cột sống (theo tầng)</h3>
-            <div class="chips" id="spineChips"></div>
-            <h3>Chuyên đề &amp; vùng khác</h3>
-            <div class="chips" id="extraChips"></div>
-          </div>
+          <svg class="bodyfig" viewBox="0 0 220 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
+            <defs>
+              <linearGradient id="skinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7d7"/><stop offset="1" stop-color="#f3c6ac"/></linearGradient>
+              <linearGradient id="boneG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fcf8f0"/><stop offset="1" stop-color="#e7dcc2"/></linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.2" stdDeviation="1.4" flood-color="#6b7790" flood-opacity=".25"/></filter>
+            </defs>
+
+            <!-- DA / SILHOUETTE -->
+            <g class="skinlayer" filter="url(#soft)">
+              <path class="skin" d="M74,288 C68,330 68,370 76,404 C80,430 80,456 82,472 C83,480 95,480 96,472 C100,440 100,400 102,360 C103,336 104,312 106,290 Z"/>
+              <path class="skin" d="M146,288 C152,330 152,370 144,404 C140,430 140,456 138,472 C137,480 125,480 124,472 C120,440 120,400 118,360 C117,336 116,312 114,290 Z"/>
+              <path class="skin" d="M82,472 C80,482 70,485 63,482 C58,480 60,472 70,470 L90,473 Z"/>
+              <path class="skin" d="M138,472 C140,482 150,485 157,482 C162,480 160,472 150,470 L130,473 Z"/>
+              <path class="skin" d="M66,100 C52,106 45,126 43,150 C41,178 42,210 46,242 C47,260 50,276 53,288 C58,290 63,288 64,280 C62,254 60,222 62,190 C64,160 68,128 74,108 Z"/>
+              <path class="skin" d="M154,100 C168,106 175,126 177,150 C179,178 178,210 174,242 C173,260 170,276 167,288 C162,290 157,288 156,280 C158,254 160,222 158,190 C156,160 152,128 146,108 Z"/>
+              <ellipse class="skin" cx="56" cy="298" rx="9.5" ry="13"/>
+              <ellipse class="skin" cx="164" cy="298" rx="9.5" ry="13"/>
+              <path class="skin" d="M64,104 C68,96 82,91 96,90 L124,90 C138,91 152,96 156,104 C162,126 156,158 149,184 C145,204 149,228 150,252 C150,278 142,296 127,300 L93,300 C78,296 70,278 70,252 C71,228 75,204 71,184 C64,158 58,126 64,104 Z"/>
+              <path class="skin" d="M102,64 L118,64 C119,76 122,86 126,92 L94,92 C98,86 101,76 102,64 Z"/>
+              <ellipse class="skin" cx="110" cy="42" rx="19" ry="24"/>
+            </g>
+
+            <!-- BỘ XƯƠNG (chi tiết) -->
+            <g class="skel">
+              <path class="bone" d="M110,20 C123,20 132,31 132,45 C132,55 127,62 121,65 C121,69 116,71 110,71 C104,71 99,69 99,65 C93,62 88,55 88,45 C88,31 97,20 110,20 Z"/>
+              <ellipse class="joint" cx="103" cy="47" rx="3.2" ry="3.8"/><ellipse class="joint" cx="117" cy="47" rx="3.2" ry="3.8"/>
+              <rect class="bone" x="106" y="70" width="8" height="4.4" rx="1.8"/><rect class="bone" x="106" y="75.5" width="8" height="4.4" rx="1.8"/>
+              <rect class="bone" x="106" y="81" width="8" height="4.4" rx="1.8"/><rect class="bone" x="106" y="86.5" width="8" height="4.4" rx="1.8"/>
+              <path class="bl" d="M105,94 C93,91 81,93 70,100"/><path class="bl" d="M115,94 C127,91 139,93 150,100"/>
+              <rect class="bone" x="106" y="92" width="8" height="106" rx="3"/>
+              <g stroke="#d8cbac" stroke-width=".7">
+                <line x1="106" y1="104" x2="114" y2="104"/><line x1="106" y1="116" x2="114" y2="116"/><line x1="106" y1="128" x2="114" y2="128"/>
+                <line x1="106" y1="140" x2="114" y2="140"/><line x1="106" y1="152" x2="114" y2="152"/><line x1="106" y1="164" x2="114" y2="164"/>
+                <line x1="106" y1="176" x2="114" y2="176"/><line x1="106" y1="188" x2="114" y2="188"/>
+              </g>
+              <rect class="bone" x="106.5" y="98" width="7" height="42" rx="3"/>
+              <g class="bl" stroke-width="1.9">
+                <path d="M106,102 C88,101 74,112 72,128"/><path d="M106,113 C85,112 71,124 70,142"/><path d="M106,124 C83,124 70,138 71,156"/>
+                <path d="M107,135 C85,137 73,150 77,166"/><path d="M109,146 C89,149 79,160 84,176"/>
+                <path d="M114,102 C132,101 146,112 148,128"/><path d="M114,113 C135,112 149,124 150,142"/><path d="M114,124 C137,124 150,138 149,156"/>
+                <path d="M113,135 C135,137 147,150 143,166"/><path d="M111,146 C131,149 141,160 136,176"/>
+              </g>
+              <path class="bone" d="M80,234 C72,244 73,264 84,276 C98,286 108,288 110,288 C112,288 122,286 136,276 C147,264 148,244 140,234 C128,244 118,248 110,248 C102,248 92,244 80,234 Z"/>
+              <path class="bl" d="M66,106 C57,124 52,150 50,176" stroke-width="2.6"/><path class="bl" d="M154,106 C163,124 168,150 170,176" stroke-width="2.6"/>
+              <ellipse class="joint" cx="49.5" cy="182" rx="4" ry="4"/><ellipse class="joint" cx="170.5" cy="182" rx="4" ry="4"/>
+              <path class="bl" d="M48,186 C46,214 46,242 49,268" stroke-width="2"/><path class="bl" d="M53,186 C52,214 52,242 54,268" stroke-width="1.5"/>
+              <path class="bl" d="M172,186 C174,214 174,242 171,268" stroke-width="2"/><path class="bl" d="M167,186 C168,214 168,242 166,268" stroke-width="1.5"/>
+              <g class="bl" stroke-width="1.3"><path d="M50,272 L46,290"/><path d="M53,272 L52,292"/><path d="M56,272 L58,290"/><path d="M170,272 L174,290"/><path d="M167,272 L168,292"/><path d="M164,272 L162,290"/></g>
+              <ellipse class="joint" cx="88" cy="250" rx="4.6" ry="4.6"/><ellipse class="joint" cx="132" cy="250" rx="4.6" ry="4.6"/>
+              <path class="bl" d="M88,253 C84,292 83,330 85,366" stroke-width="2.9"/><path class="bl" d="M132,253 C136,292 137,330 135,366" stroke-width="2.9"/>
+              <ellipse class="joint" cx="86" cy="372" rx="5.2" ry="5"/><ellipse class="joint" cx="134" cy="372" rx="5.2" ry="5"/>
+              <path class="bl" d="M86,378 C85,410 85,444 85,466" stroke-width="2.6"/><path class="bl" d="M91,380 C91,410 91,442 90,462" stroke-width="1.5"/>
+              <path class="bl" d="M134,378 C135,410 135,444 135,466" stroke-width="2.6"/><path class="bl" d="M129,380 C129,410 129,442 130,462" stroke-width="1.5"/>
+              <ellipse class="joint" cx="85" cy="470" rx="4" ry="3.4"/><ellipse class="joint" cx="135" cy="470" rx="4" ry="3.4"/>
+            </g>
+
+            <!-- VÙNG BẤM (overlay màu theo phân khu) -->
+            <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M66,100 C52,106 45,126 43,150 C42,166 43,176 45,184 L63,184 C62,160 64,128 74,106 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M45,184 C44,212 46,242 50,270 C52,284 54,292 57,298 C63,292 64,282 63,270 C61,242 61,212 61,184 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M154,100 C168,106 175,126 177,150 C178,166 177,176 175,184 L157,184 C158,160 156,128 146,106 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M175,184 C176,212 174,242 170,270 C168,284 166,292 163,298 C157,292 156,282 157,270 C159,242 159,212 159,184 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M74,288 C68,322 68,352 73,378 L100,378 C102,348 104,316 106,290 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M73,378 C77,414 80,448 82,474 C88,480 94,480 96,474 C99,446 99,410 100,378 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M146,288 C152,322 152,352 147,378 L120,378 C118,348 116,316 114,290 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M147,378 C143,414 140,448 138,474 C132,480 126,480 124,474 C121,446 121,410 120,378 Z"/>
+            <path class="bodyzone" data-region="3" style="fill:#15509c;stroke:#15509c" d="M64,104 C68,96 82,91 96,90 L124,90 C138,91 152,96 156,104 C161,124 157,154 151,182 L69,182 C63,154 59,124 64,104 Z"/>
+            <path class="bodyzone" data-region="4" style="fill:#1b9e77;stroke:#1b9e77" d="M69,182 L151,182 C150,202 150,218 150,232 L70,232 C70,218 70,202 69,182 Z"/>
+            <path class="bodyzone" data-region="5" style="fill:#7a3fc0;stroke:#7a3fc0" d="M70,232 L150,232 C150,258 150,278 142,290 C134,298 122,300 110,300 C98,300 86,298 78,290 C70,278 70,258 70,232 Z"/>
+            <path class="bodyzone" data-region="2" style="fill:#2ba9e0;stroke:#2ba9e0" d="M102,64 L118,64 C119,76 122,86 126,92 L94,92 C98,86 101,76 102,64 Z"/>
+            <ellipse class="bodyzone" data-region="1" style="fill:#c0392b;stroke:#c0392b" cx="110" cy="42" rx="20" ry="25"/>
+            <text class="rnum" x="110" y="47" text-anchor="middle">1</text>
+            <text class="rnum" x="110" y="82" text-anchor="middle">2</text>
+            <text class="rnum" x="110" y="142" text-anchor="middle">3</text>
+            <text class="rnum" x="110" y="211" text-anchor="middle">4</text>
+            <text class="rnum" x="110" y="262" text-anchor="middle">5</text>
+            <text class="rnum" x="52" y="150" text-anchor="middle">6</text>
+            <text class="rnum" x="86" y="330" text-anchor="middle">7</text>
+
+            <!-- CỘT SỐNG (mặt sau) -->
+            <g class="spine">
+              <rect class="spineseg" data-region="2" data-sub="cs-co"   x="103" y="69"  width="14" height="22" rx="4" fill="#2ba9e0"/>
+              <rect class="spineseg" data-region="3" data-sub="cs-nguc" x="103" y="93"  width="14" height="66" rx="4" fill="#15509c"/>
+              <rect class="spineseg" data-region="5" data-sub="cs-tl"   x="103" y="161" width="14" height="70" rx="4" fill="#7a3fc0"/>
+              <text class="spinelink" x="110" y="84"  text-anchor="middle">C</text>
+              <text class="spinelink" x="110" y="130" text-anchor="middle">N</text>
+              <text class="spinelink" x="110" y="200" text-anchor="middle">TL</text>
+            </g>
+
+            <!-- NGHIÊNG (cột sống bên) -->
+            <g class="sideview">
+              <path class="sidebody" d="M100,22 C116,22 127,34 127,50 C127,61 122,69 115,72 C118,74 118,80 111,80 L95,80 C86,77 80,66 80,52 C80,36 87,22 100,22 Z"/>
+              <path class="sidebody" d="M91,80 C76,88 69,108 72,136 C70,168 75,202 87,228 C102,232 118,230 124,222 C130,210 130,190 126,172 C132,146 131,110 125,92 C120,82 106,77 94,80 Z"/>
+              <path class="sidebody" d="M85,226 C79,278 81,338 84,394 C81,434 79,463 87,479 L117,479 C123,463 121,434 119,396 C121,338 124,284 123,228 C113,234 99,234 85,226 Z"/>
+              <path class="sidebody" d="M87,479 L61,479 C58,479 58,471 61,470 L87,467 Z"/>
+              <g class="sideskel" stroke-width="1.3">
+                <path d="M112,96 C128,98 136,116 134,138"/><path d="M110,112 C128,114 138,132 136,154"/><path d="M110,128 C129,131 139,150 135,170"/>
+              </g>
+              <path class="spineseg2" data-region="2" data-sub="cs-co"      stroke="#2ba9e0" d="M110,74 C106,88 104,98 107,108"/>
+              <path class="spineseg2" data-region="3" data-sub="cs-nguc"    stroke="#15509c" d="M107,108 C112,134 118,162 113,192"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-tl"      stroke="#7a3fc0" d="M113,192 C109,210 106,228 110,244"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-cungcut" stroke="#b05a2b" d="M110,244 C113,258 116,274 110,290"/>
+              <text class="sidelabel" x="140" y="94"  text-anchor="start">Cổ</text>
+              <text class="sidelabel" x="146" y="152" text-anchor="start">Ngực</text>
+              <text class="sidelabel" x="150" y="222" text-anchor="start">Thắt lưng</text>
+              <text class="sidelabel" x="140" y="274" text-anchor="start">Cùng–cụt</text>
+            </g>
+          </svg>
+          <p class="bodyhint">Bấm vào vùng cơ thể, hoặc chọn ô bên dưới</p>
+          <div class="regions" id="regions"></div>
+          <p class="muted" style="margin-top:10px;font-size:12px">Bấm vùng cơ thể hoặc ô danh mục để tra cứu.</p>
         </div>
       </section>
       <!-- CỘT 2 -->
@@ -180,7 +292,6 @@
     var MODALITY = P.modality || "X-quang";
     var CONTRAST = P.contrast || "all";   // "0" không tiêm · "1" có tiêm · "all"
     var SEX = P.sex || "nu";
-
     function contrastOf(it) {
       var t = it.ten || "";
       if (/không tiêm|không thuốc|HRCT|LDCT|calcium|điểm vôi|liều thấp tìm sỏi|Dentascan|nha khoa|Image Gently|nhi khoa liều thấp/i.test(t)) return "0";
@@ -198,7 +309,92 @@
     function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
     function esc(s) { return (s || "").toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
-    // Blob văn bản (nhận diện "xung tiêm thuốc" MRI)
+    function rx(re, s) { return re.test(s || ""); }
+    var ICON = {1:"💀",2:"🦴",3:"🫁",4:"🩻",5:"🦵",6:"💪",7:"🦶"};
+    var BODY = [
+      { id:1, ten:"Sọ & Mặt", en:"Skull & Facial", color:"#c0392b" },
+      { id:2, ten:"Cổ & Cột sống cổ", en:"Neck & Cervical", color:"#2ba9e0" },
+      { id:3, ten:"Ngực", en:"Chest & Thorax", color:"#15509c" },
+      { id:4, ten:"Bụng", en:"Abdomen", color:"#1b9e77" },
+      { id:5, ten:"Chậu & CS thắt lưng", en:"Pelvis & Lumbar", color:"#7a3fc0" },
+      { id:6, ten:"Chi trên", en:"Upper Extremities", color:"#d98a00" },
+      { id:7, ten:"Chi dưới", en:"Lower Extremities", color:"#c0397b" }
+    ];
+    BODY.forEach(function (b) { b.icon = ICON[b.id]; });
+    var EXTRAS = {
+      "X-quang": [{ id:8, ten:"Thông số & Kỹ thuật", en:"Technique & Physics", icon:"⚙️", color:"#5a6679" }],
+      "CT": [
+        { id:8,  ten:"Cơ xương khớp (chi)", en:"MSK (limb)",      icon:"🦿", color:"#8a5a2b" },
+        { id:9,  ten:"Toàn thân",           en:"Whole-body",      icon:"🧍", color:"#596273" },
+        { id:10, ten:"Thông số & An toàn",  en:"Params & Safety", icon:"⚙️", color:"#5a6679" }
+      ],
+      "MRI": [
+        { id:8,  ten:"Cơ xương khớp (chung)", en:"MSK (general)",       icon:"🦿", color:"#8a5a2b" },
+        { id:9,  ten:"Mạch máu (MRA)",        en:"MR Angiography",      icon:"🩸", color:"#b2403a" },
+        { id:10, ten:"Toàn thân",             en:"Whole-body",          icon:"🧍", color:"#596273" },
+        { id:11, ten:"Các xung tiêm thuốc",   en:"Contrast sequences",  icon:"💉", color:"#c0392b", special:"contrast" },
+        { id:12, ten:"Chuỗi xung & Thông số", en:"Sequences & Physics", icon:"🎚️", color:"#5a6679" }
+      ]
+    };
+    var REGIONS = BODY.concat(EXTRAS[MODALITY] || []);
+
+    function regionOf(it) {
+      if (MODALITY === "CT") return regionOfCT(it);
+      if (MODALITY === "MRI") return regionOfMRI(it);
+      return regionOfXQ(it);
+    }
+    function regionOfXQ(it) {
+      var n = it.nhom || "", t = it.ten || "";
+      if (n === "Sọ - Mặt" || n === "Răng") return 1;
+      if (n === "Cột sống" && rx(/cổ|C1|C2/, t)) return 2;
+      if (n === "Lồng ngực - Bụng" && rx(/phổi|ngực|xương ức|thực quản|lồng ngực/, t) && !rx(/ổ bụng|bụng/, t)) return 3;
+      if (n === "Cột sống" && rx(/ngực/, t)) return 3;
+      if (n === "Lồng ngực - Bụng" && rx(/ổ bụng|bụng/, t)) return 4;
+      if (n === "Cản quang") return 4;
+      if (n === "Cột sống" && rx(/thắt lưng|L5|S1|cùng cụt/, t)) return 5;
+      if (n === "Chi dưới" && rx(/chậu|háng|khớp mu/, t)) return 5;
+      if (n === "Chi trên" || n === "Vai - Đòn") return 6;
+      if (n === "Chi dưới") return 7;
+      return 8;
+    }
+    function regionOfCT(it) {
+      var n = it.nhom || "", t = it.ten || "";
+      if (n === "Sọ não" || n === "Đầu - Mặt - Cổ") return 1;
+      if (n === "Lồng ngực") return 3;
+      if (n === "Cột sống") { if (rx(/cổ/, t)) return 2; if (rx(/ngực/, t)) return 3; return 5; }
+      if (n === "Ổ bụng - Tiểu khung") { return (rx(/tiểu khung/, t) && !rx(/bụng/, t)) ? 5 : 4; }
+      if (n === "Cơ xương khớp") return 8;
+      if (n === "Mạch máu") {
+        if (rx(/chi trên/i, t)) return 6;
+        if (rx(/chi dưới|run-off/i, t)) return 7;
+        if (rx(/phổi|vành|CCTA|CTPA/i, t)) return 3;
+        if (rx(/cảnh|nội sọ/i, t)) return 1;
+        if (rx(/chủ|chậu/i, t)) return 4;
+        return 9;
+      }
+      if (n === "Toàn thân") return 9;
+      if (n === "Thông số & An toàn") return 10;
+      return 9;
+    }
+    function regionOfMRI(it) {
+      var n = it.nhom || "", s = n + " " + (it.ten || "");
+      if (n === "Thông số & Vật lý MRI" || n === "Chuỗi xung MRI") return 12;
+      if (n === "Toàn thân") return 10;
+      if (n === "Mạch máu") return 9;
+      if (n === "Tuyến vú" || n === "Lồng ngực") return 3;
+      if (n === "Sọ não" || n === "Đầu - Mặt - Cổ") return 1;
+      if (n === "Cột sống") { if (rx(/cổ/, s)) return 2; if (rx(/ngực/, s)) return 3; return 5; }
+      if (n === "Ổ bụng - Tiểu khung") {
+        return rx(/tiền liệt|tử cung|chậu|bàng quang|trực tràng|sàn chậu|bìu|buồng trứng|cổ tử cung/i, s) ? 5 : 4;
+      }
+      if (n === "Cơ xương khớp") {
+        if (rx(/vai|khuỷu|cổ tay|bàn tay|cánh tay/i, s)) return 6;
+        if (rx(/gối|cổ chân|bàn chân|đùi|háng/i, s)) return 7;
+        return 8;
+      }
+      return 12;
+    }
+    // Blob văn bản của 1 mục (để nhận diện "xung tiêm thuốc")
     function itemBlob(it) {
       var s = (it.ten || "") + " " + (it.nhom || "");
       (it.thongSo || []).forEach(function (t) { s += " " + (t.giaTri || ""); });
@@ -209,264 +405,120 @@
       return /gadolinium|\bgd\b|tiêm thuốc|sau tiêm|động học|dynamic|tương phản|đặc hiệu gan|uspio|mmol\/kg|\+ *c\b/i.test(itemBlob(it));
     }
 
-    /* ================== ĐỊNH NGHĨA VÙNG GIẢI PHẪU ==================
-       Mỗi vùng = 1 matcher chạy trên chuỗi B = (ten ¦ nhom).
-       Vùng chi/khớp có cờ msk:true → gộp thêm các protocol CXK chung
-       (CT chỉ có protocol khớp/xương chung, không chia theo khớp).      */
-    function mskGeneric(it) {
-      return (it.nhom === "Cơ xương khớp") &&
-        !/vai|khuỷu|cổ tay|bàn tay|gối|cổ chân|bàn chân|đùi|cánh tay|háng/i.test(it.ten || "");
-    }
-    var PELVIC = /tiểu khung|tiền liệt|tử cung|vùng chậu|khung chậu nữ|phụ khoa|bàng quang|trực tràng|sàn chậu|bìu|dương vật|buồng trứng|cổ tử cung|thai|bánh nhau|hậu môn|niệu đạo – bàng quang|lỗ rò hậu môn/i;
-
-    // ZONES: thứ tự quyết định lớp chồng khi vẽ (sau = nằm trên)
-    var ZONES = {
-      z_so:      { ten:"Sọ & Não", en:"Skull & Brain", color:"#c0392b",
-        m:function(B){ return /\bsọ não\b/i.test(B) || /sọ (thẳng|nghiêng|hirtz|tiếp tuyến)/i.test(B) ||
-          /nền sọ|xương đá|bó sợi thần kinh|dti|tractography|khuếch tán|diffusion|phổ sọ|\bmrs\b|tưới máu não|perfusion não|ct perfusion|tuyến yên|đột quỵ|mạch máu não|cta não|động mạch nội sọ|hệ động mạch cảnh|cta cảnh|nội sọ|hệ mạch máu hướng nội sọ|sinh thiết não|dựng hình 3d\s*$/i.test(B) && /sọ|não/i.test(B); } },
-      z_hocmat:  { ten:"Hốc mắt – TK thị", en:"Orbit", color:"#d35400",
-        m:function(B){ return /hốc mắt|thần kinh thị/i.test(B); } },
-      z_xoangham:{ ten:"Xoang – Hàm mặt – Răng", en:"Sinus / Maxillofacial / Dental", color:"#b9770e",
-        m:function(B){ return /xoang|blondeau|mặt thẳng|hàm|mỏm trâm|xương chính mũi|thái dương hàm|nha khoa|dentascan|mặt – cổ|mặt - cổ|vùng mặt|răng/i.test(B); } },
-      z_tai:     { ten:"Tai – Xương chũm – Xương đá", en:"Temporal bone", color:"#9c6b1e",
-        m:function(B){ return /\btai\b|xương đá|chũm|schüller|schuller|chaussé|chausse|stenvers/i.test(B); } },
-      z_co:      { ten:"Cổ & Cột sống cổ", en:"Neck & Cervical spine", color:"#2ba9e0",
-        m:function(B){ return /cột sống cổ|đốt sống cổ|c1-c2|c1 - c2|cổ (thẳng|nghiêng|chếch)|đám rối thần kinh cánh tay/i.test(B); } },
-      z_vai:     { ten:"Vai – Xương đòn", en:"Shoulder & Clavicle", color:"#d98a00", msk:true,
-        m:function(B){ return /\bvai\b|xương đòn|bả vai|mỏm quạ|ổ chảo|grashey|cùng đòn|lawrence|lilienfeld/i.test(B); } },
-      z_canhtay: { ten:"Xương cánh tay", en:"Humerus / Arm", color:"#cf8420", msk:true,
-        m:function(B){ return (/cánh tay/i.test(B) && !/đám rối/i.test(B)) || (/xương dài/i.test(B) && /cánh tay/i.test(B)); } },
-      z_khuyu:   { ten:"Khuỷu tay", en:"Elbow", color:"#c47d1c", msk:true,
-        m:function(B){ return /khuỷu/i.test(B); } },
-      z_cangtay: { ten:"Cẳng tay", en:"Forearm", color:"#be7719", msk:true,
-        m:function(B){ return /cẳng tay/i.test(B); } },
-      z_cotay:   { ten:"Cổ tay", en:"Wrist", color:"#b87117", msk:true,
-        m:function(B){ return /cổ tay|xương thuyền|gaynor/i.test(B); } },
-      z_bantay:  { ten:"Bàn – Ngón tay", en:"Hand & Fingers", color:"#b26b15", msk:true,
-        m:function(B){ return /bàn tay|ngón tay|ngón cái/i.test(B); } },
-      z_nguc:    { ten:"Lồng ngực – Phổi", en:"Chest & Lungs", color:"#15509c",
-        m:function(B,it){ return it.nhom === "Lồng ngực" ||
-          (it.nhom === "Lồng ngực - Bụng" && /phổi|ngực|xương ức|thực quản/i.test(B) && !/ổ bụng/i.test(B)) ||
-          (/lồng ngực/i.test(B) && !/ổ bụng|cột sống/i.test(B)); } },
-      z_tim:     { ten:"Tim & Mạch vành", en:"Heart & Coronary", color:"#b2403a",
-        m:function(B){ return /mạch vành|ccta|calcium|điểm vôi|động mạch vành|ctpa|động mạch phổi|cht tim|mri tim|\bcmr\b/i.test(B); } },
-      z_vu:      { ten:"Tuyến vú", en:"Breast", color:"#b03a6b", onlyMod:"MRI",
-        m:function(B){ return /tuyến vú/i.test(B); } },
-      z_bung:    { ten:"Ổ bụng – Gan mật – Tiêu hóa – Tiết niệu", en:"Abdomen", color:"#1b9e77",
-        // Lưu ý: NHÓM "Ổ bụng - Tiểu khung" có chữ "Tiểu khung" → PELVIC phải xét trên TÊN (it.ten), không xét cả nhóm
-        m:function(B,it){ return (/ổ bụng|gan|mật|tụy|lách|dạ dày|tiết niệu|thận|sỏi|\bctu\b|mrcp|ruột|đại tràng|niệu đồ|\buiv\b|tầng trên|enterography|enteroclysis|colonography/i.test(B)
-          || (it.nhom === "Ổ bụng - Tiểu khung")) && !PELVIC.test(it.ten) && !/khung chậu|cùng chậu|khớp mu|khớp vệ/i.test(it.ten); } },
-      z_chau:    { ten:"Chậu – Tiểu khung – Niệu sinh dục", en:"Pelvis", color:"#7a3fc0",
-        m:function(B,it){ return PELVIC.test(it.ten) || /khung chậu|cùng chậu|khớp mu|khớp vệ/i.test(it.ten); } },
-      z_hang:    { ten:"Khớp háng", en:"Hip", color:"#8e5ac8", msk:true,
-        m:function(B){ return /khớp háng|chân ếch|cleaves/i.test(B); } },
-      z_dui:     { ten:"Xương đùi", en:"Femur / Thigh", color:"#c0397b", msk:true,
-        m:function(B){ return /xương đùi/i.test(B) || (/xương dài/i.test(B) && /đùi/i.test(B)); } },
-      z_goi:     { ten:"Khớp gối", en:"Knee", color:"#c73f84", msk:true,
-        m:function(B){ return /gối|bánh chè|béclère|beclere|camp-coventry|settegast|liên lồi cầu|judet/i.test(B); } },
-      z_cangchan:{ ten:"Cẳng chân", en:"Leg", color:"#ce4489", msk:true,
-        m:function(B){ return /cẳng chân/i.test(B); } },
-      z_cochan:  { ten:"Cổ chân – Gót", en:"Ankle & Heel", color:"#d4498f", msk:true,
-        m:function(B){ return /cổ chân|xương gót/i.test(B); } },
-      z_banchan: { ten:"Bàn – Ngón chân", en:"Foot & Toes", color:"#da4e95", msk:true,
-        m:function(B){ return /bàn chân|ngón chân/i.test(B); } },
-      // Cột sống các tầng (chip + hình nghiêng)
-      z_csnguc:  { ten:"Cột sống ngực", en:"Thoracic spine", color:"#15509c",
-        m:function(B){ return /cột sống ngực|đốt sống ngực/i.test(B); } },
-      z_cstl:    { ten:"Cột sống thắt lưng", en:"Lumbar spine", color:"#7a3fc0",
-        m:function(B){ return /thắt lưng|l5-s1|\bl5\b/i.test(B); } },
-      z_cungcut: { ten:"Cột sống cùng – cụt", en:"Sacrococcygeal", color:"#b05a2b",
-        m:function(B){ return /cùng cụt|cùng – cụt|cùng-cụt|xương cùng|xương cụt/i.test(B); } }
-    };
-
-    // Các "chuyên đề" không gắn vùng cụ thể trên hình
-    var SPECIALS = {
-      c_mach:     { ten:"Mạch máu lớn (CTA/MRA)", en:"Angiography", color:"#b2403a",
-        m:function(B){ return /\bcta\b|\bctpa\b|\bccta\b|run-off|động mạch chủ|động mạch cảnh|mạch máu|\bmra\b|tĩnh mạch|bạch mạch|động mạch (chi|toàn thân|vành|phổi)|chủ – chậu|chủ-chậu/i.test(B); } },
-      c_toanthan: { ten:"Toàn thân", en:"Whole-body", color:"#596273",
-        m:function(B,it){ return it.nhom === "Toàn thân" || /toàn thân/i.test(B); } },
-      c_contrast: { ten:"Chuỗi xung tiêm thuốc", en:"Contrast sequences", color:"#c0392b", onlyMod:"MRI",
-        m:function(B,it){ return isContrastMRI(it); } },
-      c_thongso:  { ten:"Thông số • Vật lý • Chuỗi xung • An toàn", en:"Params & Physics", color:"#5a6679",
-        m:function(B,it){ return /Thông số|Vật lý|Chuỗi xung|An toàn/i.test(it.nhom || ""); } }
-    };
-
-    // Chuẩn bị: gắn blob + matcher ăn khớp
-    QT.forEach(function (it) { it.__B = (it.ten || "") + " ¦ " + (it.nhom || ""); });
-    function zoneItems(z) {
-      return QT.filter(function (it) {
-        if (z.onlyMod && MODALITY !== z.onlyMod) return false;
-        if (z.m(it.__B, it)) return true;
-        if (z.msk && mskGeneric(it)) return true;
-        return false;
-      });
-    }
-    // Đếm số KT mỗi vùng/chuyên đề
-    var COUNT = {};
-    Object.keys(ZONES).forEach(function (k) { COUNT[k] = zoneItems(ZONES[k]).length; });
-    Object.keys(SPECIALS).forEach(function (k) { COUNT[k] = zoneItems(SPECIALS[k]).length; });
-    // c_khac: những mục chưa thuộc vùng/chuyên đề nào
-    var zKeys = Object.keys(ZONES), sKeys = Object.keys(SPECIALS);
-    function matchedAny(it) {
-      var i;
-      for (i = 0; i < zKeys.length; i++) { var z = ZONES[zKeys[i]]; if (z.onlyMod && MODALITY !== z.onlyMod) continue; if (z.m(it.__B, it) || (z.msk && mskGeneric(it))) return true; }
-      for (i = 0; i < sKeys.length; i++) { var s = SPECIALS[sKeys[i]]; if (s.onlyMod && MODALITY !== s.onlyMod) continue; if (s.m(it.__B, it)) return true; }
-      return false;
-    }
-    var KHAC = QT.filter(function (it) { return !matchedAny(it); });
-    if (KHAC.length) { SPECIALS.c_khac = { ten:"Khác / chưa phân vùng", en:"Other", color:"#7a8699", m:function(){ return false; } }; COUNT.c_khac = KHAC.length; }
-
-    /* ================== HÌNH NGƯỜI (ảnh thật + vùng bấm) ================== */
-    var SVGNS = "http://www.w3.org/2000/svg";
-    function svg(tag, attrs) { var e = document.createElementNS(SVGNS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
-
-    // Toạ độ vùng bấm — hệ quy chiếu khớp đúng ảnh đã cắt
-    // FRONT: viewBox 320×860 (images/anat-front.png)
-    var FRONT = [
-      ["z_nguc",110,148,100,98], ["z_bung",114,284,92,66], ["z_chau",120,352,80,48],
-      ["z_vai",58,132,50,38], ["z_vai",212,132,50,38],
-      ["z_canhtay",50,172,40,88], ["z_canhtay",230,172,40,88],
-      ["z_dui",128,430,30,168], ["z_dui",162,430,30,168],
-      ["z_cangchan",130,648,28,118], ["z_cangchan",162,648,28,118],
-      ["z_cangtay",38,300,38,94], ["z_cangtay",244,300,38,94],
-      ["z_so",136,22,48,42],
-      // tiền cảnh (nằm trên)
-      ["z_tim",140,194,48,46],
-      ["z_vu",124,182,30,32], ["z_vu",166,182,30,32],
-      ["z_hocmat",140,66,17,12], ["z_hocmat",163,66,17,12],
-      ["z_xoangham",142,80,36,30],
-      ["z_tai",125,62,12,24], ["z_tai",183,62,12,24],
-      ["z_co",146,112,28,28],
-      ["z_khuyu",44,260,38,40], ["z_khuyu",238,260,38,40],
-      ["z_cotay",30,394,34,32], ["z_cotay",256,394,34,32],
-      ["z_bantay",16,426,44,72], ["z_bantay",260,426,44,72],
-      ["z_hang",118,400,32,30], ["z_hang",170,400,32,30],
-      ["z_goi",128,600,30,44], ["z_goi",162,600,30,44],
-      ["z_cochan",132,768,26,30], ["z_cochan",162,768,26,30],
-      ["z_banchan",124,798,36,54], ["z_banchan",160,798,36,54]
-    ];
-    // LATERAL: viewBox 255×850 (images/anat-lateral.png)
-    var LAT = [
-      ["z_so",80,10,100,106],
-      ["z_nguc",118,168,78,148], ["z_bung",122,314,80,110], ["z_chau",78,408,100,66],
-      // đốt sống dọc cột (nằm trên cùng)
-      ["z_co",94,112,24,46,"spinecap"],
-      ["z_csnguc",84,166,34,146,"spinecap"],
-      ["z_cstl",84,312,30,96,"spinecap"],
-      ["z_cungcut",88,408,32,60,"spinecap"]
-    ];
-
-    function buildFig2(view, spots, vbW, vbH, href) {
-      var s = svg("svg", { "class": "bodyfig" + (view === "front" ? "" : " hidden"),
-        viewBox: "0 0 " + vbW + " " + vbH, "data-view": view, role: "img",
-        "aria-label": "Hình giải phẫu — bấm chọn vùng" });
-      var im = svg("image", { x:0, y:0, width:vbW, height:vbH, preserveAspectRatio:"xMidYMid meet" });
-      im.setAttributeNS("http://www.w3.org/1999/xlink", "href", href);
-      im.setAttribute("href", href);
-      s.appendChild(im);
-      spots.forEach(function (sp) {
-        var key = sp[0], x = sp[1], y = sp[2], w = sp[3], h = sp[4], extra = sp[5];
-        var z = ZONES[key]; if (!z) return;
-        var cls = "bodyzone" + (extra ? " " + extra : "");
-        if (!COUNT[key]) cls += " empty";
-        var r = svg("rect", { "class":cls, x:x, y:y, width:w, height:h, rx:6, "data-zone":key });
-        r.style.setProperty("--zc", z.color);
-        var ti = svg("title", {}); ti.textContent = z.ten + (COUNT[key] ? " · " + COUNT[key] + " KT" : " · (không có ở chế độ này)");
-        r.appendChild(ti);
-        s.appendChild(r);
-      });
-      return s;
-    }
-
-    var figwrap = document.getElementById("figwrap");
-    var figFront = buildFig2("front", FRONT, 320, 860, "images/anat-front.png");
-    var figLat = buildFig2("lateral", LAT, 255, 850, "images/anat-lateral.png");
-    figwrap.appendChild(figFront);
-    figwrap.appendChild(figLat);
-
-    /* ================== CHIP: cột sống + chuyên đề ================== */
-    var spineBox = document.getElementById("spineChips");
-    var extraBox = document.getElementById("extraChips");
-    var SPINE_KEYS = ["z_co","z_csnguc","z_cstl","z_cungcut"];
-    function chip(key, meta) {
-      var n = COUNT[key] || 0;
-      var c = el("button", "chip" + (n ? "" : " empty"),
-        esc(meta.ten) + ' <span class="c">' + n + '</span>');
-      c.style.setProperty("--zc", meta.color);
-      c.setAttribute("data-zone", key);
-      if (n) c.onclick = function () { selectZone(key); };
-      return c;
-    }
-    SPINE_KEYS.forEach(function (k) { spineBox.appendChild(chip(k, ZONES[k])); });
-    Object.keys(SPECIALS).forEach(function (k) { extraBox.appendChild(chip(k, SPECIALS[k])); });
-
-    /* ================== BADGE CT ================== */
+    // Badge chế độ (CT: Nữ=không tiêm / Nam=có tiêm)
     (function () {
       var mb = document.getElementById("modebadge");
+      if (!mb) return;
       if (MODALITY === "CT" && (CONTRAST === "0" || CONTRAST === "1")) {
         mb.className = "modebadge " + (CONTRAST === "0" ? "nu" : "nam");
         mb.innerHTML = (CONTRAST === "0") ? '<b>♀ NỮ</b> · CT không tiêm thuốc' : '<b>♂ NAM</b> · CT có tiêm thuốc';
       } else { mb.style.display = "none"; }
     })();
 
-    /* ================== CHỌN VÙNG ================== */
+    var regionsBox = document.getElementById("regions");
     var techBox = document.getElementById("techList");
     var detailBox = document.getElementById("detail");
-    var curZoneKey = null;
+    var zones = document.querySelectorAll(".bodyzone");
+    var curRegion = null, curItem = null, byId = {}, curSub = null;
+    // Bộ lọc vùng con của chi (chỉ áp dụng cho X-quang; CT/MRI gộp chung)
+    var SUBF = {
+      "tay-tren":  { ten: "Vai–Cánh tay–Khuỷu", re: /vai|đòn|cánh tay|khuỷu|mỏm khuỷu|cùng đòn|bả vai|mỏm quạ|ổ chảo|grashey|nách|lawrence/i },
+      "tay-duoi":  { ten: "Cẳng tay–Cổ tay–Bàn tay", re: /cẳng tay|cổ tay|bàn tay|ngón|mỏm trâm/i },
+      "chan-tren": { ten: "Đùi–Gối", re: /đùi|gối|bánh chè|béclère|camp|settegast|liên lồi cầu|judet/i },
+      "chan-duoi": { ten: "Cẳng chân–Cổ chân–Bàn chân", re: /cẳng chân|cổ chân|bàn chân|xương gót|ngón chân/i },
+      // cột sống (mặt sau) — áp dụng cho mọi modality
+      "cs-co":   { ten: "Cột sống cổ", allMod: true, re: /cột sống cổ|đốt sống cổ|c1|c2|cổ (thẳng|nghiêng|chếch|há miệng)/i },
+      "cs-nguc": { ten: "Cột sống ngực", allMod: true, re: /cột sống ngực|đốt sống ngực|ngực (thẳng|nghiêng)/i },
+      "cs-tl":   { ten: "Cột sống thắt lưng", allMod: true, re: /thắt lưng|l5|s1/i },
+      "cs-cungcut": { ten: "Cột sống cùng – cụt", allMod: true, re: /cùng cụt|cùng – cụt|cùng-cụt|xương cùng|xương cụt/i }
+    };
 
-    function getItems(key) {
-      if (key === "c_khac") return KHAC;
-      var z = ZONES[key] || SPECIALS[key]; if (!z) return [];
-      return zoneItems(z);
-    }
-    function metaOf(key) { return ZONES[key] || SPECIALS[key] || { ten:key, en:"", color:"#888" }; }
-
-    function highlight(key) {
-      Array.prototype.forEach.call(document.querySelectorAll("[data-zone]"), function (e) {
-        e.classList.toggle("active", e.getAttribute("data-zone") === key);
+    REGIONS.forEach(function (r) {
+      r.items = (r.special === "contrast")
+        ? QT.filter(isContrastMRI)                                   // danh sách tham chiếu (gộp thêm)
+        : QT.filter(function (it) { return regionOf(it) === r.id; });
+      byId[r.id] = r;
+      var tile = el("button", "rtile",
+        '<span class="num">' + r.id + '</span>' +
+        '<b>' + r.icon + ' ' + esc(r.ten) + '</b>' +
+        '<span>' + esc(r.en) + ' · ' + r.items.length + ' KT</span>');
+      tile.style.setProperty("--rc", r.color);
+      tile.setAttribute("data-rid", r.id);
+      tile.onclick = function () { setRegion(r.id); };
+      regionsBox.appendChild(tile);
+    });
+    // bấm lên vùng cơ thể trên hình người
+    Array.prototype.forEach.call(zones, function (z) {
+      z.addEventListener("click", function () {
+        setRegion(parseInt(z.getAttribute("data-region"), 10), z.getAttribute("data-sub"));
       });
-    }
+    });
+    // bấm lên đốt cột sống (mặt sau)
+    Array.prototype.forEach.call(document.querySelectorAll(".spineseg, .spineseg2"), function (s) {
+      s.addEventListener("click", function () {
+        setRegion(parseInt(s.getAttribute("data-region"), 10), s.getAttribute("data-sub"));
+      });
+    });
+    // nút Mặt trước / Mặt sau
+    var fig = document.querySelector(".bodyfig"), vt = document.getElementById("viewtoggle");
+    if (vt) Array.prototype.forEach.call(vt.querySelectorAll(".vbtn"), function (b) {
+      b.addEventListener("click", function () {
+        Array.prototype.forEach.call(vt.children, function (c) { c.classList.remove("active"); });
+        b.classList.add("active");
+        if (fig) {
+          var v = b.getAttribute("data-view");
+          fig.classList.toggle("back", v === "back");
+          fig.classList.toggle("side", v === "side");
+        }
+      });
+    });
 
-    function selectZone(key) {
-      var z = metaOf(key); var items = getItems(key);
-      curZoneKey = key;
-      highlight(key);
+    function setRegion(id, sub) {
+      var r = byId[id]; if (!r) return;
+      curRegion = r;
+      curSub = (sub && SUBF[sub] && (SUBF[sub].allMod || MODALITY === "X-quang")) ? sub : null;
+      Array.prototype.forEach.call(regionsBox.children, function (c) {
+        c.classList.toggle("active", c.getAttribute("data-rid") === String(id));
+      });
+      Array.prototype.forEach.call(zones, function (z) {
+        z.classList.toggle("active", z.getAttribute("data-region") === String(id) &&
+          (!curSub || z.getAttribute("data-sub") === curSub));
+      });
       techBox.innerHTML = "";
-      var head = el("div", "zonehead",
-        '<b>' + esc(z.ten) + '</b><span>' + esc(z.en || "") + ' · ' + items.length + ' kỹ thuật · ' + esc(MODALITY) + '</span>');
-      head.style.setProperty("--zc", z.color);
-      techBox.appendChild(head);
-      if (!items.length) {
-        techBox.appendChild(el("p", "muted", "Không có kỹ thuật nào ở vùng này cho " + esc(MODALITY) + "."));
-        detailBox.innerHTML = '<p class="placeholder">—</p>'; return;
+      var items = r.items;
+      if (curSub) items = items.filter(function (it) { return SUBF[curSub].re.test(it.ten || ""); });
+      if (curSub) {
+        var note = el("div", "subnote",
+          'Vùng con: <b>' + esc(SUBF[curSub].ten) + '</b> · ' + items.length + ' KT <button type="button" id="subclear">✕ bỏ lọc</button>');
+        techBox.appendChild(note);
+        note.querySelector("#subclear").onclick = function () { setRegion(id, null); };
       }
+      if (!items.length) { techBox.appendChild(el("p", "muted", "Không có mục nào ở vùng con này.")); detailBox.innerHTML = '<p class="placeholder">—</p>'; return; }
       var list = el("div", "tlist");
       items.forEach(function (it) {
         var b = el("button", "titem", esc(it.ten));
         b.onclick = function () {
           Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); });
-          b.classList.add("active"); showDetail(it);
+          b.classList.add("active");
+          showDetail(it);
         };
         list.appendChild(b);
       });
       techBox.appendChild(list);
-      list.firstChild.classList.add("active"); showDetail(items[0]);
+      if (list.firstChild) { list.firstChild.classList.add("active"); showDetail(items[0]); }
     }
 
-    // bấm vùng trên hình
-    figwrap.addEventListener("click", function (e) {
-      var r = e.target.closest ? e.target.closest("[data-zone]") : null;
-      if (r && !r.classList.contains("empty")) selectZone(r.getAttribute("data-zone"));
-    });
-
     function showDetail(it) {
+      curItem = it;
       var h = '<div class="pdetail">';
       h += '<h3>' + esc(it.ten) + '</h3>';
       var tag = (MODALITY === "MRI") ? (/^mri-sop-/.test(it.id || "") ? ' · SOP khoa (đã duyệt)' : ' · tham khảo') : '';
       h += '<p class="meta">' + esc(it.modality) + ' · ' + esc(it.nhom) + tag + (it.id ? ' · ' + esc(it.id) : '') + '</p>';
       if (it.thongSo && it.thongSo.length) {
         h += '<table class="ptable"><tbody>';
-        it.thongSo.forEach(function (t) { h += '<tr><td class="k">' + esc(t.ten) + '</td><td class="v">' + esc(t.giaTri) + '</td></tr>'; });
+        it.thongSo.forEach(function (t) {
+          h += '<tr><td class="k">' + esc(t.ten) + '</td><td class="v">' + esc(t.giaTri) + '</td></tr>';
+        });
         h += '</tbody></table>';
       }
       (it.noiDung || []).forEach(function (s) {
@@ -486,7 +538,8 @@
         }
       }
       h += '<button class="send-btn" id="sendBtn">GỬI YÊU CẦU &amp; ĐIỀU KHIỂN MÁY<small>Send Request &amp; Control Machine</small></button>';
-      h += '<div id="sendNote"></div></div>';
+      h += '<div id="sendNote"></div>';
+      h += '</div>';
       detailBox.innerHTML = h;
       document.getElementById("sendBtn").onclick = function () { sendRequest(it); };
     }
@@ -505,20 +558,7 @@
       } else { done(false); }
     }
 
-    /* ================== VIEW TOGGLE ================== */
-    var vt = document.getElementById("viewtoggle");
-    Array.prototype.forEach.call(vt.querySelectorAll(".vbtn"), function (b) {
-      b.addEventListener("click", function () {
-        Array.prototype.forEach.call(vt.children, function (c) { c.classList.remove("active"); });
-        b.classList.add("active");
-        var v = b.getAttribute("data-view");
-        figFront.classList.toggle("hidden", v !== "front");
-        figLat.classList.toggle("hidden", v !== "lateral");
-        if (curZoneKey) highlight(curZoneKey);
-      });
-    });
-
-    /* ================== LIGHTBOX + THEME ================== */
+    // lightbox
     var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg");
     detailBox.addEventListener("click", function (e) {
       if (e.target && e.target.tagName === "IMG") { lbImg.src = e.target.src; lb.hidden = false; }
@@ -526,6 +566,7 @@
     document.getElementById("lbClose").onclick = function () { lb.hidden = true; lbImg.src = ""; };
     lb.onclick = function (e) { if (e.target === lb) { lb.hidden = true; lbImg.src = ""; } };
 
+    // nền sáng/tối
     var tb = document.getElementById("themeBtn"), root = document.documentElement;
     try { if (localStorage.getItem("sotay-theme") === "dark") { root.setAttribute("data-theme","dark"); tb.textContent="☀️"; } } catch (e) {}
     tb.onclick = function () {
@@ -535,18 +576,15 @@
       try { localStorage.setItem("sotay-theme", dark ? "light" : "dark"); } catch (e) {}
     };
 
-    // view ban đầu
-    if ((P.view === "lateral" || P.view === "side" || P.view === "back") && figLat) {
-      figFront.classList.add("hidden"); figLat.classList.remove("hidden");
-      Array.prototype.forEach.call(vt.children, function (c) { c.classList.toggle("active", c.getAttribute("data-view") === "lateral"); });
+    // chọn chế độ xem theo ?view=front|back|side
+    if ((P.view === "back" || P.view === "side") && fig) {
+      fig.classList.add(P.view);
+      if (vt) Array.prototype.forEach.call(vt.children, function (c) {
+        c.classList.toggle("active", c.getAttribute("data-view") === P.view);
+      });
     }
-
-    // chọn vùng đầu tiên có dữ liệu
-    (function () {
-      var order = ["z_so","z_nguc","z_co","z_bung","z_chau"].concat(Object.keys(ZONES));
-      for (var i = 0; i < order.length; i++) { if (COUNT[order[i]]) { selectZone(order[i]); return; } }
-      var sp = Object.keys(SPECIALS); for (var j = 0; j < sp.length; j++) { if (COUNT[sp[j]]) { selectZone(sp[j]); return; } }
-    })();
+    // tự chọn vùng đầu tiên cho dễ nhìn
+    setRegion(1);
   })();
   </script>
 </body>
