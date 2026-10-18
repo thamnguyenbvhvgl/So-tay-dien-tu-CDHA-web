@@ -17,8 +17,15 @@
   .pb-head .theme { width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
                     background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
 
-  /* cột 1 (hình) + cột 2 (danh mục) gọn lại, cột 3 (thông số) rộng tối đa */
-  .pb-grid { display: grid; grid-template-columns: 220px 260px minmax(0, 1fr); gap: 14px; align-items: start; }
+  /* Mặc định: chỉ hiện cột "Phân khu" + "Thông số". Khi chọn vùng → hiện thêm "Danh mục kỹ thuật". */
+  .pb-grid { display: grid; grid-template-columns: 452px minmax(0, 1fr); gap: 14px; align-items: start; }
+  .pb-grid.show-tech { grid-template-columns: 452px 290px minmax(0, 1fr); }
+  #col-tech { display: none; }
+  .pb-grid.show-tech #col-tech { display: block; }
+  /* cột 1: hình người + ô phân vùng đặt cạnh nhau */
+  .pk-split { display: flex; gap: 12px; align-items: flex-start; }
+  .pk-fig { flex: 0 0 172px; }
+  .pk-tiles { flex: 1 1 auto; min-width: 0; }
   .pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
             box-shadow: var(--shadow); overflow: hidden; }
   .pb-col > h2 { margin: 0; padding: 12px 14px; font-size: 13.5px; letter-spacing: .4px;
@@ -27,8 +34,8 @@
   .pb-col > h2 small { display:block; font-weight:400; font-size:11px; opacity:.85; text-transform:none; letter-spacing:0; }
   .pb-body { padding: 12px; }
 
-  /* cột 1: ô vùng giải phẫu */
-  .regions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  /* cột 1: ô vùng giải phẫu (đặt cạnh hình, xếp dọc) */
+  .regions { display: grid; grid-template-columns: 1fr; gap: 7px; }
   .rtile { display: flex; flex-direction: column; gap: 2px; text-align: left; cursor: pointer;
            border: 1px solid var(--line); border-left: 5px solid var(--rc,#888); border-radius: 11px;
            padding: 10px 11px; background: var(--surface-2); color: var(--text); }
@@ -131,11 +138,15 @@
   .lb button { position: absolute; top: 14px; right: 16px; width: 44px; height: 44px; border-radius: 50%;
                border: none; background: rgba(255,255,255,.15); color: #fff; font-size: 22px; cursor: pointer; }
 
-  @media (max-width: 700px) {
-    .pb-grid { grid-template-columns: 1fr; }
-    .regions { grid-template-columns: 1fr 1fr 1fr; }
+  @media (max-width: 1000px) {
+    .pb-grid, .pb-grid.show-tech { grid-template-columns: 1fr; }
   }
-  @media (max-width: 560px) { .regions { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) {
+    .pk-split { flex-direction: column; align-items: center; }
+    .pk-fig { flex: 0 0 auto; }
+    .pk-tiles { width: 100%; }
+    .regions { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -160,6 +171,8 @@
             <button type="button" class="vbtn" data-view="back">Mặt sau</button>
             <button type="button" class="vbtn" data-view="side">Nghiêng (cột sống)</button>
           </div>
+          <div class="pk-split">
+            <div class="pk-fig">
           <svg class="bodyfig" viewBox="0 0 220 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
             <defs>
               <linearGradient id="skinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7d7"/><stop offset="1" stop-color="#f3c6ac"/></linearGradient>
@@ -267,20 +280,24 @@
               <text class="sidelabel" x="140" y="274" text-anchor="start">Cùng–cụt</text>
             </g>
           </svg>
-          <p class="bodyhint">Bấm vào vùng cơ thể, hoặc chọn ô bên dưới</p>
-          <div class="regions" id="regions"></div>
-          <p class="muted" style="margin-top:10px;font-size:12px">Bấm vùng cơ thể hoặc ô danh mục để tra cứu.</p>
+              <p class="bodyhint">Bấm vào vùng trên hình, hoặc chọn ô bên phải →</p>
+            </div><!-- /pk-fig -->
+            <div class="pk-tiles">
+              <div class="regions" id="regions"></div>
+              <p class="muted" style="margin-top:8px;font-size:11.5px">Bấm vùng trên hình cơ thể <b>hoặc</b> ô phân vùng để hiện danh mục kỹ thuật.</p>
+            </div><!-- /pk-tiles -->
+          </div><!-- /pk-split -->
         </div>
       </section>
-      <!-- CỘT 2 -->
-      <section class="pb-col">
+      <!-- CỘT 2 (ẩn, hiện khi chọn vùng) -->
+      <section class="pb-col" id="col-tech">
         <h2>Danh mục kỹ thuật <small>Imaging Techniques</small></h2>
         <div class="pb-body"><div id="techList"><p class="muted">⬅ Chọn một vùng giải phẫu để xem danh mục kỹ thuật.</p></div></div>
       </section>
       <!-- CỘT 3 -->
       <section class="pb-col">
         <h2>Thông số kỹ thuật <small>Technical Parameters</small></h2>
-        <div class="pb-body"><div id="detail"><p class="placeholder">Chọn một protocol ở cột giữa để xem thông số chi tiết.</p></div></div>
+        <div class="pb-body"><div id="detail"><p class="placeholder">Bấm vùng trên hình cơ thể hoặc ô phân vùng để hiện danh mục kỹ thuật, rồi chọn một kỹ thuật để xem thông số chi tiết.</p></div></div>
       </section>
     </div>
   </div>
@@ -480,6 +497,8 @@
     function setRegion(id, sub) {
       var r = byId[id]; if (!r) return;
       curRegion = r;
+      // hiện cột "Danh mục kỹ thuật" khi đã chọn vùng
+      var grid = document.querySelector(".pb-grid"); if (grid) grid.classList.add("show-tech");
       curSub = (sub && SUBF[sub] && (SUBF[sub].allMod || MODALITY === "X-quang")) ? sub : null;
       Array.prototype.forEach.call(regionsBox.children, function (c) {
         c.classList.toggle("active", c.getAttribute("data-rid") === String(id));
@@ -591,8 +610,12 @@
         c.classList.toggle("active", c.getAttribute("data-view") === P.view);
       });
     }
-    // tự chọn vùng đầu tiên cho dễ nhìn
-    setRegion(1);
+    // KHÔNG tự chọn vùng — để người dùng tự bấm hình/ô; cột "Danh mục kỹ thuật" ẩn đến khi chọn.
+    // (nếu có ?region=N thì mở sẵn vùng đó)
+    (function () {
+      var rq = parseInt(P.region, 10);
+      if (rq && byId[rq]) setRegion(rq);
+    })();
   })();
   </script>
 </body>
