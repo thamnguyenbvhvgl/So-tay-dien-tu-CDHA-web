@@ -1962,7 +1962,7 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-blondeau",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang Blondeau (xoang mặt)",
+    ten: "Chụp X-quang Blondeau",
     tuKhoa: ["blondeau", "waters", "xoang mat", "xoang ham", "xoang tran"],
     thongSo: [
       { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
@@ -2010,7 +2010,7 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-so-hirtz",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ Hirtz (nền sọ)",
+    ten: "Chụp X-quang sọ Hirtz",
     tuKhoa: ["hirtz", "nen so", "submentovertex", "smv", "xoang buom", "xoang sang"],
     thongSo: [
       { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
