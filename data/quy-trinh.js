@@ -547,74 +547,7 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-khuyu-cangtay",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang khuỷu — tư thế cẳng tay (khi khuỷu không duỗi thẳng được)",
-    tuKhoa: ["khuyu cang tay", "elbow forearm", "khuyu khong duoi"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Đầu trên xương trụ và xương quay, đầu dưới xương cánh tay, khớp khuỷu và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt khuỷu tay bệnh nhân trên phim với mặt sau cẳng tay tiếp xúc sát phim và bàn tay lật ngửa.",
-        "Điều chỉnh khuỷu tay bệnh nhân sao cho mỏm trên lồi cầu trong nằm dưới trung tâm phim 2 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-khuyu-cangtay-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-khuyu-cangtay-phim.jpg", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
-  {
-    id: "xq-khuyu-canhtay",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang khuỷu — tư thế cánh tay (khi khuỷu không duỗi thẳng được)",
-    tuKhoa: ["khuyu canh tay", "elbow humerus"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp khuỷu, đầu trên xương trụ và xương quay, đầu dưới xương cánh tay và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt khuỷu tay bệnh nhân trên phim với mặt sau cánh tay tiếp xúc sát phim và lòng bàn tay lật ngửa và bàn tay nắm chặt lại."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-khuyu-canhtay-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-khuyu-canhtay-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   {
     id: "xq-khuyu-nghieng",
@@ -1042,41 +975,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-cochan-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang cổ chân chếch",
-    tuKhoa: ["co chan chech", "ankle oblique", "khop sen chay"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 9–12 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp sên chày, xương cổ chân, đầu dưới xương chày và xương mác cùng những mô mềm. Tư thế này rất tiện lợi trong việc quan sát mắt cá ngoài cùng phần nằm giữa xương sên và mắt cá ngoài, nơi đây tổn thương thường xảy ra."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc nằm ngửa trên bàn chụp hình với cổ chân đau được đặt trên phim.",
-        "Cẳng chân nên cố gắng giữ thật đúng ở vị trí trước sau nếu có thể được.",
-        "Trong khi đó bàn chân xoay vào phía trong một góc 45°."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ đi qua khớp sên chày và thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cochan-chech-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cochan-chech-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   {
     id: "xq-cochan-nghieng",
@@ -1991,6 +1889,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-thang-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-cotsong-tl-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
@@ -2615,9 +2514,10 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-obung-ct.jpg",   caption: "Tư thế đứng & hướng tia (Clark's)" },
+      { src: "images/xq/xq-obung-ct.jpg", caption: "Chiều thế (đứng) & hướng tia" },
       { src: "images/xq/xq-o-bung-thang-ct2.png", caption: "Chiều thế (ngồi)" },
-      { src: "images/xq/xq-obung-phim.jpg", caption: "Phim ổ bụng đứng — mẫu" }
+      { src: "images/xq/xq-obung-phim.jpg", caption: "Phim đạt yêu cầu (đứng)" },
+      { src: "images/xq/xq-o-bung-thang-phim2.png", caption: "Phim đạt yêu cầu (ngồi)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -2651,6 +2551,11 @@ window.SOTAY_QUYTRINH = [
         "Hình ảnh rõ nét Thấy toàn bộ ổ bụng tư thế nghiêng từ vòm hoành trở xuống.",
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-o-bung-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng)" },
+      { src: "images/xq/xq-o-bung-nghieng-ct2.png", caption: "Chiều thế (nằm nghiêng) 2" },
+      { src: "images/xq/xq-o-bung-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
