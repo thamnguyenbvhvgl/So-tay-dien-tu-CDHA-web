@@ -54,10 +54,10 @@
   .bone { fill: url(#boneG); stroke: #b19a6e; stroke-width: .6; stroke-linejoin: round; }
   .bl { fill: none; stroke: #c3b188; stroke-width: 2.2; stroke-linecap: round; }
   .joint { fill: #efe7d4; stroke: #b19a6e; stroke-width: .8; }
-  .bodyzone { fill-opacity: .24; stroke-width: 2; stroke-linejoin: round; cursor: pointer; transition: fill-opacity .14s; }
-  .bodyzone:hover { fill-opacity: .46; }
-  .bodyzone.active { fill-opacity: .58; }
-  .rnum { font: 800 20px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+  .bodyzone { fill-opacity: .17; stroke-width: 1.5; stroke-linejoin: round; cursor: pointer; transition: fill-opacity .14s; }
+  .bodyzone:hover { fill-opacity: .4; }
+  .bodyzone.active { fill-opacity: .55; }
+  .rnum { font: 800 12px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 2.4px; stroke-linejoin: round; pointer-events: none; }
   :root[data-theme="dark"] .rnum { fill: #e3e9f1; stroke: #1b2430; }
   .bodyhint { text-align: center; font-size: 11.5px; color: var(--text-soft); margin: 0 0 10px; }
   /* nút Mặt trước / Mặt sau / Nghiêng */
@@ -71,12 +71,14 @@
   .spineseg:hover { stroke-width: 2; }
   .spinelink { font: 800 10px system-ui; fill: #fff; pointer-events: none; }
   /* chế độ Nghiêng (cột sống) */
-  .bodyfig.side .frontview { display: none; }
+  .bodyfig.side .skinlayer, .bodyfig.side .skel, .bodyfig.side .bodyzone, .bodyfig.side .spine, .bodyfig.side .rnum { display: none; }
   .bodyfig:not(.side) .sideview { display: none; }
-  .spineseg2 { fill: none; stroke-width: 18; stroke-linecap: round; cursor: pointer; pointer-events: stroke; opacity: .6; transition: opacity .14s; }
-  .spineseg2:hover { stroke-width: 22; opacity: .85; }
-  .spineseg2.on { stroke-width: 22; opacity: .9; }
-  .sidelabel { font: 700 17px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+  .sidebody { fill: url(#skinG); stroke: #e3a888; stroke-width: 1.1; stroke-linejoin: round; }
+  .sideskel { fill: none; stroke: #c3b188; stroke-width: 1.6; stroke-linecap: round; opacity: .8; pointer-events: none; }
+  .spineseg2 { fill: none; stroke-width: 14; stroke-linecap: round; cursor: pointer; pointer-events: stroke; opacity: .82; }
+  .spineseg2:hover { stroke-width: 17; opacity: 1; }
+  .spineseg2.on { stroke-width: 17; opacity: 1; }
+  .sidelabel { font: 700 10.5px system-ui; fill: var(--text-soft); pointer-events: none; }
   .modebadge { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--brand-ink);
     background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; margin: 0 0 10px; }
   .modebadge b { font-size: 14px; }
@@ -160,49 +162,118 @@
           <div class="modebadge" id="modebadge"></div>
           <div class="viewtoggle" id="viewtoggle">
             <button type="button" class="vbtn active" data-view="front">Mặt trước</button>
-            <button type="button" class="vbtn" data-view="side">Nghiêng — cột sống</button>
+            <button type="button" class="vbtn" data-view="back">Mặt sau</button>
+            <button type="button" class="vbtn" data-view="side">Nghiêng (cột sống)</button>
           </div>
           <div class="pk-split">
             <div class="pk-fig">
-          <svg class="bodyfig" viewBox="0 0 320 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
-            <!-- MẶT TRƯỚC: ảnh giải phẫu thật + mảng màu phân khu -->
-            <g class="frontview">
-              <image href="images/anat-front.png" x="0" y="0" width="320" height="860" preserveAspectRatio="xMidYMid meet"/>
-              <ellipse class="bodyzone" data-region="1" style="fill:#c0392b;stroke:#c0392b" cx="160" cy="70" rx="27" ry="50"/>
-              <path class="bodyzone" data-region="2" style="fill:#2ba9e0;stroke:#2ba9e0" d="M147,112 L173,112 L175,143 L145,143 Z"/>
-              <path class="bodyzone" data-region="3" style="fill:#15509c;stroke:#15509c" d="M106,150 L214,150 L206,258 L114,258 Z"/>
-              <path class="bodyzone" data-region="4" style="fill:#1b9e77;stroke:#1b9e77" d="M114,260 L206,260 L201,348 L119,348 Z"/>
-              <path class="bodyzone" data-region="5" style="fill:#7a3fc0;stroke:#7a3fc0" d="M119,350 L201,350 L197,406 C180,424 140,424 123,406 Z"/>
-              <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M58,148 L96,160 L84,282 L52,282 Z"/>
-              <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M52,284 L84,284 L80,400 L74,474 L40,474 L42,400 Z"/>
-              <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M262,148 L224,160 L236,282 L268,282 Z"/>
-              <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M268,284 L236,284 L240,400 L246,474 L280,474 L278,400 Z"/>
-              <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M120,410 L158,410 L151,620 L129,620 Z"/>
-              <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M129,620 L151,620 L147,772 L158,806 L120,806 L126,772 Z"/>
-              <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M200,410 L162,410 L169,620 L191,620 Z"/>
-              <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M191,620 L169,620 L173,772 L162,806 L200,806 L194,772 Z"/>
-              <text class="rnum" x="160" y="78" text-anchor="middle">1</text>
-              <text class="rnum" x="160" y="136" text-anchor="middle">2</text>
-              <text class="rnum" x="160" y="213" text-anchor="middle">3</text>
-              <text class="rnum" x="160" y="313" text-anchor="middle">4</text>
-              <text class="rnum" x="160" y="392" text-anchor="middle">5</text>
-              <text class="rnum" x="67" y="221" text-anchor="middle">6</text>
-              <text class="rnum" x="139" y="520" text-anchor="middle">7</text>
+          <svg class="bodyfig" viewBox="0 0 220 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
+            <defs>
+              <linearGradient id="skinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7d7"/><stop offset="1" stop-color="#f3c6ac"/></linearGradient>
+              <linearGradient id="boneG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fcf8f0"/><stop offset="1" stop-color="#e7dcc2"/></linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.2" stdDeviation="1.4" flood-color="#6b7790" flood-opacity=".25"/></filter>
+            </defs>
+
+            <!-- DA / SILHOUETTE -->
+            <g class="skinlayer" filter="url(#soft)">
+              <path class="skin" d="M74,288 C68,330 68,370 76,404 C80,430 80,456 82,472 C83,480 95,480 96,472 C100,440 100,400 102,360 C103,336 104,312 106,290 Z"/>
+              <path class="skin" d="M146,288 C152,330 152,370 144,404 C140,430 140,456 138,472 C137,480 125,480 124,472 C120,440 120,400 118,360 C117,336 116,312 114,290 Z"/>
+              <path class="skin" d="M82,472 C80,482 70,485 63,482 C58,480 60,472 70,470 L90,473 Z"/>
+              <path class="skin" d="M138,472 C140,482 150,485 157,482 C162,480 160,472 150,470 L130,473 Z"/>
+              <path class="skin" d="M66,100 C52,106 45,126 43,150 C41,178 42,210 46,242 C47,260 50,276 53,288 C58,290 63,288 64,280 C62,254 60,222 62,190 C64,160 68,128 74,108 Z"/>
+              <path class="skin" d="M154,100 C168,106 175,126 177,150 C179,178 178,210 174,242 C173,260 170,276 167,288 C162,290 157,288 156,280 C158,254 160,222 158,190 C156,160 152,128 146,108 Z"/>
+              <ellipse class="skin" cx="56" cy="298" rx="9.5" ry="13"/>
+              <ellipse class="skin" cx="164" cy="298" rx="9.5" ry="13"/>
+              <path class="skin" d="M64,104 C68,96 82,91 96,90 L124,90 C138,91 152,96 156,104 C162,126 156,158 149,184 C145,204 149,228 150,252 C150,278 142,296 127,300 L93,300 C78,296 70,278 70,252 C71,228 75,204 71,184 C64,158 58,126 64,104 Z"/>
+              <path class="skin" d="M102,64 L118,64 C119,76 122,86 126,92 L94,92 C98,86 101,76 102,64 Z"/>
+              <ellipse class="skin" cx="110" cy="42" rx="19" ry="24"/>
             </g>
-            <!-- NGHIÊNG: ảnh giải phẫu thật + đoạn cột sống -->
+
+            <!-- BỘ XƯƠNG (chi tiết) -->
+            <g class="skel">
+              <path class="bone" d="M110,20 C123,20 132,31 132,45 C132,55 127,62 121,65 C121,69 116,71 110,71 C104,71 99,69 99,65 C93,62 88,55 88,45 C88,31 97,20 110,20 Z"/>
+              <ellipse class="joint" cx="103" cy="47" rx="3.2" ry="3.8"/><ellipse class="joint" cx="117" cy="47" rx="3.2" ry="3.8"/>
+              <rect class="bone" x="106" y="70" width="8" height="4.4" rx="1.8"/><rect class="bone" x="106" y="75.5" width="8" height="4.4" rx="1.8"/>
+              <rect class="bone" x="106" y="81" width="8" height="4.4" rx="1.8"/><rect class="bone" x="106" y="86.5" width="8" height="4.4" rx="1.8"/>
+              <path class="bl" d="M105,94 C93,91 81,93 70,100"/><path class="bl" d="M115,94 C127,91 139,93 150,100"/>
+              <rect class="bone" x="106" y="92" width="8" height="106" rx="3"/>
+              <g stroke="#d8cbac" stroke-width=".7">
+                <line x1="106" y1="104" x2="114" y2="104"/><line x1="106" y1="116" x2="114" y2="116"/><line x1="106" y1="128" x2="114" y2="128"/>
+                <line x1="106" y1="140" x2="114" y2="140"/><line x1="106" y1="152" x2="114" y2="152"/><line x1="106" y1="164" x2="114" y2="164"/>
+                <line x1="106" y1="176" x2="114" y2="176"/><line x1="106" y1="188" x2="114" y2="188"/>
+              </g>
+              <rect class="bone" x="106.5" y="98" width="7" height="42" rx="3"/>
+              <g class="bl" stroke-width="1.9">
+                <path d="M106,102 C88,101 74,112 72,128"/><path d="M106,113 C85,112 71,124 70,142"/><path d="M106,124 C83,124 70,138 71,156"/>
+                <path d="M107,135 C85,137 73,150 77,166"/><path d="M109,146 C89,149 79,160 84,176"/>
+                <path d="M114,102 C132,101 146,112 148,128"/><path d="M114,113 C135,112 149,124 150,142"/><path d="M114,124 C137,124 150,138 149,156"/>
+                <path d="M113,135 C135,137 147,150 143,166"/><path d="M111,146 C131,149 141,160 136,176"/>
+              </g>
+              <path class="bone" d="M80,234 C72,244 73,264 84,276 C98,286 108,288 110,288 C112,288 122,286 136,276 C147,264 148,244 140,234 C128,244 118,248 110,248 C102,248 92,244 80,234 Z"/>
+              <path class="bl" d="M66,106 C57,124 52,150 50,176" stroke-width="2.6"/><path class="bl" d="M154,106 C163,124 168,150 170,176" stroke-width="2.6"/>
+              <ellipse class="joint" cx="49.5" cy="182" rx="4" ry="4"/><ellipse class="joint" cx="170.5" cy="182" rx="4" ry="4"/>
+              <path class="bl" d="M48,186 C46,214 46,242 49,268" stroke-width="2"/><path class="bl" d="M53,186 C52,214 52,242 54,268" stroke-width="1.5"/>
+              <path class="bl" d="M172,186 C174,214 174,242 171,268" stroke-width="2"/><path class="bl" d="M167,186 C168,214 168,242 166,268" stroke-width="1.5"/>
+              <g class="bl" stroke-width="1.3"><path d="M50,272 L46,290"/><path d="M53,272 L52,292"/><path d="M56,272 L58,290"/><path d="M170,272 L174,290"/><path d="M167,272 L168,292"/><path d="M164,272 L162,290"/></g>
+              <ellipse class="joint" cx="88" cy="250" rx="4.6" ry="4.6"/><ellipse class="joint" cx="132" cy="250" rx="4.6" ry="4.6"/>
+              <path class="bl" d="M88,253 C84,292 83,330 85,366" stroke-width="2.9"/><path class="bl" d="M132,253 C136,292 137,330 135,366" stroke-width="2.9"/>
+              <ellipse class="joint" cx="86" cy="372" rx="5.2" ry="5"/><ellipse class="joint" cx="134" cy="372" rx="5.2" ry="5"/>
+              <path class="bl" d="M86,378 C85,410 85,444 85,466" stroke-width="2.6"/><path class="bl" d="M91,380 C91,410 91,442 90,462" stroke-width="1.5"/>
+              <path class="bl" d="M134,378 C135,410 135,444 135,466" stroke-width="2.6"/><path class="bl" d="M129,380 C129,410 129,442 130,462" stroke-width="1.5"/>
+              <ellipse class="joint" cx="85" cy="470" rx="4" ry="3.4"/><ellipse class="joint" cx="135" cy="470" rx="4" ry="3.4"/>
+            </g>
+
+            <!-- VÙNG BẤM (overlay màu theo phân khu) -->
+            <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M66,100 C52,106 45,126 43,150 C42,166 43,176 45,184 L63,184 C62,160 64,128 74,106 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M45,184 C44,212 46,242 50,270 C52,284 54,292 57,298 C63,292 64,282 63,270 C61,242 61,212 61,184 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M154,100 C168,106 175,126 177,150 C178,166 177,176 175,184 L157,184 C158,160 156,128 146,106 Z"/>
+            <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M175,184 C176,212 174,242 170,270 C168,284 166,292 163,298 C157,292 156,282 157,270 C159,242 159,212 159,184 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M74,288 C68,322 68,352 73,378 L100,378 C102,348 104,316 106,290 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M73,378 C77,414 80,448 82,474 C88,480 94,480 96,474 C99,446 99,410 100,378 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M146,288 C152,322 152,352 147,378 L120,378 C118,348 116,316 114,290 Z"/>
+            <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M147,378 C143,414 140,448 138,474 C132,480 126,480 124,474 C121,446 121,410 120,378 Z"/>
+            <path class="bodyzone" data-region="3" style="fill:#15509c;stroke:#15509c" d="M64,104 C68,96 82,91 96,90 L124,90 C138,91 152,96 156,104 C161,124 157,154 151,182 L69,182 C63,154 59,124 64,104 Z"/>
+            <path class="bodyzone" data-region="4" style="fill:#1b9e77;stroke:#1b9e77" d="M69,182 L151,182 C150,202 150,218 150,232 L70,232 C70,218 70,202 69,182 Z"/>
+            <path class="bodyzone" data-region="5" style="fill:#7a3fc0;stroke:#7a3fc0" d="M70,232 L150,232 C150,258 150,278 142,290 C134,298 122,300 110,300 C98,300 86,298 78,290 C70,278 70,258 70,232 Z"/>
+            <path class="bodyzone" data-region="2" style="fill:#2ba9e0;stroke:#2ba9e0" d="M102,64 L118,64 C119,76 122,86 126,92 L94,92 C98,86 101,76 102,64 Z"/>
+            <ellipse class="bodyzone" data-region="1" style="fill:#c0392b;stroke:#c0392b" cx="110" cy="42" rx="20" ry="25"/>
+            <text class="rnum" x="110" y="47" text-anchor="middle">1</text>
+            <text class="rnum" x="110" y="82" text-anchor="middle">2</text>
+            <text class="rnum" x="110" y="142" text-anchor="middle">3</text>
+            <text class="rnum" x="110" y="211" text-anchor="middle">4</text>
+            <text class="rnum" x="110" y="262" text-anchor="middle">5</text>
+            <text class="rnum" x="52" y="150" text-anchor="middle">6</text>
+            <text class="rnum" x="86" y="330" text-anchor="middle">7</text>
+
+            <!-- CỘT SỐNG (mặt sau) -->
+            <g class="spine">
+              <rect class="spineseg" data-region="2" data-sub="cs-co"   x="103" y="69"  width="14" height="22" rx="4" fill="#2ba9e0"/>
+              <rect class="spineseg" data-region="3" data-sub="cs-nguc" x="103" y="93"  width="14" height="66" rx="4" fill="#15509c"/>
+              <rect class="spineseg" data-region="5" data-sub="cs-tl"   x="103" y="161" width="14" height="70" rx="4" fill="#7a3fc0"/>
+              <text class="spinelink" x="110" y="84"  text-anchor="middle">C</text>
+              <text class="spinelink" x="110" y="130" text-anchor="middle">N</text>
+              <text class="spinelink" x="110" y="200" text-anchor="middle">TL</text>
+            </g>
+
+            <!-- NGHIÊNG (cột sống bên) -->
             <g class="sideview">
-              <image href="images/anat-lateral.png" x="32" y="5" width="255" height="850" preserveAspectRatio="xMidYMid meet"/>
-              <path class="spineseg2" data-region="2" data-sub="cs-co"      stroke="#2ba9e0" d="M132,100 C130,120 129,142 130,170"/>
-              <path class="spineseg2" data-region="3" data-sub="cs-nguc"    stroke="#15509c" d="M130,172 C122,214 119,262 124,348"/>
-              <path class="spineseg2" data-region="5" data-sub="cs-tl"      stroke="#7a3fc0" d="M124,350 C127,384 134,406 130,430"/>
-              <path class="spineseg2" data-region="5" data-sub="cs-cungcut" stroke="#b05a2b" d="M130,432 C133,450 140,466 143,482"/>
-              <text class="sidelabel" x="150" y="138" text-anchor="start">Cổ</text>
-              <text class="sidelabel" x="150" y="262" text-anchor="start">Ngực</text>
-              <text class="sidelabel" x="150" y="398" text-anchor="start">Thắt lưng</text>
-              <text class="sidelabel" x="152" y="476" text-anchor="start">Cùng–cụt</text>
+              <path class="sidebody" d="M100,22 C116,22 127,34 127,50 C127,61 122,69 115,72 C118,74 118,80 111,80 L95,80 C86,77 80,66 80,52 C80,36 87,22 100,22 Z"/>
+              <path class="sidebody" d="M91,80 C76,88 69,108 72,136 C70,168 75,202 87,228 C102,232 118,230 124,222 C130,210 130,190 126,172 C132,146 131,110 125,92 C120,82 106,77 94,80 Z"/>
+              <path class="sidebody" d="M85,226 C79,278 81,338 84,394 C81,434 79,463 87,479 L117,479 C123,463 121,434 119,396 C121,338 124,284 123,228 C113,234 99,234 85,226 Z"/>
+              <path class="sidebody" d="M87,479 L61,479 C58,479 58,471 61,470 L87,467 Z"/>
+              <g class="sideskel" stroke-width="1.3">
+                <path d="M112,96 C128,98 136,116 134,138"/><path d="M110,112 C128,114 138,132 136,154"/><path d="M110,128 C129,131 139,150 135,170"/>
+              </g>
+              <path class="spineseg2" data-region="2" data-sub="cs-co"      stroke="#2ba9e0" d="M110,74 C106,88 104,98 107,108"/>
+              <path class="spineseg2" data-region="3" data-sub="cs-nguc"    stroke="#15509c" d="M107,108 C112,134 118,162 113,192"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-tl"      stroke="#7a3fc0" d="M113,192 C109,210 106,228 110,244"/>
+              <path class="spineseg2" data-region="5" data-sub="cs-cungcut" stroke="#b05a2b" d="M110,244 C113,258 116,274 110,290"/>
+              <text class="sidelabel" x="140" y="94"  text-anchor="start">Cổ</text>
+              <text class="sidelabel" x="146" y="152" text-anchor="start">Ngực</text>
+              <text class="sidelabel" x="150" y="222" text-anchor="start">Thắt lưng</text>
+              <text class="sidelabel" x="140" y="274" text-anchor="start">Cùng–cụt</text>
             </g>
           </svg>
-
               <p class="bodyhint">Bấm vào vùng trên hình, hoặc chọn ô bên phải →</p>
             </div><!-- /pk-fig -->
             <div class="pk-tiles">
