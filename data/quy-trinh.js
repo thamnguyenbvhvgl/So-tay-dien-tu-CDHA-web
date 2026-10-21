@@ -2553,8 +2553,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-o-bung-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng)" },
-      { src: "images/xq/xq-o-bung-nghieng-ct2.png", caption: "Chiều thế (nằm nghiêng) 2" },
+      { src: "images/xq/xq-o-bung-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng, tia thẳng đứng)" },
       { src: "images/xq/xq-o-bung-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
