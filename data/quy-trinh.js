@@ -688,6 +688,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
+      { src: "images/xq/xq-vai-truocsau-thang-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-vai-truocsau-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
@@ -721,6 +722,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
+      { src: "images/xq/xq-vai-khop-cung-don-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-vai-khop-cung-don-phim.png", caption: "Phim đạt yêu cầu" },
       { src: "images/xq/xq-vai-khop-cung-don-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
@@ -791,6 +793,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
+      { src: "images/xq/xq-vai-ba-vai-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-vai-ba-vai-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
@@ -830,40 +833,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-xuong-don",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang xương đòn (sau trước)",
-    tuKhoa: ["xuong don", "clavicle", "khop uc don"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa xương đòn" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương đòn, khớp ức đòn và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm sấp trên bàn chụp hình với cánh tay bên cần chụp duỗi xuôi theo thân mình và cánh tay đối diện duỗi về phía đầu.",
-        "Xoay đầu bệnh nhân về phía vai lành."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa xương đòn, tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-xuongdon-ct.jpg", caption: "Tư thế xương đòn & hướng tia (Clark's)" },
-      { src: "images/xq/xq-xuongdon-phim.jpg", caption: "Phim xương đòn — mẫu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   /* ------------------------------- X-QUANG CHI DƯỚI (CẲNG/CỔ/BÀN CHÂN) ------------------------------- */
 
