@@ -343,7 +343,10 @@
     ];
     BODY.forEach(function (b) { b.icon = ICON[b.id]; });
     var EXTRAS = {
-      "X-quang": [{ id:8, ten:"Thông số & Kỹ thuật", en:"Technique & Physics", icon:"⚙️", color:"#5a6679" }],
+      "X-quang": [
+        { id:9, ten:"XQ đặc biệt (cản quang)", en:"Special / Contrast", icon:"💧", color:"#2b8a9e" },
+        { id:8, ten:"Thông số & Kỹ thuật", en:"Technique & Physics", icon:"⚙️", color:"#5a6679" }
+      ],
       "CT": [
         { id:8,  ten:"Cơ xương khớp (chi)", en:"MSK (limb)",      icon:"🦿", color:"#8a5a2b" },
         { id:9,  ten:"Toàn thân",           en:"Whole-body",      icon:"🧍", color:"#596273" },
@@ -370,8 +373,8 @@
       if (n === "Cột sống" && rx(/cổ|C1|C2/, t)) return 2;
       if (n === "Lồng ngực - Bụng" && rx(/phổi|ngực|xương ức|thực quản|lồng ngực|sườn|ức đòn|tim phổi/, t) && !rx(/ổ bụng|bụng/, t)) return 3;
       if (n === "Cột sống" && rx(/ngực/, t)) return 3;
-      if (n === "Lồng ngực - Bụng" && rx(/ổ bụng|bụng/, t)) return 4;
-      if (n === "Cản quang") return 4;
+      if (n === "Lồng ngực - Bụng" && rx(/ổ bụng|bụng|tiết niệu|thận|niệu/, t)) return 4;
+      if (n === "XQ đặc biệt") return 9;
       if (n === "Cột sống" && rx(/thắt lưng|L5|S1|cùng cụt/, t)) return 5;
       if (n === "Chi dưới" && rx(/chậu|háng|khớp mu/, t)) return 5;
       if (n === "Chi trên" || n === "Vai - Đòn") return 6;

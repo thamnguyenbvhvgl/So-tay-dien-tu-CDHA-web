@@ -71,8 +71,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-so-thang-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-so-thang-phim.jpg", caption: "Phim sọ thẳng — mẫu" }
+      { src: "images/xq/xq-so-thang-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-so-thang-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
@@ -114,49 +114,13 @@ window.SOTAY_QUYTRINH = [
         "Phim có độ nét, tương phản; phim sạch không xước."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/xq/xq-so-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-so-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
 
-  {
-    id: "xq-mom-tram",
-    phanHe: "xquang",
-    modality: "X-quang",
-    nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang mỏm trâm",
-    tuKhoa: ["mom tram", "styloid"],
-    thongSo: [
-      { ten: "kV", giaTri: "70 kV" },
-      { ten: "mAs", giaTri: "50 mAs" },
-      { ten: "Cỡ phim", giaTri: "18 × 24 cm" },
-      { ten: "Lưới chống mờ", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Đặt tư thế người bệnh", items: [
-        "Nằm ngửa trên bàn chụp, mặt phẳng chính diện vuông góc với phim, hai tay duỗi thẳng thoải mái.",
-        "Đường nhân trung và lỗ tai vuông góc với phim, người bệnh há miệng.",
-        "Nếu nằm sấp thì hai tay gập lại chống lên mặt bàn."
-      ]},
-      { tieuDe: "Đặt cát-xét", items: [
-        "Cỡ phim 18 × 24 cm.",
-        "Đặt phim chếch 1 góc 13° so với mặt bàn (người bệnh nằm ngửa).",
-        "Cố định tốt, không để rung phim. Nếu nằm sấp thì để phim thẳng trên bàn."
-      ]},
-      { tieuDe: "Chỉnh bóng X-quang", items: [
-        "Nằm ngửa: tia trung tâm đi thẳng đứng, qua mặt phẳng chính diện, song song sàn ống tai ngoài.",
-        "Tia trung tâm đi chếch 25° hướng về phía đầu, đi ra vào chân sống mũi vào giữa phim."
-      ]},
-      { tieuDe: "Hằng số chụp", items: [
-        "70 kV",
-        "50 mAs",
-        "Có lưới chống mờ."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Nằm ngửa: thấy hai mỏm trâm cân đối, nằm trong hình xoang hàm.",
-        "Nằm sấp: thấy hai mỏm trâm cân đối, nằm trên hình xoang hàm. Có tên, dấu P/T."
-      ]}
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
   {
     id: "xq-long-nguc-thang",
@@ -376,8 +340,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-thang-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cotay-thang-phim.jpg", caption: "Phim X-quang cổ tay sau trước — mẫu" }
+      { src: "images/xq/xq-cotay-thang-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-thang-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -412,8 +376,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cotay-nghieng-phim.jpg", caption: "Phim cổ tay nghiêng — mẫu" }
+      { src: "images/xq/xq-cotay-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -591,8 +555,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khuyu-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-khuyu-truocsau-phim.jpg", caption: "Phim khuỷu trước sau — mẫu" }
+      { src: "images/xq/xq-khuyu-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khuyu-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -626,8 +590,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khuyu-cangtay-ct.jpg", caption: "Tư thế (cẳng tay tiếp xúc) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-khuyu-cangtay-phim.jpg", caption: "Phim khuỷu (axial) — mẫu" }
+      { src: "images/xq/xq-khuyu-cangtay-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khuyu-cangtay-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -660,8 +624,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khuyu-canhtay-ct.png", caption: "Tư thế bệnh nhân và hướng tia" },
-      { src: "images/xq/xq-khuyu-canhtay-phim.png", caption: "Phim mẫu" }
+      { src: "images/xq/xq-khuyu-canhtay-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khuyu-canhtay-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -695,8 +659,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khuyu-nghieng-ct.png", caption: "Tư thế bệnh nhân và hướng tia" },
-      { src: "images/xq/xq-khuyu-nghieng-phim.png", caption: "Phim khuỷu nghiêng — mẫu" }
+      { src: "images/xq/xq-khuyu-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khuyu-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-khuyu-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -731,8 +696,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-canhtay-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-canhtay-truocsau-phim.jpg", caption: "Phim cánh tay trước sau — mẫu" }
+      { src: "images/xq/xq-canhtay-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-canhtay-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -804,8 +769,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-vai-truocsau-phim.jpg", caption: "Phim vai trước sau — mẫu" }
+      { src: "images/xq/xq-vai-truocsau-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -813,7 +777,7 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-vai-khop-cung-don",
     phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang khớp cùng đòn vai (trước sau)",
+    ten: "Chụp X-quang xương đòn (trước sau)",
     tuKhoa: ["khop cung don", "ac joint", "cung don vai"],
     thongSo: [
       { ten: "Cỡ phim", giaTri: "20 × 30 cm (chụp hai lần) hoặc 30 × 40 cm (chụp một lần)" },
@@ -838,8 +802,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-cungdon-ct.jpg", caption: "Tư thế khớp cùng đòn & hướng tia (Clark's)" },
-      { src: "images/xq/xq-vai-cungdon-phim.jpg", caption: "Phim khớp cùng đòn — mẫu" }
+      { src: "images/xq/xq-vai-khop-cung-don-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-vai-khop-cung-don-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -908,8 +872,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-bavai-ct.jpg", caption: "Tư thế xương bả vai nghiêng & hướng tia (Clark's)" },
-      { src: "images/xq/xq-vai-bavai-phim.jpg", caption: "Phim xương bả vai nghiêng — mẫu" }
+      { src: "images/xq/xq-vai-ba-vai-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1087,8 +1050,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cochan-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cochan-truocsau-phim.jpg", caption: "Phim cổ chân trước sau — mẫu" }
+      { src: "images/xq/xq-cochan-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1123,7 +1086,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cochan-chech-ct.png", caption: "Tư thế bàn chân xoay trong 45° và hướng tia" }
+      { src: "images/xq/xq-cochan-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-chech-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1262,7 +1226,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-banchan-chech-ct.png", caption: "Tư thế bàn chân nghiêng 30–45° và hướng tia" }
+      { src: "images/xq/xq-banchan-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-banchan-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-banchan-chech-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1446,40 +1412,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-goi-camp-coventry",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp gối tư thế Camp-Coventry (hố liên lồi cầu)",
-    tuKhoa: ["camp coventry", "ho lien loi cau", "goi sap"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 11–14 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm hõm khoeo chân" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tư thế này giúp ta đặc biệt nhìn thấy hố liên lồi cầu của xương đùi."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm sấp với chân lành và đầu gối chân đau gập lại tạo thành một góc 60° bằng cách kê cẳng chân trên khuôn gỗ.",
-        "Đặt đầu gối đã gập lại trên phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm hõm khoeo chân, tức một điểm cách chỏm xương mác 5 cm và bẻ đầu đèn về phía chân một góc 30°-35°."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-goi-campcoventry-ct.jpg", caption: "Tư thế hố liên lồi cầu (nằm sấp) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-goi-campcoventry-phim.jpg", caption: "Phim hố liên lồi cầu — mẫu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   {
     id: "xq-goi-settegast",
@@ -1510,8 +1442,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-goi-settegast-ct.jpg", caption: "Tư thế bánh chè tiếp tuyến & hướng tia (Clark's)" },
-      { src: "images/xq/xq-goi-settegast-phim.jpg", caption: "Phim bánh chè tiếp tuyến — mẫu" }
+      { src: "images/xq/xq-goi-settegast-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-goi-settegast-ct2.jpg", caption: "Chiều thế (biến thể) & hướng tia" },
+      { src: "images/xq/xq-goi-settegast-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1614,8 +1547,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khungchau-truocsau-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-khungchau-truocsau-phim.jpg", caption: "Phim khung chậu trước sau — mẫu" }
+      { src: "images/xq/xq-khungchau-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khungchau-truocsau-phim.jpg", caption: "Phim đạt yêu cầu (nữ)" },
+      { src: "images/xq/xq-khungchau-truocsau-phim2.png", caption: "Phim đạt yêu cầu (nam)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1652,8 +1586,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khungchau-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-khungchau-nghieng-phim.jpg", caption: "Phim khung chậu nghiêng — mẫu" }
+      { src: "images/xq/xq-khungchau-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khungchau-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1725,8 +1659,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hang-chech-ct.jpg", caption: "Tư thế háng chếch (Judet) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hang-chech-phim.jpg", caption: "Phim háng chếch (Judet) — mẫu" }
+      { src: "images/xq/xq-hang-chech-ct.jpg", caption: "Chiều thế (sơ đồ) & hướng tia" },
+      { src: "images/xq/xq-hang-chech-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1796,8 +1730,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hang-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hang-nghieng-phim.jpg", caption: "Phim khớp háng nghiêng — mẫu" }
+      { src: "images/xq/xq-hang-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-hang-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1834,8 +1768,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cs-co-thang-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-co-thang-phim.jpg", caption: "Phim cột sống cổ thẳng — mẫu" }
+      { src: "images/xq/xq-cotsong-co-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-co-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1878,8 +1813,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cs-co-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-co-nghieng-phim.jpg", caption: "Phim cột sống cổ nghiêng — mẫu" }
+      { src: "images/xq/xq-cotsong-co-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-co-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1953,6 +1889,10 @@ window.SOTAY_QUYTRINH = [
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/xq/xq-dotsong-co-c1c2-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dotsong-co-c1c2-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
@@ -1985,6 +1925,12 @@ window.SOTAY_QUYTRINH = [
         "Các chỗ tiếp giáp xương sườn phải được thấy rõ.",
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-nguc-thang-ct.png", caption: "Chiều thế (nằm)" },
+      { src: "images/xq/xq-cotsong-nguc-thang-ct2.png", caption: "Chiều thế (đứng)" },
+      { src: "images/xq/xq-cotsong-nguc-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-nguc-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -2059,8 +2005,7 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cs-tl-thang-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-tl-thang-phim.jpg", caption: "Phim cột sống thắt lưng thẳng — mẫu" }
+      { src: "images/xq/xq-cotsong-tl-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -2136,6 +2081,11 @@ window.SOTAY_QUYTRINH = [
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-tl-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-tl-chech-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+    ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
@@ -2168,6 +2118,11 @@ window.SOTAY_QUYTRINH = [
         "Hình xương cùng, các khớp cùng chậu, L5 phải cân xứng, trọn vẹn, không bị che khuất.",
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-cungcut-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-cungcut-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-cungcut-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -2203,80 +2158,17 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cs-cungcut-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-cungcut-nghieng-phim.jpg", caption: "Phim cùng cụt nghiêng — mẫu" }
+      { src: "images/xq/xq-cotsong-cungcut-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" },
+      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim3.png", caption: "Phim đạt yêu cầu (3)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
   /* -------------------------------------------------- X-QUANG SỌ – MẶT --- */
-  {
-    id: "xq-mat-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang mặt thẳng",
-    tuKhoa: ["mat thang", "face pa", "khoi mat", "xuong mat"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tư thế", giaTri: "Nằm sấp, mũi và trán sát mặt bàn" },
-      { ten: "Tia trung tâm", giaTri: "Đốt sống cổ C1, vuông góc phim" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Nằm sấp trên bàn chụp, hai chân duỗi thẳng, hai tay dọc theo cơ thể. Mũi và trán sát mặt bàn.",
-        "Chỉnh mặt phẳng chính diện vuông góc với phim và vào giữa phim theo chiều dọc; trục hai lỗ tai ngoài song song với phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Chiếu từ trên xuống, vuông góc phim; khu trú vào đốt sống cổ C1." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Đường sống mũi vào giữa phim theo chiều dọc, lấy được toàn bộ hộp sọ.",
-        "Xương hàm hai bên cân đối."
-      ]}
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
-  {
-    id: "xq-so-tiep-tuyen",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ tiếp tuyến",
-    tuKhoa: ["so tiep tuyen", "tangential skull", "di vat so"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Điểm cần chụp, vuông góc phim" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Nằm sấp hoặc ngửa, hai chân duỗi thẳng, hai tay dọc theo cơ thể.",
-        "Đầu nghiêng về phía điểm cần chụp; chỉnh mặt phẳng chính diện vuông góc với điểm cần chụp."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Chiếu từ trên xuống, vuông góc phim; khu trú vào điểm cần chụp." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Lấy được toàn bộ hộp sọ, điểm cần chụp (lún sọ/dị vật) bộc lộ tiếp tuyến ở giữa phim."
-      ]}
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
-  {
-    id: "xq-hoc-mat",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang hốc mắt",
-    tuKhoa: ["hoc mat", "orbit", "o mat", "xuong go ma"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tư thế", giaTri: "Nằm sấp, nghiêng đầu về bên cần chụp" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Nằm sấp, tay bên cần chụp xuôi dọc cơ thể, tay bên đối diện chống tương ứng giá phim.",
-        "Nghiêng đầu về bên cần chụp; chỉnh mặt phẳng chính diện vào giữa phim theo chiều dọc."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Chiếu từ trên xuống, vuông góc phim; khu trú vùng hố thái dương – gò má." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các bờ của xương hốc mắt và xương gò má bên cần chụp."
-      ]}
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
   {
     id: "xq-blondeau",
@@ -2303,8 +2195,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-blondeau-ct.jpg",   caption: "Tư thế (occipito-mental) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-blondeau-phim.jpg", caption: "Phim xoang mặt (Blondeau/Waters) — mẫu" }
+      { src: "images/xq/xq-blondeau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-blondeau-phim.jpg", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-blondeau-phim2.png", caption: "Phim đạt yêu cầu (2)" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
@@ -2335,8 +2228,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hirtz-ct.jpg",   caption: "Tư thế (submento-vertical) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hirtz-phim.jpg", caption: "Phim nền sọ (Hirtz) — mẫu" }
+      { src: "images/xq/xq-so-hirtz-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-so-hirtz-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
@@ -2489,69 +2382,8 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
 
-  {
-    id: "xq-chausse-3",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang tai tư thế Chaussé III (xương chũm)",
-    tuKhoa: ["chausse", "chaussé", "xuong chum", "sao bao", "tai"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "18 × 24 cm" },
-      { ten: "Tia trung tâm", giaTri: "Chếch 30° so mặt phẳng Virchow, hướng về chân" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương", items: [
-        "Bộc lộ hai bên vách của khe sào bào, sào đạo thượng nhĩ; bổ sung cho kỹ thuật Schüller trong đánh giá tổn thương vùng xoang chũm."
-      ]},
-      { tieuDe: "Chiều thế (cổ điển)", items: [
-        "Nằm ngửa, hai chân duỗi thẳng, hai tay xuôi theo cơ thể; đặt chẩm sát phim.",
-        "Chỉnh mặt phẳng chính diện vuông góc phim; mặt hơi cúi để mặt phẳng Virchow tạo 20° với đường thẳng đứng."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Chiếu từ trán vào vùng thái dương qua lỗ tai ngoài vào giữa phim; chếch 30° so với mặt phẳng Virchow, hướng về phía chân."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các thông bào chũm ở khoảng giữa phim.",
-        "Thấy đầy đủ các tế bào cạnh hang, ống bán khuyên trên, ống bán khuyên ngoài, tiền đình."
-      ]}
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
   /* ------------------------------------------------------- X-QUANG RĂNG --- */
-  {
-    id: "xq-rang-can-chop",
-    phanHe: "xquang", modality: "X-quang", nhom: "Răng",
-    ten: "Chụp X-quang răng cận chóp",
-    tuKhoa: ["rang can chop", "periapical", "phim rang", "sau huyet o rang"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "3,2 × 4,1 cm (người lớn)" },
-      { ten: "Nguyên tắc", giaTri: "Song song hoặc phân giác" },
-      { ten: "Tia trung tâm", giaTri: "Khu trú răng cần chụp, góc theo nhóm răng" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương", items: [
-        "Chụp chi tiết hình thái và cấu trúc một răng cùng các cấu trúc lân cận (tổ chức quanh răng, quanh chóp).",
-        "Nguyên tắc song song: trục răng song song mặt phim, tia vuông góc cả hai → hình đúng kích thước thật.",
-        "Nguyên tắc phân giác: tia vuông góc mặt phân giác góc giữa trục răng và phim (nhiều sai số hơn)."
-      ]},
-      { tieuDe: "Chiều thế", items: [
-        "Ngồi vào ghế chụp, lưng thẳng, mặt phẳng cắn song song mặt sàn; nuốt nước bọt.",
-        "Đặt phim trong miệng tại vị trí răng cần chụp (bằng dụng cụ giữ phim hoặc người bệnh giữ bằng ngón tay)."
-      ]},
-      { tieuDe: "Tia trung tâm theo nhóm răng", items: [
-        "Răng cửa trên +40° · Nanh trên +45° · Hàm nhỏ trên +30° · Hàm lớn trên +20°.",
-        "Hàm lớn dưới −5° · Hàm nhỏ dưới −10° · Nanh dưới −20° · Cửa dưới −15°."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Lấy được đầy đủ hình ảnh răng cần chụp và tối thiểu hai răng kề bên.",
-        "Hình ảnh rõ nét và không biến dạng."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-rang-canchop-phim.jpg", caption: "Phim răng cận chóp — mẫu (Clark's)" }
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
   {
     id: "xq-rang-toan-canh",
@@ -2581,7 +2413,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-rang-toancanh-phim.jpg", caption: "Phim răng toàn cảnh (OPG) — mẫu (Clark's)" }
+      { src: "images/xq/xq-rang-toan-canh-ct.png", caption: "Chiều thế (máy chụp toàn cảnh)" },
+      { src: "images/xq/xq-rang-toan-canh-phim.png", caption: "Phim panorama đạt yêu cầu" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
@@ -2739,7 +2572,10 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-uc-chech-phim.jpg", caption: "Phim xương ức chếch — mẫu (Clark's)" }
+      { src: "images/xq/xq-xuong-uc-chech-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuong-uc-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-xuong-uc-chech-phim2.png", caption: "Phim đạt yêu cầu (2)" },
+      { src: "images/xq/xq-xuong-uc-chech-phim3.png", caption: "Phim đạt yêu cầu (3)" }
     ],
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -2765,7 +2601,10 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-thucquan-phim.jpg", caption: "Phim vùng cổ – thực quản nghiêng — mẫu (Clark's)" }
+      { src: "images/xq/xq-thuc-quan-co-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-thuc-quan-co-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-thuc-quan-co-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" },
+      { src: "images/xq/xq-thuc-quan-co-nghieng-phim3.png", caption: "Phim đạt yêu cầu (3)" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
@@ -2796,6 +2635,196 @@ window.SOTAY_QUYTRINH = [
       { src: "images/xq/xq-obung-phim.jpg", caption: "Phim ổ bụng đứng — mẫu" }
     ],
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
+  },
+
+  /* ---- Kỹ thuật XQ bổ sung theo tài liệu lỗi (chờ duyệt thông số) ---- */
+  {
+    id: "xq-cotsong-co-cui-ngua",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ cúi – ngửa (chức năng)",
+    tuKhoa: ["cot song co cui ngua", "chuc nang cot song co", "flexion extension", "cuoi nga"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo cột sống cổ nghiêng)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,5 – 1,8 m" },
+      { ten: "Tia trung tâm", giaTri: "Giữa cổ (ngang C4), vuông góc mặt phim" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Khảo sát chức năng (tầm vận động) cột sống cổ ở tư thế cúi và ngửa tối đa."
+      ]},
+      { tieuDe: "Chiếu thế", items: [
+        "Bệnh nhân ngồi hoặc đứng, đầu và cổ đặt đúng ở tư thế nghiêng.",
+        "Chụp lần lượt hai phim: một phim cúi (gập) tối đa và một phim ngửa (duỗi) tối đa.",
+        "Hạ hai vai xuống để không che các đốt sống cổ thấp."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Ngắm tia trung tâm vào giữa cổ (ngang mức C4) và vuông góc với mặt phim."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy đầy đủ các đốt sống cổ ở cả hai tư thế cúi và ngửa tối đa; bờ trên – dưới của C4 đúng thế nghiêng.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-co-cui-ngua-ct.png", caption: "Chiều thế cúi – ngửa" },
+      { src: "images/xq/xq-cotsong-co-cui-ngua-phim.png", caption: "Phim đạt yêu cầu (cúi/ngửa)" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
+  },
+
+  {
+    id: "xq-cstl-gap-uon",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống thắt lưng gập – ưỡn (chức năng)",
+    tuKhoa: ["cot song that lung gap uon", "chuc nang cstl", "flexion extension lumbar", "cui nga that lung"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo CSTL nghiêng)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Tia trung tâm", giaTri: "Ngang mào chậu, nghiêng và vuông góc mặt phim" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Khảo sát chức năng (độ vững) cột sống thắt lưng ở tư thế cúi và ưỡn tối đa."
+      ]},
+      { tieuDe: "Chiếu thế", items: [
+        "Bệnh nhân đứng đúng ở tư thế nghiêng, tựa vào giá giữ cassette.",
+        "Hai chân duỗi thẳng và song song, hơi dang, hai tay đưa thẳng lên đầu.",
+        "Chụp lần lượt: một phim cúi tối đa và một phim ưỡn (ngửa) tối đa."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Hướng tia nghiêng và vuông góc với mặt phim, ngang mức mào chậu."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy rõ các đốt sống thắt lưng ở cả hai thế cúi và ưỡn tối đa, đúng tư thế nghiêng.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cstl-gap-uon-ct.png", caption: "Chiều thế gập" },
+      { src: "images/xq/xq-cstl-gap-uon-ct2.png", caption: "Chiều thế ưỡn" },
+      { src: "images/xq/xq-cstl-gap-uon-ct3.png", caption: "Chiều thế (minh họa)" },
+      { src: "images/xq/xq-cstl-gap-uon-phim.png", caption: "Phim đạt yêu cầu (gập/ưỡn)" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
+  },
+
+  {
+    id: "xq-nguc-tai-giuong",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
+    ten: "Chụp X-quang ngực tại giường (portable)",
+    tuKhoa: ["nguc tai giuong", "xq tai giuong", "portable chest", "bedside", "phoi tai giuong"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy di động phù hợp người bệnh" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "Tối đa có thể (thường ~1 m)" },
+      { ten: "Tia trung tâm", giaTri: "Vuông góc với tấm cassette" },
+      { ten: "Lưới lọc", giaTri: "Không (tùy máy)" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Chụp phổi/tim cho người bệnh nặng, không di chuyển được, bằng máy X-quang di động tại giường."
+      ]},
+      { tieuDe: "Chiếu thế", items: [
+        "Nâng đầu giường để người bệnh ở tư thế nửa ngồi (hoặc nằm) càng thẳng càng tốt.",
+        "Đặt cassette sau lưng, tựa sát mặt sau lồng ngực; mặt phẳng dọc giữa vào giữa phim.",
+        "Hai vai cùng mặt phẳng ngang; bờ trên cassette trên vai ~5 cm."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm cassette, ngang mức đốt sống ngực 6–7."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy đủ hai trường phổi và góc sườn hoành trong giới hạn tư thế tại giường.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-tai-giuong-ct.png", caption: "Chiều thế chụp tại giường" },
+      { src: "images/xq/xq-nguc-tai-giuong-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
+  },
+
+  {
+    id: "xq-suon-chan-thuong",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
+    ten: "Chụp X-quang lồng ngực khảo sát xương sườn (chấn thương)",
+    tuKhoa: ["xuong suon chan thuong", "gay suon", "long nguc chan thuong", "rib trauma"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo xương sườn / lồng ngực)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Tia trung tâm", giaTri: "Vào vùng sườn tổn thương, vuông góc mặt phim" },
+      { ten: "Lưới lọc", giaTri: "Tùy vùng (trên/dưới cơ hoành)" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Khảo sát xương sườn vùng chấn thương (tìm đường gãy), bổ sung cho phim phổi thường quy."
+      ]},
+      { tieuDe: "Chiếu thế", items: [
+        "Chụp khu trú vào nửa lồng ngực bên tổn thương; có thể thêm tư thế chếch để bộc lộ đường gãy.",
+        "Sườn trên cơ hoành: chụp ở thì hít vào; sườn dưới cơ hoành: chụp ở thì thở ra.",
+        "Đưa xương bả vai ra khỏi lồng sườn khi khảo sát sườn phía sau trên cao."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Ngắm vào vùng sườn cần khảo sát, tia vuông góc mặt phim (tham khảo kỹ thuật xương sườn)."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy rõ các cung sườn vùng tổn thương và tương quan với màng phổi/khoang phổi.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-suon-chan-thuong-ct.png", caption: "Chiều thế" },
+      { src: "images/xq/xq-suon-chan-thuong-ct2.png", caption: "Chiều thế (chếch)" },
+      { src: "images/xq/xq-suon-chan-thuong-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-suon-chan-thuong-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
+  },
+
+  {
+    id: "xq-he-tiet-nieu",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
+    ten: "Chụp X-quang hệ tiết niệu (KUB)",
+    tuKhoa: ["he tiet nieu", "kub", "than nieu quan bang quang", "soi tiet nieu", "bung tiet nieu"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "30 × 40 cm (bao phủ từ thận đến khớp mu)" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo ổ bụng không chuẩn bị)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Tia trung tâm", giaTri: "Mặt phẳng dọc giữa, ngang mào chậu (≈ L4–L5), vuông góc phim" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Khảo sát toàn bộ hệ tiết niệu (thận – niệu quản – bàng quang) trên một phim; tìm sỏi cản quang."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân và tấm cassette", items: [
+        "Người bệnh nằm ngửa trên bàn chụp, thân mình thẳng.",
+        "Hai chân duỗi tự nhiên; hai tay đưa lên ngực hoặc ra ngoài vùng khảo sát để tránh chồng hình.",
+        "Điều chỉnh mặt phẳng dọc giữa cơ thể trùng với đường giữa bàn và bộ thu nhận ảnh.",
+        "Không để thân mình xoay hoặc nghiêng; hai cánh chậu cân đối."
+      ]},
+      { tieuDe: "Hướng và tâm của chùm tia X", items: [
+        "Tia trung tâm vuông góc với bộ thu nhận ảnh.",
+        "Điểm trung tâm thường ở mặt phẳng dọc giữa, ngang mức mào chậu (xấp xỉ L4–L5).",
+        "Trường chiếu phải bao phủ toàn bộ hệ tiết niệu cần khảo sát, từ vùng thận đến bàng quang và khớp mu.",
+        "Nếu chiều dài vùng khảo sát vượt kích thước bộ thu nhận ảnh, cân nhắc chụp hai phim có vùng chồng lấp theo quy trình của khoa."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy đủ bóng thận hai bên, đường đi niệu quản (nếu rõ) và vùng bàng quang; khung chậu cân đối.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-he-tiet-nieu-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-he-tiet-nieu-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-he-tiet-nieu-phim2.png", caption: "Phim có chú thích giải phẫu" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
   },
 
   /* ---- X-QUANG XƯƠNG SƯỜN – ỨC – ỨC ĐÒN (Tập 2) ---- */
@@ -3178,7 +3207,7 @@ window.SOTAY_QUYTRINH = [
   /* ------------------------------------- X-QUANG CÓ CẢN QUANG ------------ */
   {
     id: "xq-thuc-quan-da-day",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp X-quang thực quản – dạ dày (cản quang)",
     tuKhoa: ["thuc quan da day", "baryt", "barium meal", "da day ta trang", "doi quang kep"],
     thongSo: [
@@ -3210,7 +3239,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "xq-ruot-non",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp X-quang ruột non (tiểu tràng)",
     tuKhoa: ["ruot non", "tieu trang", "small bowel", "baryt", "enteroclysis"],
     thongSo: [
@@ -3242,7 +3271,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "xq-dai-trang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp X-quang đại tràng (barium enema)",
     tuKhoa: ["dai trang", "barium enema", "thut baryt", "khung dai trang"],
     thongSo: [
@@ -3273,7 +3302,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "xq-uiv",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp niệu đồ tĩnh mạch (UIV)",
     tuKhoa: ["uiv", "niệu đồ tĩnh mạch", "ivu", "he tiet nieu", "than nieu quan bang quang"],
     thongSo: [
@@ -3306,7 +3335,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "xq-tc-vtc",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp tử cung – vòi tử cung (HSG)",
     tuKhoa: ["tu cung voi tu cung", "hsg", "tc vtc", "vo sinh", "voi trung"],
     thongSo: [
@@ -3336,7 +3365,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "xq-nieu-dao-bang-quang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cản quang",
+    phanHe: "xquang", modality: "X-quang", nhom: "XQ đặc biệt",
     ten: "Chụp niệu đạo – bàng quang ngược dòng",
     tuKhoa: ["nieu dao bang quang", "nguoc dong", "retrograde", "urethrocystography"],
     thongSo: [
