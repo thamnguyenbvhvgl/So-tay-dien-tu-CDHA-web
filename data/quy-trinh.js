@@ -2673,6 +2673,7 @@ window.SOTAY_QUYTRINH = [
     ],
     hinhAnh: [
       { src: "images/xq/xq-obung-ct.jpg",   caption: "Tư thế đứng & hướng tia (Clark's)" },
+      { src: "images/xq/xq-o-bung-thang-ct2.png", caption: "Chiều thế (ngồi)" },
       { src: "images/xq/xq-obung-phim.jpg", caption: "Phim ổ bụng đứng — mẫu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
@@ -2742,6 +2743,10 @@ window.SOTAY_QUYTRINH = [
         "Thấy từ vòm hoành đến bờ trên khớp mu.",
         "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-o-bung-nam-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng, decubitus)" },
+      { src: "images/xq/xq-o-bung-nam-nghieng-phim.png", caption: "Phim đạt yêu cầu (decubitus)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
