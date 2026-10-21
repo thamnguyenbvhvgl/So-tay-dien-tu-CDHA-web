@@ -974,7 +974,8 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cochan-nghieng-ct.png", caption: "Tư thế bệnh nhân và hướng tia" }
+      { src: "images/xq/xq-cochan-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1122,39 +1123,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-xuonggot-trenduoi",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang xương gót — tư thế trên dưới",
-    tuKhoa: ["xuong got tren duoi", "got chan", "calcaneus"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "54 kVp · 5 mAs (bề dày 8–12 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía chân một góc 40°" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương gót, mắt cá và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm sấp trên bàn chụp hình với cổ chân đau được kê lên cao và điều chỉnh sao cho trục dài của bàn chân thẳng góc với mặt bàn.",
-        "Đặt cassette dựng đứng sao cho mặt cassette tiếp xúc thật sát với lòng bàn chân và trục dọc cassette thẳng góc với mặt bàn."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn về phía chân một góc 40°, đoạn ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ đi vào lưng bàn chân ngay khớp cổ chân và xuyên qua lòng bàn chân ngay đầu gần của xương bàn chân thứ V."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-xuonggot-trenduoi-ct.jpeg", caption: "Tư thế bệnh nhân và hướng tia (trên dưới)" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   /* ----------------------------------- X-QUANG GỐI / ĐÙI / CHẬU / HÁNG ----------------------------------- */
 
