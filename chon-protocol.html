@@ -368,7 +368,7 @@
       var n = it.nhom || "", t = it.ten || "";
       if (n === "Sọ - Mặt" || n === "Răng") return 1;
       if (n === "Cột sống" && rx(/cổ|C1|C2/, t)) return 2;
-      if (n === "Lồng ngực - Bụng" && rx(/phổi|ngực|xương ức|thực quản|lồng ngực/, t) && !rx(/ổ bụng|bụng/, t)) return 3;
+      if (n === "Lồng ngực - Bụng" && rx(/phổi|ngực|xương ức|thực quản|lồng ngực|sườn|ức đòn|tim phổi/, t) && !rx(/ổ bụng|bụng/, t)) return 3;
       if (n === "Cột sống" && rx(/ngực/, t)) return 3;
       if (n === "Lồng ngực - Bụng" && rx(/ổ bụng|bụng/, t)) return 4;
       if (n === "Cản quang") return 4;
