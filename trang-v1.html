@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sổ tay điện tử CĐHA</title>
+  <meta name="description" content="Sổ tay tra cứu điện tử khoa Chẩn đoán hình ảnh – Bệnh viện Hùng Vương Gia Lai. Tra nhanh quy trình, protocol và công cụ khẩn cấp ngay tại buồng máy.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- ===================== THANH ĐẦU TRANG ===================== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-logo"><img src="assets/logo-hvgl.png" alt="Bệnh viện Hùng Vương Gia Lai"></div>
+        <div class="brand-text">
+          <strong>Sổ tay điện tử CĐHA</strong>
+          <span>Khoa Chẩn đoán hình ảnh</span>
+        </div>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" title="Đổi nền sáng / tối" aria-label="Đổi nền sáng / tối">🌙</button>
+    </div>
+    <div class="searchwrap">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input id="searchInput" type="search" autocomplete="off"
+             placeholder="Gõ để tra: sọ, phổi, CT sọ não, MRI, mỏm trâm…"
+             aria-label="Tìm kiếm quy trình">
+      <button id="searchClear" class="search-clear" type="button" aria-label="Xóa tìm kiếm" hidden>✕</button>
+    </div>
+  </header>
+
+  <!-- ===================== KHẨU HIỆU ===================== -->
+  <p class="tagline">Khoa Chẩn đoán hình ảnh, Nơi công nghệ chạm đến trái tim</p>
+
+  <!-- ===================== THANH PHÂN HỆ ===================== -->
+  <nav class="tabs" id="tabs" aria-label="Chọn phân hệ">
+    <button class="tab is-active" data-view="xquang">① Quy trình X-quang &amp; Siêu âm</button>
+    <button class="tab" data-view="ct-mri">② Protocol CT &amp; MRI</button>
+    <button class="tab" data-view="benh-ly">③ Bệnh lý (tham khảo)</button>
+    <button class="tab" data-view="cong-cu">④ Công cụ khẩn cấp</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- Bộ lọc nhóm (hiện ở phân hệ 1 & 2) -->
+    <div id="groupFilter" class="group-filter" aria-label="Lọc theo nhóm"></div>
+
+    <!-- Khu kết quả quy trình -->
+    <section id="listView">
+      <div id="viewNote" class="view-note" hidden></div>
+      <p id="resultMeta" class="result-meta"></p>
+      <div id="cardList" class="card-list"></div>
+      <div id="emptyState" class="empty" hidden>
+        <p>Không tìm thấy quy trình nào khớp.</p>
+        <p class="empty-hint">Thử gõ ngắn hơn, bỏ dấu cũng được (vd “so nao”, “phoi”).</p>
+      </div>
+    </section>
+
+    <!-- Khu công cụ khẩn cấp -->
+    <section id="toolsView" hidden></section>
+
+  </main>
+
+  <!-- ===================== BẢNG CHI TIẾT (mở khi bấm 1 quy trình) ===================== -->
+  <div id="detailOverlay" class="overlay" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="sheet-head">
+        <button id="detailClose" class="sheet-close" type="button" aria-label="Đóng">← Quay lại</button>
+      </div>
+      <div id="detailBody" class="sheet-body"></div>
+    </div>
+  </div>
+
+  <!-- ===================== PHÓNG TO ẢNH ===================== -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Đóng">✕</button>
+    <img id="lightboxImg" alt="">
+  </div>
+
+  <footer class="footer">
+    <p class="footer-motto">“Khoa Chẩn đoán hình ảnh, Nơi công nghệ chạm đến trái tim” <span class="motto-heart">❤</span></p>
+    <p>Bản nội bộ • <b>Phiên bản 1.0</b> (16/10/2026) • Chủ nhiệm: CN. Nguyễn Hồng Thắm • Nội dung chuyên môn đã được Trưởng khoa &amp; KTV trưởng duyệt.</p>
+    <p><a href="app.html">🧭 Giao diện mới (app) — sidebar + 5 danh mục (đang dựng)</a> &nbsp;·&nbsp; <a href="chon-protocol.html">🖥️ Chọn protocol theo phân khu giải phẫu</a></p>
+    <p><a href="tham-dinh.html">📋 Phiếu thẩm định nội dung (cho Trưởng khoa duyệt)</a> &nbsp;·&nbsp; <a href="kiem-tra.html">🔎 Tự kiểm tra dữ liệu</a></p>
+  </footer>
+
+  <!-- Dữ liệu (nội dung) nạp trước, giao diện (logic) nạp sau -->
+  <script src="data/quy-trinh.js"></script>
+  <script src="data/benh-ly.js"></script>
+  <script src="data/cong-cu.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
