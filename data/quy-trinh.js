@@ -2805,6 +2805,44 @@ window.SOTAY_QUYTRINH = [
     nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
   },
 
+  {
+    id: "xq-suon-chan-thuong",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
+    ten: "Chụp X-quang lồng ngực khảo sát xương sườn (chấn thương)",
+    tuKhoa: ["xuong suon chan thuong", "gay suon", "long nguc chan thuong", "rib trauma"],
+    thongSo: [
+      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
+      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo xương sườn / lồng ngực)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Tia trung tâm", giaTri: "Vào vùng sườn tổn thương, vuông góc mặt phim" },
+      { ten: "Lưới lọc", giaTri: "Tùy vùng (trên/dưới cơ hoành)" }
+    ],
+    noiDung: [
+      { tieuDe: "Mục tiêu", items: [
+        "Khảo sát xương sườn vùng chấn thương (tìm đường gãy), bổ sung cho phim phổi thường quy."
+      ]},
+      { tieuDe: "Chiếu thế", items: [
+        "Chụp khu trú vào nửa lồng ngực bên tổn thương; có thể thêm tư thế chếch để bộc lộ đường gãy.",
+        "Sườn trên cơ hoành: chụp ở thì hít vào; sườn dưới cơ hoành: chụp ở thì thở ra.",
+        "Đưa xương bả vai ra khỏi lồng sườn khi khảo sát sườn phía sau trên cao."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Ngắm vào vùng sườn cần khảo sát, tia vuông góc mặt phim (tham khảo kỹ thuật xương sườn)."
+      ]},
+      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
+        "Thấy rõ các cung sườn vùng tổn thương và tương quan với màng phổi/khoang phổi.",
+        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-suon-chan-thuong-ct.png", caption: "Chiều thế" },
+      { src: "images/xq/xq-suon-chan-thuong-ct2.png", caption: "Chiều thế (chếch)" },
+      { src: "images/xq/xq-suon-chan-thuong-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-suon-chan-thuong-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+    ],
+    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
+  },
+
 
   {
     id: "xq-he-tiet-nieu",
