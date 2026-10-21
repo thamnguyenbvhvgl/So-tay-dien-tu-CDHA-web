@@ -2284,68 +2284,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-stenvers",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang xương đá tư thế Stenvers",
-    tuKhoa: ["stenvers", "xuong da", "petrous", "xuong chum"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Góc", giaTri: "MP chính diện với mặt bàn 45–55°" },
-      { ten: "Tia trung tâm", giaTri: "Chếch lên đầu 10°, khu trú ụ chẩm ngoài bên đối diện" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Nằm sấp, tay bên cần chụp xuôi dọc cơ thể, tay đối diện chống tương ứng giá phim.",
-        "Đặt gờ hốc mắt và cánh mũi bên cần chụp sát phim.",
-        "Chỉnh mặt phẳng chính diện tạo với mặt bàn một góc 45–55°, mặt phẳng Virchow thẳng góc với phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Chiếu chếch lên đầu 10°; khu trú vào ụ chẩm ngoài đối diện với bên cần chụp." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ mặt xương đá.",
-        "Thấy rõ 2/3 xương chũm ở dưới."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-stenvers-ct.jpg",   caption: "Tư thế (xương đá) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-stenvers-phim.jpg", caption: "Phim xương đá (Stenvers) — mẫu" }
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
-  {
-    id: "xq-xuong-ham-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang xương hàm dưới chếch",
-    tuKhoa: ["xuong ham duoi", "mandible oblique", "ham chech", "nhanh ngang"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tư thế", giaTri: "Nằm nghiêng, má bên cần chụp sát phim, cằm ngửa tối đa" },
-      { ten: "Tia trung tâm", giaTri: "Giữa đường nối cằm với sụn giáp" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Nằm nghiêng trên bàn chụp, hai chân co nhẹ, hai tay xuôi dọc cơ thể.",
-        "Má bên cần chụp sát phim, cằm ngửa tối đa.",
-        "Chỉnh mặt phẳng chính diện song song phim theo chiều dọc."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Chiếu từ trên xuống, vuông góc phim; khu trú điểm giữa đường nối cằm với sụn giáp." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Nhánh ngang xương hàm dưới bên cần chụp vào trung tâm phim.",
-        "Thấy rõ toàn bộ nhánh ngang, ngành lên, lồi cầu, hõm sigma, mỏm vẹt xương hàm dưới bên cần chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-hamduoi-ct.jpg",   caption: "Tư thế xương hàm dưới & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hamduoi-phim.jpg", caption: "Phim xương hàm dưới — mẫu" }
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
 
   {
     id: "xq-khop-thai-duong-ham",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang khớp thái dương hàm (toàn hàm)",
+    ten: "Chụp X-quang khớp thái dương hàm",
     tuKhoa: ["khop thai duong ham", "tmj", "panorama ham", "thai duong ham"],
     thongSo: [
       { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
