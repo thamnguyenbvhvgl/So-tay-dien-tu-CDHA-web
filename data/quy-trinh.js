@@ -1299,8 +1299,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-dui-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-dui-truocsau-phim.jpg", caption: "Phim xương đùi trước sau — mẫu" }
+      { src: "images/xq/xq-dui-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dui-truocsau-phim.jpg", caption: "Phim đạt yêu cầu (đầu trên)" },
+      { src: "images/xq/xq-dui-truocsau-phim2.png", caption: "Phim đạt yêu cầu (đầu dưới)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
@@ -1333,8 +1334,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-dui-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-dui-nghieng-phim.jpg", caption: "Phim xương đùi nghiêng — mẫu" }
+      { src: "images/xq/xq-dui-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dui-nghieng-phim.jpg", caption: "Phim đạt yêu cầu (đầu trên)" },
+      { src: "images/xq/xq-dui-nghieng-phim2.png", caption: "Phim đạt yêu cầu (đầu dưới)" }
     ],
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
