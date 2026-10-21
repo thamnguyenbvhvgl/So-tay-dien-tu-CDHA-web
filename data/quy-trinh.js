@@ -1513,41 +1513,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  {
-    id: "xq-hang-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp háng chếch",
-    tuKhoa: ["hang chech", "hip oblique"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 14–17 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay chỏm xương đùi" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Chỏm và cổ xương đùi, phần trên xương đùi và hốm khớp chén."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình đoạn thân mình bệnh nhân về phía cần chụp một góc 30°, với chân lành đưa về phía sau và chân bên đau đưa về phía trước.",
-        "Kê chân lành trên những túi cát để tạo sự bất động và thoải mái cho bệnh nhân.",
-        "Điều chỉnh cassette thế nào để bờ trên của nó nằm ngang với mào chậu."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay chỏm xương đùi, tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-hang-chech-ct.jpg", caption: "Chiều thế (sơ đồ) & hướng tia" },
-      { src: "images/xq/xq-hang-chech-phim.jpg", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   {
     id: "xq-hang-chan-ech",
