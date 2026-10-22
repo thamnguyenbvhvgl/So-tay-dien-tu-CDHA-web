@@ -364,7 +364,10 @@
       { id:6, ten:"Toàn thân",           en:"Whole-body",      icon:"🧍", color:"#596273" },
       { id:7, ten:"Thông số & An toàn",  en:"Params & Safety", icon:"⚙️", color:"#5a6679" }
     ];
-    var REGIONS = (MODALITY === "CT") ? CT_GROUPS : BODY.concat(EXTRAS[MODALITY] || []);
+    var CT_REGIONS = (CONTRAST === "0" || CONTRAST === "1")
+      ? CT_GROUPS.filter(function (g) { return g.id !== 7; })   // bỏ "Thông số & An toàn" ở view không tiêm/có tiêm (đã có tab riêng)
+      : CT_GROUPS;
+    var REGIONS = (MODALITY === "CT") ? CT_REGIONS : BODY.concat(EXTRAS[MODALITY] || []);
     // CT: dịch vùng cơ thể trên hình người → nhóm danh mục CT
     function ctGroupFromBodyZone(bodyRegion, sub) {
       if (sub && /^cs-/.test(sub)) return 2;      // đốt sống → Cột sống
