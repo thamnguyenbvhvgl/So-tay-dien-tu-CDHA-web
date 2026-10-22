@@ -372,6 +372,9 @@
       ? CT_GROUPS.filter(function (g) { return g.id !== 7; })   // bỏ "Thông số & An toàn" ở view không tiêm/có tiêm (đã có tab riêng)
       : CT_GROUPS;
     var REGIONS = (MODALITY === "CT") ? CT_REGIONS : BODY.concat(EXTRAS[MODALITY] || []);
+    // id nhóm "Thông số" theo từng loại — ẩn khỏi danh sách vùng khi ?hideparams=1 (đã có tab riêng)
+    var PARAMS_RID = { "X-quang": 8, "CT": 7, "MRI": 12 }[MODALITY];
+    if (P.hideparams === "1" && PARAMS_RID) REGIONS = REGIONS.filter(function (g) { return g.id !== PARAMS_RID; });
     // CT: dịch vùng cơ thể trên hình người → nhóm danh mục CT
     function ctGroupFromBodyZone(bodyRegion, sub) {
       if (sub && /^cs-/.test(sub)) return 2;      // đốt sống → Cột sống

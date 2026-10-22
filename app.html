@@ -107,11 +107,11 @@
       { id:1, ico:"🚨", ten:"Công cụ khẩn cấp", en:"Emergency Toolkit", badge:"3",
         subs:["Sốc phản vệ","Ngưng tuần hoàn (CPR)","Thoát mạch thuốc cản quang"] },
       { id:2, ico:"🦴", ten:"Quy trình X-quang", en:"X-Ray Protocol", badge:String(countMod("X-quang")),
-        subs:["Chọn theo vùng cơ thể"] },
+        subs:["Chọn theo vùng cơ thể","Thông số & An toàn"] },
       { id:3, ico:"🩻", ten:"Quy trình CT", en:"CT Protocol", badge:String(countMod("CT")),
         subs:["Không tiêm","Có tiêm","Máy tính liều & eGFR","Thông số & An toàn"] },
       { id:4, ico:"🧲", ten:"Quy trình MRI", en:"MRI Protocol", badge:String(countMod("MRI")),
-        subs:["Theo vùng giải phẫu"] },
+        subs:["Theo vùng giải phẫu","Thông số & An toàn"] },
       { id:5, ico:"📋", ten:"Ca lâm sàng tham khảo", en:"Clinical Cases", badge:"",
         subs:["Danh sách ca"] }
     ];
@@ -187,9 +187,9 @@
       panel.appendChild(el("p","desc", esc(s.en) + ' — mục: <b>' + esc(s.subs[sub]) + '</b>'));
 
       if (s.id === 1) { renderEmergency(sub); return; }
-      if (s.id === 2) { renderXquang(); return; }
+      if (s.id === 2) { renderXquang(sub); return; }
       if (s.id === 3) { renderCT(sub); return; }
-      if (s.id === 4) { iframePane("chon-protocol.html?embed=1&modality=MRI", "Protocol MRI"); return; }
+      if (s.id === 4) { renderMRI(sub); return; }
 
       var items = (PLAN[s.id] && PLAN[s.id][sub]) || ["(Nội dung sẽ được bổ sung.)"];
       panel.appendChild(el("div","stub",
@@ -216,7 +216,14 @@
         'style="width:100%;height:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg)"></iframe>';
       panel.appendChild(wrap);
     }
-    function renderXquang() { iframePane("chon-protocol.html?embed=1", "Chọn protocol X-quang"); }
+    function renderXquang(sub) {
+      if (sub === 1) { iframePane("chon-protocol.html?embed=1&region=8&nopk=1", "Thông số & An toàn X-quang"); return; }
+      iframePane("chon-protocol.html?embed=1&hideparams=1", "Chọn protocol X-quang");
+    }
+    function renderMRI(sub) {
+      if (sub === 1) { iframePane("chon-protocol.html?embed=1&modality=MRI&region=12&nopk=1", "Thông số & An toàn MRI"); return; }
+      iframePane("chon-protocol.html?embed=1&modality=MRI&hideparams=1", "Protocol MRI");
+    }
     function renderCT(sub) {
       if (sub === 2) { renderLieuEGFR(); renderCCTA(); return; }
       if (sub === 3) { iframePane("chon-protocol.html?embed=1&modality=CT&contrast=all&region=7&nopk=1", "Thông số & An toàn CT"); return; }
