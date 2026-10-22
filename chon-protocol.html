@@ -22,6 +22,9 @@
   .pb-grid.show-tech { grid-template-columns: 384px 264px minmax(0, 1fr); }
   #col-tech { display: none; }
   .pb-grid.show-tech #col-tech { display: block; }
+  /* nopk: ẩn cột "Phân khu giải phẫu" (dùng cho tab Thông số & An toàn) */
+  .pb-grid.nopk > section:first-child { display: none; }
+  .pb-grid.nopk, .pb-grid.nopk.show-tech { grid-template-columns: 300px minmax(0, 1fr); }
   /* cột 1: hình người + ô phân vùng đặt cạnh nhau */
   .pk-split { display: flex; gap: 12px; align-items: flex-start; }
   .pk-fig { flex: 0 0 168px; }
@@ -304,6 +307,7 @@
     "use strict";
     var P = {}; (location.search || "").replace(/[?&]([^=&]+)=([^&]*)/g, function (_, k, v) { P[k] = decodeURIComponent(v); return ""; });
     if (P.embed === "1") document.documentElement.setAttribute("data-embed", "1");
+    if (P.nopk === "1") { var _g = document.querySelector(".pb-grid"); if (_g) _g.classList.add("nopk"); }
     var MODALITY = P.modality || "X-quang";
     var CONTRAST = P.contrast || "all";   // "0" không tiêm · "1" có tiêm · "all"
     var SEX = P.sex || "nu";

@@ -219,7 +219,7 @@
     function renderXquang() { iframePane("chon-protocol.html?embed=1", "Chọn protocol X-quang"); }
     function renderCT(sub) {
       if (sub === 2) { renderLieuEGFR(); renderCCTA(); return; }
-      if (sub === 3) { iframePane("chon-protocol.html?embed=1&modality=CT&contrast=all&region=7", "Thông số & An toàn CT"); return; }
+      if (sub === 3) { iframePane("chon-protocol.html?embed=1&modality=CT&contrast=all&region=7&nopk=1", "Thông số & An toàn CT"); return; }
       var contrast = (sub === 1) ? 1 : 0;
       iframePane("chon-protocol.html?embed=1&modality=CT&contrast=" + contrast, "Protocol CT");
     }
