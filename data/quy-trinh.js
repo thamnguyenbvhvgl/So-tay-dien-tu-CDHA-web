@@ -3218,7 +3218,7 @@ window.SOTAY_QUYTRINH = [
     id: "ct-so-nao-khong-tiem",
     phanHe: "ct-mri",
     modality: "CT",
-    nhom: "Sọ não",
+    nhom: "Sọ + mặt",
     ten: "Chụp CLVT sọ não không tiêm thuốc đối quang",
     tuKhoa: ["ct so nao", "cat lop vi tinh", "clvt dau", "head ct", "chan thuong so nao"],
     thongSo: [
@@ -3263,7 +3263,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-so-nao-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
+    phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
     ten: "Chụp CLVT sọ não có tiêm thuốc đối quang",
     tuKhoa: ["ct so nao tiem", "clvt so nao co thuoc", "u nao", "ngam thuoc"],
     thongSo: [
@@ -3294,71 +3294,11 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-dm-canh",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "Chụp CLVT hệ động mạch cảnh có tiêm thuốc (CTA cảnh – sống)",
-    tuKhoa: ["dm canh", "cta canh", "dong mach canh", "hep dong mach canh", "boc tach"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 4 dãy)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt, máy bơm điện 2 nòng, ~1,5 ml/kg" },
-      { ten: "Test bolus", giaTri: "Ngang C4 (lượng test ~10 ml)" },
-      { ten: "Trường chụp", giaTri: "Từ quai động mạch chủ đến hết nền sọ" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Hẹp/tắc động mạch cảnh – sống (đoạn ngoài sọ); bóc tách động mạch.",
-        "Bất thường giải phẫu hệ cảnh – sống, trước mổ bắc cầu; loạn sản thành mạch; theo dõi sau điều trị."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [
-        "Chống chỉ định thuốc đối quang; có thai; nhiều kim loại vùng khám (tương đối)."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, chụp định vị; đặt tĩnh mạch kim 18G nối máy bơm 2 nòng (thuốc + NaCl).",
-        "Chụp không thuốc để xóa nền; test bolus ngang C4 tìm đỉnh thuốc.",
-        "Chọn thời điểm phát tia trong thì bơm thuốc, trường từ quai ĐM chủ → nền sọ; đuổi thuốc bằng NaCl.",
-        "Dựng hình MIP, MPR, VRT."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ, đầy đủ hệ động mạch cảnh – đốt sống trên các hình tái tạo."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-tuoi-mau-nao",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "Chụp CLVT tưới máu não (CT Perfusion)",
-    tuKhoa: ["tuoi mau nao", "ct perfusion", "dot quy", "penumbra", "nhoi mau nao"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt, máy bơm điện 2 nòng" },
-      { ten: "Thông số đo", giaTri: "CBF, CBV, MTT, TTP (lưu lượng, cung lượng, thời gian)" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương & chỉ định", items: [
-        "Đánh giá tưới máu não; đặc biệt đột quỵ nhồi máu tối cấp – tìm vùng tranh tối tranh sáng (penumbra) còn cứu được.",
-        "U não (đánh giá tăng sinh mạch, phân bậc); hẹp mạch nghi ảnh hưởng tưới máu; theo dõi sau lấy huyết khối/tiêu sợi huyết."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [
-        "Chống chỉ định thuốc i-ốt; có thai; nhiều kim loại vùng sọ (tương đối)."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, chụp định vị; đặt chương trình sọ não (dưới lều 2–3 mm, trên lều 7–8 mm); đánh giá sơ bộ tổn thương.",
-        "Đặt TM kim 18G nối máy bơm 2 nòng; đặt lớp chụp tại vùng tổn thương cần đánh giá tưới máu; chụp theo chương trình mặc định.",
-        "Xử lý ảnh: đo CBF, CBV, MTT, TTP của vùng thăm khám."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy vùng nhu mô tranh tối – tranh sáng; hiển thị các mạch máu lớn vùng nền sọ."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-mach-mau-nao",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
+    phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
     ten: "Chụp CLVT mạch máu não (CTA não)",
     tuKhoa: ["mach mau nao", "cta nao", "phinh mach", "di dang mach nao", "ccx"],
     thongSo: [
@@ -3388,69 +3328,11 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-so-nao-3d",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "Chụp CLVT sọ não có dựng hình 3D",
-    tuKhoa: ["so nao 3d", "dung hinh 3d", "lun so", "dinh khop so"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt ~1,5 ml/kg (khi dựng 3D mạch máu)" },
-      { ten: "Kiểu dựng hình", giaTri: "3D nhu mô não / hộp sọ / mạch máu não" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Bất thường mạch máu não (phình, dị dạng, chảy máu); lún sọ, dính khớp sọ sớm, biến dạng hộp sọ.",
-        "Dị vật cản quang trong sọ; u não có chỉ định mổ hoặc xạ định vị nổi (stereotaxy)."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [
-        "Chống chỉ định thuốc i-ốt; có thai; nhiều kim loại vùng khám (tương đối)."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, chụp định vị; nếu dựng 3D mạch: đặt TM kim 18G, máy bơm 2 nòng, test bolus ĐM cảnh chung ngang C4, trường từ C4 → vòm sọ.",
-        "Dựng hình MIP, MPR, VRT; chọn kiểu dựng theo mạch máu / nhu mô / hộp sọ."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Không nhiễu do chuyển động; dựng 3D mạch máu/nhu mô/hộp sọ rõ ràng, đầy đủ."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-sinh-thiet-nao",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "Chụp CLVT hướng dẫn sinh thiết não",
-    tuKhoa: ["sinh thiet nao", "ct guided biopsy", "u nao sinh thiet"],
-    thongSo: [
-      { ten: "Vô cảm", giaTri: "Gây mê toàn thân nội khí quản" },
-      { ten: "Dụng cụ", giaTri: "Kim dẫn đường (Trocar) 18G, súng + kim sinh thiết 18G" },
-      { ten: "Độ dày lát cắt", giaTri: "3 mm (có dụng cụ đánh dấu trên da đầu)" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương & chỉ định", items: [
-        "Lấy bệnh phẩm tổn thương (u não…) làm giải phẫu bệnh, định hướng điều trị; chẩn đoán phân biệt viêm/u, bệnh thoái hóa.",
-        "Kỹ thuật cao, cần trang thiết bị đầy đủ và nhân lực chuyên môn cao."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [
-        "Có thai; nhiều kim loại vùng khám (tương đối)."
-      ]},
-      { tieuDe: "Các bước chính", items: [
-        "Gây mê NKQ; đặt người bệnh (ngửa/sấp/nghiêng tùy vị trí & hướng tiếp cận); chụp định vị.",
-        "Đặt chương trình sọ não (độ dày 3 mm) có dụng cụ đánh dấu trên da đầu; khu trú vùng cần sinh thiết.",
-        "Vô khuẩn, rạch da đầu, khoan 1 lỗ xương sọ; đưa kim 18G vào nhu mô; chụp định vị hướng và độ sâu (lặp lại nhiều lần).",
-        "Tới tổn thương: bấm súng sinh thiết (thường 3 mảnh) cho vào lọ formol; rút kim, khâu da đầu, băng vô khuẩn, hồi tỉnh."
-      ]},
-      { tieuDe: "⚠️ Tai biến & xử trí", items: [
-        "Chảy máu não (điều trị chuyên khoa); chảy máu da đầu (khâu, băng ép); nhiễm trùng (kháng sinh)."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-ham-mat-khong-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
+    phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
     ten: "Chụp CLVT hàm – mặt không tiêm thuốc",
     tuKhoa: ["ham mat", "mui xoang", "hong", "chan thuong ham mat", "clvt xoang"],
     thongSo: [
@@ -3476,7 +3358,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-ham-mat-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
+    phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
     ten: "Chụp CLVT hàm – mặt có tiêm thuốc",
     tuKhoa: ["ham mat tiem", "u ham mat", "viem ham mat"],
     thongSo: [
@@ -3501,60 +3383,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-ham-mat-nha-khoa",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CLVT hàm – mặt ứng dụng phần mềm nha khoa (Dentascan)",
-    tuKhoa: ["nha khoa", "dentascan", "cay ghep rang", "implant", "panoscan"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "1 mm, khoảng cách 1 mm (không tiêm)" },
-      { ten: "mAs", giaTri: "~50 mAs hàm trên · ~150 mAs hàm dưới" },
-      { ten: "Tái tạo", giaTri: "Panoscan (song song cung răng) + cross-cut (vuông góc)" },
-      { ten: "Cửa sổ tái tạo", giaTri: "WL 750 HU · WW 3500 HU" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương", items: [
-        "Tái tạo ảnh theo giải phẫu cung răng, cho kích thước thật; quan trọng trong cấy ghép răng và chỉnh hình hàm mặt."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Cắt ngang độ dày 1 mm, cách 1 mm; hàm trên song song vòm miệng cứng, hàm dưới song song bờ nền xương hàm dưới.",
-        "Định vị đường cong giữa cung răng; phần mềm tự tái tạo lát panoscan (song song) và cross-cut (vuông góc), dày 1 mm cách 1 mm.",
-        "Có thể tái tạo 3D bề mặt mô mềm / xương / răng."
-      ]},
-      { tieuDe: "Nhận định (cấy ghép răng)", items: [
-        "Đánh giá chất lượng xương (mật độ) và kích thước xương (chiều cao, độ rộng) tại vùng cấy ghép.",
-        "Lưu ý mốc giải phẫu: nền mũi, đáy xoang hàm trên, ống thần kinh răng dưới."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-ham-mat-3d",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CLVT hàm – mặt có dựng hình 3D",
-    tuKhoa: ["ham mat 3d", "dung hinh 3d mat", "chinh hinh ham mat"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "Cắt ngang mỏng xoắn ốc để tái tạo 3D" },
-      { ten: "Kiểu dựng hình", giaTri: "3D bề mặt xương / phần mềm; MPR đa mặt phẳng" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương & chỉ định", items: [
-        "Dựng hình 3D khối xương hàm mặt phục vụ chẩn đoán chấn thương phức tạp, dị dạng, lập kế hoạch phẫu thuật – chỉnh hình hàm mặt."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Chụp cắt ngang xoắn ốc lớp mỏng toàn vùng hàm mặt.",
-        "Tái tạo đa mặt phẳng (MPR) và dựng bề mặt 3D (xương, phần mềm) theo mục đích thăm khám."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [ "Hình 3D rõ ràng, không nhiễu cử động; bộc lộ đầy đủ cấu trúc cần đánh giá." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-tai-xuong-da-khong-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CLVT tai – xương đá không tiêm thuốc",
+    phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
+    ten: "Chụp CLVT tai – xương đá",
     tuKhoa: ["tai xuong da", "xuong thai duong", "nghe kem", "u tai", "chong mat"],
     thongSo: [
       { ten: "Độ dày lát cắt", giaTri: "1 mm, cắt xoắn ốc (độ phân giải cao)" },
@@ -3576,56 +3410,11 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-tai-xuong-da-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CLVT tai – xương đá có tiêm thuốc",
-    tuKhoa: ["tai xuong da tiem", "u tai tiem thuoc"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "1 mm, cắt xoắn ốc" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt tan trong nước (máy bơm điện)" },
-      { ten: "Cửa sổ", giaTri: "Xương + phần mềm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Bất thường bẩm sinh; chấn thương; viêm – nhiễm trùng; nghe kém, ù tai, chóng mặt; tổn thương u (đánh giá ngấm thuốc)."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [ "Có thai, trẻ nhỏ (tương đối); chống chỉ định với thuốc đối quang i-ốt." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nhịn ăn 4 giờ; chụp cắt ngang + đứng ngang độ dày 1 mm như quy trình không tiêm.",
-        "Tiêm thuốc i-ốt; chụp sau tiêm; in cửa sổ xương + phần mềm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [ "Bộc lộ tổn thương trước và sau tiêm; mô tả đặc điểm ngấm thuốc." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-hoc-mat",
-    phanHe: "ct-mri", modality: "CT", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CLVT hốc mắt",
-    tuKhoa: ["hoc mat ct", "orbit ct", "u hoc mat", "chan thuong hoc mat"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "3 mm, cắt xoắn ốc" },
-      { ten: "Hướng cắt", giaTri: "Cắt ngang (bờ dưới → bờ trên hốc mắt) + đứng ngang" },
-      { ten: "Thuốc đối quang", giaTri: "Tiêm i-ốt tùy chỉ định lâm sàng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Chấn thương; viêm – nhiễm trùng; tổn thương u vùng hốc mắt." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Có thai (nhất là 3 tháng đầu — che chắn). Có thể thay bằng CHT." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Cắt ngang độ dày 3 mm, song song khẩu cái cứng, từ bờ dưới tới bờ trên hốc mắt.",
-        "Cắt đứng ngang độ dày 3 mm, từ chóp phía trước nhãn cầu tới bờ sau hốc mắt.",
-        "Tiêm thuốc i-ốt tùy chỉ định; in 2 hướng, cửa sổ xương + phần mềm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [ "Mô tả rõ vị trí, cấu trúc, kích thước, lan rộng của tổn thương hốc mắt." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-long-nguc-khong-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
     ten: "Chụp CLVT lồng ngực không tiêm thuốc",
     tuKhoa: ["ct nguc", "clvt long nguc", "phoi trung that", "thanh nguc"],
     thongSo: [
@@ -3648,7 +3437,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-long-nguc-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
     ten: "Chụp CLVT lồng ngực có tiêm thuốc",
     tuKhoa: ["ct nguc tiem", "trung that tiem", "u phoi"],
     thongSo: [
@@ -3674,31 +3463,10 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-phoi-hrct",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
-    ten: "Chụp CLVT phổi độ phân giải cao (HRCT)",
-    tuKhoa: ["hrct", "do phan giai cao", "phoi ke", "gian phe quan", "bui phoi"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "1–2 mm; bước chuyển bàn 10–15 mm (hoặc xoắn ốc)" },
-      { ten: "Thuốc đối quang", giaTri: "Không tiêm" },
-      { ten: "Cửa sổ", giaTri: "Trung thất WL 35/WW 400 · Nhu mô WL −600÷−800/WW 900–1200" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Bệnh lý phế quản – phổi kẽ: giãn phế quản, bụi phổi, bệnh phổi mô kẽ…" ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Có thai; (không dùng thuốc nên ít liên quan dị ứng)." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, hai tay giơ cao, hít – nín thở đều; chụp định vị toàn bộ lồng ngực.",
-        "Chụp lớp cắt mỏng 1–2 mm từ đỉnh phổi đến hết góc sườn hoành, bước 10–15 mm; không tiêm thuốc."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [ "Nhu mô phổi độ phân giải cao, bộc lộ rõ cấu trúc phế quản – mô kẽ." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-dm-chu-nguc",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
     ten: "Chụp CLVT động mạch chủ ngực (CTA ĐM chủ ngực)",
     tuKhoa: ["dm chu nguc", "cta dong mach chu", "phinh tach dm chu", "boc tach"],
     thongSo: [
@@ -3723,7 +3491,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-dm-vanh",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
     ten: "Chụp CLVT động mạch vành (MSCT mạch vành)",
     tuKhoa: ["dm vanh", "msct vanh", "mach vanh", "coronary cta", "dau nguc"],
     thongSo: [
@@ -3754,7 +3522,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-diem-voi-hoa-vanh",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
     ten: "Chụp CLVT tính điểm vôi hóa động mạch vành (Calcium score)",
     tuKhoa: ["diem voi hoa vanh", "calcium score", "agatston", "sang loc mach vanh"],
     thongSo: [
@@ -3781,8 +3549,8 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-tang-tren-o-bung",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT tầng trên ổ bụng thường quy",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT tầng trên ổ bụng – tiểu khung thường quy",
     tuKhoa: ["tang tren o bung", "gan mat tuy lach", "ct bung tren"],
     thongSo: [
       { ten: "Độ dày lát cắt", giaTri: "5–8 mm (tổn thương nhỏ 3 mm)" },
@@ -3804,7 +3572,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-bung-tieu-khung",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
     ten: "Chụp CLVT bụng – tiểu khung thường quy",
     tuKhoa: ["bung tieu khung", "ct o bung", "vom hoanh khop mu"],
     thongSo: [
@@ -3824,31 +3592,10 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-tieu-khung",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT tiểu khung thường quy",
-    tuKhoa: ["tieu khung", "tu cung buong trung", "bang quang tien liet tuyen", "ap xe phan phu"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "5–8 mm (tổn thương nhỏ 3 mm)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt 1,5–2 ml/kg, 4–5 ml/s; thì ĐM 25–30 s · TM 60–70 s · muộn 5–7 phút" },
-      { ten: "Lưu ý", giaTri: "Nghi rò đường bài xuất: chụp thì rất muộn khi bàng quang căng thuốc" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "U tử cung – buồng trứng; viêm/áp xe phần phụ; u bàng quang – tiền liệt tuyến; viêm ruột thừa/túi thừa; u khoang dưới phúc mạc; rò bàng quang – âm đạo, trực tràng – âm đạo." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Tiền sử dị ứng thuốc đối quang." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, hai tay giơ đầu, nhịn thở; chụp trước và sau tiêm vùng tiểu khung.",
-        "3 thì ĐM/TM/muộn; thì muộn đánh giá thành ống tiêu hóa, thành ổ áp xe; nghi rò bài xuất → thì rất muộn."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-he-tiet-nieu-thuong-quy",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
     ten: "Chụp CLVT hệ tiết niệu thường quy",
     tuKhoa: ["he tiet nieu", "soi than nieu quan", "dau quan than", "u than"],
     thongSo: [
@@ -3868,58 +3615,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-tang-tren-mach-tang",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT tầng trên ổ bụng có khảo sát mạch tạng",
-    tuKhoa: ["mach tang", "than tang", "mac treo trang tren", "cta tang"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (có phần mềm dựng hình mạch)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt 1,5–2 ml/kg, 4–5 ml/s" },
-      { ten: "Dựng hình", giaTri: "3D, MIP, MPR mạch tạng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Bệnh lý gan – mật – tụy – lách – dạ dày (u, viêm, chấn thương) cần đánh giá mạch cấp máu/dẫn lưu.",
-        "Bilan trước/sau ghép tạng; huyết khối tĩnh mạch cửa – tĩnh mạch gan; nghi huyết khối nhánh ĐM thân tạng, ĐM mạc treo tràng trên."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Dị ứng thuốc đối quang; thai những tuần đầu." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Như tầng trên ổ bụng, dùng máy đa dãy; đánh giá nhu mô + động học ngấm thuốc + dựng hình mạch tạng (3D/MIP/MPR).",
-        "3 thì động mạch / tĩnh mạch / muộn."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-he-tiet-nieu-mach-than",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT hệ tiết niệu khảo sát mạch thận và dựng hình bài xuất",
-    tuKhoa: ["mach than", "cta than", "dung hinh bai xuat", "urography"],
-    thongSo: [
-      { ten: "Thuốc đối quang", giaTri: "I-ốt 90–120 ml, tốc độ 3 ml/s" },
-      { ten: "Các thì", giaTri: "ĐM (vỏ thận) 20 s · nhu mô 60 s · bài xuất (muộn) 5–7 phút" },
-      { ten: "Độ dày / tái tạo", giaTri: "Lát 3–5 mm xoắn ốc; tái tạo < 1 mm, đứng ngang" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Bất thường/viêm hệ tiết niệu; u thận, bệnh lý mạch thận; sỏi, thận ứ nước; đau quặn thận." ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [ "Suy thận, dị ứng i-ốt, thai (cân nhắc)." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, tay trên đầu, nhịn thở; TM kim 18G; tiêm 90–120 ml tốc độ 3 ml/s.",
-        "Thì trước tiêm (toàn đường niệu) → ĐM 20 s (vỏ thận) → nhu mô 60 s → bài xuất 5–7 phút (muộn hơn tùy chức năng thận).",
-        "Dựng hình động mạch thận và đường bài xuất (MPR/MIP/VR); cửa sổ bụng WL +50/WW 400."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-gan-duong-mat",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT gan có dựng hình đường mật (gan 3 pha)",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT gan có tiêm thuốc (3 pha)",
     tuKhoa: ["gan 3 pha", "duong mat", "hcc", "u gan", "tac mat"],
     thongSo: [
       { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
@@ -3943,36 +3644,11 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-huyet-dong-u",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT tạng khảo sát huyết động học khối u (CT tưới máu u)",
-    tuKhoa: ["huyet dong u", "ct tuoi mau u", "tang sinh mach u", "perfusion u"],
-    thongSo: [
-      { ten: "Thuốc đối quang", giaTri: "I-ốt 40–70 ml, tốc độ 6 ml/s" },
-      { ten: "Vùng cắt", giaTri: "Khu trú ~2 cm vào vị trí u đường kính lớn nhất" },
-      { ten: "Chuỗi cắt động", giaTri: "1 giây/lát, lát 5–10 mm, kéo dài 25–30 s (một lần nín thở)" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương & chỉ định", items: [
-        "Đánh giá tăng sinh mạch trong khối u (chẩn đoán, phân tầng nguy cơ, theo dõi sau điều trị).",
-        "Chỉ định: khối u tạng lồng ngực, ổ bụng, tiểu khung…"
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [ "Suy thận, dị ứng i-ốt, thai." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Chụp trước tiêm định vị u (vị trí, mật độ, kích thước) ở cuối thì thở ra.",
-        "Chọn lát khu trú ~2 cm vào đường kính lớn nhất của u; chụp động 1 s/lát trong 25–30 s khi nín thở; tiêm 40–70 ml tốc độ 6 ml/s.",
-        "Lập bản đồ tưới máu, dựng biểu đồ ngấm thuốc; so sánh u với ĐM chủ và nhu mô lành."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-ruot-non-khong-ong",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT ruột non không dùng ống thông (uống nước)",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT ruột có tiêm thuốc",
     tuKhoa: ["ruot non ct", "ct enterography", "crohn", "uong nuoc lam gian ruot"],
     thongSo: [
       { ten: "Làm giãn ruột", giaTri: "Uống ~1000 ml nước trong ~15 phút + thuốc giảm trương lực TM" },
@@ -3992,58 +3668,7 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-ruot-non-co-ong",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT ruột non có dùng ống thông (CT enteroclysis)",
-    tuKhoa: ["ruot non ong thong", "enteroclysis", "ong hong trang"],
-    thongSo: [
-      { ten: "Ống thông", giaTri: "Ống hỗng tràng 8F đặt tới góc Treitz dưới X-quang tăng sáng" },
-      { ten: "Bơm nước làm giãn", giaTri: "1500 ml (100–200 ml/phút, max 1600 mmHg; tối đa 2000 ml)" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt 120 ml, 2,5–3 ml/s; chụp 60 s (chảy máu: ĐM 25 s), lát 5 mm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "U ruột non (chảy máu, thiếu máu mạn không rõ trên nội soi); tắc ruột không hoàn toàn/thấp; Crohn (rò, tắc); co kéo mạc treo." ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [
-        "Dị ứng i-ốt; có thai; tắc ruột hoàn toàn.",
-        "Không đặt được ống (rối loạn cơ thắt thực quản, hẹp nặng/rò, thoát vị hoành – trào ngược nặng, nối dạ dày – ruột)."
-      ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Đặt ống hỗng tràng 8F (bôi gel) qua mũi tới góc Treitz dưới tăng sáng, cố định.",
-        "Bơm nước làm đầy ruột ~1500 ml (100–200 ml/phút; nghi tắc thấp/ruột ngắn: ≤ 100 ml/phút); rút ống nếu gây nhiễu kim loại.",
-        "Tiêm thuốc giảm trương lực; chụp trước tiêm 10 mm; sau tiêm 120 ml i-ốt 2,5–3 ml/s, chụp ~60 s, lát 5 mm; tái tạo 0,6–1 mm."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tiêu chảy (điều trị nội); tai biến thuốc đối quang — theo quy trình." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-dai-trang-noi-soi-ao",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CLVT đại tràng có nội soi ảo (CT colonography)",
-    tuKhoa: ["dai trang noi soi ao", "ct colonography", "noi soi ao", "bom hoi dai trang"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT ≥ 8 dãy" },
-      { ten: "Làm giãn", giaTri: "Bơm hơi qua hậu môn; chụp cả tư thế nằm ngửa và nằm sấp" },
-      { ten: "Thông số", giaTri: "Lát 2,5 mm, 120 kV, 80–100 mAs; tái tạo 0,6–1 mm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Thăm khám đại tràng đoạn gần khi nội soi không qua được (u, hẹp, gập góc).",
-        "Người bệnh chống chỉ định nội soi (suy hô hấp, chống đông, dị ứng thuốc nội soi)."
-      ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [ "Cân nhắc tiêm i-ốt khi suy thận, dị ứng, có thai." ]},
-      { tieuDe: "Chuẩn bị", items: [ "Ngày trước: ăn ít xơ, thức ăn loãng; uống thuốc tẩy ruột; uống nhiều nước; nhịn ăn trước chụp; kiêng sữa/bia/rượu." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Bơm hơi qua ống thông hậu môn đến mức chịu được; chụp định vị kiểm tra độ căng; chụp từ vòm hoành đến trực tràng thấp (có thể kèm tiêm i-ốt TM).",
-        "Chuyển tư thế nằm sấp, bơm hơi tiếp, chụp lại toàn bộ khung đại tràng.",
-        "Tái tạo nội soi ảo 3D kết hợp lát cắt ngang 2D (ngửa + sấp)."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang (khi có tiêm) — theo quy trình." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-cs-co-khong-tiem",
@@ -4091,27 +3716,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-cs-co-3d",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cột sống",
-    ten: "Chụp CLVT cột sống cổ có dựng hình 3D",
-    tuKhoa: ["ct cs co 3d", "dung hinh cot song co"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
-      { ten: "Định vị", giaTri: "Sagittal, khớp thái dương hàm → bờ dưới D1" },
-      { ten: "Dựng hình", giaTri: "MPR, MIP, VRT, SSD" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Chấn thương, u, viêm xương và phần mềm cột sống cổ cần dựng hình không gian." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Phụ nữ có thai." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, vai hạ thấp, nhịn thở không nuốt; cắt xoắn ốc mỏng toàn bộ cột sống cổ.",
-        "Dựng hình MPR, MIP, VRT, SSD; tái tạo mặt phẳng dọc giữa (sagittal) và trán (coronal)."
-      ]},
-      { tieuDe: "Tiêu chuẩn / nhận định", items: [ "Đánh giá thân đốt, cung sau, đĩa đệm, hẹp ống sống; tương quan giải phẫu, biến đổi tư thế cột sống trên 3D. Phối hợp lớp cắt quy ước với ảnh 3D." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-cs-nguc-khong-tiem",
@@ -4157,27 +3761,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-cs-nguc-3d",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cột sống",
-    ten: "Chụp CLVT cột sống ngực có dựng hình 3D",
-    tuKhoa: ["ct cs nguc 3d", "dung hinh cot song nguc"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
-      { ten: "Định vị", giaTri: "Sagittal, từ C7–D1 đến D12–L1" },
-      { ten: "Dựng hình", giaTri: "MPR, MIP, VRT, SSD" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Chấn thương, u, viêm cột sống ngực cần dựng hình không gian." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Phụ nữ có thai." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, hai tay giơ đầu, nhịn thở; cắt xoắn ốc mỏng toàn bộ cột sống ngực.",
-        "Dựng hình MPR, MIP, VRT, SSD; tái tạo sagittal và coronal."
-      ]},
-      { tieuDe: "Tiêu chuẩn / nhận định", items: [ "Đánh giá thân đốt, cung sau, hẹp ống sống; tương quan giải phẫu, biến dạng cột sống trên 3D." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-cs-tl-khong-tiem",
@@ -4223,31 +3806,10 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-cs-tl-3d",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cột sống",
-    ten: "Chụp CLVT cột sống thắt lưng có dựng hình 3D",
-    tuKhoa: ["ct csl 3d", "dung hinh cot song that lung"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT đa dãy (≥ 8 dãy)" },
-      { ten: "Định vị", giaTri: "Sagittal, từ D12 đến S1" },
-      { ten: "Dựng hình", giaTri: "MPR, MIP, VRT, SSD" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "Chấn thương, u, viêm cột sống thắt lưng cần dựng hình không gian; lập kế hoạch phẫu thuật." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Phụ nữ có thai." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Nằm ngửa, hai tay giơ đầu; cắt xoắn ốc mỏng toàn bộ cột sống thắt lưng.",
-        "Dựng hình MPR, MIP, VRT, SSD; tái tạo sagittal và coronal."
-      ]},
-      { tieuDe: "Tiêu chuẩn / nhận định", items: [ "Đánh giá thân đốt, cung sau, hẹp ống sống, trượt đốt; tương quan giải phẫu trên 3D." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-khop-khong-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp",
+    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
     ten: "Chụp CLVT khớp thường quy không tiêm thuốc",
     tuKhoa: ["ct khop", "clvt khop", "thoai hoa khop", "chan thuong khop"],
     thongSo: [
@@ -4267,56 +3829,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-khop-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp",
-    ten: "Chụp CLVT khớp thường quy có tiêm thuốc",
-    tuKhoa: ["ct khop tiem", "u xuong khop", "viem xuong khop"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "1,25–2,5 mm, xoắn ốc" },
-      { ten: "kV / mAs", giaTri: "120 kV · 150–250 mAs" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt TM 1–1,5 ml/kg, tốc độ 2–3 ml/s" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "U xương khớp; viêm xương khớp, thoái hóa khớp; bất thường bẩm sinh — cần đánh giá ngấm thuốc." ]},
-      { tieuDe: "⚠️ Chống chỉ định", items: [ "Có thai, suy thận, dị ứng thuốc đối quang i-ốt (tương đối)." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Cắt ngang bao phủ khớp như quy trình không tiêm; sau đó lặp lại các lớp cắt có tiêm i-ốt TM 1–1,5 ml/kg tốc độ 2–3 ml/s.",
-        "Dựng MPR/3D; in cửa sổ xương + mô mềm."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
-  {
-    id: "ct-khop-tiem-o-khop",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp",
-    ten: "Chụp CLVT khớp có tiêm thuốc vào ổ khớp (CT arthrography)",
-    tuKhoa: ["ct arthrography", "tiem o khop", "chup khop can quang noi khop", "sun chem"],
-    thongSo: [
-      { ten: "Máy", giaTri: "CLVT (≥ 4 dãy) + X-quang tăng sáng truyền hình" },
-      { ten: "Dụng cụ", giaTri: "Kim chọc khớp chuyên dụng" },
-      { ten: "Thuốc", giaTri: "I-ốt pha nước muối sinh lý, bơm vào ổ khớp" }
-    ],
-    noiDung: [
-      { tieuDe: "Đại cương", items: [ "Bộc lộ tổn thương kín đáo trong khớp (nhất là sau chấn thương) khó thấy trên các kỹ thuật thường quy — bơm thuốc đối quang nội khớp rồi chụp CLVT." ]},
-      { tieuDe: "Các bước chính", items: [
-        "Không cần gây tê; nằm trên bàn X-quang tăng sáng; sát khuẩn, trải toan vô khuẩn; định vị khe khớp.",
-        "Chọc kim vào ổ khớp; trộn i-ốt + NaCl theo tỉ lệ/thể tích phù hợp từng khớp; bơm vào ổ khớp dưới kiểm soát tăng sáng.",
-        "Rút kim, băng; chuyển sang phòng CT chụp khớp theo quy trình chụp khớp thông thường; xử lý ảnh, in phim."
-      ]},
-      { tieuDe: "⚠️ Tai biến & xử trí", items: [
-        "Chảy máu/tụ máu vị trí chọc (băng ép, theo dõi); nhiễm trùng khớp (khám chuyên khoa); tai biến thuốc đối quang — theo quy trình."
-      ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-xuong-chi-khong-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp",
-    ten: "Chụp CLVT xương chi không tiêm thuốc",
+    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
+    ten: "Chụp CLVT chi trên – chi dưới thường quy",
     tuKhoa: ["ct xuong chi", "clvt xuong", "gay xuong", "u xuong"],
     thongSo: [
       { ten: "Độ dày lát cắt", giaTri: "1,25–2,5 mm, xoắn ốc" },
@@ -4335,31 +3853,10 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-  {
-    id: "ct-xuong-chi-tiem",
-    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp",
-    ten: "Chụp CLVT xương chi có tiêm thuốc",
-    tuKhoa: ["ct xuong chi tiem", "u xuong phan mem", "viem xuong"],
-    thongSo: [
-      { ten: "Độ dày lát cắt", giaTri: "1,25–2,5 mm, xoắn ốc" },
-      { ten: "kV / mAs", giaTri: "120 kV · 150–250 mAs" },
-      { ten: "Thuốc đối quang", giaTri: "I-ốt TM làm bộc lộ tổn thương" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [ "U xương và phần mềm; viêm xương cấp – mạn tính." ]},
-      { tieuDe: "⚠️ Chống chỉ định (tương đối)", items: [ "Dị ứng i-ốt, hen phế quản, suy gan – thận; có thai." ]},
-      { tieuDe: "Kỹ thuật", items: [
-        "Cắt ngang bao phủ vùng tổn thương/toàn bộ xương như quy trình không tiêm; kết hợp tiêm i-ốt TM bộc lộ tổn thương.",
-        "Dựng ảnh xương và phần mềm MPR/3D; in cửa sổ xương + mô mềm."
-      ]},
-      { tieuDe: "⚠️ Tai biến", items: [ "Tai biến thuốc đối quang — theo quy trình xử trí." ]}
-    ],
-    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
-  },
 
   {
     id: "ct-dm-chu-chau",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
     ten: "Chụp CLVT động mạch chủ – chậu (CTA chủ – chậu)",
     tuKhoa: ["dm chu chau", "cta chu chau", "phinh dm chu bung", "aaa"],
     thongSo: [
@@ -4383,10 +3880,23 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
+  {
+    id: "ct-chan-thuong-bung",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT chấn thương bụng có tiêm thuốc",
+    tuKhoa: ["chan thuong bung", "trauma bung", "vo tang dac", "chay mau o bung"],
+    thongSo: [
+      { ten: "Thông số", giaTri: "Chờ Trưởng khoa duyệt" }
+    ],
+    noiDung: [
+      { tieuDe: "Ghi chú", items: [ "Mục con của CLVT bụng – tiểu khung (có tiêm). Nội dung kỹ thuật sẽ bổ sung sau khi duyệt." ]}
+    ],
+    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
+  },
 
   {
     id: "ct-mach-chi-tren",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
+    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
     ten: "Chụp CLVT mạch máu chi trên (CTA chi trên)",
     tuKhoa: ["mach chi tren", "cta chi tren", "hep tac dm chi tren"],
     thongSo: [
@@ -4410,7 +3920,7 @@ window.SOTAY_QUYTRINH = [
 
   {
     id: "ct-mach-chi-duoi",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
+    phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
     ten: "Chụp CLVT mạch máu chi dưới (CTA chi dưới)",
     tuKhoa: ["mach chi duoi", "cta chi duoi", "hep tac dm chi duoi", "thieu mau chi"],
     thongSo: [
@@ -4435,7 +3945,7 @@ window.SOTAY_QUYTRINH = [
   {
     id: "ct-tam-soat-toan-than",
     phanHe: "ct-mri", modality: "CT", nhom: "Toàn thân",
-    ten: "Chụp CLVT tầm soát toàn thân",
+    ten: "Chụp CLVT tầm soát toàn thân có tiêm thuốc cản quang",
     tuKhoa: ["toan than", "tam soat", "da chan thuong", "di can", "trauma ct"],
     thongSo: [
       { ten: "Máy", giaTri: "CLVT đa dãy (tốt nhất ≥ 64 dãy)" },
@@ -4459,6 +3969,19 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
+  {
+    id: "ct-toan-than-da-chan-thuong-khong-tiem",
+    phanHe: "ct-mri", modality: "CT", nhom: "Toàn thân",
+    ten: "Chụp CLVT toàn thân đa chấn thương (không tiêm thuốc)",
+    tuKhoa: ["toan than da chan thuong", "pan scan khong tiem", "polytrauma"],
+    thongSo: [
+      { ten: "Thông số", giaTri: "Chờ Trưởng khoa duyệt" }
+    ],
+    noiDung: [
+      { tieuDe: "Ghi chú", items: [ "Thì khảo sát nền không tiêm trong quy trình đa chấn thương. Nội dung kỹ thuật sẽ bổ sung sau khi duyệt." ]}
+    ],
+    nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
+  },
 
   /* ============================================================ */
   /* CT — THAM KHẢO KỸ THUẬT (Từ điển CT / CT Angiography / Liều thấp / Tưới máu) */
@@ -4470,8 +3993,8 @@ window.SOTAY_QUYTRINH = [
   /* ---- Mạch máu (CTA) ---- */
   {
     id: "ct-ref-ctpa",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
-    ten: "CTA động mạch phổi (CTPA) — kỹ thuật",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
+    ten: "Chụp CLVT động mạch phổi (CTPA)",
     tuKhoa: ["ctpa", "thuyen tac phoi", "pe", "pulmonary embolism", "tac mach phoi"],
     thongSo: [
       { ten: "Chiều quét", giaTri: "Từ vòm hoành (dưới) lên đỉnh phổi (trên) để tránh xảo ảnh hô hấp" },
@@ -4491,185 +4014,14 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
   },
-  {
-    id: "ct-ref-ccta",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
-    ten: "CTA mạch vành (CCTA) — kỹ thuật & liều thuốc",
-    tuKhoa: ["ccta", "mach vanh", "dm vanh", "coronary", "calcium score", "agatston"],
-    thongSo: [
-      { ten: "Yêu cầu nhịp tim", giaTri: "< 65 l/p, nhịp đều (BS cho chẹn beta nếu nhanh)" },
-      { ten: "Nitroglycerin", giaTri: "Ngậm dưới lưỡi 3–5 phút trước bơm thuốc để giãn mạch vành" },
-      { ten: "Lượng thuốc", giaTri: "60–80 ml, tốc độ 5–6 ml/s" },
-      { ten: "Timing", giaTri: "Bolus Tracking ROI tại ĐM chủ xuống ngang ngã ba khí quản, trigger 100–150 HU" },
-      { ten: "Tái tạo", giaTri: "Pha tâm trương (≈70–75% R-R); MPR cong theo LAD/LCx/RCA; VRT 3D" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Tầm soát hẹp mạch vành, đau thắt ngực không điển hình, nguy cơ trung bình, đánh giá stent / cầu nối (CABG)."
-      ]},
-      { tieuDe: "Các bước", items: [
-        "Chụp không thuốc đồng bộ điện tim: đo điểm vôi hóa mạch vành (Calcium Scoring – Agatston).",
-        "Chụp có thuốc: quét từ carina đến hết đáy tim.",
-        "Chọn chế độ theo nhịp: Tiến cứu (prospective, liều thấp, cần nhịp < 65) · Hồi cứu (retrospective, liều cao, đánh giá chức năng thất) · High-pitch/Flash (toàn tim 1 nhịp ~250 ms, cần nhịp rất đều chậm)."
-      ]},
-      { tieuDe: "💉 Tính liều thuốc", items: [
-        "Dùng Máy tính liều CCTA ở tab ④ Công cụ: Tốc độ (ml/s) = (Cân nặng × IDR) ÷ (Nồng độ ÷ 1000); Tổng thể tích = Tốc độ × thời gian tiêm.",
-        "IDR chuẩn 0,021 gI/kg/s; chọn kVp & IDR theo cân nặng (bảng tham chiếu trong công cụ)."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology & CT Coronary Smart Protocol v3.2 (khoa CĐHA)."
-  },
-  {
-    id: "ct-ref-cta-canh-noi-so",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
-    ten: "CTA động mạch cảnh & nội sọ — kỹ thuật",
-    tuKhoa: ["cta canh", "noi so", "carotid", "cerebral", "lvo", "phinh mach", "aneurysm", "avm"],
-    thongSo: [
-      { ten: "Chiều quét", giaTri: "Từ quai ĐM chủ lên đỉnh sọ" },
-      { ten: "Lát cắt", giaTri: "0,5–1 mm (mỏng nhất có thể)" },
-      { ten: "Lượng thuốc", giaTri: "50–60 ml, tốc độ 4–5 ml/s" },
-      { ten: "Timing", giaTri: "Bolus Tracking ROI quai ĐM chủ / thân chung ĐM cảnh, trigger ~100 HU" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Nhồi máu não cấp (tìm tắc mạch lớn LVO), phình ĐM não, xơ vữa hẹp ĐM cảnh, dị dạng AVM."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Yêu cầu bệnh nhân TUYỆT ĐỐI không nuốt nước bọt khi tiêm — nuốt gây xảo ảnh cắt đứt ĐM cảnh ngang sụn giáp.",
-        "Dựng VRT 3D từ tim lên não; MIP mỏng để đo độ hẹp / cổ túi phình.",
-        "Lựa chọn khác: CT tưới máu não (Core/Penumbra); 4D CTA đánh giá chiều dòng chảy AVM / rò màng cứng (dAVF)."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "ct-ref-cta-dm-chu",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
-    ten: "CTA động mạch chủ toàn bộ — kỹ thuật",
-    tuKhoa: ["cta dm chu", "aorta", "boc tach", "dissection", "phinh", "evar", "tevar", "endoleak"],
-    thongSo: [
-      { ten: "Chiều quét", giaTri: "Đỉnh ngực (ngang nhánh cảnh) → chỗ đôi ĐM chậu (khớp mu)" },
-      { ten: "Lượng thuốc", giaTri: "70–90 ml, tốc độ 4–5 ml/s" },
-      { ten: "Timing", giaTri: "Bolus Tracking ROI tại ĐM chủ lên ngang gốc ĐM phổi" },
-      { ten: "Pha", giaTri: "Không thuốc (tìm máu tụ trong vách IMH) + pha ĐM; thêm pha TM 70–80 s nếu theo dõi Stent-Graft" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Bóc tách ĐM chủ, phình ĐM chủ ngực-bụng, chấn thương ngực kín, theo dõi sau Stent-Graft (EVAR/TEVAR)."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Phân biệt lòng thật (bắt thuốc mạnh) và lòng giả (bắt kém/trễ) trong bóc tách.",
-        "ECG-gated vùng gốc ĐM chủ để triệt xảo ảnh nhịp tim (chẩn đoán bóc tách type A).",
-        "Triple-rule-out (TRO): kết hợp ĐM vành + ĐM chủ + ĐM phổi trong 1 lần quét cho đau ngực cấp.",
-        "Theo dõi Stent-Graft: thêm pha TM muộn tìm rò nội mạch (endoleak) chậm."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "ct-ref-cta-chi-duoi",
-    phanHe: "ct-mri", modality: "CT", nhom: "Mạch máu",
-    ten: "CTA động mạch chi dưới (Run-off) — kỹ thuật",
-    tuKhoa: ["cta chi duoi", "run off", "run-off", "chi duoi", "tac mach", "dau cach hoi"],
-    thongSo: [
-      { ten: "Chiều quét", giaTri: "Từ rốn thận → tận ngón chân (trường Z dài > 1 m)" },
-      { ten: "Pitch", giaTri: "Cài cao để quét kịp trước khi thuốc trôi về tĩnh mạch" },
-      { ten: "Lượng thuốc", giaTri: "100–120 ml, tốc độ 4 ml/s" },
-      { ten: "Timing", giaTri: "Test Bolus (khuyến cáo nhất) đo thời gian tới ĐM khoeo; hoặc Bolus Tracking ROI ĐM chủ bụng ngang rốn thận" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Tắc mạch chi dưới cấp, đau cách hồi do xơ vữa, chấn thương đứt mạch, bản đồ mạch trước mổ vạt da."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Bệnh nhân tiểu đường nặng / tắc mạn: dòng xuống chân rất chậm — quét quá nhanh sẽ vượt mặt thuốc (đen lòng mạch đoạn xa).",
-        "Đa pha (multiphasic) 2–3 lần cách 10–15 s: đánh giá tuần hoàn bàng hệ khi hẹp tắc nặng.",
-        "Dual-Energy loại bỏ xương (bone removal) tốt hơn trừ xương thủ công; dựng MIP/VRT 3D toàn bộ chậu + 2 chân."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
 
   /* ---- Sọ não - Thần kinh ---- */
-  {
-    id: "ct-ref-so-nao-thuong-quy",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "CT sọ não thường quy (không thuốc) — kỹ thuật & cửa sổ",
-    tuKhoa: ["so nao thuong quy", "routine brain", "chan thuong so nao", "cua so xuong", "oml"],
-    thongSo: [
-      { ten: "FOV", giaTri: "220–240 mm" },
-      { ten: "Hướng cắt", giaTri: "Xoắn ốc hoặc Axial tuần tự từ lỗ chẩm lên đỉnh sọ, song song đường OML" },
-      { ten: "Độ dày", giaTri: "Thu nhận 0,625–1 mm; tái tạo 5 mm (giảm nhiễu nhu mô)" },
-      { ten: "Cửa sổ xương", giaTri: "WW 2500 / WL 500, lát 1–2 mm (khảo sát xương đá, thành hốc mắt)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Chấn thương sọ não, tai biến (nhồi máu/xuất huyết), đau đầu đột ngột, theo dõi tụ máu dưới màng cứng, viêm màng não."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Gantry nghiêng song song OML/SML để tránh tia chiếu trực tiếp thủy tinh thể (đục TTT bức xạ).",
-        "Bệnh nhân không nuốt / đảo mắt khi quét.",
-        "Tái tạo MPR Axial/Coronal/Sagittal; VRT 3D xương sọ đánh giá lún/nứt sọ."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "ct-ref-dot-quy-bo-ba",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "Bộ ba CT đột quỵ (NCCT + CTP + CTA) — kỹ thuật",
-    tuKhoa: ["dot quy", "stroke", "ncct", "ctp", "cta", "code stroke", "lvo", "penumbra"],
-    thongSo: [
-      { ten: "NCCT", giaTri: "Không thuốc — loại trừ xuất huyết; tìm dấu nhồi máu sớm (ruy băng thùy đảo, ĐM não giữa tăng tỷ trọng)" },
-      { ten: "CTP", giaTri: "Tiêm 40–50 ml (5 ml/s); quét lặp lại não 60 s; tính lõi nhồi máu & vùng tranh tối tranh sáng" },
-      { ten: "CTA", giaTri: "Tiêm 50–60 ml (5 ml/s); quét từ quai ĐM chủ lên đỉnh sọ tìm tắc mạch lớn (LVO)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Nghi đột quỵ thiếu máu cục bộ cấp trong cửa sổ vàng (< 6 giờ, mở rộng đến 24 giờ)."
-      ]},
-      { tieuDe: "⚠️ Lưu ý khẩn cấp (Code Stroke)", items: [
-        "Thời gian là não — setup máy và bơm tiêm điện nhanh nhất có thể.",
-        "Canh Bolus Tracking tại cung ĐM chủ.",
-        "Dựng MIP mỏng 10–15 mm đa mặt phẳng; phần mềm AI (RAPID, syngo.via) tự tính thể tích Penumbra."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "ct-ref-ctp",
-    phanHe: "ct-mri", modality: "CT", nhom: "Sọ não",
-    ten: "CT tưới máu não (CTP) trong đột quỵ — kỹ thuật",
-    tuKhoa: ["ctp", "tuoi mau nao", "perfusion", "core", "penumbra", "mismatch", "cbv", "cbf", "tmax"],
-    thongSo: [
-      { ten: "Kỹ thuật quét", giaTri: "Dynamic/Cine lặp lại cùng vùng sọ 45–60 s" },
-      { ten: "Độ phủ", giaTri: "Lý tưởng toàn não 16 cm; máy 64 dãy dùng Toggle/Shuttle đạt 8–10 cm" },
-      { ten: "Cài đặt", giaTri: "80 kVp (tăng sáng i-ốt, giảm liều), mAs thấp" },
-      { ten: "Thuốc", giaTri: "40–50 ml nồng độ cao 350–370 mgI/ml, 4–5 ml/s + saline 30–40 ml; delay 4–5 s" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Nhồi máu não cấp, nhất là cửa sổ mở rộng 6–24 giờ hoặc đột quỵ không rõ giờ khởi phát (wake-up)."
-      ]},
-      { tieuDe: "Phân định Core & Penumbra", items: [
-        "Lõi nhồi máu (Core): mô đã chết — CBV giảm nặng (<30% bên đối diện), CBF giảm nặng, Tmax/MTT kéo dài.",
-        "Penumbra: mô còn cứu được — Tmax kéo dài (>6 s), CBF giảm nhẹ, CBV bình thường/tăng.",
-        "Mismatch = thể tích Tmax>6 s trừ Core. Mismatch > 1,8 và Core < 70 ml → có lợi khi can thiệp."
-      ]},
-      { tieuDe: "Timing & lưu ý", items: [
-        "Fixed Delay (thường bắt đầu quét sau tiêm 4–5 s) để lấy baseline trước khi thuốc đến.",
-        "Chọn đúng ĐM đầu vào (AIF – ĐM não giữa/trước) và TM đầu ra (VOF – xoang dọc trên); TDC phải mượt, đỉnh nhọn cao.",
-        "Cố định đầu thật chặt — xảo ảnh lắc đầu là nguyên nhân hàng đầu hỏng biểu đồ."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
 
   /* ---- Ổ bụng - Tiểu khung ---- */
   {
     id: "ct-ref-bung-3-pha",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "CT bụng chậu 3 pha (gan/tụy) — kỹ thuật",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT tụy có tiêm thuốc",
     tuKhoa: ["bung 3 pha", "gan", "tuy", "hcc", "hemangioma", "wash out", "triphasic"],
     thongSo: [
       { ten: "Lượng thuốc", giaTri: "1,5–2 ml/kg, tốc độ 3–4 ml/s" },
@@ -4694,8 +4046,8 @@ window.SOTAY_QUYTRINH = [
   },
   {
     id: "ct-ref-ctu",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "CT hệ tiết niệu đa pha (CTU) — kỹ thuật",
+    phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
+    ten: "Chụp CLVT hệ niệu (CTU)",
     tuKhoa: ["ctu", "urography", "he tiet nieu", "tieu mau", "tcc", "rcc", "split bolus"],
     thongSo: [
       { ten: "Pha không thuốc", giaTri: "Toàn bụng chậu — tìm sỏi cản quang" },
@@ -4715,57 +4067,12 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
   },
-  {
-    id: "ct-ref-ldct-soi-nieu",
-    phanHe: "ct-mri", modality: "CT", nhom: "Ổ bụng - Tiểu khung",
-    ten: "CT bụng chậu liều thấp tìm sỏi niệu — kỹ thuật",
-    tuKhoa: ["lieu thap", "soi nieu", "con dau quan than", "renal colic", "low dose"],
-    thongSo: [
-      { ten: "FOV", giaTri: "Vòm hoành → khớp mu" },
-      { ten: "Thông số", giaTri: "100 kVp, 30–50 mAs (biến điệu liều tự động AEC)" },
-      { ten: "Mức liều", giaTri: "CTDIvol ~2,0–3,0 mGy; liều hiệu dụng ~1,5–2,5 mSv (giảm 70–80% so với KUB CT thường)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Cơn đau quặn thận cấp nghi sỏi tiết niệu; theo dõi sau tán sỏi; người trẻ / thai phụ (khi SA, MRI không giải quyết được)."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "MPR Coronal mỏng 2–3 mm dò đường đi sỏi dọc niệu quản.",
-        "Có thể tăng Noise Index vì sỏi canxi rất sáng, dễ thấy trên nền nhiễu.",
-        "Hạn chế: khó đánh giá tổn thương mô mềm đi kèm (viêm ruột thừa non, u đặc nhỏ) do giảm độ phân giải tương phản."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
 
   /* ---- Lồng ngực ---- */
   {
-    id: "ct-ref-hrct",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
-    ten: "HRCT phổi phân giải cao — kỹ thuật & cửa sổ",
-    tuKhoa: ["hrct", "phoi phan giai cao", "benh phoi ke", "ild", "xo phoi", "ggo", "bay khi"],
-    thongSo: [
-      { ten: "Thuốc", giaTri: "KHÔNG tiêm cản quang" },
-      { ten: "Lát cắt", giaTri: "Siêu mỏng 1–1,5 mm" },
-      { ten: "Kernel", giaTri: "Thuật toán sắc nét cao (Sharp/Edge, vd b80f, Bone/Lung)" },
-      { ten: "Cửa sổ phổi", giaTri: "WW 1500 / WL -600" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Bệnh phổi kẽ (ILD), xơ phổi, giãn phế quản, khí phế thũng, kính mờ (GGO) do Covid-19, lao."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Quét thêm thì thở ra tối đa: phát hiện bẫy khí (air trapping).",
-        "Nằm sấp (prone): phân biệt kính mờ đáy phổi do ứ máu trọng lực hay xơ phổi kẽ thật.",
-        "Mấu chốt: nín thở tuyệt đối — ho/nhúc nhích 1 mm làm nhòe vi cấu trúc, mất giá trị chẩn đoán."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
     id: "ct-ref-ldct-phoi",
-    phanHe: "ct-mri", modality: "CT", nhom: "Lồng ngực",
-    ten: "CT ngực liều thấp tầm soát ung thư phổi (LDCT) — kỹ thuật",
+    phanHe: "ct-mri", modality: "CT", nhom: "Ngực",
+    ten: "Chụp CLVT phổi liều thấp tầm soát (LDCT)",
     tuKhoa: ["ldct", "tam soat ung thu phoi", "lung screening", "not mo phoi", "fleischner"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Nằm ngửa, 2 tay đưa cao, hít sâu nín thở" },
@@ -4794,7 +4101,7 @@ window.SOTAY_QUYTRINH = [
   {
     id: "ct-ref-panscan",
     phanHe: "ct-mri", modality: "CT", nhom: "Toàn thân",
-    ten: "CT đa chấn thương (Pan-Scan) — kỹ thuật",
+    ten: "Chụp CLVT toàn thân có tiêm thuốc (đa chấn thương)",
     tuKhoa: ["pan scan", "pan-scan", "da chan thuong", "polytrauma", "trauma"],
     thongSo: [
       { ten: "Chiến lược", giaTri: "Split-bolus / multi-pass" },
@@ -4814,29 +4121,6 @@ window.SOTAY_QUYTRINH = [
         "Cấp cứu ưu tiên; hạn chế di chuyển bệnh nhân, chụp thẳng trên ván cứng nếu cần.",
         "TUYỆT ĐỐI không tháo nẹp cổ khi chưa loại trừ gãy cột sống cổ.",
         "Phối hợp chặt với ekip hồi sức đang bóp bóng/truyền máu cạnh máy."
-      ]}
-    ],
-    nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "ct-ref-nhi-lieu-thap",
-    phanHe: "ct-mri", modality: "CT", nhom: "Toàn thân",
-    ten: "CT nhi khoa liều thấp — kỹ thuật (Image Gently)",
-    tuKhoa: ["nhi", "tre em", "pediatric", "lieu thap", "image gently", "weight based"],
-    thongSo: [
-      { ten: "Sơ sinh < 5 kg", giaTri: "70–80 kVp, 10–15 mAs" },
-      { ten: "5–15 kg", giaTri: "80 kVp, 15–30 mAs" },
-      { ten: "15–30 kg", giaTri: "80–100 kVp, 30–50 mAs" },
-      { ten: "Pitch", giaTri: "Cao (>1,2) hoặc Flash — quét thần tốc tránh rung lắc" }
-    ],
-    noiDung: [
-      { tieuDe: "Nguyên tắc", items: [
-        "Trẻ em nhạy cảm bức xạ gấp 3–5 lần người lớn — rủi ro tích lũy ung thư rất cao; tuân thủ 'Image Gently'."
-      ]},
-      { tieuDe: "Kỹ thuật & lưu ý", items: [
-        "Cài đặt theo cân nặng; quét cực khu trú, không mở tia thừa ngoài vùng giải phẫu.",
-        "Tái tạo IR mức cao nhất máy hỗ trợ (Level 4–5).",
-        "LUÔN che chắn tuyến giáp, vú, tinh hoàn/buồng trứng khi nằm ngoài vùng quét."
       ]}
     ],
     nguon: "Từ điển CT – Wikiradiology KTV 3 Miền (CC BY-SA)."

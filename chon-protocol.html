@@ -354,7 +354,31 @@
         { id:12, ten:"Chuỗi xung & Thông số", en:"Sequences & Physics", icon:"🎚️", color:"#5a6679" }
       ]
     };
-    var REGIONS = BODY.concat(EXTRAS[MODALITY] || []);
+    // CT: gom theo danh mục Loi_CT (2 nhánh không tiêm / có tiêm × nhóm)
+    var CT_GROUPS = [
+      { id:1, ten:"Sọ + mặt",            en:"Skull & Facial",  icon:"💀", color:"#c0392b" },
+      { id:2, ten:"Cột sống",            en:"Spine",           icon:"🦴", color:"#2ba9e0" },
+      { id:3, ten:"Ngực",                en:"Chest",           icon:"🫁", color:"#15509c" },
+      { id:4, ten:"Bụng - chậu",         en:"Abdomen-Pelvis",  icon:"🩻", color:"#1b9e77" },
+      { id:5, ten:"Cơ xương khớp & chi", en:"MSK & Limbs",     icon:"🦿", color:"#8a5a2b" },
+      { id:6, ten:"Toàn thân",           en:"Whole-body",      icon:"🧍", color:"#596273" },
+      { id:7, ten:"Thông số & An toàn",  en:"Params & Safety", icon:"⚙️", color:"#5a6679" }
+    ];
+    var REGIONS = (MODALITY === "CT") ? CT_GROUPS : BODY.concat(EXTRAS[MODALITY] || []);
+    // CT: dịch vùng cơ thể trên hình người → nhóm danh mục CT
+    function ctGroupFromBodyZone(bodyRegion, sub) {
+      if (sub && /^cs-/.test(sub)) return 2;      // đốt sống → Cột sống
+      switch (bodyRegion) {
+        case 1: return 1;  // đầu → Sọ + mặt
+        case 2: return 2;  // cổ → Cột sống
+        case 3: return 3;  // ngực → Ngực
+        case 4: return 4;  // bụng → Bụng - chậu
+        case 5: return 4;  // chậu → Bụng - chậu
+        case 6: return 5;  // chi trên → Cơ xương khớp & chi
+        case 7: return 5;  // chi dưới → Cơ xương khớp & chi
+      }
+      return bodyRegion;
+    }
 
     function regionOf(it) {
       if (MODALITY === "CT") return regionOfCT(it);
@@ -376,23 +400,15 @@
       return 8;
     }
     function regionOfCT(it) {
-      var n = it.nhom || "", t = it.ten || "";
-      if (n === "Sọ não" || n === "Đầu - Mặt - Cổ") return 1;
-      if (n === "Lồng ngực") return 3;
-      if (n === "Cột sống") { if (rx(/cổ/, t)) return 2; if (rx(/ngực/, t)) return 3; return 5; }
-      if (n === "Ổ bụng - Tiểu khung") { return (rx(/tiểu khung/, t) && !rx(/bụng/, t)) ? 5 : 4; }
-      if (n === "Cơ xương khớp") return 8;
-      if (n === "Mạch máu") {
-        if (rx(/chi trên/i, t)) return 6;
-        if (rx(/chi dưới|run-off/i, t)) return 7;
-        if (rx(/phổi|vành|CCTA|CTPA/i, t)) return 3;
-        if (rx(/cảnh|nội sọ/i, t)) return 1;
-        if (rx(/chủ|chậu/i, t)) return 4;
-        return 9;
-      }
-      if (n === "Toàn thân") return 9;
-      if (n === "Thông số & An toàn") return 10;
-      return 9;
+      var n = it.nhom || "";
+      if (n === "Sọ + mặt") return 1;
+      if (n === "Cột sống") return 2;
+      if (n === "Ngực") return 3;
+      if (n === "Bụng - chậu") return 4;
+      if (n === "Cơ xương khớp & chi") return 5;
+      if (n === "Toàn thân") return 6;
+      if (n === "Thông số & An toàn") return 7;
+      return 7;
     }
     function regionOfMRI(it) {
       var n = it.nhom || "", s = n + " " + (it.ten || "");
@@ -428,8 +444,8 @@
       var mb = document.getElementById("modebadge");
       if (!mb) return;
       if (MODALITY === "CT" && (CONTRAST === "0" || CONTRAST === "1")) {
-        mb.className = "modebadge " + (CONTRAST === "0" ? "nu" : "nam");
-        mb.innerHTML = (CONTRAST === "0") ? '<b>♀ NỮ</b> · CT không tiêm thuốc' : '<b>♂ NAM</b> · CT có tiêm thuốc';
+        mb.className = "modebadge";
+        mb.innerHTML = (CONTRAST === "0") ? '<b>CT không tiêm thuốc</b>' : '<b>CT có tiêm thuốc</b>';
       } else { mb.style.display = "none"; }
     })();
 
@@ -468,13 +484,17 @@
     // bấm lên vùng cơ thể trên hình người
     Array.prototype.forEach.call(zones, function (z) {
       z.addEventListener("click", function () {
-        setRegion(parseInt(z.getAttribute("data-region"), 10), z.getAttribute("data-sub"));
+        var reg = parseInt(z.getAttribute("data-region"), 10), sub = z.getAttribute("data-sub");
+        if (MODALITY === "CT") setRegion(ctGroupFromBodyZone(reg, sub));
+        else setRegion(reg, sub);
       });
     });
     // bấm lên đốt cột sống (mặt sau)
     Array.prototype.forEach.call(document.querySelectorAll(".spineseg, .spineseg2"), function (s) {
       s.addEventListener("click", function () {
-        setRegion(parseInt(s.getAttribute("data-region"), 10), s.getAttribute("data-sub"));
+        var reg = parseInt(s.getAttribute("data-region"), 10), sub = s.getAttribute("data-sub");
+        if (MODALITY === "CT") setRegion(2);
+        else setRegion(reg, sub);
       });
     });
     // nút Mặt trước / Mặt sau
@@ -500,10 +520,14 @@
       Array.prototype.forEach.call(regionsBox.children, function (c) {
         c.classList.toggle("active", c.getAttribute("data-rid") === String(id));
       });
-      Array.prototype.forEach.call(zones, function (z) {
-        z.classList.toggle("active", z.getAttribute("data-region") === String(id) &&
-          (!curSub || z.getAttribute("data-sub") === curSub));
-      });
+      if (MODALITY !== "CT") {
+        Array.prototype.forEach.call(zones, function (z) {
+          z.classList.toggle("active", z.getAttribute("data-region") === String(id) &&
+            (!curSub || z.getAttribute("data-sub") === curSub));
+        });
+      } else {
+        Array.prototype.forEach.call(zones, function (z) { z.classList.remove("active"); });
+      }
       techBox.innerHTML = "";
       var items = r.items;
       if (curSub) items = items.filter(function (it) { return SUBF[curSub].re.test(it.ten || ""); });
