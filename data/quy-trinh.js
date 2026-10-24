@@ -2323,7 +2323,7 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Bảo vệ bức xạ", items: [
         "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
       ]},
-      { tieuDe: "Tư thế bệnh nhân", items: [
+      { tieuDe: "Tư thế bệnh nhân và vùng chụp", items: [
         "Đặt bệnh nhân ở tư thế đứng hoặc nằm ngửa cho hướng chiếu ngoài trong hoặc trong ngoài.",
         "Ngoài trong: Đặt bệnh nhân đứng với lưng tựa vào tấm nhận ảnh và khuỷu tay hơi gập, xoay cơ thể về phía bên tổn thương khi cần thiết để đưa xương cánh tay và vai tiếp xúc với cassette. Xoay cánh tay vào trong theo yêu cầu để đạt được tư thế nghiêng; hai lồi cầu vuông góc với tấm nhận ảnh.",
         "Trong ngoài: Cho bệnh nhân quay mặt về phía tấm nhận ảnh và xoay chếch cơ thể nếu cần (20° đến 30° so với tư thế PA) để xương cánh tay tiếp xúc sát với tấm nhận ảnh; gập khuỷu tay 90° như hình minh họa.",
