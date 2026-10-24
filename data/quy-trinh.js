@@ -1535,16 +1535,11 @@ window.SOTAY_QUYTRINH = [
 
   /* ---------------------------------------------------------------- X-QUANG */
   {
-    id: "xq-so-thang",
+    id: "xq-so-moc-giai-phau",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ thẳng",
-    tuKhoa: ["so thang", "towne", "ap axial", "chau dau", "lo cham", "moc giai phau so"],
-    thongSo: [
-      { ten: "Tư thế", giaTri: "Trước sau (Towne — AP chếch chân)" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
+    ten: "Mốc giải phẫu & đường định vị hộp sọ",
+    tuKhoa: ["moc giai phau so", "duong dinh vi", "oml", "ioml", "tea", "glabella", "nasion", "acanthion", "positioning lines"],
+    thongSo: [],
     noiDung: [
       { tieuDe: "Mốc giải phẫu hộp sọ", items: [
         "TEA (Top of ear attachment): điểm bám trên của vành tai (nơi bờ trên vành tai tiếp giáp đầu).",
@@ -1561,7 +1556,28 @@ window.SOTAY_QUYTRINH = [
         "IOML (Infraorbitomeatal line – đường nền Reid): đường bờ dưới ổ mắt – tai.",
         "AML (Acanthiomeatal line): đường gai mũi – tai.",
         "LML (Lips-meatal line): đường môi – tai; MML (Mentomeatal line): đường cằm – tai."
-      ]},
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-so-moc1.png", caption: "Mốc giải phẫu — nhìn nghiêng" },
+      { src: "images/xq/xq-so-moc2.png", caption: "Mốc giải phẫu — nhìn thẳng" },
+      { src: "images/xq/xq-so-moc3.png", caption: "Đường định vị hộp sọ" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
+  },
+
+  {
+    id: "xq-so-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
+    ten: "Chụp X-quang sọ thẳng",
+    tuKhoa: ["so thang", "towne", "ap axial", "chau dau", "lo cham"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (Towne — AP chếch chân)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
       { tieuDe: "Chỉ định lâm sàng", items: [
         "Gãy xương sọ (di lệch vào trong và ra ngoài) và bệnh Paget."
       ]},
@@ -1598,9 +1614,6 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-so-moc1.png", caption: "Mốc giải phẫu — nhìn nghiêng" },
-      { src: "images/xq/xq-so-moc2.png", caption: "Mốc giải phẫu — nhìn thẳng" },
-      { src: "images/xq/xq-so-moc3.png", caption: "Đường định vị hộp sọ" },
       { src: "images/xq/xq-so-thang-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-so-thang-phim.png", caption: "Phim đạt yêu cầu" },
       { src: "images/xq/xq-so-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
