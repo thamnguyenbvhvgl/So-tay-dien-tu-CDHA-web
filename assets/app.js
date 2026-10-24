@@ -254,7 +254,7 @@
       });
       h += '<div class="sec"><h3>' + imgTitle + '</h3>';
       if (gPH.length && gCT.length) {
-        h += '<h4 class="img-sub">Chiều thế (người thật)</h4><div class="img-grid img-row">';
+        h += '<h4 class="img-sub">Chiều thế</h4><div class="img-grid img-row">';
         gCT.forEach(function (im) { h += figHtml(im); });
         h += '</div><h4 class="img-sub">Phim đạt yêu cầu</h4><div class="img-grid img-row">';
         gPH.forEach(function (im) { h += figHtml(im); });
