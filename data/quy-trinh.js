@@ -1682,1081 +1682,1636 @@ window.SOTAY_QUYTRINH = [
     id: "xq-bantay-thang",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang bàn tay thẳng (sau trước)",
-    tuKhoa: ["ban tay", "hand pa", "xuong ban tay", "chi tren"],
+    tuKhoa: ["ban tay", "hand pa", "sau truoc", "xuong ban tay", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs (bề dày 3–5 cm)" },
+      { ten: "Tư thế", giaTri: "Trước sau" },
+      { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ 3" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương bàn tay, xương ngón tay, xương cổ tay và mô mềm xung quanh."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương, trật khớp hoặc dị vật ở các xương ngón tay, xương bàn tay và tất cả các khớp của bàn tay.",
+        "Các quá trình bệnh lý như loãng xương và thoái hóa khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân nằm trên phim với bàn tay úp xuống, các ngón tay duỗi thẳng, xòe ra và tiếp xúc sát mặt phim.",
-        "Điều chỉnh bàn tay để khớp bàn ngón thứ 3 nằm ngay trung tâm phim.",
-        "Giữ bất động cẳng tay bằng cách dùng một túi cát đặt ngang qua cổ tay bệnh nhân."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, bàn tay và cẳng tay duỗi thẳng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt sấp bàn tay sao cho lòng bàn tay áp sát vào tấm nhận ảnh; các ngón tay hơi xòe ra.",
+        "Chỉnh trục dọc của bàn tay và cẳng tay thẳng trục với trục dọc của tấm nhận ảnh.",
+        "Chỉnh tâm bàn tay và cổ tay vào giữa tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay khớp bàn ngón thứ 3, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào khớp bàn ngón thứ ba.",
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ xương bàn tay, bao gồm cả các ngón tay và khớp cổ tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài của bàn tay và cổ tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu PA của toàn bộ bàn tay, cổ tay và khoảng 2.5 cm đầu dưới cẳng tay được bộc lộ rõ.",
+        "Hướng chiếu PA của bàn tay thể hiện hình ảnh chếch của ngón cái."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay và cổ tay thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Bàn tay không bị xoay, thể hiện qua sự xuất hiện đối xứng ở cả hai bên hoặc độ lõm của thân các xương bàn tay và xương đốt ngón của các ngón từ 2 đến 5, cùng với lượng mô mềm bằng nhau ở mỗi bên của các ngón từ 2 đến 5.",
+        "Các ngón tay nên được tách ra một chút sao cho phần mô mềm không bị chồng lên nhau.",
+        "Các khớp bàn ngón và khớp gian ngón phải mở rộng, cho thấy vị trí tia trung tâm chính xác và bàn tay đã được đặt sấp hoàn toàn.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở khớp bàn ngón thứ ba."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-bantay-thang-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-bantay-thang-phim.jpg", caption: "Phim X-quang bàn tay thẳng — mẫu đạt" }
+      { src: "images/xq/xq-bantay-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-bantay-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-bantay-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-bantay-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang bàn tay nghiêng",
-    tuKhoa: ["ban tay nghieng", "hand lateral", "di vat ban tay"],
+    tuKhoa: ["ban tay nghieng", "hand lateral", "di vat ban tay", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–10 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương bàn tay, xương ngón tay, xương ngón cái ở tư thế sau trước thẳng và đặc biệt hữu ích để xác định dị vật ở bàn tay."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Hướng chiếu nghiêng ở tư thế duỗi hoặc gập là một phương pháp thay thế cho hướng chiếu nghiêng xòe quạt để xác định vị trí dị vật ở bàn tay và các ngón tay; nó cũng cho thấy các gãy xương bàn tay bị di lệch ra trước hoặc ra sau. Hướng chiếu nghiêng ở tư thế gập tự nhiên có thể ít gây đau đớn hơn cho bệnh nhân."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt nghiêng bàn tay bệnh nhân trên phim với cạnh xương trụ tiếp xúc sát phim, các ngón tay duỗi thẳng và lòng bàn tay thẳng góc với mặt phim, ngón cái thẳng góc với lòng bàn tay.",
-        "Điều chỉnh bàn tay thế nào để khớp bàn ngón nằm ngay trung tâm phim và đường dài của cassette song song với trục dài của bàn tay và cẳng tay.",
-        "Kê ngón cái trên một vật không cản tia để giữ cho nó khỏi rung động.",
-        "Đặt túi cát ngang qua cẳng tay để giữ yên tư thế."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, bàn tay và cẳng tay duỗi thẳng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay bàn tay và cổ tay, với phía ngón cái hướng lên trên, vào tư thế nghiêng hoàn toàn, với các khớp bàn ngón từ ngón thứ 2 đến thứ 5 nằm ở giữa tấm nhận ảnh và thẳng trục với tia trung tâm.",
+        "Nghiêng duỗi: Duỗi thẳng các ngón tay và ngón cái, và tựa vào một khối hỗ trợ thấu quang. Đảm bảo rằng tất cả các ngón tay và xương bàn tay được chồng khít hoàn toàn để có tư thế nghiêng hoàn toàn.",
+        "Nghiêng gập: Gập các ngón tay thành một tư thế gập tự nhiên, với ngón cái chạm nhẹ vào ngón trỏ; duy trì tư thế nghiêng hoàn toàn."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay khớp bàn ngón, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào các khớp bàn ngón từ ngón thứ 2 đến thứ 5."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình rõ nét.",
-        "Xác định rõ dị vật cản quang ở bàn tay (nếu có).",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài của bàn tay và cổ tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ bàn tay, cổ tay và khoảng 2.5 cm đầu dưới cẳng tay được bộc lộ. Ngón cái sẽ xuất hiện ở tư thế hơi chếch và không bị chồng ảnh, với các khe khớp mở rộng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay và cổ tay thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Bàn tay và cổ tay phải ở tư thế nghiêng hoàn toàn, thể hiện qua các điểm sau: đầu dưới xương quay và xương trụ chồng lên nhau; các xương bàn tay và các xương đốt ngón chồng lên nhau.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở các khớp bàn ngón từ ngón thứ 2 đến thứ 5."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-bantay-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-bantay-nghieng-phim.jpg", caption: "Phim bàn tay nghiêng — mẫu" }
+      { src: "images/xq/xq-bantay-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-bantay-nghieng-ct2.png", caption: "Chiều thế (2)" },
+      { src: "images/xq/xq-bantay-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-bantay-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-bantay-chech",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang bàn tay chếch",
-    tuKhoa: ["ban tay chech", "hand oblique"],
+    tuKhoa: ["ban tay chech", "hand oblique", "xuong ban tay", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
+      { ten: "Tư thế", giaTri: "Chếch" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ 3" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương bàn tay, xương ngón tay và mô mềm xung quanh."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp ở các xương ngón tay, xương bàn tay và tất cả các khớp của bàn tay.",
+        "Các quá trình bệnh lý, chẳng hạn như loãng xương và thoái hóa khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân chếch trên phim với các ngón tay xòe ra và điều chỉnh thế nào để những khớp bàn ngón hợp với mặt phim một góc 45°.",
-        "Chúng ta có thể dùng bông gòn chêm vào giữa các ngón tay để chúng xòe ra theo ý muốn.",
-        "Đặt khuỷu tay bệnh nhân trên bàn chụp hình để giúp cho việc đặt bàn tay được dễ dàng và tạo sự thoải mái cho bệnh nhân."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, bàn tay và cẳng tay duỗi thẳng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt sấp bàn tay lên tấm nhận ảnh; chỉnh tâm và trục dọc của bàn tay thẳng trục với trục dọc của tấm nhận ảnh.",
+        "Xoay toàn bộ bàn tay và cổ tay ra ngoài một góc 45° và kê bằng miếng xốp hình chêm thấu quang hoặc khối bậc thang, như hình minh họa, sao cho tất cả các ngón tay được tách rời và song song với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay khớp bàn ngón thứ 3, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào khớp bàn ngón thứ ba."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ xương bàn tay, bao gồm cả các ngón tay và khớp cổ tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài của bàn tay và cổ tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu chếch của toàn bộ bàn tay, cổ tay và khoảng 2.4 cm đầu dưới cẳng tay được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay và cổ tay thẳng hàng với tấm nhận ảnh.",
+        "Độ chếch 45° được thể hiện qua các điểm sau: thân các xương bàn tay không được chồng lên nhau; có một chút chồng lấp ở chỏm xa của các xương bàn tay thứ ba, thứ tư và thứ năm nhưng chỏm xa của xương bàn tay thứ hai và thứ ba không được chồng lên nhau; sự chồng lấp quá mức của các xương bàn tay cho thấy bàn tay bị xoay quá mức, và sự tách rời quá nhiều cho thấy bàn tay xoay chưa đủ.",
+        "Các khớp bàn ngón (MCP) và khớp gian ngón (IP) mở rộng mà không có sự biến dạng thu ngắn của các đốt ngón giữa hoặc đốt ngón xa, cho thấy các ngón tay đặt song song với tấm nhận ảnh."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-bantay-chech-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-bantay-chech-phim.jpg", caption: "Phim bàn tay chếch — mẫu" }
+      { src: "images/xq/xq-bantay-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-bantay-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-bantay-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
-  {
-    id: "xq-bantay-ngoncai",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang ngón cái",
-    tuKhoa: ["ngon cai", "thumb", "ngon tay cai"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs (bề dày 3–5 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ I" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương ngón cái."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân trên phim với cẳng tay xoay vào trong thế nào để mặt sau ngón cái và mé ngoài ngón trỏ tiếp xúc sát phim và lòng bàn tay thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay khớp bàn ngón thứ I, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Khớp cổ bàn tay và khớp bàn ngón không chồng nhau trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-bantay-ngoncai-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-bantay-ngoncai-phim.jpg", caption: "Phim ngón cái — mẫu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
   {
     id: "xq-cotay-thang",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang cổ tay thẳng (sau trước)",
-    tuKhoa: ["co tay", "wrist pa", "xuong co tay"],
+    ten: "Chụp X-quang cổ tay thẳng (sau – trước)",
+    tuKhoa: ["co tay", "wrist pa", "co tay thang", "sau truoc", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm (tức ngay xương thuyền)" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cổ tay, đầu dưới xương trụ và xương quay, xương bàn tay và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy đầu dưới xương quay hoặc xương trụ, gãy đơn thuần mỏm trâm quay hoặc mỏm trâm trụ, và gãy các xương cổ tay riêng lẻ.",
+        "Các quá trình bệnh lý, chẳng hạn như viêm tủy xương và viêm khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân nằm trên phim với lòng bàn tay úp xuống.",
-        "Điều chỉnh bàn tay bệnh nhân thế nào để trung điểm của đường thẳng nối liền hai mỏm trâm xương trụ và xương quay nằm ngay trung tâm phim.",
-        "Bảo bệnh nhân nắm bàn tay lại, đặt khuỷu tay bệnh nhân trên mặt bàn và dùng túi cát đặt lên cẳng tay để giữ yên chiều thế."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp với bàn tay và cẳng tay duỗi thẳng.",
+        "Hạ thấp vai sao cho vai, khuỷu tay và cổ tay nằm trên cùng một mặt phẳng ngang."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc của bàn tay và cổ tay thẳng hàng với tấm nhận ảnh, vùng cổ tay đặt ở trung tâm tia trung tâm.",
+        "Đặt sấp bàn tay, hơi khum bàn tay lại để cổ tay và vùng xương cổ tay tiếp xúc sát với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm (tức ngay xương thuyền), tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào vùng giữa các xương cổ tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ cổ tay, bao gồm các xương bàn, xương cổ tay và đầu dưới hai xương cẳng tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng cổ tay; bao gồm đầu dưới xương quay và xương trụ, và phần giữa các xương bàn tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Quan sát thấy phần giữa và phần gần các xương bàn tay; các xương cổ tay; đầu dưới xương quay, xương trụ và các khớp liên quan; cùng với các mô mềm thích hợp của khớp cổ tay, chẳng hạn như các đệm mỡ và dải mỡ.",
+        "Không phải tất cả các khe khớp giữa các xương cổ tay đều mở rộng do hình dạng không đều dẫn đến sự chồng lấp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay, cổ tay và cẳng tay thẳng hàng với tấm nhận ảnh.",
+        "Tư thế PA hoàn toàn được thể hiện qua các điểm sau: hình dạng độ lõm bằng nhau ở mỗi bên thân phần gần các xương bàn tay; khoảng cách giữa phần gần các xương bàn tay gần như bằng nhau; có sự tách rời của đầu dưới xương quay và xương trụ ngoại trừ một sự chồng ảnh tối thiểu có thể xảy ra ở khớp quay trụ dưới.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở vùng giữa các xương cổ tay."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-thang-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotay-thang-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-cotay-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-thang-ct2.png", caption: "Chiều thế (2)" },
+      { src: "images/xq/xq-cotay-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotay-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-cotay-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang cổ tay nghiêng",
-    tuKhoa: ["co tay nghieng", "wrist lateral"],
+    tuKhoa: ["co tay nghieng", "wrist lateral", "colles", "smith", "barton"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 4–8 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cổ tay, đầu dưới xương trụ, xương quay và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy hoặc trật khớp đầu dưới xương quay hoặc xương trụ, cụ thể là các kiểu gãy trật ra trước - sau như gãy Barton, gãy Colles hoặc gãy Smith.",
+        "Thoái hóa khớp cũng có thể được phát hiện, chủ yếu ở xương thang và khớp cổ tay - bàn tay thứ nhất."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân trên phim thật đúng ở tư thế nghiêng với các ngón tay duỗi thẳng và mấu trâm xương trụ nằm ngay trung tâm phim.",
-        "Xoay cẳng tay ngả về phía sau một chút (khoảng 5°) để hai mấu trâm nằm chồng lên nhau.",
-        "Nên đặt khuỷu tay bệnh nhân trên bàn để tạo sự thoải mái."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, cánh tay và cẳng tay đặt trên bàn, khuỷu tay gập khoảng 90°. Đặt cổ tay và bàn tay lên tấm nhận ảnh ở tư thế nghiêng với ngón cái hướng lên trên. Vai, khuỷu tay và cổ tay phải nằm trên cùng một mặt phẳng ngang."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc và tâm của bàn tay, cổ tay thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Điều chỉnh bàn tay và cổ tay vào tư thế nghiêng hoàn toàn, với các ngón tay gập thoải mái; nếu cần hỗ trợ để chống cử động, hãy sử dụng một khối hỗ trợ thấu quang và bao cát, đặt khối này tựa vào bàn tay và các ngón tay đang duỗi như hình minh họa."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào vùng giữa các xương cổ tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ cổ tay, bao gồm các xương bàn, xương cổ tay và đầu dưới hai xương cẳng tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng cổ tay; bao gồm đầu dưới xương quay và xương trụ, và phần giữa các xương bàn tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương quay và xương trụ, các xương cổ tay, và ít nhất đến phần giữa các xương bàn tay được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay, cổ tay và cẳng tay phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Tư thế nghiêng hoàn toàn được thể hiện qua các điểm sau: chỏm xương trụ phải chồng lấp lên đầu dưới xương quay; phần gần của các xương bàn tay thứ hai đến thứ năm phải thẳng hàng và chồng lên nhau.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở vùng giữa các xương cổ tay."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotay-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-cotay-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotay-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-cotay-chech",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang cổ tay chếch",
-    tuKhoa: ["co tay chech", "wrist oblique", "xuong thang"],
+    tuKhoa: ["co tay chech", "wrist oblique", "xuong thang", "xuong thuyen"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
+      { ten: "Tư thế", giaTri: "Chếch" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay xương thuyền" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cổ tay, đầu dưới xương trụ, xương quay và mô mềm. Tư thế này có giá trị đặc biệt trong việc quan sát khớp xương giữa xương thang và xương bàn tay thứ nhất."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy đầu dưới xương quay hoặc xương trụ, gãy đơn thuần mỏm trâm quay hoặc mỏm trâm trụ, và gãy các xương cổ tay riêng lẻ.",
+        "Các quá trình bệnh lý, chẳng hạn như viêm tủy xương và viêm khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân nằm trên phim với cổ tay ngả về phía trước hợp với mặt phim một góc 45° và xương thuyền nằm ngay trung tâm phim.",
-        "Kê bàn tay bệnh nhân trên một vật không cản tia để giữ yên tư thế."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp với bàn tay và cẳng tay duỗi thẳng.",
+        "Hạ thấp vai sao cho vai, khuỷu tay và cổ tay nằm trên cùng một mặt phẳng ngang."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc và tâm của bàn tay, cổ tay thẳng hàng với tấm nhận ảnh.",
+        "Từ tư thế đặt sấp bàn tay, xoay cổ tay và bàn tay ra ngoài một góc 45°.",
+        "Để tạo sự ổn định, đặt một miếng xốp hỗ trợ góc 45° dưới phía ngón cái của bàn tay để nâng đỡ bàn tay và cổ tay ở tư thế chếch 45° (Hình 4-91) hoặc hơi gập các ngón tay để làm khum bàn tay sao cho các đầu ngón tay tựa nhẹ lên tấm nhận ảnh (Hình 4-90)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay xương thuyền, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào vùng giữa các xương cổ tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ bàn tay bao gồm các xương bàn tay, xương cổ tay và đầu dưới hai xương cẳng tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng cổ tay; bao gồm đầu dưới xương quay và xương trụ, và phần giữa các xương bàn tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Quan sát thấy đầu dưới xương quay, xương trụ, các xương cổ tay và ít nhất đến phần giữa các xương bàn tay.",
+        "Xương thang và xương thuyền phải được bộc lộ rõ, chỉ có một chút chồng lấp của các xương cổ tay khác ở mặt trong của chúng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn tay, cổ tay và cẳng tay thẳng hàng với tấm nhận ảnh.",
+        "Tư thế chếch 45° hoàn toàn của cổ tay được thể hiện qua các điểm sau: chỏm xương trụ bị chồng lấp một phần bởi đầu dưới xương quay; phần gần của các xương bàn tay thứ ba đến thứ năm (nền các xương bàn tay) phần lớn chồng lên nhau.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở vùng giữa các xương cổ tay."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-chech-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cotay-chech-phim.jpg", caption: "Phim cổ tay chếch — mẫu" }
+      { src: "images/xq/xq-cotay-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotay-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-cotay-xuong-thuyen",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang cổ tay xem xương thuyền",
-    tuKhoa: ["xuong thuyen", "scaphoid", "co tay xuong thuyen"],
+    ten: "Chụp X-quang cổ tay tư thế sau trước xem xương thuyền",
+    tuKhoa: ["xuong thuyen", "scaphoid", "co tay xuong thuyen", "ulnar deviation", "gay xuong thuyen"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
+      { ten: "Tư thế", giaTri: "Xem xương thuyền" },
+      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm xương quay và xương trụ với đầu đèn được bẻ về phía cánh tay 45° và về phía xương trụ 45°" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương thuyền rất rõ ràng."
+      { tieuDe: "Cảnh báo", items: [
+        "Nếu bệnh nhân có khả năng bị chấn thương cổ tay, không được cố gắng thực hiện tư thế này trước khi hoàn thành một loạt các hình ảnh chụp cổ tay thường quy và được đánh giá để loại trừ khả năng gãy đầu dưới cẳng tay hoặc gãy cổ tay, hoặc cả hai."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn tay bệnh nhân trên phim với lòng bàn tay tiếp xúc sát mặt phim, các ngón tay duỗi thẳng và xương thuyền nằm trên trung tâm phim 5cm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khả năng gãy xương thuyền. Các trường hợp gãy xương không di lệch có thể yêu cầu chụp thêm các hướng chiếu bổ sung hoặc chụp cắt lớp vi tính cổ tay."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, đặt cổ tay và bàn tay lên tấm nhận ảnh, lòng bàn tay úp xuống, vai, khuỷu tay và cổ tay nằm trên cùng một mặt phẳng ngang."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt cổ tay như khi chụp hướng chiếu PA—lòng bàn tay úp xuống và bàn tay, cổ tay thẳng hàng với tâm của trục dọc tấm nhận ảnh, xương thuyền nằm ở trung tâm tia trung tâm.",
+        "Giữ nguyên cẳng tay, nhẹ nhàng nghiêng bàn tay ra ngoài (di chuyển về phía xương trụ) ở mức độ tối đa mà bệnh nhân có thể chịu đựng được mà không nhấc hoặc xoay đầu dưới cẳng tay."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm xương quay và xương trụ với đầu đèn được bẻ về phía cánh tay 45° và về phía xương trụ 45°."
+        "Góc tia trung tâm hướng về phía gần từ 10° đến 15°, dọc theo trục dọc của cẳng tay và hướng về phía khuỷu tay. (Góc tia trung tâm phải vuông góc với trục dọc của xương thuyền).",
+        "Hướng tia trung tâm vào xương thuyền. (Xác định vị trí xương thuyền tại điểm cách mỏm trâm quay 2 cm về phía xa và phía trong)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng các xương cổ tay."
+      ]},
+      { tieuDe: "Lưu ý", items: [
+        "Các trường hợp gãy xương thuyền khó phát hiện có thể yêu cầu chụp nhiều hướng chiếu với các góc tia trung tâm khác nhau. Gồm bốn hướng chiếu với tia trung tâm chếch về phía gần ở các góc 0°, 10°, 20° và 30°."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương quay và xương trụ, các xương cổ tay, và phần gần các xương bàn tay được bộc lộ rõ.",
+        "Xương thuyền phải được bộc lộ rõ ràng, không bị biến dạng thu ngắn, và các khe khớp cổ tay lân cận phải mở rộng (chứng minh góc tia trung tâm chính xác)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cổ tay và cẳng tay phải thẳng hàng với bờ bên của tấm nhận ảnh.",
+        "Độ lệch trụ phải được quan sát rõ qua góc tạo bởi trục dọc các xương bàn tay so với trục của xương quay và xương trụ.",
+        "Cổ tay không bị xoay thể hiện qua sự bộc lộ của đầu dưới xương quay và xương trụ, với khớp quay trụ dưới chỉ bị chồng lấp tối thiểu.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở xương thuyền."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cotay-xuongthuyen-ct.jpg", caption: "Tư thế (nghiêng trụ) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cotay-xuongthuyen-phim.jpg", caption: "Phim xương thuyền — mẫu" }
+      { src: "images/xq/xq-cotay-xuong-thuyen-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotay-xuong-thuyen-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotay-xuong-thuyen-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
   {
     id: "xq-cangtay-thang",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang cẳng tay thẳng (trước sau)",
-    tuKhoa: ["cang tay", "forearm ap", "xuong tru", "xuong quay"],
+    ten: "Chụp X-quang cẳng tay tư thế trước sau",
+    tuKhoa: ["cang tay", "forearm ap", "xuong quay", "xuong tru", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng tay" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương trụ, xương quay và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp xương quay hoặc xương trụ.",
+        "Các quá trình bệnh lý chẳng hạn như viêm tủy xương hoặc viêm khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt cẳng tay bệnh nhân nằm trên phim với cánh tay duỗi thẳng, lòng bàn tay lật ngửa và mặt sau cẳng tay tiếp xúc sát phim.",
-        "Điều chỉnh cẳng tay sao cho toàn bộ chiều dài của nó nằm trọn trên phim.",
-        "Có thể dùng túi cát đặt lên bàn tay và cánh tay để giữ bất động cẳng tay."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, bàn tay và cánh tay duỗi thẳng hoàn toàn và lòng bàn tay ngửa."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Hạ thấp vai để đặt toàn bộ chi trên trên cùng một mặt phẳng ngang.",
+        "Chỉnh và định tâm cẳng tay theo trục dọc của tấm nhận ảnh, đảm bảo lấy được cả khớp cổ tay và khớp khuỷu.",
+        "Hướng dẫn bệnh nhân nghiêng người sang bên nếu cần để đặt toàn bộ cổ tay, cẳng tay và khuỷu tay ở tư thế thẳng (trước sau) nhất có thể (Lồi cầu trong và lồi cầu ngoài phải cách đều tấm nhận ảnh)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa cẳng tay, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa cẳng tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy toàn bộ xương trụ (1) và xương quay (2) chúng không bị chồng nhau, và thấy ít nhất một khớp khuỷu hoặc khớp cổ tay.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú các bờ bên sát với vùng cẳng tay thực tế, khu trú tối thiểu ở cả hai đầu để tránh cắt phạm cấu trúc giải phẫu ở cả hai khớp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bộc lộ hướng chiếu AP của toàn bộ xương quay và xương trụ, cùng với tối thiểu hàng gần của các xương cổ tay và đầu dưới xương cánh tay, và các mô mềm liên quan, chẳng hạn như các đệm mỡ và dải mỡ của khớp cổ tay và khớp khuỷu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cẳng tay phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Không bị xoay, thể hiện qua các lồi cầu xương cánh tay được bộc lộ ở góc nhìn nghiêng, với chỏm, cổ và lồi củ xương quay bị xương trụ chồng lấp một chút.",
+        "Các khe khớp cổ tay và khuỷu tay chỉ mở một phần do sự phân kỳ của chùm tia.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở khoảng giữa của xương quay và xương trụ."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cangtay-thang-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cangtay-thang-phim.jpg", caption: "Phim cẳng tay trước sau — mẫu" }
+      { src: "images/xq/xq-cangtay-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cangtay-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-cangtay-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang cẳng tay nghiêng",
-    tuKhoa: ["cang tay nghieng", "forearm lateral"],
+    ten: "Chụp X-quang cẳng tay tư thế nghiêng",
+    tuKhoa: ["cang tay nghieng", "forearm lateral", "xuong quay", "xuong tru", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 8–11 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng tay" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương trụ, xương quay và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp xương quay hoặc xương trụ.",
+        "Các quá trình bệnh lý chẳng hạn như viêm tủy xương hoặc viêm khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt cẳng tay bệnh nhân nằm trên phim với khuỷu tay gập lại một góc 90° và gờ trong cẳng tay (tức gờ xương trụ) tiếp xúc sát phim.",
-        "Từ vị trí nằm nghiêng chúng ta ngả bàn tay về phía sau một chút khoảng 5° để cho mấu trâm trụ và quay nằm chồng lên nhau.",
-        "Điều chỉnh cẳng tay sao cho toàn bộ chiều dài của nó nằm trọn trên phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, khuỷu tay gập 90°."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Hạ thấp vai để đặt toàn bộ chi trên trên cùng một mặt phẳng ngang.",
+        "Chỉnh và định tâm cẳng tay theo trục dọc của tấm nhận ảnh; đảm bảo bao gồm cả khớp cổ tay và khớp khuỷu trên tấm nhận ảnh.",
+        "Xoay bàn tay và cổ tay vào tư thế nghiêng hoàn toàn, và kê tay để chống cử động, nếu cần. (Đảm bảo đầu dưới xương quay và xương trụ chồng khít trực tiếp lên nhau).",
+        "Đối với cẳng tay cơ bắp to, đặt vật hỗ trợ dưới bàn tay và cổ tay khi cần thiết để đặt xương quay và xương trụ song song với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa cẳng tay, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa cẳng tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Xương quay và xương trụ đứng ở tư thế nghiêng (1/3 dưới của chúng chồng nhau).",
-        "Khớp khuỷu và khớp cổ tay đứng ở tư thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú các bờ bên sát với vùng cẳng tay thực tế, khu trú tối thiểu ở cả hai đầu để tránh cắt phạm cấu trúc giải phẫu ở cả hai khớp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu nghiêng của toàn bộ xương quay và xương trụ, hàng gần các xương cổ tay, và đầu dưới xương cánh tay được bộc lộ, cũng như các mô mềm liên quan, chẳng hạn như đệm mỡ và dải mỡ của khớp cổ tay và khớp khuỷu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cẳng tay phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Khuỷu tay gập 90°.",
+        "Không xoay, thể hiện qua chỏm xương trụ chồng lên xương quay, và các lồi cầu xương cánh tay chồng khít lên nhau.",
+        "Chỏm xương quay phải chồng lên mỏm vẹt, và lồi củ xương quay được bộc lộ.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở trung điểm của xương quay và xương trụ."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-cangtay-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cangtay-nghieng-phim.jpg", caption: "Phim cẳng tay nghiêng — mẫu" }
+      { src: "images/xq/xq-cangtay-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cangtay-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
-  /* ------------------------------------------ X-QUANG KHUỶU – CÁNH TAY ------------------------------------------ */
 
   {
     id: "xq-khuyu-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang khuỷu tay thẳng (trước sau)",
-    tuKhoa: ["khuyu", "khuyu tay", "elbow ap", "khop khuyu"],
+    ten: "Chụp X-quang khuỷu tay tư thế trước sau",
+    tuKhoa: ["khuyu tay", "elbow ap", "khop khuyu", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp khuỷu, đầu trên xương trụ và xương quay, đầu dưới xương cánh tay và mô mềm xung quanh."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp khuỷu tay.",
+        "Các quá trình bệnh lý, chẳng hạn như viêm tủy xương và viêm khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt khuỷu tay bệnh nhân duỗi thẳng trên phim với mặt sau cẳng tay và cánh tay tiếp xúc sát phim và bàn tay lật ngửa.",
-        "Điều chỉnh tay bệnh nhân sao cho mỏm trên lồi cầu trong nằm dưới trung tâm phim 2 cm."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, với khuỷu tay duỗi hoàn toàn nếu có thể."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Duỗi khuỷu tay, ngửa bàn tay, chỉnh cánh tay và cẳng tay thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Chỉnh tâm khớp khuỷu vào giữa tấm nhận ảnh.",
+        "Yêu cầu bệnh nhân nghiêng người sang bên nếu cần để có được hướng chiếu AP thực sự. (Sờ các lồi cầu xương cánh tay để đảm bảo chúng song song với tấm nhận ảnh).",
+        "Kê đỡ bàn tay nếu cần để chống cử động."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào giữa khớp khuỷu, vị trí này cách trung điểm của đường nối hai lồi cầu khoảng 2 cm về phía xa."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ khoảng khớp khuỷu (1) và nó ngay ở trung tâm phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương cánh tay, khe khớp khuỷu, cùng với đầu trên xương quay và xương trụ được bộc lộ rõ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cánh tay phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Không bị xoay, thể hiện qua hình ảnh hai lồi cầu được bộc lộ ở góc nhìn nghiêng (profile) và chỏm, cổ, lồi củ xương quay tách rời hoặc chỉ bị xương trụ chồng lên một chút.",
+        "Mỏm khuỷu phải nằm lọt trong hố mỏm khuỷu khi cánh tay duỗi hoàn toàn.",
+        "Khe khớp khuỷu mở rộng khi cánh tay duỗi hoàn toàn và định tâm tia trung tâm chính xác.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở giữa khớp khuỷu."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khuyu-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-khuyu-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-khuyu-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khuyu-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-khuyu-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-khuyu-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang khuỷu tay nghiêng",
-    tuKhoa: ["khuyu nghieng", "elbow lateral"],
+    ten: "Chụp X-quang khuỷu tay tư thế nghiêng",
+    tuKhoa: ["khuyu tay nghieng", "elbow lateral", "mom khuyu", "dem mo", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 7–10 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp khuỷu, đầu trên xương trụ và xương quay, đầu dưới xương cánh tay và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp khuỷu tay.",
+        "Một số quá trình bệnh lý về xương nhất định, chẳng hạn như viêm tủy xương và viêm khớp.",
+        "Có thể quan sát thấy sự nâng lên hoặc di lệch của các đệm mỡ khớp khuỷu."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt khuỷu tay bệnh nhân trên phim với khuỷu gập lại một góc 90° và gờ trong của cẳng tay và cánh tay tiếp xúc sát phim và lòng bàn tay thẳng góc với mặt phim.",
-        "Điều chỉnh khuỷu tay bệnh nhân sao cho các mỏm trên lồi cầu xương cánh tay nằm chồng lên nhau ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân ngồi ở cuối bàn chụp, khuỷu tay gập 90°."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc của cẳng tay thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Chỉnh tâm khớp khuỷu vào tia trung tâm và vào giữa tấm nhận ảnh.",
+        "Hạ thấp vai sao cho xương cánh tay và cẳng tay nằm trên cùng một mặt phẳng ngang.",
+        "Xoay bàn tay và cổ tay vào tư thế nghiêng hoàn toàn, ngón cái hướng lên trên.",
+        "Đặt vật hỗ trợ dưới bàn tay và cổ tay để nâng cao bàn tay và đầu dưới cẳng tay nếu cần đối với trường hợp cẳng tay to nhiều cơ bắp, sao cho cẳng tay song song với tấm nhận ảnh để có được tư thế nghiêng hoàn toàn của khuỷu tay."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ đi qua khớp khuỷu và thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào giữa khớp khuỷu (một điểm cách mặt sau của mỏm khuỷu có thể sờ thấy dễ dàng khoảng 4 cm [1½ inches] về phía trong)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu nghiêng của đầu dưới xương cánh tay và đầu trên cẳng tay, mỏm khuỷu, và có thể nhìn thấy các mô mềm cũng như đệm mỡ của khớp khuỷu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cẳng tay phải thẳng hàng với trục dọc của tấm nhận ảnh, với khớp khuỷu gập 90°.",
+        "Khoảng một nửa chỏm xương quay bị chồng lấp bởi mỏm vẹt, và mỏm khuỷu phải được bộc lộ ở góc nhìn nghiêng.",
+        "Hướng chiếu nghiêng hoàn toàn được thể hiện qua ba vòng cung đồng tâm của rãnh ròng rọc, các gờ đôi của chỏm con và ròng rọc, và khuyết ròng rọc của xương trụ. Ngoài ra, có sự chồng khít của các lồi cầu xương cánh tay.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở trung điểm của khớp khuỷu."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-khuyu-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-khuyu-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-khuyu-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+      { src: "images/xq/xq-khuyu-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
   {
     id: "xq-canhtay-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang xương cánh tay thẳng (trước sau)",
-    tuKhoa: ["canh tay", "xuong canh tay", "humerus ap"],
+    ten: "Chụp X-quang cánh tay tư thế trước sau",
+    tuKhoa: ["canh tay", "humerus ap", "xuong canh tay", "chi tren", "truoc sau"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 7–10 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa xương cánh tay" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cánh tay và mô mềm."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay cánh tay nếu nghi ngờ có gãy xương hoặc trật khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt cẳng tay bệnh nhân nằm trên bàn chụp hình với mặt sau cánh tay tiếp xúc sát phim và bàn tay lật ngửa.",
-        "Điều chỉnh cánh tay sao cho toàn bộ chiều dài của nó nằm trọn trên phim.",
-        "Để giúp mặt sau cánh tay tiếp xúc sát phim hơn, ta nhấc vai đối diện lên cao đoạn dùng túi cát kê dưới vai để duy trì góc độ mong muốn."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp xương cánh tay.",
+        "Các quá trình bệnh lý bao gồm loãng xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế đứng hoặc nằm ngửa. Điều chỉnh chiều cao của cassette sao cho khớp vai và khớp khuỷu cách đều hai đầu của tấm nhận ảnh."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay cơ thể bệnh nhân về phía bên tổn thương khi cần thiết để đưa vai và phần gần xương cánh tay tiếp xúc với cassette.",
+        "Chỉnh xương cánh tay thẳng hàng với trục dọc của tấm nhận ảnh, trừ khi cần đặt chéo phim để lấy được cả khớp vai và khớp khuỷu.",
+        "Duỗi bàn tay và cẳng tay hết mức bệnh nhân có thể chịu đựng được.",
+        "Dạng cánh tay ra một chút và nhẹ nhàng ngửa bàn tay sao cho hai lồi cầu của khuỷu tay song song và cách đều tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa xương cánh tay, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa của xương cánh tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở các cạnh bên vào giới hạn bờ mô mềm của xương cánh tay và vai. (Bờ dưới của trường khu trú nên bao gồm khớp khuỷu và tối thiểu khoảng 2.5 cm đầu trên cẳng tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu AP bộc lộ toàn bộ xương cánh tay, bao gồm cả khớp vai và khớp khuỷu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của xương cánh tay phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Hướng chiếu AP thực sự được thể hiện ở phần gần xương cánh tay qua các điểm sau: củ lớn (greater tubercle) được bộc lộ rõ ở mặt ngoài; chỏm xương cánh tay (humeral head) nhìn thấy một phần ở mặt trong, với sự chồng lấp tối thiểu lên ổ chảo (glenoid cavity).",
+        "Phần xa xương cánh tay: cả lồi cầu ngoài và lồi cầu trong đều được bộc lộ rõ (in profile).",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-canhtay-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-canhtay-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
     id: "xq-canhtay-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
-    ten: "Chụp X-quang xương cánh tay nghiêng",
-    tuKhoa: ["canh tay nghieng", "humerus lateral"],
+    ten: "Chụp X-quang cánh tay tư thế nghiêng",
+    tuKhoa: ["canh tay nghieng", "humerus lateral", "xuong canh tay", "chi tren"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 7–10 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa xương cánh tay" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cánh tay và mô mềm."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay cánh tay nếu nghi ngờ có gãy xương hoặc trật khớp (Hướng chiếu nghiêng xoay — Hướng chiếu ngoài trong hoặc trong ngoài: Xương cánh tay). Không cố gắng xoay cánh tay nếu nghi ngờ có gãy xương hoặc trật khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với đầu được kê cao trên một chiếc gối và kê phim trên một chiếc hộp.",
-        "Đặt cánh tay nằm trọn trên phim với cẳng tay đặt trên bụng sao cho các lồi cầu nằm chồng lên nhau và thẳng góc với mặt phim."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương và trật khớp xương cánh tay.",
+        "Các quá trình bệnh lý bao gồm loãng xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế đứng hoặc nằm ngửa cho hướng chiếu ngoài trong hoặc trong ngoài.",
+        "Ngoài trong: Đặt bệnh nhân đứng với lưng tựa vào tấm nhận ảnh và khuỷu tay hơi gập, xoay cơ thể về phía bên tổn thương khi cần thiết để đưa xương cánh tay và vai tiếp xúc với cassette. Xoay cánh tay vào trong theo yêu cầu để đạt được tư thế nghiêng; hai lồi cầu vuông góc với tấm nhận ảnh.",
+        "Trong ngoài: Cho bệnh nhân quay mặt về phía tấm nhận ảnh và xoay chếch cơ thể nếu cần (20° đến 30° so với tư thế PA) để xương cánh tay tiếp xúc sát với tấm nhận ảnh; gập khuỷu tay 90° như hình minh họa.",
+        "Điều chỉnh chiều cao của cassette sao cho khớp vai và khớp khuỷu cách đều hai đầu của cassette."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa xương cánh tay, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa của xương cánh tay."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào giới hạn bờ mô mềm của xương cánh tay, đảm bảo bao gồm toàn bộ khớp vai và khớp khuỷu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu nghiêng của toàn bộ xương cánh tay, bao gồm cả khớp khuỷu và khớp vai, được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế nghiêng thực sự được thể hiện qua các điểm sau: hai lồi cầu hoàn toàn chồng khít lên nhau; củ bé được bộc lộ rõ ở mặt trong, bị phần dưới của ổ chảo chồng lấp một phần.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-canhtay-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-canhtay-nghieng-phim.jpg", caption: "Phim cánh tay nghiêng — mẫu" }
+      { src: "images/xq/xq-canhtay-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-canhtay-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
-  /* ------------------------------------------- X-QUANG VAI – XƯƠNG ĐÒN ------------------------------------------- */
-
   {
     id: "xq-vai-truocsau-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang vai thẳng (trước sau)",
-    tuKhoa: ["vai", "khop vai", "shoulder ap", "chom xuong canh tay"],
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
+    ten: "Chụp X-quang khớp vai tư thế trước sau (thẳng)",
+    tuKhoa: ["khop vai", "vai thang", "ap shoulder", "truoc sau", "o chao canh tay"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm đi xuyên qua điểm giữa của đường thẳng nối liền đỉnh vai và đầu dưới của nếp gấp trước nách. Tia trung tâm sẽ thẳng góc với mặt phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Mỏm cùng vai, xương bả vai, chỏm xương cánh tay, một phần ngoài xương đòn và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương hoặc trật khớp phần gần (đầu trên) xương cánh tay và đai vai.",
+        "Lắng đọng canxi trong cơ, gân, hoặc các cấu trúc bao hoạt dịch.",
+        "Các tình trạng thoái hóa bao gồm loãng xương và thoái hóa khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với vai đau tiếp xúc sát phim.",
-        "Để thực hiện điều này chúng ta nhấc cao vai đối diện lên khỏi mặt bàn một góc 15° đến 20° đoạn kê nó trên những túi cát.",
-        "Điều chỉnh vai bệnh nhân sao cho mỏm cùng vai nằm dưới bờ trên của phim 5 cm."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Thực hiện chụp phim với bệnh nhân ở tư thế đứng hoặc nằm ngửa. (Tư thế đứng thường ít gây đau đớn hơn cho bệnh nhân, nếu tình trạng cho phép).",
+        "Xoay nhẹ cơ thể về phía bên tổn thương nếu cần thiết để đặt vai tiếp xúc sát với tấm nhận ảnh hoặc mặt bàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tư thế bệnh nhân để đưa khớp vai (khớp ổ chảo - cánh tay) vào giữa tấm nhận ảnh.",
+        "Dạng nhẹ cánh tay đang duỗi thẳng; xoay ngoài cánh tay (ngửa bàn tay) cho đến khi hai lồi cầu của đầu dưới xương cánh tay song song với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn sao cho tia trung tâm đi xuyên qua điểm giữa của đường thẳng nối liền đỉnh vai và đầu dưới của nếp gấp trước nách. Tia trung tâm sẽ thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm dưới mỏm quạ 2.5 cm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh, với bờ trên và bờ ngoài điều chỉnh theo giới hạn các mô mềm."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu AP bộc lộ phần gần xương cánh tay, hai phần ba ngoài của xương đòn và phần trên xương bả vai, bao gồm cả mối liên quan giữa chỏm xương cánh tay và ổ chảo."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Sự xoay ngoài hoàn toàn được thể hiện qua hình ảnh củ lớn được bộc lộ rõ ở mặt ngoài của phần gần xương cánh tay.",
+        "Củ bé bị chồng lấp lên chỏm xương cánh tay.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-vai-truocsau-thang-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-vai-truocsau-thang-phim.png", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-vai-truocsau-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-vai-truocsau-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
-    id: "xq-vai-khop-cung-don",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang xương đòn (trước sau)",
-    tuKhoa: ["khop cung don", "ac joint", "cung don vai"],
+    id: "xq-vai-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
+    ten: "Chụp X-quang khớp vai tư thế nghiêng",
+    tuKhoa: ["khop vai nghieng", "vai nghieng", "lateral shoulder", "xoay trong", "o chao canh tay"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trên từng khớp cùng đòn vai khi chụp hai lần và ngắm ngay trung điểm của đường thẳng nối liền hai khớp cùng đòn vai khi chụp một lần. Tia trung tâm thẳng góc với mặt phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp cùng đòn vai, bao khớp, sự chảy máu và phồng lên của bao khớp."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay cánh tay nếu nghi ngờ có gãy xương hoặc trật khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân đứng thẳng quay lưng về phía giá giữ cassette, hai vai tựa sát vào mặt phim, hai tay duỗi thẳng, lòng bàn tay ngửa ra trước và cầm hai vật nặng."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương hoặc trật khớp phần gần (đầu trên) xương cánh tay và đai vai.",
+        "Lắng đọng canxi trong cơ, gân, hoặc các cấu trúc bao hoạt dịch.",
+        "Các tình trạng thoái hóa bao gồm loãng xương và thoái hóa khớp."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Thực hiện chụp phim với bệnh nhân ở tư thế đứng hoặc nằm ngửa. (Tư thế đứng thường ít gây đau đớn hơn cho bệnh nhân, nếu tình trạng cho phép).",
+        "Xoay nhẹ cơ thể về phía bên tổn thương, nếu cần thiết, để đặt vai tiếp xúc sát với tấm nhận ảnh hoặc mặt bàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tư thế bệnh nhân để đưa khớp vai (khớp ổ chảo - cánh tay) vào giữa tấm nhận ảnh.",
+        "Dạng nhẹ cánh tay đang duỗi thẳng; xoay trong cánh tay (sấp bàn tay) cho đến khi hai lồi cầu của đầu dưới xương cánh tay vuông góc với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trên từng khớp cùng đòn vai khi chụp hai lần và ngắm ngay trung điểm của đường thẳng nối liền hai khớp cùng đòn vai khi chụp một lần. Tia trung tâm thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm dưới mỏm quạ 2.5 cm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh, với bờ ngoài và bờ trên điều chỉnh theo giới hạn các mô mềm."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu nghiêng của phần gần xương cánh tay, hai phần ba ngoài của xương đòn và phần trên xương bả vai được bộc lộ, bao gồm cả mối liên quan giữa chỏm xương cánh tay và ổ chảo."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế xoay trong hoàn toàn được thể hiện qua hình ảnh củ bé được bộc lộ rõ ở mặt trong của chỏm xương cánh tay.",
+        "Đường viền của củ lớn phải được nhìn thấy chồng lên chỏm xương cánh tay.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-khop-cung-don-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-vai-khop-cung-don-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-vai-khop-cung-don-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+      { src: "images/xq/xq-vai-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-vai-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-vai-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
-    id: "xq-vai-nach-ngang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang vai nghiêng (tia ngang xuyên nách, bệnh nhân nằm)",
-    tuKhoa: ["vai nach", "axillary", "vai nghieng nam"],
+    id: "xq-vai-y-view",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
+    ten: "Chụp X-quang khớp vai tư thế nghiêng Y (scapular Y)",
+    tuKhoa: ["vai y view", "scapular y", "trat khop vai", "nghieng ba vai", "mom qua"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 14–18 cm)" },
+      { ten: "Tư thế", giaTri: "Y view" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn nằm ngang đoạn ngắm thế nào để tia trung tâm đi xuyên qua giữa nách đến vùng khớp cùng đòn vai" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Chỏm xương cánh tay, khớp cùng đòn vai và một phần xương bả vai."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay cánh tay nếu nghi ngờ có gãy xương hoặc trật khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với cánh tay bên vai lành duỗi xuôi xuống thân mình và cánh tay bên vai đau được xoay ra cách xa thân mình đến mức tối đa sao cho nó càng thẳng góc với trục dài thân mình càng tốt.",
-        "Đặt cassette dựng đứng trên vai bệnh nhân sao cho mặt trên vai và phần trên xương cánh tay tiếp xúc phim."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương hoặc trật khớp phần gần (đầu trên) xương cánh tay và xương bả vai.",
+        "Chỏm xương cánh tay được bộc lộ nằm dưới mỏm quạ trong trường hợp trật khớp ra trước; đối với trường hợp ít phổ biến hơn là trật khớp ra sau, chỏm xương cánh tay được bộc lộ nằm dưới mỏm cùng vai.",
+        "Hướng chiếu xuất sắc để bộc lộ rõ góc nhìn nghiêng của mỏm quạ và gai xương bả vai."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Thực hiện chụp phim với bệnh nhân ở tư thế đứng hoặc nằm. (Tư thế đứng thường ít gây đau đớn hơn cho bệnh nhân)."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay bệnh nhân vào tư thế chếch trước giống như chụp nghiêng xương bả vai với bệnh nhân quay mặt vào tấm nhận ảnh. Sờ góc trên của xương bả vai và khớp cùng vai - đòn. Xoay bệnh nhân cho đến khi một đường thẳng tưởng tượng nối hai điểm này vuông góc với tấm nhận ảnh. Do sự khác biệt giữa các bệnh nhân, độ xoay chếch của cơ thể có thể dao động từ 45° đến 60°. Chỉnh tâm khớp ổ chảo - cánh tay (khớp vai) vào tia trung tâm và vào giữa tấm nhận ảnh.",
+        "Dạng nhẹ cánh tay nếu có thể để không làm chồng lấp phần gần xương cánh tay lên các xương sườn; không cố gắng xoay cánh tay."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn nằm ngang đoạn ngắm thế nào để tia trung tâm đi xuyên qua giữa nách đến vùng khớp cùng đòn vai, tia trung tâm thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào khớp ổ chảo - cánh tay (khớp vai) (dưới đỉnh vai khoảng 5 hoặc 6 cm)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hướng chiếu nghiêng thực sự của xương bả vai, phần gần xương cánh tay và khớp ổ chảo - cánh tay."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Thân mỏng của xương bả vai phải được nhìn thấy ở dạng đường thẳng (on end) mà không bị các xương sườn chồng lên.",
+        "Mỏm cùng vai và mỏm quạ phải xuất hiện dưới dạng hai nhánh trên gần như đối xứng của chữ \"Y\".",
+        "Chỏm xương cánh tay phải xuất hiện chồng lên gốc của chữ \"Y\" nếu xương cánh tay không bị trật khớp.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-nachngang-ct.jpg", caption: "Tư thế (axial xuyên nách) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-vai-nachngang-phim.jpg", caption: "Phim vai axial — mẫu" }
+      { src: "images/xq/xq-vai-y-view-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-vai-y-view-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-vai-y-view-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" },
+      { src: "images/xq/xq-vai-y-view-phim3.png", caption: "Phim đạt yêu cầu (3)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
-    id: "xq-vai-ba-vai-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang xương bả vai nghiêng (tư thế Lilienfeld)",
-    tuKhoa: ["ba vai", "xuong ba vai", "lilienfeld", "scapula lateral"],
+    id: "xq-xuong-don",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
+    ten: "Chụp X-quang xương đòn tư thế thẳng, chếch",
+    tuKhoa: ["xuong don", "clavicle", "gay xuong don", "ap axial", "khop cung don"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 14–17 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng, chếch" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Xoay đầu đèn nằm ngang" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương bả vai ở thế nghiêng, hình xương bả vai, mỏm cùng vai, mỏm quạ và chỏm xương cánh tay."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy hoặc trật khớp xương đòn.",
+        "Quy trình thường quy của khoa thường bao gồm cả hướng chiếu thẳng và chếch."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân đứng hoặc ngồi ở vị trí xéo với mặt trước của vai đau tiếp xúc sát phim.",
-        "Để nhìn rõ cánh xương vai, bác sĩ Lilienfeld và bác sĩ Mazujuan khuyên chúng ta đặt cẳng tay bên vai đau lên vai đối diện đồng thời ép chặt cánh tay thật sát vào ngực nếu có thể được."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Thực hiện chụp phim với bệnh nhân ở tư thế đứng hoặc nằm ngửa, hai cánh tay để dọc theo thân người, nâng cằm và nhìn thẳng về phía trước. Mặt sau của vai phải tiếp xúc sát với tấm nhận ảnh hoặc mặt bàn, không xoay cơ thể."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm xương đòn và tấm nhận ảnh vào tia trung tâm. (Có thể dễ dàng sờ thấy xương đòn với đầu trong ở khuyết tĩnh mạch cảnh và đầu ngoài ở khớp cùng đòn phía trên vai)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Xoay đầu đèn nằm ngang, ngắm ngay một điểm nằm trong điểm giữa của cạnh trong xương bả vai 2cm. Tia trung tâm thẳng góc với phim."
+        "AP: Tia trung tâm chiếu vuông góc với điểm giữa xương đòn.",
+        "AP theo trục: Tia trung tâm chếch lên phía đầu (cephalad) từ 15° đến 30° hướng vào điểm giữa xương đòn."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng xương đòn. (Đảm bảo bao gồm cả khớp cùng đòn và khớp ức đòn)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương đòn được bộc lộ, bao gồm cả khớp cùng đòn, khớp ức đòn và mỏm cùng vai."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Xương đòn được bộc lộ mà không bị biến dạng thu ngắn. Điểm giữa xương đòn chồng lên góc trên xương bả vai. Phải nhìn thấy các bờ của trường khu trú."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-ba-vai-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-vai-ba-vai-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-xuong-don-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuong-don-ct2.png", caption: "Chiều thế (2)" },
+      { src: "images/xq/xq-xuong-don-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
 
   {
-    id: "xq-vai-mom-qua",
-    phanHe: "xquang", modality: "X-quang", nhom: "Vai - Đòn",
-    ten: "Chụp X-quang mỏm quạ (trước sau)",
-    tuKhoa: ["mom qua", "coracoid"],
+    id: "xq-xuong-ba-vai",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
+    ten: "Chụp X-quang xương bả vai",
+    tuKhoa: ["xuong ba vai", "scapula", "gay xuong ba vai", "nghieng ba vai"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía đầu một góc 10°-20° để tách xương đòn ra khỏi lồng ngực đoạn ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Mỏm quạ và xương đòn."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương bả vai."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với vai đau tiếp xúc sát phim, cánh tay, cẳng tay, bàn tay bên vai đau ở vị trí ngửa."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Thực hiện chụp với bệnh nhân nằm ngửa, đặt cánh tay bên tổn thương vắt ngang qua ngực.",
+        "Sờ khớp cùng đòn và bờ trên của xương bả vai, sau đó xoay bệnh nhân cho đến khi đường thẳng tưởng tượng nối hai điểm này vuông góc với tấm nhận ảnh; động tác này sẽ nâng vai bên tổn thương lên cho đến khi thân xương bả vai ở tư thế nghiêng hoàn toàn.",
+        "Gập đầu gối bên tổn thương để giúp bệnh nhân duy trì tư thế cơ thể nằm chếch này."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Sờ các bờ của xương bả vai bằng cách dùng ngón tay và ngón cái nắm lấy bờ trong và bờ ngoài của thân xương bả vai.",
+        "Cẩn thận điều chỉnh độ xoay của cơ thể khi cần thiết để đưa mặt phẳng của thân xương bả vai vuông góc với tấm nhận ảnh.",
+        "Chỉnh bệnh nhân trên mặt bàn sao cho tâm của bờ ngoài (nách) xương bả vai nằm ở trung tâm tia trung tâm và tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn về phía đầu một góc 10°-20° để tách xương đòn ra khỏi lồng ngực đoạn ngắm đầu đèn ngay trung tâm phim."
+        "Tia trung tâm hướng vào điểm giữa của bờ ngoài xương bả vai."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia sát vào vùng xương bả vai."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương bả vai phải được bộc lộ ở tư thế nghiêng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế nghiêng thực sự được thể hiện qua sự chồng khít trực tiếp của bờ trong (bờ sống) và bờ ngoài.",
+        "Thân xương bả vai phải được nhìn thấy ở dạng góc nhìn nghiêng không bị các xương sườn chồng lấp.",
+        "Càng nhiều càng tốt, xương cánh tay không được chồng lên vùng khảo sát của xương bả vai.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-vai-momqua-ct.jpg", caption: "Tư thế mỏm quạ & hướng tia (Clark's)" },
-      { src: "images/xq/xq-vai-momqua-phim.jpg", caption: "Phim mỏm quạ — mẫu" }
+      { src: "images/xq/xq-xuong-ba-vai-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuong-ba-vai-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương I: Kỹ thuật chụp chi trên"
   },
-
-  /* ------------------------------- X-QUANG CHI DƯỚI (CẲNG/CỔ/BÀN CHÂN) ------------------------------- */
-
-  {
-    id: "xq-cangchan-truocsau",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang cẳng chân thẳng (trước sau)",
-    tuKhoa: ["cang chan", "leg ap", "xuong chay", "xuong mac"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 9–12 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng chân" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương chày, xương mác và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc nằm ngửa trên bàn chụp hình với cẳng chân đau được đặt trọn trên phim.",
-        "Điều chỉnh cẳng chân bệnh nhân thế nào để bình diện liên mắt cá song song với mặt phim.",
-        "Để thực hiện điều này chúng ta xoay bàn chân vào phía trong một chút, có thể dùng túi cát kê dưới lòng bàn chân hay đặt lên đùi bệnh nhân để giữ yên tư thế."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa cẳng chân, tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cangchan-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cangchan-truocsau-phim.jpg", caption: "Phim cẳng chân trước sau — mẫu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cangchan-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang cẳng chân nghiêng",
-    tuKhoa: ["cang chan nghieng", "leg lateral"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 8–11 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng chân" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương chày, xương mác và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm nghiêng về bên đau với cẳng chân đau được đặt nằm trọn trên phim và mặt bên của cẳng chân tiếp xúc sát mặt phim.",
-        "Điều chỉnh cẳng chân để bình diện xuyên qua xương chày thẳng góc với mặt phim.",
-        "Gập đầu gối chân lành lại rồi đưa về phía trước đoạn kê cẳng chân lành lên cao để tạo sự thoải mái cho bệnh nhân."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa cẳng chân, tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cangchan-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cangchan-nghieng-phim.jpg", caption: "Phim cẳng chân — mẫu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cochan-truocsau",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang cổ chân thẳng (trước sau)",
-    tuKhoa: ["co chan", "ankle ap", "mat ca"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 9–12 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cổ chân" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương sên, khớp sên chày, đầu dưới xương chày và xương mác, khớp xương cổ chân và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc nằm ngửa trên bàn chụp hình với chân đau duỗi thẳng.",
-        "Đặt cổ chân đau lên phim sao cho lòng bàn chân dựng đứng, gót chân tiếp xúc sát phim và mắt cá trong nằm ngay giữa phim.",
-        "Xoay bàn chân vào phía trong một chút để đầu dưới của xương chày và xương mác bớt chồng lên nhau."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa cổ chân, nơi chỗ nhô cao lên của mắt cá trong, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cochan-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cochan-truocsau-phim.jpg", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cochan-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang cổ chân nghiêng",
-    tuKhoa: ["co chan nghieng", "ankle lateral"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "46 kVp · 2,5 mAs (bề dày 8–11 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cổ chân, xương gót, đầu dưới xương chày, xương mác, khớp sên chày cùng những mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc nằm nghiêng, chân đau đặt trên bàn chụp hình với cổ chân đau được đặt nghiêng trên mặt phim thế nào để bình diện liên mắt cá thẳng góc với mặt phim và đầu mắt cá ngoài nằm ngay trung tâm phim.",
-        "Dùng túi cát hay khung gỗ đặt dưới đầu bàn chân để dễ dàng trong việc đặt đúng tư thế."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cochan-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cochan-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
+  /* ------------------------------------------------- X-QUANG CHI DƯỚI --- */
   {
     id: "xq-banchan-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang bàn chân thẳng (trước sau)",
-    tuKhoa: ["ban chan", "foot ap", "xuong ban chan"],
+    ten: "Chụp X-quang bàn chân tư thế trước sau",
+    tuKhoa: ["ban chan truoc sau", "ban chan ap", "xuong ban chan", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 7–9 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm bàn chân với đầu đèn được bẻ về phía đầu một góc 15°" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương ngón chân, xương bàn chân, xương cổ chân và mô mềm xung quanh."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Vị trí và mức độ gãy xương, sự thẳng trục của các mảnh gãy, các bất thường ở khe khớp, tràn dịch mô mềm.",
+        "Vị trí của các dị vật cản quang."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bàn chân bệnh nhân nằm trên phim thế nào để lòng bàn chân tiếp xúc thật sát mặt phim, các ngón chân duỗi thẳng, xòe ra và ngón cái nằm dưới bờ trên của phim 2 cm.",
-        "Chúng ta có thể dùng bông gòn chêm giữa các ngón chân để tách rời chúng ra.",
-        "Điều chỉnh cassette sao cho trung tâm bàn chân nằm ngay giữa trục dọc của phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa; kê gối dưới đầu bệnh nhân; gập đầu gối và đặt mặt lòng bàn chân (gan bàn chân) của chân cần chụp áp sát và bằng phẳng lên tấm nhận ảnh."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Duỗi (gập về phía lòng bàn chân) bàn chân nhưng vẫn giữ mặt lòng bàn chân áp sát và vững chắc trên tấm nhận ảnh.",
+        "Chỉnh trục dọc của bàn chân thẳng hàng và vào tâm tia trung tâm (CR) cũng như trục dọc của phần tấm nhận ảnh đang được phơi nhiễm. (Sử dụng bao cát nếu cần để tránh tấm nhận ảnh bị trượt trên mặt bàn).",
+        "Nếu cần cố định, hãy gập cả đầu gối bên đối diện và tựa vào đầu gối bên tổn thương để hỗ trợ."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm bàn chân với đầu đèn được bẻ về phía đầu một góc 15°."
+        "Góc tia trung tâm chếch 10° về phía sau (hướng về phía gót chân) sao cho tia trung tâm vuông góc với các xương bàn chân.",
+        "Hướng tia trung tâm vào nền xương bàn chân thứ ba."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào các bờ ngoài của bàn chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ bàn chân phải được bộc lộ, bao gồm tất cả các xương đốt ngón, các xương bàn chân và xương ghe, các xương chêm, cùng với xương hộp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn chân phải thẳng hàng với trục dọc của phần tấm nhận ảnh được phơi nhiễm.",
+        "Không bị xoay, thể hiện qua khoảng cách gần như bằng nhau giữa các xương bàn chân từ thứ hai đến thứ năm. Nền của xương bàn chân thứ nhất và thứ hai thường tách rời nhau, nhưng nền của xương bàn chân từ thứ hai đến thứ năm có vẻ chồng lấp lên nhau.",
+        "Khe khớp giữa xương chêm thứ nhất và thứ hai phải được bộc lộ.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-banchan-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-banchan-truocsau-phim.jpg", caption: "Phim bàn chân trước sau — mẫu" }
+      { src: "images/xq/xq-banchan-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-banchan-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-banchan-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
 
   {
     id: "xq-banchan-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang bàn chân nghiêng",
-    tuKhoa: ["ban chan nghieng", "foot lateral"],
+    ten: "Chụp X-quang bàn chân tư thế nghiêng",
+    tuKhoa: ["ban chan nghieng", "ban chan lateral", "xuong ban chan", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 7–9 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương ngón chân, xương bàn chân, xương cổ chân, và mô mềm xung quanh."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Vị trí và mức độ gãy xương, sự thẳng trục của các mảnh gãy, các bất thường ở khe khớp, tràn dịch mô mềm.",
+        "Vị trí của các dị vật cản quang."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân ngồi hoặc nằm nghiêng, bàn chân đau đặt nghiêng trên phim, với cạnh ngoài tiếp xúc sát mặt phim.",
-        "Đầu gối bên chân đau có thể được kê cao để bình diện dọc của bàn chân song song mặt phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng; kê gối dưới đầu bệnh nhân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Gập đầu gối bên chân tổn thương khoảng 45°; đặt chân đối diện ra phía sau chân bị thương để tránh xoay quá mức chân tổn thương.",
+        "Cẩn thận gập mu bàn chân nếu có thể để hỗ trợ định vị tư thế nghiêng thực sự cho bàn chân và cổ chân.",
+        "Đặt vật hỗ trợ dưới cẳng chân và đầu gối nếu cần sao cho mặt lòng bàn chân vuông góc với tấm nhận ảnh. Không xoay bàn chân quá mức.",
+        "Chỉnh trục dọc của bàn chân thẳng hàng với trục dọc của tấm nhận ảnh (trừ khi cần đặt chéo phim để lấy được toàn bộ bàn chân).",
+        "Chỉnh vùng giữa nền các xương bàn chân vào trung tâm tia trung tâm."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào xương chêm trong (ngang mức nền xương bàn chân thứ ba)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài da của bàn chân, bao gồm khoảng 2 đến 3 cm về phía gần (phía trên) khớp cổ chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ bàn chân phải được bộc lộ, với tối thiểu 2.5 cm phần xa của xương chày - xương mác.",
+        "Các xương bàn chân gần như chồng lấp lên nhau, chỉ có lồi củ xương bàn chân thứ năm được nhìn thấy ở góc nhìn nghiêng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn chân phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Tư thế nghiêng thực sự đạt được khi khớp chày - sên (tibiotalar joint) mở rộng, phần xa xương mác bị chồng lấp bởi phần sau xương chày, và phần xa các xương bàn chân chồng lên nhau.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-banchan-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-banchan-nghieng-phim.jpg", caption: "Phim bàn chân nghiêng — mẫu" }
+      { src: "images/xq/xq-banchan-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-banchan-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-banchan-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
 
   {
     id: "xq-banchan-chech",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang bàn chân chếch",
-    tuKhoa: ["ban chan chech", "foot oblique"],
+    ten: "Chụp X-quang bàn chân tư thế chếch",
+    tuKhoa: ["ban chan chech", "ban chan oblique", "xoang co chan", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "46 kVp · 2,5 mAs (bề dày 8–10 cm)" },
+      { ten: "Tư thế", giaTri: "Chếch" },
+      { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương ngón chân, xương bàn chân, xương cổ chân và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Vị trí và mức độ gãy xương, sự thẳng trục của các mảnh gãy, các bất thường ở khe khớp, tràn dịch mô mềm.",
+        "Vị trí của các dị vật cản quang."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi trên bàn chụp hình, bàn chân đau được đặt trên phim với các ngón chân duỗi thẳng và ngón cái nằm dưới bờ trên của phim 2 cm.",
-        "Nghiêng bàn chân bệnh nhân về phía ngón cái thế nào để bình diện của lòng bàn chân hợp với mặt phim một góc 45°."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa hoặc ngồi; gập đầu gối, đặt mặt lòng bàn chân lên bàn; xoay cơ thể hơi xa khỏi bên cần chụp."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc của bàn chân thẳng hàng với trục dọc của tấm nhận ảnh và tia trung tâm.",
+        "Xoay bàn chân vào trong để đặt mặt lòng bàn chân tạo một góc từ 30° đến 40° so với mặt phẳng của tấm nhận ảnh. Mặt phẳng chung của mu bàn chân phải song song với tấm nhận ảnh và vuông góc với tia trung tâm.",
+        "Sử dụng khối hỗ trợ thấu quang 45° để chống cử động. Sử dụng bao cát nếu cần thiết để tránh tấm nhận ảnh bị trượt trên mặt bàn."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào nền xương bàn chân thứ ba."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào các bờ ngoài của bàn chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ bàn chân phải được bộc lộ, từ các đốt ngón xa đến phần sau xương gót và phần gần xương sên."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của bàn chân phải thẳng hàng với trục dọc của tấm nhận ảnh.",
+        "Độ chếch chính xác được thể hiện khi các xương bàn chân từ thứ ba đến thứ năm không bị chồng lấp. Xương bàn chân thứ nhất và thứ hai cũng phải không bị chồng lấp ngoại trừ vùng nền xương.",
+        "Lồi củ ở nền xương bàn chân thứ năm được nhìn thấy ở góc nhìn nghiêng (profile) và được bộc lộ rõ.",
+        "Các khe khớp xung quanh xương hộp và xoang cổ chân (sinus tarsi) mở rộng và được bộc lộ tốt khi bàn chân được đặt ở tư thế chếch chính xác.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-banchan-chech-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-banchan-chech-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-banchan-chech-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+      { src: "images/xq/xq-banchan-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
 
   {
-    id: "xq-xuonggot-duoitren",
+    id: "xq-got-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang xương gót — tư thế dưới trên",
-    tuKhoa: ["xuong got", "got chan", "calcaneus", "got duoi tren"],
+    ten: "Chụp X-quang xương gót hướng chiếu lòng - mu bàn chân (axial)",
+    tuKhoa: ["xuong got axial", "calcaneus", "got chan long mu", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "54 kVp · 5 mAs (bề dày 8–12 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng (lòng - mu)" },
+      { ten: "kV / mAs", giaTri: "54 kVp · 5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía đầu một góc 40°" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương gót, mắt cá và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý hoặc gãy xương có di lệch vào trong hoặc ra ngoài."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân ngồi hoặc nằm ngửa trên bàn chụp hình với gót chân đau tiếp xúc sát phim và bàn chân dựng đứng, khớp sên chày nằm ngay trung tâm phim.",
-        "Điều chỉnh bàn chân thế nào để lòng bàn chân càng gần thẳng góc với mặt phim càng tốt.",
-        "Để thực hiện điều này, chúng ta dùng một sợi dây buộc vào phần trên bệnh nhân và bảo bệnh nhân kéo về phía chân mình."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa hoặc ngồi trên bàn với chân duỗi thẳng hoàn toàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục khớp cổ chân thẳng hàng với tia trung tâm và phần tấm nhận ảnh đang được phơi nhiễm.",
+        "Gập mu bàn chân sao cho mặt lòng bàn chân gần như vuông góc với tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn về phía đầu một góc 40°, đoạn ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ đi vào lòng bàn chân nơi đầu gần xương bàn chân thứ 5 và xuyên ra ngoài đáy của khớp xương cổ chân."
+        "Hướng tia trung tâm vào nền xương bàn chân thứ ba để tia đi ra ở một mức ngay phía dưới mắt cá ngoài.",
+        "Góc tia trung tâm chếch lên phía đầu 40° so với trục dọc của bàn chân (góc này cũng sẽ là 40° so với phương thẳng đứng nếu trục dọc của bàn chân vuông góc với tấm nhận ảnh)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia sát vào vùng xương gót."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương gót phải được bộc lộ từ lồi củ xương gót ở phía sau đến khớp sên - gót ở phía trước."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay; một phần của mỏm chân đế xương sên phải được bộc lộ rõ ở mặt trong.",
+        "Với bàn chân được gập 90° thích hợp, sự căn chỉnh và góc tia trung tâm chính xác được thể hiện qua khe khớp sên - gót mở rộng, lồi củ xương gót không bị biến dạng và xương gót được kéo dài đầy đủ.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-xuonggot-duoitren-ct.jpg", caption: "Tư thế xương gót axial & hướng tia (Clark's)" },
-      { src: "images/xq/xq-xuonggot-duoitren-phim.jpg", caption: "Phim xương gót axial — mẫu" }
+      { src: "images/xq/xq-got-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-got-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-got-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
 
-  /* ----------------------------------- X-QUANG GỐI / ĐÙI / CHẬU / HÁNG ----------------------------------- */
+  {
+    id: "xq-got-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang xương gót tư thế nghiêng",
+    tuKhoa: ["xuong got nghieng", "calcaneus lateral", "got chan", "chi duoi"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "54 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các tổn thương xương liên quan đến xương gót, xương sên và khớp sên - gót.",
+        "Bộc lộ mức độ và sự thẳng trục của các mảnh gãy."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm nghiêng, bên tổn thương nằm dưới. Kê gối dưới đầu bệnh nhân. Gập đầu gối bên chân tổn thương khoảng 45°; đặt chân đối diện ra phía sau chân bị thương."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm xương gót vào tia trung tâm và vào phần không bị che của tấm nhận ảnh, với trục dọc của bàn chân song song với mặt phẳng tấm nhận ảnh.",
+        "Đặt vật hỗ trợ dưới đầu gối và cẳng chân nếu cần để đặt mặt lòng bàn chân vuông góc với tấm nhận ảnh.",
+        "Đặt cổ chân và bàn chân ở tư thế nghiêng thực sự, tư thế này đặt mắt cá ngoài nằm phía sau mắt cá trong khoảng 1 cm.",
+        "Gập mu bàn chân sao cho mặt lòng bàn chân tạo thành góc vuông với cẳng chân."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào một điểm cách mắt cá trong 2.5 cm về phía dưới."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài da để bao gồm khớp cổ chân ở phía trên và toàn bộ xương gót."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bộc lộ rõ góc nhìn nghiêng của xương gót với xương sên và phần dưới của chày - mác ở phía trên, xương ghe ở phía trước, cùng với khe khớp sên - gót và khe khớp gót - hộp mở rộng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay, thể hiện qua sự chồng khít của các phần trên xương sên, khe khớp sên - gót mở rộng, và mắt cá ngoài chồng lên phần sau của xương chày và xương sên.",
+        "Xoang cổ chân và khe khớp gót - hộp phải mở rộng.",
+        "Việc khu trú bốn cạnh phải bao gồm khớp cổ chân ở phía gần (phía trên) cùng với khớp sên - ghe và nền xương bàn chân thứ năm ở phía trước."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-got-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-got-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-got-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
+  {
+    id: "xq-cochan-truocsau",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang cổ chân tư thế trước sau",
+    tuKhoa: ["co chan", "ankle ap", "truoc sau", "mat ca", "chi duoi"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các tổn thương xương hoặc bệnh lý liên quan đến khớp cổ chân, đầu dưới xương chày và xương mác, phần gần xương sên và phần gần xương bàn chân thứ năm."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa; kê gối dưới đầu bệnh nhân; hai chân phải duỗi thẳng hoàn toàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục của khớp cổ chân thẳng hàng với tia trung tâm và trục dọc của phần tấm nhận ảnh đang được phơi nhiễm.",
+        "Không ép gập mu bàn chân một cách cưỡng bức; để bàn chân ở tư thế tự nhiên.",
+        "Điều chỉnh bàn chân và cổ chân để có hướng chiếu AP thực sự. Đảm bảo toàn bộ cẳng chân không bị xoay. Đường nối hai mắt cá không được song song với tấm nhận ảnh."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa hai mắt cá chân."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài da; bao gồm một nửa gần của các xương bàn chân và phần xa của xương chày - xương mác."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Một phần ba dưới xương chày - xương mác, mắt cá ngoài và mắt cá trong, xương sên và nửa gần của các xương bàn chân phải được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Trục dọc của cẳng chân phải thẳng hàng với trường khu trú và tấm nhận ảnh.",
+        "Không bị xoay nếu phần trong của khớp gọng kìm mở và phần ngoài đóng.",
+        "Có sự chồng lấp một phần của đầu dưới xương chày và xương sên lên đầu dưới xương mác.",
+        "Trường khu trú bốn cạnh phải bao gồm từ 1/3 dưới cẳng chân đến nửa gần của các xương bàn chân. Tất cả các mô mềm xung quanh cũng phải được bao gồm."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cochan-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cochan-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
 
+  {
+    id: "xq-cochan-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang cổ chân tư thế chếch",
+    tuKhoa: ["co chan chech", "ankle oblique", "gong kim", "mortise", "chi duoi"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch" },
+      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Đánh giá các bệnh lý liên quan đến toàn bộ gọng kìm cổ chân và phần gần xương bàn chân thứ năm, một vị trí thường bị gãy."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa; kê gối dưới đầu bệnh nhân; hai chân phải duỗi thẳng hoàn toàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục của khớp cổ chân thẳng hàng với tia trung tâm và trục dọc của phần tấm nhận ảnh đang được phơi nhiễm.",
+        "Không ép gập mu bàn chân; để bàn chân ở tư thế duỗi tự nhiên (cho phép quan sát được nền xương bàn chân thứ năm, một vị trí gãy xương phổ biến).",
+        "Xoay trong toàn bộ cẳng chân và bàn chân khoảng 15° đến 20° cho đến khi đường nối hai mắt cá song song với tấm nhận ảnh.",
+        "Đặt vật hỗ trợ áp vào bàn chân nếu cần để chống cử động."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa hai mắt cá."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào các bờ ngoài da; bao gồm một nửa gần của các xương bàn chân và phần xa của xương chày - xương mác."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Một phần ba dưới xương chày và xương mác, trần chày bao gồm cả đầu xương nếu có, mắt cá ngoài và mắt cá trong, xương sên, và nửa gần của các xương bàn chân phải được bộc lộ.",
+        "Toàn bộ khớp gọng kìm cổ chân phải mở và được bộc lộ rõ (khe hở từ 3 đến 4 mm trên toàn bộ mặt xương sên là bình thường; rộng thêm 2 mm là bất thường)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Độ chếch thích hợp đối với khớp gọng kìm được thể hiện qua việc bộc lộ khớp gọng kìm mở ở cả mặt ngoài và mặt trong cùng với các mắt cá được bộc lộ rõ.",
+        "Chỉ có một chút chồng lấp tối thiểu tại khớp chày - mác dưới.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cochan-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cochan-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
+
+  {
+    id: "xq-cochan-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang cổ chân tư thế nghiêng",
+    tuKhoa: ["co chan nghieng", "ankle lateral", "xuong sen", "xuong got", "chi duoi"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Hướng chiếu này hữu ích trong việc đánh giá gãy xương, trật khớp và tràn dịch khớp liên quan đến các bệnh lý khớp khác."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm nghiêng, bên tổn thương nằm dưới; kê gối dưới đầu bệnh nhân; gập đầu gối bên chân tổn thương khoảng 45°; đặt chân đối diện ra phía sau chân bị thương để tránh xoay quá mức."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục khớp cổ chân thẳng hàng với tia trung tâm và trục dọc của phần tấm nhận ảnh đang được phơi nhiễm.",
+        "Đặt vật hỗ trợ dưới đầu gối khi cần thiết để đặt cẳng chân và bàn chân ở tư thế nghiêng thực sự.",
+        "Gập mu bàn chân sao cho mặt lòng bàn chân tạo thành góc vuông với cẳng chân hoặc gập hết mức bệnh nhân có thể chịu đựng được; không dùng lực cưỡng ép. (Điều này giúp duy trì tư thế nghiêng thực sự)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào mắt cá trong."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia bao gồm từ phần xa (đầu dưới) xương chày và xương mác đến vùng giữa các xương bàn chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Một phần ba dưới xương chày và xương mác với phần xa xương mác bị chồng lấp lên bởi phần xa xương chày, xương sên và xương gót bộc lộ ở góc nhìn nghiêng.",
+        "Lồi củ xương bàn chân thứ năm, xương ghe và xương hộp cũng được quan sát thấy."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay, thể hiện qua việc đầu dưới xương mác chồng lên nửa sau của xương chày.",
+        "Khớp chày - sên mở rộng với khe khớp đồng đều.",
+        "Trường khu trú phải bao gồm 1/3 dưới cẳng chân, xương gót, lồi củ xương bàn chân thứ năm và các cấu trúc mô mềm xung quanh.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cochan-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cochan-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cochan-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
+  {
+    id: "xq-cangchan-truocsau",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang cẳng chân tư thế trước sau",
+    tuKhoa: ["cang chan", "tibia fibula ap", "xuong chay", "xuong mac", "truoc sau"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến gãy xương, dị vật, hoặc tổn thương xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa; kê gối dưới đầu bệnh nhân; chân phải duỗi thẳng hoàn toàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Điều chỉnh khung chậu, đầu gối và cẳng chân vào tư thế AP thực sự mà không bị xoay.",
+        "Đặt bao cát sát vào bàn chân nếu cần để cố định, và gập mu bàn chân 90° so với cẳng chân nếu có thể.",
+        "Đảm bảo rằng cả khớp cổ chân và khớp gối cách các đầu mép của tấm nhận ảnh từ 3 đến 5 cm.",
+        "Nếu chi quá dài, đặt cẳng chân theo đường chéo (từ góc này sang góc kia) trên một tấm nhận ảnh 35 x 43 cm để đảm bảo bao gồm cả hai khớp."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa của cẳng chân."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả hai bên dọc theo bờ ngoài da, với khu trú toàn phần ở hai đầu tấm nhận ảnh để bao gồm tối đa các khớp gối và cổ chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương chày và xương mác, bao gồm cả khớp cổ chân và khớp gối, phải có trên phim chụp này (hoặc hai phim nếu cần)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay, thể hiện qua hình ảnh các lồi cầu xương đùi và lồi cầu xương chày được bộc lộ rõ với lồi củ gian lồi cầu nằm ở giữa hố gian lồi cầu.",
+        "Có sự chồng lấp một phần của xương mác và xương chày ở cả hai đầu trên và dưới.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cangchan-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cangchan-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cangchan-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
+  {
+    id: "xq-cangchan-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang cẳng chân tư thế nghiêng",
+    tuKhoa: ["cang chan nghieng", "tibia fibula lateral", "xuong chay", "xuong mac", "nghieng"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Xác định vị trí các tổn thương và dị vật cũng như đánh giá mức độ.",
+        "Bộc lộ sự thẳng trục của các mảnh gãy."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, bên tổn thương nằm dưới; chân đối diện có thể đặt ra phía sau chân bị thương và được hỗ trợ bằng gối hoặc bao cát."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đảm bảo cẳng chân ở tư thế nghiêng thực sự. (Mặt phẳng của xương bánh chè phải vuông góc với tấm nhận ảnh).",
+        "Đảm bảo rằng cả khớp cổ chân và khớp gối cách các đầu mép của tấm nhận ảnh từ 3 đến 5 cm để các tia phân kỳ không đẩy khớp nào ra khỏi tấm nhận ảnh.",
+        "Nếu chi quá dài, đặt cẳng chân theo đường chéo (từ góc này sang góc kia) trên một tấm nhận ảnh để đảm bảo bao gồm cả hai khớp. (Ngoài ra, nếu cần, có thể chụp thêm một phim thứ hai trên tấm nhận ảnh nhỏ hơn tập trung vào khớp gần vị trí chấn thương nhất)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa của cẳng chân."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả hai bên dọc theo bờ ngoài da, với khu trú toàn phần ở hai đầu tấm nhận ảnh để bao gồm tối đa các khớp gối và cổ chân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương chày và xương mác, bao gồm cả khớp cổ chân và khớp gối, phải có trên phim chụp này (hoặc hai phim nếu cần)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế nghiêng thực sự của xương chày và xương mác không bị xoay sẽ bộc lộ lồi củ xương chày ở góc nhìn nghiêng, một phần chỏm trên xương mác bị chồng lấp bởi xương chày, và đường viền của đầu dưới xương mác được nhìn thấy xuyên qua nửa sau của xương chày.",
+        "Các bờ sau của lồi cầu xương đùi phải xuất hiện chồng khít lên nhau.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cangchan-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cangchan-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
+  },
   {
     id: "xq-goi-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp gối thẳng (trước sau)",
-    tuKhoa: ["goi", "khop goi", "knee ap", "banh che"],
+    ten: "Chụp X-quang khớp gối tư thế trước sau",
+    tuKhoa: ["khop goi", "knee ap", "truoc sau", "mam chay", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 11–14 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Đầu dưới xương đùi, đầu trên xương chày và xương mác, khớp gối, xương bánh chè và mô mềm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương, tổn thương hoặc các thay đổi về xương liên quan đến bệnh lý thoái hóa khớp ảnh hưởng đến đầu dưới xương đùi, đầu trên xương chày và xương mác, xương bánh chè và khớp gối.",
+        "Bộc lộ sự thẳng trục của các mảnh gãy."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc nằm ngửa trên bàn chụp hình với đầu gối cần chụp duỗi thẳng và đặt lên phim.",
-        "Điều chỉnh cẳng chân để nó nằm thật đúng ở vị thế trước sau và điều chỉnh cassette sao cho bờ dưới xương bánh chè nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa, không xoay khung chậu; kê gối dưới đầu bệnh nhân; chân phải được duỗi thẳng hoàn toàn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục của cẳng chân và khớp gối thẳng hàng với tia trung tâm và đường giữa của mặt bàn hoặc tấm nhận ảnh.",
+        "Xoay chân vào trong từ 3° đến 5° để có hướng chiếu AP khớp gối thực sự (hoặc cho đến khi đường nối hai lồi cầu trên song song với mặt phẳng của tấm nhận ảnh).",
+        "Đặt bao cát cạnh bàn chân và cổ chân để cố định nếu cần thiết."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm thẳng góc với mặt phim tại trung tâm."
+        "Chỉnh tia trung tâm song song với các diện khớp (mâm chày), tia trung tâm chiếu vuông góc với tấm nhận ảnh."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở hai bên vào các bờ ngoài da và ở hai đầu theo các bờ mép của tấm nhận ảnh."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương đùi, đầu trên xương chày và xương mác được bộc lộ.",
+        "Khe khớp đùi - chày phải mở rộng, với các diện khớp của xương chày được nhìn thấy ở dạng đường thẳng và chỉ bộc lộ một diện tích bề mặt tối thiểu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay, thể hiện qua sự xuất hiện đối xứng của các lồi cầu xương đùi và xương chày cùng với khe khớp.",
+        "Khoảng một nửa trong của chỏm xương mác bị chồng lấp bởi xương chày.",
+        "Lồi củ gian lồi cầu nằm ở giữa hố gian lồi cầu.",
+        "Tia trung tâm và tâm của trường khu trú phải nằm ở giữa khe khớp gối."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-goi-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-goi-truocsau-phim.jpg", caption: "Phim khớp gối trước sau — mẫu" }
+      { src: "images/xq/xq-goi-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-goi-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-goi-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
-
   {
     id: "xq-goi-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp gối nghiêng",
-    tuKhoa: ["goi nghieng", "knee lateral"],
+    ten: "Chụp X-quang khớp gối tư thế nghiêng",
+    tuKhoa: ["khop goi nghieng", "knee lateral", "nghieng", "banh che", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 10–13 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa bờ trên của lồi cầu xương đùi" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Giống tư thế trước sau."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương, các tổn thương và những bất thường ở khe khớp."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm nghiêng về chân bên đau với đầu gối đau đặt lên phim và gập lại một góc 45°.",
-        "Đưa chân lành về phía trước đoạn đặt nó trên bàn chụp hình.",
-        "Điều chỉnh thế nào để bờ dưới xương bánh chè nằm ngay trung tâm phim và bình diện của những lồi cầu thẳng góc với mặt phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tư thế này dành cho những bệnh nhân có thể gập khớp gối từ 20° đến 30°. Thực hiện chụp với bệnh nhân nằm nghiêng, bên tổn thương nằm dưới; kê gối dưới đầu bệnh nhân; đặt vật hỗ trợ dưới đầu gối của chân đối diện đặt phía sau chân đang khảo sát để tránh xoay quá mức."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Điều chỉnh độ xoay của cơ thể và cẳng chân cho đến khi khớp gối ở tư thế nghiêng thực sự (hai lồi cầu trên xương đùi chồng khít trực tiếp lên nhau và mặt phẳng xương bánh chè vuông góc với mặt phẳng tấm nhận ảnh).",
+        "Gập đầu gối từ 20° đến 30° đối với hướng chiếu nằm nghiêng.",
+        "Chỉnh tâm cẳng chân và khớp gối thẳng hàng với tia trung tâm và đường giữa của mặt bàn hoặc tấm nhận ảnh."
+      ]},
+      { tieuDe: "Lưu ý", items: [
+        "Việc gập khớp gối thêm sẽ làm căng các cơ và gân, điều này có thể che khuất những thông tin chẩn đoán quan trọng trong khe khớp. Xương bánh chè sẽ bị kéo vào rãnh gian lồi cầu, đồng thời che khuất chi tiết mô mềm từ tình trạng tràn dịch hoặc sự di lệch đệm mỡ. Việc gập gối thêm cũng có thể dẫn đến sự tách rời các mảnh vỡ trong trường hợp gãy xương bánh chè, nếu có."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa bờ trên của lồi cầu xương đùi, tia trung tâm thẳng góc với mặt phim."
+        "Góc tia trung tâm chếch lên phía đầu từ 5° đến 7° đối với hướng chiếu nằm nghiêng.",
+        "Hướng tia trung tâm vào điểm cách lồi cầu trong xương đùi 2.5 cm về phía dưới."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở hai bên vào các bờ ngoài da, khu trú toàn phần ở hai đầu theo các bờ mép của tấm nhận ảnh để bao gồm tối đa xương đùi, xương chày và xương mác."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương đùi, đầu trên xương chày và xương mác, cùng xương bánh chè được bộc lộ ở góc nhìn nghiêng.",
+        "Khớp đùi - bánh chè và khớp gối phải mở rộng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Việc xoay quá mức hoặc xoay chưa đủ có thể được xác định bằng cách nhận biết củ cơ khép trên lồi cầu trong, nếu có thể nhìn thấy, và bằng mức độ chỏm xương mác bị chồng lấp bởi xương chày (xoay quá mức thì chỏm mác ít bị chồng lấp hơn; xoay chưa đủ thì chồng lấp nhiều hơn).",
+        "Tư thế nghiêng thực sự của khớp gối không bị xoay thể hiện các bờ sau của hai lồi cầu xương đùi chồng khít trực tiếp lên nhau.",
+        "Xương bánh chè phải được nhìn thấy ở góc nhìn nghiêng với khe khớp đùi - bánh chè mở.",
+        "Góc tia trung tâm chếch lên đầu từ 5° đến 10° sẽ dẫn đến sự chồng khít trực tiếp của các bờ dưới của các lồi cầu đùi.",
+        "Khớp gối nằm ở trung tâm của trường khu trú."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-goi-nghieng-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-goi-nghieng-phim.jpg", caption: "Phim khớp gối nghiêng — mẫu" }
+      { src: "images/xq/xq-goi-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-goi-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-goi-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
-
   {
-    id: "xq-goi-beclere",
+    id: "xq-goi-chiuluc",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp gối tư thế Béclère (hố liên lồi cầu)",
-    tuKhoa: ["beclere", "ho lien loi cau", "tunnel", "goi ngoi"],
+    ten: "Chụp X-quang khớp gối tư thế trước sau hai bên chịu lực",
+    tuKhoa: ["khop goi chiu luc", "knee weight bearing", "hai ben", "thoai hoa", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 11–14 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng chịu lực" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay bờ dưới xương bánh chè và hướng tia trung tâm về phía đầu một góc từ 30°-35°" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tư thế này giúp ta đặc biệt nhìn thấy hố liên lồi cầu của xương đùi."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khe khớp đùi - chày của khớp gối được bộc lộ để khảo sát khả năng thoái hóa sụn hoặc các bệnh lý khớp gối khác.",
+        "Chụp cả hai khớp gối trên cùng một lần phơi nhiễm để so sánh."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi trên bàn chụp hình với hai tay chống xuống bàn, thân hình hơi ngả về phía sau, chân lành duỗi thẳng và đầu gối bên cần chụp gập lại tạo thành một góc 60°.",
-        "Dùng một cassette cong đặt dưới hốm khoeo chân."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế đứng trên bục gắn liền hoặc ghế đẩu để đưa bệnh nhân lên đủ cao cho chùm tia X ngang.",
+        "Đặt hai bàn chân hướng thẳng về phía trước với trọng lượng cơ thể phân bố đều trên cả hai chân; cung cấp tay vịn để bệnh nhân đứng vững."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm và trục của cả hai cẳng chân và khớp gối thẳng hàng với tia trung tâm và đường giữa của mặt bàn cũng như tấm nhận ảnh; chiều cao tấm nhận ảnh được điều chỉnh theo tia trung tâm."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "LƯU Ý: tài liệu gốc in 25 kVp cho tư thế Béclère (nghi lỗi in) — đã dùng 52 kVp như tư thế Camp–Coventry cùng mục đích khảo sát hố liên lồi cầu; đề nghị Trưởng khoa/KTV trưởng xác nhận.",
-        "Ngắm đầu đèn ngay bờ dưới xương bánh chè và hướng tia trung tâm về phía đầu một góc từ 30°-35°."
+        "Chỉnh tia trung tâm song song với các diện khớp (mâm chày), tia trung tâm chiếu vuông góc với tấm nhận ảnh. Tia trung tâm chiếu vuông góc với tấm nhận ảnh (bệnh nhân có kích thước trung bình), hoặc chếch về phía chân từ 5° đến 10° đối với bệnh nhân gầy, hướng vào điểm giữa hai khớp gối ở mức cách đỉnh xương bánh chè 1.25 cm về phía dưới."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng khớp gối hai bên, bao gồm một phần đầu dưới xương đùi và đầu trên xương chày cho mục đích đánh giá sự thẳng trục."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đầu dưới xương đùi, đầu trên xương chày, xương mác và các khe khớp đùi - chày được bộc lộ ở cả hai bên."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay ở cả hai khớp gối, thể hiện qua sự xuất hiện đối xứng của các lồi cầu xương đùi và lồi cầu xương chày.",
+        "Khoảng một nửa đầu trên xương mác bị xương chày chồng lấp lên.",
+        "Trường khu trú phải được định tâm vào khe khớp gối và bao gồm đủ xương đùi cùng xương chày để xác định trục dọc của các xương dài này nhằm đánh giá sự thẳng trục."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-goi-beclere-ct.jpg", caption: "Tư thế hố liên lồi cầu & hướng tia (Clark's)" },
-      { src: "images/xq/xq-goi-beclere-phim.jpg", caption: "Phim hố liên lồi cầu — mẫu" }
+      { src: "images/xq/xq-goi-chiuluc-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-goi-chiuluc-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
-
   {
     id: "xq-goi-settegast",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang xương bánh chè tiếp tuyến (tư thế Settegast)",
-    tuKhoa: ["settegast", "banh che tiep tuyen", "skyline", "banh che"],
+    ten: "Chụp X-quang khớp gối tư thế tiếp tuyến khảo sát xương bánh chè",
+    tuKhoa: ["banh che tiep tuyen", "patella tangential", "settegast", "hughston", "sunrise", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "45 kVp · 2,5 mAs (bề dày 10–12 cm)" },
+      { ten: "Tư thế", giaTri: "Tiếp tuyến (bánh chè)" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm thẳng góc với mặt khớp đùi bánh chè. Độ bẻ góc của đầu đèn tùy thuộc vào độ gập của đầu gối" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Đây là một tư thế đặc biệt dùng để xem xương bánh chè, những bờ dưới của nó cùng mặt khớp đùi – bánh chè."
+      { tieuDe: "Cảnh báo", items: [
+        "Không nên thực hiện việc gập gối quá mức (Phương pháp Settegast và Hobbs cải tiến) cho đến khi đã loại trừ gãy xương bánh chè bằng các hướng chiếu khác."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm sấp với chân lành duỗi thẳng và chân đau gập lại, động tác gập phải được thực hiện một cách từ từ cho đến khi nào xương bánh chè đứng thẳng góc với mặt phim nếu có thể được.",
-        "Dùng một sợi dây buộc quanh cổ chân đau."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Bốn phương pháp bổ sung cho các hướng chiếu tiếp tuyến của xương bánh chè và khớp đùi - bánh chè được mô tả. Ưu điểm và nhược điểm của mỗi phương pháp đều được ghi nhận. Cả hai bên thường được chụp để so sánh."
       ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn sao cho tia trung tâm thẳng góc với mặt khớp đùi bánh chè. Độ bẻ góc của đầu đèn tùy thuộc vào độ gập của đầu gối."
+      { tieuDe: "Tư thế 1 — Hướng chiếu dưới - trên", items: [
+        "Tư thế bệnh nhân và vùng chụp: Đặt bệnh nhân nằm ngửa, hai chân khép lại, đặt vật hỗ trợ đủ kích thước dưới đầu gối để gập gối 40° đến 45° (hai chân thả lỏng). Đảm bảo không xoay chân. Đặt tấm nhận ảnh nằm nghiêng, tựa lên giữa đùi, nghiêng sao cho vuông góc với tia trung tâm. Sử dụng bao cát và băng keo, hoặc các phương pháp khác để cố định tấm nhận ảnh ở vị trí này. Không khuyến cáo yêu cầu bệnh nhân ngồi dậy để giữ tấm nhận ảnh vì điều này có thể đưa vùng đầu và cổ của bệnh nhân vào đường đi của chùm tia X.",
+        "Tia trung tâm: Hướng tia trung tâm từ dưới lên trên, tạo góc từ 10° đến 15° so với cẳng chân để tiếp tuyến với khớp đùi - bánh chè. Sờ các bờ của xương bánh chè để xác định góc tia trung tâm cụ thể cần thiết để đi qua khe khớp đùi - bánh chè.",
+        "Ưu – nhược điểm: Ưu điểm lớn nhất là không cần thiết bị đặc biệt và bệnh nhân có tư thế khá thoải mái. Nhược điểm duy nhất là khó khăn trong việc giữ tấm nhận ảnh nếu bệnh nhân không thể hợp tác hoàn toàn."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Tư thế 2 — Phương pháp Hughston", items: [
+        "Tư thế bệnh nhân và vùng chụp: Hướng chiếu này có thể thực hiện chụp hai bên trên một tấm nhận ảnh. Đặt bệnh nhân nằm sấp, tấm nhận ảnh đặt dưới đầu gối; từ từ gập gối 55°; yêu cầu bệnh nhân dùng băng gạc để giữ bàn chân, hoặc tựa bàn chân lên thiết bị hỗ trợ (không tựa lên hộp khu trú chùm tia).",
+        "Tia trung tâm: Chỉnh tia trung tâm khoảng 15° đến 20° so với trục dọc của cẳng chân (tiếp tuyến với khớp đùi - bánh chè). Hướng tia trung tâm vào điểm giữa khớp đùi - bánh chè.",
+        "Ưu – nhược điểm: Tư thế này tương đối thoải mái cho bệnh nhân, và cơ tứ đầu đùi có thể được thư giãn. Nhược điểm lớn là yêu cầu tư thế nằm sấp, gây khó khăn cho một số bệnh nhân. Ngoài ra, có thể gây biến dạng hình ảnh do việc căn chỉnh các bộ phận cơ thể khó khăn và sự vướng víu của các hộp khu trú chùm tia lớn khi chỉnh góc bóng X-quang."
+      ]},
+      { tieuDe: "Tư thế 3 — Phương pháp Settegast", items: [
+        "Tư thế bệnh nhân và vùng chụp: Đặt bệnh nhân nằm sấp, với tấm nhận ảnh đặt dưới đầu gối; từ từ gập gối tối thiểu 90°; yêu cầu bệnh nhân giữ băng gạc hoặc băng keo để duy trì tư thế.",
+        "Tia trung tâm: Hướng tia trung tâm tiếp tuyến với khe khớp đùi - bánh chè (15° đến 20° so với cẳng chân). Khoảng cách SID tối thiểu là 102 cm.",
+        "Ưu – nhược điểm: Nhược điểm chính của phương pháp này là việc gập gối quá mức làm căng cơ tứ đầu đùi và kéo xương bánh chè vào rãnh gian lồi cầu, làm giảm giá trị chẩn đoán của hướng chiếu."
+      ]},
+      { tieuDe: "Tư thế 4 — Phương pháp Hobbs cải tiến (tiếp tuyến ngồi trên - dưới)", items: [
+        "Tư thế bệnh nhân và vùng chụp: Phương pháp này có thể thực hiện chụp hai bên trên một tấm nhận ảnh. Cho bệnh nhân ngồi trên ghế, tấm nhận ảnh đặt dưới đầu gối tựa trên bục hoặc vật hỗ trợ để giúp giảm khoảng cách vật thể - phim (OID); hai đầu gối nên được gập lại với bàn chân đặt hơi lùi xuống dưới gầm ghế.",
+        "Tia trung tâm: Chỉnh tia trung tâm vuông góc với tấm nhận ảnh (tiếp tuyến với khớp đùi - bánh chè). Hướng tia trung tâm vào điểm giữa khớp đùi - bánh chè. Khoảng cách SID tối thiểu là 123 đến 128 cm để giảm độ phóng đại do OID tăng.",
+        "Ưu – nhược điểm: Ưu điểm chính là bệnh nhân có thể được khám trong khi ngồi trên ghế, tư thế này cũng ít đòi hỏi phải điều chỉnh bóng X-quang. Nhược điểm chính là đòi hỏi phải gập đầu gối quá mức."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-goi-settegast-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-goi-settegast-ct2.jpg", caption: "Chiều thế (biến thể) & hướng tia" },
-      { src: "images/xq/xq-goi-settegast-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-goi-settegast-ct.png", caption: "Chiều thế — Tư thế 1 (dưới - trên)" },
+      { src: "images/xq/xq-goi-settegast-ct2.png", caption: "Chiều thế — Tư thế 2 (Hughston)" },
+      { src: "images/xq/xq-goi-settegast-ct3.png", caption: "Chiều thế — Tư thế 3 (Settegast)" },
+      { src: "images/xq/xq-goi-settegast-ct4.png", caption: "Chiều thế — Tư thế 4 (Hobbs)" },
+      { src: "images/xq/xq-goi-settegast-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-goi-settegast-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Chương II: Kỹ thuật chụp chi dưới"
   },
 
   {
