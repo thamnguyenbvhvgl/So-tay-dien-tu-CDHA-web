@@ -121,6 +121,11 @@
   .pimg { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin: 4px 0 12px; }
   .pimg img { width: 100%; border: 1px solid var(--line); border-radius: 9px; background:#fff; cursor: zoom-in; }
   .pimg figcaption { font-size: 11.5px; color: var(--text-soft); text-align: center; margin-top: 3px; }
+  /* tách 2 hàng: chiều thế người thật / phim đạt yêu cầu */
+  .psub { font-size: 12.5px; font-weight: 700; color: var(--text); margin: 12px 0 5px; }
+  .pimg.prow { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
+  .pimg.prow figure { flex: 0 1 210px; max-width: 240px; }
+  @media (max-width: 560px) { .pimg.prow figure { flex: 1 1 140px; max-width: none; } }
 
   .placeholder { text-align: center; color: var(--text-soft); padding: 40px 14px; font-size: 14px; }
 
@@ -588,12 +593,23 @@
       if (it.hinhAnh && it.hinhAnh.length) {
         var imgs = it.hinhAnh.filter(function (im) { return im && im.src; });
         if (imgs.length) {
-          h += '<div class="pimg">';
+          var pfig = function (im) {
+            return '<figure style="margin:0"><img loading="lazy" src="' + esc(im.src) + '" alt="' + esc(im.caption || '') + '">' +
+                   (im.caption ? '<figcaption>' + esc(im.caption) + '</figcaption>' : '') + '</figure>';
+          };
+          var gCT = [], gPH = [];
           imgs.forEach(function (im) {
-            h += '<figure style="margin:0"><img loading="lazy" src="' + esc(im.src) + '" alt="' + esc(im.caption || '') + '">' +
-                 (im.caption ? '<figcaption>' + esc(im.caption) + '</figcaption>' : '') + '</figure>';
+            var sl = (im.src || '').toLowerCase(), cl = (im.caption || '').toLowerCase();
+            var isPhim = /-phim\d*\.(png|jpe?g|webp|gif)$/.test(sl) ||
+                         (/\bphim\b|film/.test(cl) && !/chiều thế|hướng tia/.test(cl));
+            (isPhim ? gPH : gCT).push(im);
           });
-          h += '</div>';
+          if (gPH.length && gCT.length) {
+            h += '<div class="psub">Chiều thế (người thật)</div><div class="pimg prow">' + gCT.map(pfig).join('') + '</div>';
+            h += '<div class="psub">Phim đạt yêu cầu</div><div class="pimg prow">' + gPH.map(pfig).join('') + '</div>';
+          } else {
+            h += '<div class="pimg">' + imgs.map(pfig).join('') + '</div>';
+          }
         }
       }
       h += '</div>';

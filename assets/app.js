@@ -221,30 +221,49 @@
       h += "</ul></div>";
     });
     if (it.hinhAnh && it.hinhAnh.length) {
-      var imgTitle = (it.phanHe === "benh-ly") ? "Hình ảnh ca lâm sàng" : "Hình ảnh chiều thế";
+      var imgTitle = (it.phanHe === "benh-ly") ? "Hình ảnh ca lâm sàng" : "Hình ảnh";
       var hasReal = false;
-      h += '<div class="sec"><h3>' + imgTitle + '</h3><div class="img-grid">';
-      it.hinhAnh.forEach(function (im) {
+      var figHtml = function (im) {
         var cap = esc(im.caption || "");
         var src = (im.src || "").toString();
-        h += '<figure class="img-fig">';
+        var s = '<figure class="img-fig">';
         if (src) {
           hasReal = true;
-          h += '<img loading="lazy" src="' + esc(src) + '" alt="' + cap + '">';
+          s += '<img loading="lazy" src="' + esc(src) + '" alt="' + cap + '">';
         } else if (im.enc) {
-          h += '<div class="enc-panel" data-enc="' + esc(im.enc) + '" data-iter="' + (im.iter || 150000) + '">' +
+          s += '<div class="enc-panel" data-enc="' + esc(im.enc) + '" data-iter="' + (im.iter || 150000) + '">' +
                '<div class="enc-lock">🔒 Ảnh ca bệnh thật — cần mật khẩu</div>' +
                '<input type="password" class="enc-pass" placeholder="Nhập mật khẩu" autocomplete="off">' +
                '<button type="button" class="enc-btn">Mở ảnh</button>' +
                '<div class="enc-msg"></div></div>';
         } else {
-          h += '<div class="img-missing">Chưa có ảnh<br><small>chèn ảnh được phép dùng</small></div>';
+          s += '<div class="img-missing">Chưa có ảnh<br><small>chèn ảnh được phép dùng</small></div>';
         }
-        h += '<figcaption>' + cap +
+        s += '<figcaption>' + cap +
              (im.nguon ? '<span class="img-src">Nguồn ảnh: ' + esc(im.nguon) + '</span>' : "") +
              "</figcaption></figure>";
+        return s;
+      };
+      // phân nhóm: chiều thế (người thật) vs phim đạt yêu cầu
+      var gCT = [], gPH = [];
+      it.hinhAnh.forEach(function (im) {
+        var sl = (im.src || "").toLowerCase(), cl = (im.caption || "").toLowerCase();
+        var isPhim = /-phim\d*\.(png|jpe?g|webp|gif)$/.test(sl) ||
+                     (/\bphim\b|film/.test(cl) && !/chiều thế|hướng tia/.test(cl));
+        (isPhim ? gPH : gCT).push(im);
       });
-      h += "</div>";
+      h += '<div class="sec"><h3>' + imgTitle + '</h3>';
+      if (gPH.length && gCT.length) {
+        h += '<h4 class="img-sub">Chiều thế (người thật)</h4><div class="img-grid img-row">';
+        gCT.forEach(function (im) { h += figHtml(im); });
+        h += '</div><h4 class="img-sub">Phim đạt yêu cầu</h4><div class="img-grid img-row">';
+        gPH.forEach(function (im) { h += figHtml(im); });
+        h += "</div>";
+      } else {
+        h += '<div class="img-grid">';
+        it.hinhAnh.forEach(function (im) { h += figHtml(im); });
+        h += "</div>";
+      }
       if (hasReal) h += '<p class="img-hint">Chạm vào ảnh để phóng to.</p>';
       h += "</div>";
     }
