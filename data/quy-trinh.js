@@ -3223,39 +3223,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
-  {
-    id: "xq-schuller",
-    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang tai tư thế Schüller (xương chũm)",
-    tuKhoa: ["schuller", "schüller", "xuong chum", "tai", "mastoid", "viem tai giua"],
-    thongSo: [
-      { ten: "Tia trung tâm", giaTri: "Cách lỗ tai đối diện 7 cm, chếch xuống chân 25–30°" },
-      { ten: "Số thì chụp", giaTri: "2 lần: há miệng & ngậm miệng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "U dây thần kinh VIII; viêm tai giữa cấp/mạn; bệnh lý khớp thái dương hàm; chấn thương nghi vỡ xương đá; cholesteatoma; lỗ dò ống bán khuyên."
-      ]},
-      { tieuDe: "Chiều thế", items: [
-        "Nằm ngửa, chếch về phía cần chụp, vai bên đối diện kê cao.",
-        "Mặt phẳng chính diện song song phim; đầu hơi cúi để mặt phẳng Virchow song song bờ trên phim; lỗ tai ở giữa phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Nằm trong mặt phẳng qua lỗ tai; chiếu vào điểm cách lỗ tai bên đối diện 7 cm, chếch xuống phía chân 25–30°, đi tới lỗ tai bên cần chụp.",
-        "Chụp 2 lần ở thì há miệng và ngậm miệng để khảo sát khớp thái dương hàm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Trung tâm hình có vết tròn sáng (ống lỗ tai trong – ngoài), phía sau là các tế bào chũm.",
-        "Lồi cầu xương hàm ở phía trước lỗ tai, chồng lên hình xương đá."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-schuller-ct.jpg",   caption: "Tư thế xương chũm (Schüller) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-schuller-phim.jpg", caption: "Phim xương chũm (Schüller) — mẫu" }
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
-
   /* ------------------------------------------------------- X-QUANG RĂNG --- */
 
   {
