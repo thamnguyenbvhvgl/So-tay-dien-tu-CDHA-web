@@ -3318,38 +3318,9 @@ window.SOTAY_QUYTRINH = [
   /* -------------------------------------- X-QUANG LỒNG NGỰC – BỤNG ------- */
 
   {
-    id: "xq-thuc-quan-co-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang thực quản cổ nghiêng",
-    tuKhoa: ["thuc quan co", "thuc quan nghieng", "di vat thuc quan"],
-    thongSo: [
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Chiếu ngang so với phim" }
-    ],
-    noiDung: [
-      { tieuDe: "Chiều thế", items: [
-        "Đứng hoặc ngồi trước giá phim, nghiêng về phía bên cần chụp, hai tay xuôi dọc cơ thể.",
-        "Vai bên cần chụp sát giá phim, cằm hơi ngửa.",
-        "Chỉnh mặt phẳng chính diện vuông góc trục cột sống cổ và vào giữa phim theo chiều dọc."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [ "Bóng chiếu ngang so với phim." ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Lấy được toàn bộ đốt sống cổ; thấy rõ đường thực quản (khí/dị vật cản quang nếu có)."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-thuc-quan-co-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-thuc-quan-co-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-thuc-quan-co-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" },
-      { src: "images/xq/xq-thuc-quan-co-nghieng-phim3.png", caption: "Phim đạt yêu cầu (3)" }
-    ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
-  },
-
-  {
     id: "xq-o-bung-thang",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang bụng không chuẩn bị tư thế trước sau, bệnh nhân đứng",
+    ten: "Chụp X-quang bụng không chuẩn bị thế trước - sau với bệnh nhân đứng",
     tuKhoa: ["o bung dung", "bung dung", "muc dich khi", "tac ruot", "khi tu do", "thung tang rong"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Trước sau (AP), bệnh nhân đứng" },
@@ -3401,45 +3372,9 @@ window.SOTAY_QUYTRINH = [
   },
 
   {
-    id: "xq-o-bung-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang ổ bụng không chuẩn bị (nghiêng)",
-    tuKhoa: ["o bung nghieng","bung the nghieng","voi hoa o bung","khoi mo o bung"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 25–30 mAs (bề dày 26–30 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn để tia trung tâm vuông góc với mặt phim tại trung tâm" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Quan sát sự vôi hóa và những khối mờ trong ổ bụng."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm nghiêng với hai đầu gối gập lại.",
-        "Điều chỉnh thân mình bệnh nhân sao cho mặt phẳng dọc giữa song song với cát sét, bụng nằm ngay đường giữa của bàn chụp.",
-        "Hai khuỷu tay bệnh nhân gập lại đưa lên cao ôm lấy đầu.",
-        "Điều chỉnh cát xét sao cho trung tâm phim nằm ngang bờ trên mào chậu."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn để tia trung tâm vuông góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình ảnh rõ nét Thấy toàn bộ ổ bụng tư thế nghiêng từ vòm hoành trở xuống.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-o-bung-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng, tia thẳng đứng)" },
-      { src: "images/xq/xq-o-bung-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
     id: "xq-o-bung-nam-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang bụng tư thế nằm nghiêng, tia ngang trước sau (decubitus)",
+    ten: "Chụp X-quang bụng thế nằm nghiêng tia ngang trước - sau (decubitus)",
     tuKhoa: ["bung nam nghieng", "decubitus", "tia ngang", "khi tu do", "muc dich khi", "nam nghieng trai"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Nằm nghiêng, tia ngang, trước sau (ưu tiên nghiêng trái)" },
@@ -3491,13 +3426,10 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X-quang thông thường 3 — Chương II: Kỹ thuật chụp bụng không chuẩn bị"
   },
 
-  /* ---- Kỹ thuật XQ bổ sung theo tài liệu lỗi (chờ duyệt thông số) ---- */
-
-
   {
     id: "xq-he-tiet-nieu",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang bụng không chuẩn bị tư thế trước sau, bệnh nhân nằm ngửa (hệ tiết niệu – KUB)",
+    ten: "Chụp X-quang bụng không chuẩn bị thế trước - sau với bệnh nhân nằm ngửa (hệ tiết niệu - KUB)",
     tuKhoa: ["kub", "he tiet nieu", "bung khong chuan bi", "soi than", "soi nieu quan", "nam ngua"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Trước sau (AP), nằm ngửa (KUB)" },
