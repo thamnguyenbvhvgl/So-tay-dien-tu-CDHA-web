@@ -400,10 +400,11 @@
       if (n === "Sọ - Mặt" || n === "Răng") return 1;
       if (n === "Cột sống" && rx(/cổ|C1|C2/, t)) return 2;
       if (n === "Lồng ngực - Bụng" && rx(/phổi|ngực|xương ức|thực quản|lồng ngực|sườn|ức đòn|tim phổi/, t) && !rx(/ổ bụng|bụng/, t)) return 3;
-      if (n === "Cột sống" && rx(/ngực/, t)) return 3;
+      if (n === "Lồng ngực") return 3;
+      if (n === "Cột sống" && rx(/ngực/, t) && !rx(/xương cùng|xương cụt|cùng – cụt|cùng cụt/, t)) return 3;
       if (n === "Lồng ngực - Bụng" && rx(/ổ bụng|bụng|tiết niệu|thận|niệu/, t)) return 4;
       if (n === "XQ đặc biệt") return 9;
-      if (n === "Cột sống" && rx(/thắt lưng|L5|S1|cùng cụt/, t)) return 5;
+      if (n === "Cột sống" && rx(/thắt lưng|L5|S1|cùng cụt|cùng – cụt|xương cùng|xương cụt/, t)) return 5;
       if (n === "Chi dưới" && rx(/chậu|háng|khớp mu/, t)) return 5;
       if (n === "Chi trên" || n === "Vai - Đòn") return 6;
       if (n === "Chi dưới") return 7;

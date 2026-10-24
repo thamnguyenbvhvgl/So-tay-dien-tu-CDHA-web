@@ -21,134 +21,1647 @@
 
 window.SOTAY_QUYTRINH = [
 
-  /* ---------------------------------------------------------------- X-QUANG */
+  /* ===================================================================== */
+  /* ==== CHƯƠNG III: KỸ THUẬT CHỤP CỘT SỐNG (nguồn: Kỹ thuật chụp X-quang 2) */
+  /* ===================================================================== */
+
   {
-    id: "xq-so-thang",
-    phanHe: "xquang",
-    modality: "X-quang",
-    nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ thẳng",
-    tuKhoa: ["so", "dau", "hop so", "chau dau", "skull ap"],
+    id: "xq-cotsong-co-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ tư thế trước sau (C1–C7)",
+    tuKhoa: ["cot song co", "cs co thang", "cervical ap", "dot song co", "truoc sau"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs (bề dày 18–21 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng trước – sau (AP)" },
+      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn để tia trung tâm đi xuyên qua u trán giữa và thẳng góc với mặt phim tại trung tâm" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương trán, xoang trán, hốc mắt, xoang sàng và bờ xương đá."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến cột sống cổ đoạn giữa và dưới (từ C3 đến C7).",
+        "Bộc lộ gãy mỏm gai các đốt sống cổ dưới (gãy người xúc đất sét), gãy lún xẹp đốt sống và thoát vị nhân tủy đĩa đệm."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm sấp trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Hai khuỷu tay bệnh nhân gập lại, đặt úp hai bàn tay ở hai bên đầu tại một vị trí thuận lợi và thoải mái.",
-        "Điều chỉnh hai vai bệnh nhân cùng nằm trên mặt phẳng ngang.",
-        "Đặt đầu bệnh nhân trên cát xét với mũi và trán tiếp xúc với cát xét, điều chỉnh đầu sao cho mặt phẳng dọc giữa và đường hốc mắt – lỗ tai vuông góc với cát xét.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho u trán giữa nằm ngay trung tâm cát xét.",
-        "Để giữ yên tư thế chúng ta có thể kê cằm bệnh nhân bằng chính nắm tay bệnh nhân hoặc bằng chiếc khăn tay xếp lại."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm ngửa hoặc đứng, hai tay để xuôi theo thân mình."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Chỉnh đầu bệnh nhân sao cho đường thẳng nối từ bờ dưới của các răng cửa trên đến nền sọ (đỉnh mỏm chũm) vuông góc với bàn và/hoặc tấm nhận ảnh.",
+        "Đường thẳng nối từ đỉnh xương hàm dưới đến nền sọ phải song song với tia trung tâm đã được tạo góc.",
+        "Đảm bảo đầu hoặc lồng ngực không bị xoay."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn để tia trung tâm đi xuyên qua u trán giữa và thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chếch lên phía đầu một góc từ 15 độ đến 20 độ.",
+        "Chiếu tia trung tâm đi vào ngang mức bờ dưới của sụn giáp để đi qua đốt sống C4.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình hộp sọ cân xứng và thấy rõ ràng trên phim.",
-        "Bờ trên xương đá nằm giữa hốc mắt.",
-        "Thấy rõ bản sọ ngoài.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở. Bệnh nhân không được nuốt trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Các thân đốt sống từ C3 đến T2; nhìn thấy rõ khoảng cách giữa các cuống cung và các khe đĩa đệm."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: thể hiện qua các mỏm gai và các khớp ức đòn (nếu thấy được) có khoảng cách bằng nhau tính từ các bờ ngoài của cột sống.",
+        "Xương hàm dưới và nền sọ phải chồng ảnh lên hai đốt sống cổ đầu tiên.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-so-thang-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-so-thang-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-cotsong-co-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-co-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-co-divat",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ tư thế nghiêng khảo sát dị vật",
+    tuKhoa: ["cot song co nghieng", "di vat", "duong tho", "thanh quan", "khi quan", "cervical soft tissue lateral"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng (đứng/ngồi)" },
+      { ten: "kV / mAs", giaTri: "56 kVp · 8 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát tìm dị vật cản quang của thanh quản và khí quản chứa khí, bao gồm cả vùng tuyến giáp, tuyến ức và thực quản đoạn trên."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nên ở tư thế đứng nếu có thể, ngồi hoặc đứng nghiêng (có thể chụp nghiêng phải hoặc nghiêng trái và có thể chụp nằm trên bàn nếu cần thiết)."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tư thế bệnh nhân sao cho đường thở trên nằm ngay chính giữa tia trung tâm và tấm nhận ảnh (thanh quản và khí quản nằm phía trước các đốt sống cổ và ngực).",
+        "Xoay hai vai ra phía sau, hai cánh tay buông thõng và hai bàn tay đan vào nhau để sau lưng.",
+        "Hơi nâng cằm lên và yêu cầu bệnh nhân nhìn thẳng về phía trước.",
+        "Điều chỉnh chiều cao của tấm nhận ảnh sao cho bờ trên của nó ngang mức lỗ tai ngoài."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc vào giữa tấm nhận ảnh, ngang mức đốt sống cổ C6 hoặc C7, tức là điểm giữa của lồi thanh quản sụn giáp.",
+        "Tia trung tâm nằm ở điểm giữa của mặt phẳng đứng dọc giữa và bờ ngoài lồng ngực."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia khu trú vào vùng mô mềm của cổ."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia trong khi bệnh nhân hít vào sâu và chậm để đảm bảo không khí lấp đầy khí quản và đường thở trên."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Thanh quản và khí quản phải chứa đầy khí và được bộc lộ rõ ràng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Việc định tâm cho vùng cổ (thanh quản và khí quản đoạn gần) phải bao gồm lỗ tai ngoài ở bờ trên hình ảnh và đốt sống T2 hoặc T3 ở bờ dưới. Nếu khảo sát chính ở thanh quản đoạn xa và khí quản, cần định tâm thấp hơn để bao trùm khu vực từ C3 đến T4 hoặc T5 trên hình ảnh.",
+        "Bóng của hai vai chủ yếu phải nằm ở phía sau và không được chồng ảnh lên vùng khí quản."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-co-divat-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-divat-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-co-divat-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-dotsong-co-c1c2",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang đốt sống cổ thứ 1 và thứ 2 tư thế trước sau “há miệng”",
+    tuKhoa: ["c1 c2", "dot song co cao", "ha mieng", "open mouth", "odontoid", "mom nha"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau, há miệng (C1–C2)" },
+      { ten: "kV / mAs", giaTri: "70 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý (đặc biệt là gãy xương) liên quan đến C1, C2 và các cấu trúc mô mềm lân cận.",
+        "Bộc lộ các gãy xương mỏm nha và gãy Jefferson."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm ngửa hoặc đứng với hai tay để xuôi theo thân mình. Đặt đầu lên mặt bàn, sử dụng các dụng cụ bất động nếu cần."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Chỉnh đầu bệnh nhân sao cho khi há miệng, đường thẳng nối từ bờ dưới của răng cửa trên đến nền sọ (đỉnh mỏm chũm) vuông góc với bàn và/hoặc tấm nhận ảnh, hoặc tạo góc cho tia trung tâm tương ứng.",
+        "Đảm bảo đầu (góc hàm và đỉnh mỏm chũm cách đều tấm nhận ảnh) hoặc ngực không bị xoay.",
+        "Đảm bảo miệng há rộng tối đa trong khi phát tia. Thực hiện bước này cuối cùng và thao tác nhanh chóng, vì bệnh nhân rất khó duy trì tư thế này."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Tia trung tâm đi thẳng qua giữa miệng đang há.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Mỏm nha và thân đốt sống C2, các khối bên và mỏm ngang của C1, và các khớp đội–trục được bộc lộ qua miệng đang há."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Độ gập/ngửa cổ tối ưu, thể hiện qua sự chồng ảnh của bờ dưới các răng cửa trên lên nền sọ. Cả răng và nền sọ đều không được chồng lên mỏm nha.",
+        "Nếu răng chồng lên phần trên của mỏm nha, hãy chỉnh lại tư thế bằng cách ngửa cổ nhẹ hoặc tạo góc tia trung tâm hơi chếch lên đầu.",
+        "Nếu nền sọ chồng lên phần trên của mỏm nha, hãy chỉnh lại tư thế bằng cách gập cổ nhẹ hoặc tạo góc tia trung tâm hơi chếch về phía chân (nền sọ và/hoặc các răng cửa trên sẽ bị dịch chuyển khoảng 2,5 cm cho mỗi 5° góc chếch về phía chân).",
+        "Không xoay: thể hiện qua khoảng cách bằng nhau từ các khối bên và/hoặc mỏm ngang của C1 đến lồi cầu xương hàm dưới, và mỏm gai của C2 nằm ở chính giữa. Sự xoay có thể tạo ra hình ảnh giống bệnh lý do gây ra các khoảng trống không đều giữa các khối bên và mỏm nha.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-dotsong-co-c1c2-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dotsong-co-c1c2-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-dotsong-co-c1c2-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-co-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ tư thế nghiêng",
+    tuKhoa: ["cot song co nghieng", "cervical lateral", "khe khop lien dot"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng (đứng/ngồi)" },
+      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến cột sống cổ và các cấu trúc mô mềm lân cận, bao gồm thoái hóa cột sống và thoái hóa khớp."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế đứng nghiêng, có thể ngồi hoặc đứng, áp một vai vào tấm nhận ảnh đặt thẳng đứng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng ngang giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm, sao cho bờ trên của tấm nhận ảnh cao hơn lỗ tai ngoài khoảng 3 đến 5 cm.",
+        "Hạ thấp hai vai (có thể cho bệnh nhân xách tạ trọng lượng bằng nhau ở cả hai tay).",
+        "Yêu cầu bệnh nhân thả lỏng và hạ hai vai xuống, đưa ra trước càng nhiều càng tốt (thực hiện bước này cuối cùng ngay trước khi phát tia vì tư thế này khó duy trì).",
+        "Nâng cằm ra trước (để tránh xương hàm dưới chồng ảnh lên các đốt sống phía trên)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Chiếu tia trung tâm theo hướng ngang vào C4 (ngang mức bờ trên sụn giáp)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở cuối thì thở ra gắng sức (để hạ vai xuống mức tối đa)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Thân các đốt sống cổ, khe đĩa đệm, các khối trụ khớp, mỏm gai và khớp mỏm khớp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Nhìn thấy rõ các khe khớp liên đốt sống từ C1 đến C7–T1. Nếu bờ trên của T1 không được bộc lộ, cần chụp thêm các hình ảnh bổ sung như hướng chiếu cổ – ngực nghiêng.",
+        "Các cành lên của xương hàm dưới không được chồng lên C1 đến C2.",
+        "Các khối trụ khớp phải và trái cùng với khớp mỏm khớp của mỗi đốt sống phải chồng khít lên nhau.",
+        "Các thân đốt sống không được bị chồng ảnh bởi các khối trụ khớp và các mỏm gai khi nhìn nghiêng."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-co-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-co-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-co-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ tư thế chếch",
+    tuKhoa: ["cot song co chech", "cervical oblique", "lo gian dot song", "rao lao rpo lpo"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch 45° (ưu tiên chếch trước RAO/LAO)" },
+      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến cột sống cổ và các cấu trúc mô mềm lân cận, bao gồm hẹp lỗ gian đốt sống.",
+        "Nên thực hiện cả hai hướng chiếu chếch phải và chếch trái để so sánh. Các tư thế chếch trước (RAO, LAO) được ưu tiên hơn do giúp giảm liều tia tới tuyến giáp."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Ưu tiên tư thế đứng (ngồi hoặc đứng), nhưng có thể thực hiện ở tư thế nằm nếu tình trạng bệnh nhân bắt buộc."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đặt hai tay bệnh nhân xuôi theo thân mình; nếu bệnh nhân nằm, hãy đặt hai tay theo cách cần thiết để giúp duy trì tư thế.",
+        "Xoay thân người và đầu thành tư thế chếch 45 độ. Sử dụng thước đo độ hoặc dụng cụ đo góc khác nếu cần thiết để đảm bảo góc 45°.",
+        "Nâng cằm ra trước để tránh xương hàm dưới chồng ảnh lên các đốt sống. Việc nâng cằm quá cao sẽ làm nền sọ chồng lên đốt sống C1."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Chếch trước (RAO, LAO): Hướng tia trung tâm chếch 15° về phía chân vào C4 (ngang mức bờ trên sụn giáp).",
+        "Chếch sau (RPO, LPO): Hướng tia trung tâm chếch 15° lên phía đầu vào C4."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Chếch trước: Lỗ gian đốt sống và cuống cung ở bên gần tấm nhận ảnh nhất.",
+        "Chếch sau: Lỗ gian đốt sống và cuống cung ở bên xa tấm nhận ảnh nhất."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các khe đĩa đệm và các lỗ gian đốt sống cần khảo sát (từ C2 đến C7) phải mở rộng và đồng đều về kích thước cũng như hình dạng.",
+        "Các cuống cung cần khảo sát phải được thể hiện ở dạng nhìn nghiêng hoàn toàn, còn ở phía đối diện, các cuống cung nhìn thẳng trực diện phải nằm thẳng hàng trên đường giữa của thân đốt sống cổ.",
+        "Các cuống cung nhìn thẳng trực diện thẳng hàng ở đường giữa thân đốt sống cổ và có thể quan sát được các khớp mỏm khớp cho thấy sự xoay quá mức; các lỗ gian đốt sống và cuống cung bị che khuất cho thấy sự xoay chưa đủ.",
+        "Cành lên của xương hàm dưới không được chồng ảnh lên các đốt sống cổ phía trên và nền sọ không được chồng lên đốt sống C1."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-co-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-co-chech-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-co-cui-ngua",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống cổ tư thế động cúi, ngửa",
+    tuKhoa: ["cot song co cui ngua", "chuc nang", "flexion extension", "dong"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng, cúi tối đa & ngửa tối đa" },
+      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Cảnh báo", items: [
+        "Tuyệt đối không thực hiện các tư thế này trên bệnh nhân chấn thương cho đến khi được bác sĩ cho phép sau khi đã đánh giá hình ảnh X-quang chụp nghiêng tia ngang hoặc chụp cắt lớp vi tính cột sống cổ."
+      ]},
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát chức năng để đánh giá biên độ vận động trước – sau của các đốt sống.",
+        "Theo dõi sau phẫu thuật làm cứng khớp cột sống."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế đứng nghiêng, có thể ngồi hoặc đứng, hai tay buông thõng hai bên."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng ngang giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo tư thế nghiêng hoàn toàn, không xoay khung chậu, vai hoặc đầu.",
+        "Thả lỏng và hạ hai vai xuống càng thấp càng tốt (có thể cho bệnh nhân xách tạ ở mỗi tay).",
+        "Tư thế cúi tối đa: Yêu cầu bệnh nhân gập cằm xuống cho đến khi chạm ngực hoặc gập hết mức có thể chịu đựng (không để bệnh nhân rướn người về phía trước để đảm bảo toàn bộ cột sống cổ nằm trong vùng chụp).",
+        "Tư thế ngửa tối đa: Nâng cằm và ngả đầu ra sau hết mức có thể (không để bệnh nhân ngả người về phía sau để đảm bảo toàn bộ cột sống cổ nằm trong vùng chụp)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Chiếu tia trung tâm theo hướng ngang vào C4 (ngang mức bờ trên sụn giáp)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở cuối thì thở ra gắng sức.",
+        "Lưu ý: Các tư thế này gây khó chịu cho bệnh nhân; không giữ bệnh nhân ở các tư thế này lâu hơn mức cần thiết."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Phải bao gồm từ C1 đến C7 trên hình ảnh, mặc dù C7 có thể không được bộc lộ hoàn toàn ở một số bệnh nhân."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay đầu, thể hiện qua sự chồng khít của các cành lên xương hàm dưới.",
+        "Tư thế cúi tối đa: Các mỏm gai phải tách rời nhau rõ rệt.",
+        "Tư thế ngửa tối đa: Các mỏm gai phải nằm sát nhau."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-co-cuingua-ct.png", caption: "Chiều thế — cúi tối đa" },
+      { src: "images/xq/xq-cotsong-co-cuingua-ct2.png", caption: "Chiều thế — ngửa tối đa" },
+      { src: "images/xq/xq-cotsong-co-cuingua-phim.png", caption: "Phim đạt yêu cầu (cúi & ngửa)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-nguc-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống ngực tư thế trước sau",
+    tuKhoa: ["cot song nguc thang", "thoracic spine ap", "dot song nguc"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP)" },
+      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến cột sống ngực, chẳng hạn như gãy lún xẹp, bán trật khớp hoặc gù cột sống."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa (ưu tiên) với hai tay để xuôi theo thân mình và đầu đặt trên bàn hoặc trên một chiếc gối mỏng. Nếu bệnh nhân không thể chịu đựng được tư thế nằm ngửa, cho bệnh nhân đứng với hai tay buông xuôi và trọng lượng cơ thể phân bố đều trên hai chân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Gập hai đầu gối và khớp háng để làm giảm độ cong sinh lý của cột sống ngực.",
+        "Đảm bảo lồng ngực hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào T7 hoặc dưới góc ức khoảng 3–5 cm. Việc định hướng tâm tương tự như khi chụp X-quang ngực hướng chiếu trước sau."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra. Việc thở ra làm giảm thể tích khí trong lồng ngực giúp độ sáng đồng đều hơn."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Thân các đốt sống ngực, khe khớp liên đốt sống, mỏm gai và mỏm ngang, các cung sau xương sườn và các khớp sườn – đốt sống."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Cột sống từ C7 đến L1 nằm ở chính giữa tấm nhận ảnh.",
+        "Không xoay, thể hiện qua các khớp ức đòn có khoảng cách bằng nhau tính từ cột sống.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-nguc-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-nguc-thang-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-nguc-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống ngực tư thế nghiêng",
+    tuKhoa: ["cot song nguc nghieng", "thoracic spine lateral"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến cột sống ngực, chẳng hạn như gãy lún xẹp, bán trật khớp hoặc gù cột sống."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm nghiêng (ưu tiên), đầu gối lên gối và gập hai đầu gối. Đối với tư thế đứng, đặt hai tay duỗi thẳng ra trước, trọng lượng cơ thể phân bố đều trên hai chân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh nửa sau của lồng ngực (nằm giữa mặt phẳng đứng ngang giữa và bờ sau của lồng ngực) thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Nâng hai cánh tay bệnh nhân tạo thành góc vuông với cơ thể, gập khuỷu tay.",
+        "Kê đệm dưới eo sao cho toàn bộ cột sống gần như song song với mặt bàn. Sờ các mỏm gai để xác định độ thẳng hàng.",
+        "Gập khớp háng và đầu gối, kê đệm giữa hai đầu gối.",
+        "Đảm bảo hai vai hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với trục dọc của cột sống ngực.",
+        "Hướng tia trung tâm vào T7 hoặc dưới mỏm gai đốt sống cổ 7 khoảng 18 đến 21 cm."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở hai cạnh dọc theo cấu trúc giải phẫu (khu trú cả bốn cạnh nếu có thể)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Sử dụng kỹ thuật thở hoặc nín thở ở cuối thì thở ra gắng sức. Kỹ thuật thở rất hữu ích để làm mờ các vân phổi và bờ xương sườn không mong muốn chồng lên các đốt sống ngực nếu bệnh nhân có thể hợp tác."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Thân các đốt sống ngực, các khe khớp liên đốt sống và các lỗ gian đốt sống. Từ T1 đến T3 sẽ không được bộc lộ rõ. Thực hiện chụp hướng chiếu cổ – ngực nghiêng (tư thế người bơi) nếu cần khảo sát đặc biệt các đốt sống ngực trên."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các khe đĩa đệm phải mở rộng.",
+        "Không xoay, thể hiện qua sự chồng khít của các bờ sau thân đốt sống. Do sự gia tăng khoảng cách từ vật thể đến phim ở một bên, các cung sau xương sườn sẽ không chồng khít hoàn toàn, đặc biệt ở những bệnh nhân có lồng ngực rộng. Không xoay khi khoảng cách giữa các cung sau xương sườn nhỏ hơn 1,25 cm."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-nguc-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-nguc-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-nguc-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống ngực tư thế chếch",
+    tuKhoa: ["cot song nguc chech", "thoracic spine oblique", "khop mom khop", "lien mau"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch 70° so mặt bàn (ưu tiên chếch trước)" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý liên quan đến các khớp mỏm khớp (khớp liên mấu) của cột sống ngực.",
+        "Cần thực hiện cả hai hướng chiếu chếch phải và chếch trái để so sánh.",
+        "Hình ảnh có thể chụp ở tư thế chếch sau hoặc chếch trước. Các tư thế chếch trước được khuyến cáo vì giúp giảm đáng kể liều lượng bức xạ tới tuyến vú."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Khởi đầu đặt bệnh nhân ở tư thế nằm nghiêng (được ưu tiên hơn), đầu kê trên gối và hai đầu gối gập lại. Đối với tư thế đứng, đảm bảo trọng lượng cơ thể phân bố đều trên hai chân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay cơ thể 20° so với tư thế nghiêng hoàn toàn để tạo thành một góc chếch 70° so với mặt bàn. Đảm bảo hai vai và khung chậu xoay đều nhau.",
+        "Gập khớp háng, đầu gối và cánh tay để tạo sự ổn định theo yêu cầu.",
+        "Chỉnh cột sống thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Chếch sau (nằm): Đưa cánh tay gần mặt bàn nhất lên trên và ra trước; cánh tay gần bóng phát tia nhất đặt hướng xuống dưới và ra sau.",
+        "Chếch trước (nằm): Đưa cánh tay gần mặt bàn nhất hướng xuống dưới và ra sau; cánh tay gần bóng phát tia nhất đặt hướng lên trên và ra trước.",
+        "Đứng chếch trước: Trọng lượng phân bố đều hai chân; xoay toàn bộ cơ thể, hai vai và khung chậu 20° ra trước so với tư thế nghiêng; gập khuỷu và đặt cánh tay gần tấm nhận ảnh nhất lên hông; nâng cánh tay đối diện tựa lên đỉnh đầu."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào T7 hoặc dưới góc ức khoảng 5 cm."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở hai cạnh dọc theo cấu trúc giải phẫu (khu trú cả bốn cạnh nếu có thể)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở cuối thì thở ra gắng sức."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Các khớp mỏm khớp: Các tư thế chếch trước bộc lộ các khớp mỏm khớp nằm ở phía xa bóng phát (gần phim); các tư thế chếch sau bộc lộ các khớp mỏm khớp nằm ở phía gần bóng phát (xa phim)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các khớp mỏm khớp của bên cần khảo sát phải mở rộng. Tuy nhiên, mức độ gù của cột sống sẽ quyết định có bao nhiêu khớp mỏm khớp được nhìn thấy rõ ràng."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-nguc-chech-ct.png", caption: "Chiều thế — nằm chếch" },
+      { src: "images/xq/xq-cotsong-nguc-chech-ct2.png", caption: "Chiều thế — đứng chếch" },
+      { src: "images/xq/xq-cotsong-nguc-chech-phim.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-tl-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống thắt lưng tư thế trước sau",
+    tuKhoa: ["cot song that lung thang", "lumbar ap", "l4 l5", "mao chau"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP), có thể PA/đứng" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của đốt sống thắt lưng, bao gồm gãy xương, vẹo cột sống và các quá trình tân sinh (khối u)."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa với hai tay để xuôi theo thân mình và đầu đặt trên gối (cũng có thể thực hiện ở tư thế nằm sấp hoặc đứng).",
+        "Việc gập nhẹ hai đầu gối giúp làm thẳng cột sống, từ đó mở rộng các khe đĩa đệm gian đốt sống.",
+        "Có thể chụp PA (nằm sấp) giúp đặt các khe gian đốt sống gần như song song hơn với chùm tia phân kỳ. Tư thế đứng hữu ích để thể hiện trạng thái chịu lực tự nhiên của cột sống."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc lưới lọc tia.",
+        "Gập hai đầu gối và khớp háng để làm giảm độ cong sinh lý ưỡn của cột sống.",
+        "Đảm bảo lồng ngực hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm ngang mức mào chậu (khoảng gian đốt L4–L5)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Thân các đốt sống thắt lưng, các khớp gian đốt sống, mỏm gai và mỏm ngang, khớp cùng chậu và xương cùng được bộc lộ.",
+        "Bao gồm từ khoảng T11 đến phần xa của xương cùng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Bệnh nhân không bị xoay, thể hiện qua các khớp cùng chậu cách đều các mỏm gai, các mỏm gai nằm trên đường giữa của cột sống và các mỏm ngang có chiều dài bằng nhau."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-tl-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-tl-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-tl-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống thắt lưng tư thế nghiêng",
+    tuKhoa: ["cot song that lung nghieng", "lumbar lateral", "l5 s1", "truot dot song"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của đốt sống thắt lưng bao gồm gãy xương, trượt đốt sống, các quá trình tân sinh (khối u) và loãng xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, đầu kê trên gối, hai đầu gối gập lại, kê đệm giữa hai đầu gối và mắt cá chân để duy trì tư thế nghiêng hoàn toàn và đảm bảo thoải mái.",
+        "Bệnh nhân khung chậu rộng và lồng ngực hẹp có thể cần góc tia trung tâm chếch về phía chân 5°–8° ngay cả khi đã kê đệm.",
+        "Nếu có vẹo cột sống sang bên, đặt bệnh nhân nằm nghiêng sao cho phần lõm (hoặc phần lồi) của cột sống hướng xuống dưới để mở rộng các khe đĩa đệm tốt hơn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc lưới lọc tia.",
+        "Gập hai đầu gối và khớp háng để làm giảm độ cong sinh lý ưỡn của cột sống.",
+        "Đảm bảo lồng ngực hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm ngang mức mào chậu (khoang gian đốt L4–L5). Hướng chiếu này bao gồm các đốt sống thắt lưng, xương cùng và có thể cả xương cụt."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Các lỗ gian đốt sống từ L1 đến L4, thân các đốt sống, khớp gian đốt sống, mỏm gai và bản lề L5–S1. Tùy kích thước tấm nhận ảnh, toàn bộ xương cùng cũng có thể được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Cột sống nằm song song với tấm nhận ảnh, thể hiện qua các lỗ gian đốt sống và khe khớp gian đốt sống mở rộng.",
+        "Không xoay, thể hiện qua sự chồng khít của các khuyết ngồi lớn và bờ sau thân đốt sống."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-tl-nghieng-ct2.png", caption: "Chiều thế — minh hoạ góc tia 5° về chân" },
+      { src: "images/xq/xq-cotsong-tl-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-tl-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống thắt lưng tư thế chếch",
+    tuKhoa: ["cot song that lung chech", "lumbar oblique", "ho eo", "cho scottie", "khuyet eo cung sau"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch 45° (RPO/LPO hoặc RAO/LAO)" },
+      { ten: "kV / mAs", giaTri: "76 kVp · 25 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khuyết eo cung sau (ví dụ: hở eo đốt sống).",
+        "Cần thực hiện cả hai hướng chiếu chếch phải và chếch trái."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa hơi nghiêng (chếch sau phải và chếch sau trái) hoặc nằm sấp hơi nghiêng (chếch trước phải và chếch trước trái), hai tay duỗi thẳng và đầu đặt trên gối."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay cơ thể 45° và chỉnh cột sống thẳng trục với đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo hai vai và khung chậu xoay đều nhau. Gập đầu gối để tạo sự ổn định và đưa cánh tay nằm xa tấm nhận ảnh nhất vắt ngang qua ngực.",
+        "Kê đệm bọt biển thấu quang dưới vai và khung chậu để duy trì tư thế, tránh bệnh nhân bám vào mép bàn gây kẹt ngón tay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào L3 ngang mức bờ sườn dưới (trên mào chậu khoảng 3–5 cm) và cách gai chậu trước trên của bên được nâng cao vào trong khoảng 5 cm."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Quan sát được các khớp mỏm khớp (chếch sau phải/trái bộc lộ các khớp nằm sát phim; chếch trước phải/trái bộc lộ các khớp nằm xa phim)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Bệnh nhân xoay chính xác 45° thể hiện qua các khớp mỏm khớp mở rộng và cuống cung (mắt của “chó Scottie”) nằm giữa đường giữa và bờ trước của thân đốt sống.",
+        "Cuống cung nằm lùi về phía sau trên thân đốt sống cho thấy xoay quá mức; cuống cung nằm lệch ra phía trước cho thấy xoay chưa đủ."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-cotsong-tl-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cotsong-tl-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích — “chó Scottie”)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cstl-gap-uon",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang cột sống thắt lưng tư thế động gập, ưỡn",
+    tuKhoa: ["cot song that lung gap uon", "chuc nang", "flexion extension lumbar", "dong"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng, gập tối đa & ưỡn tối đa" },
+      { ten: "kV / mAs", giaTri: "76 kVp · 25 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Đánh giá khả năng vận động tại vị trí làm cứng khớp cột sống.",
+        "Thu được hai hình ảnh với bệnh nhân ở tư thế nghiêng (một hình cúi tối đa và một hình ngửa tối đa)."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, đầu kê trên gối, hai đầu gối gập lại, có đệm lót giữa hai đầu gối.",
+        "Đặt bờ dưới của tấm nhận ảnh thấp hơn mào chậu khoảng 3–5 cm.",
+        "Có thể thực hiện với bệnh nhân đứng thẳng hoặc ngồi trên ghế đẩu. Khung chậu giữ cố định tối đa, đóng vai trò điểm tựa (điểm xoay) trong suốt quá trình thay đổi tư thế."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng ngang giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Gập tối đa: Sử dụng khung chậu làm điểm tựa, yêu cầu bệnh nhân cuộn tròn người (gập về phía trước) và kéo hai chân lên cao nhất có thể.",
+        "Ưỡn tối đa: Sử dụng khung chậu làm điểm tựa, yêu cầu bệnh nhân di chuyển thân và hai chân ra phía sau xa nhất có thể để ưỡn tối đa trục dọc cơ thể. Đảm bảo lồng ngực/khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào giữa tấm nhận ảnh."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Các đốt sống ngực và thắt lưng, bao gồm khoảng 3–5 cm mào chậu."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Cột sống nằm song song với tấm nhận ảnh, thể hiện qua các lỗ gian đốt sống và khe khớp gian đốt sống mở rộng.",
+        "Không xoay, thể hiện qua sự chồng khít của các khuyết ngồi lớn và bờ sau thân đốt sống."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cotsong-tl-gapuon-ct.png", caption: "Chiều thế — gập & ưỡn" },
+      { src: "images/xq/xq-cotsong-tl-gapuon-phim.png", caption: "Phim đạt yêu cầu (gập & ưỡn)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-cungcut-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang xương cùng tư thế trước sau",
+    tuKhoa: ["xuong cung thang", "sacrum ap", "khop cung chau"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP)" },
+      { ten: "kV / mAs", giaTri: "66 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương cùng, bao gồm cả gãy xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa, hai tay để xuôi theo thân mình, đầu kê gối, hai chân duỗi thẳng và có đệm lót dưới khoeo chân để thoải mái."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chếch lên phía đầu một góc 15°–20°.",
+        "Chiếu tia trung tâm vào điểm cách khớp mu 5 cm về phía trên."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương cùng, khớp cùng chậu và khe đĩa đệm gian đốt sống L5–S1."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay, thể hiện qua sự thẳng hàng của mào cùng giữa và xương cụt với khớp mu.",
+        "Sự thẳng hàng chính xác của xương cùng và tia trung tâm giúp bộc lộ xương cùng không bị biến dạng thu ngắn; xương mu và các lỗ cùng không bị chồng lên nhau."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-xuongcung-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuongcung-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-xuongcung-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-cut-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang xương cụt tư thế trước sau",
+    tuKhoa: ["xuong cut thang", "coccyx ap"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP)" },
+      { ten: "kV / mAs", giaTri: "66 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương cụt, bao gồm cả gãy xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa, hai tay để xuôi theo thân mình, đầu kê gối, hai chân duỗi thẳng và có đệm lót dưới khoeo chân để thoải mái."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chếch về phía chân một góc 10°–15°.",
+        "Chiếu tia trung tâm vào điểm cách khớp mu 5 cm về phía trên."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương cụt."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Sự thẳng hàng chính xác của xương cụt và tia trung tâm giúp bộc lộ xương cụt không bị chồng ảnh và được chiếu lên phía trên xương mu.",
+        "Các đốt xương cụt phải mở rộng. Nếu không, chúng có thể đã dính lại hoặc cần tăng góc tia trung tâm (độ cong của xương cụt càng lớn càng cần góc lớn).",
+        "Xương cụt phải cách đều các thành bên của lỗ chậu hông, cho thấy bệnh nhân không bị xoay."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-xuongcut-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuongcut-thang-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  {
+    id: "xq-cotsong-cungcut-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
+    ten: "Chụp X-quang xương cùng cụt tư thế nghiêng",
+    tuKhoa: ["cung cut nghieng", "sacrum coccyx lateral"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "76 kVp · 30 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương cùng và xương cụt, bao gồm cả gãy xương.",
+        "Lưu ý: Xương cùng và xương cụt thường được chụp cùng nhau. Các hướng chiếu AP riêng biệt là bắt buộc do yêu cầu các góc tia trung tâm khác nhau, nhưng hướng chiếu nghiêng có thể thực hiện chỉ với một lần phát tia nếu định tâm cẩn thận để bao gồm cả xương cùng và xương cụt."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, đầu kê trên gối và hai đầu gối gập lại."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc của xương cùng và xương cụt thẳng trục với tia trung tâm và đường giữa của bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào điểm cách gai chậu trước trên khoảng 8–10 cm về phía sau."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương cùng, khớp L5–S1 và xương cụt."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay, thể hiện qua sự chồng khít của các khuyết ngồi lớn và chỏm xương đùi."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-cungcut-nghieng-ct.png", caption: "Chiều thế — tổng quát" },
+      { src: "images/xq/xq-cungcut-nghieng-ct2.png", caption: "Chiều thế — cận cảnh" },
+      { src: "images/xq/xq-cungcut-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-cungcut-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
+  },
+
+  /* ===================================================================== */
+  /* ==== CHƯƠNG IV: KỸ THUẬT CHỤP LỒNG NGỰC (nguồn: Kỹ thuật chụp X-quang 2) */
+  /* ===================================================================== */
+
+  {
+    id: "xq-suon-ap",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang xương sườn tư thế trước sau",
+    tuKhoa: ["xuong suon", "ribs ap", "suon truoc sau", "tren co hoanh", "duoi co hoanh"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP)" },
+      { ten: "kV / mAs", giaTri: "55–60 kVp · 5–10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương sườn, bao gồm gãy xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tư thế đứng được ưu tiên cho phần trên cơ hoành nếu tình trạng bệnh nhân cho phép; nằm ngửa cho phần dưới cơ hoành."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của lưới lọc tia hoặc bàn/giá chụp Bucky đứng.",
+        "Xoay hai vai về phía trước để tách hai xương bả vai ra khỏi các trường phổi.",
+        "Nâng cằm để tránh chồng ảnh lên các xương sườn trên; nhìn thẳng về phía trước.",
+        "Đảm bảo lồng ngực hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Trên cơ hoành: Tia trung tâm vuông góc với tấm nhận ảnh, ngang mức T7 (bờ trên tấm nhận ảnh cao hơn vai khoảng 4 cm).",
+        "Dưới cơ hoành: Tia trung tâm vuông góc, hướng ngang mức mũi ức (bờ dưới tấm nhận ảnh ngang mức mào chậu)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì hít vào đối với các xương sườn trên cơ hoành và nín thở ở thì thở ra đối với các xương sườn dưới cơ hoành."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Trên cơ hoành: Phải quan sát được các xương sườn từ 1 đến 10.",
+        "Dưới cơ hoành: Phải quan sát được các xương sườn từ 9 đến 12."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Lồng ngực không có dấu hiệu bị xoay.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-suon-ap-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-suon-ap-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-suon-ap-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-suon-pa",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang xương sườn tư thế sau trước",
+    tuKhoa: ["xuong suon sau truoc", "ribs pa"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Sau trước (PA)" },
+      { ten: "kV / mAs", giaTri: "55–60 kVp · 5–10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương sườn, bao gồm gãy xương (ưu tiên cho các xương sườn trên cơ hoành)."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Ưu tiên tư thế đứng hoặc nằm sấp nếu cần thiết, với hai tay buông thõng hai bên."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của lưới lọc tia hoặc bàn/giá chụp Bucky đứng.",
+        "Xoay hai vai về phía trước để tách hai xương bả vai ra khỏi các trường phổi.",
+        "Đảm bảo lồng ngực hoặc khung chậu không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh, hướng vào T7 (dưới mỏm gai đốt sống cổ 7 khoảng 18–20 cm, tương tự chụp X-quang ngực PA).",
+        "Chỉnh tâm tấm nhận ảnh ngang mức tia trung tâm (bờ trên tấm nhận ảnh cao hơn vai khoảng 4 cm)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì hít vào đối với các xương sườn trên cơ hoành và nín thở ở thì thở ra đối với các xương sườn dưới cơ hoành."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Quan sát được các xương sườn từ 1 đến 10 ở trên cơ hoành."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Lồng ngực không có dấu hiệu bị xoay.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-suon-pa-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-suon-pa-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-suon-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang xương sườn tư thế chếch",
+    tuKhoa: ["xuong suon chech", "ribs oblique", "cung nach", "rpo lpo rao lao"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch 45° (RPO/LPO hoặc RAO/LAO)" },
+      { ten: "kV / mAs", giaTri: "55–60 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương sườn, bao gồm gãy xương. Các tư thế chếch bộc lộ phần cung nách của các xương sườn, vùng không nhìn rõ trên các hướng chiếu AP – PA.",
+        "Chấn thương phía sau – ngoài: Các tư thế chếch sau, bên bị tổn thương đặt gần tấm nhận ảnh.",
+        "Chấn thương phía trước – ngoài: Các tư thế chếch trước, bên bị tổn thương đặt xa tấm nhận ảnh."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Ưu tiên tư thế đứng cho các xương sườn trên cơ hoành nếu tình trạng bệnh nhân cho phép và nằm ngửa đối với các xương sườn dưới cơ hoành."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xoay bệnh nhân một góc 45° theo tư thế chếch sau hoặc chếch trước, với bên bị tổn thương nằm sát tấm nhận ảnh nhất (chếch sau) hoặc xa tấm nhận ảnh nhất (chếch trước). Xoay cột sống ra xa vị trí tổn thương.",
+        "Đưa cánh tay của bên nâng cao lên trên đầu; duỗi cánh tay đối diện xuống dưới và ra sau, tránh xa lồng ngực.",
+        "Nếu nằm, gập đầu gối của bên nâng cao để giúp duy trì tư thế.",
+        "Để bộc lộ cung nách các xương sườn bên phải: RPO hoặc LAO. Để bộc lộ bên trái: LPO hoặc RAO."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh, định tâm vào điểm giữa bờ ngoài xương sườn và cột sống.",
+        "Trên cơ hoành: hướng vào vị trí ngang mức T7 (bờ trên tấm nhận ảnh cao hơn vai khoảng 4 cm).",
+        "Dưới cơ hoành: hướng vào vị trí giữa mũi ức và bờ sườn dưới (bờ dưới cassette ngang mức mào chậu)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì hít vào đối với các xương sườn trên cơ hoành và nín thở ở thì thở ra đối với các xương sườn dưới cơ hoành."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Trên cơ hoành: Các xương sườn 1 đến 10 phải được bao gồm và nằm trên cơ hoành.",
+        "Dưới cơ hoành: Các xương sườn 9 đến 12 phải được bao gồm và nằm dưới cơ hoành; phần cung nách của các xương sườn khảo sát được chiếu rõ ra ngoài, cột sống dịch chuyển ra xa vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế chếch 45° chính xác hiển thị rõ phần cung nách của các xương sườn theo hướng nhìn nghiêng, với cột sống đã dịch chuyển ra khỏi vùng khảo sát. Không có sự chồng ảnh lên nhau."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-suon-chech-ct.png", caption: "Chiều thế — đứng, trên cơ hoành" },
+      { src: "images/xq/xq-suon-chech-ct2.png", caption: "Chiều thế — bộc lộ cung nách" },
+      { src: "images/xq/xq-suon-chech-ct3.png", caption: "Chiều thế — dưới cơ hoành (che chì)" },
+      { src: "images/xq/xq-suon-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-suon-chech-phim2.png", caption: "Phim đạt yêu cầu (dưới cơ hoành)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-xuong-uc-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang xương ức tư thế chếch sau trước",
+    tuKhoa: ["xuong uc chech", "sternum rao", "pa oblique sternum"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch sau – trước (RAO 15°–20°)" },
+      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương ức, bao gồm gãy xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đứng (ưu tiên) hoặc nằm sấp hơi xoay người; cánh tay phải buông thõng bên hông, cánh tay trái giơ lên."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt bệnh nhân nằm chếch 15°–20° về phía bên phải (tư thế RAO).",
+        "Chỉnh trục dọc của xương ức thẳng trục với tia trung tâm và đường giữa của bàn hoặc giá chụp Bucky đứng.",
+        "Có thể chụp LPO nếu không chụp được RAO. Nếu bệnh nhân không thể xoay, có thể tạo góc tia trung tâm 15°–20° chéo qua bên phải để chiếu xương ức ra ngoài cột sống, lên trên bóng tim."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào giữa xương ức (cách đường giữa 2,5 cm về bên trái và mũi ức)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Trường khu trú hẹp và dài vào vùng xương ức."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Có thể dùng kỹ thuật thở nếu bệnh nhân hợp tác; nếu không, yêu cầu nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương ức được hiển thị, chồng lên bóng tim."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Sự xoay đúng tư thế thể hiện qua việc xương ức nằm dọc theo cột sống mà không bị chồng bởi các đốt sống. Xương ức không bị biến dạng."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-xuonguc-chech-ct.png", caption: "Chiều thế & hướng tia (RAO)" },
+      { src: "images/xq/xq-xuonguc-chech-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-xuong-uc-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang xương ức tư thế nghiêng",
+    tuKhoa: ["xuong uc nghieng", "sternum lateral"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng (đứng/nằm nghiêng)" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,2 m (khuyến cáo 1,5–1,8 m để giảm phóng đại)" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các bệnh lý của xương ức, bao gồm gãy xương.",
+        "Gãy lún xương ức."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đứng (ưu tiên) hoặc nằm nghiêng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đứng: Đặt bệnh nhân đứng hoặc ngồi, hai vai và hai cánh tay kéo ra sau.",
+        "Nằm nghiêng: Hai cánh tay giơ lên qua đầu và giữ hai vai đưa ra sau.",
+        "Chỉnh trục dọc của xương ức thẳng trục với tia trung tâm và đường giữa của lưới lọc tia hoặc bàn/giá chụp Bucky đứng.",
+        "Đảm bảo tư thế nghiêng hoàn toàn, không bị xoay."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào giữa xương ức và mũi ức.",
+        "Nên dùng SID 152–183 cm để giảm độ phóng đại của xương ức do tăng khoảng cách vật – phim."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Trường khu trú hẹp và dài vào vùng xương ức."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì hít vào."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ xương ức với sự chồng ảnh tối thiểu của các mô mềm."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Tư thế chính xác, không bị xoay: không có sự chồng ảnh của xương cánh tay, bờ vai hoặc mô mềm lên xương ức; toàn bộ xương ức không bị chồng bởi các xương sườn."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-xuonguc-nghieng-ct.png", caption: "Chiều thế — đứng" },
+      { src: "images/xq/xq-xuonguc-nghieng-ct2.png", caption: "Chiều thế — nằm nghiêng" },
+      { src: "images/xq/xq-xuonguc-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-ucdon-pa",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang khớp ức đòn tư thế sau trước",
+    tuKhoa: ["khop uc don", "sternoclavicular pa", "sc joint"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Sau trước (PA)" },
+      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Bán trật khớp hoặc các bệnh lý khác của khớp ức đòn."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm sấp, đầu kê gối nghiêng sang một bên, hai tay giơ lên cạnh đầu hoặc để xuôi theo thân mình (cũng có thể chụp đứng hướng sau trước)."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của lưới lọc tia hoặc bàn/giá chụp đứng (Bucky).",
+        "Đảm bảo hai vai không bị xoay.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm (dưới mỏm gai đốt sống cổ 7 khoảng 7 cm, ngang mức T2–T3)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc, hướng ngang mức T2–T3, hoặc dưới mỏm gai đốt sống cổ 7 khoảng 7 cm."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng khớp ức đòn."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bờ ngoài của cán ức và phần trong của hai xương đòn được bộc lộ nằm ở hai bên cột sống, nhìn xuyên qua sự chồng ảnh của các xương sườn và hai phổi."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Bệnh nhân không bị xoay, thể hiện qua khoảng cách từ các khớp ức đòn đến cột sống bằng nhau ở cả hai bên.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-ucdon-pa-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-ucdon-pa-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-ucdon-pa-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-ucdon-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang khớp ức đòn tư thế chếch",
+    tuKhoa: ["khop uc don chech", "sternoclavicular oblique", "rao lao sc"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch trước 10°–15° (RAO/LAO)" },
+      { ten: "kV / mAs", giaTri: "56 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Tách khớp, bán trật khớp hoặc các bệnh lý khác của khớp ức đòn."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Nằm sấp, xoay nhẹ lồng ngực (10°–15°) với cánh tay ở bên nâng cao đặt phía trước bệnh nhân và cánh tay đối diện đặt phía sau.",
+        "Xoay 10°–15° ở tư thế chếch trước sẽ bộc lộ tốt nhất khớp ức đòn bên sát phim: RAO bộc lộ khớp bên phải, LAO bộc lộ khớp bên trái. Với độ xoay nhỏ hơn (5°–10°), khớp ức đòn đối diện (xa phim) hiển thị ngay cạnh cột sống."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Với bệnh nhân xoay 10°–15°, căn chỉnh và định tâm mỏm gai cách tia trung tâm và đường giữa của lưới/bàn/Bucky đứng từ 3–5 cm ra phía ngoài (về phía bên được nâng cao)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc ngang mức T2–T3, hoặc dưới mỏm gai đốt sống cổ 7 khoảng 7,5 cm, và cách mặt phẳng đứng dọc giữa 2,5–5 cm ra phía ngoài (về phía bên được nâng cao)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia vào vùng khớp ức đòn."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở ở thì thở ra."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Cán ức, phần trong của hai xương đòn và khớp ức đòn được bộc lộ rõ nhất ở bên nằm sát phim. Khớp ức đòn ở bên xa phim sẽ bị biến dạng thu ngắn."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Bệnh nhân xoay đúng tư thế giúp quan sát khớp ức đòn bên sát phim mà không bị chồng ảnh lên cột sống hoặc cán ức."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-ucdon-chech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-ucdon-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-ucdon-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-long-nguc-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang tim và phổi tư thế sau trước (với bệnh nhân đứng)",
+    tuKhoa: ["phoi", "nguc", "chest pa", "long nguc thang", "cxr", "tim phoi", "phoi thang"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Sau trước (PA), bệnh nhân đứng" },
+      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs (có thể 100–120 kVp kỹ thuật cao áp)" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khi thực hiện ở tư thế đứng, hướng tia sau – trước giúp bộc lộ các bệnh lý tràn dịch màng phổi, tràn khí màng phổi, xẹp phổi và các dấu hiệu nhiễm trùng."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân đứng thẳng, hai chân hơi giang ra, trọng lượng cơ thể phân bố đều trên hai chân.",
+        "Nâng cằm, tì cằm tựa vào tấm nhận ảnh.",
+        "Đặt hai tay chống lên vùng hông thấp, lòng bàn tay hướng ra ngoài, khuỷu tay hơi gập.",
+        "Xoay hai vai về phía trước ép sát vào tấm nhận ảnh để đưa xương bả vai ra khỏi trường phổi; hạ thấp hai vai để đẩy xương đòn xuống dưới đỉnh phổi."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của tấm nhận ảnh, đảm bảo khoảng cách đều nhau giữa thành bên lồng ngực và các mép tấm nhận ảnh.",
+        "Đảm bảo lồng ngực không bị xoay bằng cách đặt mặt phẳng đứng ngang giữa song song với tấm nhận ảnh."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh và chiếu thẳng vào mặt phẳng đứng dọc giữa ngang mức đốt sống T7 (ngang mức góc dưới xương bả vai)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia ở cả bốn cạnh khu trú vào khu vực trường phổi (bờ trên của trường sáng ngang mức mỏm gai đốt sống cổ 7, bờ bên vươn tới mép da bên ngoài)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia vào cuối thì hít vào sâu và nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bao gồm cả hai phổi từ đỉnh phổi đến các góc sườn hoành và khí quản chứa khí từ mức T1 trở xuống.",
+        "Dấu ấn vùng rốn phổi, bóng tim, các mạch máu lớn và lồng ngực xương được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Cằm nâng đủ cao để tránh chồng ảnh lên đỉnh phổi; hai vai xoay đủ về phía trước để tránh xương bả vai chồng lên trường phổi.",
+        "Không xoay: hai khớp ức đòn cách đều đường giữa cột sống; khoảng cách từ bờ ngoài xương sườn đến cột sống bằng nhau ở hai bên.",
+        "Hít vào hết sức: quan sát được tối thiểu 10 cung sau xương sườn nằm trên vòm hoành (nhiều bệnh nhân thấy 11 cung).",
+        "Tâm trường khu trú (tia trung tâm) hướng vào vùng T7 ở hầu hết bệnh nhân."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-pa-ct.png", caption: "Chiều thế & hướng tia (đứng)" },
+      { src: "images/xq/xq-nguc-pa-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-nguc-pa-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-nguc-tai-giuong",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang tim và phổi tư thế trước sau (với bệnh nhân nằm)",
+    tuKhoa: ["nguc ap", "chest ap supine", "tai giuong", "portable", "nam"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (AP), bệnh nhân nằm" },
+      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m (thực tế có thể ngắn hơn khi chụp tại giường)" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Hướng chiếu này bộc lộ các bệnh lý liên quan đến phổi, cơ hoành và trung thất.",
+        "Việc xác định các mức khí – dịch (tràn dịch màng phổi) đòi hỏi tư thế đứng hoàn toàn với tia trung tâm nằm ngang, giống hướng chiếu PA hoặc chụp ngực tư thế nằm nghiêng."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa trên bàn chụp.",
+        "Đẩy hai vai của bệnh nhân về phía trước bằng cách xoay hai cánh tay vào trong."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt tấm nhận ảnh ở dưới hoặc phía sau bệnh nhân; chỉnh tâm tấm nhận ảnh thẳng trục với tia trung tâm (bờ trên tấm nhận ảnh cao hơn vai khoảng 4–5 cm).",
+        "Căn chỉnh bệnh nhân vào giữa tia trung tâm và tấm nhận ảnh; kiểm tra bằng cách nhìn bệnh nhân từ trên xuống, gần vị trí bóng phát tia."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chếch về phía chân để vuông góc với trục dọc của xương ức (thường ± 5° để tránh xương đòn che khuất đỉnh phổi).",
+        "Tia trung tâm hướng ngang mức T7 (hoặc đường liên vú)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia ở cả bốn cạnh khu trú vào khu vực trường phổi (bờ trên của trường sáng ngang mức mỏm gai đốt sống cổ 7)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia vào cuối thì hít vào sâu và nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Tiêu chuẩn tương tự hướng chiếu PA, với ba ngoại lệ: bóng tim to hơn do phóng đại (SID ngắn hơn, khoảng cách tim – phim tăng); hạn chế đánh giá tràn dịch màng phổi; thường chỉ thấy 8–9 cung sau xương sườn trên cơ hoành và hai phổi mờ hơn do không thông khí hoàn toàn."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Góc tia trung tâm chính xác: phải thấy 3 cung sau xương sườn nằm trên xương đòn, cho thấy vùng đỉnh phổi không bị che khuất."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-ap-ct.png", caption: "Chiều thế & hướng tia (nằm ngửa)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-long-nguc-nghieng",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang tim và phổi tư thế nghiêng",
+    tuKhoa: ["long nguc nghieng", "chest lateral", "nguc nghieng"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng (ưu tiên nghiêng trái)" },
+      { ten: "kV / mAs", giaTri: "64 kVp · 15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,2 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Một góc nhìn 90 độ so với hướng chiếu thẳng có thể bộc lộ các bệnh lý nằm phía sau tim, các mạch máu lớn và xương ức."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân đứng thẳng, áp sườn trái vào tấm nhận ảnh trừ khi có triệu chứng ở bên phải (khi đó chụp nghiêng phải nếu bác sĩ yêu cầu).",
+        "Hai tay giơ cao qua đầu, nâng cằm lên."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt bệnh nhân vào trung tâm của tia trung tâm và tấm nhận ảnh ở cả mặt trước và mặt sau.",
+        "Đặt bệnh nhân ở tư thế nghiêng hoàn toàn (mặt phẳng đứng ngang vuông góc và mặt phẳng đứng dọc song song với tấm nhận ảnh).",
+        "Hạ tia trung tâm và tấm nhận ảnh xuống một chút so với tư thế chụp thẳng nếu cần thiết."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc, hướng vào giữa lồng ngực ngang mức đốt sống ngực 7."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia ở cả bốn cạnh khu trú vào khu vực trường phổi (bờ trên của trường sáng ngang mức mỏm gai đốt sống cổ 7)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia vào cuối thì hít vào sâu và nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bao gồm toàn bộ hai phổi từ đỉnh phổi đến các góc sườn hoành và từ xương ức ở phía trước đến các cung sau xương sườn và lồng ngực ở phía sau."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Cằm và hai tay được nâng đủ cao để tránh các mô mềm chồng ảnh quá mức lên đỉnh phổi.",
+        "Vùng rốn phổi nằm ở khoảng trung tâm của tấm nhận ảnh."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-nghieng-ct.png", caption: "Chiều thế — đứng" },
+      { src: "images/xq/xq-nguc-nghieng-ct2.png", caption: "Chiều thế — bệnh nhân không đứng được" },
+      { src: "images/xq/xq-nguc-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-nguc-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-phoi-dinh-uon",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang tim và phổi tư thế đỉnh ưỡn",
+    tuKhoa: ["phoi dinh uon", "lordotic", "apical", "duoi don"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Đỉnh ưỡn (AP lordotic)" },
+      { ten: "kV / mAs", giaTri: "56 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Loại trừ các nốt vôi hóa và khối u nằm dưới xương đòn."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân đứng cách tấm nhận ảnh khoảng 30 cm và ngả người ra sau sao cho hai vai, cổ và mặt sau đầu tựa vào tấm nhận ảnh.",
+        "Hai tay chống lên hông, lòng bàn tay hướng ra ngoài; hai vai xoay về phía trước.",
+        "Nếu bệnh nhân yếu/không đứng vững: chụp AP với bệnh nhân nằm ngửa, hai vai xoay trước, tia trung tâm chếch lên phía đầu 15°–20° hướng vào giữa xương ức."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa thẳng trục với tia trung tâm và đường giữa của tấm nhận ảnh.",
+        "Chỉnh tâm tấm nhận ảnh thẳng trục với tia trung tâm; bờ trên tấm nhận ảnh cao hơn vai khoảng 7–8 cm."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm vuông góc với tấm nhận ảnh, hướng vào giữa xương ức."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia ở cả bốn cạnh khu trú vào khu vực trường phổi (bờ trên của trường sáng ngang mức mỏm gai đốt sống cổ 7)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia vào cuối thì hít vào sâu và nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Phải bao gồm toàn bộ hai trường phổi và hai xương đòn."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Hai xương đòn gần như nằm ngang và nằm phía trên/cao hơn đỉnh phổi, với các đầu trong của xương đòn bị chồng ảnh bởi các cung sườn số 1.",
+        "Các xương sườn biến dạng, các cung sau gần như nằm ngang và chồng ảnh lên các cung trước.",
+        "Không xoay: các đầu ức của hai xương đòn cách đều cột sống ở mỗi bên; bờ ngoài các xương sườn hai bên cách đều cột sống.",
+        "Tâm trường khu trú (tia trung tâm) ở giữa xương ức với giới hạn khu trú thấy rõ ở trên và dưới."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-dinhuon-ct.png", caption: "Chiều thế — đứng ưỡn" },
+      { src: "images/xq/xq-nguc-dinhuon-ct2.png", caption: "Chiều thế — nằm" },
+      { src: "images/xq/xq-nguc-dinhuon-phim.png", caption: "Phim đạt yêu cầu" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  {
+    id: "xq-nguc-chech",
+    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực",
+    ten: "Chụp X-quang tim và phổi tư thế ngực chếch",
+    tuKhoa: ["nguc chech", "chest oblique", "rao lao chest", "tim mach mau lon"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Chếch trước 45° (RAO/LAO; có thể 45°–60°)" },
+      { ten: "kV / mAs", giaTri: "56 kVp · 5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát các bệnh lý liên quan đến hai trường phổi, khí quản và các cấu trúc trung thất.",
+        "Xác định kích thước và đường viền của bóng tim và các mạch máu lớn."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân đứng thẳng, xoay 45° áp vai trước trái vào tấm nhận ảnh (chếch trước trái) hoặc áp vai trước phải (chếch trước phải).",
+        "Gấp cánh tay ở bên gần tấm nhận ảnh nhất, đặt bàn tay chống lên hông, lòng bàn tay hướng ra ngoài.",
+        "Nâng cánh tay đối diện lên, đặt bàn tay tựa lên đầu hoặc giá chụp ngực để giữ thăng bằng, giữ cánh tay giơ cao nhất có thể.",
+        "Bệnh nhân nhìn thẳng về phía trước, nâng cằm.",
+        "Lưu ý: Với các tư thế chếch trước, bên cần khảo sát thường là bên xa tấm nhận ảnh nhất; do đó chếch trước phải bộc lộ phổi trái rõ nhất. Một số khảo sát tim – mạch máu lớn cần xoay 45°–60°; xoay ít hơn (15°–20°) có thể bộc lộ tốt hơn các vùng phổi khác nhau."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Nhìn từ hướng bóng phát tia X, căn chỉnh bệnh nhân vào giữa tia trung tâm và tấm nhận ảnh, với bờ trên tấm nhận ảnh cao hơn mỏm gai đốt sống cổ 7 khoảng 2,5 cm."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc, hướng ngang mức đốt sống ngực 7 (dưới mỏm gai đốt sống cổ 7 khoảng 18–20 cm).",
+        "Tia trung tâm nằm ở điểm giữa của mặt phẳng đứng dọc giữa và bờ ngoài lồng ngực."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Giới hạn chùm tia ở cả bốn cạnh khu trú vào khu vực trường phổi (bờ trên của trường sáng ngang mức mỏm gai đốt sống cổ 7)."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Thực hiện phát tia vào cuối thì hít vào sâu và nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bao gồm cả hai phổi từ đỉnh phổi đến các góc sườn hoành. Nhìn thấy khí quản, các mạch máu lớn và đường viền bóng tim (bộc lộ rõ nhất ở tư thế chếch trước trái góc 60°)."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Để đánh giá xoay 45°: khoảng cách từ bờ ngoài các xương sườn đến cột sống ở bên xa tấm nhận ảnh nhất phải gấp khoảng hai lần khoảng cách này ở bên gần tấm nhận ảnh nhất. Tia trung tâm hướng vào vùng đốt sống ngực 7."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-nguc-chech-ct.png", caption: "Chiều thế — chếch trước phải (RAO)" },
+      { src: "images/xq/xq-nguc-chech-ct2.png", caption: "Chiều thế — chếch trước trái (LAO)" },
+      { src: "images/xq/xq-nguc-chech-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-nguc-chech-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
+  },
+
+  /* ---------------------------------------------------------------- X-QUANG */
+  {
+    id: "xq-so-thang",
+    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
+    ten: "Chụp X-quang sọ thẳng",
+    tuKhoa: ["so thang", "towne", "ap axial", "chau dau", "lo cham", "moc giai phau so"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Trước sau (Towne — AP chếch chân)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Có" }
+    ],
+    noiDung: [
+      { tieuDe: "Mốc giải phẫu hộp sọ", items: [
+        "TEA (Top of ear attachment): điểm bám trên của vành tai (nơi bờ trên vành tai tiếp giáp đầu).",
+        "Auricle/pinna: loa tai (vành tai); Tragus: bình tai (nắp tai).",
+        "Glabella: điểm giữa hai cung mày; Nasion: điểm gốc mũi; Acanthion: điểm chân gai mũi trước.",
+        "Mental point: điểm cằm (điểm nhô nhất của cằm); Gonion: góc hàm (góc xương hàm dưới).",
+        "SOM: bờ trên ổ mắt; IOM: bờ dưới ổ mắt; Outer/Inner canthus: khóe mắt ngoài/trong.",
+        "EAM (điểm tai): lỗ tai ngoài; Inion: ụ chẩm ngoài."
+      ]},
+      { tieuDe: "Đường định vị hộp sọ", items: [
+        "GAL (Glabelloalveolar line): đường gian mày – ổ răng.",
+        "GML (Glabellomeatal line): đường gian mày – tai.",
+        "OML (Orbitomeatal line): đường ổ mắt – tai.",
+        "IOML (Infraorbitomeatal line – đường nền Reid): đường bờ dưới ổ mắt – tai.",
+        "AML (Acanthiomeatal line): đường gai mũi – tai.",
+        "LML (Lips-meatal line): đường môi – tai; MML (Mentomeatal line): đường cằm – tai."
+      ]},
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương sọ (di lệch vào trong và ra ngoài) và bệnh Paget."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng bằng kim loại, nhựa hoặc vật thể tháo rời khác khỏi đầu bệnh nhân.",
+        "Chụp với bệnh nhân ở tư thế đứng hoặc nằm ngửa."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Gập cằm xuống, đưa đường ổ mắt – lỗ tai (OML) vuông góc với tấm nhận ảnh. Nếu bệnh nhân không gập cổ đủ, chỉnh đường IOML vuông góc; thêm đệm lót thấu quang dưới đầu nếu cần.",
+        "Chỉnh mặt phẳng đứng dọc giữa (MSP) thẳng trục với tia trung tâm và đường giữa của lưới lọc tia hoặc mặt bàn/thiết bị nhận ảnh.",
+        "Đảm bảo đầu không bị xoay hoặc nghiêng; đỉnh sọ nằm trong trường khu trú."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Góc tia trung tâm chếch về phía chân 30° so với đường OML, hoặc 37° so với đường IOML.",
+        "Hướng tia trung tâm vào MSP, cao hơn ụ mày khoảng 6,5 cm để tia đi qua lỗ chẩm ngang mức nền xương chẩm.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm hướng tới.",
+        "Lưu ý: Nếu đặt IOML vuông góc thay cho OML thì tăng góc tia lên 37° về phía chân (duy trì góc 30° giữa tia và OML — chênh lệch 7° giữa OML và IOML)."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương chẩm, phần đá xương thái dương và lỗ chẩm được hiển thị cùng với lưng yên và mấu giường sau nằm trong bóng của lỗ chẩm."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các mào đá phải đối xứng, cho thấy đầu không bị xoay.",
+        "Lưng yên và mấu giường sau quan sát thấy bên trong lỗ chẩm cho thấy góc tia và độ gập cổ chính xác. Tạo góc/gập cổ chưa đủ sẽ chiếu lưng yên phía trên lỗ chẩm; quá mức sẽ chồng cung sau C1 lên lưng yên và thu ngắn lưng yên. Mấu giường lệch sang bên trong lỗ chẩm cho thấy đầu bị nghiêng."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-so-moc1.png", caption: "Mốc giải phẫu — nhìn nghiêng" },
+      { src: "images/xq/xq-so-moc2.png", caption: "Mốc giải phẫu — nhìn thẳng" },
+      { src: "images/xq/xq-so-moc3.png", caption: "Đường định vị hộp sọ" },
+      { src: "images/xq/xq-so-thang-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-so-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-so-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
   {
     id: "xq-so-nghieng",
-    phanHe: "xquang",
-    modality: "X-quang",
-    nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ nghiêng",
-    tuKhoa: ["so nghieng", "dau nghieng", "skull lateral"],
+    phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
+    ten: "Chụp X-quang sọ tư thế nghiêng",
+    tuKhoa: ["so nghieng", "skull lateral", "ho yen"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs (bề dày 13–17 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng (lateral)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay một điểm nằm trên trung điểm của đường hốc mắt – lỗ tai 2" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương trán, xương đỉnh, xương thái dương, xoang hàm và xương mặt."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Chấn thương sọ, gãy xương sọ, bệnh lý xương sọ và vùng hố yên.",
+        "Kiểm tra cả hai bên để so sánh khi cần; bên nằm sát tấm nhận ảnh được bộc lộ rõ nhất."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm sấp trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Đặt cánh tay bên cần chụp đuôi xuôi theo thân mình, đồng thời khuỷu tay phía đối diện gập lại với bàn tay úp trên bàn tại một vị trí thuận lợi và thoải mái.",
-        "Đặt đầu bệnh nhân trên cát xét ở đúng thế nghiêng với bên cần chụp tiếp xúc sát cát xét, điều chỉnh đầu bệnh nhân sao cho mặt phẳng dọc giữa song song với cát xét, đường liên đồng tử vuông góc với cát xét.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho điểm nằm trên trung điểm đường hốc mắt – lỗ tai 2,5 cm tại trung tâm cát xét hoặc định đầu nằm dưới bờ trên phim 5 cm.",
-        "Để giữ yên chiều thế chúng ta có thể kê dưới cằm bệnh nhân bằng chính nắm tay bệnh nhân hoặc bằng chiếc khăn tay xếp lại."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng kim loại hoặc nhựa khỏi đầu và cổ.",
+        "Bệnh nhân nằm sấp (đầu nghiêng) hoặc đứng, áp mặt bên của đầu cần khảo sát sát tấm nhận ảnh."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng đứng dọc giữa (MSP) song song với mặt bàn/bề mặt thiết bị nhận ảnh.",
+        "Chỉnh đường liên đồng tử (IPL) vuông góc với tấm nhận ảnh.",
+        "Chỉnh đường ổ mắt – lỗ tai (IOML) song song với bờ ngang của tấm nhận ảnh.",
+        "Đảm bảo đầu không bị xoay hoặc nghiêng (kê đệm dưới cằm nếu cần)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay một điểm nằm trên trung điểm của đường hốc mắt – lỗ tai 2,5 cm, tia trung tâm đi xuyên qua điểm này và tới cát xét tại trung tâm."
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào điểm cao hơn lỗ tai ngoài (EAM) khoảng 5 cm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ toàn bộ hộp sọ.",
-        "Khoảng cách giữa hai cành của xương hàm dưới ≤ 1 cm.",
-        "Đường bờ hố yên không có bờ đôi.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Toàn bộ hộp sọ ở tư thế nghiêng; hố yên và lưng yên nhìn nghiêng; mảnh sàng, xoang bướm và vùng thái dương được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: hai cành xương hàm dưới chồng khít; hai trần hốc mắt chồng khít.",
+        "Không nghiêng: sàn hố sọ trước và sàn các hố sọ chồng khít lên nhau.",
+        "Hố yên và lưng yên không có bờ đôi."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-so-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-so-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-so-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-so-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-
-  {
-    id: "xq-long-nguc-thang",
-    phanHe: "xquang",
-    modality: "X-quang",
-    nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang lồng ngực thẳng (phổi thẳng)",
-    tuKhoa: ["phoi", "nguc", "chest", "long nguc", "cxr"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs (bề dày 21–24 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm đi qua bờ trên đốt sống ngực thứ 4 trong trường hợp chụp phổi hoặc nơi bờ trên đốt sống ngực thứ 6 trong trường hợp chụp tim và động mạch chủ. Tia trung tâm thẳng góc với mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tim, phổi, động mạch và xương sườn. Đây là một tư thế căn bản dùng để chụp hình phổi và tim."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân đứng hoặc ngồi với mặt quay về phía giá giữ cassette.",
-        "Nếu bệnh nhân đứng thì sức nặng của cơ thể phải được phân phối đồng đều trên cả hai bàn chân.",
-        "Cho bệnh nhân ưỡn ngực về phía trước để mặt trước ngực tiếp xúc sát mặt phim.",
-        "Điều chỉnh bệnh nhân sao cho bình diện giữa của thân mình nằm ngay đường giữa của phim, đoạn đặt cằm họ lên trên cassette với bình diện của đầu ở vị thế thẳng đứng.",
-        "Dặn bệnh nhân chống hai bàn tay lên hông với lòng bàn tay xoay ra ngoài, đoạn dùng sức xoay hai vai về phía trước cho đến khi chúng tiếp xúc sát mặt phim với mục đích đẩy xương bả vai ra khỏi lồng xương sườn.",
-        "Điều chỉnh hai vai sao cho chúng cùng nằm trên một bình diện ngang.",
-        "Điều chỉnh cassette sao cho mỏm cùng vai nằm dưới bờ trên của cassette 5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn sao cho tia trung tâm đi qua bờ trên đốt sống ngực thứ 4 trong trường hợp chụp phổi hoặc nơi bờ trên đốt sống ngực thứ 6 trong trường hợp chụp tim và động mạch chủ. Tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy đầy đủ hai trường phổi (thấy rõ cả góc sườn hoành);",
-        "Thấy rõ đường bờ cột sống phía sau.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-longnguc-thang-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-longnguc-thang-phim.jpg", caption: "Phim phổi thẳng — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
   /* ------------------------------------------------- X-QUANG CHI TRÊN --- */
@@ -158,7 +1671,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn tay thẳng (sau trước)",
     tuKhoa: ["ban tay", "hand pa", "xuong ban tay", "chi tren"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs (bề dày 3–5 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ 3" },
@@ -194,7 +1706,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn tay nghiêng",
     tuKhoa: ["ban tay nghieng", "hand lateral", "di vat ban tay"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–10 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón" },
@@ -232,7 +1743,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn tay chếch",
     tuKhoa: ["ban tay chech", "hand oblique"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ 3" },
@@ -268,7 +1778,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang ngón cái",
     tuKhoa: ["ngon cai", "thumb", "ngon tay cai"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs (bề dày 3–5 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay khớp bàn ngón thứ I" },
@@ -302,7 +1811,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cổ tay thẳng (sau trước)",
     tuKhoa: ["co tay", "wrist pa", "xuong co tay"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm (tức ngay xương thuyền)" },
@@ -338,7 +1846,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cổ tay nghiêng",
     tuKhoa: ["co tay nghieng", "wrist lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 4–8 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -374,7 +1881,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cổ tay chếch",
     tuKhoa: ["co tay chech", "wrist oblique", "xuong thang"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay xương thuyền" },
@@ -409,7 +1915,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cổ tay xem xương thuyền",
     tuKhoa: ["xuong thuyen", "scaphoid", "co tay xuong thuyen"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 4–6 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mấu trâm xương quay và xương trụ với đầu đèn được bẻ về phía cánh tay 45° và về phía xương trụ 45°" },
@@ -443,7 +1948,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cẳng tay thẳng (trước sau)",
     tuKhoa: ["cang tay", "forearm ap", "xuong tru", "xuong quay"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm hay 15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng tay" },
@@ -479,7 +1983,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cẳng tay nghiêng",
     tuKhoa: ["cang tay nghieng", "forearm lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm hay 15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 8–11 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng tay" },
@@ -518,7 +2021,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khuỷu tay thẳng (trước sau)",
     tuKhoa: ["khuyu", "khuyu tay", "elbow ap", "khop khuyu"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 6–9 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -547,15 +2049,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
-
   {
     id: "xq-khuyu-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi trên",
     ten: "Chụp X-quang khuỷu tay nghiêng",
     tuKhoa: ["khuyu nghieng", "elbow lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 7–10 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -591,7 +2090,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương cánh tay thẳng (trước sau)",
     tuKhoa: ["canh tay", "xuong canh tay", "humerus ap"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm hay 15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 7–10 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa xương cánh tay" },
@@ -627,7 +2125,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương cánh tay nghiêng",
     tuKhoa: ["canh tay nghieng", "humerus lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm hay 15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 7–10 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa xương cánh tay" },
@@ -664,7 +2161,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang vai thẳng (trước sau)",
     tuKhoa: ["vai", "khop vai", "shoulder ap", "chom xuong canh tay"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm đi xuyên qua điểm giữa của đường thẳng nối liền đỉnh vai và đầu dưới của nếp gấp trước nách. Tia trung tâm sẽ thẳng góc với mặt phim" },
@@ -700,7 +2196,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương đòn (trước sau)",
     tuKhoa: ["khop cung don", "ac joint", "cung don vai"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm (chụp hai lần) hoặc 30 × 40 cm (chụp một lần)" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trên từng khớp cùng đòn vai khi chụp hai lần và ngắm ngay trung điểm của đường thẳng nối liền hai khớp cùng đòn vai khi chụp một lần. Tia trung tâm thẳng góc với mặt phim" },
@@ -735,7 +2230,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang vai nghiêng (tia ngang xuyên nách, bệnh nhân nằm)",
     tuKhoa: ["vai nach", "axillary", "vai nghieng nam"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 14–18 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn nằm ngang đoạn ngắm thế nào để tia trung tâm đi xuyên qua giữa nách đến vùng khớp cùng đòn vai" },
@@ -770,7 +2264,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương bả vai nghiêng (tư thế Lilienfeld)",
     tuKhoa: ["ba vai", "xuong ba vai", "lilienfeld", "scapula lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 14–17 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Xoay đầu đèn nằm ngang" },
@@ -805,7 +2298,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang mỏm quạ (trước sau)",
     tuKhoa: ["mom qua", "coracoid"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 13–16 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía đầu một góc 10°-20° để tách xương đòn ra khỏi lồng ngực đoạn ngắm đầu đèn ngay trung tâm phim" },
@@ -833,7 +2325,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
   /* ------------------------------- X-QUANG CHI DƯỚI (CẲNG/CỔ/BÀN CHÂN) ------------------------------- */
 
   {
@@ -842,7 +2333,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cẳng chân thẳng (trước sau)",
     tuKhoa: ["cang chan", "leg ap", "xuong chay", "xuong mac"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 9–12 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng chân" },
@@ -878,7 +2368,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cẳng chân nghiêng",
     tuKhoa: ["cang chan nghieng", "leg lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 8–11 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cẳng chân" },
@@ -914,7 +2403,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang cổ chân thẳng (trước sau)",
     tuKhoa: ["co chan", "ankle ap", "mat ca"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "48 kVp · 2,5 mAs (bề dày 9–12 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa cổ chân" },
@@ -944,14 +2432,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
   {
     id: "xq-cochan-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
     ten: "Chụp X-quang cổ chân nghiêng",
     tuKhoa: ["co chan nghieng", "ankle lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "46 kVp · 2,5 mAs (bề dày 8–11 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -986,7 +2472,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn chân thẳng (trước sau)",
     tuKhoa: ["ban chan", "foot ap", "xuong ban chan"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "44 kVp · 2,5 mAs (bề dày 7–9 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm bàn chân với đầu đèn được bẻ về phía đầu một góc 15°" },
@@ -1022,7 +2507,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn chân nghiêng",
     tuKhoa: ["ban chan nghieng", "foot lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "42 kVp · 2,5 mAs (bề dày 7–9 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -1057,7 +2541,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn chân chếch",
     tuKhoa: ["ban chan chech", "foot oblique"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "46 kVp · 2,5 mAs (bề dày 8–10 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -1093,7 +2576,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương gót — tư thế dưới trên",
     tuKhoa: ["xuong got", "got chan", "calcaneus", "got duoi tren"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "54 kVp · 5 mAs (bề dày 8–12 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía đầu một góc 40°" },
@@ -1123,7 +2605,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
   /* ----------------------------------- X-QUANG GỐI / ĐÙI / CHẬU / HÁNG ----------------------------------- */
 
   {
@@ -1132,7 +2613,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khớp gối thẳng (trước sau)",
     tuKhoa: ["goi", "khop goi", "knee ap", "banh che"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 11–14 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -1167,7 +2647,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khớp gối nghiêng",
     tuKhoa: ["goi nghieng", "knee lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs (bề dày 10–13 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa bờ trên của lồi cầu xương đùi" },
@@ -1203,7 +2682,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khớp gối tư thế Béclère (hố liên lồi cầu)",
     tuKhoa: ["beclere", "ho lien loi cau", "tunnel", "goi ngoi"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "52 kVp · 2,5 mAs (bề dày 11–14 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay bờ dưới xương bánh chè và hướng tia trung tâm về phía đầu một góc từ 30°-35°" },
@@ -1233,14 +2711,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
   {
     id: "xq-goi-settegast",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
     ten: "Chụp X-quang xương bánh chè tiếp tuyến (tư thế Settegast)",
     tuKhoa: ["settegast", "banh che tiep tuyen", "skyline", "banh che"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
       { ten: "kV / mAs", giaTri: "45 kVp · 2,5 mAs (bề dày 10–12 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm thẳng góc với mặt khớp đùi bánh chè. Độ bẻ góc của đầu đèn tùy thuộc vào độ gập của đầu gối" },
@@ -1276,7 +2752,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương đùi thẳng (trước sau)",
     tuKhoa: ["dui", "xuong dui", "femur ap"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs (bề dày 14–17 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa thân xương đùi" },
@@ -1312,7 +2787,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang xương đùi nghiêng",
     tuKhoa: ["dui nghieng", "femur lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
       { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs (bề dày 13–16 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa thân xương đùi" },
@@ -1347,7 +2821,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khung chậu thẳng (trước sau)",
     tuKhoa: ["khung chau", "xuong chau", "pelvis ap", "chau"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
       { ten: "kV / mAs", giaTri: "64 kVp · 15 mAs (bề dày 17–20 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền hai gai chậu trước trên" },
@@ -1383,7 +2856,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khung chậu nghiêng",
     tuKhoa: ["khung chau nghieng", "pelvis lateral"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm" },
       { ten: "kV / mAs", giaTri: "74 kVp · 30 mAs (bề dày 24–26 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền mấu chuyển lớn của xương đùi và mào chậu. Tia trung tâm thẳng góc với mặt phim" },
@@ -1415,15 +2887,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
-
   {
     id: "xq-hang-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
     ten: "Chụp X-quang khớp háng thẳng (trước sau)",
     tuKhoa: ["khop hang", "hang", "hip ap", "co xuong dui"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 17–20 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Gạch một đường thẳng nối liền gai chậu trước trên với bờ trên khớp mu" },
@@ -1452,14 +2921,12 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-
   {
     id: "xq-hang-chan-ech",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
     ten: "Chụp X-quang khớp háng tư thế chân ếch (tư thế Cleaves)",
     tuKhoa: ["chan ech", "cleaves", "frog leg", "hang hai ben"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
       { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 17–20 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
@@ -1495,7 +2962,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khớp háng nghiêng",
     tuKhoa: ["hang nghieng", "hip lateral", "co xuong dui nghieng"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
       { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs (bề dày 24–26 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Đặt đầu đèn nằm ngang và điều chỉnh thế nào để tia trung tâm thẳng góc với trung điểm của trục dài cổ xương đùi" },
@@ -1524,608 +2990,224 @@ window.SOTAY_QUYTRINH = [
     nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
   },
 
-  /* ----------------------------------------------- X-QUANG CỘT SỐNG ------ */
-  {
-    id: "xq-cotsong-co-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cổ thẳng",
-    tuKhoa: ["cot song co", "cs co thang", "cervical ap", "dot song co"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs (bề dày 11–14 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay đỉnh sụn giáp trạng (C4)" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Các đốt sống cổ và mô mềm xung quanh."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với bình diện giữa của cổ và đầu nằm ngay đường giữa của bàn hoặc phim.",
-        "Kéo cằm bệnh nhân vươn ra cho đến khi đường thẳng nối liền bờ dưới của răng cửa hàm trên và đầu mấu nhũ (mỏm chũm) hoặc cực ót thẳng góc với mặt phim.",
-        "Giữ bất động đầu bệnh nhân bằng những túi cát hay kẹp đầu.",
-        "Điều chỉnh cassette sao cho phần cao nhất của sụn giáp trạng nằm ngay trung tâm phim (tức đỉnh sụn giáp trạng)."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay đỉnh sụn giáp trạng (C4), tia trung tâm thẳng góc với mặt phim tại trung tâm phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các đốt sống cổ từ C3 - C7, và mặt trên và dưới của đốt sống.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-co-thang-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-co-thang-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-co-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-co-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cổ nghiêng",
-    tuKhoa: ["cot song co nghieng", "cervical lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 11–14 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Thân sống, mỏm gai, đĩa đệm và mô mềm xung quanh."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân ngồi trên một chiếc ghế với bình diện giữa của đầu và cổ đứng thẳng theo chiều dọc và cằm hơi vươn ra phía trước.",
-        "Hạ vai bệnh nhân xuống càng nhiều càng tốt để chúng không che lấp những đốt sống cổ ở dưới thấp.",
-        "Để thực hiện được điều này chúng ta có thể cho bệnh nhân cầm những vật nặng ở hai bàn tay với tay duỗi thẳng xuống hai bên thân mình.",
-        "Kéo cằm bệnh nhân vươn về phía trước sao cho xương hàm dưới không nằm chồng lên đốt sống cổ.",
-        "Đặt cassette trên giá giữ cassette ở một bên vai bệnh nhân.",
-        "Điều chỉnh cassette thế nào để bờ trên phim nằm ngang với bờ trên vành tai ngoài và cột sống cổ nằm ngay đường giữa của phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy 7 đốt sống cổ đúng ở tư thế nghiêng;",
-        "Hình bờ trên và bờ dưới của các đốt sống cổ đặc biệt là C4 phải thật thẳng;",
-        "Thấy được trọn vẹn mỏm gai (C7).",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]},
-      { tieuDe: "Ghi chú", items: [
-        "Tài liệu mô tả 2 biến thể: nằm nghiêng (FFD 1 m) và ngồi/đứng (FFD 1,8 m). Bản này áp dụng tư thế ngồi/đứng; chọn FFD theo thực tế."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-co-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-co-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-co-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-co-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cổ chếch",
-    tuKhoa: ["cot song co chech", "cervical oblique", "lo tiep hop"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "62 kVp · 10 mAs (bề dày 10–13 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền đỉnh của sụn giáp trạng và mặt sau cổ" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Lỗ liên hợp và chân cung sống (cuống cung sống)."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Tư thế này có thể thực hiện được bằng cách đặt bệnh nhân đứng, nằm hay ngồi với lưng quay về phía cassette.",
-        "Xoay thân mình bệnh nhân về phía không cần chụp sao cho bình diện giữa của cổ hợp với mặt phim một góc 45° và trục dài của cổ phải thẳng hợp theo với toàn thể thân mình.",
-        "Nếu bệnh nhân ở vị trí nằm, chúng ta dùng túi cát kê dưới vai và mông để giữ yên chiếu thế và góc độ mong muốn.",
-        "Kéo cằm bệnh nhân vươn về phía trước sao cho xương hàm dưới không nằm chồng lên các đốt sống cổ.",
-        "Điều chỉnh cassette thế nào để đỉnh của sụn giáp trạng nằm ngay giữa chiều rộng của phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền đỉnh của sụn giáp trạng và mặt sau cổ, tia trung tâm thẳng góc với mặt phim tại trung tâm, chúng ta có thể bẻ đầu đèn về phía đầu một góc khoảng 15°."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các lỗ liên hợp.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cs-co-chech-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-co-chech-phim.jpg", caption: "Phim cột sống cổ chếch — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-dotsong-co-c1c2",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang đốt sống cổ C1-C2 (há miệng)",
-    tuKhoa: ["c1 c2", "dot song co cao", "ha mieng", "open mouth", "odontoid"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "70 kVp · 15 mAs (bề dày 10–14 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa miệng đang há" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Đốt sống cổ thứ 1 và thứ 2."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với bình diện giữa của đầu và cổ nằm ngay đường giữa của bàn hoặc trên phim.",
-        "Kéo cằm bệnh nhân vươn về phía trước cho đến khi đường thẳng nối liền bờ dưới của răng cửa hàm trên và đầu mấu nhũ hoặc cực ót thẳng góc với mặt phim.",
-        "Bảo bệnh nhân há miệng ra càng lớn càng tốt và chúng ta có thể giữ cho miệng đang há bằng cách dùng một vật không cản tia đặt ở giữa miệng.",
-        "Điều chỉnh cassette sao cho trung tâm phim nằm ngay giữa miệng đang há.",
-        "Bảo bệnh nhân nói khẽ tiếng 'A' trong lúc chụp hình, động tác này sẽ làm cho lưỡi nằm sát sàn miệng để hình của lưỡi sẽ không nằm chồng lên đốt sống cổ thứ 1 (Atlas) và thứ 2 (Axis)."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa miệng đang há, tia trung tâm thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Mỏm răng, đốt trục (C2) và đốt đội (C1) được nhìn thấy qua miệng đang há, xương chũm không che mờ mỏm răng, đốt đội, đốt trục và thấy rõ khớp đội chũm.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-dotsong-co-c1c2-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-dotsong-co-c1c2-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-nguc-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống ngực thẳng",
-    tuKhoa: ["cot song nguc", "cs nguc", "thoracic ap", "dot song nguc"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 21–24 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Các đốt sống ngực."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với thân mình được điều chỉnh thật thẳng, bình diện giữa thẳng góc và nằm ngay đường giữa của bàn hoặc phim.",
-        "Điều chỉnh cassette hoặc bệnh nhân sao cho bình diện hai mỏm cùng vai nằm dưới bờ trên phim 5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ cột sống ngực trên phim bao gồm phần tiếp nối giữa cột sống cổ - ngực và cột sống ngực - lưng, đồng thời thấy rõ các khoảng liên sống;",
-        "Mặt trên và dưới các đốt sống phải được thấy rõ ràng;",
-        "Các chỗ tiếp giáp xương sườn phải được thấy rõ.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-nguc-thang-ct.png", caption: "Chiều thế (nằm)" },
-      { src: "images/xq/xq-cotsong-nguc-thang-ct2.png", caption: "Chiều thế (đứng)" },
-      { src: "images/xq/xq-cotsong-nguc-thang-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-nguc-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-nguc-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống ngực nghiêng",
-    tuKhoa: ["cot song nguc nghieng", "thoracic lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs (bề dày 30–34 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Thân sống, mỏm gai và đĩa đệm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm nghiêng trên bàn chụp hình hai tay duỗi thẳng về phía đầu và hai đầu gối gập lại.",
-        "Điều chỉnh bệnh nhân thế nào để bình diện của lưng nằm sau đường giữa của bàn hoặc phim khoảng 8 cm và thẳng góc với mặt bàn.",
-        "Điều chỉnh bệnh nhân và cassette sao cho bình diện của hai mỏm cùng vai nằm dưới bờ trên của phim khoảng 5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Các bờ thân sống của các đốt sống ngực phải nghiêng thật đúng;",
-        "Các bóng xương sườn bị xóa mờ;",
-        "Phần tiếp nối giữa cột sống thắt lưng và cột sống ngực phải thấy được trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cs-nguc-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-nguc-nghieng-phim.jpg", caption: "Phim cột sống ngực nghiêng — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-tl-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống thắt lưng thẳng",
-    tuKhoa: ["cot song that lung", "cs that lung", "lumbar ap", "csl"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "74 kVp · 15 mAs (bề dày 30–34 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim. Tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Các đốt sống thắt lưng, đĩa đệm và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với thân mình thật thẳng và cột sống thắt lưng nằm ngay đường giữa của bàn hoặc phim.",
-        "Điều chỉnh cassette hay bệnh nhân để bình diện xuyên qua mào chậu nằm ngay giữa chiều dài của phim.",
-        "Kê đầu bệnh nhân trên một chiếc gối với hai bàn chân chống trên bàn và hai đầu gối gập lại.",
-        "Việc làm này sẽ giúp cho phần cột sống thắt lưng ngả về phía trước tiếp xúc sát phim hơn, nhờ đó không bị sai lệch và phóng đại trên phim.",
-        "Đặt hai tay bệnh nhân ở vị trí thuận lợi và thoải mái."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim. Tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "hình các bờ của thân đốt sống thắt lưng phải thật thẳng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-tl-thang-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-tl-thang-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-tl-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống thắt lưng nghiêng",
-    tuKhoa: ["cot song that lung nghieng", "lumbar lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "76 kVp · 30 mAs (bề dày 26–30 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Thân sống, mỏm gai, đĩa đệm và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm nghiêng trên bàn chụp hình với hai đầu gối gập lại ở nơi một vị trí thuận lợi và thoải mái, hai tay duỗi thẳng về phía trước hoặc phía đầu.",
-        "Điều chỉnh bệnh nhân thế nào để bình diện mào chậu nằm chồng lên nhau hoàn toàn.",
-        "Đặt dưới hốm hông nơi phía trên mào chậu những vật không cản quang để cho cột sống ngực, cột sống thắt lưng và xương cùng nằm trên một bình diện song song với mặt bàn.",
-        "Điều chỉnh bệnh nhân hay cassette để cho trục dài của cột sống cũng như chỗ cao nhất của mào chậu nằm ngay giữa đường rộng của phim và bình diện xuyên qua mào chậu nằm ngay trung tâm phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình thân các đốt sống thắt lưng đúng thế nghiêng;",
-        "Phần tiếp nối cột sống ngực - cột sống thắt lưng và cột sống thắt lưng - cùng thấy rõ trên phim;",
-        "Thấy rõ mỏm gai;",
-        "Bờ sau các đốt sống phải thấy rõ nét.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cs-tl-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-cs-tl-nghieng-phim.jpg", caption: "Phim cột sống thắt lưng nghiêng — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-tl-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống thắt lưng chếch",
-    tuKhoa: ["cot song that lung chech", "lumbar oblique", "scotty dog"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "76 kVp · 25 mAs (bề dày 21–25 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tư thế này đặc biệt giúp nhìn thấy khớp mấu của cột sống thắt lưng. Chúng ta sẽ nhìn thấy những khớp mấu ở xa phim hiện lên rất rõ ràng và đó là những khớp mấu chúng ta cần quan sát."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình đoạn xoay thân mình họ về phía trái hay phải một góc 45° với đùi và vai cùng nằm trên một bình diện.",
-        "Dùng vật kê dưới vai, mông và cẳng chân để giữ yên tư thế và làm thế nào để chúng không hiện hình trên phim (nếu là vật cản tian).",
-        "Hai đầu gối bệnh nhân gập lại, hai tay đặt ở vị trí thuận lợi và thoải mái.",
-        "Điều chỉnh cassette hay bệnh nhân sao cho bình diện xuyên qua hai mào chậu nằm ngay trung tâm phim."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Dấu hiệu 'Scottie dog' (chó Scottie) phải thấy rõ trên năm đốt sống thắt lưng;",
-        "Thấy rõ các đĩa đệm.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-tl-chech-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-tl-chech-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-tl-chech-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-
-
-  {
-    id: "xq-cotsong-cungcut-thang",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cùng cụt thẳng",
-    tuKhoa: ["cung cut", "xuong cung", "xuong cut", "sacrum coccyx ap"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "66 kVp · 15 mAs (bề dày 19–23 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía đầu một góc 15° đoạn ngắm tia trung tâm ngay một điểm nằm trên khớp liên mu 2cm. Tia trung tâm sẽ đi xuyên qua bờ trên của xương cùng hoặc bờ dưới của đốt sống thắt lưng thứ 5 đến phim. Chúng ta phải thận trọng trong việc ngắm đầu đèn vì nếu ngắm sai điểm đã chỉ định trên ta sẽ không thấy cơ cấu của xương cùng một cách rõ ràng" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cùng, xương cụt, khớp cùng chậu và khớp thắt lưng cùng."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với đầu được kê lên cao và hai chân duỗi thẳng.",
-        "Điều chỉnh bệnh nhân thế nào để bình diện giữa của thân mình nằm ngay đường giữa của bàn hoặc phim và mào chậu nằm dưới bờ trên của phim 5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn về phía đầu một góc 15° đoạn ngắm tia trung tâm ngay một điểm nằm trên khớp liên mu 2cm. Tia trung tâm sẽ đi xuyên qua bờ trên của xương cùng hoặc bờ dưới của đốt sống thắt lưng thứ 5 đến phim. Chúng ta phải thận trọng trong việc ngắm đầu đèn vì nếu ngắm sai điểm đã chỉ định trên ta sẽ không thấy cơ cấu của xương cùng một cách rõ ràng."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình xương cùng, các khớp cùng chậu, L5 phải cân xứng, trọn vẹn, không bị che khuất.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-cungcut-thang-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-cungcut-thang-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-cungcut-thang-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-cotsong-cungcut-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cùng cụt nghiêng",
-    tuKhoa: ["cung cut nghieng", "sacrum coccyx lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "20 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "76 kVp · 30 mAs (bề dày 29–35 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp thắt lưng - cùng, xương cùng và xương cụt."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm thật đúng ở tư thế nghiêng trên bàn chụp với tay ở phía dưới gập lại và kê dưới đầu, tay ở phía trên và hai đầu gối gập lại đặt ở một vị trí thuận lợi và thoải mái.",
-        "Điều chỉnh bệnh nhân để đường giữa nách kéo dài đến xương chậu nằm ngay đường giữa của bàn hoặc phim.",
-        "Chúng ta nên dùng một vật không cản tia X đặt dưới hốm hông nơi phía trên mào chậu để cho cột sống ngực, cột sống thắt lưng và xương cùng cùng nằm trên một bình diện song song với mặt bàn.",
-        "Điều chỉnh bệnh nhân để hai mào chậu hoàn toàn nằm chồng lên nhau và nằm dưới bờ trên phim 5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ hình xương cùng cụt ở thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-cungcut-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim2.png", caption: "Phim đạt yêu cầu (2)" },
-      { src: "images/xq/xq-cotsong-cungcut-nghieng-phim3.png", caption: "Phim đạt yêu cầu (3)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
   /* -------------------------------------------------- X-QUANG SỌ – MẶT --- */
-
-
 
   {
     id: "xq-blondeau",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang Blondeau",
-    tuKhoa: ["blondeau", "waters", "xoang mat", "xoang ham", "xoang tran"],
+    ten: "Chụp X-quang tư thế Blondeau (thế Waters há miệng)",
+    tuKhoa: ["blondeau", "waters", "xoang mat", "xoang ham", "xoang buom", "ha mieng"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs (bề dày 18–21 cm)" },
+      { ten: "Tư thế", giaTri: "Blondeau (Waters há miệng)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Tia trung tâm đi từ vùng chẩm tới nhân trung và vuông góc với mặt phim tại trung tâm" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xoang trán, xoang sàng trước, xoang hàm, xoang bướm, xương mặt, xương mũi và xương gò má."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các tình trạng viêm (viêm xoang,…).",
+        "Polyp và nang xoang."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Tư thế này có thể thực hiện với bệnh nhân nằm sấp trên bàn chụp hình hoặc ngồi trên một chiếc ghế và quay mặt về phía giá giữ cát xét.",
-        "Với bệnh nhân ngồi, chúng ta dễ dàng thực hiện hơn so với bệnh nhân nằm, vì khi ngồi bệnh nhân cảm thấy thoải mái và cũng dễ dàng hơn trong việc sắp đặt tư thế cho bệnh nhân.",
-        "Đối với bệnh nhân ngồi Bệnh nhân ngồi trên một chiếc ghế và quay mặt về phía giá giữ cát xét, khoảng cách giữa bệnh nhân và giá giữ cát xét phải xa vừa đủ để bệnh nhân cảm thấy thoải mái khi đặt vùng mặt tiếp xúc với giá giữ cát xét.",
-        "Hai khuỷu tay bệnh nhân gập lại, đặt úp hai bàn tay ở hai bên đầu tại một vị trí thuận lợi và thoải mái.",
-        "Điều chỉnh hai vai bệnh nhân cùng nằm trên mặt phẳng ngang.",
-        "Bệnh nhân há to miệng.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho đỉnh cằm tiếp xúc với giá giữ cát xét, mặt phẳng dọc giữa của đầu vuông góc với cát xét, đường hốc mắt – lỗ tai hợp với cát xét một góc 37° (đầu mũi cách mặt phim 0,5 đến 1,5 cm), nhân trung nằm ngay trung tâm phim.",
-        "Đối với bệnh nhân nằm Bệnh nhân nằm sấp trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Hai khuỷu tay bệnh nhân gập lại, đặt úp hai bàn tay ở hai bên đầu tại một vị trí thuận lợi và thoải mái.",
-        "Điều chỉnh hai vai bệnh nhân cùng nằm trên mặt phẳng ngang.",
-        "Bệnh nhân há to miệng.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho đỉnh cằm tiếp xúc với giá giữ cát xét, mặt phẳng dọc giữa của đầu vuông góc với cát xét, đường hốc mắt – lỗ tai hợp với cát xét một góc 37° (đầu mũi cách mặt phim 0,5 đến 1,5 cm), nhân trung nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng kim loại hoặc nhựa khỏi đầu và cổ. Đặt bệnh nhân ở tư thế đứng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Ngửa cổ, đặt cằm và mũi tựa vào mặt bàn/bề mặt thiết bị nhận ảnh đứng.",
+        "Điều chỉnh đầu cho đến khi đường ổ mắt – lỗ tai tạo góc 37° so với tấm nhận ảnh (đường cằm – lỗ tai vuông góc khi ngậm miệng).",
+        "Chỉnh mặt phẳng đứng dọc giữa vuông góc với đường giữa của lưới lọc tia hoặc mặt bàn/thiết bị nhận ảnh đứng; đảm bảo không bị xoay hoặc nghiêng.",
+        "Hướng dẫn bệnh nhân há miệng bằng cách “hạ hàm dưới xuống mà không cử động đầu” (đường cằm – lỗ tai không còn vuông góc nữa).",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm và ngang mức gai mũi."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Tia trung tâm đi từ vùng chẩm tới nhân trung và vuông góc với mặt phim tại trung tâm."
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm thoát ra tại gai mũi."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình hai hốc mắt cân xứng và thấy rõ ràng trên phim.",
-        "Bờ trên xương đá nằm tiếp giáp với góc dưới xoang hàm.",
-        "Xoang bướm được nhìn thấy qua miệng đang há.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Các xoang hàm trên (phần dưới được quan sát thấy, không bị chồng bởi mỏm huyệt răng và các mào đá), bờ dưới ổ mắt, góc nhìn chếch của các xoang trán, và các xoang bướm được bộc lộ qua miệng há."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: khoảng cách từ MSP (vách ngăn mũi phần xương) đến bờ ngoài ổ mắt bằng nhau hai bên; khoảng cách từ bờ ngoài ổ mắt đến vỏ xương sọ bên bằng nhau hai bên.",
+        "Độ ngửa cổ chính xác thể hiện qua các mào đá nằm ngay dưới các xoang hàm trên."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-blondeau-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-blondeau-phim.jpg", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-blondeau-phim2.png", caption: "Phim đạt yêu cầu (2)" }
+      { src: "images/xq/xq-blondeau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-blondeau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-blondeau-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
   {
     id: "xq-so-hirtz",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang sọ Hirtz",
-    tuKhoa: ["hirtz", "nen so", "submentovertex", "smv", "xoang buom", "xoang sang"],
+    ten: "Chụp X-quang sọ tư thế Hirtz",
+    tuKhoa: ["hirtz", "smv", "nen so", "xoang buom", "xoang sang", "lo oval", "lo gai"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 15 mAs (bề dày 21–25 cm)" },
+      { ten: "Tư thế", giaTri: "Hirtz (dưới cằm – đỉnh, SMV)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 15 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Điều chỉnh đầu đèn sao cho tia trung tâm đi qua trung điểm của đường thẳng nối liền hai góc hàm và vuông góc với đường nhân trung. Tia trung tâm sẽ đi qua điểm nằm trước trung điểm đường thẳng nối liền hai ống tai ngoài 2 cm tới trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tư thế này chủ yếu giúp chúng ta nhìn rõ xoang bướm, xoang sàng trước, xoang sàng sau. Ngoài ra tư thế này còn giúp ta nhìn thấy toàn thể đáy sọ, lỗ bầu dục, lỗ tròn nhỏ, khớp thái dương-hàm, xương hàm dưới, xoang hàm, mỏm răng C2 và lỗ chẩm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các tình trạng viêm (viêm xoang,…).",
+        "Polyp và nang xoang."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Tư thế này có thể thực hiện với bệnh nhân nằm ngửa trên bàn chụp hình hoặc ngồi trên một chiếc ghế và quay lưng về phía giá giữ cát xét.",
-        "Với bệnh nhân ngồi, chúng ta dễ dàng thực hiện hơn so với bệnh nhân nằm, vì khi ngồi bệnh nhân cảm thấy thoải mái và cũng dễ dàng hơn trong việc sắp đặt chiều thế cho bệnh nhân.",
-        "Đối với bệnh nhân ngồi Bệnh nhân ngồi trên một chiếc ghế và quay lưng về phía giá giữ cát xét, khoảng cách giữa bệnh nhân và giá giữ cát xét phải xa vừa đủ để bệnh nhân có thể ngả người ra phía sau và đỉnh đầu tiếp xúc với giá giữ cát xét.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho đường nhân trung song song với cát xét, mặt phẳng dọc giữa vuông góc với cát xét và trung điểm đường thẳng nối liền u chẩm – u trán giữa nằm ngay trung tâm phim.",
-        "Đối với bệnh nhân nằm Bệnh nhân nằm ngửa trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Hai tay bệnh nhân xuôi theo thân mình tại một vị trí thuận lợi và thoải mái.",
-        "Kê cao vai và lưng bệnh nhân trên một vật không cản quang để bệnh nhân dễ dàng ngửa đầu ra phía sau.",
-        "Bệnh nhân ngả đầu ra phía sau cho tới khi đỉnh đầu tiếp xúc với cát xét.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho đường nhân trung song song và mặt phẳng dọc giữa vuông góc với cát xét, đồng thời trung tâm phim nằm ngay trung điểm của đường thẳng nối liền chẩm – u trán giữa."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng kim loại hoặc nhựa khỏi đầu và cổ.",
+        "Đặt bệnh nhân ở tư thế đứng (nếu có thể) để bộc lộ các mức dịch – khí."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Nâng cằm, ngửa cổ tối đa cho đến khi đường IOML song song với mặt bàn/bề mặt thiết bị nhận ảnh đứng; đỉnh đầu tựa vào mặt bàn/giá chụp.",
+        "Chỉnh MSP vuông góc với đường giữa của lưới lọc tia hoặc mặt bàn/thiết bị nhận ảnh đứng; đảm bảo không bị xoay hoặc nghiêng.",
+        "Lưu ý: Nếu không ngửa cổ đủ, tạo góc chếch cho bóng phát tia để tia vuông góc với đường IOML. Tư thế này rất khó chịu; cài đặt sẵn mọi hằng số và chụp nhanh nhất có thể."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Điều chỉnh đầu đèn sao cho tia trung tâm đi qua trung điểm của đường thẳng nối liền hai góc hàm và vuông góc với đường nhân trung. Tia trung tâm sẽ đi qua điểm nằm trước trung điểm đường thẳng nối liền hai ống tai ngoài 2 cm tới trung tâm phim."
+        "Tia trung tâm chiếu vuông góc với đường IOML.",
+        "Hướng tia trung tâm vào điểm giữa hai góc hàm, ngang mức dưới lồi cằm khoảng 4–5 cm.",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình hộp sọ cân xứng và rõ ràng trên phim.",
-        "Hai cung răng hàm trên và dưới nằm chồng lên nhau.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xoang bướm, xoang sàng, hố mũi và xoang hàm trên được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Mối tương quan đúng giữa đường IOML và tia trung tâm: lồi cằm nằm phía trước các xoang sàng.",
+        "Không xoay: MSP song song với bờ của tấm nhận ảnh.",
+        "Không nghiêng: khoảng cách giữa cành lên xương hàm dưới và vỏ xương sọ bên bằng nhau hai bên."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-so-hirtz-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-so-hirtz-phim.png", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-so-hirtz-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-so-hirtz-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
   {
     id: "xq-xuong-chinh-mui",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang xương chính mũi nghiêng",
-    tuKhoa: ["xuong chinh mui", "nasal bone", "xuong mui"],
+    ten: "Chụp X-quang xương mũi tư thế nghiêng",
+    tuKhoa: ["xuong mui", "xuong chinh mui", "nasal bone lateral", "gay xuong mui"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều ngang" },
-      { ten: "kV / mAs", giaTri: "92 kVp · 10–15 mAs (bề dày 2–4 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng (hai bên để so sánh)" },
+      { ten: "kV / mAs", giaTri: "92 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "75 cm" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn tại điểm giữa của xương mũi" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương mũi ở thế nghiêng. Đây là tư thế cơ bản thường được áp dụng để chụp xương mũi."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương chính mũi.",
+        "Kiểm tra cả hai bên để so sánh; bên nằm sát tấm nhận ảnh (IR) nhất được bộc lộ rõ nhất."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm sấp trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Đặt cánh tay bên cần chụp đuôi xuôi theo thân mình, đồng thời khuỷu tay phía đối diện gập lại với bàn tay úp trên bàn tại một vị trí thuận lợi và thoải mái.",
-        "Đặt đầu bệnh nhân trên cát xét ở đúng thế nghiêng, điều chỉnh đầu bệnh nhân sao cho mặt phẳng dọc giữa song song với cát xét, đường liên đồng tử vuông góc với cát xét.",
-        "Điều chỉnh đầu bệnh nhân và cát xét sao cho điểm giữa xương mũi nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng kim loại hoặc nhựa khỏi đầu và cổ. Bệnh nhân nằm sấp hoặc đứng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Đặt mặt bên của đầu áp sát tấm nhận ảnh, bên cần khảo sát nằm gần tấm nhận ảnh nhất; đặt xương chính mũi vào giữa tấm nhận ảnh.",
+        "Điều chỉnh đầu ở tư thế nghiêng hoàn toàn (kê miếng xốp dưới cằm nếu cần).",
+        "Chỉnh MSP song song với tấm nhận ảnh; IPL vuông góc; IOML vuông góc với bờ trước của tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn tại điểm giữa của xương mũi, tia trung tâm đi qua điểm này và vuông góc với mặt phim tại trung tâm."
+        "Tia trung tâm vuông góc với tấm nhận ảnh.",
+        "Hướng tia trung tâm vào điểm thấp hơn điểm giữa hai chân mày khoảng 1,25 cm."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ hình ảnh xương chính mũi đúng ở thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở tất cả các cạnh trong phạm vi 5 cm xung quanh xương chính mũi."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Xương chính mũi cùng các cấu trúc mô mềm của mũi, khớp trán mũi và gai mũi trước được bộc lộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Xương chính mũi được bộc lộ rõ mà không bị xoay.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-mui-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-mui-phim.jpg", caption: "Phim xương chính mũi nghiêng — mẫu" }
+      { src: "images/xq/xq-xuong-chinh-mui-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-xuong-chinh-mui-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 5: Kỹ thuật chụp xương mũi, răng"
   },
-
-
 
   {
     id: "xq-khop-thai-duong-ham",
     phanHe: "xquang", modality: "X-quang", nhom: "Sọ - Mặt",
-    ten: "Chụp X-quang khớp thái dương hàm",
-    tuKhoa: ["khop thai duong ham", "tmj", "panorama ham", "thai duong ham"],
+    ten: "Chụp X-quang khớp thái dương – hàm tư thế Schuller",
+    tuKhoa: ["khop thai duong ham", "tmj", "schuller", "loi cau", "ha mieng ngam mieng"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs (bề dày 13–17 cm)" },
+      { ten: "Tư thế", giaTri: "Schuller (nghiêng, há & ngậm miệng)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 10–15 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "75 cm" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn về phía chân một góc 25°" },
-      { ten: "Lưới lọc", giaTri: "Không" }
+      { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Khớp thái dương – hàm và mẩu nhũ (mỏm chũm). Đây là tư thế cơ bản để chụp khớp thái dương – hàm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Mối liên quan bất thường hoặc biên độ vận động bất thường giữa lồi cầu và hố thái dương hàm.",
+        "Thường chụp cả hai tư thế há miệng và ngậm miệng."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm sấp trên bàn chụp hình với mặt phẳng dọc giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Cánh tay bên cần chụp đuôi xuôi theo thân mình, cánh tay phía đối diện gập lại với bàn tay úp trên bàn tại một vị trí thuận lợi và thoải mái.",
-        "Đặt đầu bệnh nhân trên cát xét ở đúng thế nghiêng.",
-        "Điều chỉnh đầu sao cho mặt phẳng dọc giữa song song với cát xét, đường liên đồng tử vuông góc với cát xét.",
-        "Điều chỉnh cát xét sao cho ống tai ngoài (hoặc nhĩ cầu bên cần chụp) nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân đứng hoặc nằm sấp hơi nghiêng. Đặt đầu ở tư thế nghiêng hoàn toàn, bên cần khảo sát nằm sát tấm nhận ảnh nhất."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Điều chỉnh đầu ở tư thế nghiêng hoàn toàn, có thể xoay nhẹ cơ thể để tạo sự thoải mái.",
+        "Chỉnh đường liên đồng tử (IPL) vuông góc với tấm nhận ảnh.",
+        "Chỉnh MSP song song với mặt bàn hoặc bề mặt thiết bị nhận ảnh.",
+        "Chỉnh đường IOML vuông góc với bờ trước của tấm nhận ảnh."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn về phía chân một góc 25°, ngắm tại một điểm nằm trên khớp thái dương – hàm phía xa phim 7 – 9 cm, tia trung tâm đi xuyên qua điểm này đến trung tâm phim."
+        "Góc tia trung tâm chếch về phía chân 25°–30°, hướng vào điểm ra trước khoảng 1,3 cm và lên trên 5 cm so với lỗ tai ngoài (EAM) của bên được nâng cao.",
+        "Chỉnh tâm tấm nhận ảnh vào khớp thái dương hàm được chiếu."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình ống tai trong và ngoài chồng lên nhau (lỗ ống tai trong và ngoài chồng lên nhau).",
-        "Lồi cầu xương hàm dưới và ổ khớp thái dương – hàm rõ nét.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Khớp thái dương hàm nằm gần tấm nhận ảnh nhất được hiển thị rõ.",
+        "Hình ngậm miệng: lồi cầu nằm bên trong hố hàm dưới; hình há miệng: lồi cầu di chuyển đến bờ trước (củ khớp) của hố."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các khớp thái dương hàm được bộc lộ không bị xoay, thể hiện qua sự chồng khít của các bờ ngoài."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-tmj-ct.jpg",   caption: "Tư thế khớp thái dương hàm & hướng tia (Clark's)" },
-      { src: "images/xq/xq-tmj-phim.jpg", caption: "Phim khớp thái dương hàm — mẫu" }
+      { src: "images/xq/xq-khop-thai-duong-ham-ct.png", caption: "Chiều thế — ngậm miệng" },
+      { src: "images/xq/xq-khop-thai-duong-ham-ct2.png", caption: "Chiều thế — há miệng" },
+      { src: "images/xq/xq-khop-thai-duong-ham-phim.png", caption: "Phim đạt yêu cầu (ngậm & há)" },
+      { src: "images/xq/xq-khop-thai-duong-ham-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 1: Kỹ thuật chụp sọ, mặt, xoang"
   },
 
   {
@@ -2134,7 +3216,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang tai tư thế Schüller (xương chũm)",
     tuKhoa: ["schuller", "schüller", "xuong chum", "tai", "mastoid", "viem tai giua"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "18 × 24 cm" },
       { ten: "Tia trung tâm", giaTri: "Cách lỗ tai đối diện 7 cm, chếch xuống chân 25–30°" },
       { ten: "Số thì chụp", giaTri: "2 lần: há miệng & ngậm miệng" }
     ],
@@ -2162,202 +3243,66 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
   },
 
-
   /* ------------------------------------------------------- X-QUANG RĂNG --- */
 
   {
     id: "xq-rang-toan-canh",
     phanHe: "xquang", modality: "X-quang", nhom: "Răng",
-    ten: "Chụp X-quang răng toàn cảnh (panorama)",
-    tuKhoa: ["rang toan canh", "panorama", "opg", "toan ham", "cung rang"],
+    ten: "Chụp X-quang răng toàn cảnh (Panorama)",
+    tuKhoa: ["rang toan canh", "panorama", "opg", "xuong ham duoi", "toan bo rang"],
     thongSo: [
-      { ten: "kV / mA / thời gian", giaTri: "≈ 60–70 kV · 10 mA · 12–14 giây" },
-      { ten: "Tia trung tâm", giaTri: "Trước bình tai ~1 cm, vuông góc mặt cong xương hàm dưới" }
+      { ten: "Tư thế", giaTri: "Panorama (máy chụp toàn cảnh)" },
+      { ten: "kV / mAs", giaTri: "Mặc định của máy" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "Cố định theo máy" },
+      { ten: "Lưới lọc", giaTri: "Theo máy" }
     ],
     noiDung: [
-      { tieuDe: "Đại cương", items: [
-        "Cho hình ảnh toàn bộ hai cung răng trên – dưới cùng các cấu trúc kế cận của xương hàm trên, hàm dưới và khớp thái dương hàm hai bên.",
-        "Nguyên lý cắt lớp cổ điển: bóng tia X và phim di chuyển ngược chiều, quay quanh xương hàm dưới ~12–14 giây mỗi lần chụp."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương hoặc các quá trình nhiễm trùng của xương hàm dưới.",
+        "Xem và đánh giá toàn bộ răng hai hàm."
       ]},
-      { tieuDe: "Chiều thế", items: [
-        "Đứng hoặc ngồi, lưng thẳng, mặt đối xứng qua mặt phẳng dọc giữa, không quá cúi/ngửa.",
-        "Mặt phẳng qua đường nối lỗ tai – bờ dưới ổ mắt song song mặt sàn.",
-        "Cắn răng cửa đúng vị trí rãnh lõm trên thanh cắn, đặt lưỡi áp sát vòm miệng cứng, bất động suốt quá trình chụp."
+      { tieuDe: "Bảo vệ bức xạ và chuẩn bị máy", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát.",
+        "Đặt bóng phát tia và tấm nhận ảnh ở vị trí bắt đầu; nâng giá đỡ cằm lên xấp xỉ ngang mức cằm của bệnh nhân."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Tháo bỏ tất cả vật dụng kim loại, nhựa và vật thể tháo rời khác khỏi đầu và cổ.",
+        "Giải thích cho bệnh nhân cách bóng phát tia và tấm nhận ảnh quay và thời gian phát tia.",
+        "Đặt cằm tựa lên khối cắn; không để đầu và cổ vươn về phía trước; đứng sát máy, giữ cột sống thẳng và đẩy hông về phía trước."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Điều chỉnh chiều cao giá đỡ cằm đến khi đường IOML song song với sàn nhà; mặt phẳng nhai nghiêng 10° từ sau ra trước.",
+        "Chỉnh MSP trùng với vạch trung tâm dọc của giá đỡ cằm.",
+        "Đặt khối cắn giữa hai răng cửa; hướng dẫn bệnh nhân mím môi và đặt lưỡi lên vòm miệng."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Khu trú phía trước bình tai ~1 cm, vuông góc mặt phẳng cong của xương hàm dưới; chùm tia di chuyển liên tục và ngược chiều phim."
+        "Tia trung tâm cố định, hướng hơi chếch lên phía đầu để các cấu trúc cùng độ cao không chồng lên nhau.",
+        "Khoảng cách bóng – tấm nhận ảnh cố định tùy theo từng máy chụp toàn cảnh."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ toàn bộ cung răng trên và dưới cùng các cấu trúc xương hàm liên quan.",
-        "Đánh giá được số lượng và hình thái cung răng trong tương quan tổng thể với xương hàm."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Cài đặt mặc định của máy."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hiển thị răng, xương hàm dưới, khớp thái dương hàm, hố mũi, xoang hàm trên, cung tiếp và xương hàm trên."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay/nghiêng: các khớp thái dương hàm trên cùng một mặt phẳng ngang; cành lên và răng sau có độ phóng đại bằng nhau hai bên; răng trước – sau sắc nét, phóng đại đồng đều.",
+        "Đặt đúng tư thế: lồi cằm hơi thấp hơn góc hàm; xương hàm dưới hình bầu dục; mặt phẳng nhai song song trục dọc hình ảnh; răng hai hàm hơi tách, không chồng; cột sống cổ không chồng lên các khớp thái dương hàm."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-rang-toan-canh-ct.png", caption: "Chiều thế (máy chụp toàn cảnh)" },
-      { src: "images/xq/xq-rang-toan-canh-phim.png", caption: "Phim panorama đạt yêu cầu" }
+      { src: "images/xq/xq-rang-toan-canh-ct.png", caption: "Chiều thế — vào máy Panorama" },
+      { src: "images/xq/xq-rang-toan-canh-ct2.png", caption: "Chiều thế — đường định vị IOML" },
+      { src: "images/xq/xq-rang-toan-canh-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-rang-toan-canh-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Bài 5: Kỹ thuật chụp xương mũi, răng"
   },
 
   /* -------------------------------------- X-QUANG LỒNG NGỰC – BỤNG ------- */
-  {
-    id: "xq-phoi-dinh-uon",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang phổi tư thế đỉnh ưỡn",
-    tuKhoa: ["dinh uon", "dinh phoi", "apical lordotic", "lordotic", "phoi"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "56 kVp · 5 mAs (bề dày 25–28 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm xuyên qua đốt sống ngực thứ 4 và thẳng góc với mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Không" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Đỉnh phổi, vùng phổi sau tim và chứng tràn dịch trung thất."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân đứng thẳng với mặt quay về phía giá giữ cassette.",
-        "Điều chỉnh cassette sao cho bờ trên của phim nằm trên bờ vai khoảng 5cm, bình diện giữa của thân mình nằm ngay đường giữa của phim.",
-        "Dặn bệnh nhân dùng hai tay nắm chặt vào hai đầu trên của giá giữ cassette rồi ưỡn bụng về phía trước cho đến khi nó tiếp xúc sát mặt phim và ngả người về phía sau để lồng ngực hợp với mặt phim một góc 45°."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn sao cho tia trung tâm xuyên qua đốt sống ngực thứ 4 và thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ đỉnh phổi.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]},
-      { tieuDe: "Ghi chú", items: [
-        "Tài liệu có 2 kiểu đỉnh ưỡn: sau–trước (Fleischner, đang áp dụng) và trước–sau (Lindblom, FFD 1,8 m, 56 kVp · 5 mAs)."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-dinhphoi-ct.jpg",   caption: "Tư thế đỉnh ưỡn & hướng tia (Clark's)" },
-      { src: "images/xq/xq-dinhphoi-phim.jpg", caption: "Phim đỉnh phổi ưỡn — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-long-nguc-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang lồng ngực nghiêng",
-    tuKhoa: ["long nguc nghieng", "phoi nghieng", "chest lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "64 kVp · 15 mAs (bề dày 29–34 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,2 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn sao cho tia trung tâm đi xuyên qua ngay giữa bờ trên đốt sống ngực thứ 4 khi chụp phổi" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tim, phổi, động mạch chủ và đặc biệt là những khe liên thùy phổi, trung thất trước và trên. Tư thế này được xem như là một tư thế bổ túc cho tư thế sau trước, thường được dùng để định vị những tổn thương ở phổi, xem xét thùy phổi và những khe liên thùy. Đây cũng là tư thế căn bản dùng để chụp hình mạch máu tim và phế quản. Tư thế nghiêng trái được dùng để xem tim trái, phổi trái và ngược lại tư thế nghiêng phải được dùng để xem tim phải và phổi phải."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân đứng thật đúng ở tư thế nghiêng với bên cần chụp tiếp xúc sát phim.",
-        "Đưa hai tay bệnh nhân lên cao với cẳng tay đặt trên đầu và vai bên cần chụp tiếp xúc sát mặt phim.",
-        "Điều chỉnh cassette sao cho bờ trên của vai nằm dưới bờ trên phim khoảng 5 cm.",
-        "Điều chỉnh bệnh nhân thế nào để thân mình thẳng đứng và bình diện giữa của thân mình song song với mặt phim, đường giữa nách nằm sau đường giữa của phim khoảng 5 cm.",
-        "Trong trường hợp cần quan sát tim, chúng ta dùng bột Barium Sulfate pha đặc gấp ba lần so với khi dùng để chụp dạ dày.",
-        "Nhờ thế thuốc sẽ xuống chậm và dính vào thành thực quản.",
-        "Bảo bệnh nhân ngậm vài muỗng thuốc và chúng ta lấy hình trong lúc bệnh nhân đang nuốt."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn sao cho tia trung tâm đi xuyên qua ngay giữa bờ trên đốt sống ngực thứ 4 khi chụp phổi, và bờ trên đốt sống ngực thứ 6 hay thứ 7 khi chụp tim. Tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Phổi được thấy đầy đủ trên phim (bao gồm đỉnh phổi và góc sườn hoành);",
-        "Các chi tiết của phim rõ nét.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-nguc-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-nguc-nghieng-phim.jpg", caption: "Phim lồng ngực nghiêng — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-xuong-uc-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang xương ức nghiêng",
-    tuKhoa: ["xuong uc nghieng", "sternum lateral"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs (bề dày 29–34 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,2 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Toàn thể xương ức và mô mềm."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân đứng hay ngồi nghiêng thật thẳng trước giá giữ cassette, đoạn chúng ta điều chỉnh cassette thế nào để bờ trên cán ức nằm dưới bờ trên phim khoảng 4 cm.",
-        "Xoay hai vai bệnh nhân ra phía sau và cho họ nắm hai bàn tay lại ở sau lưng.",
-        "Đặt bệnh nhân sao cho vai của họ tiếp xúc sát mặt bàn hay mặt phim.",
-        "Điều chỉnh thân mình bệnh nhân thật thẳng và xương ức nằm ngay đường giữa của bàn hay phim đồng thời mặt xương ức thẳng góc với mặt phim.",
-        "Nếu bệnh nhân là nữ, chúng ta yêu cầu bệnh nhân kéo nhũ hoa sang hai bên đoạn dùng băng quấn lại để giữ yên vị trí mong muốn, nhờ đó bóng của nhũ hoa sẽ không làm mờ hình ảnh của xương ức."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Xương ức được nhìn thấy rõ ràng trên phim ở tư thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]},
-      { tieuDe: "Ghi chú", items: [
-        "Tài liệu mô tả tư thế đứng/ngồi (đang áp dụng) và tư thế nằm nghiêng (cùng thông số)."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-uc-nghieng-ct.jpg",   caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-uc-nghieng-phim.jpg", caption: "Phim xương ức nghiêng — mẫu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-xuong-uc-chech",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang xương ức chếch",
-    tuKhoa: ["xuong uc chech", "sternum oblique", "rao"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "24 × 30 cm" },
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 23–26 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Toàn thể xương ức và mô mềm. Đây là một tư thế căn bản thường được dùng cùng với tư thế nghiêng."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm sấp trên bàn chụp hình đoạn xoay thân mình họ về bên phải một góc từ 20° đến 30° với mặt trước ngực bên phải tiếp xúc sát mặt bàn hay mặt phim.",
-        "Đặt cánh tay phải của bệnh nhân duỗi xuôi xuống theo thân mình trong khi đó tay trái đưa về phía đầu với cẳng tay trước mặt.",
-        "Bảo bệnh nhân gập đầu gối lại đoạn tựa thân mình trên cẳng tay và đầu gối gập lại này để giữ yên chiếu thế.",
-        "Điều chỉnh bệnh nhân sao cho xương ức nằm ngay đường giữa của bàn hoặc phim với bờ trên cán ức nằm dưới bờ trên phim 5 cm, đồng thời mông và vai bệnh nhân cùng nằm trên một bình diện."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm sẽ thẳng góc với mặt phim tại trung tâm."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Xương ức được nhìn thấy rõ ràng, không bị cột sống ngực hoặc xương bả vai chồng lên.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-xuong-uc-chech-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-xuong-uc-chech-phim2.png", caption: "Phim đạt yêu cầu (1)" },
-      { src: "images/xq/xq-xuong-uc-chech-phim3.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
 
   {
     id: "xq-thuc-quan-co-nghieng",
@@ -2391,39 +3336,55 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-o-bung-thang",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang ổ bụng không chuẩn bị (thẳng, đứng)",
-    tuKhoa: ["o bung", "bung khong chuan bi", "abdomen", "asp", "tac ruot", "thung tang rong"],
+    ten: "Chụp X-quang bụng không chuẩn bị tư thế trước sau, bệnh nhân đứng",
+    tuKhoa: ["o bung dung", "bung dung", "muc dich khi", "tac ruot", "khi tu do", "thung tang rong"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "35 × 43 cm hoặc 30 × 40 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 15–18 mAs (bề dày 17–21 cm)" },
+      { ten: "Tư thế", giaTri: "Trước sau (AP), bệnh nhân đứng" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 15–18 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn tại mỏm mũi kiếm" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Cơ hoành, đáy phổi, bóng thận, gan và bóng hơi của đại tràng."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Các mức dịch – khí và khí tự do trong ổ phúc mạc dưới cơ hoành; nghi ngờ tắc ruột.",
+        "Thực hiện chụp tư thế đứng trước nếu bệnh nhân có thể tự đi lại hoặc ngồi xe lăn ở tư thế thẳng đứng."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân đứng thẳng hoặc ngồi tựa lưng sát vào giá dựng cát xét, hai cánh tay đuôi xuôi theo thân mình.",
-        "Điều chỉnh bệnh nhân và cát xét sao cho mặt phẳng dọc giữa của thân mình vuông góc và nằm ngay đường giữa của cát xét, mỏm mũi kiếm nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát. Dùng tấm chắn tuyến sinh dục đối với bệnh nhân nam."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đứng thẳng, hai chân hơi dang ra, lưng tựa vào bàn hoặc thiết bị lưới lọc.",
+        "Hai cánh tay đặt dọc hai bên, cách xa cơ thể.",
+        "Chỉnh MSP của cơ thể thẳng trục với đường giữa của bàn hoặc Bucky đứng."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Không xoay khung chậu hoặc hai vai.",
+        "Điều chỉnh chiều cao tấm nhận ảnh sao cho tâm cao hơn mào chậu khoảng 5 cm (để bao gồm cơ hoành); bệnh nhân trung bình thì bờ trên tấm nhận ảnh xấp xỉ ngang mức nách."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn tại mỏm mũi kiếm, tia trung tâm đi qua điểm này và vuông góc với mặt phim tại trung tâm."
+        "Tia trung tâm vuông góc và hướng vào giữa tấm nhận ảnh."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy cả hai vòm hoành.",
-        "Toàn ổ bụng xuất hiện trên phim đầy đủ và cân xứng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát; bắt buộc bao gồm vùng bụng trên."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Dạ dày chứa khí, các quai ruột và các mức dịch – khí nếu có; bao gồm cả hai vòm cơ hoành và càng nhiều phần bụng dưới càng tốt.",
+        "Bóng khí tự do hình liềm nhỏ trong ổ phúc mạc (nếu có) nhìn thấy dưới vòm hoành phải, cách xa phần khí trong dạ dày."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: các cánh chậu đối xứng, bờ ngoài các xương sườn cách đều cột sống.",
+        "Cột sống thẳng (trừ khi có vẹo), thẳng trục với tâm tấm nhận ảnh."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-obung-ct.jpg", caption: "Chiều thế (đứng) & hướng tia" },
-      { src: "images/xq/xq-o-bung-thang-ct2.png", caption: "Chiều thế (ngồi)" },
-      { src: "images/xq/xq-obung-phim.jpg", caption: "Phim đạt yêu cầu (đứng)" },
-      { src: "images/xq/xq-o-bung-thang-phim2.png", caption: "Phim đạt yêu cầu (ngồi)" }
+      { src: "images/xq/xq-o-bung-thang-ct.png", caption: "Chiều thế & hướng tia (đứng)" },
+      { src: "images/xq/xq-o-bung-thang-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-o-bung-thang-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Chương II: Kỹ thuật chụp bụng không chuẩn bị"
   },
 
   {
@@ -2432,7 +3393,6 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang ổ bụng không chuẩn bị (nghiêng)",
     tuKhoa: ["o bung nghieng","bung the nghieng","voi hoa o bung","khoi mo o bung"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "35 × 43 cm hoặc 30 × 40 cm và đặt theo chiều dài" },
       { ten: "kV / mAs", giaTri: "92–94 kVp · 25–30 mAs (bề dày 26–30 cm)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn để tia trung tâm vuông góc với mặt phim tại trung tâm" },
@@ -2466,245 +3426,115 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-o-bung-nam-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang ổ bụng sau – trước (bệnh nhân nằm nghiêng / decubitus)",
-    tuKhoa: ["o bung nam nghieng","decubitus","muc nuoc hoi","tac ruot","liem hoi thung tang rong"],
+    ten: "Chụp X-quang bụng tư thế nằm nghiêng, tia ngang trước sau (decubitus)",
+    tuKhoa: ["bung nam nghieng", "decubitus", "tia ngang", "khi tu do", "muc dich khi", "nam nghieng trai"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "35 × 43 cm hoặc 30 × 40 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 25–30 mAs (bề dày 26–30 cm)" },
+      { ten: "Tư thế", giaTri: "Nằm nghiêng, tia ngang, trước sau (ưu tiên nghiêng trái)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 25–30 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Bẻ đầu đèn nằm ngang và ngắm đều đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Tư thế này giúp phát hiện mực nước hơi do tắc ruột hoặc liềm hơi do thủng tạng rỗng."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khối u vùng bụng, mức dịch – khí, và khả năng tích tụ khí tự do trong ổ phúc mạc.",
+        "Một lượng nhỏ khí tự do trong ổ phúc mạc được bộc lộ tốt nhất bằng chụp ngực tư thế đứng PA.",
+        "Quan trọng: Bệnh nhân nên nằm nghiêng tối thiểu 5 phút trước khi phát tia (ưu tiên 10–20 phút) để khí bay lên/dịch tích tụ, quan sát tốt lượng nhỏ khí tự do.",
+        "Tư thế nằm nghiêng trái tia ngang bộc lộ tốt nhất khí tự do ở vùng gan (góc phần tư trên phải), tránh xa bóng hơi dạ dày."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm nghiêng trên băng ca ít nhất 5 phút để hơi tự do nếu có sẽ di chuyển lên cao.",
-        "Đầu được đặt trên một chiếc gối với hai đầu gối gập lại.",
-        "hai tay ôm đầu.",
-        "Đặt cát sét sát vào thành bụng trước, trục phim song song với mặt phẳng dọc dưới của thân mình.",
-        "Điều chỉnh thân mình bệnh nhân sao cho hai hông và vai thẳng góc với bàn chụp hình, và trung điểm của đường thẳng nối liền hai mào chậu nằm ngay trung tâm phim."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Nằm nghiêng trên đệm thấu quang, tỳ chặt vào bàn hoặc thiết bị Bucky đứng (khóa bánh xe cáng).",
+        "Nằm trên bề mặt cứng (ván ép hồi sức/ván lưng) đặt dưới ga để tránh võng làm cắt lẹm giải phẫu.",
+        "Hai đầu gối gập nhẹ, chân này chồng lên chân kia để giữ ổn định; hai tay giơ lên gần đầu."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Điều chỉnh bệnh nhân và cáng sao cho tâm tấm nhận ảnh và tia trung tâm cao hơn mào chậu khoảng 5 cm (để lấy cơ hoành); bờ trên tấm nhận ảnh xấp xỉ ngang mức nách.",
+        "Đảm bảo khung chậu hoặc hai vai không bị xoay; chỉnh MSP vào giữa tấm nhận ảnh nhưng đảm bảo phần bụng trên được bao gồm rõ."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Bẻ đầu đèn nằm ngang và ngắm đều đèn ngay trung tâm phim, tia trung tâm vuông góc với mặt phim tại trung tâm phim."
+        "Tia trung tâm chiếu ngang, hướng vào tâm tấm nhận ảnh, cao hơn mào chậu khoảng 5 cm (chùm tia ngang để bộc lộ mức dịch – khí và khí tự do)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ toàn bộ ổ bụng, đặc biệt là góc sườn hoành.",
-        "Thấy từ vòm hoành đến bờ trên khớp mu.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát; bắt buộc bao gồm vùng bụng trên."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Dạ dày chứa khí, các quai ruột và các mức dịch – khí nếu có; phải bao gồm cả hai vòm cơ hoành."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: các cánh chậu đối xứng, bờ ngoài các xương sườn cách đều cột sống.",
+        "Cột sống thẳng (trừ khi có vẹo), thẳng trục với tâm tấm nhận ảnh."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-o-bung-nam-nghieng-ct.png", caption: "Chiều thế (nằm nghiêng, decubitus)" },
-      { src: "images/xq/xq-o-bung-nam-nghieng-phim.png", caption: "Phim đạt yêu cầu (decubitus)" }
+      { src: "images/xq/xq-o-bung-nam-nghieng-ct.png", caption: "Chiều thế & hướng tia (nằm nghiêng, tia ngang)" },
+      { src: "images/xq/xq-o-bung-nam-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-o-bung-nam-nghieng-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Chương II: Kỹ thuật chụp bụng không chuẩn bị"
   },
 
   /* ---- Kỹ thuật XQ bổ sung theo tài liệu lỗi (chờ duyệt thông số) ---- */
-  {
-    id: "xq-cotsong-co-cui-ngua",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống cổ cúi – ngửa (chức năng)",
-    tuKhoa: ["cot song co cui ngua", "chuc nang cot song co", "flexion extension", "cuoi nga"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 20 cm" },
-      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo cột sống cổ nghiêng)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1,5 – 1,8 m" },
-      { ten: "Tia trung tâm", giaTri: "Giữa cổ (ngang C4), vuông góc mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Mục tiêu", items: [
-        "Khảo sát chức năng (tầm vận động) cột sống cổ ở tư thế cúi và ngửa tối đa."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân ngồi hoặc đứng, đầu và cổ đặt đúng ở tư thế nghiêng.",
-        "Chụp lần lượt hai phim: một phim cúi (gập) tối đa và một phim ngửa (duỗi) tối đa.",
-        "Hạ hai vai xuống để không che các đốt sống cổ thấp."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm tia trung tâm vào giữa cổ (ngang mức C4) và vuông góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy đầy đủ các đốt sống cổ ở cả hai tư thế cúi và ngửa tối đa; bờ trên – dưới của C4 đúng thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cotsong-co-cui-ngua-ct.png", caption: "Chiều thế cúi – ngửa" },
-      { src: "images/xq/xq-cotsong-co-cui-ngua-phim.png", caption: "Phim đạt yêu cầu (cúi/ngửa)" }
-    ],
-    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
-  },
-
-  {
-    id: "xq-cstl-gap-uon",
-    phanHe: "xquang", modality: "X-quang", nhom: "Cột sống",
-    ten: "Chụp X-quang cột sống thắt lưng gập – ưỡn (chức năng)",
-    tuKhoa: ["cot song that lung gap uon", "chuc nang cstl", "flexion extension lumbar", "cui nga that lung"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "15 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo CSTL nghiêng)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngang mào chậu, nghiêng và vuông góc mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Mục tiêu", items: [
-        "Khảo sát chức năng (độ vững) cột sống thắt lưng ở tư thế cúi và ưỡn tối đa."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân đứng đúng ở tư thế nghiêng, tựa vào giá giữ cassette.",
-        "Hai chân duỗi thẳng và song song, hơi dang, hai tay đưa thẳng lên đầu.",
-        "Chụp lần lượt: một phim cúi tối đa và một phim ưỡn (ngửa) tối đa."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Hướng tia nghiêng và vuông góc với mặt phim, ngang mức mào chậu."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các đốt sống thắt lưng ở cả hai thế cúi và ưỡn tối đa, đúng tư thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-cstl-gap-uon-ct.png", caption: "Chiều thế gập" },
-      { src: "images/xq/xq-cstl-gap-uon-ct2.png", caption: "Chiều thế ưỡn" },
-      { src: "images/xq/xq-cstl-gap-uon-ct3.png", caption: "Chiều thế (minh họa)" },
-      { src: "images/xq/xq-cstl-gap-uon-phim.png", caption: "Phim đạt yêu cầu (gập/ưỡn)" }
-    ],
-    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
-  },
-
-  {
-    id: "xq-nguc-tai-giuong",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang ngực tại giường (portable)",
-    tuKhoa: ["nguc tai giuong", "xq tai giuong", "portable chest", "bedside", "phoi tai giuong"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "Theo cài đặt máy di động phù hợp người bệnh" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "Tối đa có thể (thường ~1 m)" },
-      { ten: "Tia trung tâm", giaTri: "Vuông góc với tấm cassette" },
-      { ten: "Lưới lọc", giaTri: "Không (tùy máy)" }
-    ],
-    noiDung: [
-      { tieuDe: "Mục tiêu", items: [
-        "Chụp phổi/tim cho người bệnh nặng, không di chuyển được, bằng máy X-quang di động tại giường."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Nâng đầu giường để người bệnh ở tư thế nửa ngồi (hoặc nằm) càng thẳng càng tốt.",
-        "Đặt cassette sau lưng, tựa sát mặt sau lồng ngực; mặt phẳng dọc giữa vào giữa phim.",
-        "Hai vai cùng mặt phẳng ngang; bờ trên cassette trên vai ~5 cm."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Tia trung tâm chiếu vuông góc với tấm cassette, ngang mức đốt sống ngực 6–7."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy đủ hai trường phổi và góc sườn hoành trong giới hạn tư thế tại giường.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-nguc-tai-giuong-ct.png", caption: "Chiều thế chụp tại giường" },
-      { src: "images/xq/xq-nguc-tai-giuong-phim.png", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
-  },
-
-  {
-    id: "xq-suon-chan-thuong",
-    phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang lồng ngực khảo sát xương sườn (chấn thương)",
-    tuKhoa: ["xuong suon chan thuong", "gay suon", "long nguc chan thuong", "rib trauma"],
-    thongSo: [
-      { ten: "Cỡ phim", giaTri: "30 × 40 cm" },
-      { ten: "kV / mAs", giaTri: "Theo cài đặt máy (tham khảo xương sườn / lồng ngực)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Vào vùng sườn tổn thương, vuông góc mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Tùy vùng (trên/dưới cơ hoành)" }
-    ],
-    noiDung: [
-      { tieuDe: "Mục tiêu", items: [
-        "Khảo sát xương sườn vùng chấn thương (tìm đường gãy), bổ sung cho phim phổi thường quy."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Chụp khu trú vào nửa lồng ngực bên tổn thương; có thể thêm tư thế chếch để bộc lộ đường gãy.",
-        "Sườn trên cơ hoành: chụp ở thì hít vào; sườn dưới cơ hoành: chụp ở thì thở ra.",
-        "Đưa xương bả vai ra khỏi lồng sườn khi khảo sát sườn phía sau trên cao."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm vào vùng sườn cần khảo sát, tia vuông góc mặt phim (tham khảo kỹ thuật xương sườn)."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ các cung sườn vùng tổn thương và tương quan với màng phổi/khoang phổi.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-suon-chan-thuong-ct.png", caption: "Chiều thế" },
-      { src: "images/xq/xq-suon-chan-thuong-ct2.png", caption: "Chiều thế (chếch)" },
-      { src: "images/xq/xq-suon-chan-thuong-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-suon-chan-thuong-phim2.png", caption: "Phim đạt yêu cầu (2)" }
-    ],
-    nguon: "Tài liệu chỉnh sửa Khoa CĐHA (Loi_XQ) — chờ Trưởng khoa/KTV trưởng duyệt thông số"
-  },
 
 
   {
     id: "xq-he-tiet-nieu",
     phanHe: "xquang", modality: "X-quang", nhom: "Lồng ngực - Bụng",
-    ten: "Chụp X-quang hệ tiết niệu (KUB)",
-    tuKhoa: ["he tiet nieu", "kub", "than nieu quan bang quang", "soi tiet nieu", "bung tiet nieu"],
+    ten: "Chụp X-quang bụng không chuẩn bị tư thế trước sau, bệnh nhân nằm ngửa (hệ tiết niệu – KUB)",
+    tuKhoa: ["kub", "he tiet nieu", "bung khong chuan bi", "soi than", "soi nieu quan", "nam ngua"],
     thongSo: [
-      { ten: "Cỡ phim", giaTri: "35 × 43 cm hoặc 30 × 40 cm và đặt theo chiều dài" },
-      { ten: "kV / mAs", giaTri: "92–94 kVp · 15–18 mAs (bề dày 17–21 cm)" },
+      { ten: "Tư thế", giaTri: "Trước sau (AP), nằm ngửa (KUB)" },
+      { ten: "kV / mAs", giaTri: "92–94 kVp · 15–18 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mào chậu" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Bóng gan, lách, cơ thắt lưng (cơ Psoas), thận, bàng quang và đại tràng."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Nghi ngờ sỏi thận, sỏi niệu quản, sỏi bàng quang,… sau hậu phẫu sỏi, đặt sonde,…"
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm ngửa trên bàn chụp hình, mặt phẳng dọc giữa của thân mình vuông góc và nằm ngay đường giữa của bàn.",
-        "Hai đầu gối bệnh nhân gập lại ở một tư thế thuận lợi và thoải mái.",
-        "Điều chỉnh hai vai bệnh nhân cùng nằm trên mặt phẳng ngang, hai tay bệnh nhân đưa thẳng lên đầu.",
-        "Điều chỉnh cát xét sao cho trung tâm phim nằm ngay trung điểm của đường thẳng nối liền hai mào chậu."
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Nằm ngửa, chỉnh MSP thẳng trục với đường giữa của bàn hoặc tấm nhận ảnh.",
+        "Hai cánh tay đặt hai bên, cách xa cơ thể; hai chân duỗi thẳng, có đệm lót dưới khoeo chân nếu giúp thoải mái hơn."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh tâm tấm nhận ảnh ngang mức mào chậu, bờ dưới tấm nhận ảnh ngang mức khớp mu.",
+        "Khung chậu hoặc hai vai không bị xoay (kiểm tra hai gai chậu trước trên cách đều mặt bàn)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm của đường thẳng nối liền hai mào chậu, tia trung tâm đi qua điểm này và vuông góc với mặt phim tại trung tâm."
+        "Tia trung tâm vuông góc và hướng vào giữa tấm nhận ảnh (ngang mức mào chậu)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Hình bụng cân xứng và thấy rõ ràng trên phim.",
-        "Thấy được bờ trên khớp mu (Nếu có thể lấy cả hai vòm hoành).",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chặt chùm tia ở cả bốn cạnh vào cấu trúc giải phẫu cần khảo sát."
+      ]},
+      { tieuDe: "Hô hấp", items: [
+        "Nín thở trong quá trình phát tia."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đường viền của gan, lách, thận, các đoạn dạ dày và ruột chứa khí, và vòm khớp mu đối với vùng bàng quang."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không xoay: các cánh chậu, lỗ bịt và gai ngồi đối xứng, bờ ngoài các xương sườn dưới cách đều cột sống.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
       { src: "images/xq/xq-he-tiet-nieu-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-he-tiet-nieu-phim.png", caption: "Phim đạt yêu cầu" },
-      { src: "images/xq/xq-he-tiet-nieu-phim2.png", caption: "Phim có chú thích giải phẫu" }
+      { src: "images/xq/xq-he-tiet-nieu-phim2.png", caption: "Phim đạt yêu cầu (chú thích)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 3 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 3 — Chương II: Kỹ thuật chụp bụng không chuẩn bị"
   },
 
   /* ---- X-QUANG XƯƠNG SƯỜN – ỨC – ỨC ĐÒN (Tập 2) ---- */
 
-
-
-
-
-
-
   /* ---- X-QUANG TIM – PHỔI tư thế bổ sung (Tập 2) ---- */
-
-
-
-
-
 
   /* ------------------------------------- X-QUANG CÓ CẢN QUANG ------------ */
   {
@@ -3294,8 +4124,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
-
   {
     id: "ct-mach-mau-nao",
     phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
@@ -3327,8 +4155,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
-
 
   {
     id: "ct-ham-mat-khong-tiem",
@@ -3383,8 +4209,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
-
   {
     id: "ct-tai-xuong-da-khong-tiem",
     phanHe: "ct-mri", modality: "CT", nhom: "Sọ + mặt",
@@ -3409,8 +4233,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
-
 
   {
     id: "ct-long-nguc-khong-tiem",
@@ -3462,7 +4284,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
 
   {
     id: "ct-dm-chu-nguc",
@@ -3592,7 +4413,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
   {
     id: "ct-he-tiet-nieu-thuong-quy",
     phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
@@ -3614,8 +4434,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
-
 
   {
     id: "ct-gan-duong-mat",
@@ -3644,7 +4462,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
   {
     id: "ct-ruot-non-khong-ong",
     phanHe: "ct-mri", modality: "CT", nhom: "Bụng - chậu",
@@ -3667,8 +4484,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
-
 
   {
     id: "ct-cs-co-khong-tiem",
@@ -3716,7 +4531,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
   {
     id: "ct-cs-nguc-khong-tiem",
     phanHe: "ct-mri", modality: "CT", nhom: "Cột sống",
@@ -3760,7 +4574,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
 
   {
     id: "ct-cs-tl-khong-tiem",
@@ -3806,7 +4619,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
   {
     id: "ct-khop-khong-tiem",
     phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
@@ -3829,8 +4641,6 @@ window.SOTAY_QUYTRINH = [
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
 
-
-
   {
     id: "ct-xuong-chi-khong-tiem",
     phanHe: "ct-mri", modality: "CT", nhom: "Cơ xương khớp & chi",
@@ -3852,7 +4662,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "QUY TRÌNH CLVT KHOA CDHA BVHVGL.docx"
   },
-
 
   {
     id: "ct-dm-chu-chau",
