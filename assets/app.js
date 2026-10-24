@@ -216,7 +216,11 @@
       h += "</div>";
     }
     (it.noiDung || []).forEach(function (s) {
-      h += '<div class="sec"><h3>' + esc(s.tieuDe) + "</h3><ul>";
+      var nt = (s.tieuDe || "").replace(/^[^A-Za-z]+/, "").toLowerCase();
+      var cls = "sec", ico = "";
+      if (nt.indexOf("cảnh báo") === 0) { cls = "sec callout warn"; ico = "⚠️ "; }
+      else if (nt.indexOf("lưu ý") === 0) { cls = "sec callout note"; ico = "💡 "; }
+      h += '<div class="' + cls + '"><h3>' + ico + esc(s.tieuDe) + "</h3><ul>";
       (s.items || []).forEach(function (x) { h += "<li>" + esc(x) + "</li>"; });
       h += "</ul></div>";
     });

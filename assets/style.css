@@ -238,6 +238,16 @@ mark { background: #ffe680; color: inherit; padding: 0 2px; border-radius: 3px; 
 .sec ul { margin: 0; padding-left: 20px; }
 .sec li { margin-bottom: 6px; }
 
+/* khung callout: Cảnh báo (đỏ) / Lưu ý (vàng) */
+.sec.callout { padding: 11px 14px; border-radius: 10px; border: 1px solid; border-left-width: 5px; }
+.sec.callout h3::before { display: none; }
+.sec.callout.warn { background: rgba(220,38,38,.09); border-color: rgba(220,38,38,.45); }
+.sec.callout.warn h3 { color: #b91c1c; }
+.sec.callout.note { background: rgba(202,138,4,.12); border-color: rgba(202,138,4,.5); }
+.sec.callout.note h3 { color: #a16207; }
+:root[data-theme="dark"] .sec.callout.warn h3 { color: #fca5a5; }
+:root[data-theme="dark"] .sec.callout.note h3 { color: #fcd34d; }
+
 /* --------------------------------------------------------------- CÔNG CỤ */
 .tool-card {
   background: var(--surface); border: 1px solid var(--line);
