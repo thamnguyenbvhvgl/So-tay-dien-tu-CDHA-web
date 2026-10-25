@@ -3317,245 +3317,387 @@ window.SOTAY_QUYTRINH = [
   {
     id: "xq-dui-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang xương đùi thẳng (trước sau)",
-    tuKhoa: ["dui", "xuong dui", "femur ap"],
+    ten: "Chụp X-quang xương đùi tư thế trước sau (phần giữa và phần xa)",
+    tuKhoa: ["dui", "xuong dui", "femur ap", "phan xa", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs (bề dày 14–17 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "50 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa thân xương đùi" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương đùi và mô mềm xung quanh."
+      { tieuDe: "Lưu ý", items: [
+        "Nếu vùng khảo sát nằm ở khu vực phần gần (đầu trên) xương đùi, khuyến cáo thực hiện quy trình chụp khớp háng một bên hoặc chụp khung chậu thường quy."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm ngửa, hai chân duỗi thẳng và đùi đau được đặt trọn trên phim.",
-        "Xoay bàn chân đau vào phía trong một chút nhằm mục đích đặt bình diện lồi cầu và cổ xương đùi song song với mặt phim."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát phần giữa và phần xa xương đùi, bao gồm cả khớp gối để phát hiện và đánh giá tình trạng gãy xương và/hoặc các tổn thương xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát. Đảm bảo rằng tấm chắn không che khuất bất kỳ phần nào của xương đùi."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân nằm ngửa, với xương đùi nằm ở đường giữa của bàn chụp; kê gối dưới đầu bệnh nhân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh trục dọc xương đùi thẳng hàng với tia trung tâm và đường giữa của mặt bàn hoặc tấm nhận ảnh.",
+        "Xoay chân vào trong khoảng 5° để có tư thế AP thực sự, giống như chụp AP khớp gối. (Đối với phần gần xương đùi, cần xoay chân vào trong từ 15° đến 20°, giống như chụp AP khớp háng).",
+        "Đảm bảo rằng khớp gối được bao gồm trong tấm nhận ảnh, lưu ý đến sự phân kỳ của chùm tia X. (Bờ dưới của tấm nhận ảnh nên ở vị trí dưới khớp gối khoảng 5 cm)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa thân xương đùi, tia trung tâm thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với xương đùi và tấm nhận ảnh.",
+        "Hướng tia trung tâm vào điểm giữa của tấm nhận ảnh."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia sát vào hai bên bờ ngoài của xương đùi với giới hạn khu trú ở hai đầu bằng với các mép viền của phim chụp.",
+        "Quy trình chụp bao gồm cả hai khớp: các quy trình thường quy tại khoa thường bao gồm cả hai khớp trên tất cả các phim chụp khảo sát xương đùi ban đầu. Đối với bệnh nhân to lớn, cần sử dụng thêm một tấm nhận ảnh nhỏ hơn thứ hai để chụp AP khớp gối hoặc khớp háng, đảm bảo rằng cả khớp háng và khớp gối đều được bộc lộ đầy đủ. Nếu khớp háng được đưa vào phim chụp, chân phải được xoay vào trong từ 15° đến 20° để bộc lộ rõ cổ xương đùi ở góc nhìn nghiêng."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Hai phần ba dưới của xương đùi, bao gồm cả khớp gối, phải được bộc lộ trên phim.",
+        "Khe khớp gối sẽ không hiển thị mở rộng hoàn toàn do sự phân kỳ của chùm tia X."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không bị xoay, điều này được chứng minh qua hình ảnh các lồi cầu xương đùi và xương chày xuất hiện đối xứng về kích thước và hình dạng, với đường viền của xương bánh chè nằm hơi lệch về phía trong xương đùi.",
+        "Khoảng một phần nửa trong của chỏm xương mác phải bị chồng lấp bởi xương chày.",
+        "Xương đùi phải nằm ở trung tâm trường khu trú và trục dọc của xương đùi thẳng hàng với trục dọc của tấm nhận ảnh, đồng thời khe khớp gối cách bờ dưới tấm nhận ảnh tối thiểu 2,5 cm.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-dui-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-dui-truocsau-phim.jpg", caption: "Phim đạt yêu cầu (đầu trên)" },
-      { src: "images/xq/xq-dui-truocsau-phim2.png", caption: "Phim đạt yêu cầu (đầu dưới)" }
+      { src: "images/xq/xq-dui-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dui-truocsau-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 5: Xương đùi"
   },
 
   {
     id: "xq-dui-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang xương đùi nghiêng",
-    tuKhoa: ["dui nghieng", "femur lateral"],
+    ten: "Chụp X-quang xương đùi tư thế nghiêng (phần giữa và phần xa)",
+    tuKhoa: ["dui nghieng", "femur lateral", "phan xa", "chi duoi"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs (bề dày 13–16 cm)" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay giữa thân xương đùi" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương đùi và mô mềm chung quanh."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng thực hiện tư thế này nếu bệnh nhân bị chấn thương nặng."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Bệnh nhân nằm nghiêng về bên đùi đau với chân lành đưa về phía trước và đùi đau được nằm trọn trên phim với mặt bên của đùi tiếp xúc sát mặt phim, có thể dùng túi cát đặt lên cẳng chân bên đau để giữ bất động."
+      { tieuDe: "Lưu ý", items: [
+        "Đối với trường hợp nghi ngờ chấn thương, nếu vùng khảo sát nằm ở khu vực phần gần (đầu trên) xương đùi, khuyến cáo thực hiện quy trình chụp khớp háng chấn thương một bên. Đối với trường hợp không chấn thương, chụp nghiêng phần gần xương đùi."
+      ]},
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát phần giữa và phần xa xương đùi, bao gồm cả khớp gối để phát hiện và đánh giá tình trạng gãy xương và/hoặc các tổn thương xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát. Đảm bảo rằng tấm chắn không che khuất bất kỳ phần nào của xương đùi."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, hoặc nằm ngửa đối với bệnh nhân chấn thương."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Gập khớp gối khoảng 45° với bệnh nhân nằm nghiêng về bên tổn thương, và chỉnh trục xương đùi thẳng hàng với đường giữa của bàn chụp hoặc tấm nhận ảnh.",
+        "Đặt chân không tổn thương ra phía sau chân bị thương để tránh xoay quá mức.",
+        "Điều chỉnh tấm nhận ảnh để bao gồm khớp gối (bờ dưới tấm nhận ảnh nên cách khớp gối khoảng 5 cm về phía dưới). Ở người lớn, thông thường sẽ cần thêm một tấm nhận ảnh thứ hai để bao gồm phần gần xương đùi và khớp háng."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay giữa thân xương đùi, tia trung tâm thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với xương đùi và tấm nhận ảnh, hướng vào điểm giữa của tấm nhận ảnh."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia sát vào hai bên bờ ngoài của xương đùi với giới hạn khu trú ở hai đầu bằng với các mép viền của phim chụp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bộc lộ hai phần ba dưới của xương đùi, bao gồm cả khớp gối.",
+        "Khe khớp gối sẽ không hiển thị mở rộng, và các bờ dưới của các lồi cầu xương đùi sẽ không chồng khít lên nhau do sự phân kỳ của chùm tia X."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Bờ trước và bờ sau của lồi cầu trong và lồi cầu ngoài xương đùi phải chồng khít lên nhau và thẳng hàng với khe khớp đùi - bánh chè mở rộng.",
+        "Xương đùi phải nằm ở trung tâm trường khu trú với khe khớp gối cách bờ dưới tấm nhận ảnh tối thiểu 2,5 cm.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-dui-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-dui-nghieng-phim.jpg", caption: "Phim đạt yêu cầu (đầu trên)" },
-      { src: "images/xq/xq-dui-nghieng-phim2.png", caption: "Phim đạt yêu cầu (đầu dưới)" }
+      { src: "images/xq/xq-dui-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dui-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 5: Xương đùi"
+  },
+
+  {
+    id: "xq-dui-nghieng-gan",
+    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
+    ten: "Chụp X-quang xương đùi tư thế nghiêng (phần giữa và phần gần)",
+    tuKhoa: ["dui nghieng gan", "femur proximal lateral", "co xuong dui", "chi duoi"],
+    thongSo: [
+      { ten: "Tư thế", giaTri: "Nghiêng" },
+      { ten: "kV / mAs", giaTri: "58 kVp · 2,5 mAs" },
+      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
+      { ten: "Lưới lọc", giaTri: "Không" }
+    ],
+    noiDung: [
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng thực hiện tư thế này cho những bệnh nhân có khả năng gãy xương hông (khớp háng) hoặc phần gần xương đùi. Tham khảo quy trình chụp nghiêng khớp háng chấn thương trong chương này."
+      ]},
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát phần giữa và phần gần xương đùi bao gồm cả hướng chiếu nghiêng khớp háng để phát hiện và đánh giá tình trạng gãy xương và các tổn thương xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát. Đảm bảo rằng tấm chắn không che khuất bất kỳ phần nào của xương đùi."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Đặt bệnh nhân ở tư thế nằm nghiêng, bên tổn thương nằm dưới; kê gối dưới đầu bệnh nhân."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Gập khớp gối bên tổn thương khoảng 45° và chỉnh trục xương đùi thẳng hàng với đường giữa của bàn chụp. (Lưu ý rằng phần gần và phần giữa của xương đùi nằm gần với mặt trước của đùi hơn).",
+        "Duỗi và kê vật hỗ trợ cho chân không tổn thương ra phía sau đầu gối bên bị thương, đồng thời cho bệnh nhân lăn nhẹ ra sau (về phía sau) khoảng 15° để tránh chồng lấp phần gần xương đùi và khớp háng.",
+        "Điều chỉnh tấm nhận ảnh để bao gồm khớp háng, lưu ý đến sự phân kỳ của chùm tia X. (Sờ gai chậu trước trên và đặt bờ trên của tấm nhận ảnh ngang mức với mốc giải phẫu này)."
+      ]},
+      { tieuDe: "Tia trung tâm", items: [
+        "Tia trung tâm chiếu vuông góc với xương đùi và tấm nhận ảnh, hướng vào điểm giữa của tấm nhận ảnh."
+      ]},
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia sát vào hai bên bờ ngoài của xương đùi với giới hạn khu trú ở hai đầu bằng với các mép viền của phim chụp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Một phần hai đến hai phần ba trên của phần gần xương đùi, bao gồm cả khớp háng, được bộc lộ.",
+        "Phần gần xương đùi và khớp háng không được bị chồng lấp bởi chi đối diện."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Có sự chồng lấp của mấu chuyển lớn và mấu chuyển bé lên thân xương đùi, chỉ bộc lộ một phần nhỏ của các mấu chuyển ở mặt trong.",
+        "Phần lớn mấu chuyển lớn bị chồng lấp bởi cổ xương đùi.",
+        "Xương đùi phải nằm ở trung tâm trường khu trú với khớp háng cách bờ trên tấm nhận ảnh tối thiểu 2,5 cm.",
+        "Khu trú chùm tia vào vùng khảo sát."
+      ]}
+    ],
+    hinhAnh: [
+      { src: "images/xq/xq-dui-nghieng-gan-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-dui-nghieng-gan-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-dui-nghieng-gan-phim2.png", caption: "Phim đạt yêu cầu (chú thích giải phẫu)" }
+    ],
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 5: Xương đùi"
   },
 
   {
     id: "xq-khungchau-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khung chậu thẳng (trước sau)",
-    tuKhoa: ["khung chau", "xuong chau", "pelvis ap", "chau"],
+    ten: "Chụp X-quang khung chậu tư thế trước sau (khớp háng hai bên)",
+    tuKhoa: ["khung chau", "xuong chau", "pelvis ap", "chau", "khop hang hai ben"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "64 kVp · 15 mAs (bề dày 17–20 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền hai gai chậu trước trên" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương chậu, phần trên xương đùi và phần dưới cột sống thắt lưng."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay chân vào trong nếu nghi ngờ có gãy xương hoặc trật khớp háng. Thực hiện tư thế với sự cử động tối thiểu của chân bị thương."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với bình diện giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Điều chỉnh cassette sao cho trung tâm phim nằm trên khớp liên mu khoảng 5 cm, hay bờ trên của phim nằm trên mào chậu khoảng 5 cm và bờ dưới của phim nằm dưới mấu chuyển nhỏ của xương đùi."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Gãy xương, trật khớp, bệnh lý thoái hóa và các tổn thương xương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn tuyến sinh dục cho tất cả bệnh nhân nam. Tuy nhiên, việc che chắn buồng trứng ở nữ giới thường không thể thực hiện được mà không che khuất các cấu trúc giải phẫu thiết yếu của khung chậu (trừ khi chỉ khảo sát vùng khớp háng)."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa, hai tay để dọc theo thân người hoặc vắt ngang qua ngực trên; kê gối dưới đầu và hỗ trợ dưới đầu gối; có thể thực hiện ở tư thế đứng kèm theo điều chỉnh chi dưới để xoay phần gần xương đùi vào tư thế giải phẫu nếu không nghi ngờ gãy xương."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Chỉnh mặt phẳng dọc giữa của bệnh nhân thẳng hàng với đường giữa của bàn chụp và tia trung tâm.",
+        "Đảm bảo khung chậu không bị xoay; khoảng cách từ mặt bàn đến mỗi gai chậu trước trên phải bằng nhau.",
+        "Tách rời hai chân và bàn chân, sau đó xoay trong trục dọc của bàn chân và chi dưới từ 15° đến 20° (xem cảnh báo ở trên). Kỹ thuật viên có thể phải đặt bao cát giữa hai gót chân và dùng băng keo dán phần trên của hai bàn chân lại với nhau hoặc sử dụng thêm bao cát tựa vào bàn chân để duy trì tư thế này."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền hai gai chậu trước trên, tia trung tâm sẽ thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào trung điểm giữa mức gai chậu trước trên và khớp mu. Điểm này nằm cách gai chậu trước trên khoảng 5 cm về phía dưới.",
+        "Nếu thực hiện như một phần của quy trình chụp khớp háng, điểm trung tâm nên được hạ thấp xuống khoảng 5 cm ngang mức giữa chỏm hoặc cổ xương đùi để bao gồm nhiều phần gần xương đùi hơn."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Đai chậu, đốt sống L5, xương cùng và xương cụt, chỏm và cổ xương đùi, cùng các mấu chuyển lớn được bộc lộ rõ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Các mấu chuyển bé hoàn toàn không được nhìn thấy; đối với nhiều bệnh nhân, chỉ nhìn thấy phần đỉnh.",
+        "Các mấu chuyển lớn phải xuất hiện với kích thước và hình dạng bằng nhau.",
+        "Không bị xoay được thể hiện qua sự xuất hiện đối xứng của các cánh chậu, gai ngồi và hai lỗ bịt.",
+        "Lỗ bịt bị thu ngắn hoặc đóng kín cho thấy có sự xoay về hướng đó. (Lỗ bịt bên phải bị đóng hoặc hẹp hơn so với bên trái cho thấy khung chậu xoay sang phải).",
+        "Các gai ngồi bên phải và bên trái (nếu thấy) phải có kích thước bằng nhau.",
+        "Việc định tâm chính xác được thể hiện qua việc bộc lộ toàn bộ khung chậu và phần trên xương đùi mà không bị biến dạng thu ngắn trong trường khu trú.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-khungchau-truocsau-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-khungchau-truocsau-phim.jpg", caption: "Phim đạt yêu cầu (nữ)" },
-      { src: "images/xq/xq-khungchau-truocsau-phim2.png", caption: "Phim đạt yêu cầu (nam)" }
+      { src: "images/xq/xq-khungchau-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-khungchau-truocsau-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-khungchau-truocsau-phim2.png", caption: "Phim đạt yêu cầu (chú thích giải phẫu)" }
     ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
-  },
-
-  {
-    id: "xq-khungchau-nghieng",
-    phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khung chậu nghiêng",
-    tuKhoa: ["khung chau nghieng", "pelvis lateral"],
-    thongSo: [
-      { ten: "kV / mAs", giaTri: "74 kVp · 30 mAs (bề dày 24–26 cm)" },
-      { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền mấu chuyển lớn của xương đùi và mào chậu. Tia trung tâm thẳng góc với mặt phim" },
-      { ten: "Lưới lọc", giaTri: "Có" }
-    ],
-    noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương cùng, xương cụt ở thế nghiêng. Đây cũng là một tư thế thường được áp dụng trong trường hợp cần định vị những vật lạ ở trong vùng xương chậu."
-      ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm nghiêng trên bàn chụp hình với hai tay duỗi thẳng về phía đầu, hai khuỷu tay gập lại và hai cẳng chân ôm lấy đầu.",
-        "Hai chân co lại và trục dài của cột sống nằm ngay đường giữa của bàn hoặc phim.",
-        "Điều chỉnh thân mình bệnh nhân thế nào để những mào chậu, những gai tọa và các hố chén nằm chồng lên nhau.",
-        "Điều chỉnh cassette sao cho bờ trên phim nằm trên mào chậu khoảng 5 cm.",
-        "Để giữ sự bất động của bệnh nhân, chúng ta dùng băng ép đặt ngang qua vùng u của xương chậu."
-      ]},
-      { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung điểm đường thẳng nối liền mấu chuyển lớn của xương đùi và mào chậu. Tia trung tâm thẳng góc với mặt phim."
-      ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ xương cùng, xương cụt ở thế nghiêng.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
-      ]}
-    ],
-    hinhAnh: [
-      { src: "images/xq/xq-khungchau-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-khungchau-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
-    ],
-    nguon: "Kỹ thuật chụp X quang thông thường – Tập 2 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 6: Khung chậu và khớp háng"
   },
 
   {
     id: "xq-hang-truocsau",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp háng thẳng (trước sau)",
-    tuKhoa: ["khop hang", "hang", "hip ap", "co xuong dui"],
+    ten: "Chụp X-quang khớp háng thẳng tư thế trước sau (một bên)",
+    tuKhoa: ["khop hang", "hang", "hip ap", "co xuong dui", "mot ben"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 17–20 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Gạch một đường thẳng nối liền gai chậu trước trên với bờ trên khớp mu" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Chỏm và cổ xương đùi, mấu chuyển lớn và hốm khớp chén."
+      { tieuDe: "Cảnh báo", items: [
+        "Không cố gắng xoay chân nếu nghi ngờ có gãy xương. Nên hoàn thành một phim chụp AP khung chậu bao gồm cả hai khớp háng để so sánh trước khi thực hiện phim chụp AP khớp háng một bên đối với các trường hợp có thể là chấn thương khớp háng hoặc khung chậu."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình thế nào để xương chậu nằm thật ngay ngắn và cân xứng mặc dầu ta chỉ cần chụp một bên mà thôi.",
-        "Để nhìn thấy chiều dài và chi tiết của xương đùi được tối đa, ta xoay bàn chân vào phía trong một góc khoảng 15° và giữ yên chiều thế bằng cách dùng túi cát đặt lên trên đầu bàn chân."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khám sau phẫu thuật hoặc theo dõi để bộc lộ ổ cối, chỏm xương đùi, cổ xương đùi và mấu chuyển lớn.",
+        "Đánh giá tình trạng và vị trí của bất kỳ dụng cụ chỉnh hình nào hiện có."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa, hai tay để dọc theo thân người hoặc vắt ngang qua ngực trên."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Xác định vị trí cổ xương đùi và chỉnh thẳng hàng với tia trung tâm cũng như đường giữa của mặt bàn và/hoặc tấm nhận ảnh.",
+        "Đảm bảo không xoay khung chậu (khoảng cách từ các gai chậu trước trên đến mặt bàn phải bằng nhau).",
+        "Xoay chân bên tổn thương vào trong từ 15° đến 20° (xem cảnh báo ở trên)."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Gạch một đường thẳng nối liền gai chậu trước trên với bờ trên khớp mu, đoạn ngắm đầu đèn ngay một điểm nằm về phía dưới và về phía bên ngoài của trung điểm đường thẳng nối liền này 2, 5 cm. Tia trung tâm sẽ xuyên qua khớp háng và thẳng góc với mặt phim."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm cách trung tâm cổ xương đùi từ 2,5 đến 5 cm về phía dưới (để bao gồm toàn bộ dụng cụ chỉnh hình của khớp háng, nếu có). Cổ xương đùi có thể được xác định ở vị trí khoảng 3 đến 5 cm (1 đến 2 inches) về phía trong và 8 đến 10 cm về phía dưới so với gai chậu trước trên."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Một phần ba trên của xương đùi phải được bộc lộ, cùng với ổ cối và các phần lân cận của xương mu, xương ngồi và xương chậu.",
+        "Bất kỳ dụng cụ chỉnh hình hiện có nào cũng phải được nhìn thấy toàn bộ."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Mấu chuyển lớn cùng với chỏm và cổ xương đùi phải được nhìn thấy ở góc nhìn nghiêng hoàn toàn mà không bị biến dạng thu ngắn.",
+        "Mấu chuyển bé không được nhô ra khỏi bờ trong của xương đùi; ở một số bệnh nhân, chỉ nhìn thấy đỉnh của nó khi chân được xoay vào trong đủ mức.",
+        "Trường khu trú phải thể hiện toàn bộ khớp háng và bất kỳ dụng cụ chỉnh hình nào một cách trọn vẹn.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hang-truocsau-ct.jpg", caption: "Tư thế & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hang-truocsau-phim.jpg", caption: "Phim khớp háng trước sau — mẫu" }
+      { src: "images/xq/xq-hang-truocsau-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-hang-truocsau-phim.png", caption: "Phim đạt yêu cầu (có dụng cụ chỉnh hình)" },
+      { src: "images/xq/xq-hang-truocsau-phim2.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 6: Khung chậu và khớp háng"
   },
 
   {
     id: "xq-hang-chan-ech",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp háng tư thế chân ếch (tư thế Cleaves)",
-    tuKhoa: ["chan ech", "cleaves", "frog leg", "hang hai ben"],
+    ten: "Chụp X-quang khung chậu tư thế chân ếch",
+    tuKhoa: ["chan ech", "cleaves", "frog leg", "khung chau chan ech", "loan san khop hang"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs (bề dày 17–20 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "64 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Ngắm đầu đèn ngay trung tâm phim" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Xương chậu, hốm khớp chén, chỏm và cổ xương đùi và những mô mềm. Trong tư thế này chúng ta sẽ được hình ảnh của chỏm và cổ xương đùi ở thế chếch chứ không phải ở thế nghiêng hoàn toàn. Hố chén vẫn giữ ở tư thế trước sau và cổ xương đùi sẽ không được nhìn thấy rõ ràng trên phim."
+      { tieuDe: "Cảnh báo", items: [
+        "Không thực hiện tư thế này trên bệnh nhân có bệnh lý phá hủy khớp háng hoặc có khả năng gãy xương hay trật khớp háng."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với bình diện giữa của thân mình nằm ngay đường giữa của bàn.",
-        "Đặt hai lòng bàn chân của bệnh nhân chụm vào nhau với đầu gối gập lại, đoạn bảo bệnh nhân dùng sức kéo bẹt đùi ra ngoài đến mức tối đa.",
-        "Điều chỉnh cassette thế nào để trung tâm phim nằm trên khớp liên mu khoảng 5 cm."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Khảo sát khớp háng không do chấn thương.",
+        "Loạn sản phát triển khớp háng, còn được gọi là trật khớp háng bẩm sinh."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn tuyến sinh dục cho cả bệnh nhân nam và nữ mà không làm che khuất các cấu trúc giải phẫu thiết yếu."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa, kê gối dưới đầu và vắt chéo hai tay qua ngực."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Căn chỉnh bệnh nhân vào đường giữa của bàn chụp và/hoặc tấm nhận ảnh, thẳng hàng với tia trung tâm.",
+        "Đảm bảo khung chậu không bị xoay (khoảng cách từ mỗi gai chậu trước trên đến mặt bàn phải bằng nhau).",
+        "Chỉnh tâm tấm nhận ảnh vào tia trung tâm, ngang mức chỏm xương đùi, với bờ trên của tấm nhận ảnh xấp xỉ ngang mức mào chậu.",
+        "Gập cả hai đầu gối khoảng 90°, như minh họa.",
+        "Áp hai mặt lòng bàn chân vào nhau và dạng cả hai đùi một góc từ 40° đến 45° so với phương thẳng đứng. Đảm bảo cả hai xương đùi được dạng một góc bằng nhau và khung chậu không bị xoay.",
+        "Đặt vật hỗ trợ dưới mỗi chân để giúp bệnh nhân giữ vững tư thế nếu cần thiết."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Ngắm đầu đèn ngay trung tâm phim, tia trung tâm thẳng góc với mặt phim tại trung tâm."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào một điểm cách mức gai chậu trước trên (ASIS) khoảng 7,5 cm về phía dưới (cách khớp mu 2,5 cm về phía trên)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Chỏm và cổ xương đùi, ổ cối và vùng mấu chuyển hai bên đều được nhìn thấy trên cùng một phim chụp."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Không có sự xoay, thể hiện qua sự xuất hiện đối xứng của các xương chậu, đặc biệt là cánh chậu, hai lỗ bịt và các gai ngồi (nếu có thể nhìn thấy).",
+        "Chỏm và cổ xương đùi cùng với các mấu chuyển lớn và bé phải xuất hiện đối xứng nhau.",
+        "Các mấu chuyển bé phải có kích thước bằng nhau, nằm nhô ra khỏi bờ dưới hoặc bờ trong của xương đùi.",
+        "Phần lớn diện tích của mấu chuyển lớn xuất hiện chồng lấp lên cổ xương đùi, cổ xương đùi có hình ảnh bị thu ngắn.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hang-chanech-ct.jpg", caption: "Tư thế chân ếch (Cleaves) & hướng tia (Clark's)" },
-      { src: "images/xq/xq-hang-chanech-phim.jpg", caption: "Phim chân ếch (Cleaves) — mẫu" }
+      { src: "images/xq/xq-hang-chanech-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-hang-chanech-phim.png", caption: "Phim đạt yêu cầu" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 6: Khung chậu và khớp háng"
   },
 
   {
     id: "xq-hang-nghieng",
     phanHe: "xquang", modality: "X-quang", nhom: "Chi dưới",
-    ten: "Chụp X-quang khớp háng nghiêng",
+    ten: "Chụp X-quang khớp háng tư thế nghiêng",
     tuKhoa: ["hang nghieng", "hip lateral", "co xuong dui nghieng"],
     thongSo: [
-      { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs (bề dày 24–26 cm)" },
+      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Tia trung tâm", giaTri: "Đặt đầu đèn nằm ngang và điều chỉnh thế nào để tia trung tâm thẳng góc với trung điểm của trục dài cổ xương đùi" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
     noiDung: [
-      { tieuDe: "Phần cơ thể nhìn thấy", items: [
-        "Chỏm và cổ xương đùi, một phần trên xương đùi và hố chén."
+      { tieuDe: "Cảnh báo", items: [
+        "Không thực hiện tư thế này trên bệnh nhân có bệnh lý phá hủy khớp háng hoặc có khả năng gãy xương hay trật khớp háng. Điều này có thể dẫn đến sự di lệch đáng kể của các mảnh gãy (xem các hướng chiếu nghiêng chấn thương)."
       ]},
-      { tieuDe: "Chiếu thế", items: [
-        "Đặt bệnh nhân nằm ngửa trên bàn chụp hình với xương chậu được kê trên một vật không cản tia X sao cho u ngồi cao hơn khỏi mặt bàn khoảng 5 cm.",
-        "Vật dùng để kê không được kéo rộng quá bờ nghiêng của thân mình để nó không làm trở ngại cho việc đặt cassette."
+      { tieuDe: "Chỉ định lâm sàng", items: [
+        "Hướng chiếu nghiêng để đánh giá khớp háng và phần gần xương đùi trong các tình trạng khớp háng không do chấn thương."
+      ]},
+      { tieuDe: "Bảo vệ bức xạ", items: [
+        "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
+      ]},
+      { tieuDe: "Tư thế bệnh nhân", items: [
+        "Bệnh nhân nằm ngửa, chỉnh vùng khớp háng bên tổn thương thẳng hàng với tia trung tâm và đường giữa của bàn chụp và/hoặc tấm nhận ảnh."
+      ]},
+      { tieuDe: "Vùng chụp", items: [
+        "Gập khớp gối và khớp háng bên tổn thương, như minh họa, với lòng bàn chân áp vào mặt trong của chân đối diện, càng gần đầu gối càng tốt.",
+        "Dạng xương đùi 45° so với phương thẳng đứng để khảo sát vùng phần gần xương đùi nói chung.",
+        "Chỉnh tâm cổ xương đùi bên tổn thương vào tia trung tâm và đường giữa của tấm nhận ảnh cũng như mặt bàn. (Cổ xương đùi nằm cách gai chậu trước trên từ 7,5 đến 10 cm về phía dưới).",
+        "Độ dạng xương đùi tối ưu để bộc lộ cổ xương đùi mà không bị biến dạng thu ngắn là từ 20° đến 30° so với phương thẳng đứng ở hầu hết bệnh nhân."
       ]},
       { tieuDe: "Tia trung tâm", items: [
-        "Đặt đầu đèn nằm ngang và điều chỉnh thế nào để tia trung tâm thẳng góc với trung điểm của trục dài cổ xương đùi."
+        "Tia trung tâm chiếu vuông góc với tấm nhận ảnh, hướng vào điểm giữa cổ xương đùi (trung tâm của tấm nhận ảnh)."
       ]},
-      { tieuDe: "Tiêu chuẩn ảnh đạt", items: [
-        "Thấy rõ và đầy đủ vùng giải phẫu cần khảo sát trên phim.",
-        "Phim rõ nét, tương phản tốt; có họ tên người bệnh, dấu P/T và ngày chụp."
+      { tieuDe: "Khuyến cáo khu trú chùm tia", items: [
+        "Khu trú chùm tia ở cả bốn cạnh vào vùng khảo sát."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Giải phẫu bộc lộ", items: [
+        "Bộc lộ góc nhìn nghiêng của ổ cối, chỏm và cổ xương đùi, vùng mấu chuyển, và một phần ba trên của xương đùi."
+      ]},
+      { tieuDe: "Tiêu chuẩn phim đạt — Tư thế", items: [
+        "Sự dạng xương đùi thích hợp được thể hiện qua cổ xương đùi nhìn nghiêng rõ (in profile), bị mấu chuyển lớn chồng lấp lên.",
+        "Việc định tâm chính xác được thể hiện qua cổ xương đùi nằm ở trung tâm trường khu trú.",
+        "Khu trú chùm tia vào vùng khảo sát."
       ]}
     ],
     hinhAnh: [
-      { src: "images/xq/xq-hang-nghieng-ct.jpg", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-hang-nghieng-phim.jpg", caption: "Phim đạt yêu cầu" }
+      { src: "images/xq/xq-hang-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
+      { src: "images/xq/xq-hang-nghieng-phim.png", caption: "Phim đạt yêu cầu" },
+      { src: "images/xq/xq-hang-nghieng-phim2.png", caption: "Phim đạt yêu cầu (bên đối diện)" }
     ],
-    nguon: "Kỹ thuật X quang thông thường – Tập 1 (Bộ môn Kỹ thuật hình ảnh, Khoa ĐD–KTYH)"
+    nguon: "Kỹ thuật X-quang thông thường 1 — Bài 6: Khung chậu và khớp háng"
   },
 
   /* -------------------------------------------------- X-QUANG SỌ – MẶT --- */
