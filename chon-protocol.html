@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261033">
+<link rel="stylesheet" href="assets/style.css?v=20261034">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -578,9 +578,15 @@
       if (it.hinhAnh && it.hinhAnh.length) {
         var imgs = it.hinhAnh.filter(function (im) { return im && im.src; });
         if (imgs.length) {
+          // chú thích dưới ảnh: bỏ phần lặp với nhãn hàng ("Phim đạt yêu cầu (chú thích)" -> "Chú thích")
+          var shortCap = function (cap) {
+            var c = (cap || "").replace(/^(Phim đạt yêu cầu|Chiều thế(?: & hướng tia)?)\s*/i, "").replace(/^\((.*)\)$/, "$1").replace(/^[—–-]\s*/, "").trim();
+            return c ? c.charAt(0).toUpperCase() + c.slice(1) : "";
+          };
           var pfig = function (im) {
+            var sc = shortCap(im.caption);
             return '<figure style="margin:0"><img loading="lazy" src="' + esc(im.src) + '" alt="' + esc(im.caption || "") + '">' +
-                   (im.caption ? '<figcaption>' + esc(im.caption) + '</figcaption>' : "") + '</figure>';
+                   (sc ? '<figcaption>' + esc(sc) + '</figcaption>' : "") + '</figure>';
           };
           var gCT = [], gPH = [];
           imgs.forEach(function (im) {

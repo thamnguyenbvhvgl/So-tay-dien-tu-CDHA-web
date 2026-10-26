@@ -299,7 +299,7 @@ window.SOTAY_QUYTRINH = [
     ],
     hinhAnh: [
       { src: "images/xq/xq-cotsong-co-chech-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-co-chech-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-cotsong-co-chech-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
   },
@@ -411,7 +411,7 @@ window.SOTAY_QUYTRINH = [
     ],
     hinhAnh: [
       { src: "images/xq/xq-cotsong-nguc-thang-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-nguc-thang-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-cotsong-nguc-thang-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
   },
@@ -464,7 +464,7 @@ window.SOTAY_QUYTRINH = [
     ],
     hinhAnh: [
       { src: "images/xq/xq-cotsong-nguc-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
-      { src: "images/xq/xq-cotsong-nguc-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-cotsong-nguc-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
   },
@@ -628,7 +628,7 @@ window.SOTAY_QUYTRINH = [
     hinhAnh: [
       { src: "images/xq/xq-cotsong-tl-nghieng-ct.png", caption: "Chiều thế & hướng tia" },
       { src: "images/xq/xq-cotsong-tl-nghieng-ct2.png", caption: "Chiều thế — minh hoạ góc tia 5° về chân" },
-      { src: "images/xq/xq-cotsong-tl-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-cotsong-tl-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương III: Kỹ thuật chụp cột sống"
   },
@@ -1106,7 +1106,7 @@ window.SOTAY_QUYTRINH = [
     ],
     hinhAnh: [
       { src: "images/xq/xq-xuonguc-chech-ct.png", caption: "Chiều thế & hướng tia (RAO)" },
-      { src: "images/xq/xq-xuonguc-chech-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-xuonguc-chech-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
   },
@@ -1160,7 +1160,7 @@ window.SOTAY_QUYTRINH = [
     hinhAnh: [
       { src: "images/xq/xq-xuonguc-nghieng-ct.png", caption: "Chiều thế — đứng" },
       { src: "images/xq/xq-xuonguc-nghieng-ct2.png", caption: "Chiều thế — nằm nghiêng" },
-      { src: "images/xq/xq-xuonguc-nghieng-phim.png", caption: "Phim đạt yêu cầu (trơn + chú thích)" }
+      { src: "images/xq/xq-xuonguc-nghieng-phim.png", caption: "Phim đạt yêu cầu" }
     ],
     nguon: "Kỹ thuật chụp X-quang 2 — Chương IV: Kỹ thuật chụp lồng ngực"
   },
