@@ -31,9 +31,8 @@
   .pk-tiles { flex: 1 1 auto; min-width: 0; }
   .pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
             box-shadow: var(--shadow); overflow: hidden; }
-  .pb-col > h2 { margin: 0; padding: 12px 14px; font-size: 13.5px; letter-spacing: .4px;
-                 text-transform: uppercase; color: #fff;
-                 background: linear-gradient(90deg, var(--brand), var(--brand-ink)); }
+  .pb-col > h2 { margin: 0; padding: 12px 14px; font-size: 13.5px; font-weight: 700;
+                 color: #fff; background: var(--brand); }
   .pb-col > h2 small { display:block; font-weight:400; font-size:11px; opacity:.85; text-transform:none; letter-spacing:0; }
   .pb-body { padding: 12px; }
 
@@ -114,8 +113,8 @@
   /* các mục nội dung chảy thành 2–3 cột theo bề rộng (masonry bằng CSS columns) */
   .psecs { column-width: 270px; column-gap: 26px; }
   .psec { margin: 0 0 12px; break-inside: avoid; -webkit-column-break-inside: avoid; }
-  .psec h4 { display:flex; align-items:center; gap:8px; margin: 0 0 5px; font-size: 13px; text-transform: uppercase;
-             letter-spacing: .4px; color: var(--brand-ink); }
+  .psec h4 { display:flex; align-items:center; gap:8px; margin: 0 0 5px; font-size: 13px; font-weight: 700;
+             color: var(--brand-ink); }
   .psec h4::before { content:""; width:9px; height:9px; background:var(--brand); transform:rotate(45deg); border-radius:2px; flex:none; }
   .psec ul { margin: 0; padding-left: 20px; } .psec li { margin-bottom: 4px; font-size: 13.5px; }
   /* khung callout: Cảnh báo (đỏ) / Lưu ý (vàng) */
@@ -161,7 +160,7 @@
 </style>
 </head>
 <body>
-  <div class="topstrip" style="height:4px;background:linear-gradient(90deg,var(--xq),var(--ct) 55%,var(--brand))"></div>
+  <div class="topstrip" style="height:3px;background:var(--brand)"></div>
   <div class="pb-wrap">
     <div class="pb-head">
       <img src="assets/logo-hvgl.png" alt="BV Hùng Vương Gia Lai">
@@ -581,8 +580,8 @@
       curItem = it;
       var h = '<div class="pdetail">';
       h += '<h3>' + esc(it.ten) + '</h3>';
-      var tag = (MODALITY === "MRI") ? (/^mri-sop-/.test(it.id || "") ? ' · SOP khoa (đã duyệt)' : ' · tham khảo') : '';
-      h += '<p class="meta">' + esc(it.modality) + ' · ' + esc(it.nhom) + tag + (it.id ? ' · ' + esc(it.id) : '') + '</p>';
+      var tag = (MODALITY === "MRI") ? (/^mri-sop-/.test(it.id || "") ? ', SOP khoa (đã duyệt)' : ', tham khảo') : '';
+      h += '<p class="meta">' + esc(it.modality) + ', ' + esc(it.nhom) + tag + (it.id ? ' (mã ' + esc(it.id) + ')' : '') + '</p>';
       if (it.thongSo && it.thongSo.length) {
         h += '<table class="ptable"><tbody>';
         it.thongSo.forEach(function (t) {

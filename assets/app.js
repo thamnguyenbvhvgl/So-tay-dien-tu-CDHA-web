@@ -204,8 +204,8 @@
   function openDetail(it) {
     var h = "";
     h += '<h1 class="detail-title">' + esc(it.ten) + "</h1>";
-    h += '<p class="detail-meta">' + esc(it.modality) + " · " + esc(it.nhom) +
-         (it.id ? " · mã: " + esc(it.id) : "") + "</p>";
+    h += '<p class="detail-meta">' + esc(it.modality) + ", " + esc(it.nhom) +
+         (it.id ? " (mã " + esc(it.id) + ")" : "") + "</p>";
 
     if (it.thongSo && it.thongSo.length) {
       h += '<div class="param-box">';
