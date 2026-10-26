@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261034">
+<link rel="stylesheet" href="assets/style.css?v=20261035">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -104,6 +104,11 @@
   .titem:hover { border-color: var(--brand); }
   .titem.active { background: var(--surface-2); border-color: var(--brand); border-left: 4px solid var(--brand); font-weight: 600; }
   .titem .en { display: block; font-size: 12px; color: var(--text-soft); margin-top: 1px; }
+  /* mục khẩn cấp (đột quỵ): tô đỏ trong danh sách */
+  .titem.khancap { border-color: rgba(220,38,38,.55); border-left: 4px solid #dc2626; color: #b91c1c; font-weight: 700; }
+  .titem.khancap::before { content: "⚠ "; }
+  .titem.khancap.active { background: rgba(220,38,38,.08); border-color: #dc2626; }
+  :root[data-theme="dark"] .titem.khancap { color: #fca5a5; }
   .muted { color: var(--text-soft); font-size: 14px; padding: 10px 4px; }
 
   /* cột 3: thông số kỹ thuật (rộng — nội dung chia nhiều cột để đỡ lăn chuột) */
@@ -117,6 +122,10 @@
   .pd-badge.mod { color: #fff; border-color: transparent; }
   .pd-badge.ok { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); background: transparent; }
   .pd-badge.ref { color: var(--warn-ink); border-color: var(--warn-line); background: var(--warn-bg); }
+  .pd-badge.khan { color: #fff; background: #dc2626; border-color: #dc2626; }
+  /* mục khẩn cấp: viền đỏ đậm quanh toàn mục chi tiết */
+  .pdetail.khancap { border: 2px solid #dc2626; border-radius: 12px; padding: 14px 16px;
+                     background: rgba(220,38,38,.035); box-shadow: 0 0 0 4px rgba(220,38,38,.07); }
   .pd-headrow { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
   .pd-headrow h3 { margin: 0 0 3px; font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -.015em; line-height: 1.15; }
   .pd-src { margin: 0; font-size: 12px; color: var(--text-soft); }
@@ -156,6 +165,15 @@
              color: var(--brand-ink); }
   .psec h4::before { content:""; width:9px; height:9px; background:var(--brand); transform:rotate(45deg); border-radius:2px; flex:none; }
   .psec ul { margin: 0; padding-left: 20px; } .psec li { margin-bottom: 4px; font-size: 13.5px; }
+  /* section chứa bảng: chiếm trọn chiều ngang (thoát khỏi multicol) */
+  .psec-full { column-span: all; -webkit-column-span: all; break-inside: avoid; }
+  .pbang { overflow-x: auto; margin: 2px 0 4px; -webkit-overflow-scrolling: touch; }
+  .pbang table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
+  .pbang th, .pbang td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  .pbang th { background: var(--brand); color: #fff; font-weight: 700; font-size: 12.5px; }
+  .pbang tbody tr:nth-child(even) td { background: var(--surface-2); }
+  .pbang td:first-child { font-weight: 600; color: var(--brand-ink); white-space: nowrap; }
+  @media (max-width: 560px) { .pbang td:first-child { white-space: normal; } }
   /* khung callout: Cảnh báo (đỏ) / Lưu ý (vàng) */
   .psec.callout { padding: 9px 11px; border-radius: 9px; border: 1px solid; border-left-width: 4px; }
   .psec.callout h4::before { display: none; }
@@ -423,7 +441,10 @@
     function itemBlob(it) {
       var s = (it.ten || "") + " " + (it.nhom || "");
       (it.thongSo || []).forEach(function (t) { s += " " + (t.giaTri || ""); });
-      (it.noiDung || []).forEach(function (nd) { (nd.items || []).forEach(function (x) { s += " " + x; }); });
+      (it.noiDung || []).forEach(function (nd) {
+        (nd.items || []).forEach(function (x) { s += " " + x; });
+        if (nd.bang) (nd.bang.rows || []).forEach(function (r) { s += " " + (r || []).join(" "); });
+      });
       return s;
     }
     function isContrastMRI(it) {
@@ -532,7 +553,7 @@
       if (!items.length) { techBox.appendChild(el("p", "muted", "Không có mục nào ở vùng con này.")); detailBox.innerHTML = '<p class="placeholder">—</p>'; return; }
       var list = el("div", "tlist");
       items.forEach(function (it) {
-        var b = el("button", "titem", esc(it.ten));
+        var b = el("button", "titem" + (it.khanCap ? " khancap" : ""), esc(it.ten));
         b.onclick = function () {
           Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); });
           b.classList.add("active");
@@ -551,11 +572,12 @@
       var statusBadge = (it.modality === "MRI" && !/^mri-sop-/.test(it.id || ""))
         ? '<span class="pd-badge ref">Tham khảo</span>'
         : '<span class="pd-badge ok">✓ Đã duyệt 16/10/2026</span>';
+      var khanBadge = it.khanCap ? '<span class="pd-badge khan">⚠ KHẨN CẤP — Time is Brain</span>' : '';
 
-      var h = '<div class="pdetail"><div class="pd-head">' +
+      var h = '<div class="pdetail' + (it.khanCap ? ' khancap' : '') + '"><div class="pd-head">' +
         '<div class="pd-badges">' +
           '<span class="pd-badge mod" style="background:var(--' + modClass + ')">' + esc(it.modality) + '</span>' +
-          (it.nhom ? '<span class="pd-badge">' + esc(it.nhom) + '</span>' : '') + statusBadge +
+          (it.nhom ? '<span class="pd-badge">' + esc(it.nhom) + '</span>' : '') + khanBadge + statusBadge +
         '</div>' +
         '<div class="pd-headrow"><div>' +
           '<h3>' + esc(it.ten) + '</h3>' +
@@ -637,8 +659,20 @@
       if (secs.length) {
         h += '<div class="psecs">';
         secs.forEach(function (s) {
-          h += '<div class="psec"><h4>' + esc(s.tieuDe) + '</h4><ul>' +
-               (s.items || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul></div>';
+          var body = "", full = "";
+          if (s.bang && s.bang.rows && s.bang.rows.length) {
+            full = " psec-full";
+            body += '<div class="pbang"><table><thead><tr>' +
+              (s.bang.cols || []).map(function (c) { return '<th>' + esc(c) + '</th>'; }).join("") +
+              '</tr></thead><tbody>' +
+              s.bang.rows.map(function (r) {
+                return '<tr>' + (r || []).map(function (c) { return '<td>' + esc(c) + '</td>'; }).join("") + '</tr>';
+              }).join("") + '</tbody></table></div>';
+          }
+          if (s.items && s.items.length) {
+            body += '<ul>' + s.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>';
+          }
+          h += '<div class="psec' + full + '"><h4>' + esc(s.tieuDe) + '</h4>' + body + '</div>';
         });
         h += '</div>';
       }

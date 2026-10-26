@@ -54,6 +54,7 @@
     (item.noiDung || []).forEach(function (s) {
       parts.push(s.tieuDe);
       (s.items || []).forEach(function (x) { parts.push(x); });
+      if (s.bang) (s.bang.rows || []).forEach(function (r) { (r || []).forEach(function (c) { parts.push(c); }); });
     });
     return boDau(parts.join(" "));
   }
@@ -203,6 +204,7 @@
 
   function openDetail(it) {
     var h = "";
+    if (it.khanCap) h += '<div class="khan-banner">⚠️ KHẨN CẤP — Time is Brain</div>';
     h += '<h1 class="detail-title">' + esc(it.ten) + "</h1>";
     h += '<p class="detail-meta">' + esc(it.modality) + ", " + esc(it.nhom) +
          (it.id ? " (mã " + esc(it.id) + ")" : "") + "</p>";
@@ -220,9 +222,21 @@
       var cls = "sec", ico = "";
       if (nt.indexOf("cảnh báo") === 0) { cls = "sec callout warn"; ico = "⚠️ "; }
       else if (nt.indexOf("lưu ý") === 0) { cls = "sec callout note"; ico = "💡 "; }
-      h += '<div class="' + cls + '"><h3>' + ico + esc(s.tieuDe) + "</h3><ul>";
-      (s.items || []).forEach(function (x) { h += "<li>" + esc(x) + "</li>"; });
-      h += "</ul></div>";
+      h += '<div class="' + cls + '"><h3>' + ico + esc(s.tieuDe) + "</h3>";
+      if (s.bang && s.bang.rows && s.bang.rows.length) {
+        h += '<div class="bang-wrap"><table class="bang"><thead><tr>' +
+             (s.bang.cols || []).map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") +
+             "</tr></thead><tbody>" +
+             s.bang.rows.map(function (r) {
+               return "<tr>" + (r || []).map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("") + "</tr>";
+             }).join("") + "</tbody></table></div>";
+      }
+      if (s.items && s.items.length) {
+        h += "<ul>";
+        s.items.forEach(function (x) { h += "<li>" + esc(x) + "</li>"; });
+        h += "</ul>";
+      }
+      h += "</div>";
     });
     if (it.hinhAnh && it.hinhAnh.length) {
       var imgTitle = (it.phanHe === "benh-ly") ? "Hình ảnh ca lâm sàng" : "Hình ảnh";

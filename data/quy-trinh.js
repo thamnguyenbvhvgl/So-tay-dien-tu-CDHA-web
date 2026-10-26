@@ -5691,6 +5691,56 @@ window.SOTAY_QUYTRINH = [
   /* Nguồn: Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL.                 */
   /* ============================================================ */
   {
+    id: "mri-so-dot-quy",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
+    khanCap: true,
+    ten: "MRI đột quỵ / nhồi máu não cấp",
+    tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "penumbra", "perfusion", "lvo"],
+    thongSo: [
+      { ten: "1. Axial DWI/ADC", giaTri: "Bắt buộc đầu tiên — phát hiện nhồi máu tối cấp (1–4h), xác định tuổi tổn thương" },
+      { ten: "2. Axial GRE/SWI", giaTri: "Phát hiện sớm xuất huyết nhu mô / vi xuất huyết đi kèm" },
+      { ten: "3–4. T2W FSE · FLAIR", giaTri: "Đánh giá nhu mô kéo dài T2 và diện phù nề, tổn thương chất trắng" },
+      { ten: "5–7. MRA TOF-3D · PC 2D · PWI", giaTri: "Tắc/hẹp mạch & vòng Willis · hướng dòng chảy · diện giảm tưới máu (penumbra)" }
+    ],
+    noiDung: [
+      { tieuDe: "Thứ tự ưu tiên các chuỗi xung (cắt giảm tối đa thời gian cấp cứu)", items: [
+        "1. Axial DWI/ADC: bắt buộc đầu tiên — nhồi máu tối cấp (1–4h) và xác định tuổi tổn thương.",
+        "2. Axial GRE/SWI: phát hiện sớm xuất huyết nhu mô hoặc vi xuất huyết đi kèm.",
+        "3. Axial T2W FSE: tổn thương nhu mô kéo dài thời gian T2.",
+        "4. Axial FLAIR: diện phù nề và tổn thương chất trắng.",
+        "5. MRA TOF-3D: tắc/hẹp động mạch nội sọ và vòng Willis (không tiêm thuốc).",
+        "6. MRA 2D Phase Contrast: thông tin hướng dòng chảy các mạch máu lớn.",
+        "7. Perfusion PWI: diện giảm tưới máu để xác định vùng tranh tối tranh sáng (penumbra)."
+      ]},
+      { tieuDe: "Cảnh báo — Time is Brain", items: [
+        "DWI/ADC phải là chuỗi xung đầu tiên; GRE/SWI loại trừ xuất huyết trước khi cân nhắc tiêu sợi huyết.",
+        "Chỉ tiêm thuốc khi thực hiện PWI hoặc MRA-CE."
+      ]}
+    ],
+    nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-so-tra-cuu-nhanh",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
+    ten: "Bảng tra cứu nhanh MRI sọ não theo lâm sàng",
+    tuKhoa: ["tra cuu nhanh", "bang protocol", "chi dinh lam sang", "chuoi xung bo sung", "quick reference"],
+    noiDung: [
+      { tieuDe: "Bảng tra cứu nhanh theo định hướng lâm sàng", bang: {
+        cols: ["Chỉ định lâm sàng", "Chuỗi xung bổ sung / đặc biệt", "Chỉ định tiêm Gadolinium"],
+        rows: [
+          ["U não / di căn", "T1 3D FS, FLAIR+C, pMRI, MRS (TE 35/144), DTI", "Bắt buộc: T1 3D FS+C, FLAIR+C"],
+          ["Đột quỵ cấp", "DWI/ADC (ưu tiên), GRE/SWI, MRA TOF-3D, PWI", "Chỉ khi làm PWI hoặc MRA-CE"],
+          ["Tuyến yên / vùng yên", "T1/T2 Cor-Sag mỏng 2mm, Dynamic T1 Coronal 5-phase", "Bắt buộc: Dynamic T1 + T1 FS+C"],
+          ["Động kinh / hải mã", "Axial IR, Axial FLAIR 3mm, Coronal FLAIR 3mm vuông góc hồi hải mã", "Khi nghi u/dị dạng, hoặc khởi phát > 65 tuổi"],
+          ["Cavernoma / vi xuất huyết", "T2*GRE (TE>25ms) hoặc SWI", "Thường không ngấm thuốc"],
+          ["Viêm màng não / áp xe", "DWI/ADC (áp xe), FLAIR+C, T1 FS+C", "Bắt buộc: T1 FS+C và FLAIR+C"],
+          ["Xơ cứng rải rác", "Sagittal FLAIR mỏng đường giữa, 3D DIR, T1 FS+C", "Đánh giá mảng xơ cứng đang hoạt động"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
+  },
+  {
     id: "mri-so-nao-thuong-quy",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI sọ não thường quy",
@@ -5713,25 +5763,20 @@ window.SOTAY_QUYTRINH = [
         "Coronal: vuông góc mặt cắt Axial, song song thân não hoặc đường nối hai ống tai ngoài.",
         "Sagittal: song song đường giữa trên mặt cắt Coronal và Axial."
       ]},
-      { tieuDe: "Các chuỗi xung thường quy & vai trò", items: [
-        "T1WI (Spin Echo/TSE) — Axial/Sagittal: DNT tối, mỡ sáng, tương phản mô não chuẩn, bắt thuốc Gadolinium mạnh. Vai trò: giải phẫu vỏ não, nhân xám, đánh giá tổn thương trước/sau tiêm.",
-        "T2WI (Fast Spin Echo) — Axial/Coronal: DNT sáng, mô phù sáng, độ phân giải không gian cao. Vai trò: tổn thương phù nề, hố sau, hốc mắt, dây thần kinh sọ.",
-        "T2 FLAIR — Axial/Coronal: khử tín hiệu DNT tự do (DNT đen), giữ tín hiệu T2 kéo dài của mô phù. Vai trò: nhạy nhất với phù nề, u não, viêm, mảng hủy myelin.",
-        "DWI & bản đồ ADC — Axial (b=0, b=1000): đánh giá hạn chế khuếch tán phân tử nước. Vai trò: nhồi máu cấp (1–4h), áp xe não, mật độ tế bào u.",
-        "T2*GRE / SWI — Axial: nhạy cảm với hiệu ứng vi từ trường. Vai trò: vi xuất huyết (hemosiderin), vôi hóa, u di căn, tổn thương sợi trục lan tỏa (DAI).",
-        "TOF 3D MRA — Axial / tái tạo 3D: dựng hình hệ động mạch nội sọ không tiêm thuốc (hiệu ứng dòng chảy). Vai trò: tầm soát hẹp/tắc mạch, phình mạch, dị dạng mạch (AVM) vòng Willis."
-      ]},
+      { tieuDe: "Các chuỗi xung thường quy & vai trò", bang: {
+        cols: ["Chuỗi xung", "Hướng cắt", "Đặc điểm & kỹ thuật", "Vai trò chẩn đoán"],
+        rows: [
+          ["T1WI (SE/TSE)", "Axial / Sagittal", "DNT tối, mỡ sáng, tương phản mô não chuẩn; bắt thuốc Gd mạnh", "Giải phẫu vỏ não, nhân xám; đánh giá tổn thương trước/sau tiêm"],
+          ["T2WI (FSE)", "Axial / Coronal", "DNT sáng, mô phù sáng; độ phân giải không gian cao", "Phù nề, hố sau, hốc mắt, dây thần kinh sọ"],
+          ["T2 FLAIR", "Axial / Coronal", "Khử tín hiệu DNT tự do (DNT đen), giữ tín hiệu T2 của mô phù", "Nhạy nhất với phù nề, u, viêm, mảng hủy myelin"],
+          ["DWI & ADC", "Axial (b=0, b=1000)", "Đánh giá hạn chế khuếch tán phân tử nước", "Nhồi máu cấp (1–4h), áp xe, mật độ tế bào u"],
+          ["T2*GRE / SWI", "Axial", "Nhạy hiệu ứng vi từ trường", "Vi xuất huyết (hemosiderin), vôi hóa, di căn, DAI"],
+          ["TOF 3D MRA", "Axial / tái tạo 3D", "Dựng hình động mạch nội sọ không tiêm (hiệu ứng dòng chảy)", "Hẹp/tắc mạch, phình mạch, AVM vòng Willis"]
+        ]
+      }},
       { tieuDe: "Lưu ý — QUY TẮC VÀNG", items: [
-        "'Khuếch tán (DWI/ADC) cho tất cả bệnh nhân': luôn chạy DWI/ADC sớm trong quy trình để tránh bỏ sót nhồi máu não tối cấp."
-      ]},
-      { tieuDe: "Bảng tra cứu nhanh theo định hướng lâm sàng", items: [
-        "U não / di căn: T1 3D FS, FLAIR+C, pMRI, MRS (TE 35/144), DTI — Tiêm: bắt buộc T1 3D FS+C, FLAIR+C.",
-        "Đột quỵ cấp: DWI/ADC (ưu tiên), GRE/SWI, MRA TOF-3D, PWI — Tiêm: chỉ khi làm PWI hoặc MRA-CE.",
-        "Tuyến yên / vùng yên: T1/T2 Cor-Sag mỏng 2mm, Dynamic T1 Coronal 5-phase — Tiêm: bắt buộc Dynamic T1 + T1 FS+C.",
-        "Động kinh / hải mã: Axial IR, Axial FLAIR 3mm, Coronal FLAIR 3mm vuông góc hồi hải mã — Tiêm: khi nghi u/dị dạng, hoặc động kinh khởi phát > 65 tuổi.",
-        "Cavernoma / vi xuất huyết: T2*GRE (TE>25ms) hoặc SWI — thường không ngấm thuốc.",
-        "Viêm màng não / áp xe: DWI/ADC (áp xe), FLAIR+C, T1 FS+C — Tiêm: bắt buộc T1 FS+C và FLAIR+C.",
-        "Xơ cứng rải rác: Sagittal FLAIR mỏng đường giữa, 3D DIR, T1 FS+C — Tiêm: để đánh giá mảng xơ cứng đang hoạt động."
+        "'Khuếch tán (DWI/ADC) cho tất cả bệnh nhân': luôn chạy DWI/ADC sớm trong quy trình để tránh bỏ sót nhồi máu não tối cấp.",
+        "Tra protocol theo từng chỉ định lâm sàng tại mục 'Bảng tra cứu nhanh MRI sọ não theo lâm sàng'."
       ]}
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
@@ -5838,34 +5883,6 @@ window.SOTAY_QUYTRINH = [
       ]},
       { tieuDe: "Lưu ý", items: [
         "Dùng MRS với TE 135–144 ms để phân biệt u tái phát (tăng Choline) với hoại tử sau xạ trị (tăng Lipid/Lactate)."
-      ]}
-    ],
-    nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
-  },
-  {
-    id: "mri-so-dot-quy",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
-    ten: "MRI đột quỵ / nhồi máu não cấp",
-    tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "penumbra", "perfusion", "lvo"],
-    thongSo: [
-      { ten: "1. Axial DWI/ADC", giaTri: "Bắt buộc đầu tiên — phát hiện nhồi máu tối cấp (1–4h), xác định tuổi tổn thương" },
-      { ten: "2. Axial GRE/SWI", giaTri: "Phát hiện sớm xuất huyết nhu mô / vi xuất huyết đi kèm" },
-      { ten: "3–4. T2W FSE · FLAIR", giaTri: "Đánh giá nhu mô kéo dài T2 và diện phù nề, tổn thương chất trắng" },
-      { ten: "5–7. MRA TOF-3D · PC 2D · PWI", giaTri: "Tắc/hẹp mạch & vòng Willis · hướng dòng chảy · diện giảm tưới máu (penumbra)" }
-    ],
-    noiDung: [
-      { tieuDe: "Thứ tự ưu tiên các chuỗi xung (cắt giảm tối đa thời gian cấp cứu)", items: [
-        "1. Axial DWI/ADC: bắt buộc đầu tiên — nhồi máu tối cấp (1–4h) và xác định tuổi tổn thương.",
-        "2. Axial GRE/SWI: phát hiện sớm xuất huyết nhu mô hoặc vi xuất huyết đi kèm.",
-        "3. Axial T2W FSE: tổn thương nhu mô kéo dài thời gian T2.",
-        "4. Axial FLAIR: diện phù nề và tổn thương chất trắng.",
-        "5. MRA TOF-3D: tắc/hẹp động mạch nội sọ và vòng Willis (không tiêm thuốc).",
-        "6. MRA 2D Phase Contrast: thông tin hướng dòng chảy các mạch máu lớn.",
-        "7. Perfusion PWI: diện giảm tưới máu để xác định vùng tranh tối tranh sáng (penumbra)."
-      ]},
-      { tieuDe: "Cảnh báo — Time is Brain", items: [
-        "DWI/ADC phải là chuỗi xung đầu tiên; GRE/SWI loại trừ xuất huyết trước khi cân nhắc tiêu sợi huyết.",
-        "Chỉ tiêm thuốc khi thực hiện PWI hoặc MRA-CE."
       ]}
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
@@ -6872,39 +6889,6 @@ window.SOTAY_QUYTRINH = [
   /* phẫu thuật <6 tháng; sợ khoang kín; không nằm yên; suy gan–thận (khi tiêm). */
   /* ============================================================ */
 
-
-  /* ---- Đầu - Mặt - Cổ ---- */
-  {
-    id: "mri-sop-mat-co-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CHT vùng mặt – cổ KHÔNG tiêm",
-    tuKhoa: ["mat co", "vung co", "chan thuong", "viem", "u"],
-    thongSo: [
-      { ten: "Chuỗi", giaTri: "T2 ngang 3 mm; T2 ngang 3 mm xóa mỡ; T2 coronal 3 mm (±xóa mỡ); T1 ngang 3 mm; Diffusion EPI/HASTE 3–4 mm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Chấn thương, viêm/nhiễm trùng, tổn thương u vùng mặt – cổ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu vùng mặt – cổ; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-mat-co-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Đầu - Mặt - Cổ",
-    ten: "Chụp CHT vùng mặt – cổ CÓ tiêm",
-    tuKhoa: ["mat co tiem", "vung co", "u"],
-    thongSo: [
-      { ten: "Trước tiêm", giaTri: "Như quy trình không tiêm" },
-      { ten: "Thì tiêm", giaTri: "Gd 0,1 mmol/kg, tốc độ 2 ml/giây; T1W 3 mm 3 hướng có xóa mỡ" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Chấn thương, viêm/nhiễm trùng, tổn thương u vùng mặt – cổ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện & đánh giá ngấm thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
 
   /* ---- Lồng ngực ---- */
   {

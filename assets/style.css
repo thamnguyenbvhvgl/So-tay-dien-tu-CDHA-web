@@ -315,6 +315,21 @@ mark { background: #ffe680; color: inherit; padding: 0 2px; border-radius: 3px; 
 }
 .ref-table th { background: var(--surface-2); color: var(--text-soft); font-weight: 700; }
 
+/* bảng nội dung trong 1 mục (vd chuỗi xung MRI, bảng tra cứu nhanh) */
+.bang-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 2px 0 6px; }
+table.bang { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
+table.bang th, table.bang td {
+  border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top;
+}
+table.bang th { background: var(--brand); color: #fff; font-weight: 700; font-size: 13px; }
+table.bang tbody tr:nth-child(even) td { background: var(--surface-2); }
+table.bang td:first-child { font-weight: 600; color: var(--brand-ink); white-space: nowrap; }
+@media (max-width: 560px) { table.bang td:first-child { white-space: normal; } }
+
+/* mục khẩn cấp (đột quỵ): băng đỏ cảnh báo */
+.khan-banner { background: #dc2626; color: #fff; font-weight: 800; letter-spacing: .01em;
+  padding: 9px 14px; border-radius: 10px; margin: 0 0 12px; display: inline-block; }
+
 .check-group { margin-bottom: 16px; }
 .check-group h3 { font-size: 15px; margin: 0 0 8px; }
 .check-group.tuyetdoi h3 { color: var(--danger); }
