@@ -39,7 +39,7 @@ window.SOTAY_QUYTRINH = [
     noiDung: [
       { tieuDe: "Chỉ định lâm sàng", items: [
         "Các bệnh lý liên quan đến cột sống cổ đoạn giữa và dưới (từ C3 đến C7).",
-        "Bộc lộ gãy mỏm gai các đốt sống cổ dưới (gãy người xúc đất sét), gãy lún xẹp đốt sống và thoát vị nhân tủy đĩa đệm."
+        "Bộc lộ gãy mỏm gai các đốt sống cổ dưới, gãy lún xẹp đốt sống và thoát vị nhân tủy đĩa đệm."
       ]},
       { tieuDe: "Bảo vệ bức xạ", items: [
         "Che chắn các mô nhạy cảm với bức xạ nằm ngoài vùng khảo sát."
