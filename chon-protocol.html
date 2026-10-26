@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261026">
+<link rel="stylesheet" href="assets/style.css?v=20261027">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -18,8 +18,8 @@
                     background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
 
   /* Mặc định: chỉ hiện cột "Phân khu" + "Thông số". Khi chọn vùng → hiện thêm "Danh mục kỹ thuật". */
-  .pb-grid { display: grid; grid-template-columns: 384px minmax(0, 1fr); gap: 14px; align-items: start; }
-  .pb-grid.show-tech { grid-template-columns: 384px 264px minmax(0, 1fr); }
+  .pb-grid { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 14px; align-items: start; }
+  .pb-grid.show-tech { grid-template-columns: 320px 210px minmax(0, 1fr); }
   #col-tech { display: none; }
   .pb-grid.show-tech #col-tech { display: block; }
   /* nopk: ẩn cột "Phân khu giải phẫu" (dùng cho tab Thông số & An toàn) */
@@ -498,8 +498,8 @@
       byId[r.id] = r;
       var tile = el("button", "rtile",
         '<span class="num">' + r.id + '</span>' +
-        '<b>' + r.icon + ' ' + esc(r.ten) + '</b>' +
-        '<span>' + esc(r.en) + ' · ' + r.items.length + ' KT</span>');
+        '<b>' + esc(r.ten) + '</b>' +
+        '<span>' + esc(r.en) + ' · ' + r.items.length + ' kỹ thuật</span>');
       tile.style.setProperty("--rc", r.color);
       tile.setAttribute("data-rid", r.id);
       tile.onclick = function () { setRegion(r.id); };

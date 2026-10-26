@@ -3,89 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sổ tay điện tử CĐHA — Giao diện mới</title>
-<link rel="stylesheet" href="assets/style.css?v=20261026">
+<title>Sổ tay điện tử CĐHA</title>
+<link rel="stylesheet" href="assets/style.css?v=20261027">
 <style>
-  /* ===== KHUNG APP: nội dung (trái) + sidebar dọc (phải) ===== */
+  /* ===== THANH ỨNG DỤNG (dùng chung mọi màn hình) ===== */
   .appbar { position: sticky; top: 0; z-index: 30; background: var(--surface);
-            border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
-  .appbar .inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center;
-                   gap: 12px; padding: 10px 16px; }
-  .appbar img { height: 38px; }
-  .appbar .t b { color: var(--brand-ink); font-size: 16px; }
-  .appbar .t span { display: block; color: var(--text-soft); font-size: 12px; }
-  .appbar .sp { flex: 1; }
-  .appbar a.home { color: var(--brand); text-decoration: none; font-weight: 600; font-size: 14px; }
-  .appbar .theme { width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--line);
-                   background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; }
+            border-bottom: 1px solid var(--line); }
+  .appbar .inner { max-width: 1320px; margin: 0 auto; display: flex; align-items: center;
+                   gap: 14px; padding: 10px 16px; flex-wrap: wrap; }
+  .appbar .brand { display: flex; align-items: center; gap: 10px; }
+  .appbar .brand img { height: 36px; }
+  :root[data-theme="dark"] .appbar .brand img { background:#fff; padding:3px 6px; border-radius:7px; }
+  .appbar .brand b { font-size: 16px; font-weight: 800; color: var(--brand-ink); letter-spacing: -.01em; }
+  .navpills { display: flex; gap: 6px; flex-wrap: wrap; }
+  .navpill { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px;
+             border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+             color: var(--text-soft); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .navpill:hover { border-color: var(--brand); color: var(--text); }
+  .navpill.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .navpill .cnt { font-weight: 600; opacity: .8; font-size: 12.5px; }
+  .navpill .dot { width: 8px; height: 8px; border-radius: 2px; transform: rotate(45deg); flex: none; }
+  .barsp { flex: 1 1 60px; }
+  .barsearch { position: relative; flex: 1 1 240px; max-width: 420px; display: flex; align-items: center; }
+  .barsearch svg { position: absolute; left: 13px; color: var(--text-soft); }
+  .barsearch input { width: 100%; height: 38px; padding: 0 14px 0 38px; border: 1px solid var(--line);
+                     border-radius: 999px; background: var(--surface-2); color: var(--text); font: inherit; font-size: 13.5px; }
+  .barsearch input:focus { outline: none; border-color: var(--brand); background: var(--surface); box-shadow: 0 0 0 3px var(--brand-wash); }
+  .btn-emg { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px;
+             border-radius: 999px; border: 1px solid rgba(216,31,38,.45); background: rgba(216,31,38,.10);
+             color: var(--danger); font-size: 13.5px; font-weight: 700; cursor: pointer; }
+  .btn-emg:hover { background: var(--danger); color: #fff; border-color: var(--danger); }
+  .theme { width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--line);
+           background: var(--surface-2); color: var(--text); font-size: 17px; cursor: pointer; flex: none; }
 
-  .shell { max-width: 1560px; margin: 14px auto; padding: 0 16px 36px;
-           display: grid; grid-template-columns: 236px 1fr; gap: 16px; align-items: start; }
+  .wrap { max-width: 1320px; margin: 20px auto 40px; padding: 0 16px; }
 
-  /* --- SIDEBAR DỌC BÊN TRÁI --- */
-  .sidebar { position: sticky; top: 74px; display: flex; flex-direction: column; gap: 8px; }
-  .sidebar .cap { font-size: 12px; color: var(--text-soft); font-weight: 600; padding: 2px 6px 4px; }
-  .navbtn { display: flex; align-items: center; gap: 11px; text-align: left; cursor: pointer;
-            border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px;
-            background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
-  .navbtn .ico { width: 34px; height: 34px; flex: none; border-radius: 9px; display: grid;
-                 place-items: center; font-size: 18px; background: var(--surface-2); }
-  .navbtn .lbl b { font-size: 14.5px; display: block; line-height: 1.2; }
-  .navbtn .lbl span { font-size: 11.5px; color: var(--text-soft); }
-  .navbtn .no { margin-left: auto; font-weight: 800; color: var(--text-soft); font-size: 13px; }
-  .navbtn:hover { border-color: var(--brand); }
-  .navbtn.active { background: var(--brand); border-color: var(--brand); color: #fff; }
-  .navbtn.active .ico { background: rgba(255,255,255,.2); }
-  .navbtn.active .lbl span, .navbtn.active .no { color: rgba(255,255,255,.85); }
+  /* ===== MÀN HÌNH CHÍNH (dashboard) ===== */
+  .home-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+  .home-head h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -.02em; color: var(--text); }
+  .home-head p { margin: 2px 0 0; color: var(--text-soft); font-size: 13.5px; }
+  .home-status { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pillstat { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px;
+              border: 1px solid var(--line); background: var(--surface); color: var(--text-soft); font-size: 12.5px; font-weight: 600; }
+  .pillstat .d { width: 7px; height: 7px; border-radius: 999px; background: var(--ok); }
 
-  /* --- NỘI DUNG CHÍNH + SUB-TABS NGANG --- */
-  .content { min-width: 0; background: var(--surface); border: 1px solid var(--line);
-             border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+  .modgrid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+  .modcard { display: flex; flex-direction: column; gap: 12px; padding: 18px; min-height: 196px;
+             border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+             box-shadow: var(--shadow-sm); cursor: pointer; text-align: left; color: var(--text); }
+  .modcard:hover { border-color: var(--brand); }
+  .modcard .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; }
+  .modcard .num { font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: -.02em; color: var(--text); font-variant-numeric: tabular-nums; }
+  .modcard .ti { font-size: 18px; font-weight: 700; margin: 0; color: var(--text); }
+  .modcard .sub { font-size: 12.5px; color: var(--text-soft); margin: 0; }
+  .modcard .links { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+  .modcard .links span { display: flex; justify-content: space-between; align-items: center; gap: 8px;
+                         padding: 7px 10px; border-radius: 8px; background: var(--surface-2); color: var(--text-soft); font-size: 12.5px; }
+  .modcard.emg { border-color: rgba(216,31,38,.4); }
+
+  .homerow { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 14px; margin-top: 14px; align-items: start; }
+  .panelbox { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-sm); overflow: hidden; }
+  .panelbox > h3 { margin: 0; padding: 12px 16px; font-size: 13px; font-weight: 700; color: var(--brand-ink);
+                   border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; }
+  .panelbox > h3::before { content:""; width:8px; height:8px; background:var(--brand); transform:rotate(45deg); border-radius:2px; flex:none; }
+  .quicklinks { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 16px; }
+  .quicklinks button { padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line);
+                       background: var(--surface-2); color: var(--text-soft); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .quicklinks button:hover { border-color: var(--brand); color: var(--text); }
+  .qc { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .qc-row { display: flex; gap: 8px; align-items: flex-end; flex-wrap: wrap; }
+  .qc-f { display: flex; flex-direction: column; gap: 4px; flex: 1 1 96px; }
+  .qc-f label { font-size: 12px; color: var(--text-soft); }
+  .qc-f input, .qc-f select { height: 40px; border: 1px solid var(--line); border-radius: 8px;
+                              background: var(--surface-2); color: var(--text); padding: 0 10px; font: inherit; font-size: 14px; }
+  .qc-out { display: flex; align-items: baseline; gap: 8px; padding: 10px 12px; border-radius: 8px; background: var(--surface-2); }
+  .qc-out b { font-size: 24px; font-weight: 800; color: var(--brand); font-variant-numeric: tabular-nums; }
+  .qc-note { font-size: 12px; color: var(--text-soft); margin: 0; }
+  .qc a { font-size: 13px; font-weight: 600; color: var(--brand); cursor: pointer; }
+
+  /* ===== KHUNG NỘI DUNG PHÂN HỆ (giữ như cũ, dùng lại renderer) ===== */
+  .content { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+             box-shadow: var(--shadow-sm); overflow: hidden; }
   .subtabs { display: flex; gap: 6px; padding: 10px 12px; flex-wrap: wrap;
              border-bottom: 1px solid var(--line); background: var(--surface-2); }
   .subtab { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
             padding: 8px 15px; border-radius: 999px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .subtab:hover { border-color: var(--brand); color: var(--text); }
   .subtab.active { background: var(--brand); color: #fff; border-color: var(--brand); }
   .panel { padding: 18px; min-height: 360px; }
-  .panel h2 { margin: 0 0 4px; font-size: 20px; color: var(--brand-ink); }
+  .panel > h2 { margin: 0 0 4px; font-size: 20px; font-weight: 800; color: var(--text); }
   .panel .desc { color: var(--text-soft); font-size: 14px; margin: 0 0 16px; }
-
-  .stub { border: 1px dashed var(--line); border-radius: 12px; background: var(--surface-2);
+  .stub { border: 1px dashed var(--line); border-radius: var(--radius-sm); background: var(--surface-2);
           padding: 22px; color: var(--text-soft); }
   .stub b { color: var(--brand-ink); }
   .stub ul { margin: 10px 0 0; padding-left: 20px; } .stub li { margin-bottom: 5px; font-size: 14px; }
-  .chip-soon { display:inline-block; font-size:11px; font-weight:700; color:var(--warn-ink);
-               background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:999px; padding:2px 9px; margin-left:6px; }
 
-  @media (max-width: 860px) {
-    .shell { grid-template-columns: 1fr; }
-    .sidebar { position: static; flex-direction: row; overflow-x: auto; gap: 8px; padding-bottom: 4px; }
-    .sidebar .cap { display: none; }
-    .navbtn { flex: 0 0 auto; min-width: 150px; }
-    .navbtn .no { display: none; }
-  }
+  @media (max-width: 900px) { .modgrid { grid-template-columns: 1fr 1fr; } .homerow { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .modgrid { grid-template-columns: 1fr; } .appbar .brand b { font-size: 15px; } }
 </style>
 </head>
 <body>
   <div class="topstrip" style="height:3px;background:var(--brand)"></div>
   <header class="appbar">
     <div class="inner">
-      <img src="assets/logo-hvgl.png" alt="BV Hùng Vương Gia Lai">
-      <div class="t"><b>Sổ tay điện tử CĐHA</b><span>Khoa Chẩn đoán hình ảnh · giao diện mới</span></div>
-      <div class="sp"></div>
-      <a class="home" href="trang-v1.html">← Trang v1.0</a>
+      <button class="brand" id="brandBtn" title="Về trang chủ" style="border:none;background:none;cursor:pointer;padding:0">
+        <img src="assets/logo-hvgl.png" alt="BV Hùng Vương Gia Lai"><b>Sổ tay CĐHA</b>
+      </button>
+      <nav class="navpills" id="navpills" aria-label="Phân hệ"></nav>
+      <div class="barsp"></div>
+      <form class="barsearch" id="barsearch" role="search" onsubmit="return false">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Tìm nhanh: bàn tay thẳng, CT sọ não…" aria-label="Tìm quy trình">
+      </form>
+      <button class="btn-emg" id="emgBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg> Khẩn cấp
+      </button>
       <button class="theme" id="themeBtn" title="Nền sáng/tối">🌙</button>
     </div>
   </header>
 
-  <div class="shell">
-    <!-- SIDEBAR DỌC (TRÁI) — danh mục chức năng -->
-    <aside class="sidebar" id="sidebar">
-      <div class="cap">Danh mục chức năng</div>
-    </aside>
-
-    <!-- NỘI DUNG CHÍNH (phải) -->
-    <main class="content">
+  <div class="wrap">
+    <section id="home" class="home"></section>
+    <main id="sectionview" class="content" hidden>
       <nav class="subtabs" id="subtabs"></nav>
       <section class="panel" id="panel"></section>
     </main>
@@ -100,43 +139,140 @@
     var CONGCU = window.SOTAY_CONGCU || {};
     function countMod(m) { return QT.filter(function (x) { return x.modality === m; }).length; }
     function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 
-    // 5 danh mục lớn (sidebar) + sub-tabs của từng mục
     var SECTIONS = [
-      { id:1, ico:"🚨", ten:"Công cụ khẩn cấp", en:"Emergency Toolkit", badge:"3",
+      { id:1, ten:"Công cụ khẩn cấp", en:"Emergency Toolkit", badge:"3", color:"var(--danger)",
         subs:["Sốc phản vệ","Ngưng tuần hoàn (CPR)","Thoát mạch thuốc cản quang"] },
-      { id:2, ico:"🦴", ten:"Quy trình X-quang", en:"X-Ray Protocol", badge:String(countMod("X-quang")),
+      { id:2, ten:"Quy trình X-quang", en:"X-Ray Protocol", badge:String(countMod("X-quang")), color:"var(--xq)",
         subs:["Chọn theo vùng cơ thể","Thông số & An toàn"] },
-      { id:3, ico:"🩻", ten:"Quy trình CT", en:"CT Protocol", badge:String(countMod("CT")),
+      { id:3, ten:"Quy trình CT", en:"CT Protocol", badge:String(countMod("CT")), color:"var(--ct)",
         subs:["Không tiêm","Có tiêm","Máy tính liều & eGFR","Thông số & An toàn"] },
-      { id:4, ico:"🧲", ten:"Quy trình MRI", en:"MRI Protocol", badge:String(countMod("MRI")),
+      { id:4, ten:"Quy trình MRI", en:"MRI Protocol", badge:String(countMod("MRI")), color:"var(--mri)",
         subs:["Theo vùng giải phẫu","Thông số & An toàn"] },
-      { id:5, ico:"📋", ten:"Ca lâm sàng tham khảo", en:"Clinical Cases", badge:"",
+      { id:5, ten:"Ca lâm sàng tham khảo", en:"Clinical Cases", badge:"", color:"var(--text-soft)",
         subs:["Danh sách ca"] }
     ];
+    function sec(id){ return SECTIONS.filter(function(x){return x.id===id;})[0]; }
 
-    var sidebar = document.getElementById("sidebar");
+    // biểu tượng SVG (không dùng emoji để tránh lỗi font/ô vuông)
+    var SVG = {
+      1:'<path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/>',
+      2:'<path d="M7 3h10v18H7z"/><path d="M12 7v10M9 10h6M9 14h6"/>',
+      3:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/>',
+      4:'<path d="M4 12a8 8 0 0 1 16 0v6H4z"/><path d="M8 18v-6a4 4 0 0 1 8 0v6"/>',
+      5:'<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 11h6M9 15h4"/>'
+    };
+    function icon(id, color){
+      return '<span class="ic" style="background:var(--surface-2);background:color-mix(in srgb,'+color+' 14%,transparent);color:'+color+'">' +
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+SVG[id]+'</svg></span>';
+    }
+
+    var navpillsBox = document.getElementById("navpills");
+    var homeBox = document.getElementById("home");
+    var sectionView = document.getElementById("sectionview");
     var subtabsBox = document.getElementById("subtabs");
     var panel = document.getElementById("panel");
     var curSec = null, curSub = 0;
 
-    SECTIONS.forEach(function (s) {
-      var b = el("button", "navbtn",
-        '<span class="ico">' + s.ico + '</span>' +
-        '<span class="lbl"><b>[' + s.id + '] ' + s.ten + '</b><span>' + s.en + '</span></span>' +
-        (s.badge ? '<span class="no">' + s.badge + '</span>' : ''));
-      b.setAttribute("data-sid", s.id);
-      b.onclick = function () { selectSection(s.id, 0); };
-      sidebar.appendChild(b);
+    // thanh nav pill: Trang chủ + X-quang + CT + MRI (Khẩn cấp là nút đỏ riêng)
+    var NAV = [ {label:"Trang chủ", home:true}, {sid:2,label:"X-quang"}, {sid:3,label:"CT"}, {sid:4,label:"MRI"} ];
+    NAV.forEach(function (n) {
+      var inner = n.home ? "Trang chủ"
+        : '<span class="dot" style="background:'+sec(n.sid).color+'"></span>' + n.label +
+          (sec(n.sid).badge ? ' <span class="cnt">'+sec(n.sid).badge+'</span>' : '');
+      var b = el("button", "navpill", inner);
+      b.setAttribute("data-nav", n.home ? "home" : String(n.sid));
+      b.onclick = function () { n.home ? showHome() : selectSection(n.sid, 0); };
+      navpillsBox.appendChild(b);
     });
-
-    function selectSection(id, sub) {
-      var s = SECTIONS.filter(function (x) { return x.id === id; })[0]; if (!s) return;
-      curSec = s; curSub = sub || 0;
-      Array.prototype.forEach.call(sidebar.querySelectorAll(".navbtn"), function (c) {
-        c.classList.toggle("active", c.getAttribute("data-sid") === String(id));
+    function setActiveNav(key){
+      Array.prototype.forEach.call(navpillsBox.querySelectorAll(".navpill"), function (c) {
+        c.classList.toggle("active", c.getAttribute("data-nav") === String(key));
       });
-      // sub-tabs
+    }
+
+    document.getElementById("brandBtn").onclick = showHome;
+    document.getElementById("emgBtn").onclick = function(){ selectSection(1,0); };
+    document.getElementById("barsearch").onsubmit = function(){
+      var v = (document.getElementById("q").value||"").trim();
+      location.href = "trang-v1.html" + (v ? "?q=" + encodeURIComponent(v) : "");
+      return false;
+    };
+
+    // ============ MÀN HÌNH CHÍNH ============
+    function showHome(){
+      curSec = null;
+      sectionView.hidden = true; homeBox.hidden = false;
+      setActiveNav("home");
+      buildHome();
+      try { history.replaceState(null, "", "#home"); } catch (e) {}
+      window.scrollTo(0,0);
+    }
+    function buildHome(){
+      var cards = [2,3,4,1].map(function(id){
+        var s = sec(id);
+        var subhtml = s.subs.slice(0,2).map(function(x){ return '<span>'+esc(x)+'</span>'; }).join("");
+        return '<button class="modcard'+(id===1?' emg':'')+'" data-go="'+id+'">' +
+          '<div style="display:flex;align-items:center;justify-content:space-between">'+icon(id,s.color)+
+          (s.badge?'<span class="num">'+s.badge+'</span>':'')+'</div>' +
+          '<div><p class="ti">'+esc(s.ten)+'</p><p class="sub">'+esc(s.en)+'</p></div>' +
+          '<div class="links">'+subhtml+'</div></button>';
+      }).join("");
+
+      var ls = (CONGCU.lieuCanQuang && CONGCU.lieuCanQuang.loaiKhaoSat) || [{ten:"Thường quy",mlKgMin:1.5,mlKgMax:2.0}];
+      var opts = ls.map(function(x,i){ return '<option value="'+i+'">'+esc(x.ten)+'</option>'; }).join("");
+
+      homeBox.innerHTML =
+        '<div class="home-head"><div>' +
+          '<h1>Bạn cần chụp gì hôm nay?</h1>' +
+          '<p>Khoa Chẩn đoán hình ảnh · Bệnh viện Hùng Vương Gia Lai</p></div>' +
+          '<div class="home-status">' +
+            '<span class="pillstat"><span class="d"></span>Nội dung duyệt 16/10/2026</span>' +
+            '<span class="pillstat"><span class="d"></span>Chạy không cần mạng · bản 1.0</span>' +
+          '</div></div>' +
+        '<div class="modgrid">'+cards+'</div>' +
+        '<div class="homerow">' +
+          '<div class="panelbox"><h3>Tra cứu nhanh</h3><div class="quicklinks">' +
+            '<button data-go="2">Phổi thẳng</button>' +
+            '<button data-go="2">Cột sống thắt lưng</button>' +
+            '<button data-go="2">Bàn tay thẳng</button>' +
+            '<button data-go="2">Khung chậu thẳng</button>' +
+            '<button data-go="3">CT sọ não</button>' +
+            '<button data-go="4">MRI gối</button>' +
+            '<button data-go="5">Ca lâm sàng tham khảo</button>' +
+          '</div></div>' +
+          '<div class="panelbox"><h3>Tính nhanh liều cản quang</h3><div class="qc">' +
+            '<div class="qc-row">' +
+              '<div class="qc-f"><label for="h_cn">Cân nặng (kg)</label><input id="h_cn" type="number" value="60" min="3" max="200"></div>' +
+              '<div class="qc-f"><label for="h_loai">Loại khảo sát</label><select id="h_loai">'+opts+'</select></div>' +
+            '</div>' +
+            '<div class="qc-out"><span style="font-size:12.5px;color:var(--text-soft)">Thể tích gợi ý</span><b id="h_vol">—</b><span style="font-size:13px;color:var(--text-soft)">ml</span></div>' +
+            '<p class="qc-note">Liều ml/kg theo Quy trình CLVT của khoa. Luôn đối chiếu eGFR và tiền sử dị ứng trước tiêm.</p>' +
+            '<a id="h_full">Mở công cụ đầy đủ (liều &amp; eGFR) →</a>' +
+          '</div></div>' +
+        '</div>';
+
+      Array.prototype.forEach.call(homeBox.querySelectorAll("[data-go]"), function(b){
+        b.onclick = function(){ selectSection(parseInt(b.getAttribute("data-go"),10), 0); };
+      });
+      document.getElementById("h_full").onclick = function(){ selectSection(3,2); };
+      function qc(){
+        var w = parseFloat((document.getElementById("h_cn")||{}).value)||0;
+        var i = parseInt((document.getElementById("h_loai")||{}).value,10)||0;
+        var L = ls[i]||ls[0];
+        document.getElementById("h_vol").textContent = w ? (Math.round(w*L.mlKgMin)+"–"+Math.round(w*L.mlKgMax)) : "—";
+      }
+      ["h_cn","h_loai"].forEach(function(id){ var e=document.getElementById(id); if(e){ e.addEventListener("input",qc); e.addEventListener("change",qc);} });
+      qc();
+    }
+
+    // ============ PHÂN HỆ ============
+    function selectSection(id, sub) {
+      var s = sec(id); if (!s) return;
+      curSec = s; curSub = sub || 0;
+      homeBox.hidden = true; sectionView.hidden = false;
+      setActiveNav(id);
       subtabsBox.innerHTML = "";
       s.subs.forEach(function (name, i) {
         var t = el("button", "subtab" + (i === curSub ? " active" : ""), esc(name));
@@ -145,24 +281,13 @@
       });
       renderPanel(s, curSub);
       try { history.replaceState(null, "", "#" + id); } catch (e) {}
+      window.scrollTo(0,0);
     }
-    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 
-    // Bước này: khung điều hướng — nội dung chi tiết sẽ dựng ở các bước sau.
     var PLAN = {
-      1: { 0:["Phác đồ sốc phản vệ theo Thông tư 51/2017/TT-BYT (đã số hóa & duyệt) — sẽ gắn vào đây."],
-           1:["Phác đồ cấp cứu ngưng tuần hoàn CPR theo AHA 2020 (đã số hóa & duyệt) — sẽ gắn vào đây."],
-           2:["Xử trí thoát mạch thuốc cản quang (Extravasation) — <b>nội dung mới, chờ nguồn & Trưởng khoa duyệt.</b>"] },
-      2: { 0:["Hình người toàn thân → bấm vùng (Sọ, Cổ, Ngực, Bụng, Chậu, Chi trên, Chi dưới) → danh mục kỹ thuật + thông số (tư thế, hướng tia, kV, mAs, FFD, tiêu chuẩn).",
-              "Đã có sẵn ở <b>chon-protocol.html</b> — sẽ nhúng vào khung này."] },
-      3: { 0:["Hình <b>Nữ</b> — chọn protocol CT <b>KHÔNG tiêm thuốc</b> theo vùng."],
-           1:["Hình <b>Nam</b> — chọn protocol CT <b>CÓ tiêm thuốc</b> theo vùng."],
-           2:["Máy tính liều thuốc cản quang CTA động mạch vành (WB-IDR: cân nặng, ml/s, tổng thể tích) — đã có, sẽ gắn vào đây."] },
-      4: { 0:["Selector MRI theo vùng giải phẫu — <b>bố cục chi tiết cập nhật sau.</b>"] },
       5: { 0:["Ngân hàng ca lâm sàng tham khảo (dấu hiệu bệnh lý XQ/CT/MRI). Ảnh ca thật bảo vệ bằng mật khẩu ở bản công khai."] }
     };
 
-    // --- bộ vẽ "bản đồ quy trình" (dùng chung CSS .flow-* trong style.css) ---
     function liList(items){ return "<ul>" + (items||[]).map(function(x){return "<li>"+esc(x)+"</li>";}).join("") + "</ul>"; }
     function noticeEl(text, ok){ return el("div","notice"+(ok?" ok":""), esc(text)); }
     function renderFlow(card, flow){
@@ -182,8 +307,8 @@
 
     function renderPanel(s, sub) {
       panel.innerHTML = "";
-      panel.appendChild(el("h2", null, '[' + s.id + '] ' + esc(s.ten)));
-      panel.appendChild(el("p","desc", esc(s.en) + ' — mục: <b>' + esc(s.subs[sub]) + '</b>'));
+      panel.appendChild(el("h2", null, esc(s.ten)));
+      panel.appendChild(el("p","desc", esc(s.en) + ' — ' + esc(s.subs[sub])));
 
       if (s.id === 1) { renderEmergency(sub); return; }
       if (s.id === 2) { renderXquang(sub); return; }
@@ -191,13 +316,12 @@
       if (s.id === 4) { renderMRI(sub); return; }
 
       var items = (PLAN[s.id] && PLAN[s.id][sub]) || ["(Nội dung sẽ được bổ sung.)"];
-      panel.appendChild(el("div","stub",
-        '<b>🔧 Khung điều hướng đã sẵn sàng.</b> Nội dung mục này sẽ được dựng ở bước tiếp theo:' + liList(items)));
+      panel.appendChild(el("div","stub", '<b>Mục này đang được bổ sung.</b>' + liList(items)));
     }
 
     function renderEmergency(sub) {
       var map = [CONGCU.phanVe, CONGCU.ngungTuanHoan, CONGCU.thoatMach];
-      var titles = ["🚨 Phác đồ xử trí phản vệ", "❤️‍🩹 Cấp cứu ngưng tuần hoàn (CPR)", "💉 Xử trí thoát mạch thuốc cản quang"];
+      var titles = ["Phác đồ xử trí phản vệ", "Cấp cứu ngưng tuần hoàn (CPR)", "Xử trí thoát mạch thuốc cản quang"];
       var p = map[sub] || {};
       var card = el("div","tool-card");
       card.appendChild(el("h2", null, titles[sub]));
@@ -209,10 +333,11 @@
     }
 
     function iframePane(src, title) {
+      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261027";
       var wrap = el("div");
-      wrap.style.height = "calc(100vh - 220px)"; wrap.style.minHeight = "560px";
+      wrap.style.height = "calc(100vh - 230px)"; wrap.style.minHeight = "560px";
       wrap.innerHTML = '<iframe src="' + src + '" title="' + esc(title) + '" ' +
-        'style="width:100%;height:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg)"></iframe>';
+        'style="width:100%;height:100%;border:1px solid var(--line);border-radius:10px;background:var(--bg)"></iframe>';
       panel.appendChild(wrap);
     }
     function renderXquang(sub) {
@@ -237,7 +362,7 @@
       var ls = d.loaiKhaoSat || [{ten:"Thường quy", mlKgMin:1.5, mlKgMax:2.0, tocDo:"3–5 ml/s"}];
       var ng = d.nguongEGFR || { canTrong:45, chongChiDinh:30 };
       var card = el("div","tool-card");
-      card.appendChild(el("h2", null, "💧 Máy tính liều thuốc cản quang (theo cân nặng) & eGFR nhanh"));
+      card.appendChild(el("h2", null, "Máy tính liều thuốc cản quang (theo cân nặng) & eGFR nhanh"));
       var form = el("div");
       form.innerHTML =
         field("Cân nặng (kg)", '<input id="d_cn" type="number" value="60" min="3" max="200">') +
@@ -254,7 +379,7 @@
         field("Giới (chỉ dùng cho công thức eGFR)", '<select id="e_sex"><option value="nu">Nữ</option><option value="nam">Nam</option></select>') +
         field("Creatinin", '<input id="e_scr" type="number" step="0.01" value="1.0"> <select id="e_unit"><option value="mgdl">mg/dL</option><option value="umol">µmol/L</option></select>');
       card.appendChild(ef);
-      card.appendChild(el("div","calc-result", '<div>eGFR ước tính: <span class="big" id="e_val">—</span> ml/ph/1,73m² · <span id="e_flag"></span></div>'));
+      card.appendChild(el("div","calc-result", '<div>eGFR ước tính: <span class="big" id="e_val">—</span> ml/ph/1,73m² — <span id="e_flag"></span></div>'));
       if (d.luuY) card.appendChild(el("div","sec", '<h3>Lưu ý</h3>' + liList(d.luuY)));
       panel.appendChild(card);
       function doseCalc(){
@@ -270,8 +395,8 @@
         var k=(sex==="nu")?0.7:0.9, a=(sex==="nu")?-0.241:-0.302, sf=(sex==="nu")?1.012:1.0;
         var r=scr/k, e=Math.round(142*Math.pow(Math.min(r,1),a)*Math.pow(Math.max(r,1),-1.200)*Math.pow(0.9938,age)*sf);
         setTxt("e_val", e);
-        setTxt("e_flag", (e<ng.chongChiDinh) ? ("⚠️ Rất thấp (< "+ng.chongChiDinh+") — theo quy trình khoa")
-          : (e<ng.canTrong) ? ("⚠️ Cân nhắc (< "+ng.canTrong+")") : "✓ Trong ngưỡng tham chiếu");
+        setTxt("e_flag", (e<ng.chongChiDinh) ? ("Rất thấp (< "+ng.chongChiDinh+") — theo quy trình khoa")
+          : (e<ng.canTrong) ? ("Cân nhắc (< "+ng.canTrong+")") : "Trong ngưỡng tham chiếu");
       }
       ["d_cn","d_loai","d_nd"].forEach(function(id){ bindEl(id,doseCalc); });
       ["e_age","e_sex","e_scr","e_unit"].forEach(function(id){ bindEl(id,egfrCalc); });
@@ -283,7 +408,7 @@
       var d = CONGCU.lieuCCTA || {};
       var cn = d.canNang || {}, idr = d.idr || {}, tg = d.thoiGian || {};
       var card = el("div", "tool-card");
-      card.appendChild(el("h2", null, "🫀 Máy tính liều thuốc CCTA (ĐM vành)"));
+      card.appendChild(el("h2", null, "Máy tính liều thuốc CCTA (ĐM vành)"));
       if (d.nguon) card.appendChild(el("p", "tool-desc", esc(d.nguon)));
       var form = el("div");
       form.innerHTML =
@@ -328,8 +453,10 @@
       try { localStorage.setItem("sotay-theme", dark ? "light" : "dark"); } catch (e) {}
     };
 
-    var ini = parseInt((location.hash || "").replace("#", ""), 10);
-    selectSection((ini >= 1 && ini <= 5) ? ini : 1, 0); // mặc định: Công cụ khẩn cấp
+    // khởi động: theo hash (#home hoặc #1..#5), mặc định Trang chủ
+    var h = (location.hash || "").replace("#","");
+    var ini = parseInt(h, 10);
+    if (ini >= 1 && ini <= 5) selectSection(ini, 0); else showHome();
   })();
   </script>
 </body>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sổ tay điện tử CĐHA</title>
   <meta name="description" content="Sổ tay tra cứu điện tử khoa Chẩn đoán hình ảnh – Bệnh viện Hùng Vương Gia Lai. Tra nhanh quy trình, protocol và công cụ khẩn cấp ngay tại buồng máy.">
-  <link rel="stylesheet" href="assets/style.css?v=20261026">
+  <link rel="stylesheet" href="assets/style.css?v=20261027">
 </head>
 <body>
 
@@ -81,7 +81,7 @@
   <footer class="footer">
     <p class="footer-motto">“Khoa Chẩn đoán hình ảnh, Nơi công nghệ chạm đến trái tim” <span class="motto-heart">❤</span></p>
     <p>Bản nội bộ • <b>Phiên bản 1.0</b> (16/10/2026) • Chủ nhiệm: CN. Nguyễn Hồng Thắm • Nội dung chuyên môn đã được Trưởng khoa &amp; KTV trưởng duyệt.</p>
-    <p><a href="app.html">🧭 Giao diện mới (app) — sidebar + 5 danh mục (đang dựng)</a> &nbsp;·&nbsp; <a href="chon-protocol.html">🖥️ Chọn protocol theo phân khu giải phẫu</a></p>
+    <p><a href="app.html">🧭 Giao diện chính (app)</a> &nbsp;·&nbsp; <a href="chon-protocol.html">🖥️ Chọn protocol theo phân khu giải phẫu</a></p>
     <p><a href="tham-dinh.html">📋 Phiếu thẩm định nội dung (cho Trưởng khoa duyệt)</a> &nbsp;·&nbsp; <a href="kiem-tra.html">🔎 Tự kiểm tra dữ liệu</a></p>
   </footer>
 
@@ -89,6 +89,16 @@
   <script src="data/quy-trinh.js"></script>
   <script src="data/benh-ly.js"></script>
   <script src="data/cong-cu.js"></script>
-  <script src="assets/app.js?v=20261026"></script>
+  <script src="assets/app.js?v=20261027"></script>
+  <script>
+    /* Nhận từ khóa tìm kiếm chuyển sang từ thanh ứng dụng (app.html?q=...) */
+    (function(){ try{
+      var m = /[?&]q=([^&]*)/.exec(location.search);
+      if (m && m[1]) {
+        var i = document.getElementById("searchInput");
+        if (i) { i.value = decodeURIComponent(m[1].replace(/\+/g, " ")); i.dispatchEvent(new Event("input")); i.focus(); }
+      }
+    } catch(e){} })();
+  </script>
 </body>
 </html>
