@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261032">
+<link rel="stylesheet" href="assets/style.css?v=20261033">
 <style>
   /* ===== THANH ỨNG DỤNG (dùng chung mọi màn hình) ===== */
   .appbar { position: sticky; top: 0; z-index: 30; background: var(--surface);
@@ -338,7 +338,7 @@
       var f = panel.querySelector("iframe"); if (f) f.style.height = Math.max(480, d.sotayH + 4) + "px";
     });
     function iframePane(src, title) {
-      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261032";
+      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261033";
       var wrap = el("div");
       wrap.innerHTML = '<iframe src="' + src + '" title="' + esc(title) + '" scrolling="no" ' +
         'style="display:block;width:100%;height:720px;border:1px solid var(--line);border-radius:10px;background:var(--bg)"></iframe>';
