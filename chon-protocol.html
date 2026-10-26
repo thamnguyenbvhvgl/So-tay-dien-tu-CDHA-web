@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261029">
+<link rel="stylesheet" href="assets/style.css?v=20261030">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -671,6 +671,13 @@
       tb.textContent = dark ? "🌙" : "☀️";
       try { localStorage.setItem("sotay-theme", dark ? "light" : "dark"); } catch (e) {}
     };
+    // nhận theme từ app.html (khi nhúng) để đổi nền cùng lúc với trang ngoài
+    window.addEventListener("message", function (ev) {
+      var d = ev && ev.data; if (!d || !d.sotayTheme) return;
+      var dk = d.sotayTheme === "dark";
+      root.setAttribute("data-theme", dk ? "dark" : "light");
+      if (tb) tb.textContent = dk ? "☀️" : "🌙";
+    });
 
     // chọn chế độ xem theo ?view=front|back|side
     if ((P.view === "back" || P.view === "side") && fig) {
