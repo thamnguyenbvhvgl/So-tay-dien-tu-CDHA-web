@@ -82,6 +82,9 @@ body {
 
 h1, h2, h3, .detail-title, .card-title { letter-spacing: -.01em; }
 
+/* nút, ô nhập, hộp chọn kế thừa font của trang (mặc định trình duyệt dùng font riêng, gây lệch chữ) */
+button, input, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
+
 /* khả năng truy cập: viền focus rõ + tôn trọng giảm chuyển động */
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
