@@ -130,6 +130,15 @@
     </main>
   </div>
 
+  <footer id="appfoot" style="max-width:1200px;margin:10px auto 20px;padding:11px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;color:var(--text-soft,#667);border-top:1px solid var(--line,#e5e7eb)">
+    <span id="statWrap" hidden style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">👁️ Lượt truy cập: <b id="visitTotal" style="color:var(--text,#111)">…</b></span>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">📅 Hôm nay: <b id="visitToday" style="color:var(--text,#111)">…</b></span>
+    </span>
+    <span style="flex:1 1 auto"></span>
+    <a id="gopyBtn" href="#" target="_blank" rel="noopener" hidden style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;background:var(--brand,#1d4ed8);color:#fff;text-decoration:none;font-weight:600">💬 Góp ý</a>
+  </footer>
+
   <script src="data/quy-trinh.js"></script>
   <script src="data/cong-cu.js"></script>
   <script>
@@ -469,6 +478,25 @@
     var h = (location.hash || "").replace("#","");
     var ini = parseInt(h, 10);
     if (ini >= 1 && ini <= 5) selectSection(ini, 0); else showHome();
+
+    // ===== Lượt truy cập (Abacus — không cần đăng ký) + Góp ý (Google Form) =====
+    (function () {
+      var NS = "sotay-cdha-hvgl", BASE = "https://abacus.jasoncameron.dev";
+      var dt = new Date(), ymd = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2);
+      function fmt(n){ try { return Number(n).toLocaleString("vi-VN"); } catch (e) { return String(n); } }
+      function hit(key, id){
+        return fetch(BASE + "/hit/" + NS + "/" + key).then(function (r) { return r.json(); }).then(function (j) {
+          if (j && typeof j.value !== "undefined") { var e2 = document.getElementById(id); if (e2) e2.textContent = fmt(j.value); }
+        });
+      }
+      Promise.all([ hit("total", "visitTotal"), hit("day-" + ymd, "visitToday") ])
+        .then(function () { var w = document.getElementById("statWrap"); if (w) w.hidden = false; })
+        .catch(function () { /* dịch vụ đếm lỗi → ẩn số, không vỡ giao diện */ });
+
+      // Góp ý: dán link Google Form vào GOPY_URL (https://forms.gle/… hoặc …/viewform) để bật nút
+      var GOPY_URL = "";
+      if (GOPY_URL) { var g = document.getElementById("gopyBtn"); if (g) { g.href = GOPY_URL; g.hidden = false; } }
+    })();
   })();
   </script>
 </body>
