@@ -297,13 +297,6 @@
         { id:8,  ten:"Cơ xương khớp (chi)", en:"MSK (limb)",      icon:"🦿", color:"#8a5a2b" },
         { id:9,  ten:"Toàn thân",           en:"Whole-body",      icon:"🧍", color:"#596273" },
         { id:10, ten:"Thông số & An toàn",  en:"Params & Safety", icon:"⚙️", color:"#5a6679" }
-      ],
-      "MRI": [
-        { id:8,  ten:"Cơ xương khớp (chung)", en:"MSK (general)",       icon:"🦿", color:"#8a5a2b" },
-        { id:9,  ten:"Mạch máu (MRA)",        en:"MR Angiography",      icon:"🩸", color:"#b2403a" },
-        { id:10, ten:"Toàn thân",             en:"Whole-body",          icon:"🧍", color:"#596273" },
-        { id:11, ten:"Các xung tiêm thuốc",   en:"Contrast sequences",  icon:"💉", color:"#c0392b", special:"contrast" },
-        { id:12, ten:"Chuỗi xung & Thông số", en:"Sequences & Physics", icon:"🎚️", color:"#5a6679" }
       ]
     };
     // CT: gom theo danh mục Loi_CT (2 nhánh không tiêm / có tiêm × nhóm)
@@ -319,7 +312,22 @@
     var CT_REGIONS = (CONTRAST === "0" || CONTRAST === "1")
       ? CT_GROUPS.filter(function (g) { return g.id !== 7; })   // bỏ "Thông số & An toàn" ở view không tiêm/có tiêm (đã có tab riêng)
       : CT_GROUPS;
-    var REGIONS = (MODALITY === "CT") ? CT_REGIONS : BODY.concat(EXTRAS[MODALITY] || []);
+    // MRI: cấu trúc chương MRI (soạn theo tài liệu khoa, từng nhóm một; ô nhóm chưa có nội dung sẽ tự ẩn)
+    var MRI_GROUPS = [
+      { id:1,  ten:"Sọ não",                en:"Brain",               icon:"🧠", color:"#c0392b" },
+      { id:2,  ten:"Mặt cổ",                en:"Face & Neck",         icon:"👤", color:"#2ba9e0" },
+      { id:3,  ten:"Cột sống",              en:"Spine",               icon:"🦴", color:"#7a3fc0" },
+      { id:4,  ten:"Bụng",                  en:"Abdomen",             icon:"🫃", color:"#1b9e77" },
+      { id:5,  ten:"Chậu",                  en:"Pelvis",              icon:"🔻", color:"#c0397b" },
+      { id:6,  ten:"Chi & các khớp",        en:"Limbs & Joints",      icon:"🦿", color:"#8a5a2b" },
+      { id:7,  ten:"Vú",                    en:"Breast",              icon:"🎗️", color:"#d98aa6" },
+      { id:8,  ten:"An toàn MRI",            en:"MRI Safety",          icon:"⚠️", color:"#b2403a" },
+      { id:9,  ten:"Thông số MRI",           en:"Parameters",          icon:"⚙️", color:"#596273" },
+      { id:12, ten:"Chuỗi xung & Thông số", en:"Sequences & Physics", icon:"🎚️", color:"#5a6679" }
+    ];
+    var REGIONS = (MODALITY === "CT") ? CT_REGIONS
+                : (MODALITY === "MRI") ? MRI_GROUPS
+                : BODY.concat(EXTRAS[MODALITY] || []);
     // id nhóm "Thông số" theo từng loại — ẩn khỏi danh sách vùng khi ?hideparams=1 (đã có tab riêng)
     var PARAMS_RID = { "X-quang": 8, "CT": 7, "MRI": 12 }[MODALITY];
     if (P.hideparams === "1" && PARAMS_RID) REGIONS = REGIONS.filter(function (g) { return g.id !== PARAMS_RID; });
@@ -370,21 +378,17 @@
       return 7;
     }
     function regionOfMRI(it) {
-      var n = it.nhom || "", s = n + " " + (it.ten || "");
-      if (n === "Thông số & Vật lý MRI" || n === "Chuỗi xung MRI") return 12;
-      if (n === "Toàn thân") return 10;
-      if (n === "Mạch máu") return 9;
-      if (n === "Tuyến vú" || n === "Lồng ngực") return 3;
-      if (n === "Sọ não" || n === "Đầu - Mặt - Cổ") return 1;
-      if (n === "Cột sống") { if (rx(/cổ/, s)) return 2; if (rx(/ngực/, s)) return 3; return 5; }
-      if (n === "Ổ bụng - Tiểu khung") {
-        return rx(/tiền liệt|tử cung|chậu|bàng quang|trực tràng|sàn chậu|bìu|buồng trứng|cổ tử cung/i, s) ? 5 : 4;
-      }
-      if (n === "Cơ xương khớp") {
-        if (rx(/vai|khuỷu|cổ tay|bàn tay|cánh tay/i, s)) return 6;
-        if (rx(/gối|cổ chân|bàn chân|đùi|háng/i, s)) return 7;
-        return 8;
-      }
+      var n = it.nhom || "";
+      if (n === "Chuỗi xung MRI" || n === "Thông số & Vật lý MRI") return 12;
+      if (n === "Sọ não") return 1;
+      if (n === "Mặt cổ") return 2;
+      if (n === "Cột sống") return 3;
+      if (n === "Bụng") return 4;
+      if (n === "Chậu") return 5;
+      if (n === "Chi & các khớp") return 6;
+      if (n === "Vú") return 7;
+      if (n === "An toàn MRI") return 8;
+      if (n === "Thông số MRI") return 9;
       return 12;
     }
     // Blob văn bản của 1 mục (để nhận diện "xung tiêm thuốc")
@@ -432,6 +436,10 @@
       r.items = (r.special === "contrast")
         ? QT.filter(isContrastMRI)                                   // danh sách tham chiếu (gộp thêm)
         : QT.filter(function (it) { return regionOf(it) === r.id; });
+    });
+    // MRI: chỉ hiện ô nhóm đã có nội dung (nhóm chưa soạn sẽ tự xuất hiện khi thêm mục)
+    if (MODALITY === "MRI") REGIONS = REGIONS.filter(function (r) { return r.items.length > 0; });
+    REGIONS.forEach(function (r) {
       byId[r.id] = r;
       var tile = el("button", "rtile",
         '<span class="num">' + r.id + '</span><span>' + esc(r.ten) + '</span><span class="cnt">' + r.items.length + '</span>');

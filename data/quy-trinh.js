@@ -5857,323 +5857,1281 @@ window.SOTAY_QUYTRINH = [
   },
 
   /* ============================================================ */
-  /* MRI — PROTOCOL CHỤP THEO VÙNG (Từ điển MRI)                              */
-  /* Nguồn: Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA). Bổ trợ cho     */
-  /* QUY TRÌNH MRI của khoa; thông số đã được Trưởng khoa / BS duyệt.         */
+  /* MRI — CỘT SỐNG (phân vùng: cổ · ngực · thắt lưng – cùng · toàn trục)      */
+  /* Nguồn: Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL.  */
   /* ============================================================ */
   {
-    id: "mri-ref-cs-co",
+    id: "mri-cs-co",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "MRI cột sống cổ — protocol",
-    tuKhoa: ["cot song co", "cervical spine", "chen ep tuy", "thoat vi", "medic"],
+    ten: "MRI cột sống cổ",
+    tuKhoa: ["cot song co", "cervical spine", "c-spine", "thoat vi dia dem co", "tuy co", "mffe", "stir", "chen ep re than kinh"],
     thongSo: [
-      { ten: "Sagittal", giaTri: "T2W (TR 3000–4000, TE 100–120, lát 3mm) · T1W · STIR (TI 150–160)" },
-      { ten: "Axial", giaTri: "T2W MEDIC/MERGE 3D hoặc 2D TSE — cắt vuông góc đĩa đệm tổn thương" },
-      { ten: "Nâng cao", giaTri: "3D T2 SPACE/VISTA (myelography); T1 FatSat sau Gd nếu u tủy/lao" }
+      { ten: "Cuộn thu (Coil)", giaTri: "Head-Neck Array Coil đa kênh chuyên dụng" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, cổ trung tính, cố định cằm chống cử động" },
+      { ten: "Mặt phẳng", giaTri: "Sagittal (chính) · Axial (theo đĩa C2/3–C7/T1 hoặc vuông góc trục tủy) · Coronal (rễ & đám rối cánh tay)" },
+      { ten: "Lát cắt chung", giaTri: "Dày 3.0 mm · Gap 10% · NSA 2 · SENSE 1.5 (Axial mFFE: SENSE Off)" },
+      { ten: "FOV", giaTri: "Sagittal 220–240 · Axial 180–200 · Coronal 200–220 mm" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định", items: [
-        "Đau cổ vai gáy lan tay, tê/yếu tay, chèn ép tủy, thoát vị đĩa đệm cổ, chấn thương, viêm/lao/u tủy."
+        "Thoát vị đĩa đệm & thoái hóa cột sống cổ, hẹp ống sống, chèn ép rễ thần kinh / tủy cổ.",
+        "Chấn thương cột sống cổ: gãy xẹp, dập tủy, trượt đốt sống.",
+        "Viêm thân sống – đĩa đệm cổ, áp xe ngoài màng cứng.",
+        "U tủy cổ, u dây thần kinh (neurinoma, meningioma, glioma tủy)."
       ]},
-      { tieuDe: "Lưu ý", items: [
-        "Đặt Saturation Band che trước cổ (thanh quản) xóa nhiễu nuốt & nhịp thở."
+      { tieuDe: "Định hướng lát cắt", items: [
+        "Sagittal: song song đường dọc giữa cột sống cổ trên Coronal localizer; FOV phủ từ nền sọ / lồi cầu chẩm đến hết T2–T3.",
+        "Axial: song song từng đĩa đệm (C2/3 → C7/T1) khi tìm thoát vị; hoặc liên tục vuông góc trục tủy cổ khi nghi u, chấn thương, tổn thương tủy.",
+        "Coronal: song song bờ sau các thân đốt sống cổ — đánh giá rễ thần kinh và đám rối cánh tay."
+      ]},
+      { tieuDe: "Các chuỗi xung thường quy & vai trò", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Sagittal T1 TSE", "Sagittal", "450–550 / 10–12 / –", "3.0 · 220–240", "Giải phẫu thân sống, tủy xương, thoái hóa Modic 2"],
+          ["Sagittal T2 TSE", "Sagittal", "3000–3500 / 100–110 / –", "3.0 · 220–240", "DNT sáng, thoát vị đĩa đệm, hẹp ống sống cổ"],
+          ["Sagittal STIR", "Sagittal", "3500–4000 / 60 / 150", "3.0 · 220–240", "Nhạy nhất với phù tủy xương, dập dây chằng sau"],
+          ["Axial T2* mFFE", "Axial", "600–800 / 16–20 / –", "3.0 · 180–200", "Phân biệt gai xương vôi hóa (đen) vs thoát vị đĩa đệm mềm"],
+          ["Axial T2 TSE", "Axial", "3500–4000 / 100–110 / –", "3.0 · 180–200", "Chèn ép rễ thần kinh trong lỗ liên hợp"],
+          ["Coronal T2 TSE", "Coronal", "3000–3500 / 100 / –", "3.0 · 200–220", "Đám rối thần kinh cánh tay, vẹo cột sống cổ"]
+        ]
+      }},
+      { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
+        "Thoát vị đĩa đệm & thoái hóa cổ: KHÔNG TIÊM — đánh giá bằng T1 TSE, T2 TSE và T2* mFFE.",
+        "Chấn thương cổ (gãy xẹp, dập tủy, trượt): thường KHÔNG tiêm cấp cứu; BẮT BUỘC Sagittal STIR và Axial T2* mFFE để tìm vi xuất huyết trong tủy và phù dây chằng liên gai.",
+        "Viêm thân sống – đĩa đệm & áp xe ngoài màng cứng: BẮT BUỘC TIÊM — Sagittal / Coronal / Axial T1 FS + C.",
+        "U tủy cổ / u dây thần kinh: BẮT BUỘC TIÊM — T1 FS + C ba mặt phẳng hoặc 3D T1 e-THRIVE cắt mỏng đẳng hướng 1 mm."
+      ]},
+      { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Sagittal T1 FS + C", "Sagittal", "500–600 / 10–12 / –", "3.0 · 220–240", "U tủy cổ, viêm thân sống – đĩa đệm sau tiêm Gd"],
+          ["Axial T1 FS + C", "Axial", "500–600 / 10–12 / –", "3.0 · 180–200", "Viền ngấm thuốc áp xe ngoài màng cứng"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI (máy tạo nhịp, dị vật kim loại từ tính) trước khi chụp."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
-    id: "mri-ref-cs-that-lung",
+    id: "mri-cs-nguc",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "MRI cột sống thắt lưng — protocol",
-    tuKhoa: ["cot song that lung", "lumbar", "than kinh toa", "duoi ngua", "modic", "sau mo"],
+    ten: "MRI cột sống ngực",
+    tuKhoa: ["cot song nguc", "thoracic spine", "t-spine", "ep tuy nguc", "di can xuong nguc", "viem tuy cat ngang", "ms tuy", "stir"],
     thongSo: [
-      { ten: "Sagittal", giaTri: "T2W (lát 4mm, FOV 300) · T1W (Modic) · STIR (TI 160 — xẹp đốt do loãng xương)" },
-      { ten: "Axial", giaTri: "T2W xếp block theo góc nghiêng từng đĩa đệm — hẹp lỗ liên hợp" },
-      { ten: "Sau mổ", giaTri: "T1 FatSat sau Gd: phân biệt mô sẹo (bắt thuốc) vs đĩa đệm tái phát (không bắt)" }
+      { ten: "Cuộn thu (Coil)", giaTri: "Spine Matrix Coil đa kênh vùng ngực" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, đặt đai theo dõi hô hấp (Respiratory Trigger) quanh ngực/bụng để triệt nhiễu thở" },
+      { ten: "Mặt phẳng", giaTri: "Sagittal (FOV rộng phủ C7–L2, cần marker định vị) · Axial (vuông góc đoạn tủy ngực tổn thương)" },
+      { ten: "Lát cắt chung", giaTri: "Dày 3.0–3.5 mm · Gap 10% · NSA 2 · SENSE 1.5–1.8" },
+      { ten: "FOV", giaTri: "Sagittal 320–350 · Axial 200–220 mm" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định", items: [
-        "Đau thắt lưng lan chân (đau thần kinh tọa), dấu chùm đuôi ngựa, thoát vị, trượt đốt, viêm cột sống dính khớp."
+        "Thoát vị đĩa đệm ngực (ít gặp), chèn ép tủy ngực.",
+        "Chấn thương & ép tủy ngực cấp tính.",
+        "U di căn xương ngực / đa u tủy (multiple myeloma).",
+        "Viêm tủy cắt ngang (transverse myelitis), xơ cứng rải rác (MS) tủy ngực."
+      ]},
+      { tieuDe: "Định hướng lát cắt", items: [
+        "Sagittal: song song trục tủy ngực, FOV rộng 320–350 mm phủ từ C7 đến L2; đặt marker định vị đốt sống chính xác.",
+        "Axial: vuông góc đoạn tủy ngực tổn thương; do ống sống ngực hẹp nên lát cắt mỏng 3.0–3.5 mm."
+      ]},
+      { tieuDe: "Các chuỗi xung cốt lõi & vai trò", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Sagittal T1 TSE", "Sagittal", "400–500 / 10–12 / –", "3.5 · 320–350", "Hình thái thân đốt sống, tủy xương T-spine"],
+          ["Sagittal T2 TSE", "Sagittal", "3200–3800 / 100–120 / –", "3.5 · 320–350", "DNT sáng, diện chèn ép tủy ngực"],
+          ["Sagittal STIR", "Sagittal", "3500–4000 / 60–70 / 150", "3.5 · 320–350", "Bắt buộc: phát hiện sớm di căn xương & viêm đĩa đệm"],
+          ["Axial T2 TSE", "Axial", "3500–4200 / 100–110 / –", "3.5 · 200–220", "Cắt mỏng khu trú qua đoạn tủy ngực nghi tổn thương"]
+        ]
+      }},
+      { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
+        "Thoát vị đĩa đệm ngực (ít gặp): KHÔNG TIÊM — khảo sát trên T1, T2 và Axial T2.",
+        "Chấn thương & ép tủy ngực cấp: T1, T2 và STIR; tiêm bổ sung khi nghi u máu vỡ hoặc tụ máu ngoài màng cứng nhiễm trùng.",
+        "U di căn xương ngực / đa u tủy: BẮT BUỘC TIÊM — Sagittal và Axial T1 FS + C đánh giá u xâm lấn khoang màng tủy.",
+        "Viêm tủy cắt ngang / MS tủy ngực: BẮT BUỘC TIÊM — T1 FS + C tìm mảng hủy myelin ngấm thuốc hoạt động."
+      ]},
+      { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Sagittal T1 FS + C", "Sagittal", "450–550 / 10–12 / –", "3.5 · 320–350", "U tủy ngực, di căn xương, mảng viêm tủy cắt ngang"],
+          ["Axial T1 FS + C", "Axial", "450–550 / 10–12 / –", "3.5 · 200–220", "Mức độ xâm lấn màng tủy & phần mềm quanh sống"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI và dùng Respiratory Trigger để loại nhiễu nhịp thở."
+      ]}
+    ],
+    nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-cs-tl",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
+    ten: "MRI cột sống thắt lưng – cùng",
+    tuKhoa: ["cot song that lung", "lumbar spine", "l-spine", "thoat vi dia dem", "truot dot song", "fbss", "mo cu", "ap xe co that lung chau", "psoas", "khop cung chau", "modic"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Spine Matrix Coil vùng thắt lưng – cùng" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, kê gối dưới khoeo làm phẳng độ ưỡn thắt lưng, cột sống áp sát coil" },
+      { ten: "Mặt phẳng", giaTri: "Sagittal dọc giữa · Axial theo từng đĩa (L3/4, L4/5, L5/S1; 3–4 lát/tầng) · Coronal Oblique khớp cùng chậu khi cần" },
+      { ten: "Lát cắt chung", giaTri: "Dày 4.0 mm (Coronal Oblique 3.0 mm) · Gap 10% · NSA 2 · SENSE 1.5" },
+      { ten: "FOV", giaTri: "Sagittal 260–280 (phủ T12 → hết xương cùng – cụt) · Axial 180–200 mm" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Thoát vị đĩa đệm & trượt đốt sống thắt lưng, chèn ép rễ / chùm đuôi ngựa.",
+        "Hội chứng sau mổ cột sống (FBSS): phân biệt xơ sẹo vs thoát vị tái phát.",
+        "Viêm đĩa đệm – thân sống thắt lưng, áp xe cơ thắt lưng chậu (psoas).",
+        "Viêm khớp cùng chậu; gãy xẹp xốp xương cấp (Modic 1)."
+      ]},
+      { tieuDe: "Định hướng lát cắt", items: [
+        "Sagittal dọc giữa: song song đường dọc giữa, FOV 260–280 mm phủ từ T12 đến hết xương cùng – cụt (S5/Coccyx).",
+        "Axial: song song từng khoảng đĩa đệm (L3/4, L4/5, L5/S1); mỗi tầng 3–4 lát từ bờ dưới thân trên đến bờ trên thân dưới.",
+        "Coronal Oblique (khớp cùng chậu): nghiêng song song bề mặt xương cùng — bắt buộc trong viêm khớp cùng chậu."
+      ]},
+      { tieuDe: "Các chuỗi xung cốt lõi & vai trò", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Sagittal T1 TSE", "Sagittal", "400–500 / 10–12 / –", "4.0 · 260–280", "Giải phẫu thân sống, trượt đốt sống, thoái hóa Modic"],
+          ["Sagittal T2 TSE", "Sagittal", "3000–3600 / 100–110 / –", "4.0 · 260–280", "Thoát vị đĩa đệm, hẹp ống sống thắt lưng"],
+          ["Sagittal STIR", "Sagittal", "3500–4000 / 60–70 / 150", "4.0 · 260–280", "Phù tủy xương Modic 1, gãy xẹp xốp xương cấp"],
+          ["Axial T2 TSE", "Axial", "3500–4000 / 110–120 / –", "4.0 · 180–200", "Cắt song song từng đĩa đệm (L3/4, L4/5, L5/S1)"],
+          ["Coronal Oblique STIR", "Coronal Obl.", "3500–4000 / 60–70 / 150", "3.0 · 260–280", "Khảo sát khớp cùng chậu"]
+        ]
+      }},
+      { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
+        "Thoát vị đĩa đệm & trượt đốt sống: KHÔNG TIÊM — đánh giá chèn ép rễ / chùm đuôi ngựa trên Sagittal T1, T2 và Axial T2.",
+        "Hội chứng sau mổ (FBSS): BẮT BUỘC TIÊM — Gadolinium phân biệt mô xơ sẹo (bắt thuốc mạnh ngay sau tiêm) với thoát vị tái phát (không bắt thuốc hoặc chỉ bắt viền muộn).",
+        "Viêm đĩa đệm – thân sống & áp xe cơ thắt lưng chậu (psoas): BẮT BUỘC TIÊM — T1 FS + C ba mặt phẳng.",
+        "Viêm khớp cùng chậu: Coronal STIR cắt mỏng và Coronal T1 FS + C khu trú khớp cùng chậu."
+      ]},
+      { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày · FOV (mm)", "Vai trò chẩn đoán"],
+        rows: [
+          ["Axial T1 FS + C", "Axial", "400–500 / 10–12 / –", "4.0 · 180–200", "Phân biệt mô xơ sẹo mổ cũ (ngấm) vs thoát vị tái phát"],
+          ["Sagittal T1 FS + C", "Sagittal", "400–500 / 10–12 / –", "4.0 · 260–280", "Xơ sẹo mổ cũ, thoát vị tái phát, bệnh lý cột sống (lao…)"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-cs-toan-truc",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
+    ten: "MRI toàn trục cột sống",
+    tuKhoa: ["toan truc cot song", "whole spine", "ghep hinh", "auto-stitching", "mobiflex", "di can xuong da o", "da u tuy", "rong tuy", "syrinx", "ep tuy"],
+    thongSo: [
+      { ten: "Kỹ thuật ghép hình", giaTri: "Auto-Stitching / MobiFlex (Philips 1.5T), chia 3 trạm: C-spine · T-spine · L-spine/Sacrum" },
+      { ten: "Mặt phẳng", giaTri: "Sagittal toàn trục (ghép 3 trạm)" },
+      { ten: "Chuỗi xung chủ lực", giaTri: "T1 TSE · T2 TSE · STIR toàn trục" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Ép tủy không rõ vị trí trên lâm sàng.",
+        "Di căn xương đa ổ, đa u tủy (multiple myeloma).",
+        "Đánh giá độ rộng rỗng tủy (syrinx).",
+        "Vẹo cột sống phức tạp."
+      ]},
+      { tieuDe: "Kỹ thuật ghép hình (Auto-Stitching)", items: [
+        "Dùng tính năng ghép hình tự động (MobiFlex / Auto-Stitching) trên máy Philips 1.5T.",
+        "Chia làm 3 trạm: C-spine, T-spine, L-spine/Sacrum rồi ghép thành ảnh toàn trục liền mạch."
+      ]},
+      { tieuDe: "Chuỗi xung toàn trục", items: [
+        "Sagittal T1 TSE toàn trục (ghép 3 trạm).",
+        "Sagittal T2 TSE toàn trục (ghép 3 trạm).",
+        "Sagittal STIR toàn trục (ghép 3 trạm) — chuỗi xung nhạy nhất tìm vi di căn toàn bộ thân đốt sống."
+      ]},
+      { tieuDe: "Bảng tổng hợp nguyên tắc tiêm thuốc tương phản cột sống", bang: {
+        cols: ["Nhóm bệnh lý / chấn thương", "Tiêm thuốc (+C)", "Chuỗi xung bắt buộc sau tiêm & ghi chú"],
+        rows: [
+          ["Thoát vị đĩa đệm, thoái hóa cột sống", "KHÔNG TIÊM", "Chỉ T1, T2, T2* mFFE, STIR. Không tiêm trừ mổ cũ nghi xơ sẹo."],
+          ["Chấn thương cấp (gãy xẹp, dập tủy)", "KHÔNG TIÊM (thường quy)", "Sag T1, T2, STIR, Ax T2*. Tiêm khi nghi vỡ u máu hoặc nhiễm trùng."],
+          ["Mổ cũ: thoát vị tái phát vs xơ sẹo (FBSS)", "BẮT BUỘC TIÊM", "T1 FS + C (Axial/Sagittal). Xơ sẹo ngấm thuốc ngay; thoát vị tái phát không ngấm."],
+          ["Viêm thân sống – đĩa đệm, áp xe ngoài màng cứng", "BẮT BUỘC TIÊM", "T1 FS + C 3 mặt phẳng; xóa mỡ bộc lộ viền ngấm thuốc ổ áp xe."],
+          ["U tủy, u dây thần kinh, di căn xương", "BẮT BUỘC TIÊM", "T1 FS + C 3 mặt phẳng hoặc 3D T1 e-THRIVE; đánh giá ranh giới u và xâm lấn màng tủy."]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+
+  /* ============================================================ */
+  /* MRI — BỤNG (phân theo khả năng nín thở + bệnh lý & tiêm động học gan)     */
+  /* Nguồn: Protocol MRI vùng bụng & tiêm thuốc động học (1.5T Philips).       */
+  /* ============================================================ */
+  {
+    id: "mri-bung-nin-tho-tot",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
+    ten: "MRI bụng — bệnh nhân hợp tác tốt (nín thở)",
+    tuKhoa: ["mri bung", "abdomen", "gan", "lien", "mrcp", "tuy", "than", "dynamic", "e-thrive", "thrive", "nin tho", "breath hold", "dixon", "hcc", "primovist", "tiem dong hoc", "care bolus"],
+    thongSo: [
+      { ten: "Đối tượng", giaTri: "BN trẻ, tỉnh táo, hợp tác tốt, nín thở ổn định 12–18 giây/lần phát xung" },
+      { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Sense Torso / dStream Torso, phủ từ vòm hoành đến hết vòm háng" },
+      { ten: "Chuẩn bị", giaTri: "Nhịn ăn 4–6 giờ · Buscopan 20 mg (IM/IV chậm) chống co thắt ruột" },
+      { ten: "Nhịp thở", giaTri: "Nín thở cuối thì thở ra nhẹ nhàng (end-expiration) để vòm hoành ổn định" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Bệnh lý gan: HCC, u máu (hemangioma), FNH, adenoma, di căn, áp xe.",
+        "Tụy & đường mật: MRCP, viêm tụy, u tụy (adenocarcinoma), IPMN.",
+        "Thận & tuyến thượng thận: ung thư tế bào thận (RCC), nang Bosniak, adenoma thượng thận."
+      ]},
+      { tieuDe: "Chuẩn bị bệnh nhân & cuộn thu", items: [
+        "Nhịn ăn 4–6 giờ: dạ dày trống, giảm nhu động ruột, túi mật căng dịch — điều kiện để MRCP đường mật nét căng.",
+        "Tiêm Hyoscine butylbromide (Buscopan) 20 mg bắp hoặc tĩnh mạch chậm để triệt nhiễu nhu động ruột.",
+        "Huấn luyện nín thở ở cuối thì thở ra nhẹ nhàng, đồng nhất giữa các chuỗi trước và sau tiêm.",
+        "Đặt Body Array / Torso Coil phủ liên tục vòm hoành → vòm háng."
+      ]},
+      { tieuDe: "Kỹ thuật nín thở tốt & các chuỗi xung chính", items: [
+        "T1 3D Dynamic Fat Sat (e-THRIVE / mTHRIVE): GRE 3D xóa mỡ cắt mỏng đẳng hướng 2 mm, chụp động học 4 thì sau tiêm, 12–15 giây/thì.",
+        "Dual-Echo Dixon T1 FFE (In-Phase & Out-of-Phase): nín thở 15 giây, phát hiện mỡ nội tế bào trong mô gan/khối u.",
+        "MRCP 3D Breath-Hold: dựng hình đường mật 3D, nín thở 18–20 giây cho ảnh sắc nét.",
+        "T2 TSE / SS-TSE (HASTE) và DWI/ADC bổ sung khảo sát hình thái và tán xạ."
+      ]},
+      { tieuDe: "Protocol theo cơ quan", items: [
+        "GAN: In/Out-of-Phase (Dixon) tìm thoái hóa mỡ & vi mỡ nội bào; T2 TSE (±FS) phân biệt u máu (T2 sáng rực 'bóng đèn') với HCC/di căn; DWI/ADC (b0, b50, b800) đánh giá hạn chế khuếch tán; T1 Dynamic 3D (e-THRIVE) 4 thì cho mọi u nghi ác tính.",
+        "TỤY & ĐƯỜNG MẬT: MRCP 3D DRIVE (Respiratory Triggered, T2 TE > 600 ms + xung Restore) dựng hình cây mật tụy; MRCP 2D Thick-Slab SS-TSE (lát dày 40–50 mm, 2 giây) xem nhanh toàn cảnh; T1 FS e-THRIVE tụy (nhu mô tụy lành sáng, giảm tín hiệu trong viêm/u).",
+        "THẬN & THƯỢNG THẬN: thượng thận BẮT BUỘC In/Out-of-Phase (adenoma lành sụt tín hiệu mạnh trên Out-of-Phase); thận chụp T2 TSE, DWI/ADC và T1 Dynamic e-THRIVE 3 thì — Vỏ tủy (~25s), Tủy thận (~100s), Bài tiết (3–5 phút)."
+      ]},
+      { tieuDe: "Tiêm thuốc tương phản động học gan", items: [
+        "Cơ chế cấp máu kép: nhu mô gan lành nhận 75–80% từ TM cửa, 20–25% từ ĐM gan; HCC nhận 90–100% từ ĐM gan tân tạo → chụp động học bắt trọn 'Wash-in' / 'Wash-out'.",
+        "Đường truyền: kim 18–20G tĩnh mạch khuỷu; bơm tiêm 2 nòng — nòng A Gadolinium, nòng B 20–30 mL NaCl 0.9% đuổi thuốc.",
+        "Thuốc ngoại bào (ECA — Gadovist, Dotarem, Magnevist): 0.1 mmol/kg, bơm 1.5–2.0 mL/s.",
+        "Thuốc đặc hiệu tế bào gan (HBA — Primovist / Gd-EOB-DTPA): 0.025 mmol/kg (0.1 mL/kg), bơm 1.0–1.5 mL/s, bổ sung THÌ TẾ BÀO GAN (HBP) phút 15–20.",
+        "Care Bolus Tracking: đặt Tracker Slice tại ĐMC bụng trên nhánh thân tạng; khi thuốc vào ĐMC khởi chạy e-THRIVE sau trễ 8–10 giây để bắt trọn thì động mạch muộn."
+      ]},
+      { tieuDe: "Các thì chụp động học gan (Dynamic Timeline)", bang: {
+        cols: ["Thì chụp", "Mốc thời gian", "Hình ảnh mạch máu & nhu mô", "Ý nghĩa chẩn đoán"],
+        rows: [
+          ["Trước tiêm (Native)", "0 giây", "Chưa có thuốc; tín hiệu tự nhiên nhu mô gan", "Khảo sát mỡ, xuất huyết bán cấp, hoại tử (T1 sáng tự nhiên)"],
+          ["Động mạch muộn (Late Arterial)", "20–25 giây", "ĐMC bụng & ĐM gan sáng rực; TM cửa ngấm nhẹ; nhu mô gan chưa ngấm mạnh", "THÌ VÀNG phát hiện u giàu mạch; 'Wash-in' của HCC, FNH, u máu"],
+          ["Tĩnh mạch cửa (Portal Venous)", "60–70 giây", "TM cửa & TM gan ngấm tối đa; nhu mô gan lành ngấm đỉnh điểm", "'Wash-out' của HCC; bộc lộ u nghèo mạch (di căn, áp xe)"],
+          ["Cân bằng / Trễ (Equilibrium)", "3–5 phút", "Mạch máu & nhu mô giảm ngấm; tín hiệu cân bằng", "Vỏ bao u HCC; u máu ngấm tiến dần vào trung tâm"],
+          ["Tế bào gan (HBP – Primovist)", "15–20 phút", "Nhu mô gan lành & đường mật sáng rực T1W", "HCC & di căn khuyết ngấm (tối đầm); FNH sáng"]
+        ]
+      }},
+      { tieuDe: "Phân biệt tổn thương gan theo thì ngấm thuốc", bang: {
+        cols: ["Bệnh lý gan", "ĐM muộn", "TM cửa", "Trễ (3–5 ph)", "Tế bào gan (HBP)"],
+        rows: [
+          ["HCC", "Bắt thuốc mạnh (Wash-in)", "Thải nhanh (Wash-out)", "Vỏ bao u ngấm rõ", "Khuyết ngấm (tối đầm)"],
+          ["Hemangioma (u máu)", "Nốt ngấm ngoại vi", "Ngấm lấp đầy tiến dần vào trong", "Lấp đầy hoàn toàn (sáng rực)", "Khuyết ngấm (tối)"],
+          ["FNH", "Bắt thuốc mạnh, đồng nhất", "Đồng tín hiệu nhu mô gan", "Sẹo trung tâm ngấm muộn", "Tăng / đồng tín hiệu (sáng)"],
+          ["Di căn gan", "Viền ngấm nhẹ ngoại vi", "Khuyết ngấm nhu mô", "Khuyết ngấm", "Khuyết ngấm (tối đầm)"],
+          ["Áp xe gan", "Viền ngấm dày / mạnh", "Viền ngấm kéo dài", "Phù quanh ổ áp xe", "Khuyết ngấm (tối)"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE", "Hô hấp & ghi chú"],
+        rows: [
+          ["Dual-Echo FFE (In/Out)", "120–150 / In 4.6 · Out 2.3", "5.0mm/10% · 350–400", "1 · 1.5", "Nín thở 15s; lấy đồng thời In & Out-of-Phase"],
+          ["Axial T2 TSE FS", "1800–2500 / 80–100", "5.0mm/10% · 350–400", "2 · 1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
+          ["Axial SS-TSE (HASTE)", "800–1000 / 80–90", "5.0mm/10% · 350–400", "1 · Off", "Nín thở nhẹ / thở tự do (<1s/lát); khảo sát nhanh"],
+          ["3D e-THRIVE Dynamic", "4.0–5.0 / 2.0–2.4", "2.0mm/0% · 360–400", "1 · 1.8", "Nín thở 12–15s/thì; T1 3D xóa mỡ, 4 thì sau tiêm"],
+          ["MRCP 3D DRIVE", "1500–2000 / 650–700", "1.5mm/0% · 300–320", "1 · 1.5", "Respiratory Triggered; T2 TE cực dài dựng cây đường mật"],
+          ["Free-Breathing DWI", "3000–4000 / 65–75", "5.0mm/10% · 360–400", "4–6 · 1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; thận trọng Buscopan ở bệnh nhân glôcôm góc đóng, bí tiểu do phì đại tiền liệt tuyến, nhịp tim nhanh."
+      ]}
+    ],
+    nguon: "Protocol MRI vùng bụng & tiêm thuốc động học (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-bung-tho-tu-do",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
+    ten: "MRI bụng — bệnh nhân thở tự do",
+    tuKhoa: ["mri bung", "tho tu do", "free breathing", "respiratory triggering", "dai tho", "bellows", "navigator", "4d radial", "stack of stars", "golden angle", "ss-tse", "haste", "dwi", "benh nhan nang"],
+    thongSo: [
+      { ten: "Đối tượng", giaTri: "BN cao tuổi, bệnh phổi/tim (COPD, suy tim), thở nông, trẻ em; nặng/hôn mê không nín thở được" },
+      { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Sense Torso / dStream Torso, phủ vòm hoành → vòm háng" },
+      { ten: "Kỹ thuật kiểm soát thở", giaTri: "Respiratory Triggering (đai thở) · Respiratory Navigator (cổng vòm hoành) · 4D FreeBreathing Radial Stack-of-Stars" },
+      { ten: "Chuẩn bị", giaTri: "Nhịn ăn 4–6 giờ · Buscopan 20 mg chống co thắt (như kỹ thuật nín thở)" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định / đối tượng", items: [
+        "Bệnh nhân không nín thở ổn định: cao tuổi, COPD / suy tim, thở nông, trẻ em.",
+        "Bệnh nhân hoàn toàn không thể nín thở (hôn mê, già yếu, bệnh nặng) nhưng vẫn cần tiêm tương phản động học chất lượng cao."
+      ]},
+      { tieuDe: "Kỹ thuật 2 — Đồng bộ đai thở (Respiratory Triggering) & Navigator", items: [
+        "Đai thở (Bellows): gắn đai khí quanh bụng; máy theo dõi đồ thị nhịp thở và chỉ phát xung thu dữ liệu đúng cuối thì thở ra (khi cơ hoành đứng yên). Áp dụng T2 TSE High-Resolution và MRCP 3D DRIVE.",
+        "Navigator vòm hoành: đặt hộp định vị (Navigator Box) ở vòm hoành phải; máy phát xung ngắn theo dõi vị trí hoành, chỉ ghi tín hiệu khi hoành trong cửa sổ chấp nhận (Acceptance Window 2–3 mm).",
+        "Single-Shot T2 TSE (SS-TSE / HASTE): thu toàn bộ mặt phẳng < 1 giây/lát, bệnh nhân chỉ thở nhẹ nhàng tự nhiên.",
+        "Free-Breathing DWI: chụp DWI thở tự do, tăng số lần trung bình tín hiệu (NSA 4–6) để triệt xảo ảnh chuyển động."
+      ]},
+      { tieuDe: "Kỹ thuật 3 — 4D FreeBreathing Radial Stack-of-Stars", items: [
+        "Lấy mẫu K-space hướng tâm (Radial / Golden Angle): các nan hoa liên tục đi qua trung tâm K-space + bộ lọc Respiratory Soft-Gating & KWIC triệt xảo ảnh mờ nhòe do hô hấp.",
+        "Bệnh nhân thở tự do bình thường liên tục 3–5 phút; máy tự tái tạo 20–24 thì động học (mỗi thì ~10 giây), chất lượng tương đương hoặc vượt nín thở tốt.",
+        "Đây là kỹ thuật tiêm tương phản động học cho bệnh nhân không nín thở được (thay cho e-THRIVE breath-hold)."
+      ]},
+      { tieuDe: "So sánh 3 kỹ thuật quản lý nhịp thở", bang: {
+        cols: ["Thông số / chuỗi xung", "KT1: Nín thở tốt", "KT2: Đồng bộ đai thở", "KT3: 4D FreeBreathing Radial"],
+        rows: [
+          ["Yêu cầu bệnh nhân", "Nín thở 12–18 giây/thì", "Thở đều theo đai thở", "Thở tự do hoàn toàn (BN nặng/hôn mê)"],
+          ["T1 Dynamic +C", "e-THRIVE 3D (12–15s/thì), lát 2 mm", "Dễ mờ nhòe nếu nín thở kém", "4D FreeBreathing Stack-of-Stars, thở tự do 3–5 phút"],
+          ["T2W hình thái", "T2 TSE / SS-TSE (15s)", "T2 TSE + Respiratory Triggering", "T2 TSE + Triggering / Navigator"],
+          ["Mật – MRCP 3D", "MRCP 3D (nín thở 18s)", "MRCP 3D DRIVE + Triggering (cuối thì thở ra)", "MRCP 3D DRIVE + Diaphragmatic Navigator"],
+          ["DWI tán xạ", "Single-Shot EPI DWI (18s)", "Free-Breathing DWI (NSA 4–6)", "Free-Breathing DWI (NSA 4–6)"]
+        ]
+      }},
+      { tieuDe: "Thông số các chuỗi thở tự do (1.5T Philips)", bang: {
+        cols: ["Chuỗi xung", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE", "Hô hấp & ghi chú"],
+        rows: [
+          ["Axial T2 TSE FS", "1800–2500 / 80–100", "5.0mm/10% · 350–400", "2 · 1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
+          ["Axial SS-TSE (HASTE)", "800–1000 / 80–90", "5.0mm/10% · 350–400", "1 · Off", "Thở tự do (<1s/lát); khảo sát nhanh toàn bụng"],
+          ["4D FreeBreathing 3D", "4.5–5.5 / 2.1–2.5", "2.5mm/0% · 360–400", "1 · Off", "Thở tự do hoàn toàn (Radial Stack-of-Stars 3–5 phút)"],
+          ["MRCP 3D DRIVE", "1500–2000 / 650–700", "1.5mm/0% · 300–320", "1 · 1.5", "Respiratory Triggered / Navigator; dựng cây đường mật"],
+          ["Free-Breathing DWI", "3000–4000 / 65–75", "5.0mm/10% · 360–400", "4–6 · 1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
+        ]
+      }},
+      { tieuDe: "Lưu ý", items: [
+        "Tiêm tương phản động học ở bệnh nhân thở tự do thực hiện bằng 4D FreeBreathing Radial (20–24 thì).",
+        "Nguyên tắc các thì (động mạch muộn · TM cửa · trễ · tế bào gan) và bảng phân biệt tổn thương gan — xem mục 'MRI bụng — bệnh nhân hợp tác tốt (nín thở)'."
+      ]},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI vùng bụng & tiêm thuốc động học (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-bung-ruot-thua-thai",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
+    ten: "MRI bụng — ruột thừa ở bệnh nhân có thai",
+    tuKhoa: ["ruot thua", "viem ruot thua", "co thai", "mang thai", "appendicitis", "pregnancy", "khong ion hoa"],
+    thongSo: [
+      { ten: "Trạng thái", giaTri: "Đang biên soạn — chờ tài liệu protocol riêng" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định (tóm tắt)", items: [
+        "MRI là phương pháp hình ảnh KHÔNG ion hóa, dùng chẩn đoán viêm ruột thừa ở phụ nữ mang thai khi siêu âm không kết luận được."
       ]},
       { tieuDe: "Lưu ý", items: [
-        "Kê gối dưới khoeo làm phẳng ưỡn thắt lưng, sát spine coil → tăng SNR."
+        "Quy trình chi tiết (chuỗi xung, thông số, chống chỉ định) đang được biên soạn và sẽ cập nhật khi có tài liệu. Tài liệu MRI vùng bụng (1.5T Philips) hiện tại chưa bao gồm protocol này."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "Khoa CĐHA BVHVGL — đang cập nhật"
   },
+
+  /* ============================================================ */
+  /* MRI — MẶT CỔ (u/viêm/áp xe/hạch/tuyến nước bọt · hốc mắt · dây TK sọ)     */
+  /* Nguồn: Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL.   */
+  /* ============================================================ */
   {
-    id: "mri-ref-tien-liet-tuyen",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "MRI tiền liệt tuyến đa thông số (mpMRI, PI-RADS)",
-    tuKhoa: ["tien liet tuyen", "prostate", "mpmri", "pi-rads", "psa", "dce"],
+    id: "mri-matco-chung",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
+    ten: "MRI mặt – cổ (u, viêm, áp xe, hạch, tuyến nước bọt)",
+    tuKhoa: ["mat co", "vung co", "face neck", "u vom hong", "hau hong", "thanh quan", "ap xe khoang co", "hach co", "tuyen nuoc bot", "mang tai", "duoi ham", "warthin", "t1 fs"],
     thongSo: [
-      { ten: "T2W độ phân giải cao", giaTri: "Ax/Sag/Cor (TR 4000, TE 100, lát 3mm, FOV 160)" },
-      { ten: "DWI", giaTri: "b đa (50/400/800) + b siêu cao 1400–2000; tính bản đồ ADC" },
-      { ten: "DCE", giaTri: "Độ phân giải thời gian < 10 s/pha, tổng 3–4 phút (có Gd)" }
+      { ten: "Cuộn thu (Coil)", giaTri: "Head-Neck Array Coil đa kênh chuyên dụng" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, cổ trung tính; dặn giữ đầu, không cử động lưỡi / nuốt khi phát xung" },
+      { ten: "FOV", giaTri: "Phủ liên tục từ nền sọ xuống khớp ức đòn / quai động mạch chủ (không bỏ sót hạch cổ sâu)" },
+      { ten: "Chống xảo ảnh", giaTri: "Đặt Flow Saturation Bands trên & dưới trường chụp để triệt xảo ảnh đập ĐM/TM cảnh" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg (0.2 ml/kg), 1.5–2.0 ml/s; T1 FS + C BẮT BUỘC sau tiêm" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định", items: [
-        "Tăng PSA, tầm soát ung thư TLT, định vị trước sinh thiết, phân giai đoạn, theo dõi sau điều trị."
+        "U vòm họng, hầu họng & thanh quản (đánh giá xâm lấn nền sọ, xoang hang, khoang quanh họng, hạch cổ).",
+        "Viêm & áp xe khoang cổ sâu (khoang mặt, sau họng, khoang cảnh).",
+        "U tuyến nước bọt (tuyến mang tai, dưới hàm).",
+        "Hạch cổ: phân biệt hạch viêm phản ứng vs hạch di căn."
       ]},
+      { tieuDe: "Chuẩn bị & chống xảo ảnh", items: [
+        "Hướng dẫn bệnh nhân giữ đầu cố định, không cử động lưỡi hay nuốt nước bọt liên tục khi máy phát xung.",
+        "Đặt dải bão hòa dòng chảy (Flow Saturation Bands) phía trên và dưới trường chụp để triệt xảo ảnh đập của động mạch & tĩnh mạch cảnh.",
+        "Head-Neck Array Coil; FOV phủ nền sọ → khớp ức đòn / quai ĐMC."
+      ]},
+      { tieuDe: "Các chuỗi xung cốt lõi & vai trò", items: [
+        "T1W TSE (Axial / Coronal): độ phân giải giải phẫu cao nhất; đánh giá tủy xương nền sọ, xương hàm dưới; mất/chèn ép dải mỡ khoang quanh họng là dấu hiệu u xâm lấn.",
+        "T2W TSE (Axial / Coronal / Sagittal): hình thái khối u, ranh giới tổn thương, dịch hoại tử & dịch xoang cạnh mũi.",
+        "T2 FS (Fat Sat) / STIR — BẮT BUỘC XÓA MỠ: triệt tín hiệu mỡ tự nhiên dày, bộc lộ u, ổ viêm, áp xe, phù mô mềm & hạch cổ phát sáng.",
+        "DWI & ADC Map: phân biệt u lành vs ác, hạch viêm (ADC cao) vs hạch di căn (ADC thấp), áp xe mủ đặc (hạn chế khuếch tán mạnh) vs u hoại tử dịch lỏng."
+      ]},
+      { tieuDe: "Quy trình tiêm thuốc (+C)", items: [
+        "Bắt buộc tiêm cho mọi trường hợp nghi U, viêm, áp xe hoặc hạch cổ. Gd 0.1 mmol/kg (0.2 ml/kg), tĩnh mạch khuỷu 1.5–2.0 ml/s.",
+        "Quy tắc BẮT BUỘC: T1W sau tiêm phải XÓA MỠ (T1 FS + C) — vì mỡ cổ sáng trên T1 sẽ che khuất tổn thương ngấm thuốc nếu không xóa mỡ.",
+        "Chụp T1 FS + C ít nhất 2 mặt phẳng (Axial & Coronal/Sagittal) hoặc 3D T1 e-THRIVE xóa mỡ mỏng 1.5 mm."
+      ]},
+      { tieuDe: "Protocol theo bệnh lý", bang: {
+        cols: ["Nhóm bệnh lý", "Mục tiêu khảo sát", "Chuỗi xung trước tiêm", "Sau tiêm (+C)", "Dấu hiệu key"],
+        rows: [
+          ["U vòm họng, hầu họng & thanh quản", "Xâm lấn nền sọ, xoang hang, khoang quanh họng & hạch cổ", "Ax T1W, T2W, T2 FS; Cor/Sag T2 FS; DWI/ADC", "Ax, Cor & Sag T1 FS + C mỏng 3.5 mm", "U xâm lấn phần mềm & hạch di căn ngấm thuốc / hoại tử"],
+          ["Viêm & áp xe khoang cổ sâu", "Khoang bị ảnh hưởng, viền áp xe & mủ", "Ax T1W, Ax & Cor T2 FS, DWI/ADC", "Ax & Cor T1 FS + C (xóa mỡ bắt buộc)", "Ổ mủ hạn chế khuếch tán mạnh; viền ngấm thuốc dày"],
+          ["U tuyến nước bọt (mang tai, dưới hàm)", "Phân biệt u lành (Pleomorphic, Warthin) vs ác (Mucoepidermoid, Adenoid Cystic)", "Ax/Cor T1W, T2W, T2 FS mỏng 3 mm, DWI/ADC", "Dynamic T1 3D e-THRIVE (5–6 thì) & T1 FS + C 3 mặt phẳng", "Warthin ADC rất thấp, wash-out sớm; adenoma ADC cao; u ác ngấm không đều"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Mục đích"],
+        rows: [
+          ["Axial T1 TSE", "Axial", "500 / 10", "3.5mm/10% · 230–250", "Giải phẫu tủy xương nền sọ & mỡ khoang quanh họng"],
+          ["Axial T2 FS", "Axial", "3800 / 80", "3.5mm/10% · 230–250", "Xóa mỡ bộc lộ u, phù nề & hạch cổ sâu"],
+          ["Axial DWI", "Axial", "3200 / 70", "3.5mm/10% · 230–250", "b0, b500, b1000 + ADC phân biệt lành vs ác"],
+          ["Axial T1 FS + C", "Axial", "550 / 10", "3.5mm/10% · 230–250", "BẮT BUỘC xóa mỡ, từ nền sọ xuống quai ĐMC"],
+          ["Cor/Sag T1 FS + C", "Cor/Sag", "550 / 10", "3.5mm/10% · 230–250", "Đánh giá lan rộng chiều dọc nền sọ & hạ họng"]
+        ]
+      }},
       { tieuDe: "Lưu ý", items: [
-        "Thụt tháo làm sạch trực tràng, nhịn tiểu vừa phải để giảm nhiễu nhu động & co thắt bàng quang."
+        "Nếu T1 FS bị xảo ảnh do không đồng nhất từ trường (bề mặt cổ không phẳng), chuyển sang STIR hoặc T1 Dixon.",
+        "Luôn đối chiếu T1 FS trước và sau tiêm để khẳng định tổn thương thực sự bắt thuốc."
+      ]},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
-    id: "mri-ref-gan-dong-hoc",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "MRI gan mật động học — protocol",
-    tuKhoa: ["gan dong hoc", "liver", "hcc", "li-rads", "dixon", "primovist", "vibe", "lava"],
+    id: "mri-matco-hoc-mat",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
+    ten: "MRI hốc mắt (orbit)",
+    tuKhoa: ["hoc mat", "orbit", "u hoc mat", "viem hoc mat", "mat giap trang", "graves", "day than kinh thi", "co van nhan", "t1 fs"],
     thongSo: [
-      { ten: "Định vị & khảo sát", giaTri: "T2W SS-FSE/HASTE Ax&Cor (nín thở); DWI b=50/400/800" },
-      { ten: "Dixon In/Out-phase", giaTri: "TE 1,2 & 2,4 ms (ở 3T) — phát hiện nhiễm mỡ" },
-      { ten: "3D T1 GRE FatSat (VIBE/LAVA) động học", giaTri: "ĐM muộn 35s · TM cửa 70s · cân bằng 3 phút" },
-      { ten: "Pha gan mật", giaTri: "20 phút với thuốc đặc hiệu (Primovist) — tìm vi di căn" }
+      { ten: "Cuộn thu (Coil)", giaTri: "Head / Head-Neck Array Coil" },
+      { ten: "Mặt cắt chủ lực", giaTri: "Axial & Coronal T2 FS / STIR mỏng 3 mm theo trục dây thần kinh thị" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg; T1 FS + C BẮT BUỘC (xóa mỡ hốc mắt)" },
+      { ten: "Máy", giaTri: "1.5T Philips" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định", items: [
-        "Tầm soát/phân loại u gan (HCC, hemangioma, FNH, adenoma), xơ gan, nhiễm sắt/mỡ, theo dõi sau TACE/RFA."
+        "U hốc mắt, viêm hốc mắt (viêm giả u, viêm mô tế bào).",
+        "Bệnh mắt giáp trạng (Graves) — dày các cơ vận nhãn.",
+        "Tổn thương dây thần kinh thị (viêm, u thần kinh thị)."
       ]},
+      { tieuDe: "Chuỗi xung", items: [
+        "Axial T1W, T2W đánh giá giải phẫu & hình thái tổn thương.",
+        "Axial & Coronal T2 FS / STIR mỏng 3 mm, đặt theo trục dây thần kinh thị.",
+        "Xóa mỡ bắt buộc để bộc lộ tổn thương trong hốc mắt nhiều mỡ."
+      ]},
+      { tieuDe: "Tiêm thuốc (+C)", items: [
+        "Axial, Coronal & Sagittal Oblique T1 FS + C (bắt buộc Fat Sat).",
+        "T1 FS + C xóa hoàn toàn mỡ hốc mắt, nổi bật ngấm thuốc dây thần kinh thị & cơ vận nhãn."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Mục đích"],
+        rows: [
+          ["Coronal T2 FS", "Coronal", "3500 / 80", "3.0mm/0% · 180–200", "Vuông góc dây TK thị, xóa mỡ hốc mắt"],
+          ["T1 FS + C (Ax/Cor/Sag-Obl)", "3 mặt phẳng", "550 / 10", "3.5mm · 230–250", "Bắt buộc xóa mỡ; nổi bật ngấm thuốc TK thị & cơ vận nhãn"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-matco-day-tk-so",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
+    ten: "MRI dây thần kinh sọ (góc cầu tiểu não – CPA)",
+    tuKhoa: ["day than kinh so", "cpa", "goc cau tieu nao", "u day than kinh", "acoustic neuroma", "schwannoma", "day v", "day vii", "day viii", "3d ciss", "fiesta", "drive", "xung dot than kinh mach mau"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Head Array Coil" },
+      { ten: "Chuỗi xung chủ lực", giaTri: "3D CISS / FIESTA / DRIVE cắt mỏng đẳng hướng 0.6–0.7 mm qua ngách xương đá" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg; 3D T1 FS + C (3D e-THRIVE / MP-RAGE) cắt mỏng hố sau" },
+      { ten: "Máy", giaTri: "1.5T Philips" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "U dây thần kinh V, VIII (acoustic neuroma / schwannoma).",
+        "Xung đột thần kinh – mạch máu (đau dây V, co giật nửa mặt).",
+        "Khảo sát dây thần kinh sọ trong góc cầu tiểu não (CPA) & ống tai trong."
+      ]},
+      { tieuDe: "Chuỗi xung", items: [
+        "Axial T1W, T2W nền.",
+        "3D CISS / FIESTA / DRIVE cắt mỏng đẳng hướng 0.6 mm qua ngách xương đá — bộc lộ ranh giới dây thần kinh trong dịch não tủy.",
+        "Sau tiêm: 3D T1 FS + C (3D e-THRIVE / MP-RAGE) cắt mỏng hố sau — u ngấm thuốc rõ."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Mục đích"],
+        rows: [
+          ["3D DRIVE / CISS", "Axial 3D", "1500 / 200", "0.7mm/0% · 180–200", "Dựng 3D khảo sát dây VII, VIII trong góc cầu tiểu não"],
+          ["3D T1 FS + C", "3D hố sau", "e-THRIVE / MP-RAGE", "~1.5mm · hố sau", "U dây thần kinh ngấm thuốc (acoustic neuroma)"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+
+  /* ============================================================ */
+  /* MRI — CHẬU (phụ khoa nữ; các mục khác chờ tài liệu)                       */
+  /* Nguồn: Protocol MRI chậu nữ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL.  */
+  /* ============================================================ */
+  {
+    id: "mri-chau-phu-khoa-nu",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
+    ten: "MRI chậu – phụ khoa nữ",
+    tuKhoa: ["chau nu", "phu khoa", "female pelvis", "u xo tu cung", "adenomyosis", "lac noi mac", "endometriosis", "die", "u buong trung", "o-rads", "ung thu co tu cung", "ung thu niem mac tu cung", "junctional zone"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Sense Torso Coil, phủ từ mào chậu xuống hết khớp mu & tầng sinh môn" },
+      { ten: "Chuẩn bị", giaTri: "Nhịn ăn 4–6 giờ · Buscopan 20 mg (IM/IV chậm) chống co thắt ruột" },
+      { ten: "Bàng quang", giaTri: "Chứa nước tiểu vừa phải (đi tiểu hết trước chụp 30–60 phút)" },
+      { ten: "Mặt phẳng T2 High-Res", giaTri: "Sagittal (trục dọc TC) · Axial-Obl (vuông góc TC/CTC) · Coronal-Obl (song song TC)" },
+      { ten: "Tiêm thuốc", giaTri: "Dynamic 3D T1 FS khi nghi ác tính / DIE (thì cơ tử cung ~50–60s)" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "U xơ tử cung & adenomyosis.",
+        "Lạc nội mạc tử cung (endometriosis & lạc nội mạc sâu – DIE).",
+        "Khối u buồng trứng (phân loại O-RADS MRI).",
+        "Ung thư cổ tử cung & ung thư niêm mạc tử cung (chẩn đoán giai đoạn)."
+      ]},
+      { tieuDe: "Chuẩn bị bệnh nhân", items: [
+        "Nhịn ăn 4–6 giờ để ruột trống, giảm nhu động quai ruột.",
+        "Tiêm Buscopan 20 mg (IM hoặc IV chậm) ngay trước chụp triệt nhiễu nhu động ruột.",
+        "Bàng quang chứa vừa phải: quá căng đẩy tử cung ra sau gây méo giải phẫu, quá trống làm gấp khúc tử cung.",
+        "Tùy chọn: bơm 50–100 ml gel siêu âm vào âm đạo / trực tràng trong khảo sát DIE để bộc lộ nốt thâm nhiễm."
+      ]},
+      { tieuDe: "Bộ chuỗi xung cốt lõi & vai trò", bang: {
+        cols: ["Chuỗi xung cốt lõi", "Quy cách đặt mặt cắt", "Ứng dụng & giá trị chẩn đoán"],
+        rows: [
+          ["T2W TSE High-Res (Sag · Ax-Obl · Cor-Obl)", "Sag: trục dọc TC; Ax-Obl: vuông góc TC/CTC; Cor-Obl: song song TC", "Bộc lộ 3 lớp giải phẫu TC (nội mạc · JZ · cơ TC); xâm lấn parametrium & dị dạng TC"],
+          ["T1W TSE & T1 Fat Sat", "Axial & Sagittal phủ toàn tiểu khung; đối chiếu T1 thường & T1 FS", "Phân biệt endometrioma (T1 sáng, FS vẫn sáng) vs teratoma (T1 sáng, FS xóa đen); máu cũ & vi xuất huyết nốt DIE"],
+          ["DWI & ADC Map", "b0, b500, b800/1000; tái tạo ADC định lượng", "K cổ TC & K niêm mạc TC (ADC rất thấp); O-RADS u buồng trứng; hạch chậu & di căn phúc mạc"]
+        ]
+      }},
+      { tieuDe: "Quy trình tiêm thuốc tương phản (+C)", items: [
+        "KHÔNG CẦN TIÊM: u xơ tử cung thường quy (trước nội khoa / tắc mạch), adenomyosis đơn thuần, tầm soát dị dạng bẩm sinh tử cung — khảo sát đủ trên T2W High-Res 3 mặt phẳng, T1W/T1 FS và DWI/ADC.",
+        "BẮT BUỘC TIÊM (Dynamic 3D T1 FS): K cổ tử cung, K niêm mạc tử cung, u buồng trứng / cạnh tử cung nghi ác, lạc nội mạc sâu (DIE). Liều 0.1 mmol/kg Gd, bơm 1.5–2.0 ml/s.",
+        "Các thì sau tiêm: Động mạch (~25–30s) ngấm sớm/muộn của u; Cơ tử cung (~50–60s) ĐÁNH GIÁ ĐỘ SÂU XÂM LẤN CƠ TỬ CUNG; Trễ (~3–5 phút) nốt thâm nhiễm DIE & vỏ bao u."
+      ]},
+      { tieuDe: "Protocol chuyên sâu theo bệnh lý", bang: {
+        cols: ["Bệnh lý phụ khoa", "Mục tiêu chẩn đoán", "Protocol bắt buộc"],
+        rows: [
+          ["U xơ TC & Adenomyosis", "Định vị u xơ (FIGO); phân biệt u xơ vs sarcôm cơ TC; adenomyosis (JZ > 12 mm)", "T2W High-Res 3 mặt phẳng; T1W Axial; DWI/ADC"],
+          ["Lạc nội mạc (Endometriosis & DIE)", "Nang lạc nội mạc buồng trứng; nốt DIE ở dây chằng TC–trực tràng, âm đạo, bàng quang", "T1W & T1 FS; T2W mỏng 3 mm (shading sign); T1 FS + C (nốt DIE ngấm muộn)"],
+          ["U buồng trứng (O-RADS MRI)", "Phân loại lành/ác; chồi u, vách ngăn, thành phần nang", "T2W 3 mặt phẳng; T1W/T1 FS; DWI/ADC; DCE Dynamic T1 FS"],
+          ["Ung thư cổ tử cung", "Kích thước u, độ sâu xâm lấn; parametrium (FIGO IIB) & hạch chậu", "Ax-Obl T2W High-Res (vuông góc CTC); Sag T2W; DWI/ADC; Dynamic T1 FS + C"],
+          ["Ung thư niêm mạc tử cung", "Độ sâu xâm lấn cơ TC (<50% vs ≥50%); xâm lấn CTC & hạch chậu", "Ax-Obl T2W High-Res (vuông góc buồng TC); Dynamic T1 FS + C (thì cơ TC ~50–60s); DWI/ADC"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "4.0mm/10% · 220–240", "2 · 1.5"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800 / 100", "3.0–4.0mm/10% · 200–220", "2 · 1.5"],
+          ["Cor-Obl T2 High-Res", "Coronal Oblique", "3800 / 100", "3.0–4.0mm/10% · 200–220", "2 · 1.5"],
+          ["Axial T1 TSE / T1 FS", "Axial", "500 / 10", "4.0mm/10% · 220–240", "2 · 1.5"],
+          ["Axial DWI (b1000)", "Axial", "3200 / 70", "4.0mm/10% · 220–240", "3 · 1.8"],
+          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5 / 2.2", "2.0mm/0% · 240–260", "1 · 1.5"],
+          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550 / 10", "3.5mm/10% · 220–240", "2 · 1.5"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; thận trọng Buscopan ở bệnh nhân glôcôm góc đóng, bí tiểu do phì đại tiền liệt tuyến, nhịp tim nhanh."
+      ]}
+    ],
+    nguon: "Protocol MRI chậu nữ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-chau-tien-liet",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
+    ten: "MRI tiền liệt tuyến (mpMRI, PI-RADS v2.1)",
+    tuKhoa: ["tien liet tuyen", "prostate", "mpmri", "pi-rads", "pirads", "dwi", "adc", "dce", "vung ngoai vi", "pz", "vung chuyen tiep", "tz", "ung thu tien liet tuyen", "phu khoa nam"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil (tối đa SNR vùng tiểu khung)" },
+      { ten: "Chuẩn bị", giaTri: "Thụt tháo trực tràng sạch khí/phân · Buscopan 20 mg (IV/IM) · bàng quang vừa phải (tiểu hết trước 30–60 phút)" },
+      { ten: "Phân vùng giải phẫu", giaTri: "PZ ngoại vi (70–80% thể tích, 70–75% ung thư) · TZ chuyển tiếp (~20%, BPH + 20% ung thư) · CZ trung tâm · AFMS mô đệm xơ cơ trước" },
+      { ten: "Bộ xung mpMRI", giaTri: "T2W High-Res + DWI/ADC (high-b ≥ 1400) + DCE Dynamic 3D" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg (0.2 ml/kg), 2.0–3.0 ml/s; DCE ≤ 15s/thì, kéo dài > 2 phút" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Phát hiện, định vị và phân độ ung thư tiền liệt tuyến theo PI-RADS v2.1.",
+        "Đánh giá vỏ bao tuyến, xâm lấn túi tinh, cổ bàng quang và di căn hạch chậu."
+      ]},
+      { tieuDe: "Chuẩn bị bệnh nhân (4 bước)", items: [
+        "Sàng lọc an toàn: kiểm tra kim loại, máy tạo nhịp, thiết bị cấy ghép.",
+        "Chuẩn bị đường ruột: thụt tháo trực tràng sạch phân/khí (khí gây xảo ảnh nhạy từ trên DWI) + Buscopan 20 mg.",
+        "Kiểm soát bàng quang: tiểu hết trước 30–60 phút, giữ nước tiểu vừa phải.",
+        "Tư thế & coil: nằm ngửa, đệm gối thả lỏng; đặt Pelvic Phased-Array Coil."
+      ]},
+      { tieuDe: "Bộ chuỗi xung đa thông số (mpMRI) theo PI-RADS v2.1", bang: {
+        cols: ["Chuỗi xung mpMRI", "Mặt cắt & quy cách", "Thông số", "Vai trò PI-RADS v2.1"],
+        rows: [
+          ["T2W High-Res (primary TZ)", "Ax-Obl (vuông góc thành trước trực tràng cho PZ/vỏ bao; song song trục tuyến cho TZ) · Sag · Cor", "≤3mm, Gap 0%, FOV 12–20cm, 0.7×0.4mm", "QUYẾT ĐỊNH vùng chuyển tiếp (TZ); vỏ bao, phá vỡ vỏ, xâm lấn túi tinh & cổ bàng quang"],
+          ["DWI & ADC (primary PZ)", "Ax-Obl trùng hướng Axial T2W", "≤4mm, Gap 0%; b = 0, 800–1000, ≥1400 (high-b)", "QUYẾT ĐỊNH vùng ngoại vi (PZ); u ác DWI sáng rực b1400/2000, ADC tối đầm"],
+          ["DCE Dynamic 3D (+C)", "Ax-Obl phủ đáy → đỉnh tuyến", "3D T1 FS GRE, ≤15s/thì, tổng > 2 phút", "Bổ trợ tăng sinh mạch / ngấm sớm; nâng PI-RADS 3 → 4 ở PZ"],
+          ["3D Dynamic thở tự do (4D)", "Ax-Obl (thở tự do liên tục)", "Radial Stack-of-Stars, KWIC + Soft-Gating", "Cho BN không nín thở / bệnh nặng; triệt xảo ảnh thở"],
+          ["Pelvic Staging FOV lớn", "Ax T1W / T2W FOV lớn", "4–5mm, Gap 10%, FOV 28–35cm", "Di căn hạch chậu (trong/ngoài/trước xương cùng) & xương chậu"]
+        ]
+      }},
+      { tieuDe: "Quy tắc phân độ & nâng điểm PI-RADS v2.1", bang: {
+        cols: ["Vùng giải phẫu", "Chuỗi quyết định", "Quy tắc điểm", "Nâng PI-RADS 3 → 4"],
+        rows: [
+          ["Vùng ngoại vi (PZ)", "DWI / ADC", "Điểm phụ thuộc mức hạn chế khuếch tán DWI/ADC", "DWI = 3: DCE(+) ngấm sớm khu trú → PI-RADS 4; DCE(−) → giữ 3"],
+          ["Vùng chuyển tiếp (TZ)", "T2W High-Res", "Điểm phụ thuộc hình thái tổn thương trên T2W", "T2W = 3: DWI = 5 (sáng rực / ADC tối > 1.5cm) → PI-RADS 4; DWI < 5 → giữ 3"]
+        ]
+      }},
+      { tieuDe: "Khắc phục xảo ảnh phòng máy (PI-QUAL)", bang: {
+        cols: ["Xảo ảnh", "Dấu hiệu", "Giải pháp tại phòng máy"],
+        rows: [
+          ["Motion (ruột/thở)", "Ghosting, mờ nhòe", "Thụt tháo + Buscopan 20 mg; chuyển 4D FreeBreathing Radial"],
+          ["Susceptibility (khí/kim loại)", "Méo hình, hố đen (> 5mm)", "Thụt sạch khí; đổi hướng mã hóa pha; tăng Receiver Bandwidth"],
+          ["Chemical Shift", "Viền sáng/tối ranh giới mỡ–nước", "Tăng Receiver Bandwidth; tối ưu xóa mỡ"],
+          ["Aliasing (cuộn hình)", "Hình cuộn chồng lấp nhu mô", "Tăng FOV (12–20cm); tăng ma trận"],
+          ["Low SNR", "Nhiễu hạt (grainy)", "Dùng Pelvic Phased-Array Coil; tăng TR / voxel / NSA"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Lát/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["Pelvis Sag T2 TSE", "Sagittal", "3500 / 100", "3.0mm/0% · 200–220", "2 · 1.5"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800 / 100", "3.0mm/0% · 180–200", "2 · 1.5"],
+          ["Cor T2 High-Res", "Coronal", "3500 / 100", "3.0mm/0% · 180–200", "2 · 1.5"],
+          ["Ax DWI (b0/800/1400–2000)", "Axial Oblique", "3200 / 70", "3.0–4.0mm/0% · 180–220", "3 · 1.8"],
+          ["DCE Dynamic 3D (≤15s/thì)", "Axial", "4.2 / 2.1", "2.0mm/0% · 200–220", "1 · 1.5"],
+          ["Pelvis Staging Ax T1/T2", "Axial", "550 / 10", "4.0–5.0mm/10% · 280–350", "2 · 1.5"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI; thận trọng Buscopan (glôcôm góc đóng, bí tiểu, nhịp nhanh)."
+      ]}
+    ],
+    nguon: "Protocol MRI tiền liệt tuyến mpMRI (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-chau-ro-hau-mon",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
+    ten: "MRI đường rò & áp xe hậu môn",
+    tuKhoa: ["ro hau mon", "duong ro hau mon", "ap xe hau mon", "anal fistula", "perianal abscess", "parks", "co that", "tang sinh mon", "stir", "t1 fs", "co nang hau mon"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil, phủ từ mào chậu đến tầng sinh môn" },
+      { ten: "Chuẩn bị", giaTri: "Nhịn ăn 4–6 giờ · BẮT BUỘC thụt tháo trực tràng 1–2 giờ trước chụp · Buscopan 20 mg" },
+      { ten: "Mặt cắt chủ lực", giaTri: "Ax-Obl (vuông góc trục ống hậu môn) & Cor-Obl (song song trục ống hậu môn)" },
+      { ten: "Tiêm thuốc", giaTri: "BẮT BUỘC T1 FS + C (xóa mỡ) 3 mặt phẳng; Gd 0.1 mmol/kg, 1.5–2.0 ml/s" },
+      { ten: "Máy", giaTri: "1.5T Philips" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Đường rò hậu môn (phân loại theo Parks): bộc lộ lỗ rò trong/ngoài, nhánh phụ, liên quan phức hợp cơ thắt.",
+        "Áp xe hậu môn / quanh hậu môn: định vị ổ mủ, viền áp xe.",
+        "MRI là 'chuẩn vàng' nhờ độ phân giải mô mềm cao đánh giá tương quan tổn thương với cơ thắt & cơ nâng hậu môn."
+      ]},
+      { tieuDe: "Chuẩn bị bệnh nhân", items: [
+        "Nhịn ăn 4–6 giờ; BẮT BUỘC thụt tháo sạch trực tràng 1–2 giờ trước chụp (loại phân & khí → triệt xảo ảnh nhạy từ).",
+        "Tiêm Buscopan 20 mg (bắp/IV) giảm nhu động ruột.",
+        "Nằm ngửa duỗi chân (hoặc nằm sấp); Pelvic Phased-Array Coil."
+      ]},
+      { tieuDe: "Chuỗi xung & quy cách đặt lát", items: [
+        "Ax-Obl & Cor-Obl T2 FS / STIR (≤3 mm): làm phát sáng dải rò và ổ mủ ẩn.",
+        "Ax-Obl & Cor-Obl T2W High-Res: bộc lộ 4 lớp cơ thắt, lỗ rò trong/ngoài, nhánh phụ.",
+        "Ax-Obl đặt VUÔNG GÓC trục ống hậu môn; Cor-Obl SONG SONG trục ống hậu môn (đánh giá liên quan cơ nâng hậu môn).",
+        "Sagittal T2W làm localizer định vị góc nghiêng ống hậu môn."
+      ]},
+      { tieuDe: "Quy trình tiêm thuốc (+C) & dấu hiệu", items: [
+        "BẮT BUỘC TIÊM: Gd 0.1 mmol/kg, 1.5–2.0 ml/s; chụp T1 FS + C (xóa mỡ) 3 mặt phẳng.",
+        "Rò hoạt động: thành rò ngấm thuốc mạnh rực rỡ.",
+        "Ổ áp xe: viền vỏ bao ngấm thuốc dày, trung tâm mủ không ngấm.",
+        "Rò xơ hóa cũ: hoàn toàn KHÔNG ngấm thuốc."
+      ]},
+      { tieuDe: "Phân loại đường rò hậu môn theo Parks", bang: {
+        cols: ["Loại rò (Parks)", "Tỷ lệ", "Đặc điểm trên MRI"],
+        rows: [
+          ["Gian cơ thắt (Intersphincteric)", "~70%", "Đường rò đi trong khoang gian cơ thắt"],
+          ["Qua cơ thắt (Transsphincteric)", "~25%", "Xuyên qua cả cơ thắt trong và cơ thắt ngoài"],
+          ["Trên cơ thắt (Suprasphincteric)", "~5%", "Lên trên cơ nâng hậu môn rồi vòng xuống khoang ngồi–trực tràng"],
+          ["Ngoài cơ thắt (Extrasphincteric)", "~1%", "Từ trực tràng xuyên qua cơ nâng hậu môn ra da"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Ghi chú"],
+        rows: [
+          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "3.5mm/10% · 220–240", "Định vị góc nghiêng ống hậu môn"],
+          ["Ax-Obl T2 FS High-Res", "Axial Oblique", "3800 / 80", "3.0mm/0% · 180–200", "Vuông góc trục ống hậu môn"],
+          ["Cor-Obl T2 FS High-Res", "Coronal Oblique", "3800 / 80", "3.0mm/0% · 180–200", "Song song trục ống hậu môn"],
+          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550 / 10", "3.0mm/0% · 180–200", "BẮT BUỘC xóa mỡ sau tiêm"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI đường rò hậu môn & ung thư trực tràng (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-chau-ung-thu-truc-trang",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
+    ten: "MRI ung thư trực tràng (chẩn đoán giai đoạn)",
+    tuKhoa: ["ung thu truc trang", "rectal cancer", "dai trang doan thap", "t-staging", "t-stage", "mrf", "crm", "ncrt", "mac treo truc trang", "dwi", "gel truc trang"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil, phủ mào chậu → tầng sinh môn" },
+      { ten: "Chuẩn bị", giaTri: "Nhịn ăn · thụt tháo trực tràng · Buscopan 20 mg · bơm 50–100 ml gel siêu âm ấm vào trực tràng (làm căng lòng, bộc lộ bề dày u)" },
+      { ten: "Mặt cắt quyết định", giaTri: "Axial-Obl T2W High-Res VUÔNG GÓC thành trực tràng tại u (quyết định T-stage) + Sagittal định vị u + Cor-Obl (u thấp)" },
+      { ten: "Tiêm thuốc", giaTri: "KHÔNG tiêm thường quy (ESUR/ESMO); chỉ tiêm khi nghi tái phát, đánh giá NCRT hoặc xâm lấn bàng quang" },
+      { ten: "Máy", giaTri: "1.5T Philips" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Chẩn đoán giai đoạn ung thư trực tràng (T-stage, mạc treo trực tràng MRF, bờ cắt phẫu thuật CRM).",
+        "Tầm soát hạch di căn mạc treo & tiểu khung.",
+        "Đánh giá đáp ứng sau hóa xạ trị tiền phẫu (NCRT) — phân biệt u tồn dư với xơ hóa."
+      ]},
+      { tieuDe: "Chuẩn bị bệnh nhân", items: [
+        "Nhịn ăn 4–6 giờ; thụt tháo sạch trực tràng; Buscopan 20 mg giảm nhu động.",
+        "Bơm 50–100 ml gel siêu âm ấm vào trực tràng làm căng lòng, bộc lộ rõ bề dày u và độ xâm lấn."
+      ]},
+      { tieuDe: "Chuỗi xung & quy cách đặt lát", items: [
+        "Sagittal T2W High-Res: xác định vị trí u (thấp / giữa / cao).",
+        "Axial Oblique T2W High-Res (≤3 mm, FOV nhỏ): cắt VUÔNG GÓC thành trực tràng tại u — xung QUYẾT ĐỊNH T-stage, đánh giá phá vỡ lớp cơ, xâm lấn MRF & CRM.",
+        "Coronal Oblique T2W cho u thấp.",
+        "Axial DWI (b0, b800, b1000/1400) + ADC: hạch di căn mạc treo & đánh giá đáp ứng NCRT."
+      ]},
+      { tieuDe: "Quy định tiêm thuốc (+C)", items: [
+        "KHÔNG tiêm thường quy (theo ESUR/ESMO): T2W High-Res & DWI đạt độ chính xác > 90% T-stage.",
+        "Tiêm thường quy dễ gây ngấm thuốc mô viêm → đánh giá quá mức giai đoạn (overstaging).",
+        "Chỉ tiêm khi: nghi u tái phát, đánh giá sau NCRT, hoặc nghi xâm lấn bàng quang."
+      ]},
+      { tieuDe: "Phân độ T-staging ung thư trực tràng trên MRI", bang: {
+        cols: ["Giai đoạn", "Đặc điểm hình ảnh MRI"],
+        rows: [
+          ["T1 / T2", "Khu trú niêm mạc / lớp cơ; bờ ngoài lớp cơ láng mịn"],
+          ["T3 (a/b/c/d)", "U phá vỡ lớp cơ ăn ra mạc treo trực tràng (<1mm · 1–5mm · 5–15mm · >15mm)"],
+          ["T4a / T4b", "Ăn thủng phúc mạc tạng / xâm lấn bàng quang, tử cung, xương cùng"],
+          ["CRM (+)", "Khoảng cách ngắn nhất từ u/hạch đến mạc treo trực tràng (MRF) ≤ 1 mm"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Ghi chú"],
+        rows: [
+          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "3.5mm/10% · 220–240", "Định vị vị trí u (thấp/giữa/cao)"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "4000 / 100", "3.0mm/0% · 160–180", "Vuông góc thành trực tràng tại u — quyết định T-stage"],
+          ["Axial DWI (b0/800/1000–1400)", "Axial", "3200 / 70", "3.5mm/0% · 200–220", "Hạch di căn mạc treo; đáp ứng NCRT"],
+          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5 / 2.2", "2.0mm/0% · 220–240", "Chỉ khi nghi u tái phát / xâm lấn"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Khi có tiêm: chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI đường rò hậu môn & ung thư trực tràng (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+
+  /* ============================================================ */
+  /* MRI — CHI & CÁC KHỚP (xương-mô mềm chi + 6 khớp ngoại vi)                 */
+  /* Nguồn: Protocol MRI xương-mô mềm chi & khớp ngoại vi (1.5T Philips).      */
+  /* ============================================================ */
+  {
+    id: "mri-chi-xuong-mo-mem",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI xương & mô mềm chi",
+    tuKhoa: ["xuong chi", "mo mem chi", "canh tay", "cang tay", "dui", "cang chan", "u xuong", "osteosarcoma", "ewing", "u mo mem", "sarcoma", "lipoma", "liposarcoma", "viem xuong tuy", "ap xe", "penumbra", "skip lesion", "dce"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Torso / Dedicated Limb Coil; đặt chi ở Isocenter để xóa mỡ đều" },
+      { ten: "Đặt FOV", giaTri: "Phủ TOÀN BỘ chiều dài xương tổn thương + tối thiểu 1 khớp kề cận (phát hiện skip lesions)" },
+      { ten: "Marker", giaTri: "Dán Vitamin E / B12 lên khối u sờ thấy, điểm đau hoặc sẹo mổ cũ để định FOV chính xác" },
+      { ten: "So sánh 2 bên", giaTri: "Chụp 1 chuỗi T2 FS FOV lớn so sánh 2 bên khi u lan tỏa / phù nề rộng" },
+      { ten: "Tiêm thuốc", giaTri: "T1 FS + C 3 mặt phẳng + DCE-MRI khi nghi u / viêm / áp xe" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "U xương (osteosarcoma, Ewing sarcoma, chondrosarcoma).",
+        "U mô mềm chi (liposarcoma, synovial sarcoma, lipoma).",
+        "Viêm xương tủy cấp/mạn, áp xe mô mềm.",
+        "Đánh giá đáp ứng sau hóa trị tiền phẫu & định hướng sinh thiết (biopsy targeting)."
+      ]},
+      { tieuDe: "Nguyên tắc đặt FOV & chuẩn bị", items: [
+        "Phủ toàn bộ chiều dài xương tổn thương + 1 khớp kề cận để không bỏ sót skip lesions trong ống tủy.",
+        "Dán marker Vitamin E / B12 lên vị trí tổn thương sờ thấy / điểm đau / sẹo mổ.",
+        "So sánh 2 bên bằng 1 chuỗi T2 FS FOV lớn khi tổn thương lan tỏa.",
+        "Đặt chi cần chụp ở Isocenter; chi lệch tâm ưu tiên STIR / Dixon để xóa mỡ đều."
+      ]},
+      { tieuDe: "Bộ chuỗi xung cốt lõi & vai trò", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "Hình ảnh & vai trò chẩn đoán"],
+        rows: [
+          ["T1W TSE", "Axial / Coronal / Sagittal", "Mỡ tủy sáng, vỏ xương đen; thay thế tủy mỡ, xâm lấn tủy, mỡ gian cơ, lipoma. BẮT BUỘC ≥ 2 mặt phẳng trước tiêm."],
+          ["T2 FS / STIR", "Axial & Coronal/Sagittal", "Mỡ đen, dịch/u/phù sáng rực; u, phù tủy xương, phù mô mềm, phản ứng màng xương, tràn dịch khớp."],
+          ["PD FS", "Axial / Coronal", "Tương phản cao sụn–gân–dịch; tổn thương sụn khớp kề cận, gân bám tận, mạc sâu gian cơ."],
+          ["DWI & ADC", "Axial", "U lành vs ác (sarcoma); áp xe hoại tử (ADC rất thấp) vs u hoại tử. b = 0, 500, 800/1000."],
+          ["T2* mFFE / GE", "Axial", "Hemosiderin / vôi hóa đen tụ; vi xuất huyết, vôi hóa trong u, GCTTS, PVNS."]
+        ]
+      }},
+      { tieuDe: "Quy trình tiêm thuốc (+C) & DCE-MRI", items: [
+        "KHÔNG CẦN TIÊM: lipoma lành điển hình, nang xương/nang hoạt dịch lành, dập cơ/tụ máu giai đoạn rõ, gãy xương cấp không nghi u — chụp đủ T1W, T2 FS/STIR, PD FS.",
+        "BẮT BUỘC TIÊM (IV Gd): nghi u xương, u mô mềm, viêm xương tủy, áp xe mô mềm (Penumbra sign), đánh giá đáp ứng hóa trị.",
+        "Kỹ thuật: T1 FS + C (xóa mỡ) 3 mặt phẳng + T1 3D e-THRIVE Dynamic (DCE 5–6 thì) + ảnh trừ (subtracted) khẳng định ngấm thuốc."
+      ]},
+      { tieuDe: "Protocol nâng cao theo bệnh lý", bang: {
+        cols: ["Bệnh lý", "Chuỗi xung", "Mục tiêu chẩn đoán"],
+        rows: [
+          ["U xương ác (Osteosarcoma, Ewing)", "T1W toàn bộ chiều dài xương, T2 FS Ax & Cor, DWI/ADC, T1 FS + C 3 mặt phẳng", "Lan rộng trong tủy (skip lesions), phá hủy vỏ, phản ứng màng xương (Codman, sunburst), u mô mềm ngoài xương, xâm lấn bó mạch TK / khớp"],
+          ["U mô mềm (Sarcoma vs Lipoma)", "T1W, T2 FS, DWI/ADC, DCE-MRI, T1 FS + C", "Lipoma lành (xóa đen hoàn toàn T1 FS, không ngấm) vs liposarcoma (vách dày > 3mm ngấm, thành phần đặc); tương quan mạc sâu & bó mạch TK"],
+          ["Viêm xương tủy & áp xe mô mềm", "T1W, T2 FS/STIR, T1 FS + C 3 mặt phẳng", "Penumbra sign trên T1W; viền ngấm thuốc rực rỡ quanh ổ mủ không ngấm"]
+        ]
+      }},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["T1W TSE", "Axial / Coronal", "450 / 10", "4.0mm/10% · 180–350", "2 · 1.5"],
+          ["T2W FS", "Axial / Coronal", "3800 / 80", "4.0mm/10% · 180–350", "2 · 1.5"],
+          ["STIR (chi lệch tâm, TI 150)", "Coronal / Sagittal", "3800 / 60", "4.0mm/10% · 220–400", "2 · 1.5"],
+          ["PD FS", "Axial / Coronal", "2800 / 30", "3.5mm/10% · 160–240", "2 · 1.5"],
+          ["Axial DWI", "Axial", "3200 / 70", "4.0mm/10% · 180–350", "3 · 1.8"],
+          ["T1 FS + C", "3 mặt phẳng", "550 / 10", "4.0mm/10% · 180–350", "2 · 1.5"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI xương & mô mềm chi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-vai",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp vai",
+    tuKhoa: ["khop vai", "shoulder", "chop xoay", "gan tren gai", "sun vien", "o chao", "slap", "bankart", "mr arthrography", "ctm"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Shoulder Dedicated Coil" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, tay duỗi sát thân, xoay ngoài nhẹ (ngửa lòng bàn tay nhẹ)" },
+      { ten: "Hướng mặt cắt", giaTri: "Cor-Obl (song song gân trên gai) · Sag-Obl (vuông góc gân trên gai) · Ax-Obl (vuông góc ổ chảo)" },
+      { ten: "FOV", giaTri: "160–180 mm, độ phân giải cao" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Rách gân chóp xoay (rotator cuff).",
+        "Rách sụn viền ổ chảo: SLAP, Bankart; mất vững khớp vai."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "Chuỗi xung chuẩn: PD FS (chuẩn vàng), T1 TSE, 3D FFE (sụn viền / sụn khớp).",
+        "KHÔNG tiêm cho rách chóp xoay thoái hóa thường quy.",
+        "Direct MR Arthrography (CTM) khi nghi rách sụn viền SLAP / Bankart mạn tính: tiêm 10–15 ml Gd pha loãng (2 mmol/L) vào ổ khớp dưới hướng dẫn siêu âm / DSA, chụp T1 FS 3 mặt phẳng trong 30 phút."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["PD FS Cor-Obl", "Coronal Oblique", "2800 / 30", "3.0mm/10% · 160–180", "2 · 1.5"],
+          ["T1 TSE Cor-Obl", "Coronal Oblique", "500 / 10", "3.0mm/10% · 160–180", "2 · Off"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-goi",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp gối",
+    tuKhoa: ["khop goi", "knee", "acl", "day chang cheo truoc", "pcl", "sun chem", "meniscus", "sun khop", "dess", "medic"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Knee Dedicated Coil" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa, chân vào trước, gấp nhẹ gối 5–10° để làm căng dây chằng chéo trước (ACL)" },
+      { ten: "Hướng mặt cắt", giaTri: "Sag-Obl (song song ACL) · Coronal (song song đường nối 2 lồi cầu đùi) · Axial (mặt khớp bánh chè – đùi)" },
+      { ten: "FOV", giaTri: "150–160 mm" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Đứt dây chằng chéo trước / sau (ACL / PCL).",
+        "Rách sụn chêm (meniscus); tổn thương sụn khớp."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "PD FS 3 mặt phẳng (chuẩn vàng), T1 TSE Coronal, 3D DESS / MEDIC đánh giá bản đồ sụn khớp.",
+        "KHÔNG tiêm cho chấn thương thể thao thường quy; IV Gd khi nghi u / viêm / nhiễm trùng sau mổ tái tạo dây chằng."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["PD FS Sag-Obl", "Sagittal Oblique", "2800 / 30", "3.0mm/10% · 150–160", "2 · 1.5"],
+          ["PD FS Coronal", "Coronal", "2800 / 30", "3.0mm/10% · 150–160", "2 · 1.5"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-hang",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp háng",
+    tuKhoa: ["khop hang", "hip", "avn", "hoai tu vo mach", "chom xuong dui", "gay co xuong dui", "fai", "va cham hang o coi", "sun vien o coi"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Body/Pelvic Array (tầm soát 2 bên) + Surface Coil (khu trú 1 bên)" },
+      { ten: "Protocol 2 bước", giaTri: "Tầm soát 2 bên (Coronal STIR/T1, FOV 360–400 mm) + Khu trú 1 bên (Sag/Cor/Ax Oblique, FOV 180–200 mm, song song cổ đùi)" },
+      { ten: "FOV", giaTri: "2 bên 360–400 mm · 1 bên 180–200 mm" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Hoại tử vô mạch chỏm xương đùi (AVN) — nhạy nhất.",
+        "Gãy cổ xương đùi kín; hội chứng va chạm háng – ổ cối (FAI); rách sụn viền ổ cối."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "Tầm soát 2 bên Coronal STIR/T1; khu trú 1 bên PD FS / T1 Oblique song song cổ đùi.",
+        "Direct MR Arthrography (CTM) khi nghi rách sụn viền ổ cối (FAI) trên phim thường."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["Coronal STIR (2 bên)", "Coronal", "3800 / 60 / 150", "4.0mm/10% · 360–400", "2 · 1.8"],
+          ["PD FS Ax-Obl (1 bên)", "Axial Oblique", "2800 / 30 / –", "3.0mm/10% · 180–200", "2 · 1.5"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-khuyu",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp khuỷu tay",
+    tuKhoa: ["khop khuyu", "elbow", "tennis elbow", "golfer elbow", "viem loi cau", "gan nhi dau", "superman"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Elbow / Surface Coil" },
+      { ten: "Tư thế", giaTri: "Nằm ngửa tay duỗi sát thân, hoặc nằm sấp giơ tay qua đầu (tư thế 'Superman')" },
+      { ten: "Hướng mặt cắt", giaTri: "Cor-Obl (song song 2 lồi cầu cánh tay) · Ax-Obl · Sagittal" },
+      { ten: "FOV", giaTri: "120–140 mm" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Tennis elbow (viêm lồi cầu ngoài), Golfer's elbow (viêm lồi cầu trong).",
+        "Đứt gân cơ nhị đầu đầu xa."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "PD FS (chuẩn vàng), T1 TSE; 3D FFE khi cần đánh giá sụn.",
+        "KHÔNG tiêm cho viêm gân / chấn thương thường quy; IV Gd khi nghi u / viêm / áp xe."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["PD FS Cor-Obl", "Coronal Oblique", "2500 / 30", "3.0mm/10% · 120–140", "2 · Off"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-co-tay",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp cổ tay",
+    tuKhoa: ["khop co tay", "wrist", "tfcc", "sun soi tam giac", "day chang thuyen nguyet", "hoai tu xuong thuyen", "kienbock", "xuong nguyet"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Wrist Dedicated Coil" },
+      { ten: "Hướng mặt cắt", giaTri: "Coronal (song song mỏm trâm quay – mỏm trâm trụ) · Axial · Sagittal" },
+      { ten: "FOV", giaTri: "100–120 mm, độ phân giải rất cao" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Phức hợp sụn sợi tam giác (TFCC); rách dây chằng thuyền – nguyệt.",
+        "Hoại tử xương thuyền (AVN); bệnh Kienböck (hoại tử xương nguyệt)."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "PD FS (chuẩn vàng), T1 TSE; 3D FFE đánh giá dây chằng & sụn.",
+        "Direct MR Arthrography khi nghi rách TFCC / dây chằng nội tại; IV Gd khi nghi u / viêm."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["PD FS Coronal", "Coronal", "2500 / 30", "2.5mm/0% · 100–120", "2 · Off"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-khop-co-chan",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
+    ten: "MRI khớp cổ chân",
+    tuKhoa: ["khop co chan", "ankle", "gan achilles", "day chang sen mac", "got mac", "can ban chan", "vom sen", "olt"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Ankle / Foot Dedicated Coil" },
+      { ten: "Tư thế", giaTri: "Cổ chân vuông góc 90° so với cẳng chân" },
+      { ten: "Hướng mặt cắt", giaTri: "Sagittal · Ax-Obl · Cor-Obl" },
+      { ten: "FOV", giaTri: "140–160 mm" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định & bệnh lý thường gặp", items: [
+        "Rách / viêm gân Achilles; dây chằng sên – mác trước/sau, gót – mác.",
+        "Viêm cân bàn chân; tổn thương sụn vòm sên (OLT)."
+      ]},
+      { tieuDe: "Chuỗi xung & tiêm thuốc", items: [
+        "PD FS (chuẩn vàng), T1 TSE; STIR khi cổ chân lệch tâm Isocenter.",
+        "KHÔNG tiêm cho chấn thương gân / dây chằng thường quy; IV Gd khi nghi u / viêm / áp xe."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "NSA · SENSE"],
+        rows: [
+          ["PD FS Sagittal", "Sagittal", "2600 / 30", "3.0mm/10% · 140–160", "2 · 1.5"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+
+  /* ============================================================ */
+  /* MRI — VÚ (động học DCE BI-RADS · kiểm tra túi ngực silicone)              */
+  /* Nguồn: Protocol MRI vú & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL.       */
+  /* ============================================================ */
+  {
+    id: "mri-vu-dong-hoc",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Vú",
+    ten: "MRI động học tuyến vú (DCE-MRI, BI-RADS)",
+    tuKhoa: ["vu", "tuyen vu", "breast", "dce-mri", "dce", "dynamic", "bi-rads", "birads", "duong cong dong hoc", "kinetic", "ung thu vu", "idc", "ilc", "dcis", "subtraction", "mip", "prone"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Breast Dedicated Phased-Array Coil (7–16 kênh) — không dùng coil bề mặt thường" },
+      { ten: "Tư thế", giaTri: "Nằm sấp (prone), 2 bầu vú buông thõng tự do vào 2 hố thu của coil" },
+      { ten: "Thời điểm vàng", giaTri: "Chưa mãn kinh: ngày 7–14 chu kỳ (pha nang noãn, BPE thấp); mãn kinh: bất kỳ; đang HRT: ngưng 4–6 tuần" },
+      { ten: "DCE Dynamic", giaTri: "3D T1 FS GRE (mTHRIVE/e-THRIVE/VIBE) ≤1.5–2.0 mm; 1 Native + 5–6 thì, 60s/thì, tổng 6–7 phút" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg, 2.0 ml/s (bơm đôi), đuổi 20 ml NaCl; khởi chạy Dynamic đồng thời bơm thuốc" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Phát hiện & chẩn đoán ung thư vú (độ nhạy > 95%); đánh giá giai đoạn trước mổ.",
+        "Tầm soát nhóm nguy cơ cao; đánh giá tổn thương khó kết luận trên nhũ ảnh / siêu âm."
+      ]},
+      { tieuDe: "Thời điểm vàng & tư thế", items: [
+        "Phụ nữ chưa mãn kinh: BẮT BUỘC chụp ngày 7–14 chu kỳ để triệt bắt thuốc nền nhu mô (BPE), tránh giả âm/dương tính.",
+        "Mãn kinh: chụp bất kỳ; đang dùng liệu pháp hormone (HRT) nên ngưng 4–6 tuần trước chụp.",
+        "Nằm sấp, 2 vú buông thõng vào hố thu; cố định nhẹ tránh ép dẹp mô vú."
+      ]},
+      { tieuDe: "Chuỗi xung hình thái không tiêm", items: [
+        "Axial T2W Fat Sat / STIR: nang vú (sáng rực), phù nề nhu mô, hạch nách, tụ dịch quanh túi ngực.",
+        "Axial T1W Non-Fat Sat: mỡ nhu mô, mỡ nội u, xuất huyết bán cấp (methemoglobin sáng T1), bao cơ ngực lớn.",
+        "Axial DWI & ADC (b0, b800/1000): u ác (IDC) hạn chế khuếch tán mạnh — DWI sáng, ADC tối < 1.0 × 10⁻³ mm²/s."
+      ]},
+      { tieuDe: "Kỹ thuật DCE 3D & ảnh trừ", items: [
+        "3D T1 FS Gradient Echo cắt mỏng đẳng hướng ≤ 1.5–2.0 mm; 1 thì Native + 5–6 thì sau tiêm (60s/thì).",
+        "Ảnh trừ (subtraction) = sau tiêm trừ trước tiêm → loại tín hiệu mỡ/tuyến, chỉ bộc lộ vùng ngấm thuốc.",
+        "Dựng hình MIP 3D xem toàn cảnh mạng mạch máu u vú."
+      ]},
+      { tieuDe: "Phân tích đường cong động học (Kinetic Curves)", bang: {
+        cols: ["Đường cong", "Đặc điểm động học", "Tỷ lệ ác tính", "Gợi ý bệnh lý"],
+        rows: [
+          ["Type 1: Persistent (tăng dần)", "Ngấm thuốc tăng dần liên tục, không có thì thải", "< 6% (thường lành)", "U xơ tuyến vú (fibroadenoma), thay đổi sợi tuyến"],
+          ["Type 2: Plateau (đi ngang)", "Ngấm nhanh thì sớm, đi ngang ổn định thì muộn", "64–70% (nghi ngờ)", "Tổn thương ranh giới, u diệp thể"],
+          ["Type 3: Washout (thải nhanh)", "Ngấm cực nhanh thì sớm, thải nhanh thì muộn", "> 85% (rất cao)", "Ung thư vú (IDC, ILC), DCIS"]
+        ]
+      }},
+      { tieuDe: "Phân loại tổn thương BI-RADS MRI", items: [
+        "Bắt thuốc dạng khối (Mass): đánh giá hình dạng (tròn/bầu dục/không đều), đường bờ (rõ/không đều/tua gai) và kiểu ngấm nội u (đồng nhất/không đồng nhất/ngấm viền).",
+        "Bắt thuốc không dạng khối (NME): phân bố dạng dải (segmental) / dạng ống (ductal) → nguy cơ ác tính cao (DCIS)."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Ghi chú"],
+        rows: [
+          ["Axial T2W Fat Sat", "Axial", "4000 / 80", "4.0mm/10% · 320–340", "Nang, phù nề, hạch nách"],
+          ["Axial T1W Non-FS", "Axial", "550 / 10", "4.0mm/10% · 320–340", "Mỡ tự nhiên, xuất huyết"],
+          ["Axial DWI (b0/800–1000)", "Axial", "3200 / 70", "4.0mm/0% · 320–340", "ADC; ác tính ADC tối < 1.0"],
+          ["DCE 3D mTHRIVE", "Axial 3D", "4.5 / 2.2", "1.5mm/0% · 320–350", "1 Native + 5–6 thì (+C), 60s/thì"],
+          ["Post-Contrast T1 FS", "Coronal", "550 / 10", "3.0mm/10% · 320–340", "BẮT BUỘC xóa mỡ, đánh giá hạch nách"]
+        ]
+      }},
+      { tieuDe: "Cảnh báo", items: [
+        "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
+      ]}
+    ],
+    nguon: "Protocol MRI vú & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-vu-tui-nguc",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Vú",
+    ten: "MRI vú kiểm tra túi ngực (silicone)",
+    tuKhoa: ["tui nguc", "implant", "silicone", "vo tui nguc", "linguine sign", "keyhole", "teardrop", "bao xo", "bia-alcl", "silicone-only", "water-only", "granuloma", "prone"],
+    thongSo: [
+      { ten: "Cuộn thu (Coil)", giaTri: "Breast Dedicated Phased-Array Coil" },
+      { ten: "Tư thế", giaTri: "Nằm sấp (prone), 2 vú buông thõng vào hố thu" },
+      { ten: "Chuỗi xung chuyên biệt", giaTri: "Silicone-only T2W (xóa nước & mỡ) · Water-only T2W (xóa silicone) · Axial T2W FSE Non-FS" },
+      { ten: "Tiêm thuốc", giaTri: "KHÔNG cần tiêm cho kiểm tra túi ngực đơn thuần" },
+      { ten: "Máy", giaTri: "1.5T Philips" }
+    ],
+    noiDung: [
+      { tieuDe: "Chỉ định", items: [
+        "Đánh giá tính toàn vẹn túi ngực silicone: vỡ trong bao, vỡ ngoài bao, bao xơ co thắt.",
+        "MRI là phương pháp chính xác nhất cho túi ngực silicone."
+      ]},
+      { tieuDe: "Chuỗi xung chuyên biệt (silicone-selective)", items: [
+        "Silicone-only T2W (xóa nước & mỡ): chỉ giữ tín hiệu silicone (sáng rực trên nền đen) — nhạy nhất phát hiện gel rò ra ngoài vỏ túi.",
+        "Water-only / Silicone-suppressed T2W: xóa silicone, giữ nước & nhu mô — phát hiện tụ dịch quanh túi, áp xe, u vú đi kèm.",
+        "Axial T2W FSE Non-Fat Sat: khảo sát vỏ bao, phân biệt nếp gấp sinh lý (radial folds) với dải vỡ vỏ túi."
+      ]},
+      { tieuDe: "Dấu hiệu vỡ túi ngực trên MRI", items: [
+        "Vỡ trong bao (intracapsular): vỏ túi rách nhưng gel còn trong bao xơ — Dấu hiệu mì Ý (Linguine sign: vỏ túi gập cuộn trôi bồng bềnh trong gel); Dấu hiệu lỗ khóa / giọt nước (Keyhole / Teardrop sign).",
+        "Vỡ ngoài bao (extracapsular): vỏ túi & bao xơ đều rách, gel thoát ra nhu mô / hạch nách / cơ ngực lớn tạo u hạt silicone (silicone granuloma)."
+      ]},
+      { tieuDe: "Quy định tiêm thuốc (+C)", items: [
+        "Kiểm tra túi ngực đơn thuần: KHÔNG CẦN TIÊM.",
+        "Chỉ tiêm khi: nghi u vú đi kèm, bao xơ co thắt viêm nghi nhiễm trùng, hoặc đánh giá u lympho liên quan túi ngực (BIA-ALCL)."
+      ]},
+      { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
+        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Dày/Gap · FOV (mm)", "Ghi chú"],
+        rows: [
+          ["Silicone-only T2W", "Axial", "4500 / 100", "4.0mm/0% · 320–340", "Xóa nước & mỡ, chỉ silicone sáng"],
+          ["Water-only T2W", "Axial", "4000 / 90", "4.0mm/0% · 320–340", "Xóa silicone, bộc lộ dịch & mô vú"],
+          ["Axial T2W FSE Non-FS", "Axial", "4000 / 80", "4.0mm/10% · 320–340", "Vỏ bao: nếp gấp sinh lý vs dải vỡ"]
+        ]
+      }}
+    ],
+    nguon: "Protocol MRI vú & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
+  },
+
+  /* ============================================================ */
+  /* MRI — AN TOÀN CỘNG HƯỞNG TỪ (MRI SAFETY, chuẩn ACR)                       */
+  /* Nguồn: Tổng hợp an toàn MRI theo ACR — Khoa CĐHA BVHVGL.                  */
+  /* ============================================================ */
+  {
+    id: "mri-at-nang-luong",
+    phanHe: "ct-mri", modality: "MRI", nhom: "An toàn MRI",
+    ten: "An toàn MRI — 3 nguồn năng lượng & 4 vùng ACR",
+    tuKhoa: ["an toan mri", "mri safety", "b0", "tu truong tinh", "gradient", "rf", "sar", "pns", "tieng on", "missile effect", "dan ban", "acr zone", "4 vung", "zone iv", "quench"],
+    thongSo: [
+      { ten: "Nguyên tắc", giaTri: "MRI KHÔNG gây nhiễm xạ, nhưng có 3 năng lượng vật lý nguy cơ: B0 · Gradient (dB/dt) · RF (B1)" },
+      { ten: "Chuẩn áp dụng", giaTri: "ACR (American College of Radiology)" }
+    ],
+    noiDung: [
+      { tieuDe: "Tổng quan", items: [
+        "Khác X-quang/CT, MRI không dùng bức xạ ion hóa — không gây nhiễm xạ.",
+        "Môi trường MRI chứa 3 dạng năng lượng có thể gây hiệu ứng sinh học nghiêm trọng: từ trường tĩnh (B0), gradient từ trường, trường điện từ vô tuyến (RF)."
+      ]},
+      { tieuDe: "Ba nguồn năng lượng vật lý & nguy cơ", bang: {
+        cols: ["Tác nhân", "Cơ chế / hiện tượng", "Nguy cơ y khoa", "Phòng ngừa & giới hạn"],
+        rows: [
+          ["Từ trường tĩnh B0 (1.0–3.0T)", "Tồn tại liên tục 24/7; lực hút vật sắt từ", "Hiệu ứng đạn bắn (xe lăn, bình oxy, kéo → đạn); momen xoắn dịch chuyển cấy ghép (clip phình mạch, van tim)", "Kiểm soát tuyệt đối kim loại vào Zone IV; nam châm thử cầm tay > 1000 Gauss; sàng lọc tiền sử cấy ghép"],
+          ["Gradient từ trường (dB/dt)", "Bật/tắt liên tục cuộn chênh từ (lực Lorentz)", "Tiếng ồn > 120 dB; kích thích thần kinh ngoại vi (PNS, châm chích/co cơ); chớp sáng (phosphenes)", "BẮT BUỘC tai nghe/nút tai giảm > 30 dB; giới hạn slew rate an toàn; khuyên không đan tay/chân"],
+          ["Trường vô tuyến RF (B1)", "Xung RF gây cộng hưởng & tích nhiệt mô", "SAR (W/kg) tăng nhiệt cơ thể (nhất là mắt & tinh hoàn); BỎNG NHIỆT do vòng lặp dòng điện", "Giới hạn SAR < 0.4 W/kg (toàn thân) hoặc < 4.0 W/kg (cục bộ); tránh vòng lặp; đệm cách ly da–da & da–máy"]
+        ]
+      }},
+      { tieuDe: "Bốn khu vực an toàn (ACR 4-Zone Model)", bang: {
+        cols: ["Phân vùng", "Định nghĩa & vị trí", "Đối tượng truy cập", "Kiểm soát an toàn"],
+        rows: [
+          ["Zone I (tự do)", "Ngoài phòng khám, hành lang chung, lối đi công cộng", "Mọi người", "Không hạn chế an toàn từ trường"],
+          ["Zone II (chuẩn bị)", "Tiếp đón, thay đồ, hỏi bệnh, khai sàng lọc", "BN & người nhà dưới giám sát nhân sự MR", "Bảng câu hỏi sàng lọc, thay trang phục, tháo kim loại"],
+          ["Zone III (hạn chế)", "Phòng điều khiển, hành lang vào phòng máy", "CHỈ nhân viên MR (cấp 1&2) + BN đã sàng lọc", "Khóa cửa tự động, biển cảnh báo, cổng từ / nam châm cầm tay"],
+          ["Zone IV (phòng nam châm)", "Nơi đặt khối nam châm (nằm trong Zone III)", "CHỈ nhân viên MR cấp 2 + BN đã kiểm tra an toàn", "Biển nguy hiểm, cảm biến oxy (Quench), hệ thống xả Heli khẩn cấp"]
+        ]
+      }}
+    ],
+    nguon: "An toàn MRI theo chuẩn ACR — Khoa CĐHA BVHVGL"
+  },
+  {
+    id: "mri-at-chong-chi-dinh",
+    phanHe: "ct-mri", modality: "MRI", nhom: "An toàn MRI",
+    ten: "An toàn MRI — chống chỉ định & sàng lọc cấy ghép",
+    tuKhoa: ["chong chi dinh", "cay ghep", "pacemaker", "may tao nhip", "icd", "oc tai", "clip phinh mach", "di vat noi nhan", "mr conditional", "mr safe", "stent", "van tim", "sang loc"],
+    thongSo: [
+      { ten: "Nguyên tắc", giaTri: "Phân 3 mức: Chống chỉ định tuyệt đối · MR Conditional (cần điều kiện) · MR Safe" }
+    ],
+    noiDung: [
+      { tieuDe: "Phân loại chống chỉ định & sàng lọc cấy ghép", bang: {
+        cols: ["Phân loại", "Thiết bị / vật thể cấy ghép", "Hướng dẫn xử lý & điều kiện"],
+        rows: [
+          ["Chống chỉ định TUYỆT ĐỐI", "Máy tạo nhịp tim không tương thích MRI; máy khử rung ICD; ốc tai điện tử; clip phình ĐM sắt từ; dị vật kim loại nội nhãn; bơm truyền tĩnh mạch cấy ghép", "HOÀN TOÀN KHÔNG cho vào Zone IV. Nguy cơ: xoắn vặn rách mạch, hỏng/tái lập trình mạch điện tử, dịch chuyển dị vật nội nhãn gây đứt TK thị / mù"],
+          ["Tương đối — MR Conditional", "Clip phình ĐM Titanium; stent, van tim nhân tạo (sau 6 tuần); khớp giả / nẹp đinh phi sắt từ; mảnh kim loại xa cơ quan quan trọng; máy tạo nhịp 'MR Conditional'", "BẮT BUỘC hồ sơ rõ: xác minh nhãn/model MR Conditional; chụp XQ/CT kiểm tra dị vật nhãn cầu trước; đánh giá lợi ích/rủi ro + đồng ý văn bản"],
+          ["MR Safe (an toàn tuyệt đối)", "Cấy ghép phi kim loại hoàn toàn (nhựa, gốm, thủy tinh, Titanium phi sắt từ)", "Chụp MRI an toàn ở mọi cường độ từ trường, không cần điều kiện hạn chế"]
+        ]
+      }},
       { tieuDe: "Lưu ý", items: [
-        "Phụ thuộc nín thở — tập trước; nếu không nín được dùng Radial K-space (StarVIBE)."
+        "Dị vật kim loại nội nhãn: BẮT BUỘC chụp X-quang / CT kiểm tra trước khi đưa vào phòng máy.",
+        "Thiết bị MR Conditional chỉ an toàn trong đúng điều kiện nhà sản xuất công bố (cường độ từ trường, giới hạn SAR, slew rate)."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "An toàn MRI theo chuẩn ACR — Khoa CĐHA BVHVGL"
   },
   {
-    id: "mri-ref-mrcp",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "MRCP — chụp đường mật tụy",
-    tuKhoa: ["mrcp", "duong mat", "soi ong mat chu", "cbd", "viem tuy", "space"],
+    id: "mri-at-bong-nhiet",
+    phanHe: "ct-mri", modality: "MRI", nhom: "An toàn MRI",
+    ten: "An toàn MRI — bỏng nhiệt RF, đối tượng đặc biệt & sự cố khẩn cấp",
+    tuKhoa: ["bong nhiet", "rf burn", "vong lap", "closed loop", "mang thai", "cho con bu", "gadolinium", "quench", "xa heli", "checklist", "call button", "mieng dan kim loai"],
     thongSo: [
-      { ten: "2D MRCP thick slab", giaTri: "Lát siêu dày 40–50mm (TR >4000, TE >600), nín thở nhiều góc quanh CBD" },
-      { ten: "3D MRCP (SPACE/VISTA)", giaTri: "Lát 1mm isotropic + Respiratory Triggering, tái tạo MIP 3D cây đường mật" }
+      { ten: "Sự cố hay gặp nhất", giaTri: "Bỏng nhiệt RF — do dây nối/cơ thể tạo vòng kín (closed loop)" }
     ],
     noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Sỏi ống mật chủ, viêm tụy cấp/mạn, u đường mật, chít hẹp đường mật, đánh giá trước ghép gan."
+      { tieuDe: "Cảnh báo — bỏng nhiệt RF", items: [
+        "Bỏng nhiệt là sự cố tổn thương phổ biến nhất trong phòng MRI.",
+        "Nguyên nhân: dòng điện cảm ứng khi dây thiết bị (SpO2, ECG, cuộn thu) hoặc phần cơ thể bệnh nhân tạo thành VÒNG KÍN — năng lượng RF tập trung tại điểm tiếp xúc gây tăng nhiệt đột ngột."
       ]},
-      { tieuDe: "Lưu ý", items: [
-        "Nhịn ăn 4–6 giờ cho túi mật căng; uống nước dứa trước 15 phút xóa tín hiệu dịch dạ dày/tá tràng.",
-        "Tiêm Gd tùy chọn khi nghi u đường mật / u đầu tụy."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-chau-nu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "MRI khung chậu nữ (phụ khoa) — protocol",
-    tuKhoa: ["chau nu", "phu khoa", "lac noi mac", "u xo tu cung", "co tu cung", "noi mac"],
-    thongSo: [
-      { ten: "T2W", giaTri: "Sagittal (FOV 240, lát 4mm) + Ax/Cor chếch theo trục buồng tử cung (lớp chuyển tiếp)" },
-      { ten: "T1W / T1 FatSat", giaTri: "T1 toàn chậu (hạch, xương); T1 FatSat phân biệt nang mỡ (teratoma) vs nang máu (lạc nội mạc)" },
-      { ten: "DCE (+Gd)", giaTri: "3D T1 GRE FatSat động học — đánh giá xâm lấn cơ tử cung trong ung thư nội mạc" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Lạc nội mạc tử cung, u xơ tử cung, ung thư cổ/nội mạc tử cung, khảo sát buồng trứng, dị dạng tử cung."
+      { tieuDe: "Quy tắc phòng ngừa bỏng nhiệt (bắt buộc)", items: [
+        "KHÔNG để dây cáp cuộn thu, SpO2, ECG tạo vòng lặp; giữ dây chạy thẳng dọc trục máy.",
+        "Đệm cách ly ≥ 0.5–1.0 cm giữa dây dẫn & da, và giữa da bệnh nhân với thành trong lỗ máy (gantry).",
+        "Chống tiếp xúc da–da: đệm xốp giữa 2 đùi, 2 gối, 2 cẳng tay; không để bệnh nhân chắp tay / khoanh chân.",
+        "Tháo bỏ miếng dán thuốc có màng kim loại (Nicotine, Nitroglycerin) — có thể gây bỏng độ 3.",
+        "Trao bóng bóp báo động (call button); dặn bệnh nhân bóp ngay khi nóng rát bất thường."
       ]},
-      { tieuDe: "Lưu ý", items: [
-        "Không nhịn tiểu quá căng cũng không tiểu cạn; cân nhắc tiêm chống co thắt ruột (Buscopan)."
+      { tieuDe: "Đối tượng đặc biệt & sự cố khẩn cấp", bang: {
+        cols: ["Đối tượng / tình huống", "Khuyến cáo (ACR)", "Xử lý lâm sàng"],
+        rows: [
+          ["BN mang thai", "An toàn ở bất kỳ giai đoạn thai kỳ nếu có chỉ định lâm sàng rõ", "Đánh giá lợi ích/rủi ro + đồng ý văn bản; HẠN CHẾ TỐI ĐA tiêm Gadolinium (qua nhau thai & nước ối)"],
+          ["Nhân viên MR mang thai", "Được tiếp tục làm việc trong môi trường MRI", "Tuyệt đối KHÔNG ở trong Zone IV khi máy đang phát xung"],
+          ["Phụ nữ cho con bú", "Gadolinium bài tiết lượng rất nhỏ vào sữa", "Vắt bỏ sữa, không cho trẻ bú trong 36–48 giờ sau tiêm thuốc"],
+          ["Cấp cứu & Quench (xả Heli)", "Cấp cứu y khoa hoặc Quench (bay hơi Heli lỏng → mất từ trường)", "Đưa BN RA KHỎI Zone IV (về Zone II/III) trước khi hồi sức; Quench: bật quạt thông gió khẩn, di tản ngay (ngạt & tăng áp chặn cửa)"]
+        ]
+      }},
+      { tieuDe: "Checklist an toàn 5 bước trước ca chụp", items: [
+        "1. Hoàn thành phiếu sàng lọc kim loại & cấy ghép cho bệnh nhân và người nhà đi cùng.",
+        "2. Thay trang phục chuyên dụng; tháo trang sức, đồng hồ, máy nhắn tin, miếng dán thuốc.",
+        "3. Kiểm tra tai nghe / nút tai chống ồn; trao bóng bóp báo động khẩn cấp.",
+        "4. Kiểm tra tư thế: đệm cách ly da–da (đùi, tay) & da–thành máy; xếp dây cáp chạy thẳng không vòng lặp.",
+        "5. Xác nhận thiết bị theo dõi sinh hiệu (SpO2, ECG) đạt chuẩn MR Conditional trước khi phát xung."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "An toàn MRI theo chuẩn ACR — Khoa CĐHA BVHVGL"
   },
+
+  /* ============================================================ */
+  /* MRI — THÔNG SỐ MRI (bảng tổng hợp ngưỡng 1.5T Philips)                    */
+  /* Nguồn: bang_thong_so_mri_15t_philips + Từ điển MRI (Thông số).           */
+  /* ============================================================ */
   {
-    id: "mri-ref-vai",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI khớp vai — protocol",
-    tuKhoa: ["vai", "shoulder", "chop xoay", "rotator cuff", "slap", "bankart", "arthrography"],
+    id: "mri-thong-so-15t",
+    phanHe: "ct-mri", modality: "MRI", nhom: "Thông số MRI",
+    ten: "Thông số MRI 1.5T Philips (TR/TE/TI, hình thái & tối ưu hóa)",
+    tuKhoa: ["thong so", "parameters", "tr", "te", "ti", "flip angle", "slice", "gap", "fov", "matrix", "nsa", "nex", "snr", "scan time", "trade-off", "toi uu", "sense", "clear", "1.5t philips"],
     thongSo: [
-      { ten: "Coronal Obl T2/PD FatSat", giaTri: "TR 3000, TE 30–40, lát 3mm, FOV 140 — song song gân trên gai (rách gân)" },
-      { ten: "Sagittal Obl + Axial FatSat", giaTri: "Tiết diện gân, cơ dưới vai; sụn viền trước/sau, gân nhị đầu" },
-      { ten: "MR Arthrography", giaTri: "Tiêm Gd loãng nội khớp — rất nhạy rách sụn viền & rách bán phần mặt khớp" }
+      { ten: "Trọng số tương phản", giaTri: "TR & TE quyết định trực tiếp T1W / T2W / PDW" },
+      { ten: "TI (Inversion Time)", giaTri: "STIR ~150 ms (xóa mỡ) · FLAIR ~2000 ms (xóa CSF) ở 1.5T" },
+      { ten: "Scan Time (2D)", giaTri: "TA = TR × Phase Matrix × NSA" },
+      { ten: "Tăng tốc", giaTri: "SENSE / CLEAR hệ số 1.5–2.0" },
+      { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
     ],
     noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Hội chứng chóp xoay, trật vai tái diễn, tổn thương sụn viền (SLAP/Bankart), viêm bao hoạt dịch, đông cứng khớp vai."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Cánh tay tư thế trung gian/xoay ngoài nhẹ; tránh xoay trong (dễ dương tính giả rách gân trên gai)."
+      { tieuDe: "Ngưỡng pulse sequence cơ bản (TR / TE / TI / Flip Angle)", bang: {
+        cols: ["Thông số", "Chuỗi xung", "Ngắn", "Trung bình", "Dài", "Ý nghĩa tương phản"],
+        rows: [
+          ["TR", "SE / FSE", "300–800 ms (thường 400–600)", "800–1500 ms", "> 2000 ms (FSE 3000–4000)", "TR ngắn → T1W; TR dài → triệt T1, mở T2W/PDW"],
+          ["TR", "GRE / FFE", "< 50 ms", "50–100 ms", "> 100–200 ms", "TR siêu ngắn + góc lật nhỏ → 3D/Dynamic nhanh"],
+          ["TE", "SE / FSE", "5–30 ms (thường 10–20)", "30–60 ms", "> 60–120 ms (thường 80–110)", "TE ngắn → T1W/PDW; TE dài → T2W (dịch/tổn thương sáng)"],
+          ["TE", "GRE / FFE", "1–5 ms", "5–10 ms", "> 10–15 ms", "TE dài GRE nhạy T2*: tìm máu, vôi hóa"],
+          ["TI", "Inversion Recovery", "100–175 ms (STIR ~150)", "300–1200 ms (MPRAGE)", "1700–2500 ms (FLAIR ~2000)", "TI ngắn (STIR) xóa mỡ; TI dài (FLAIR) xóa CSF"],
+          ["Flip Angle (α)", "Mọi chuỗi xung", "10°–30° (nhỏ)", "30°–60°", "90° (SE) / 180° (đảo)", "α < 30° duy trì từ hóa dọc, cho TR siêu ngắn GRE/FFE"]
+        ]
+      }},
+      { tieuDe: "Ngưỡng hình thái & thu nhận (Slice / Gap / FOV / Matrix / NSA)", bang: {
+        cols: ["Thông số", "Nhỏ / mỏng", "Trung bình", "Lớn / dày", "Ảnh hưởng SNR · phân giải · thời gian"],
+        rows: [
+          ["Slice Thickness", "< 1 mm (3D) / 2–3 mm (2D mỏng)", "4–6 mm (tiêu chuẩn)", "8–10 mm (toàn cảnh)", "Dày → voxel lớn, SNR cao nhưng partial volume; mỏng → chi tiết cao, SNR giảm"],
+          ["Gap / Dist Factor", "0% (3D / interleaved)", "10% (chuẩn)", "20–50% (diện rộng)", "Gap nhỏ tránh bỏ sót; 10% triệt crosstalk"],
+          ["FOV", "< 18 cm", "18–30 cm", "> 30–45 cm", "Lớn → SNR cao, vùng rộng; nhỏ → phân giải cao (cổ tay, tuyến yên, hốc mắt)"],
+          ["Matrix", "128×128 / 256×128 (thô)", "256×256 / 512×256 (chuẩn)", "512×512 (mịn)", "Mịn → phân giải cao nhưng SNR giảm, scan time tăng"],
+          ["NSA / NEX", "1 (nhanh)", "2–3 (cân bằng)", "≥ 4 (SNR tối đa)", "SNR tăng theo √NSA, triệt cử động, nhưng thời gian gấp đôi"]
+        ]
+      }},
+      { tieuDe: "Bảng cài đặt vận hành chuẩn 1.5T Philips", bang: {
+        cols: ["Chuỗi xung (Philips)", "TR / TE / TI (ms)", "Flip · Slice · Gap · FOV · NSA", "Ứng dụng lâm sàng"],
+        rows: [
+          ["T1W TSE (2D)", "450–650 / 10–15 / –", "90° · 3.0–5.0mm · 10% · 180–240 · NSA 2", "Giải phẫu não, tủy xương, cột sống, cơ xương khớp"],
+          ["T2W TSE (2D)", "3000–4000 / 80–110 / –", "90° · 3.0–5.0mm · 10% · 180–240 · NSA 2", "Bộc lộ tổn thương, DNT sáng, phù nề mô"],
+          ["PDW TSE (2D)", "1500–2500 / 15–30 / –", "90° · 3.0mm · 10% · 150–180 · NSA 2", "Sụn chêm, sụn khớp gối/vai, dây chằng"],
+          ["T2W FLAIR", "8000–9000 / 100–120 / 2000–2200", "90° · 4.0–5.0mm · 10% · 220–240 · NSA 2", "Xóa CSF, phát hiện tổn thương nhu mô não"],
+          ["STIR (T2 Fat Sat)", "3500–4000 / 60–70 / 150–165", "90° · 3.0–4.0mm · 10% · 160–380 · NSA 2", "Xóa mỡ diện rộng, phù tủy xương & viêm nhiễm"],
+          ["T2* mFFE (GRE)", "600–800 / 15–22 / –", "18°–25° · 3.0–4.0mm · 10% · 200–240 · NSA 2", "Nhạy từ: xuất huyết, vôi hóa, gai xương"],
+          ["3D e-THRIVE (T1 FS)", "4.0–5.0 / 1.8–2.3 / –", "10°–12° · 1.5–2.0mm · 0% · 240–380 · NSA 1", "Động học gan, vú, chậu sau tiêm cản quang"],
+          ["3D DRIVE / bTFE", "4.0–6.0 / 2.0–3.0 / –", "45°–60° · 0.6–1.0mm · 0% · 150–180 · NSA 2", "Dây TK sọ V/VII/VIII, cây đường mật"]
+        ]
+      }},
+      { tieuDe: "Nguyên tắc đánh đổi & tối ưu hóa hình ảnh", items: [
+        "Thời gian quét (2D): TA = TR × Phase Matrix × NSA.",
+        "Tăng SNR (ảnh mịn, bớt hạt): tăng TR, giảm TE; tăng FOV hoặc slice; tăng NSA; giảm ma trận (dùng ma trận thô).",
+        "Tăng độ phân giải không gian (thấy rõ chi tiết nhỏ): giảm FOV; giảm slice (cắt mỏng / 3D); tăng ma trận (512×512).",
+        "Rút ngắn scan time (giảm cử động): giảm TR; giảm bước mã hóa pha; NSA = 1; dùng SENSE / CLEAR hệ số 1.5–2.0."
       ]}
     ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-khuyu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI khớp khuỷu — protocol",
-    tuKhoa: ["khuyu", "elbow", "tennis elbow", "golfer", "ucl", "than kinh tru", "ocd"],
-    thongSo: [
-      { ten: "Coronal T2/PD FatSat + T1", giaTri: "TR 2500, TE 30, lát 3mm, FOV 120–140 — lồi cầu & dây chằng bên" },
-      { ten: "Axial + Sagittal FatSat", giaTri: "Thần kinh trụ rãnh ròng rọc, gân nhị đầu bám tận; khớp cánh tay-trụ" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Viêm lồi cầu ngoài (tennis)/trong (golfer), rách UCL/RCL, chèn ép thần kinh trụ, viêm sụn bóc tách (OCD)."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Có thể chụp tư thế Superman (nằm sấp, tay giơ cao) đưa khuỷu vào isocenter để FatSat đồng nhất."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-co-tay",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI cổ tay — protocol",
-    tuKhoa: ["co tay", "wrist", "ong co tay", "tfcc", "kienbock", "de quervain"],
-    thongSo: [
-      { ten: "Coronal PD FatSat + T1", giaTri: "TR 2500, TE 30, lát 2mm, FOV 80–100 — TFCC & dây chằng thuyền-nguyệt" },
-      { ten: "Ma trận", giaTri: "Rất cao (320×320 hoặc 384×384) do cấu trúc nhỏ; dùng cuộn dây chuyên dụng cổ tay" },
-      { ten: "Nâng cao", giaTri: "3D T2* GRE (vi rách TFCC); T1 sau Gd (viêm khớp dạng thấp sớm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Hội chứng ống cổ tay, rách TFCC, bệnh Kienböck, De Quervain, nang rễ thần kinh."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-ban-tay",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI bàn tay / ngón tay — protocol",
-    tuKhoa: ["ban tay", "ngon tay", "hand", "finger", "gan gap", "pulley", "glomus"],
-    thongSo: [
-      { ten: "Coronal STIR/T2 FatSat + T1", giaTri: "TR 3500, TE 40, lát 2–2,5mm, FOV 100–120" },
-      { ten: "Axial + Sagittal FatSat", giaTri: "Cắt vuông góc ngón đánh giá ròng rọc A2/A4 & gân gấp" },
-      { ten: "T1 FatSat sau Gd", giaTri: "Tiêu chuẩn vàng phát hiện u cuộn mạch (Glomus) dưới móng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Đứt gân gấp/duỗi, tổn thương ròng rọc (người leo núi), u cuộn mạch dưới móng, nhiễm trùng sâu."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Nếu chỉ 1 ngón, băng tách ngón đó khỏi ngón khác để giảm nhiễu & định vị FOV nhỏ."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-goi",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI khớp gối — protocol",
-    tuKhoa: ["goi", "knee", "acl", "pcl", "sun chem", "meniscus", "ocd", "banh che"],
-    thongSo: [
-      { ten: "Sagittal PD FatSat + T1", giaTri: "TR 2500–3000, TE 30–40, lát 3mm, FOV 150 — sụn chêm, ACL, PCL" },
-      { ten: "Coronal + Axial PD FatSat", giaTri: "Dây chằng bên (MCL/LCL); khớp chè-đùi, mạc giữ bánh chè" },
-      { ten: "Nâng cao", giaTri: "3D DESS/SPACE (thể tích sụn); T2 Mapping sụn (thoái hóa sớm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Chấn thương thể thao, đứt ACL/PCL, rách sụn chêm, viêm xương sụn bóc tách, trật bánh chè, đau gối mạn."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Kê gối xoay ngoài 10–15° đưa ACL song song mặt phẳng Sagittal, tránh hiệu ứng thể tích bán phần."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-co-chan",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI cổ chân — protocol",
-    tuKhoa: ["co chan", "ankle", "achilles", "atfl", "cfl", "gan got", "delta"],
-    thongSo: [
-      { ten: "Sagittal PD FatSat + T1", giaTri: "TR 2500, TE 35, lát 3mm, FOV 140–160 — gân Achilles, cân gan chân" },
-      { ten: "Axial + Coronal FatSat", giaTri: "Gân quanh mắt cá, dây chằng ATFL/PTFL; khe sên-chày, dây chằng Delta" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Rách gân gót, đứt ATFL/CFL, viêm gân chày sau, chấn thương vòm cổ chân, viêm sụn xương sên."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "⚠️ Gân Achilles dễ bị 'Magic Angle' (sáng giả ở ~55° trên T1/PD) — đối chiếu T2W (TE dài) để xác nhận.",
-        "Tiêm Gd khi u phần mềm/viêm/nhiễm trùng gân gót."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-ban-chan",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI bàn chân — protocol",
-    tuKhoa: ["ban chan", "foot", "morton", "ban chan tieu duong", "stress fracture", "viem cot tuy"],
-    thongSo: [
-      { ten: "Long-axis STIR/PD FatSat + T1", giaTri: "TR 3500, TE 40, lát 3mm, FOV 160 — phù tủy xương/phần mềm" },
-      { ten: "Short-axis PD FatSat", giaTri: "Cắt vuông góc trục bàn chân — rất nhạy u Morton ở kẽ ngón" },
-      { ten: "T1 FatSat sau Gd", giaTri: "Bàn chân tiểu đường: phân biệt viêm loét phần mềm vs viêm cốt tủy" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "U thần kinh Morton, bàn chân đái tháo đường, gãy xương mỏi, viêm cân gan chân, viêm cốt tủy."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-xuong-dai",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "MRI xương dài (đùi, chày, cánh tay) — protocol",
-    tuKhoa: ["xuong dai", "long bone", "u xuong", "osteosarcoma", "ewing", "viem cot tuy", "skip lesion"],
-    thongSo: [
-      { ten: "Coronal STIR + T1 toàn bộ xương", giaTri: "STIR (TR >4000, TI 150–160, FOV 400–480) dò ổ nhảy cóc (skip lesions)" },
-      { ten: "Axial PD FatSat + T1 (khu trú)", giaTri: "Xâm lấn phần mềm, chèn ép bó mạch thần kinh; ranh giới vỏ-tủy" },
-      { ten: "T1 FatSat sau Gd", giaTri: "Phần đặc của u, hoại tử u, theo dõi đáp ứng hóa trị" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "U xương ác tính (osteosarcoma, Ewing), viêm cốt tủy, nhồi máu xương, gãy vi thể, chèn ép khoang."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Chụp kèm ÍT NHẤT một khớp lân cận để đánh giá xâm lấn khớp."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-tim",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "MRI tim (CMR) — đánh giá sống còn cơ tim",
-    tuKhoa: ["mri tim", "cmr", "cine", "lge", "viability", "ef", "mapping"],
-    thongSo: [
-      { ten: "Cine SSFP", giaTri: "Trục 2/3/4 buồng + trục ngắn đáy→mỏm — EF, rối loạn vận động vùng" },
-      { ten: "T2W STIR / T1-T2 Mapping", giaTri: "Phù cơ tim cấp (viêm/nhồi máu); tính ECV" },
-      { ten: "LGE", giaTri: "Chụp 10–15 phút sau Gd, TI scout xóa cơ tim lành — sẹo xuyên/dưới nội tâm mạc" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Sẹo nhồi máu cũ/mới, bệnh cơ tim phì đại/giãn, viêm cơ tim, lập kế hoạch trước can thiệp mạch vành."
-      ]},
-      { tieuDe: "⚠️ Lưu ý", items: [
-        "Mắc ECG gating là sống còn: cạo lông ngực, lau cồn để sóng R đạt đỉnh; nín thở 10–15 s nhiều lần."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-ref-vu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Tuyến vú",
-    ten: "MRI tuyến vú động học — protocol",
-    tuKhoa: ["vu", "breast", "bi-rads", "brca", "dce", "tui nguc", "tic"],
-    thongSo: [
-      { ten: "T2W + STIR/FatSat", giaTri: "Ax & Sag (FOV 300–340, lát 3mm) — nang, sợi tuyến, phù" },
-      { ten: "DWI/ADC", giaTri: "b=0, 800–1000 — u đặc hạn chế khuếch tán" },
-      { ten: "3D T1 FatSat DCE", giaTri: "1 pha trước + 5–6 pha sau tiêm liên tục (60–90 s/pha), dựng đường cong TIC" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: [
-        "Tầm soát nguy cơ cao (BRCA), đánh giá xâm lấn u đã biết, đáp ứng hóa trị tân bổ trợ, túi ngực vỡ."
-      ]},
-      { tieuDe: "Lưu ý", items: [
-        "Nằm sấp với Breast Coil chuyên dụng; chụp ngày 7–14 chu kỳ kinh để giảm ngấm thuốc nền sinh lý."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
+    nguon: "Bảng tổng hợp thông số MRI 1.5T Philips — Khoa CĐHA BVHVGL"
   },
 
   /* ============================================================ */
@@ -6465,27 +7423,6 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
   },
-  {
-    id: "mri-an-toan",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Thông số & Vật lý MRI",
-    ten: "An toàn MRI: B0/Quench, SAR, tiếng ồn, thuốc Gd",
-    tuKhoa: ["an toan", "quench", "sar", "5 gauss", "faraday", "acoustic", "gadolinium", "nsf", "cryo"],
-    thongSo: [
-      { ten: "SAR (W/kg)", giaTri: "Normal < 2 W/kg, First Level < 4 W/kg/15 phút; khai đúng cân nặng" },
-      { ten: "Đường 5 Gauss", giaTri: "Ranh an toàn từ trường; eGFR < 30 → thận trọng Gd (nguy cơ NSF)" },
-      { ten: "Tiếng ồn", giaTri: ">100–120 dB — bắt buộc nút tai/tai nghe cho MỌI bệnh nhân" }
-    ],
-    noiDung: [
-      { tieuDe: "⚠️ An toàn", items: [
-        "B0 bật 24/7 hút vật sắt từ — CẤM bình oxy, chìa khóa, xe lăn thường vào phòng máy.",
-        "Nút Quench đỏ: CHỈ nhấn khi có người bị kẹt tính mạng bởi vật kim loại, không nhấn khi lỗi phần mềm.",
-        "SAR giảm bằng: tăng TR, giảm số lát, giảm FA, giảm ETL. B1 (RF) sinh nhiệt (SAR).",
-        "Lồng Faraday: không mở hé cửa phòng khi đang quét (lọt sóng → zipper).",
-        "Gadolinium: ưu tiên macrocyclic; tránh dòng mạch thẳng đời cũ ở suy thận nặng (NSF)."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
 
   /* ============================================================ */
   /* MRI — THƯ VIỆN CHUỖI XUNG (Từ điển MRI, gộp theo họ xung)                */
@@ -6745,866 +7682,5 @@ window.SOTAY_QUYTRINH = [
     ],
     nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
   },
-
-  /* ============================================================ */
-  /* MRI — QUY TRÌNH CHÍNH THỨC CỦA KHOA (SOP)                                */
-  /* Nguồn: QUY TRÌNH MRI KHOA CDHA BVHVGL.docx — đã được Trưởng khoa duyệt.  */
-  /* Chống chỉ định "chung": máy tạo nhịp (tuyệt đối); kim loại từ tính/kẹp   */
-  /* phẫu thuật <6 tháng; sợ khoang kín; không nằm yên; suy gan–thận (khi tiêm). */
-  /* ============================================================ */
-
-
-  /* ---- Lồng ngực ---- */
-  {
-    id: "mri-sop-long-nguc-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Lồng ngực",
-    ten: "Chụp CHT lồng ngực KHÔNG tiêm",
-    tuKhoa: ["long nguc", "trung that", "thanh nguc", "phoi"],
-    thongSo: [
-      { ten: "Kỹ thuật", giaTri: "Chụp theo nhịp thở; T2W coronal & axial, T1W axial" },
-      { ten: "Lát cắt", giaTri: "6–8 mm, khoảng cách 10–20%, FOV 380–400; pha chênh từ L-R" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương thành ngực, phổi, trung thất, tim."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu lồng ngực & cơ quan trong ngực; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-long-nguc-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Lồng ngực",
-    ten: "Chụp CHT lồng ngực CÓ tiêm",
-    tuKhoa: ["long nguc tiem", "trung that", "u"],
-    thongSo: [
-      { ten: "Kỹ thuật", giaTri: "Như quy trình không tiêm (T2W coronal & axial, T1W axial, 6–8 mm, FOV 380–400)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương thành ngực, phổi, trung thất, tim."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu lồng ngực; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-thong-khi-phoi",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Lồng ngực",
-    ten: "Chụp CHT thông khí phổi",
-    tuKhoa: ["thong khi phoi", "helium", "xenon", "hen", "copd"],
-    thongSo: [
-      { ten: "Máy & khí", giaTri: "≥ 1.5 Tesla; khí Helium-3 hoặc Xenon-129 phân cực cao" },
-      { ten: "Chuỗi nhanh", giaTri: "FLASH, HASTE, bSSFP 3–20 s mỗi thì hít vào/thở ra; mã hóa màu" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Hen phế quản, COPD, xơ phổi, viêm phế quản tắc nghẽn."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đánh giá được mức độ thông khí phổi (tỷ lệ hít vào/thở ra)."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Tuyến vú ---- */
-  {
-    id: "mri-sop-vu-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Tuyến vú",
-    ten: "Chụp CHT tuyến vú KHÔNG tiêm",
-    tuKhoa: ["vu", "tuyen vu", "breast", "dwi"],
-    thongSo: [
-      { ten: "Chuỗi", giaTri: "T1 coronal trường rộng (gồm hố nách, thượng đòn); T2 xóa mỡ axial; T1 xóa mỡ axial; Diffusion b800–b1000" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Đánh giá tổn thương vú nghi ngờ trên siêu âm."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đánh giá nhu mô, lớp mỡ, núm vú, da, cơ thành ngực, hố nách; kết luận có cần tiêm thuốc tiếp hay không."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-vu-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Tuyến vú",
-    ten: "Chụp CHT tuyến vú CÓ tiêm (động học)",
-    tuKhoa: ["vu tiem", "breast dce", "birads", "duong cong"],
-    thongSo: [
-      { ten: "Trước tiêm", giaTri: "T1 coronal rộng; T2 xóa mỡ axial; T1 xóa mỡ axial; Diffusion b800–b1000" },
-      { ten: "Động học", giaTri: "T1 xóa mỡ sau tiêm Gd 0,1 mmol/kg, 2 ml/giây; chụp phút 1,2,3,4,5 (axial) + T1 muộn (sagittal)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương vú nghi ngờ, đánh giá xâm lấn, sàng lọc gen ung thư, vú giả, theo dõi đáp ứng điều trị."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đánh giá động học ngấm thuốc (tịnh tiến/cao nguyên/thải thuốc); kết luận theo BIRADS."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-pho-vu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Tuyến vú",
-    ten: "Chụp CHT phổ tuyến vú (MRS)",
-    tuKhoa: ["pho vu", "mrs vu", "cholin", "lipid", "lactate"],
-    thongSo: [
-      { ten: "Nền", giaTri: "Như CHT vú có tiêm (động học Gd 0,1 mmol/kg, 2 ml/giây)" },
-      { ten: "Phổ", giaTri: "Xung phổ tại vùng khối ngấm thuốc: Cholin, Lipid, Lactate" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Khối u vú nghi ngờ, bổ sung thông tin chuyển hóa & đánh giá đáp ứng điều trị."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["So sánh nồng độ Cholin/Lipid/Lactate qua các lần chụp."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Ổ bụng - Tiểu khung ---- */
-  {
-    id: "mri-sop-lo-ro-hau-mon",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT lỗ rò hậu môn – trực tràng",
-    tuKhoa: ["lo ro", "hau mon", "truc trang", "fistula", "ap xe"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1.5 Tesla" },
-      { ten: "Chuỗi", giaTri: "T1W/T2W FSE ngang–chếch hoặc T2 3D + STIR; (tiêm) T1 xóa mỡ Gd 0,1 mmol/kg, 2 ml/giây" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tìm & đánh giá đường rò nguyên phát/thứ phát, áp xe; liên quan với cơ thắt hậu môn."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ thành ống hậu môn, đường rò, thâm nhiễm viêm, ổ áp xe."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-o-bung-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT ổ bụng KHÔNG tiêm (trừ gan)",
-    tuKhoa: ["o bung", "tuy", "lach", "than", "thuong than", "mrcp", "dwi"],
-    thongSo: [
-      { ten: "Chuỗi", giaTri: "T1W & T2W nhiều mặt phẳng, lát ≤ 1 cm; in/out-phase (u thượng thận/thận)" },
-      { ten: "Chuyên biệt", giaTri: "MRCP (T2W) đường mật–tụy; DWI SS-EPI b=0 và b=500–1000; MR urography" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tụy, lách, thận–niệu quản–sau phúc mạc, tuyến thượng thận, đường mật–túi mật, ống tiêu hóa–phúc mạc; thay thế CT ở thai phụ/trẻ nhỏ/chống chỉ định i-ốt."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đủ thông tin giải phẫu ổ bụng; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-o-bung-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT ổ bụng CÓ tiêm",
-    tuKhoa: ["o bung tiem", "dong hoc", "gadolinium"],
-    thongSo: [
-      { ten: "Nền", giaTri: "Như ổ bụng không tiêm (T1/T2, MRCP, DWI)" },
-      { ten: "Động học", giaTri: "Gd chelate TM: trước tiêm – ĐM – TM – cân bằng; T1 sau tiêm có xóa mỡ (không dùng STIR)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Như ổ bụng không tiêm, khi cần phát hiện/đặc trưng hóa u, bất thường mạch, tiến triển viêm."] },
-      { tieuDe: "⚠️ Chống chỉ định tiêm Gd", items: ["Không có đường TM; dị ứng Gd chưa dự phòng; có thai (tương đối); GFR < 30 ml/phút hoặc suy thận cấp nặng; xơ hóa hệ thống do thận."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đủ giải phẫu; phát hiện & đánh giá ngấm thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-gan-dac-hieu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT gan với thuốc đối quang từ đặc hiệu mô",
-    tuKhoa: ["gan dac hieu", "primovist", "gadoxetat", "hcc", "di can"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Gadoxetat sodium (Gd-EOB-DTPA) 0,05 mmol/kg, 2 ml/giây + đuổi 20 ml NaCl" },
-      { ten: "Động học", giaTri: "T1 EG xóa mỡ ở giây 15; 80; phút 3 và phút 20; kèm chuỗi đường mật (MR cholangiography)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương khu trú ở gan: phân biệt adenoma/u máu/FNH/HCC với di căn."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đủ giải phẫu gan–đường mật; phát hiện & đánh giá ngấm thuốc, kể cả thì gan mật muộn."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-chau-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT vùng chậu KHÔNG tiêm",
-    tuKhoa: ["vung chau", "phu khoa", "co tu cung", "lac noi mac", "spair"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla" },
-      { ten: "Chuỗi", giaTri: "T2 coronal xóa mỡ (SPAIR TI 80–120 ms) 6 mm; T1 axial xóa mỡ; T2/STIR coronal 4–6 mm; T2 sagittal 5 mm; FOV < 200 mm, ma trận 512(256)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U phụ khoa (cổ tử cung, tử cung, buồng trứng), lạc nội mạc, u cơ trơn tử cung, dị dạng bẩm sinh, u trực tràng/bàng quang/tiền liệt, biến chứng sau mổ, đau bụng thai phụ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu tiểu khung trên 3 mặt phẳng; bộc lộ tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-chau-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT vùng chậu CÓ tiêm",
-    tuKhoa: ["vung chau tiem", "phu khoa", "cap mau"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Gd 0,1 mmol/kg, 2 ml/giây, chụp 3 thì" },
-      { ten: "Chuỗi", giaTri: "Trước tiêm như chậu không tiêm; sau tiêm T1 axial & coronal có xóa mỡ" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Như chậu không tiêm, khi cần phân biệt tổ chức & đánh giá cấp máu tổn thương."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu khung chậu; phát hiện tổn thương & mức ngấm thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tien-liet-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT tuyến tiền liệt CÓ tiêm",
-    tuKhoa: ["tien liet", "prostate", "ung thu tuyen tien liet"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd 0,1 mmol/kg, 2 ml/giây" },
-      { ten: "Chuỗi", giaTri: "T2 axial/coronal 3–4 mm, T1 axial 2–3 mm; sau tiêm T1 axial; có thể dùng cuộn thu nội trực tràng, FOV nhỏ" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Nghi ung thư tuyến tiền liệt; theo dõi sau điều trị."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ toàn bộ tuyến tiền liệt & lân cận (túi tinh, trực tràng) 3 hướng; đánh giá ngấm thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-pho-tien-liet",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT phổ tuyến tiền liệt (MRS)",
-    tuKhoa: ["pho tien liet", "mrs", "cholin", "citrate"],
-    thongSo: [
-      { ten: "Nền", giaTri: "Như tiền liệt có tiêm (Gd 0,1 mmol/kg, 2 ml/giây)" },
-      { ten: "Phổ", giaTri: "Đơn/đa thể tích; Cholin, Lipid, Lactat (phân biệt phì đại lành/ung thư/viêm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Nghi ung thư tiền liệt tuyến cần phân biệt qua chất chuyển hóa."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Xác định nồng độ & tỷ lệ các chất chuyển hóa."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tang-tren-mach-tang",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT tầng trên ổ bụng có khảo sát mạch tạng",
-    tuKhoa: ["tang tren o bung", "mach tang", "vibe", "trufisp", "dong hoc"],
-    thongSo: [
-      { ten: "Trước tiêm", giaTri: "TruFISP; T2 HASTE ±FS; T1 in/out-phase; T2 TSE 3D trigger 1,5–1,75 mm; T1 VIBE FS" },
-      { ten: "Sau tiêm", giaTri: "Gd 0,2 ml/kg; VIBE FS ở 30/60/90/120/180 s; muộn 5/10/15 phút" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Bệnh lý khu trú/lan tỏa tạng tầng trên ổ bụng; phân biệt u/viêm, lành/ác."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (nhịn đói 6–8 giờ nếu chụp đường mật)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; đánh giá tưới máu & tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-biu-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT bìu, dương vật KHÔNG tiêm",
-    tuKhoa: ["biu", "duong vat", "scrotum", "tinh hoan"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla" },
-      { ten: "Chuỗi", giaTri: "HASTE coronal; T2 TSE sagittal; T2 TSE FS coronal; T2 axial; T1 & T1 FS axial (4 mm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương bìu, dương vật chưa rõ trên siêu âm."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu vùng bẹn, bìu; phát hiện tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-biu-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT bìu, dương vật CÓ tiêm",
-    tuKhoa: ["biu tiem", "duong vat"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd 0,2 ml/kg (kim 18G, bơm điện 2 nòng)" },
-      { ten: "Sau tiêm", giaTri: "T1 xóa mỡ theo 3 hướng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Khảo sát hình thái + tưới máu tổn thương bìu/dương vật."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương & đặc điểm ngấm thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-san-chau-tong-phan",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT động học sàn chậu, tống phân",
-    tuKhoa: ["san chau", "tong phan", "sa tang", "cine", "valsalva"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla" },
-      { ten: "Kỹ thuật", giaTri: "Bơm gel 200–500 ml vào trực tràng; Cine TruFISP sagittal ghi thót hậu môn (~15 s) & rặn tống gel (~45–60 s); nghiệm pháp Valsalva" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Sa tạng chậu (sa sinh dục, tiểu són); tắc nghẽn đường thoát phân không do u."] },
-      { tieuDe: "Chuẩn bị", items: ["Làm sạch trực tràng, tập thót hậu môn + Valsalva, tiểu sạch trước 15–30 phút."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Đánh giá động học sàn chậu & động học tống phân."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-ruot-non",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT ruột non (MR enterography)",
-    tuKhoa: ["ruot non", "enterography", "manitol", "crohn", "viem ruot"],
-    thongSo: [
-      { ten: "Chuẩn bị", giaTri: "Nhịn ăn ≥ 4 giờ; uống 1000 ml manitol 2,5% trước 1 giờ" },
-      { ten: "Chuỗi", giaTri: "T2 TSE FS/HASTE 6–8 mm; T1 GRE (FLASH); động học sau tiêm Gd 0,2 ml/kg ở 20/55/88 s; chống co bóp Hyoscine 20 mg" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Viêm, loét, chảy máu, u, áp xe ruột non."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ quai ruột non; phát hiện tổn thương & ngấm thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tuoi-mau-tang",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT tưới máu tạng",
-    tuKhoa: ["tuoi mau tang", "perfusion", "gan", "than", "tuy"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Perfusion T1 GRE, thuốc 3 ml/s + đuổi 20–30 ml NaCl 3–5 ml/s" },
-      { ten: "Chuỗi", giaTri: "T2W, T1 in/out-phase, Diffusion/ADC; T1 3D xóa mỡ toàn bụng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Bệnh lý gan, đường mật, mạch máu (huyết khối/hẹp tắc), thận, tụy, lách."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Thông số tính", items: ["TTP, MTT, BV, rBV, apMTT."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-noi-soi-ao-dai-trang",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT nội soi ảo khung đại tràng",
-    tuKhoa: ["noi soi ao", "dai trang", "colonography", "vibe"],
-    thongSo: [
-      { ten: "Chuẩn bị", giaTri: "Làm sạch ruột như nội soi; nằm sấp; Scopolamine 20 mg TM; bơm DOTAREM 20 ml/2 L nước qua hậu môn" },
-      { ten: "Chuỗi", giaTri: "TruFISP; VIBE FS 2 mm toàn khung đại tràng; sau tiêm Gd 0,1 ml/kg, 2 ml/giây; dựng MIP/MPR/nội soi ảo" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Khối choán chỗ trong lòng đại tràng (u, u chèn ép)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (+ hội chứng sợ khoang kín)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Dựng hình khung đại tràng; phát hiện tổn thương & ngấm thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-banh-nhau",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT đánh giá bánh nhau",
-    tuKhoa: ["banh nhau", "rau cai rang luoc", "placenta", "haste"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla (không tiêm — chỉ an thần nếu cần)" },
-      { ten: "Chuỗi", giaTri: "HASTE & HASTE FS, T1 in/out-phase (nín thở); cắt vuông góc bánh nhau 4 mm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Nghi bệnh lý bánh rau phát hiện trên siêu âm (rau cài răng lược…)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ bánh rau & liên quan với cơ tử cung và thai."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-thai-nhi",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Ổ bụng - Tiểu khung",
-    ten: "Chụp CHT thai nhi",
-    tuKhoa: ["thai nhi", "fetal mri", "di tat thai", "haste"],
-    thongSo: [
-      { ten: "Điều kiện", giaTri: "Tuổi thai > 18 tuần (tốt nhất từ tuần 28); 1,5 Tesla; không tiêm" },
-      { ten: "Chuỗi", giaTri: "HASTE 3 hướng (não & ngực–bụng), lát 4 mm, TR 1100/2600–4500 ms; Diffusion b0/b1000 + ADC; T1W fl2D" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Bất thường hệ TKTW hoặc cơ quan khác đã phát hiện trên siêu âm thường quy."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu thai; phát hiện dị tật."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Cột sống ---- */
-  {
-    id: "mri-sop-cs-co-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống cổ KHÔNG tiêm",
-    tuKhoa: ["cot song co", "tuy co", "thoat vi", "stir"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 0,2 Tesla" },
-      { ten: "Chuỗi", giaTri: "T1W & T2W sagittal, T2W axial qua vị trí cần thiết, STIR sagittal (nếu cần)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương thân đốt, đĩa đệm, tủy sống, phần mềm quanh cột sống cổ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu cột sống cổ; hiển thị tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-cs-co-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống cổ CÓ tiêm",
-    tuKhoa: ["cot song co tiem", "u tuy", "viem"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd 0,1 mmol/kg (kim 18G)" },
-      { ten: "Sau tiêm", giaTri: "T1W nhiều hướng; T1 fatsat cho tổn thương thân đốt/đĩa đệm/phần mềm; u trong ống sống không cần fatsat" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U, viêm cột sống cổ cần tiêm thuốc bộc lộ rõ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; đánh giá mức độ bắt thuốc của tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-cs-nguc-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống ngực KHÔNG tiêm",
-    tuKhoa: ["cot song nguc", "tuy nguc", "stir"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 0,2 Tesla" },
-      { ten: "Chuỗi", giaTri: "T1W & T2W sagittal, T2W axial, STIR sagittal (nếu cần)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương thân đốt, đĩa đệm, tủy sống, phần mềm quanh cột sống ngực."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu cột sống ngực."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-cs-nguc-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống ngực CÓ tiêm",
-    tuKhoa: ["cot song nguc tiem", "u", "viem"],
-    thongSo: [
-      { ten: "Thuốc", giaTri: "Gd TM 0,1–0,2 ml/kg; XN Creatinin nếu nghi suy thận" },
-      { ten: "Sau tiêm", giaTri: "T1W nhiều hướng; T1 fatsat cho thân đốt/đĩa đệm/phần mềm; u trong ống sống không fatsat" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U, viêm cột sống ngực cần tiêm thuốc (BS chuyên khoa quyết định)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; đánh giá mức độ bắt thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-cs-tl-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống thắt lưng KHÔNG tiêm",
-    tuKhoa: ["cot song that lung", "thoat vi", "than kinh toa", "cung chau"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 0,2 Tesla" },
-      { ten: "Chuỗi", giaTri: "T1W & T2W sagittal, T2W axial, STIR sagittal; STIR coronal/PD fatsat qua khớp cùng chậu (nếu cần)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương thân đốt, đĩa đệm, tủy, phần mềm quanh cột sống thắt lưng."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu cột sống thắt lưng."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-cs-tl-cung-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
-    ten: "Chụp CHT cột sống thắt lưng cùng CÓ tiêm",
-    tuKhoa: ["cot song that lung cung", "u", "viem"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd 0,1 mmol/kg" },
-      { ten: "Sau tiêm", giaTri: "T1W 3 hướng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U, viêm cột sống thắt lưng cùng cần tiêm thuốc."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; đánh giá mức ngấm thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Cơ xương khớp ---- */
-  {
-    id: "mri-sop-khop-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT khớp KHÔNG tiêm",
-    tuKhoa: ["khop", "sun", "day chang", "gan co", "bao hoat dich"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla" },
-      { ten: "Chuỗi", giaTri: "Theo hướng cắt phù hợp vị trí khớp & loại tổn thương (BS CĐHA chỉ định)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương xương, sụn, bao hoạt dịch, dây chằng, gân cơ, phần mềm quanh khớp."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu khớp cần chụp."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-khop-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT khớp CÓ tiêm (tĩnh mạch)",
-    tuKhoa: ["khop tiem", "u", "viem"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd TM 0,1 mmol/kg" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương khớp cần tiêm thuốc TM (BS chuyên khoa quyết định)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu khớp; đánh giá mức ngấm thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-khop-bom-noi-khop",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT khớp CÓ bơm thuốc nội khớp (MR arthrography)",
-    tuKhoa: ["bom noi khop", "arthrography", "sun vien", "chan thuong"],
-    thongSo: [
-      { ten: "Máy & dụng cụ", giaTri: "1,5 Tesla; X-quang tăng sáng, kim chọc khớp 21G" },
-      { ten: "Bơm nội khớp", giaTri: "Trộn Gd + thuốc cản quang + NaCl theo tỉ lệ/thể tích từng khớp, bơm dưới màn tăng sáng; sau đó T1W 3 hướng" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương sau chấn thương khó chẩn đoán bằng phương pháp thường quy."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Kim bơm nằm trong ổ khớp; rõ giải phẫu khớp."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-xuong-tuy-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT xương & tủy xương KHÔNG tiêm",
-    tuKhoa: ["xuong", "tuy xuong", "u xuong", "bone marrow"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla" },
-      { ten: "Chuỗi", giaTri: "Theo hướng cắt phù hợp vị trí & loại tổn thương (BS CĐHA chỉ định)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Bệnh lý xương & tủy xương; phân giai đoạn u xương, đánh giá hiệu quả điều trị."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu xương & tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-xuong-tuy-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT xương & tủy xương CÓ tiêm",
-    tuKhoa: ["xuong tiem", "u xuong", "viem"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd TM 0,1 mmol/kg" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U, viêm xương & tủy xương cần tiêm thuốc."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu xương; đánh giá mức ngấm thuốc tổn thương."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-phan-mem-chi-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT phần mềm chi KHÔNG tiêm",
-    tuKhoa: ["phan mem chi", "u phan mem", "co gan", "tirm"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla" },
-      { ten: "Chuỗi", giaTri: "T1W, T2W, PD, T2W xóa mỡ (TIRM fat-sat), Diffusion; mặt phẳng theo chỉ định" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U phần mềm chi, chấn thương cơ/gân, loạn dưỡng/thoái hóa cơ, viêm/áp xe."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (thiết bị điện tử; kẹp kim loại < 6 tháng)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu chi & tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-phan-mem-chi-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT phần mềm chi CÓ tiêm",
-    tuKhoa: ["phan mem chi tiem", "u co", "di dang mach"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Gd TM 0,1 mmol/kg; T1W xóa mỡ sau tiêm (đánh giá động học)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U cơ/phần mềm, dị dạng mạch máu, viêm/áp xe."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (thiết bị điện tử; kẹp kim loại < 6 tháng)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ phần mềm chi; đánh giá mức độ & tính chất bắt thuốc."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-day-tk-ngoai-bien",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Cơ xương khớp",
-    ten: "Chụp CHT dây thần kinh ngoại biên",
-    tuKhoa: ["day than kinh ngoai bien", "dam roi that lung cung", "than kinh dui", "neurography"],
-    thongSo: [
-      { ten: "Máy & cuộn", giaTri: "≥ 1 Tesla; cuộn ngực/khung chậu (phased-array)" },
-      { ten: "Chuỗi", giaTri: "T1W, IR, T2W xóa mỡ coronal (chụp 2 bên so sánh); lát 4–7 mm, FOV 18–24 cm, từ L3 đến củ mu" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tổn thương đám rối thắt lưng–cùng/thần kinh đùi: sau chấn thương, đè ép, u/u bao dây TK, sẹo xơ sau xạ, phì đại dây TK."] },
-      { tieuDe: "Chống chỉ định", items: ["Không tuyệt đối; tương đối: máy tạo nhịp (tùy loại), kim loại từ tính, không nằm yên lâu (30 phút–1 giờ)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Thần kinh bình thường hình oval, đồng tín hiệu cơ trên T1W; tổn thương: tăng kích thước, tăng tín hiệu bất thường trên T2W."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Mạch máu ---- */
-  {
-    id: "mri-sop-dm-chu-nguc",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chủ ngực",
-    tuKhoa: ["dm chu nguc", "phinh", "boc tach", "hep eo"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Gd 0,1 mmol/kg; bolus 2 ml/s cho 20 ml + đẩy 20–30 ml NaCl" },
-      { ten: "Chuỗi", giaTri: "T1W 3D ngay sau tiêm; tái tạo MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Phình, bóc tách, hẹp, tắc, viêm ĐM chủ ngực; hẹp eo ĐM chủ bẩm sinh."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ; suy thận ≥ độ 3 (nguy cơ xơ hóa hệ thống)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu ĐM chủ ngực."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-vanh",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch vành",
-    tuKhoa: ["dm vanh", "coronary mri", "kawasaki", "whole heart"],
-    thongSo: [
-      { ten: "Máy & ECG", giaTri: "≥ 1.5 Tesla; lắp điện cực ECG" },
-      { ten: "Chuỗi", giaTri: "Hình thái & chức năng (2 buồng, 4 buồng, trục ngắn, đường ra thất); mạch vành Whole-heart 3D thu theo nhịp thở; Gd 0,1 mmol/kg" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Bất thường giải phẫu mạch vành (xuất phát, số lượng, đường đi), phình trong Kawasaki, tim bẩm sinh trước mổ."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (thiết bị điện tử; kẹp kim loại < 6 tháng)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu động mạch vành."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tim",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT tim",
-    tuKhoa: ["mri tim", "cmr", "cine", "song con co tim", "lge", "benh co tim"],
-    thongSo: [
-      { ten: "Máy", giaTri: "1,5 Tesla; ECG gating" },
-      { ten: "Chuỗi", giaTri: "Hình thái & chức năng (2/4 buồng, trục ngắn, đường ra thất); tưới máu thì Rest/Stress; thì muộn sau 10 phút (sống còn cơ tim)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Tim bẩm sinh, bệnh mạch vành (chức năng thất, sống còn cơ tim), bệnh cơ tim, u tim, màng ngoài tim, van tim, chuyển hóa cơ tim."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu tim & ĐM vành; đánh giá được chức năng tim."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-chu-chau",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chủ – chậu",
-    tuKhoa: ["dm chu chau", "phinh", "boc tach", "hep tac"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Test bolus 2 ml/s cho 20 ml + đẩy 20–30 ml NaCl" },
-      { ten: "Chuỗi", giaTri: "T1W 3D; tái tạo MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Phình, bóc tách, hẹp, tắc ĐM chủ – chậu."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ; suy thận ≥ độ 3 (tương đối)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-chi-tren-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chi trên KHÔNG tiêm",
-    tuKhoa: ["dm chi tren", "native", "trace", "hep tac"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla" },
-      { ten: "Chuỗi", giaTri: "NATIVE (Siemens) / TRACE (Philips); MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Hẹp, tắc, phình, bóc tách ĐM chi trên."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-chi-tren-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chi trên CÓ tiêm",
-    tuKhoa: ["dm chi tren tiem", "hep tac", "phinh"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "1,5 Tesla; Test bolus 2 ml/s cho 20 ml + đẩy 20–30 ml NaCl; T1W 3D, MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Hẹp, tắc, phình, bóc tách ĐM chi trên."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ; suy thận ≥ độ 3 (tương đối)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-chi-duoi-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chi dưới KHÔNG tiêm",
-    tuKhoa: ["dm chi duoi", "native", "trace", "hep tac"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla" },
-      { ten: "Chuỗi", giaTri: "NATIVE (Siemens) / TRACE (Philips); MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Hẹp, tắc, phình, bóc tách ĐM chi dưới."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-chi-duoi-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch chi dưới CÓ tiêm",
-    tuKhoa: ["dm chi duoi tiem", "run off", "hep tac"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; Test bolus 2 ml/s cho 20 ml + đẩy 20–30 ml NaCl; T1W 3D, MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Hẹp, tắc, phình, bóc tách ĐM chi dưới."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ; suy thận ≥ độ 3 (tương đối)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-toan-than-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch toàn thân KHÔNG tiêm",
-    tuKhoa: ["dm toan than", "takayasu", "hep eo", "ecg"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla; mắc ECG hoặc bộ thu tín hiệu mạch ngoại biên" },
-      { ten: "Chuỗi", giaTri: "T1W thu theo ĐTĐ/mạch ngoại biên; MPR & VRT (chỉ an thần, không tiêm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Phình, bóc tách, hẹp, tắc ĐM; viêm ĐM (Takayasu); hẹp eo ĐM chủ bẩm sinh."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ, hốc mắt."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-dm-toan-than-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT động mạch toàn thân CÓ tiêm",
-    tuKhoa: ["dm toan than tiem", "takayasu"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1.5 Tesla; Test bolus 2 ml/s cho 20 ml + đẩy 20–30 ml NaCl; T1W 3D, MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Phình, bóc tách, hẹp, tắc ĐM; viêm ĐM (Takayasu); hẹp eo ĐM chủ."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ; suy thận ≥ độ 3 (tương đối)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu mạch máu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tm-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT tĩnh mạch KHÔNG tiêm",
-    tuKhoa: ["tinh mach", "huyet khoi", "mrv", "thong dong tinh mach"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1.5 Tesla; bộ thu tín hiệu mạch ngoại biên" },
-      { ten: "Chuỗi", giaTri: "Định vị 3 bình diện; chuỗi TM theo bộ thu mạch ngoại biên; MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Huyết khối tắc TM, thông động–tĩnh mạch, dị dạng mạch bẩm sinh."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ, hốc mắt."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-tm-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT tĩnh mạch CÓ tiêm",
-    tuKhoa: ["tinh mach tiem", "huyet khoi", "mrv"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; kim 18G; chuỗi TM có tiêm Gd; MPR & VRT" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Huyết khối tắc TM, thông động–tĩnh mạch, dị dạng mạch bẩm sinh."] },
-      { tieuDe: "Chống chỉ định", items: ["Máy tạo nhịp; sợ khoang kín; dị vật kim loại trong sọ, hốc mắt; suy thận ≥ độ 3 (tương đối)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-bach-mach-khong-dac-hieu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT bạch mạch CÓ tiêm thuốc không đặc hiệu",
-    tuKhoa: ["bach mach", "lymphatic", "phu bach mach", "dynamic"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla" },
-      { ten: "Tiêm", giaTri: "Trong da gian ngón mu bàn chân 4 điểm × 0,7–0,8 ml (Gd 15 ml + Lidocain 1% 1,5 ml); Dynamic 3D T1W GRE ở phút 5/10/15/20/25/30, lát 2 mm" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Nghi tổn thương hệ bạch mạch."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (thiết bị điện tử; kẹp kim loại < 6 tháng)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Theo dõi dẫn lưu bạch mạch → hạch kheo/bẹn → đám rối chậu → TM dưới đòn; hạch bẹn bắt Gd sau 30–40 phút."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-bach-mach-dac-hieu",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Mạch máu",
-    ten: "Chụp CHT bạch mạch CÓ tiêm thuốc đặc hiệu (USPIO)",
-    tuKhoa: ["bach mach dac hieu", "uspio", "hach di can"],
-    thongSo: [
-      { ten: "Máy & thuốc", giaTri: "≥ 1 Tesla; USPIO tĩnh mạch 2,6 mg/kg; chụp trước & sau tiêm 24 giờ" },
-      { ten: "Chuỗi", giaTri: "T1W GRE, T2W FSE, T2W GRE, 3D T1W GRE (lát 3 mm, chủ yếu axial); bổ sung oblique theo vùng (nách/chậu)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Nghi tổn thương hệ bạch mạch (đánh giá hạch di căn)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung (thiết bị điện tử; kẹp kim loại < 6 tháng)."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Hạch di căn không hấp thu USPIO → không mất tín hiệu T2W; so sánh trước/sau tiêm."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-
-  /* ---- Toàn thân ---- */
-  {
-    id: "mri-sop-toan-than-khong-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Toàn thân",
-    ten: "Chụp CHT toàn thân KHÔNG tiêm",
-    tuKhoa: ["toan than", "whole body", "di can", "tam soat"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1 Tesla; cuộn thu bao phủ toàn thân" },
-      { ten: "Thời gian", giaTri: "30–60 phút; chụp theo chuỗi xung BS đưa ra (chỉ an thần, không tiêm)" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["U nguyên phát đánh giá lan rộng/di căn, phân giai đoạn; sau điều trị; tổn thương thứ phát chưa rõ nguồn; bệnh lan tỏa; tầm soát ác tính."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung; không chịu được thăm khám kéo dài (buồng kín, nằm lâu); người bệnh nặng hồi sức tích cực."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  },
-  {
-    id: "mri-sop-toan-than-tiem",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Toàn thân",
-    ten: "Chụp CHT toàn thân CÓ tiêm",
-    tuKhoa: ["toan than tiem", "di can", "tam soat"],
-    thongSo: [
-      { ten: "Máy", giaTri: "≥ 1.5 Tesla; cuộn thu bao phủ toàn thân" },
-      { ten: "Thời gian", giaTri: "30–60 phút; chuỗi trước & sau tiêm + bổ sung" }
-    ],
-    noiDung: [
-      { tieuDe: "Chỉ định", items: ["Như toàn thân không tiêm (u nguyên phát, di căn xa, sau điều trị, tầm soát ác tính)."] },
-      { tieuDe: "Chống chỉ định", items: ["Chung; thăm khám kéo dài; dị ứng Gd; suy gan; suy thận > độ II; người bệnh nặng hồi sức."] },
-      { tieuDe: "Tiêu chuẩn", items: ["Rõ giải phẫu; phát hiện tổn thương nếu có."] }
-    ],
-    nguon: "QUY TRÌNH MRI KHOA CDHA BVHVGL.docx"
-  }
 
 ];
