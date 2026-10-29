@@ -228,71 +228,21 @@
       <button class="theme" id="themeBtn" title="Nền sáng/tối">🌙</button>
     </div>
 
-    <!-- PHƯƠNG ÁN C: thanh vùng NGANG + bản đồ cơ thể thu gọn (mở bằng nút) -->
+    <!-- Thanh chọn vùng (ngang) -->
     <div class="regionbar" id="regionbar">
-      <button type="button" class="mapbtn" id="mapBtn" aria-expanded="false" aria-controls="mapPanel">
-        <img src="images/anat-front.png" alt=""><span>Hình cơ thể</span>
-      </button>
-      <span class="rbsep" aria-hidden="true"></span>
       <div class="regions" id="regions"></div>
-    </div>
-    <div class="mappanel" id="mapPanel" hidden>
-      <div class="modebadge" id="modebadge"></div>
-      <div class="viewtoggle" id="viewtoggle">
-        <button type="button" class="vbtn active" data-view="front">Mặt trước</button>
-        <button type="button" class="vbtn" data-view="side">Nghiêng — cột sống</button>
-      </div>
-      <svg class="bodyfig" viewBox="0 0 320 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ cơ thể — bấm chọn vùng">
-        <!-- MẶT TRƯỚC: ảnh giải phẫu thật + mảng màu phân khu -->
-        <g class="frontview">
-          <image href="images/anat-front.png" x="0" y="0" width="320" height="860" preserveAspectRatio="xMidYMid meet"/>
-          <ellipse class="bodyzone" data-region="1" style="fill:#c0392b;stroke:#c0392b" cx="160" cy="70" rx="27" ry="50"/>
-          <path class="bodyzone" data-region="2" style="fill:#2ba9e0;stroke:#2ba9e0" d="M147,112 L173,112 L175,143 L145,143 Z"/>
-          <path class="bodyzone" data-region="3" style="fill:#15509c;stroke:#15509c" d="M106,150 L214,150 L206,258 L114,258 Z"/>
-          <path class="bodyzone" data-region="4" style="fill:#1b9e77;stroke:#1b9e77" d="M114,260 L206,260 L201,348 L119,348 Z"/>
-          <path class="bodyzone" data-region="5" style="fill:#7a3fc0;stroke:#7a3fc0" d="M119,350 L201,350 L197,406 C180,424 140,424 123,406 Z"/>
-          <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M58,148 L96,160 L84,282 L52,282 Z"/>
-          <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M52,284 L84,284 L80,400 L74,474 L40,474 L42,400 Z"/>
-          <path class="bodyzone" data-region="6" data-sub="tay-tren" style="fill:#d98a00;stroke:#d98a00" d="M262,148 L224,160 L236,282 L268,282 Z"/>
-          <path class="bodyzone" data-region="6" data-sub="tay-duoi" style="fill:#e0a73a;stroke:#d98a00" d="M268,284 L236,284 L240,400 L246,474 L280,474 L278,400 Z"/>
-          <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M120,410 L158,410 L151,620 L129,620 Z"/>
-          <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M129,620 L151,620 L147,772 L158,806 L120,806 L126,772 Z"/>
-          <path class="bodyzone" data-region="7" data-sub="chan-tren" style="fill:#c0397b;stroke:#c0397b" d="M200,410 L162,410 L169,620 L191,620 Z"/>
-          <path class="bodyzone" data-region="7" data-sub="chan-duoi" style="fill:#d05a90;stroke:#c0397b" d="M191,620 L169,620 L173,772 L162,806 L200,806 L194,772 Z"/>
-          <text class="rnum" x="160" y="78" text-anchor="middle">1</text>
-          <text class="rnum" x="160" y="136" text-anchor="middle">2</text>
-          <text class="rnum" x="160" y="213" text-anchor="middle">3</text>
-          <text class="rnum" x="160" y="313" text-anchor="middle">4</text>
-          <text class="rnum" x="160" y="392" text-anchor="middle">5</text>
-          <text class="rnum" x="67" y="221" text-anchor="middle">6</text>
-          <text class="rnum" x="139" y="520" text-anchor="middle">7</text>
-        </g>
-        <!-- NGHIÊNG: ảnh giải phẫu thật + đoạn cột sống -->
-        <g class="sideview">
-          <image href="images/anat-lateral.png" x="32" y="5" width="255" height="850" preserveAspectRatio="xMidYMid meet"/>
-          <path class="spineseg2" data-region="2" data-sub="cs-co"      stroke="#2ba9e0" d="M132,100 C130,120 129,142 130,170"/>
-          <path class="spineseg2" data-region="3" data-sub="cs-nguc"    stroke="#15509c" d="M130,172 C122,214 119,262 124,348"/>
-          <path class="spineseg2" data-region="5" data-sub="cs-tl"      stroke="#7a3fc0" d="M124,350 C127,384 134,406 130,430"/>
-          <path class="spineseg2" data-region="5" data-sub="cs-cungcut" stroke="#b05a2b" d="M130,432 C133,450 140,466 143,482"/>
-          <text class="sidelabel" x="150" y="138" text-anchor="start">Cổ</text>
-          <text class="sidelabel" x="150" y="262" text-anchor="start">Ngực</text>
-          <text class="sidelabel" x="150" y="398" text-anchor="start">Thắt lưng</text>
-          <text class="sidelabel" x="152" y="476" text-anchor="start">Cùng–cụt</text>
-        </g>
-      </svg>
-      <p class="bodyhint">Bấm vào một vùng trên hình để chọn, hoặc dùng các nút vùng phía trên.</p>
     </div>
 
     <div class="pb-grid">
       <!-- CỘT 2 (ẩn, hiện khi chọn vùng) -->
       <section class="pb-col" id="col-tech">
         <h2>Danh mục kỹ thuật <small>Imaging Techniques</small></h2>
-        <div class="pb-body"><div id="techList"><p class="muted">Chọn một vùng ở thanh phía trên (hoặc mở Hình cơ thể) để xem danh mục kỹ thuật.</p></div></div>
+        <div class="pb-body"><div id="techList"><p class="muted">Chọn một vùng ở thanh phía trên để xem danh mục kỹ thuật.</p></div></div>
       </section>
       <!-- CỘT 3 -->
       <section class="pb-col">
         <h2>Thông số kỹ thuật <small>Technical Parameters</small></h2>
-        <div class="pb-body"><div id="detail"><p class="placeholder">Bấm vùng trên hình cơ thể hoặc ô phân vùng để hiện danh mục kỹ thuật, rồi chọn một kỹ thuật để xem thông số chi tiết.</p></div></div>
+        <div class="pb-body"><div id="detail"><p class="placeholder">Chọn một vùng ở thanh phía trên để hiện danh mục kỹ thuật, rồi chọn một kỹ thuật để xem thông số chi tiết.</p></div></div>
       </section>
     </div>
   </div>
@@ -464,7 +414,6 @@
     var regionsBox = document.getElementById("regions");
     var techBox = document.getElementById("techList");
     var detailBox = document.getElementById("detail");
-    var zones = document.querySelectorAll(".bodyzone");
     var curRegion = null, curItem = null, byId = {}, curSub = null;
     // Bộ lọc vùng con của chi (chỉ áp dụng cho X-quang; CT/MRI gộp chung)
     var SUBF = {
@@ -492,37 +441,6 @@
       tile.onclick = function () { setRegion(r.id); };
       regionsBox.appendChild(tile);
     });
-    // bấm lên vùng cơ thể trên hình người
-    Array.prototype.forEach.call(zones, function (z) {
-      z.addEventListener("click", function () {
-        var reg = parseInt(z.getAttribute("data-region"), 10), sub = z.getAttribute("data-sub");
-        if (MODALITY === "CT") setRegion(ctGroupFromBodyZone(reg, sub));
-        else setRegion(reg, sub);
-      });
-    });
-    // bấm lên đốt cột sống (mặt sau)
-    Array.prototype.forEach.call(document.querySelectorAll(".spineseg, .spineseg2"), function (s) {
-      s.addEventListener("click", function () {
-        var reg = parseInt(s.getAttribute("data-region"), 10), sub = s.getAttribute("data-sub");
-        if (MODALITY === "CT") setRegion(2);
-        else setRegion(reg, sub);
-      });
-    });
-    // nút Mặt trước / Mặt sau
-    var fig = document.querySelector(".bodyfig"), vt = document.getElementById("viewtoggle");
-    var mapBtn = document.getElementById("mapBtn"), mapPanel = document.getElementById("mapPanel");
-    if (mapBtn && mapPanel) mapBtn.onclick = function () { var open = mapPanel.hidden; mapPanel.hidden = !open; mapBtn.setAttribute("aria-expanded", open ? "true" : "false"); };
-    if (vt) Array.prototype.forEach.call(vt.querySelectorAll(".vbtn"), function (b) {
-      b.addEventListener("click", function () {
-        Array.prototype.forEach.call(vt.children, function (c) { c.classList.remove("active"); });
-        b.classList.add("active");
-        if (fig) {
-          var v = b.getAttribute("data-view");
-          fig.classList.toggle("back", v === "back");
-          fig.classList.toggle("side", v === "side");
-        }
-      });
-    });
 
     function setRegion(id, sub) {
       var r = byId[id]; if (!r) return;
@@ -533,14 +451,6 @@
       Array.prototype.forEach.call(regionsBox.children, function (c) {
         c.classList.toggle("active", c.getAttribute("data-rid") === String(id));
       });
-      if (MODALITY !== "CT") {
-        Array.prototype.forEach.call(zones, function (z) {
-          z.classList.toggle("active", z.getAttribute("data-region") === String(id) &&
-            (!curSub || z.getAttribute("data-sub") === curSub));
-        });
-      } else {
-        Array.prototype.forEach.call(zones, function (z) { z.classList.remove("active"); });
-      }
       techBox.innerHTML = "";
       var items = r.items;
       if (curSub) items = items.filter(function (it) { return SUBF[curSub].re.test(it.ten || ""); });
