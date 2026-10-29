@@ -136,7 +136,10 @@
   .pd-actions button:hover { border-color: var(--brand); }
   .pd-hint { font-size: 11px; color: var(--text-soft); margin-top: 4px; text-align: right; }
   .pd-top { display: grid; grid-template-columns: minmax(230px, 290px) minmax(0, 1fr); gap: 16px; align-items: stretch; margin-bottom: 14px; }
-  .pd-top.noimg { grid-template-columns: 1fr; max-width: 560px; }
+  .pd-top.noimg { grid-template-columns: 1fr; max-width: 860px; }
+  /* không có ảnh (CT/MRI): thông số dạng chữ dài -> 2 cột nhãn | giá trị căn trái, dễ đọc */
+  .pd-top.noimg .pd-prow { display: grid; grid-template-columns: minmax(130px, 32%) 1fr; align-items: start; }
+  .pd-top.noimg .pd-prow b { text-align: left; font-weight: 600; }
   @media (max-width: 760px) { .pd-top, .pd-top.noimg { grid-template-columns: 1fr; max-width: none; } }
   .pd-params { border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); padding: 2px 14px 8px; height: 100%; box-sizing: border-box; }
   .pd-kv { padding: 12px 0 10px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
@@ -159,14 +162,24 @@
   .ptable td.k { width: 42%; color: var(--text-soft); background: var(--surface-2); font-weight: 600; }
   .ptable td.v { font-weight: 600; }
   /* các mục nội dung chảy thành 2–3 cột theo bề rộng (masonry bằng CSS columns) */
-  .psecs { column-width: 270px; column-gap: 26px; }
-  .psec { margin: 0 0 12px; break-inside: avoid; -webkit-column-break-inside: avoid; }
+  /* lưới mục nội dung: tự xếp theo bề rộng; mục dài/bảng trải hết hàng (không còn dồn về một cột) */
+  .psecs { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px 26px; align-items: start; }
+  .psec { margin: 0; min-width: 0; }
+  .psec.wide { grid-column: 1 / -1; }
+  .psec.wide ul { columns: 2; column-gap: 32px; }
+  .psec.wide li { break-inside: avoid; -webkit-column-break-inside: avoid; }
+  @media (max-width: 760px) { .psec.wide ul { columns: 1; } }
+  /* mục dạng bước: huy hiệu số thay dấu chấm đầu dòng */
+  .psec.steps ul { list-style: none; padding-left: 0; }
+  .psec.steps li { display: flex; gap: 9px; align-items: flex-start; margin-bottom: 7px; }
+  .psec.steps .n { flex: none; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; display: grid; place-items: center;
+                   background: var(--brand-wash); color: var(--brand); font-size: 12px; font-weight: 800; line-height: 1; margin-top: 1px; }
   .psec h4 { display:flex; align-items:center; gap:8px; margin: 0 0 5px; font-size: 13px; font-weight: 700;
              color: var(--brand-ink); }
   .psec h4::before { content:""; width:9px; height:9px; background:var(--brand); transform:rotate(45deg); border-radius:2px; flex:none; }
   .psec ul { margin: 0; padding-left: 20px; } .psec li { margin-bottom: 4px; font-size: 13.5px; }
   /* section chứa bảng: chiếm trọn chiều ngang (thoát khỏi multicol) */
-  .psec-full { column-span: all; -webkit-column-span: all; break-inside: avoid; }
+  .psec-full { grid-column: 1 / -1; }
   .pbang { overflow-x: auto; margin: 2px 0 4px; -webkit-overflow-scrolling: touch; }
   .pbang table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
   .pbang th, .pbang td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
@@ -587,10 +600,24 @@
                 return '<tr>' + (r || []).map(function (c) { return '<td>' + esc(c) + '</td>'; }).join("") + '</tr>';
               }).join("") + '</tbody></table></div>';
           }
-          if (s.items && s.items.length) {
-            body += '<ul>' + s.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>';
+          var items = s.items || [], extra = "";
+          if (items.length) {
+            // mục dài (nhiều ý / nhiều chữ) trải hết chiều rộng và chia danh sách thành 2 cột
+            var textLen = items.join(" ").length;
+            if (!full && (items.length >= 5 || textLen > 420)) extra += " wide";
+            // các ý đều bắt đầu bằng số thứ tự -> trình bày dạng bước có huy hiệu số
+            var isSteps = items.length >= 2 && items.every(function (x) { return /^\s*\d+\s*[.)]\s+/.test(x); });
+            if (isSteps) {
+              extra += " steps";
+              body += '<ul>' + items.map(function (x) {
+                var m = /^\s*(\d+)\s*[.)]\s+([\s\S]*)$/.exec(x);
+                return '<li><b class="n">' + esc(m[1]) + '</b><span>' + esc(m[2]) + '</span></li>';
+              }).join("") + '</ul>';
+            } else {
+              body += '<ul>' + items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>';
+            }
           }
-          h += '<div class="psec' + full + '"><h4>' + esc(s.tieuDe) + '</h4>' + body + '</div>';
+          h += '<div class="psec' + full + extra + '"><h4>' + esc(s.tieuDe) + '</h4>' + body + '</div>';
         });
         h += '</div>';
       }
