@@ -338,7 +338,7 @@
       var f = panel.querySelector("iframe"); if (f) f.style.height = Math.max(480, d.sotayH + 4) + "px";
     });
     function iframePane(src, title) {
-      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261038";
+      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261039";
       var wrap = el("div");
       wrap.innerHTML = '<iframe src="' + src + '" title="' + esc(title) + '" scrolling="no" ' +
         'style="display:block;width:100%;height:720px;border:1px solid var(--line);border-radius:10px;background:var(--bg)"></iframe>';
@@ -351,7 +351,7 @@
       iframePane("chon-protocol.html?embed=1&hideparams=1", "Chọn protocol X-quang");
     }
     function renderMRI(sub) {
-      if (sub === 1) { iframePane("chon-protocol.html?embed=1&modality=MRI&region=12&nopk=1", "Thông số & An toàn MRI"); return; }
+      if (sub === 1) { iframePane("chon-protocol.html?embed=1&modality=MRI&region=9&nopk=1&onlyparams=1", "Thông số & An toàn MRI"); return; }
       iframePane("chon-protocol.html?embed=1&modality=MRI&hideparams=1", "Protocol MRI");
     }
     function renderCT(sub) {

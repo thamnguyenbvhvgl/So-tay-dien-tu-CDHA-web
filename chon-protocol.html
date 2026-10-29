@@ -335,15 +335,17 @@
       { id:6,  ten:"Chi & các khớp",        en:"Limbs & Joints",      icon:"🦿", color:"#8a5a2b" },
       { id:7,  ten:"Vú",                    en:"Breast",              icon:"🎗️", color:"#d98aa6" },
       { id:8,  ten:"An toàn MRI",            en:"MRI Safety",          icon:"⚠️", color:"#b2403a" },
-      { id:9,  ten:"Thông số MRI",           en:"Parameters",          icon:"⚙️", color:"#596273" },
+      { id:9,  ten:"Bảng tóm tắt các thông số MRI", en:"Parameters summary", icon:"⚙️", color:"#596273" },
       { id:12, ten:"Chuỗi xung & Thông số", en:"Sequences & Physics", icon:"🎚️", color:"#5a6679" }
     ];
     var REGIONS = (MODALITY === "CT") ? CT_REGIONS
                 : (MODALITY === "MRI") ? MRI_GROUPS
                 : BODY.concat(EXTRAS[MODALITY] || []);
-    // id nhóm "Thông số" theo từng loại — ẩn khỏi danh sách vùng khi ?hideparams=1 (đã có tab riêng)
-    var PARAMS_RID = { "X-quang": 8, "CT": 7, "MRI": 12 }[MODALITY];
-    if (P.hideparams === "1" && PARAMS_RID) REGIONS = REGIONS.filter(function (g) { return g.id !== PARAMS_RID; });
+    // nhóm "Thông số & An toàn" theo từng loại — ẩn khỏi danh sách vùng giải phẫu khi ?hideparams=1 (hiện ở tab riêng)
+    var PARAMS_RIDS = { "X-quang": [8], "CT": [7], "MRI": [8, 9, 12] }[MODALITY] || [];
+    if (P.hideparams === "1") REGIONS = REGIONS.filter(function (g) { return PARAMS_RIDS.indexOf(g.id) < 0; });
+    // tab "Thông số & An toàn": chỉ hiện đúng các nhóm thông số/an toàn
+    if (P.onlyparams === "1") REGIONS = REGIONS.filter(function (g) { return PARAMS_RIDS.indexOf(g.id) >= 0; });
     // CT: dịch vùng cơ thể trên hình người → nhóm danh mục CT
     function ctGroupFromBodyZone(bodyRegion, sub) {
       if (sub && /^cs-/.test(sub)) return 2;      // đốt sống → Cột sống
