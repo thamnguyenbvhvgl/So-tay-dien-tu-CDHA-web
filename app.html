@@ -289,7 +289,7 @@
         subtabsBox.appendChild(t);
       });
       renderPanel(s, curSub);
-      try { history.replaceState(null, "", "#" + id); } catch (e) {}
+      try { history.replaceState(null, "", "#" + id + (curSub ? "/" + curSub : "")); } catch (e) {}
       window.scrollTo(0,0);
     }
 
@@ -475,9 +475,10 @@
     };
 
     // khởi động: theo hash (#home hoặc #1..#5), mặc định Trang chủ
-    var h = (location.hash || "").replace("#","");
-    var ini = parseInt(h, 10);
-    if (ini >= 1 && ini <= 5) selectSection(ini, 0); else showHome();
+    // #<phân hệ>/<tab phụ>, ví dụ #3/2 = CT > Máy tính liều & eGFR (dùng cho mã QR, link chia sẻ)
+    var h = (location.hash || "").replace("#","").split("/");
+    var ini = parseInt(h[0], 10), iniSub = parseInt(h[1], 10) || 0;
+    if (ini >= 1 && ini <= 5) selectSection(ini, iniSub); else showHome();
 
     // ===== Lượt truy cập (Abacus — không cần đăng ký) + Góp ý (Google Form) =====
     (function () {

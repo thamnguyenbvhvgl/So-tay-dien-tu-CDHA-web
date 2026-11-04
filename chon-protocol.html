@@ -487,6 +487,7 @@
       var list = el("div", "tlist");
       items.forEach(function (it) {
         var b = el("button", "titem" + (it.khanCap ? " khancap" : ""), esc(it.ten));
+        if (it.id) b.setAttribute("data-id", it.id);
         b.onclick = function () {
           Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); });
           b.classList.add("active");
@@ -685,6 +686,16 @@
     (function () {
       var rq = parseInt(P.region, 10);
       if (rq && byId[rq]) setRegion(rq);
+      // ?item=<id>: mở thẳng một kỹ thuật/protocol (dùng cho mã QR, link chia sẻ)
+      if (P.item) {
+        var want = QT.filter(function (it) { return it.id === P.item; })[0];
+        if (want) {
+          var rid = regionOf(want);
+          if (byId[rid]) setRegion(rid);
+          var btn = techBox.querySelector('[data-id="' + P.item.replace(/"/g, "") + '"]');
+          if (btn) btn.click();
+        }
+      }
     })();
   })();
   </script>
