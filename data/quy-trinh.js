@@ -6415,14 +6415,14 @@ window.SOTAY_QUYTRINH = [
         "Coronal: song song bờ sau các thân đốt sống cổ — đánh giá rễ thần kinh và đám rối cánh tay."
       ]},
       { tieuDe: "Các chuỗi xung thường quy & vai trò", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Sagittal T1 TSE", "Sagittal", "450–550 / 10–12 / –", "3.0 · 220–240", "Giải phẫu thân sống, tủy xương, thoái hóa Modic 2"],
-          ["Sagittal T2 TSE", "Sagittal", "3000–3500 / 100–110 / –", "3.0 · 220–240", "DNT sáng, thoát vị đĩa đệm, hẹp ống sống cổ"],
-          ["Sagittal STIR", "Sagittal", "3500–4000 / 60 / 150", "3.0 · 220–240", "Nhạy nhất với phù tủy xương, dập dây chằng sau"],
-          ["Axial T2* mFFE", "Axial", "600–800 / 16–20 / –", "3.0 · 180–200", "Phân biệt gai xương vôi hóa (đen) vs thoát vị đĩa đệm mềm"],
-          ["Axial T2 TSE", "Axial", "3500–4000 / 100–110 / –", "3.0 · 180–200", "Chèn ép rễ thần kinh trong lỗ liên hợp"],
-          ["Coronal T2 TSE", "Coronal", "3000–3500 / 100 / –", "3.0 · 200–220", "Đám rối thần kinh cánh tay, vẹo cột sống cổ"]
+          ["Sagittal T1 TSE", "Sagittal", "450–550", "10–12", "–", "3.0", "220–240", "Giải phẫu thân sống, tủy xương, thoái hóa Modic 2"],
+          ["Sagittal T2 TSE", "Sagittal", "3000–3500", "100–110", "–", "3.0", "220–240", "DNT sáng, thoát vị đĩa đệm, hẹp ống sống cổ"],
+          ["Sagittal STIR", "Sagittal", "3500–4000", "60", "150", "3.0", "220–240", "Nhạy nhất với phù tủy xương, dập dây chằng sau"],
+          ["Axial T2* mFFE", "Axial", "600–800", "16–20", "–", "3.0", "180–200", "Phân biệt gai xương vôi hóa (đen) vs thoát vị đĩa đệm mềm"],
+          ["Axial T2 TSE", "Axial", "3500–4000", "100–110", "–", "3.0", "180–200", "Chèn ép rễ thần kinh trong lỗ liên hợp"],
+          ["Coronal T2 TSE", "Coronal", "3000–3500", "100", "–", "3.0", "200–220", "Đám rối thần kinh cánh tay, vẹo cột sống cổ"]
         ]
       }},
       { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
@@ -6432,10 +6432,10 @@ window.SOTAY_QUYTRINH = [
         "U tủy cổ / u dây thần kinh: BẮT BUỘC TIÊM — T1 FS + C ba mặt phẳng hoặc 3D T1 e-THRIVE cắt mỏng đẳng hướng 1 mm."
       ]},
       { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Sagittal T1 FS + C", "Sagittal", "500–600 / 10–12 / –", "3.0 · 220–240", "U tủy cổ, viêm thân sống – đĩa đệm sau tiêm Gd"],
-          ["Axial T1 FS + C", "Axial", "500–600 / 10–12 / –", "3.0 · 180–200", "Viền ngấm thuốc áp xe ngoài màng cứng"]
+          ["Sagittal T1 FS + C", "Sagittal", "500–600", "10–12", "–", "3.0", "220–240", "U tủy cổ, viêm thân sống – đĩa đệm sau tiêm Gd"],
+          ["Axial T1 FS + C", "Axial", "500–600", "10–12", "–", "3.0", "180–200", "Viền ngấm thuốc áp xe ngoài màng cứng"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6468,12 +6468,12 @@ window.SOTAY_QUYTRINH = [
         "Axial: vuông góc đoạn tủy ngực tổn thương; do ống sống ngực hẹp nên lát cắt mỏng 3.0–3.5 mm."
       ]},
       { tieuDe: "Các chuỗi xung cốt lõi & vai trò", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Sagittal T1 TSE", "Sagittal", "400–500 / 10–12 / –", "3.5 · 320–350", "Hình thái thân đốt sống, tủy xương T-spine"],
-          ["Sagittal T2 TSE", "Sagittal", "3200–3800 / 100–120 / –", "3.5 · 320–350", "DNT sáng, diện chèn ép tủy ngực"],
-          ["Sagittal STIR", "Sagittal", "3500–4000 / 60–70 / 150", "3.5 · 320–350", "Bắt buộc: phát hiện sớm di căn xương & viêm đĩa đệm"],
-          ["Axial T2 TSE", "Axial", "3500–4200 / 100–110 / –", "3.5 · 200–220", "Cắt mỏng khu trú qua đoạn tủy ngực nghi tổn thương"]
+          ["Sagittal T1 TSE", "Sagittal", "400–500", "10–12", "–", "3.5", "320–350", "Hình thái thân đốt sống, tủy xương T-spine"],
+          ["Sagittal T2 TSE", "Sagittal", "3200–3800", "100–120", "–", "3.5", "320–350", "DNT sáng, diện chèn ép tủy ngực"],
+          ["Sagittal STIR", "Sagittal", "3500–4000", "60–70", "150", "3.5", "320–350", "Bắt buộc: phát hiện sớm di căn xương & viêm đĩa đệm"],
+          ["Axial T2 TSE", "Axial", "3500–4200", "100–110", "–", "3.5", "200–220", "Cắt mỏng khu trú qua đoạn tủy ngực nghi tổn thương"]
         ]
       }},
       { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
@@ -6483,10 +6483,10 @@ window.SOTAY_QUYTRINH = [
         "Viêm tủy cắt ngang / MS tủy ngực: BẮT BUỘC TIÊM — T1 FS + C tìm mảng hủy myelin ngấm thuốc hoạt động."
       ]},
       { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Sagittal T1 FS + C", "Sagittal", "450–550 / 10–12 / –", "3.5 · 320–350", "U tủy ngực, di căn xương, mảng viêm tủy cắt ngang"],
-          ["Axial T1 FS + C", "Axial", "450–550 / 10–12 / –", "3.5 · 200–220", "Mức độ xâm lấn màng tủy & phần mềm quanh sống"]
+          ["Sagittal T1 FS + C", "Sagittal", "450–550", "10–12", "–", "3.5", "320–350", "U tủy ngực, di căn xương, mảng viêm tủy cắt ngang"],
+          ["Axial T1 FS + C", "Axial", "450–550", "10–12", "–", "3.5", "200–220", "Mức độ xâm lấn màng tủy & phần mềm quanh sống"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6520,13 +6520,13 @@ window.SOTAY_QUYTRINH = [
         "Coronal Oblique (khớp cùng chậu): nghiêng song song bề mặt xương cùng — bắt buộc trong viêm khớp cùng chậu."
       ]},
       { tieuDe: "Các chuỗi xung cốt lõi & vai trò", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Sagittal T1 TSE", "Sagittal", "400–500 / 10–12 / –", "4.0 · 260–280", "Giải phẫu thân sống, trượt đốt sống, thoái hóa Modic"],
-          ["Sagittal T2 TSE", "Sagittal", "3000–3600 / 100–110 / –", "4.0 · 260–280", "Thoát vị đĩa đệm, hẹp ống sống thắt lưng"],
-          ["Sagittal STIR", "Sagittal", "3500–4000 / 60–70 / 150", "4.0 · 260–280", "Phù tủy xương Modic 1, gãy xẹp xốp xương cấp"],
-          ["Axial T2 TSE", "Axial", "3500–4000 / 110–120 / –", "4.0 · 180–200", "Cắt song song từng đĩa đệm (L3/4, L4/5, L5/S1)"],
-          ["Coronal Oblique STIR", "Coronal Obl.", "3500–4000 / 60–70 / 150", "3.0 · 260–280", "Khảo sát khớp cùng chậu"]
+          ["Sagittal T1 TSE", "Sagittal", "400–500", "10–12", "–", "4.0", "260–280", "Giải phẫu thân sống, trượt đốt sống, thoái hóa Modic"],
+          ["Sagittal T2 TSE", "Sagittal", "3000–3600", "100–110", "–", "4.0", "260–280", "Thoát vị đĩa đệm, hẹp ống sống thắt lưng"],
+          ["Sagittal STIR", "Sagittal", "3500–4000", "60–70", "150", "4.0", "260–280", "Phù tủy xương Modic 1, gãy xẹp xốp xương cấp"],
+          ["Axial T2 TSE", "Axial", "3500–4000", "110–120", "–", "4.0", "180–200", "Cắt song song từng đĩa đệm (L3/4, L4/5, L5/S1)"],
+          ["Coronal Oblique STIR", "Coronal Obl.", "3500–4000", "60–70", "150", "3.0", "260–280", "Khảo sát khớp cùng chậu"]
         ]
       }},
       { tieuDe: "Bệnh lý, chấn thương & quy định tiêm thuốc (+C)", items: [
@@ -6536,10 +6536,10 @@ window.SOTAY_QUYTRINH = [
         "Viêm khớp cùng chậu: Coronal STIR cắt mỏng và Coronal T1 FS + C khu trú khớp cùng chậu."
       ]},
       { tieuDe: "Chuỗi xung sau tiêm (+C)", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness · FOV (mm)", "Vai trò chẩn đoán"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "FOV (mm)", "Vai trò chẩn đoán"],
         rows: [
-          ["Axial T1 FS + C", "Axial", "400–500 / 10–12 / –", "4.0 · 180–200", "Phân biệt mô xơ sẹo mổ cũ (ngấm) vs thoát vị tái phát"],
-          ["Sagittal T1 FS + C", "Sagittal", "400–500 / 10–12 / –", "4.0 · 260–280", "Xơ sẹo mổ cũ, thoát vị tái phát, bệnh lý cột sống (lao…)"]
+          ["Axial T1 FS + C", "Axial", "400–500", "10–12", "–", "4.0", "180–200", "Phân biệt mô xơ sẹo mổ cũ (ngấm) vs thoát vị tái phát"],
+          ["Sagittal T1 FS + C", "Sagittal", "400–500", "10–12", "–", "4.0", "260–280", "Xơ sẹo mổ cũ, thoát vị tái phát, bệnh lý cột sống (lao…)"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6655,14 +6655,14 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE", "Hô hấp & ghi chú"],
+        cols: ["Chuỗi xung", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE", "Hô hấp & ghi chú"],
         rows: [
-          ["Dual-Echo FFE (In/Out)", "120–150 / In 4.6 · Out 2.3", "5.0mm/10% · 350–400", "1 · 1.5", "Nín thở 15s; lấy đồng thời In & Out-of-Phase"],
-          ["Axial T2 TSE FS", "1800–2500 / 80–100", "5.0mm/10% · 350–400", "2 · 1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
-          ["Axial SS-TSE (HASTE)", "800–1000 / 80–90", "5.0mm/10% · 350–400", "1 · Off", "Nín thở nhẹ / thở tự do (<1s/lát); khảo sát nhanh"],
-          ["3D e-THRIVE Dynamic", "4.0–5.0 / 2.0–2.4", "2.0mm/0% · 360–400", "1 · 1.8", "Nín thở 12–15s/thì; T1 3D xóa mỡ, 4 thì sau tiêm"],
-          ["MRCP 3D DRIVE", "1500–2000 / 650–700", "1.5mm/0% · 300–320", "1 · 1.5", "Respiratory Triggered; T2 TE cực dài dựng cây đường mật"],
-          ["Free-Breathing DWI", "3000–4000 / 65–75", "5.0mm/10% · 360–400", "4–6 · 1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
+          ["Dual-Echo FFE (In/Out)", "120–150", "In 4.6 · Out 2.3", "5.0mm", "10%", "350–400", "1", "1.5", "Nín thở 15s; lấy đồng thời In & Out-of-Phase"],
+          ["Axial T2 TSE FS", "1800–2500", "80–100", "5.0mm", "10%", "350–400", "2", "1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
+          ["Axial SS-TSE (HASTE)", "800–1000", "80–90", "5.0mm", "10%", "350–400", "1", "Off", "Nín thở nhẹ / thở tự do (<1s/lát); khảo sát nhanh"],
+          ["3D e-THRIVE Dynamic", "4.0–5.0", "2.0–2.4", "2.0mm", "0%", "360–400", "1", "1.8", "Nín thở 12–15s/thì; T1 3D xóa mỡ, 4 thì sau tiêm"],
+          ["MRCP 3D DRIVE", "1500–2000", "650–700", "1.5mm", "0%", "300–320", "1", "1.5", "Respiratory Triggered; T2 TE cực dài dựng cây đường mật"],
+          ["Free-Breathing DWI", "3000–4000", "65–75", "5.0mm", "10%", "360–400", "4–6", "1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6710,13 +6710,13 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số các chuỗi thở tự do (1.5T Philips)", bang: {
-        cols: ["Chuỗi xung", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE", "Hô hấp & ghi chú"],
+        cols: ["Chuỗi xung", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE", "Hô hấp & ghi chú"],
         rows: [
-          ["Axial T2 TSE FS", "1800–2500 / 80–100", "5.0mm/10% · 350–400", "2 · 1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
-          ["Axial SS-TSE (HASTE)", "800–1000 / 80–90", "5.0mm/10% · 350–400", "1 · Off", "Thở tự do (<1s/lát); khảo sát nhanh toàn bụng"],
-          ["4D FreeBreathing 3D", "4.5–5.5 / 2.1–2.5", "2.5mm/0% · 360–400", "1 · Off", "Thở tự do hoàn toàn (Radial Stack-of-Stars 3–5 phút)"],
-          ["MRCP 3D DRIVE", "1500–2000 / 650–700", "1.5mm/0% · 300–320", "1 · 1.5", "Respiratory Triggered / Navigator; dựng cây đường mật"],
-          ["Free-Breathing DWI", "3000–4000 / 65–75", "5.0mm/10% · 360–400", "4–6 · 1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
+          ["Axial T2 TSE FS", "1800–2500", "80–100", "5.0mm", "10%", "350–400", "2", "1.5", "Respiratory Triggered (đai thở); hình thái nhu mô"],
+          ["Axial SS-TSE (HASTE)", "800–1000", "80–90", "5.0mm", "10%", "350–400", "1", "Off", "Thở tự do (<1s/lát); khảo sát nhanh toàn bụng"],
+          ["4D FreeBreathing 3D", "4.5–5.5", "2.1–2.5", "2.5mm", "0%", "360–400", "1", "Off", "Thở tự do hoàn toàn (Radial Stack-of-Stars 3–5 phút)"],
+          ["MRCP 3D DRIVE", "1500–2000", "650–700", "1.5mm", "0%", "300–320", "1", "1.5", "Respiratory Triggered / Navigator; dựng cây đường mật"],
+          ["Free-Breathing DWI", "3000–4000", "65–75", "5.0mm", "10%", "360–400", "4–6", "1.5", "Thở tự do; b-values 0, 50, 800 s/mm²"]
         ]
       }},
       { tieuDe: "Lưu ý", items: [
@@ -6798,13 +6798,13 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Mục đích"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Mục đích"],
         rows: [
-          ["Axial T1 TSE", "Axial", "500 / 10", "3.5mm/10% · 230–250", "Giải phẫu tủy xương nền sọ & mỡ khoang quanh họng"],
-          ["Axial T2 FS", "Axial", "3800 / 80", "3.5mm/10% · 230–250", "Xóa mỡ bộc lộ u, phù nề & hạch cổ sâu"],
-          ["Axial DWI", "Axial", "3200 / 70", "3.5mm/10% · 230–250", "b0, b500, b1000 + ADC phân biệt lành vs ác"],
-          ["Axial T1 FS + C", "Axial", "550 / 10", "3.5mm/10% · 230–250", "BẮT BUỘC xóa mỡ, từ nền sọ xuống quai ĐMC"],
-          ["Cor/Sag T1 FS + C", "Cor/Sag", "550 / 10", "3.5mm/10% · 230–250", "Đánh giá lan rộng chiều dọc nền sọ & hạ họng"]
+          ["Axial T1 TSE", "Axial", "500", "10", "3.5mm", "10%", "230–250", "Giải phẫu tủy xương nền sọ & mỡ khoang quanh họng"],
+          ["Axial T2 FS", "Axial", "3800", "80", "3.5mm", "10%", "230–250", "Xóa mỡ bộc lộ u, phù nề & hạch cổ sâu"],
+          ["Axial DWI", "Axial", "3200", "70", "3.5mm", "10%", "230–250", "b0, b500, b1000 + ADC phân biệt lành vs ác"],
+          ["Axial T1 FS + C", "Axial", "550", "10", "3.5mm", "10%", "230–250", "BẮT BUỘC xóa mỡ, từ nền sọ xuống quai ĐMC"],
+          ["Cor/Sag T1 FS + C", "Cor/Sag", "550", "10", "3.5mm", "10%", "230–250", "Đánh giá lan rộng chiều dọc nền sọ & hạ họng"]
         ]
       }},
       { tieuDe: "Lưu ý", items: [
@@ -6844,10 +6844,10 @@ window.SOTAY_QUYTRINH = [
         "T1 FS + C xóa hoàn toàn mỡ hốc mắt, nổi bật ngấm thuốc dây thần kinh thị & cơ vận nhãn."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Mục đích"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Mục đích"],
         rows: [
-          ["Coronal T2 FS", "Coronal", "3500 / 80", "3.0mm/0% · 180–200", "Vuông góc dây TK thị, xóa mỡ hốc mắt"],
-          ["T1 FS + C (Ax/Cor/Sag-Obl)", "3 mặt phẳng", "550 / 10", "3.5mm · 230–250", "Bắt buộc xóa mỡ; nổi bật ngấm thuốc TK thị & cơ vận nhãn"]
+          ["Coronal T2 FS", "Coronal", "3500", "80", "3.0mm", "0%", "180–200", "Vuông góc dây TK thị, xóa mỡ hốc mắt"],
+          ["T1 FS + C (Ax/Cor/Sag-Obl)", "3 mặt phẳng", "550", "10", "3.5mm", "—", "230–250", "Bắt buộc xóa mỡ; nổi bật ngấm thuốc TK thị & cơ vận nhãn"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6879,10 +6879,10 @@ window.SOTAY_QUYTRINH = [
         "Sau tiêm: 3D T1 FS + C (3D e-THRIVE / MP-RAGE) cắt mỏng hố sau — u ngấm thuốc rõ."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Mục đích"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Mục đích"],
         rows: [
-          ["3D DRIVE / CISS", "Axial 3D", "1500 / 200", "0.7mm/0% · 180–200", "Dựng 3D khảo sát dây VII, VIII trong góc cầu tiểu não"],
-          ["3D T1 FS + C", "3D hố sau", "e-THRIVE / MP-RAGE", "~1.5mm · hố sau", "U dây thần kinh ngấm thuốc (acoustic neuroma)"]
+          ["3D DRIVE / CISS", "Axial 3D", "1500", "200", "0.7mm", "0%", "180–200", "Dựng 3D khảo sát dây VII, VIII trong góc cầu tiểu não"],
+          ["3D T1 FS + C", "3D hố sau", "e-THRIVE", "MP-RAGE", "~1.5mm", "—", "hố sau", "U dây thần kinh ngấm thuốc (acoustic neuroma)"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -6946,15 +6946,15 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "4.0mm/10% · 220–240", "2 · 1.5"],
-          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800 / 100", "3.0–4.0mm/10% · 200–220", "2 · 1.5"],
-          ["Cor-Obl T2 High-Res", "Coronal Oblique", "3800 / 100", "3.0–4.0mm/10% · 200–220", "2 · 1.5"],
-          ["Axial T1 TSE / T1 FS", "Axial", "500 / 10", "4.0mm/10% · 220–240", "2 · 1.5"],
-          ["Axial DWI (b1000)", "Axial", "3200 / 70", "4.0mm/10% · 220–240", "3 · 1.8"],
-          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5 / 2.2", "2.0mm/0% · 240–260", "1 · 1.5"],
-          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550 / 10", "3.5mm/10% · 220–240", "2 · 1.5"]
+          ["Sagittal T2 TSE", "Sagittal", "3500", "100", "4.0mm", "10%", "220–240", "2", "1.5"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800", "100", "3.0–4.0mm", "10%", "200–220", "2", "1.5"],
+          ["Cor-Obl T2 High-Res", "Coronal Oblique", "3800", "100", "3.0–4.0mm", "10%", "200–220", "2", "1.5"],
+          ["Axial T1 TSE / T1 FS", "Axial", "500", "10", "4.0mm", "10%", "220–240", "2", "1.5"],
+          ["Axial DWI (b1000)", "Axial", "3200", "70", "4.0mm", "10%", "220–240", "3", "1.8"],
+          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5", "2.2", "2.0mm", "0%", "240–260", "1", "1.5"],
+          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550", "10", "3.5mm", "10%", "220–240", "2", "1.5"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7015,14 +7015,14 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Lát/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["Pelvis Sag T2 TSE", "Sagittal", "3500 / 100", "3.0mm/0% · 200–220", "2 · 1.5"],
-          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800 / 100", "3.0mm/0% · 180–200", "2 · 1.5"],
-          ["Cor T2 High-Res", "Coronal", "3500 / 100", "3.0mm/0% · 180–200", "2 · 1.5"],
-          ["Ax DWI (b0/800/1400–2000)", "Axial Oblique", "3200 / 70", "3.0–4.0mm/0% · 180–220", "3 · 1.8"],
-          ["DCE Dynamic 3D (≤15s/thì)", "Axial", "4.2 / 2.1", "2.0mm/0% · 200–220", "1 · 1.5"],
-          ["Pelvis Staging Ax T1/T2", "Axial", "550 / 10", "4.0–5.0mm/10% · 280–350", "2 · 1.5"]
+          ["Pelvis Sag T2 TSE", "Sagittal", "3500", "100", "3.0mm", "0%", "200–220", "2", "1.5"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "3800", "100", "3.0mm", "0%", "180–200", "2", "1.5"],
+          ["Cor T2 High-Res", "Coronal", "3500", "100", "3.0mm", "0%", "180–200", "2", "1.5"],
+          ["Ax DWI (b0/800/1400–2000)", "Axial Oblique", "3200", "70", "3.0–4.0mm", "0%", "180–220", "3", "1.8"],
+          ["DCE Dynamic 3D (≤15s/thì)", "Axial", "4.2", "2.1", "2.0mm", "0%", "200–220", "1", "1.5"],
+          ["Pelvis Staging Ax T1/T2", "Axial", "550", "10", "4.0–5.0mm", "10%", "280–350", "2", "1.5"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7076,12 +7076,12 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Ghi chú"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Ghi chú"],
         rows: [
-          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "3.5mm/10% · 220–240", "Định vị góc nghiêng ống hậu môn"],
-          ["Ax-Obl T2 FS High-Res", "Axial Oblique", "3800 / 80", "3.0mm/0% · 180–200", "Vuông góc trục ống hậu môn"],
-          ["Cor-Obl T2 FS High-Res", "Coronal Oblique", "3800 / 80", "3.0mm/0% · 180–200", "Song song trục ống hậu môn"],
-          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550 / 10", "3.0mm/0% · 180–200", "BẮT BUỘC xóa mỡ sau tiêm"]
+          ["Sagittal T2 TSE", "Sagittal", "3500", "100", "3.5mm", "10%", "220–240", "Định vị góc nghiêng ống hậu môn"],
+          ["Ax-Obl T2 FS High-Res", "Axial Oblique", "3800", "80", "3.0mm", "0%", "180–200", "Vuông góc trục ống hậu môn"],
+          ["Cor-Obl T2 FS High-Res", "Coronal Oblique", "3800", "80", "3.0mm", "0%", "180–200", "Song song trục ống hậu môn"],
+          ["Ax/Cor T1 FS + C", "Axial / Coronal", "550", "10", "3.0mm", "0%", "180–200", "BẮT BUỘC xóa mỡ sau tiêm"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7133,12 +7133,12 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Ghi chú"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Ghi chú"],
         rows: [
-          ["Sagittal T2 TSE", "Sagittal", "3500 / 100", "3.5mm/10% · 220–240", "Định vị vị trí u (thấp/giữa/cao)"],
-          ["Ax-Obl T2 High-Res", "Axial Oblique", "4000 / 100", "3.0mm/0% · 160–180", "Vuông góc thành trực tràng tại u — quyết định T-stage"],
-          ["Axial DWI (b0/800/1000–1400)", "Axial", "3200 / 70", "3.5mm/0% · 200–220", "Hạch di căn mạc treo; đáp ứng NCRT"],
-          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5 / 2.2", "2.0mm/0% · 220–240", "Chỉ khi nghi u tái phát / xâm lấn"]
+          ["Sagittal T2 TSE", "Sagittal", "3500", "100", "3.5mm", "10%", "220–240", "Định vị vị trí u (thấp/giữa/cao)"],
+          ["Ax-Obl T2 High-Res", "Axial Oblique", "4000", "100", "3.0mm", "0%", "160–180", "Vuông góc thành trực tràng tại u — quyết định T-stage"],
+          ["Axial DWI (b0/800/1000–1400)", "Axial", "3200", "70", "3.5mm", "0%", "200–220", "Hạch di căn mạc treo; đáp ứng NCRT"],
+          ["3D T1 FS (e-THRIVE)", "Axial 3D", "4.5", "2.2", "2.0mm", "0%", "220–240", "Chỉ khi nghi u tái phát / xâm lấn"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7202,14 +7202,14 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["T1W TSE", "Axial / Coronal", "450 / 10", "4.0mm/10% · 180–350", "2 · 1.5"],
-          ["T2W FS", "Axial / Coronal", "3800 / 80", "4.0mm/10% · 180–350", "2 · 1.5"],
-          ["STIR (chi lệch tâm, TI 150)", "Coronal / Sagittal", "3800 / 60", "4.0mm/10% · 220–400", "2 · 1.5"],
-          ["PD FS", "Axial / Coronal", "2800 / 30", "3.5mm/10% · 160–240", "2 · 1.5"],
-          ["Axial DWI", "Axial", "3200 / 70", "4.0mm/10% · 180–350", "3 · 1.8"],
-          ["T1 FS + C", "3 mặt phẳng", "550 / 10", "4.0mm/10% · 180–350", "2 · 1.5"]
+          ["T1W TSE", "Axial / Coronal", "450", "10", "4.0mm", "10%", "180–350", "2", "1.5"],
+          ["T2W FS", "Axial / Coronal", "3800", "80", "4.0mm", "10%", "180–350", "2", "1.5"],
+          ["STIR (chi lệch tâm, TI 150)", "Coronal / Sagittal", "3800", "60", "4.0mm", "10%", "220–400", "2", "1.5"],
+          ["PD FS", "Axial / Coronal", "2800", "30", "3.5mm", "10%", "160–240", "2", "1.5"],
+          ["Axial DWI", "Axial", "3200", "70", "4.0mm", "10%", "180–350", "3", "1.8"],
+          ["T1 FS + C", "3 mặt phẳng", "550", "10", "4.0mm", "10%", "180–350", "2", "1.5"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7240,10 +7240,10 @@ window.SOTAY_QUYTRINH = [
         "Direct MR Arthrography (CTM) khi nghi rách sụn viền SLAP / Bankart mạn tính: tiêm 10–15 ml Gd pha loãng (2 mmol/L) vào ổ khớp dưới hướng dẫn siêu âm / DSA, chụp T1 FS 3 mặt phẳng trong 30 phút."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["PD FS Cor-Obl", "Coronal Oblique", "2800 / 30", "3.0mm/10% · 160–180", "2 · 1.5"],
-          ["T1 TSE Cor-Obl", "Coronal Oblique", "500 / 10", "3.0mm/10% · 160–180", "2 · Off"]
+          ["PD FS Cor-Obl", "Coronal Oblique", "2800", "30", "3.0mm", "10%", "160–180", "2", "1.5"],
+          ["T1 TSE Cor-Obl", "Coronal Oblique", "500", "10", "3.0mm", "10%", "160–180", "2", "Off"]
         ]
       }}
     ],
@@ -7270,10 +7270,10 @@ window.SOTAY_QUYTRINH = [
         "KHÔNG tiêm cho chấn thương thể thao thường quy; IV Gd khi nghi u / viêm / nhiễm trùng sau mổ tái tạo dây chằng."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["PD FS Sag-Obl", "Sagittal Oblique", "2800 / 30", "3.0mm/10% · 150–160", "2 · 1.5"],
-          ["PD FS Coronal", "Coronal", "2800 / 30", "3.0mm/10% · 150–160", "2 · 1.5"]
+          ["PD FS Sag-Obl", "Sagittal Oblique", "2800", "30", "3.0mm", "10%", "150–160", "2", "1.5"],
+          ["PD FS Coronal", "Coronal", "2800", "30", "3.0mm", "10%", "150–160", "2", "1.5"]
         ]
       }}
     ],
@@ -7299,10 +7299,10 @@ window.SOTAY_QUYTRINH = [
         "Direct MR Arthrography (CTM) khi nghi rách sụn viền ổ cối (FAI) trên phim thường."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE / TI (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "TI (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["Coronal STIR (2 bên)", "Coronal", "3800 / 60 / 150", "4.0mm/10% · 360–400", "2 · 1.8"],
-          ["PD FS Ax-Obl (1 bên)", "Axial Oblique", "2800 / 30 / –", "3.0mm/10% · 180–200", "2 · 1.5"]
+          ["Coronal STIR (2 bên)", "Coronal", "3800", "60", "150", "4.0mm", "10%", "360–400", "2", "1.8"],
+          ["PD FS Ax-Obl (1 bên)", "Axial Oblique", "2800", "30", "–", "3.0mm", "10%", "180–200", "2", "1.5"]
         ]
       }}
     ],
@@ -7329,9 +7329,9 @@ window.SOTAY_QUYTRINH = [
         "KHÔNG tiêm cho viêm gân / chấn thương thường quy; IV Gd khi nghi u / viêm / áp xe."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["PD FS Cor-Obl", "Coronal Oblique", "2500 / 30", "3.0mm/10% · 120–140", "2 · Off"]
+          ["PD FS Cor-Obl", "Coronal Oblique", "2500", "30", "3.0mm", "10%", "120–140", "2", "Off"]
         ]
       }}
     ],
@@ -7357,9 +7357,9 @@ window.SOTAY_QUYTRINH = [
         "Direct MR Arthrography khi nghi rách TFCC / dây chằng nội tại; IV Gd khi nghi u / viêm."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["PD FS Coronal", "Coronal", "2500 / 30", "2.5mm/0% · 100–120", "2 · Off"]
+          ["PD FS Coronal", "Coronal", "2500", "30", "2.5mm", "0%", "100–120", "2", "Off"]
         ]
       }}
     ],
@@ -7386,9 +7386,9 @@ window.SOTAY_QUYTRINH = [
         "KHÔNG tiêm cho chấn thương gân / dây chằng thường quy; IV Gd khi nghi u / viêm / áp xe."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "NSA · SENSE"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "NSA", "SENSE"],
         rows: [
-          ["PD FS Sagittal", "Sagittal", "2600 / 30", "3.0mm/10% · 140–160", "2 · 1.5"]
+          ["PD FS Sagittal", "Sagittal", "2600", "30", "3.0mm", "10%", "140–160", "2", "1.5"]
         ]
       }}
     ],
@@ -7445,13 +7445,13 @@ window.SOTAY_QUYTRINH = [
         "Bắt thuốc không dạng khối (NME): phân bố dạng dải (segmental) / dạng ống (ductal) → nguy cơ ác tính cao (DCIS)."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Ghi chú"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Ghi chú"],
         rows: [
-          ["Axial T2W Fat Sat", "Axial", "4000 / 80", "4.0mm/10% · 320–340", "Nang, phù nề, hạch nách"],
-          ["Axial T1W Non-FS", "Axial", "550 / 10", "4.0mm/10% · 320–340", "Mỡ tự nhiên, xuất huyết"],
-          ["Axial DWI (b0/800–1000)", "Axial", "3200 / 70", "4.0mm/0% · 320–340", "ADC; ác tính ADC tối < 1.0"],
-          ["DCE 3D mTHRIVE", "Axial 3D", "4.5 / 2.2", "1.5mm/0% · 320–350", "1 Native + 5–6 thì (+C), 60s/thì"],
-          ["Post-Contrast T1 FS", "Coronal", "550 / 10", "3.0mm/10% · 320–340", "BẮT BUỘC xóa mỡ, đánh giá hạch nách"]
+          ["Axial T2W Fat Sat", "Axial", "4000", "80", "4.0mm", "10%", "320–340", "Nang, phù nề, hạch nách"],
+          ["Axial T1W Non-FS", "Axial", "550", "10", "4.0mm", "10%", "320–340", "Mỡ tự nhiên, xuất huyết"],
+          ["Axial DWI (b0/800–1000)", "Axial", "3200", "70", "4.0mm", "0%", "320–340", "ADC; ác tính ADC tối < 1.0"],
+          ["DCE 3D mTHRIVE", "Axial 3D", "4.5", "2.2", "1.5mm", "0%", "320–350", "1 Native + 5–6 thì (+C), 60s/thì"],
+          ["Post-Contrast T1 FS", "Coronal", "550", "10", "3.0mm", "10%", "320–340", "BẮT BUỘC xóa mỡ, đánh giá hạch nách"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
@@ -7491,11 +7491,11 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm khi: nghi u vú đi kèm, bao xơ co thắt viêm nghi nhiễm trùng, hoặc đánh giá u lympho liên quan túi ngực (BIA-ALCL)."
       ]},
       { tieuDe: "Thông số vận hành 1.5T Philips", bang: {
-        cols: ["Chuỗi xung", "Mặt cắt", "TR / TE (ms)", "Slice thickness/Gap · FOV (mm)", "Ghi chú"],
+        cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Ghi chú"],
         rows: [
-          ["Silicone-only T2W", "Axial", "4500 / 100", "4.0mm/0% · 320–340", "Xóa nước & mỡ, chỉ silicone sáng"],
-          ["Water-only T2W", "Axial", "4000 / 90", "4.0mm/0% · 320–340", "Xóa silicone, bộc lộ dịch & mô vú"],
-          ["Axial T2W FSE Non-FS", "Axial", "4000 / 80", "4.0mm/10% · 320–340", "Vỏ bao: nếp gấp sinh lý vs dải vỡ"]
+          ["Silicone-only T2W", "Axial", "4500", "100", "4.0mm", "0%", "320–340", "Xóa nước & mỡ, chỉ silicone sáng"],
+          ["Water-only T2W", "Axial", "4000", "90", "4.0mm", "0%", "320–340", "Xóa silicone, bộc lộ dịch & mô vú"],
+          ["Axial T2W FSE Non-FS", "Axial", "4000", "80", "4.0mm", "10%", "320–340", "Vỏ bao: nếp gấp sinh lý vs dải vỡ"]
         ]
       }}
     ],
@@ -7643,16 +7643,16 @@ window.SOTAY_QUYTRINH = [
         ]
       }},
       { tieuDe: "Bảng cài đặt vận hành chuẩn 1.5T Philips", bang: {
-        cols: ["Chuỗi xung (Philips)", "TR / TE / TI (ms)", "Flip · Slice · Gap · FOV · NSA", "Ứng dụng lâm sàng"],
+        cols: ["Chuỗi xung (Philips)", "TR (ms)", "TE (ms)", "TI (ms)", "Flip", "Slice", "Gap", "FOV", "NSA", "Ứng dụng lâm sàng"],
         rows: [
-          ["T1W TSE (2D)", "450–650 / 10–15 / –", "90° · 3.0–5.0mm · 10% · 180–240 · NSA 2", "Giải phẫu não, tủy xương, cột sống, cơ xương khớp"],
-          ["T2W TSE (2D)", "3000–4000 / 80–110 / –", "90° · 3.0–5.0mm · 10% · 180–240 · NSA 2", "Bộc lộ tổn thương, DNT sáng, phù nề mô"],
-          ["PDW TSE (2D)", "1500–2500 / 15–30 / –", "90° · 3.0mm · 10% · 150–180 · NSA 2", "Sụn chêm, sụn khớp gối/vai, dây chằng"],
-          ["T2W FLAIR", "8000–9000 / 100–120 / 2000–2200", "90° · 4.0–5.0mm · 10% · 220–240 · NSA 2", "Xóa CSF, phát hiện tổn thương nhu mô não"],
-          ["STIR (T2 Fat Sat)", "3500–4000 / 60–70 / 150–165", "90° · 3.0–4.0mm · 10% · 160–380 · NSA 2", "Xóa mỡ diện rộng, phù tủy xương & viêm nhiễm"],
-          ["T2* mFFE (GRE)", "600–800 / 15–22 / –", "18°–25° · 3.0–4.0mm · 10% · 200–240 · NSA 2", "Nhạy từ: xuất huyết, vôi hóa, gai xương"],
-          ["3D e-THRIVE (T1 FS)", "4.0–5.0 / 1.8–2.3 / –", "10°–12° · 1.5–2.0mm · 0% · 240–380 · NSA 1", "Động học gan, vú, chậu sau tiêm cản quang"],
-          ["3D DRIVE / bTFE", "4.0–6.0 / 2.0–3.0 / –", "45°–60° · 0.6–1.0mm · 0% · 150–180 · NSA 2", "Dây TK sọ V/VII/VIII, cây đường mật"]
+          ["T1W TSE (2D)", "450–650", "10–15", "–", "90°", "3.0–5.0mm", "10%", "180–240", "2", "Giải phẫu não, tủy xương, cột sống, cơ xương khớp"],
+          ["T2W TSE (2D)", "3000–4000", "80–110", "–", "90°", "3.0–5.0mm", "10%", "180–240", "2", "Bộc lộ tổn thương, DNT sáng, phù nề mô"],
+          ["PDW TSE (2D)", "1500–2500", "15–30", "–", "90°", "3.0mm", "10%", "150–180", "2", "Sụn chêm, sụn khớp gối/vai, dây chằng"],
+          ["T2W FLAIR", "8000–9000", "100–120", "2000–2200", "90°", "4.0–5.0mm", "10%", "220–240", "2", "Xóa CSF, phát hiện tổn thương nhu mô não"],
+          ["STIR (T2 Fat Sat)", "3500–4000", "60–70", "150–165", "90°", "3.0–4.0mm", "10%", "160–380", "2", "Xóa mỡ diện rộng, phù tủy xương & viêm nhiễm"],
+          ["T2* mFFE (GRE)", "600–800", "15–22", "–", "18°–25°", "3.0–4.0mm", "10%", "200–240", "2", "Nhạy từ: xuất huyết, vôi hóa, gai xương"],
+          ["3D e-THRIVE (T1 FS)", "4.0–5.0", "1.8–2.3", "–", "10°–12°", "1.5–2.0mm", "0%", "240–380", "1", "Động học gan, vú, chậu sau tiêm cản quang"],
+          ["3D DRIVE / bTFE", "4.0–6.0", "2.0–3.0", "–", "45°–60°", "0.6–1.0mm", "0%", "150–180", "2", "Dây TK sọ V/VII/VIII, cây đường mật"]
         ]
       }},
       { tieuDe: "Nguyên tắc đánh đổi & tối ưu hóa hình ảnh", items: [
