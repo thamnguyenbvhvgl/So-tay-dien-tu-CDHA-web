@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261113">
+<link rel="stylesheet" href="assets/style.css?v=20261114">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -156,7 +156,6 @@
   .pimg { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin: 4px 0 12px; }
   .pimg img { width: 100%; height: 190px; object-fit: contain; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); cursor: zoom-in; display: block; }
   .pimg figcaption { font-size: 11.5px; color: var(--text-soft); text-align: center; margin-top: 3px; }
-  .pimg figcaption .pfsrc { display: block; font-size: 10.5px; opacity: .75; margin-top: 2px; font-style: italic; }
   /* tách 2 hàng: chiều thế người thật / phim đạt yêu cầu */
   .psub { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 700; color: var(--brand-ink); margin: 12px 0 6px; }
   .psub::before { content: ""; width: 8px; height: 8px; background: var(--brand); transform: rotate(45deg); border-radius: 2px; flex: none; }
@@ -469,7 +468,7 @@
           var pfig = function (im) {
             var sc = shortCap(im.caption);
             return '<figure style="margin:0"><img loading="lazy" tabindex="0" title="Bấm để phóng to" src="' + esc(im.src) + '" alt="' + esc(im.caption || "") + '">' +
-                   (sc ? '<figcaption>' + esc(sc) + (im.nguon ? '<span class="pfsrc">Nguồn: ' + esc(im.nguon) + '</span>' : '') + '</figcaption>' : "") + '</figure>';
+                   (sc ? '<figcaption>' + esc(sc) + '</figcaption>' : "") + '</figure>';
           };
           var gCT = [], gPH = [];
           imgs.forEach(function (im) {

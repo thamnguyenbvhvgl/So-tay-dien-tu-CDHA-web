@@ -6112,6 +6112,10 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm thuốc khi thực hiện MRA-CE."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6175,9 +6179,9 @@ window.SOTAY_QUYTRINH = [
       ]}
     ],
     hinhAnh: [
-      { src: "images/mri/mri-so-nao-thuong-quy-acpc.jpg", caption: "Mốc định hướng: trục mép trước – mép sau (AC-PC) trên ảnh Sagittal T1 giữa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.4" },
-      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song trục AC-PC, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
-      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc trục AC-PC, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+      { src: "images/mri/mri-so-nao-moc-the-chai.jpg", caption: "Mốc định hướng: đường nối đầu và gối thể chai trên ảnh Sagittal T1 đường giữa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.4" },
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
@@ -6241,6 +6245,10 @@ window.SOTAY_QUYTRINH = [
         "Coronal FLAIR 3mm vuông góc trục dài hải mã là chuỗi xung cốt lõi — bắt buộc định hướng đúng để phát hiện bất đối xứng thể tích/tín hiệu hai bên hải mã."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-thuy-thai-duong-axial-chech.jpg", caption: "Đặt lát Axial chếch: song song trục dài thùy thái dương – hồi hải mã, phủ từ bờ dưới thùy thái dương tới bờ trên thân thể chai", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.22" },
+      { src: "images/mri/mri-so-thuy-thai-duong-coronal-chech.jpg", caption: "Đặt lát Coronal chếch: vuông góc trục dài hồi hải mã, phủ từ phần sau tiểu não tới bờ trước gối thể chai", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.23" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6263,6 +6271,10 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Cảnh báo", items: [
         "Cavernoma BẮT BUỘC chụp T2*GRE hoặc SWI — các chuỗi xung thường quy có thể bỏ sót tổn thương và vi xuất huyết đi kèm."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-moc-the-chai.jpg", caption: "Mốc định hướng: đường nối đầu và gối thể chai trên ảnh Sagittal T1 đường giữa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.4" },
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" }
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
@@ -6287,6 +6299,10 @@ window.SOTAY_QUYTRINH = [
         "Dùng MRS với TE 135–144 ms để phân biệt u tái phát (tăng Choline) với hoại tử sau xạ trị (tăng Lipid/Lactate)."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6307,6 +6323,10 @@ window.SOTAY_QUYTRINH = [
         "BẮT BUỘC chụp FLAIR + Gd (sau tiêm) — chuỗi xung nhạy nhất phát hiện thâm nhiễm viêm màng mềm (leptomeningitis) và khoang dưới nhện."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6325,6 +6345,10 @@ window.SOTAY_QUYTRINH = [
         "3D DIR (Double Inversion Recovery): khử đồng thời DNT và chất trắng, tăng tương phản mảng MS vỏ/dưới vỏ.",
         "T1W FS + C: đánh giá mảng MS đang hoạt động (ngấm thuốc)."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
@@ -6345,6 +6369,10 @@ window.SOTAY_QUYTRINH = [
         "Xuất huyết nhu mô không do chấn thương: tiêm thuốc T1 + C và FLAIR + C để tìm u / dị dạng ẩn."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc đường nối đầu và gối thể chai, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6361,6 +6389,10 @@ window.SOTAY_QUYTRINH = [
         "Sa sút trí tuệ (Alzheimer): Sagittal T1, Axial T1/T2, DWI, Coronal FLAIR cắt mỏng vuông góc trục dài thùy thái dương, và T1 3D SPGR / MP-RAGE để đo thể tích hải mã.",
         "Bệnh lý ngoại tháp (Parkinson): dùng chuỗi xung Spin Echo (SE) thường quy thay vì Fast Spin Echo (TSE) để đánh giá chính xác tín hiệu nhân xám trung ương."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song đường nối đầu và gối thể chai, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-thuy-thai-duong-coronal-chech.jpg", caption: "Đặt lát Coronal chếch: vuông góc trục dài hồi hải mã, phủ từ phần sau tiểu não tới bờ trước gối thể chai", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.23" }
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
