@@ -6174,6 +6174,11 @@ window.SOTAY_QUYTRINH = [
         "Tra protocol theo từng chỉ định lâm sàng tại mục 'Bảng tra cứu nhanh MRI sọ não theo lâm sàng'."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-nao-thuong-quy-acpc.jpg", caption: "Mốc định hướng: trục mép trước – mép sau (AC-PC) trên ảnh Sagittal T1 giữa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.4" },
+      { src: "images/mri/mri-so-nao-thuong-quy-axial.jpg", caption: "Đặt lát Axial: song song trục AC-PC, phủ từ dưới lỗ chẩm tới đỉnh não", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.5" },
+      { src: "images/mri/mri-so-nao-thuong-quy-coronal.jpg", caption: "Đặt lát Coronal: vuông góc trục AC-PC, phủ từ tiểu não tới thùy trán", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.6" }
+    ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
   {
@@ -6196,12 +6201,16 @@ window.SOTAY_QUYTRINH = [
         "Khảo sát khu trú: FOV 180–200 mm, lát cắt mỏng 2.0–3.0 mm.",
         "T1W Sagittal & Coronal mỏng (2mm) trước tiêm thuốc tương phản.",
         "T2W Coronal FS (xóa mỡ): đánh giá xâm lấn xoang hang và cấu trúc thị giác.",
-        "Dynamic T1 Coronal 5-phase: tiêm 5 ml Gadolinium (1.2–2.0 ml/s), chụp lặp lại liên tục tại 30s, 60s, 90s, 120s.",
+        "Dynamic T1 Coronal 5-phase: tiêm Gd theo cân nặng (0,1 mmol/kg; xem thông số) tốc độ 1,2–2,0 mL/s, chụp lặp lại liên tục tại 30s, 60s, 90s, 120s.",
         "T1W FS+C (Sagittal, Coronal, Axial): chụp toàn bộ sọ sau tiêm để loại trừ tổn thương phối hợp."
       ]},
       { tieuDe: "Lưu ý", items: [
         "Khởi chạy chuỗi Dynamic T1 Coronal đồng thời với lúc bắt đầu bơm thuốc để không bỏ lỡ thì bắt thuốc sớm của vi u."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-so-tuyen-yen-coronal.jpg", caption: "Đặt lát Coronal: trên ảnh Sagittal T1 giữa, lát mỏng phủ từ mỏm yên sau (posterior clinoid) tới mỏm yên trước (anterior clinoid)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.33" },
+      { src: "images/mri/mri-so-tuyen-yen-axial.jpg", caption: "Đặt lát Axial: từ sàn hố yên tới đa giác Willis", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.35" }
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
   },
