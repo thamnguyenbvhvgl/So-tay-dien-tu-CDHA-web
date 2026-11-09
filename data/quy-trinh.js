@@ -4832,11 +4832,7 @@ window.SOTAY_QUYTRINH = [
           ["Xương cực rộng", "400–500", "1500–4000", "Cân bằng xương đá đặc vs hốc khí hòm tai; chuỗi xương con"],
           ["Mô mềm", "35–40", "140–350", "U dây thần kinh VIII, tổn thương hoại tử lan ngoài xương đá"]
         ]
-      }},
-      { tieuDe: "Tiêm thuốc (khi có chỉ định)", items: [
-        "Áp dụng khi nghi u dây thần kinh VIII, u cuộn mạch, dị dạng mạch máu thái dương, nhiễm trùng biến chứng nội sọ.",
-        "Thể tích 100 mL · tốc độ 2.0 mL/s · thời gian trễ 50–70 giây."
-      ]}
+      }}
     ],
     nguon: "Cẩm nang CLVT sọ não – hàm mặt – tai xương đá — Khoa CĐHA BVHVGL"
   },
