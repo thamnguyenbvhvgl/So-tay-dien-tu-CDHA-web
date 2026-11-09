@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261035">
+<link rel="stylesheet" href="assets/style.css?v=20261109">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -22,11 +23,7 @@
   .pb-grid { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 14px; align-items: start; }
   #col-tech { display: block; }
   /* nopk (tab Thông số & An toàn): ẩn thanh vùng + bản đồ */
-  .pb-wrap.nopk .regionbar, .pb-wrap.nopk .mappanel { display: none; }
-  /* cột 1: hình người + ô phân vùng đặt cạnh nhau */
-  .pk-split { display: flex; gap: 12px; align-items: flex-start; }
-  .pk-fig { flex: 0 0 168px; }
-  .pk-tiles { flex: 1 1 auto; min-width: 0; }
+  .pb-wrap.nopk .regionbar { display: none; }
   .pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
             box-shadow: var(--shadow); overflow: hidden; }
   .pb-col > h2 { margin: 0; padding: 11px 14px 2px; font-size: 12px; font-weight: 700;
@@ -37,62 +34,14 @@
 
   /* thanh vùng ngang (phương án C) */
   .regionbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 0 0 10px; }
-  .mapbtn { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 12px 0 8px; border-radius: 999px;
-            border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-  .mapbtn img { width: 18px; height: 26px; object-fit: cover; object-position: top; border-radius: 3px; background: #fff; }
-  .mapbtn:hover, .mapbtn[aria-expanded="true"] { border-color: var(--brand); color: var(--brand); }
-  .rbsep { width: 1px; height: 22px; background: var(--line); margin: 0 2px; }
   .regions { display: flex; flex-wrap: wrap; gap: 6px; }
   .rtile { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 999px;
            border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
   .rtile:hover { border-color: var(--rc,#888); }
-  .rtile .num { font-weight: 800; color: var(--rc,#888); }
+  .rtile .num { font-weight: 800; color: var(--text); }
   .rtile .cnt { color: var(--text-soft); font-size: 11.5px; font-weight: 500; }
   /* ô đang chọn: nền tint tối + viền màu vùng + chữ thường — tương phản đạt */
   .rtile.active { background: var(--surface-2); background: color-mix(in srgb, var(--rc,#888) 16%, var(--surface)); border-color: var(--rc,#888); color: var(--text); }
-  .mappanel { margin: 0 0 12px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
-              display: flex; flex-direction: column; align-items: center; }
-  .mappanel[hidden] { display: none; }
-  .mappanel .bodyfig { width: 100%; max-width: 240px; height: auto; display: block; margin: 0 auto 6px; }
-  /* ===== hình giải phẫu SVG (silhouette da + bộ xương chi tiết) ===== */
-  .bodyfig { width: 100%; max-width: 200px; height: auto; margin: 2px auto 8px; display: block; }
-  .skin { fill: url(#skinG); stroke: #e3a888; stroke-width: 1.1; stroke-linejoin: round; }
-  :root[data-theme="dark"] .skinlayer { opacity: .95; }
-  .skel { opacity: .9; pointer-events: none; }
-  :root[data-theme="dark"] .skel { opacity: .82; }
-  .bone { fill: url(#boneG); stroke: #b19a6e; stroke-width: .6; stroke-linejoin: round; }
-  .bl { fill: none; stroke: #c3b188; stroke-width: 2.2; stroke-linecap: round; }
-  .joint { fill: #efe7d4; stroke: #b19a6e; stroke-width: .8; }
-  .bodyzone { fill-opacity: .24; stroke-width: 2; stroke-linejoin: round; cursor: pointer; transition: fill-opacity .14s; }
-  .bodyzone:hover { fill-opacity: .46; }
-  .bodyzone.active { fill-opacity: .58; }
-  .rnum { font: 800 20px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
-  :root[data-theme="dark"] .rnum { fill: #e3e9f1; stroke: #1b2430; }
-  .bodyhint { text-align: center; font-size: 11.5px; color: var(--text-soft); margin: 0 0 10px; }
-  /* nút Mặt trước / Mặt sau / Nghiêng */
-  .viewtoggle { display: flex; gap: 6px; justify-content: center; margin: 0 0 8px; flex-wrap: wrap; }
-  .vbtn { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
-          border-radius: 999px; padding: 5px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-  .vbtn.active { background: var(--brand); color: #fff; border-color: var(--brand); }
-  /* cột sống (chỉ hiện ở mặt sau) */
-  .bodyfig:not(.back) .spine { display: none; }
-  .spineseg { cursor: pointer; stroke: #fff; stroke-width: 1; fill-opacity: .9; }
-  .spineseg:hover { stroke-width: 2; }
-  .spinelink { font: 800 10px system-ui; fill: #fff; pointer-events: none; }
-  /* chế độ Nghiêng (cột sống) */
-  .bodyfig.side .frontview { display: none; }
-  .bodyfig:not(.side) .sideview { display: none; }
-  .spineseg2 { fill: none; stroke-width: 18; stroke-linecap: round; cursor: pointer; pointer-events: stroke; opacity: .6; transition: opacity .14s; }
-  .spineseg2:hover { stroke-width: 22; opacity: .85; }
-  .spineseg2.on { stroke-width: 22; opacity: .9; }
-  .sidelabel { font: 700 17px system-ui; fill: #39465a; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
-  .modebadge { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--brand-ink);
-    background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; margin: 0 0 10px; }
-  .modebadge b { font-size: 14px; }
-  .modebadge.nu  { color: #b03a6b; border-color: #e6a9c3; background: #fdeef5; }
-  .modebadge.nam { color: #1b63b0; border-color: #a9c6e8; background: #eaf2fc; }
-  :root[data-theme="dark"] .modebadge.nu  { background:#3a2230; border-color:#6e3a53; color:#f3b9d2; }
-  :root[data-theme="dark"] .modebadge.nam { background:#1a2a3e; border-color:#39557a; color:#aeccf0; }
 
   /* cột 2: danh mục kỹ thuật */
   .subnote { font-size: 12.5px; color: var(--brand-ink); background: var(--surface-2);
@@ -133,7 +82,7 @@
   .pd-actions { display: flex; gap: 8px; flex: none; }
   .pd-actions button { height: 36px; padding: 0 14px; border-radius: 999px; font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
                        border: 1px solid var(--line); background: var(--surface-2); color: var(--text); }
-  .pd-actions button.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .pd-actions button.primary { background: var(--brand-solid); border-color: var(--brand); color: #fff; }
   .pd-actions button:hover { border-color: var(--brand); }
   .pd-hint { font-size: 11px; color: var(--text-soft); margin-top: 4px; text-align: right; }
   .pd-top { display: grid; grid-template-columns: minmax(230px, 290px) minmax(0, 1fr); gap: 16px; align-items: stretch; margin-bottom: 14px; }
@@ -184,7 +133,7 @@
   .pbang { overflow-x: auto; margin: 2px 0 4px; -webkit-overflow-scrolling: touch; }
   .pbang table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
   .pbang th, .pbang td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
-  .pbang th { background: var(--brand); color: #fff; font-weight: 700; font-size: 12.5px; }
+  .pbang th { background: var(--brand-solid); color: #fff; font-weight: 700; font-size: 12.5px; }
   .pbang tbody tr:nth-child(even) td { background: var(--surface-2); }
   .pbang td:first-child { font-weight: 600; color: var(--brand-ink); white-space: nowrap; }
   @media (max-width: 560px) { .pbang td:first-child { white-space: normal; } }
@@ -223,12 +172,15 @@
   @media (max-width: 1000px) {
     .pb-grid { grid-template-columns: 1fr; }
   }
-  @media (max-width: 560px) {
-    .pk-split { flex-direction: column; align-items: center; }
-    .pk-fig { flex: 0 0 auto; }
-    .pk-tiles { width: 100%; }
-    .regions { grid-template-columns: 1fr 1fr; }
+  /* In 1 trang: chỉ in phần chi tiết kỹ thuật */
+  @media print {
+    .topstrip, .pb-head, .regionbar, #col-tech, .pd-actions, .pd-hint, .lb { display: none !important; }
+    .pb-grid { display: block !important; }
+    .pb-col { border: none !important; box-shadow: none !important; }
+    body { background: #fff !important; }
+    .psec, table, figure { break-inside: avoid; }
   }
+  @media (max-width: 560px) { .rtile { min-height: 44px; } }
 </style>
 </head>
 <body>
@@ -261,18 +213,23 @@
     </div>
   </div>
 
-  <div class="lb" id="lb" hidden><button id="lbClose" aria-label="Đóng">✕</button><img id="lbImg" alt=""></div>
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Ảnh phóng to" hidden><button id="lbClose" aria-label="Đóng ảnh">✕</button><img id="lbImg" alt=""></div>
 
   <script src="data/quy-trinh.js"></script>
   <script>
   (function () {
     "use strict";
-    var P = {}; (location.search || "").replace(/[?&]([^=&]+)=([^&]*)/g, function (_, k, v) { P[k] = decodeURIComponent(v); return ""; });
+    var P = {}; (location.search || "").replace(/[?&]([^=&]+)=([^&]*)/g, function (_, k, v) { try { P[k] = decodeURIComponent(v.replace(/\+/g, " ")); } catch (e) { P[k] = v; } return ""; });
+    // ?item=<id> (mã QR / link chia sẻ): tự suy phân hệ từ chính mục đó, không bắt buộc kèm ?modality=
+    var ITEM_WANT = null;
+    if (P.item) {
+      ITEM_WANT = (window.SOTAY_QUYTRINH || []).filter(function (x) { return x.id === P.item && !x.an; })[0] || null;
+      if (ITEM_WANT && P.modality !== ITEM_WANT.modality) { P.modality = ITEM_WANT.modality; P.contrast = "all"; }
+    }
     if (P.embed === "1") document.documentElement.setAttribute("data-embed", "1");
     if (P.nopk === "1") { var _g = document.querySelector(".pb-grid"); if (_g) _g.classList.add("nopk"); var _w = document.querySelector(".pb-wrap"); if (_w) _w.classList.add("nopk"); }
     var MODALITY = P.modality || "X-quang";
     var CONTRAST = P.contrast || "all";   // "0" không tiêm · "1" có tiêm · "all"
-    var SEX = P.sex || "nu";
     function contrastOf(it) {
       var t = it.ten || "";
       if (/không tiêm|không thuốc|HRCT|LDCT|calcium|điểm vôi|liều thấp tìm sỏi|Dentascan|nha khoa|Image Gently|nhi khoa liều thấp/i.test(t)) return "0";
@@ -280,6 +237,7 @@
       return "both";
     }
     var QT = (window.SOTAY_QUYTRINH || []).filter(function (x) {
+      if (x.an) return false; // mục đánh dấu an:true = chưa duyệt, không hiển thị
       if (x.modality !== MODALITY) return false;
       if (MODALITY === "CT" && CONTRAST !== "all") {
         var c = contrastOf(x);
@@ -288,10 +246,9 @@
       return true;
     });
     function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
-    function esc(s) { return (s || "").toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+    function esc(s) { return (s || "").toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
     function rx(re, s) { return re.test(s || ""); }
-    var ICON = {1:"💀",2:"🦴",3:"🫁",4:"🩻",5:"🦵",6:"💪",7:"🦶"};
     var BODY = [
       { id:1, ten:"Sọ & Mặt", en:"Skull & Facial", color:"#c0392b" },
       { id:2, ten:"Cổ & Cột sống cổ", en:"Neck & Cervical", color:"#2ba9e0" },
@@ -301,7 +258,6 @@
       { id:6, ten:"Chi trên", en:"Upper Extremities", color:"#d98a00" },
       { id:7, ten:"Chi dưới", en:"Lower Extremities", color:"#c0397b" }
     ];
-    BODY.forEach(function (b) { b.icon = ICON[b.id]; });
     var EXTRAS = {
       "X-quang": [
         { id:9, ten:"XQ đặc biệt (cản quang)", en:"Special / Contrast", icon:"💧", color:"#2b8a9e" },
@@ -347,20 +303,6 @@
     if (P.hideparams === "1") REGIONS = REGIONS.filter(function (g) { return PARAMS_RIDS.indexOf(g.id) < 0; });
     // tab "Thông số & An toàn": chỉ hiện đúng các nhóm thông số/an toàn
     if (P.onlyparams === "1") REGIONS = REGIONS.filter(function (g) { return PARAMS_RIDS.indexOf(g.id) >= 0; });
-    // CT: dịch vùng cơ thể trên hình người → nhóm danh mục CT
-    function ctGroupFromBodyZone(bodyRegion, sub) {
-      if (sub && /^cs-/.test(sub)) return 2;      // đốt sống → Cột sống
-      switch (bodyRegion) {
-        case 1: return 1;  // đầu → Sọ + mặt
-        case 2: return 2;  // cổ → Cột sống
-        case 3: return 3;  // ngực → Ngực
-        case 4: return 4;  // bụng → Bụng - chậu
-        case 5: return 4;  // chậu → Bụng - chậu
-        case 6: return 5;  // chi trên → Cơ xương khớp & chi
-        case 7: return 5;  // chi dưới → Cơ xương khớp & chi
-      }
-      return bodyRegion;
-    }
 
     function regionOf(it) {
       if (MODALITY === "CT") return regionOfCT(it);
@@ -407,30 +349,6 @@
       if (n === "Thông số MRI") return 9;
       return 12;
     }
-    // Blob văn bản của 1 mục (để nhận diện "xung tiêm thuốc")
-    function itemBlob(it) {
-      var s = (it.ten || "") + " " + (it.nhom || "");
-      (it.thongSo || []).forEach(function (t) { s += " " + (t.giaTri || ""); });
-      (it.noiDung || []).forEach(function (nd) {
-        (nd.items || []).forEach(function (x) { s += " " + x; });
-        if (nd.bang) (nd.bang.rows || []).forEach(function (r) { s += " " + (r || []).join(" "); });
-      });
-      return s;
-    }
-    function isContrastMRI(it) {
-      return /gadolinium|\bgd\b|tiêm thuốc|sau tiêm|động học|dynamic|tương phản|đặc hiệu gan|uspio|mmol\/kg|\+ *c\b/i.test(itemBlob(it));
-    }
-
-    // Badge chế độ (CT: Nữ=không tiêm / Nam=có tiêm)
-    (function () {
-      var mb = document.getElementById("modebadge");
-      if (!mb) return;
-      if (MODALITY === "CT" && (CONTRAST === "0" || CONTRAST === "1")) {
-        mb.className = "modebadge";
-        mb.innerHTML = (CONTRAST === "0") ? '<b>CT không tiêm thuốc</b>' : '<b>CT có tiêm thuốc</b>';
-      } else { mb.style.display = "none"; }
-    })();
-
     var regionsBox = document.getElementById("regions");
     var techBox = document.getElementById("techList");
     var detailBox = document.getElementById("detail");
@@ -449,9 +367,7 @@
     };
 
     REGIONS.forEach(function (r) {
-      r.items = (r.special === "contrast")
-        ? QT.filter(isContrastMRI)                                   // danh sách tham chiếu (gộp thêm)
-        : QT.filter(function (it) { return regionOf(it) === r.id; });
+      r.items = QT.filter(function (it) { return regionOf(it) === r.id; });
     });
     // MRI: chỉ hiện ô nhóm đã có nội dung (nhóm chưa soạn sẽ tự xuất hiện khi thêm mục)
     if (MODALITY === "MRI") REGIONS = REGIONS.filter(function (r) { return r.items.length > 0; });
@@ -490,9 +406,10 @@
         var b = el("button", "titem" + (it.khanCap ? " khancap" : ""), esc(it.ten));
         if (it.id) b.setAttribute("data-id", it.id);
         b.onclick = function () {
-          Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); });
-          b.classList.add("active");
+          Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); c.removeAttribute("aria-current"); });
+          b.classList.add("active"); b.setAttribute("aria-current", "true");
           showDetail(it);
+          revealDetail();
         };
         list.appendChild(b);
       });
@@ -504,9 +421,10 @@
       curItem = it;
       var ts = it.thongSo || [];
       var modClass = (it.modality === "CT") ? "ct" : (it.modality === "MRI") ? "mri" : "xq";
-      var statusBadge = (it.modality === "MRI" && !/^mri-sop-/.test(it.id || ""))
-        ? '<span class="pd-badge ref">Tham khảo</span>'
-        : '<span class="pd-badge ok">✓ Đã duyệt 16/10/2026</span>';
+      // Trạng thái duyệt đọc từ dữ liệu: ngayDuyet ("dd/mm/yyyy") → "Đã duyệt"; trangThai "tham-khao" → "Tham khảo"; thiếu → không gắn nhãn
+      var statusBadge = it.ngayDuyet
+        ? '<span class="pd-badge ok">✓ Đã duyệt ' + esc(it.ngayDuyet) + '</span>'
+        : (it.trangThai === "tham-khao" ? '<span class="pd-badge ref">Tham khảo</span>' : '');
       var khanBadge = it.khanCap ? '<span class="pd-badge khan">⚠ KHẨN CẤP — Time is Brain</span>' : '';
 
       var h = '<div class="pdetail' + (it.khanCap ? ' khancap' : '') + '"><div class="pd-head">' +
@@ -542,7 +460,7 @@
           };
           var pfig = function (im) {
             var sc = shortCap(im.caption);
-            return '<figure style="margin:0"><img loading="lazy" src="' + esc(im.src) + '" alt="' + esc(im.caption || "") + '">' +
+            return '<figure style="margin:0"><img loading="lazy" tabindex="0" title="Bấm để phóng to" src="' + esc(im.src) + '" alt="' + esc(im.caption || "") + '">' +
                    (sc ? '<figcaption>' + esc(sc) + '</figcaption>' : "") + '</figure>';
           };
           var gCT = [], gPH = [];
@@ -645,18 +563,49 @@
       }
     }
 
-    // báo chiều cao cho app.html để iframe tự co giãn (một mạch cuộn, không cuộn lồng)
-    function postH() { try { if (window.parent !== window) window.parent.postMessage({ sotayH: document.documentElement.scrollHeight }, "*"); } catch (e) {} }
+    // đích postMessage: cùng nguồn trên web; "*" khi mở file cục bộ (file:// không có origin hợp lệ)
+    var MSG_ORIGIN = (location.protocol === "http:" || location.protocol === "https:") ? location.origin : "*";
+    // Màn hẹp (danh sách nằm TRÊN chi tiết): sau khi chọn mục, đưa khung chi tiết vào tầm nhìn + chuyển focus
+    function revealDetail() {
+      detailBox.setAttribute("tabindex", "-1");
+      try { detailBox.focus({ preventScroll: true }); } catch (e) {}
+      if (window.innerWidth > 1000) return;
+      if (window.parent !== window) {
+        try { window.parent.postMessage({ sotayScroll: detailBox.getBoundingClientRect().top + window.pageYOffset }, MSG_ORIGIN); } catch (e) {}
+      } else { try { detailBox.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) { detailBox.scrollIntoView(); } }
+    }
+    // báo chiều cao cho app.html để iframe tự co giãn (một mạch cuộn, không cuộn lồng).
+    // Đo chiều cao NỘI DUNG (.pb-wrap), không dùng scrollHeight của root (≥ chiều cao iframe → chỉ tăng không giảm).
+    function postH() {
+      try {
+        if (window.parent === window) return;
+        var w = document.querySelector(".pb-wrap"), hgt = w ? w.getBoundingClientRect().height + 6 : document.body.offsetHeight;
+        window.parent.postMessage({ sotayH: Math.ceil(hgt) }, MSG_ORIGIN);
+      } catch (e) {}
+    }
     if (window.ResizeObserver) { new ResizeObserver(postH).observe(document.body); } else { setInterval(postH, 600); }
     window.addEventListener("load", postH); postH();
 
     // lightbox
     var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg");
-    detailBox.addEventListener("click", function (e) {
-      if (e.target && e.target.tagName === "IMG") { lbImg.src = e.target.src; lb.hidden = false; }
+    var lbFrom = null;
+    function lbOpen(img) {
+      // khi nhúng trong app.html: nhờ cửa sổ cha hiển thị (iframe cao bằng nội dung nên position:fixed bị lệch)
+      if (window.parent !== window) {
+        try { window.parent.postMessage({ sotayLightbox: img.src, alt: img.alt || "" }, MSG_ORIGIN); return; } catch (e) {}
+      }
+      lbFrom = img; lbImg.src = img.src; lbImg.alt = img.alt || ""; lb.hidden = false;
+      try { document.getElementById("lbClose").focus(); } catch (e) {}
+    }
+    function lbClose() { lb.hidden = true; lbImg.src = ""; if (lbFrom) try { lbFrom.focus(); } catch (e) {} }
+    detailBox.addEventListener("click", function (e) { if (e.target && e.target.tagName === "IMG") lbOpen(e.target); });
+    // bàn phím: ảnh có tabindex=0, Enter/Space để phóng to; Esc để đóng
+    detailBox.addEventListener("keydown", function (e) {
+      if (e.target && e.target.tagName === "IMG" && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); lbOpen(e.target); }
     });
-    document.getElementById("lbClose").onclick = function () { lb.hidden = true; lbImg.src = ""; };
-    lb.onclick = function (e) { if (e.target === lb) { lb.hidden = true; lbImg.src = ""; } };
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !lb.hidden) lbClose(); });
+    document.getElementById("lbClose").onclick = lbClose;
+    lb.onclick = function (e) { if (e.target === lb) lbClose(); };
 
     // nền sáng/tối
     var tb = document.getElementById("themeBtn"), root = document.documentElement;
@@ -669,32 +618,29 @@
     };
     // nhận theme từ app.html (khi nhúng) để đổi nền cùng lúc với trang ngoài
     window.addEventListener("message", function (ev) {
+      if (ev.source !== window.parent) return; // chỉ nhận từ app.html cha
       var d = ev && ev.data; if (!d || !d.sotayTheme) return;
       var dk = d.sotayTheme === "dark";
       root.setAttribute("data-theme", dk ? "dark" : "light");
       if (tb) tb.textContent = dk ? "☀️" : "🌙";
     });
 
-    // chọn chế độ xem theo ?view=front|back|side
-    if ((P.view === "back" || P.view === "side") && fig) {
-      fig.classList.add(P.view);
-      if (vt) Array.prototype.forEach.call(vt.children, function (c) {
-        c.classList.toggle("active", c.getAttribute("data-view") === P.view);
-      });
-    }
-    // KHÔNG tự chọn vùng — để người dùng tự bấm hình/ô; cột "Danh mục kỹ thuật" ẩn đến khi chọn.
+    // KHÔNG tự chọn vùng — để người dùng tự bấm ô; cột "Danh mục kỹ thuật" ẩn đến khi chọn.
     // (nếu có ?region=N thì mở sẵn vùng đó)
     (function () {
       var rq = parseInt(P.region, 10);
       if (rq && byId[rq]) setRegion(rq);
-      // ?item=<id>: mở thẳng một kỹ thuật/protocol (dùng cho mã QR, link chia sẻ)
+      // ?item=<id>: mở thẳng một kỹ thuật/protocol (dùng cho mã QR, link chia sẻ). ITEM_WANT đã tra ở đầu file.
       if (P.item) {
-        var want = QT.filter(function (it) { return it.id === P.item; })[0];
-        if (want) {
-          var rid = regionOf(want);
+        if (ITEM_WANT) {
+          var rid = regionOf(ITEM_WANT);
           if (byId[rid]) setRegion(rid);
-          var btn = techBox.querySelector('[data-id="' + P.item.replace(/"/g, "") + '"]');
-          if (btn) btn.click();
+          var btns = techBox.querySelectorAll("[data-id]"), hit = null;
+          for (var i = 0; i < btns.length; i++) { if (btns[i].getAttribute("data-id") === P.item) { hit = btns[i]; break; } }
+          if (hit) hit.click();
+        } else {
+          var dbox = document.getElementById("detail");
+          if (dbox) dbox.innerHTML = '<div class="pd-hint" style="padding:14px">Không tìm thấy mã kỹ thuật <b>' + esc(P.item) + '</b>. Mã có thể đã đổi — hãy chọn vùng ở thanh phía trên.</div>';
         }
       }
     })();

@@ -1,62 +1,71 @@
 # Sổ tay điện tử CĐHA — bộ file website
 
-Đây là **toàn bộ website**, chạy một mình không cần mạng. Chép cả thư mục
-`website/` này đi đâu cũng được (USB, máy trạm, máy chủ) rồi mở là dùng.
+Website tra cứu quy trình kỹ thuật X-quang · CT · MRI của Khoa Chẩn đoán hình ảnh,
+Bệnh viện Hùng Vương Gia Lai. Trang tĩnh: chạy trên GitHub Pages, hoặc mở trực tiếp
+từ USB / máy trạm (nhấp đúp `index.html`) — không cần cài đặt.
 
-## Cách mở
+Có cổng đăng nhập dạng nhẹ (`assets/gate.js`): chỉ hạn chế truy cập giao diện,
+**không** phải bảo mật máy chủ. Không đưa thông tin người bệnh vào các file dữ liệu.
 
-Nhấp đúp vào **`index.html`** → website mở trong trình duyệt (Chrome/Edge/Firefox).
-Không cần cài gì, không cần internet.
-
-## Cấu trúc (nội dung tách riêng khỏi giao diện)
+## Cấu trúc
 
 ```
 website/
-├─ index.html          ← khung trang (ít khi phải sửa)
+├─ index.html           ← chuyển thẳng tới app.html
+├─ app.html             ← GIAO DIỆN CHÍNH: thanh app, tìm kiếm, trang chủ, công cụ khẩn cấp, máy tính liều & eGFR
+├─ chon-protocol.html   ← khung chọn protocol theo vùng (nhúng trong app.html; ?item=<id> mở thẳng 1 kỹ thuật)
+├─ trang-v1.html        ← giao diện tìm kiếm cũ (v1)
+├─ robots.txt           ← chặn công cụ tìm kiếm index
 ├─ assets/
-│  ├─ style.css        ← GIAO DIỆN: màu, cỡ chữ, bố cục
-│  └─ app.js           ← LOGIC: tìm kiếm, lọc, hiển thị (không chứa nội dung)
-└─ data/
-   ├─ quy-trinh.js     ← NỘI DUNG các quy trình  ← SỬA Ở ĐÂY
-   └─ cong-cu.js       ← dữ liệu 3 công cụ khẩn cấp
+│  ├─ style.css         ← màu (token sáng/tối), cỡ chữ, bố cục
+│  ├─ app.js            ← logic dùng cho trang-v1 (render, ảnh mã hóa .enc)
+│  └─ gate.js           ← cổng đăng nhập (chỉ chứa mã băm, KHÔNG ghi mật khẩu gốc)
+├─ data/
+│  ├─ quy-trinh.js      ← NỘI DUNG các quy trình  ← SỬA Ở ĐÂY
+│  ├─ cong-cu.js        ← phản vệ, CPR, thoát mạch, liều cản quang, CCTA, bảng kiểm MRI
+│  └─ benh-ly.js        ← ca lâm sàng tham khảo
+└─ images/xq/           ← ảnh kỹ thuật: <id>-ct.* = chiều thế, <id>-phim.* = phim đạt
 ```
 
-> **Nguyên tắc:** muốn sửa một thông số hay thêm quy trình → chỉ mở
-> `data/quy-trinh.js`. Không cần đụng tới giao diện, **không sợ làm hỏng website**.
+Trang nội bộ (KHÔNG đưa lên bản công khai): `tham-dinh.html`, `phieu-ban-giao.html`,
+`kiem-tra.html` (tự kiểm tra dữ liệu), `mau-giao-dien.html`.
 
-## Thêm 1 quy trình mới
+## Thêm / sửa một quy trình
 
-Mở `data/quy-trinh.js` bằng Notepad (hoặc VS Code), chép một khối `{ ... }`
-có sẵn rồi sửa lại. Mẫu:
+Mở `data/quy-trinh.js`, chép một khối `{ ... }` có sẵn rồi sửa:
 
 ```js
 {
-  id: "xq-vi-du",              // mã riêng, KHÔNG trùng quy trình khác
+  id: "xq-vi-du",              // mã riêng, KHÔNG trùng; tiền tố xq- / ct- / mri-
   phanHe: "xquang",            // "xquang" hoặc "ct-mri"
-  modality: "X-quang",         // X-quang | Siêu âm | CT | MRI
-  nhom: "Lồng ngực",           // nhóm để lọc
-  ten: "Chụp X-quang ... ",    // tên hiển thị
-  tuKhoa: ["phoi", "chest"],   // từ khóa phụ giúp tìm (có thể để [])
-  thongSo: [
-    { ten: "kV", giaTri: "70 kV" },
-    { ten: "Khoảng cách bóng – phim", giaTri: "1 m" }
-  ],
-  noiDung: [
-    { tieuDe: "Chuẩn bị", items: [ "Dòng 1", "Dòng 2" ] },
-    { tieuDe: "Tiêu chuẩn ảnh đạt", items: [ "..." ] }
-  ],
-  nguon: "QUY TRÌNH XQ KHOA CĐHA BVHVGL.docx"
+  modality: "X-quang",         // X-quang | CT | MRI
+  nhom: "Lồng ngực",           // phải đúng tên nhóm đang dùng (quyết định ô vùng hiển thị)
+  ten: "Chụp X-quang ...",
+  tuKhoa: ["phoi", "chest"],   // không dấu, giúp tìm kiếm
+  thongSo: [ { ten: "kV / mAs", giaTri: "..." } ],
+  noiDung: [ { tieuDe: "Chuẩn bị", items: ["..."] } ],
+  nguon: "Tên tài liệu nguồn",
+  ngayDuyet: "08/11/2026",     // (tùy chọn) có → hiện nhãn "✓ Đã duyệt <ngày>"
+  trangThai: "tham-khao",      // (tùy chọn) → nhãn "Tham khảo"
+  an: true                     // (tùy chọn) ẩn khỏi giao diện khi chưa duyệt
 },
 ```
 
-Lưu file → mở lại `index.html` (hoặc bấm F5) là thấy ngay.
+Lưu file → F5. Sau khi sửa, mở `kiem-tra.html` để quét lỗi (thiếu trường, trùng mã, ảnh hỏng).
 
-### Mẹo tránh lỗi
-- Mỗi khối `{ ... }` cách nhau bằng dấu **phẩy**.
-- Chuỗi chữ phải nằm trong `"..."`. Nếu trong câu có dấu `"`, đổi thành `'...'`.
-- Giữ nguyên tên các mục (`id`, `ten`, `thongSo`...), chỉ đổi phần giá trị.
+## Cập nhật lên web công khai
+
+Không chép tay. Dùng script (Git Bash) với bản clone repo `So-tay-dien-tu-CDHA-web`:
+
+```
+tools/sync-public.sh <đường-dẫn-clone>
+```
+
+Script tự loại trang nội bộ, ảnh ca bệnh gốc, đổi ảnh ca sang bản `.enc`, xóa file đã bỏ,
+và chặn nếu `gate.js` còn ghi mật khẩu. Kiểm `git diff` rồi mới commit + push.
+Khi đổi CSS/HTML: tăng token `?v=` (một số chung cho mọi trang).
 
 ## ⚠️ An toàn người bệnh
-Không tự điền con số y khoa (kV, mAs, liều thuốc, ml/kg, eGFR…) nếu chưa lấy
-từ tài liệu đã được **Trưởng khoa / KTV trưởng duyệt**. Các công cụ còn dùng
-số mẫu đều có cảnh báo màu vàng và sẽ được điền thật ở **Giai đoạn D**.
+Không tự điền con số y khoa (kV, mAs, liều thuốc, mL/kg, eGFR…) nếu chưa lấy từ tài liệu
+nguồn rõ ràng và được Trưởng khoa / KTV trưởng duyệt. Máy CT/MRI của khoa không có
+tính năng perfusion — không thêm nội dung tưới máu.

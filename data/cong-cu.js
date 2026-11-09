@@ -30,7 +30,7 @@ window.SOTAY_CONGCU = {
       chongChiDinh: 30               // < mức này: thận trọng cao / theo quy trình khoa
     },
     luuY: [
-      "Liều ml/kg theo QUY TRÌNH CLVT của khoa; ngưỡng eGFR là tham chiếu chung. Đã được Trưởng khoa duyệt (16/10/2026).",
+      "Liều ml/kg theo QUY TRÌNH CLVT của khoa; ngưỡng eGFR là tham chiếu chung (ACR). Trần 150 mL/lần và mốc nhi < 15 kg là mức an toàn tham khảo — cần Trưởng khoa xác nhận theo thực tế khoa.",
       "Luôn xả nước muối sinh lý sau thuốc; đối chiếu tiền sử dị ứng & chức năng thận trước tiêm.",
       "Kết quả chỉ tham khảo — quyết định cuối theo bác sĩ."
     ]
@@ -70,7 +70,7 @@ window.SOTAY_CONGCU = {
   phanVe: {
     chuaDuyet: false,
     nguon: "Sơ đồ chẩn đoán & xử trí phản vệ — Thông tư 51/2017/TT-BYT, Bộ Y tế.",
-    luuYDau: "Khi cấp cứu thực tế: gọi hỗ trợ ngay và làm theo chỉ đạo của bác sĩ. Đã được Trưởng khoa duyệt (16/10/2026).",
+    luuYDau: "Khi cấp cứu thực tế: gọi hỗ trợ ngay và làm theo chỉ đạo của bác sĩ. Liều adrenalin & phân độ cập nhật 08/11/2026 theo Phụ lục II–III TT 51/2017/TT-BYT — cần Trưởng khoa duyệt lại.",
     flow: [
       { loai: "buoc", mau: "brand", tieuDe: "① CHẨN ĐOÁN — Xác định tình trạng phản vệ", items: [
         "Xuất hiện nhanh (vài giây – vài giờ) sau tiếp xúc dị nguyên (thuốc đối quang, thuốc…).",
@@ -94,6 +94,10 @@ window.SOTAY_CONGCU = {
           "Thở nhanh, khò khè, tím tái, rối loạn nhịp thở.",
           "Tuần hoàn: da nhợt, lạnh ẩm, tụt HA.",
           "Rối loạn ý thức, hôn mê, rối loạn cơ tròn."
+        ]},
+        { muc: "Ngừng tuần hoàn — Độ IV", mau: "nguykich", items: [
+          "Ngừng hô hấp, ngừng tuần hoàn.",
+          "Cấp cứu ngừng tuần hoàn ngay (xem công cụ CPR) + adrenalin theo phác đồ ngừng tim."
         ]}
       ]},
       { loai: "nhan", mau: "danger", tieuDe: "③ ADRENALIN (ống 1 mg/1 ml) — thuốc DUY NHẤT cứu sống", items: [
@@ -106,7 +110,8 @@ window.SOTAY_CONGCU = {
           "Tiếp tục theo dõi mạch, HA, nhịp thở."
         ]},
         { muc: "Độ II–III — ADRENALIN TIÊM BẮP", mau: "nang", items: [
-          "Người lớn: 1/2 ống. Trẻ em: 1/5 – 1/3 ống.",
+          "Liều theo cân nặng (ống 1 mg/1 ml): Trẻ sơ sinh hoặc < 10 kg: 0,2 ml (1/5 ống) · Trẻ ~10 kg: 0,25 ml (1/4 ống) · Trẻ ~20 kg: 0,3 ml (1/3 ống) · Trẻ > 30 kg: 0,5 ml (1/2 ống) · Người lớn: 0,5–1 ml (1/2–1 ống).",
+          "Vị trí: mặt trước–ngoài 1/3 giữa đùi.",
           "Nhắc lại mỗi 3–5 phút đến khi hết dấu hiệu hô hấp/tiêu hóa & huyết động ổn định.",
           "Thiết lập sẵn đường truyền tĩnh mạch NaCl 0,9%."
         ]},
@@ -123,7 +128,7 @@ window.SOTAY_CONGCU = {
       { loai: "buoc", mau: "danger", tieuDe: "④ Biện pháp khác (KHÔNG thay thế adrenalin)", items: [
         "Khai thông đường thở, bảo đảm hô hấp: thở oxy, thông khí.",
         "Truyền NaCl 0,9%: Người lớn 1–2 lít nhanh (nhắc lại nếu cần); Trẻ em 10–20 ml/kg trong 10–20 phút đầu.",
-        "Diphenhydramin 10–50 mg; Methylprednisolon 1–2 mg/kg; Salbutamol xịt.",
+        "Diphenhydramin: người lớn 25–50 mg, trẻ em 10–25 mg; Methylprednisolon 1–2 mg/kg; Salbutamol xịt.",
         "Chuyển đơn vị hồi sức nếu huyết động / hô hấp không ổn định."
       ]},
       { loai: "buoc", mau: "", tieuDe: "⑤ THEO DÕI", items: [
@@ -183,7 +188,7 @@ window.SOTAY_CONGCU = {
         "5T: Tràn khí màng phổi áp lực, chèn ép tim (tamponade), ngộ độc (toxins), thuyên tắc phổi, huyết khối mạch vành."
       ]},
       { loai: "dich", tieuDe: "⑧ KHI CÓ TUẦN HOÀN TRỞ LẠI (ROSC)", items: [
-        "Duy trì SpO2 94–99%, theo dõi EtCO2 và huyết áp.",
+        "Duy trì SpO2 92–98% (AHA 2020), theo dõi EtCO2 và huyết áp.",
         "Ghi ĐTĐ 12 chuyển đạo; chăm sóc sau ngừng tim, kiểm soát thân nhiệt.",
         "Chuyển đơn vị hồi sức tích cực."
       ]}
@@ -236,12 +241,14 @@ window.SOTAY_CONGCU = {
   bangKiemMRI: {
     chuaDuyet: false,
     tuyetDoi: [
-      "Máy tạo nhịp tim (pacemaker) — CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI."
+      "Máy tạo nhịp tim / ICD KHÔNG tương thích MRI (không có nhãn MR Conditional) — CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI.",
+      "Ốc tai điện tử, clip phình mạch sắt từ, dị vật kim loại trong nhãn cầu, bơm truyền cấy ghép."
     ],
     tuongDoi: [
-      "Có kim loại từ tính trong người (mảnh đạn, clip phẫu thuật, vật liệu kết hợp xương…).",
+      "Máy tạo nhịp / ICD có nhãn 'MR Conditional': chỉ chụp khi đủ điều kiện nhãn, lập trình chế độ MRI trước–sau, có bác sĩ tim mạch phối hợp.",
+      "Có kim loại trong người (mảnh đạn, clip phẫu thuật, vật liệu kết hợp xương, stent, van tim…): xác minh nhãn/model MR Conditional trước khi vào phòng.",
       "Người bệnh không có khả năng nằm yên.",
-      "Sợ ánh sáng, sợ nằm một mình (hội chứng sợ không gian kín)."
+      "Hội chứng sợ không gian kín (sợ nằm một mình trong lòng máy)."
     ],
     chuanBi: [
       "Thay quần áo của phòng chụp CHT.",

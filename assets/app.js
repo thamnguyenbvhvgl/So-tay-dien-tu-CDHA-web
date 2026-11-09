@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var QT     = (window.SOTAY_QUYTRINH || []).concat(window.SOTAY_BENHLY || []);
+  var QT     = (window.SOTAY_QUYTRINH || []).filter(function (x) { return !x.an; }).concat(window.SOTAY_BENHLY || []); // an:true = ẩn (chưa duyệt)
   var CONGCU = window.SOTAY_CONGCU   || {};
 
   // --- tiện ích -------------------------------------------------------------
@@ -26,7 +26,7 @@
   }
   function esc(s) {
     return (s || "").toString()
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
   // Tô vàng từ khóa trong chuỗi (giữ nguyên dấu gốc, so khớp không dấu).
   // Dò vị trí trên chuỗi đã bỏ dấu rồi mới esc từng mảnh, tránh lệch chỉ số do &<>.
@@ -411,7 +411,9 @@
       flag.className = "calc-flag";
       flag.innerHTML = "Công thức: (" + w + " × " + iv + ") ÷ " + (conc / 1000) +
         " = <b>" + (Math.round(flow * 10) / 10) + "</b> ml/s; × " + t + "s = <b>" +
-        Math.round(vol) + "</b> ml.";
+        Math.round(vol) + "</b> ml." +
+        (flow > 6 ? " <b>⚠ Tốc độ &gt; 6 mL/s vượt giới hạn kim 18G</b> (20G ≈ ≤ 4–5 mL/s): giảm IDR, tăng nồng độ hoặc kéo dài thời gian tiêm."
+          : flow > 5 ? " Lưu ý: &gt; 5 mL/s cần kim ≥ 18G tĩnh mạch khuỷu, bơm 2 nòng." : "");
     }
     ["cctaW", "cctaIdr", "cctaT"].forEach(function (id) { $(id).oninput = recalc; });
     $("cctaConc").onchange = recalc;

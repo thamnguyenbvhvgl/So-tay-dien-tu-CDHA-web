@@ -1172,9 +1172,9 @@ window.SOTAY_QUYTRINH = [
     tuKhoa: ["khop uc don", "sternoclavicular pa", "sc joint"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Sau trước (PA)" },
-      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs" },
+      { ten: "kV / mAs", giaTri: "65–75 kVp · 10–15 mAs (tham khảo Bontrager; theo bảng phơi nhiễm máy của khoa)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
-      { ten: "Lưới lọc", giaTri: "Không" }
+      { ten: "Lưới lọc", giaTri: "Có (vùng dày, xuyên lồng ngực)" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định lâm sàng", items: [
@@ -1272,7 +1272,7 @@ window.SOTAY_QUYTRINH = [
     tuKhoa: ["phoi", "nguc", "chest pa", "long nguc thang", "cxr", "tim phoi", "phoi thang"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Sau trước (PA), bệnh nhân đứng" },
-      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs (có thể 100–120 kVp kỹ thuật cao áp)" },
+      { ten: "kV / mAs", giaTri: "110–125 kVp · AEC (≈ 2–5 mAs) — kỹ thuật cao áp, có lưới (tham khảo Bontrager; theo bảng phơi nhiễm máy của khoa)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
@@ -1328,7 +1328,7 @@ window.SOTAY_QUYTRINH = [
     tuKhoa: ["nguc ap", "chest ap supine", "tai giuong", "portable", "nam"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Trước sau (AP), bệnh nhân nằm" },
-      { ten: "kV / mAs", giaTri: "52 kVp · 5 mAs" },
+      { ten: "kV / mAs", giaTri: "80–90 kVp · 2–4 mAs không lưới (100–110 kVp nếu dùng lưới) — tham khảo Bontrager; theo bảng phơi nhiễm máy di động của khoa" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1,8 m (thực tế có thể ngắn hơn khi chụp tại giường)" },
       { ten: "Lưới lọc", giaTri: "Có" }
     ],
@@ -1684,7 +1684,7 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang bàn tay thẳng (sau trước)",
     tuKhoa: ["ban tay", "hand pa", "sau truoc", "xuong ban tay", "chi tren"],
     thongSo: [
-      { ten: "Tư thế", giaTri: "Trước sau" },
+      { ten: "Tư thế", giaTri: "Sau trước (PA)" },
       { ten: "kV / mAs", giaTri: "40 kVp · 2,5 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Lưới lọc", giaTri: "Không" }
@@ -3653,7 +3653,7 @@ window.SOTAY_QUYTRINH = [
     ten: "Chụp X-quang khớp háng tư thế nghiêng",
     tuKhoa: ["hang nghieng", "hip lateral", "co xuong dui nghieng"],
     thongSo: [
-      { ten: "Tư thế", giaTri: "Thẳng" },
+      { ten: "Tư thế", giaTri: "Nghiêng" },
       { ten: "kV / mAs", giaTri: "74 kVp · 10 mAs" },
       { ten: "Khoảng cách bóng – phim", giaTri: "1 m" },
       { ten: "Lưới lọc", giaTri: "Có" }
@@ -3820,7 +3820,7 @@ window.SOTAY_QUYTRINH = [
     tuKhoa: ["xuong mui", "xuong chinh mui", "nasal bone lateral", "gay xuong mui"],
     thongSo: [
       { ten: "Tư thế", giaTri: "Nghiêng (hai bên để so sánh)" },
-      { ten: "kV / mAs", giaTri: "92 kVp · 10 mAs" },
+      { ten: "kV / mAs", giaTri: "50–60 kVp · 2–3 mAs — kỹ thuật mô mềm, chùm tia hẹp (tham khảo Bontrager; theo bảng phơi nhiễm máy của khoa)" },
       { ten: "Khoảng cách bóng – phim", giaTri: "75 cm" },
       { ten: "Lưới lọc", giaTri: "Không" }
     ],
@@ -4256,9 +4256,9 @@ window.SOTAY_QUYTRINH = [
         "Khảo sát hình thái và chức năng bài tiết của đường dẫn niệu sau khi tiêm thuốc đối quang tĩnh mạch."
       ]},
       { tieuDe: "⚠️ Chống chỉ định / nguy cơ", items: [
-        "Suy thận nặng, phụ nữ có thai, dị ứng i-ốt, tiểu đường, đa u tủy (Kahler), bệnh tim mạch nặng.",
-        "Nhóm nguy cơ (tiền sử dị ứng, >60 tuổi, suy thận, tiểu đường, dùng chẹn bê-ta…): dùng thuốc không ion độ thẩm thấu thấp + dự phòng chống sốc (kháng H1, corticoid) theo phác đồ Bộ Y tế.",
-        "Tiểu đường đang điều trị: ngưng thuốc 2 ngày trước và sau. Hai lần tiêm thuốc cách nhau ≥ 5 ngày."
+        "Chống chỉ định / cân nhắc kỹ: tiền sử phản vệ với thuốc cản quang i-ốt; suy thận nặng (eGFR < 30 mL/phút/1,73m²) hoặc tổn thương thận cấp; cường giáp chưa kiểm soát; phụ nữ có thai (chỉ khi lợi ích vượt trội). Tiểu đường và đa u tủy KHÔNG còn là chống chỉ định riêng (ACR Manual) — chỉ cần đánh giá chức năng thận và đủ dịch.",
+        "Nhóm nguy cơ (tiền sử dị ứng vừa–nặng với cản quang, hen chưa kiểm soát, suy thận): dùng thuốc không ion áp lực thẩm thấu thấp; dự phòng corticoid/kháng H1 CHỈ theo chỉ định của bác sĩ (phác đồ 12–13 giờ hoặc khẩn), không dự phòng thường quy.",
+        "Metformin: eGFR ≥ 30 và không AKI → KHÔNG cần ngưng; eGFR < 30, AKI hoặc tiêm động mạch liều lớn → ngưng từ lúc tiêm, dùng lại sau 48 giờ khi chức năng thận ổn (ACR). Hai lần tiêm thuốc nên cách nhau ≥ 24–48 giờ nếu chức năng thận bình thường (lâu hơn nếu suy thận)."
       ]},
       { tieuDe: "Chuẩn bị người bệnh", items: [
         "Không thuốc cản quang 3 ngày trước; ăn ít bã, nhuận tràng nhẹ, thụt tháo; nhịn ăn 4 giờ (uống < 50 ml nước); đi tiểu trước khi lên bàn.",
@@ -4352,6 +4352,10 @@ window.SOTAY_QUYTRINH = [
     noiDung: [
       { tieuDe: "Nguyên lý", items: [
         "kVp quyết định động năng chùm electron → độ đâm xuyên của tia X. kVp càng cao: đâm xuyên mạnh hơn, độ tương phản càng giảm (thang xám dài)."
+      ]},
+      { tieuDe: "Lưu ý về cột kV / mAs trong các kỹ thuật", items: [
+        "Giá trị kV / mAs ghi ở từng kỹ thuật là MỨC THAM KHẢO theo sách định vị (Bontrager) cho máy DR; thực tế phải dùng AEC hoặc bảng phơi nhiễm đã hiệu chuẩn của máy tại khoa và điều chỉnh theo bề dày người bệnh.",
+        "Dải thường gặp (DR, có lưới): ngực PA 110–125 kVp · bụng/cột sống thắt lưng 75–90 kVp · khung chậu/háng 75–85 kVp · sọ 75–85 kVp · xương chi 55–70 kVp (không lưới nếu < 10 cm) · bàn tay/bàn chân 50–60 kVp."
       ]}
     ],
     nguon: "Từ điển X-quang – Wikiradiology KTV 3 Miền (CC BY-SA)."
@@ -5297,10 +5301,6 @@ window.SOTAY_QUYTRINH = [
         "Bơm đuổi 30–40 mL NaCl cùng tốc độ — rửa sạch thuốc đọng ở tim phải & TMC trên, triệt xảo ảnh cứng hóa chùm tia che ĐM phổi phải.",
         "Bolus tracking ROI thân ĐM phổi chính, ngưỡng 70–100 HU, kích hoạt tức thì (delay 2–3 giây)."
       ]},
-      { tieuDe: "CT năng lượng kép & bản đồ tưới máu", items: [
-        "DECT (80/140 kVp hoặc Spectral) tách đậm độ I-ốt khỏi mô phổi.",
-        "Bản đồ tưới máu phổi (Iodine Perfusion Map) phát hiện khiếm khuyết tưới máu vi thể do huyết khối nhánh ngoại vi."
-      ]},
       { tieuDe: "Cửa sổ, dựng hình & tiêu chuẩn đạt", items: [
         "Cửa sổ: Mạch máu (WL 150–180 / WW 600–800), Trung thất, Phổi (WL −600…−700 / WW 1200–1600 — tìm nhồi máu phổi hình nêm Hampton's Hump).",
         "MIP mỏng/dày tìm khuyết thuốc (filling defect) của cục máu đông.",
@@ -5462,14 +5462,14 @@ window.SOTAY_QUYTRINH = [
           ["Bài tiết (Excretory)", "5–10 phút", "Thuốc vào đài bể thận; đánh giá xâm lấn/phá hủy xoang thận & niệu mạc"]
         ]
       }},
-      { tieuDe: "Phân biệt u lành / ác & nang Bosniak 2019", bang: {
-        cols: ["Bosniak", "Đặc điểm CT", "Nguy cơ ác tính", "Xử trí"],
+      { tieuDe: "Phân biệt u lành / ác & nang Bosniak phiên bản 2019 (tóm tắt — tham khảo đọc kết quả)", bang: {
+        cols: ["Bosniak 2019", "Đặc điểm CT (vách/thành: mỏng ≤ 2 mm · dày tối thiểu 3 mm · dày ≥ 4 mm)", "Nguy cơ ác tính", "Xử trí"],
         rows: [
-          ["I", "Nang đơn thuần, thành mỏng, dịch 0–20 HU, không vách/vôi, không ngấm", "0%", "Lành; không theo dõi"],
-          ["II", "Vài vách mỏng < 1mm, vôi hóa mịn, nang tăng tỷ trọng < 3cm, không ngấm", "< 1%", "Lành; không can thiệp"],
-          ["IIF", "Nhiều vách mỏng, vôi hóa thô, > 3cm, có thể ngấm nhẹ vách, không nốt sùi", "~ 5%", "Theo dõi CT/MRI 6–12–24 tháng"],
-          ["III", "Thành/vách dày đều > 2mm, bờ không đều, ngấm rõ (> 15 HU)", "~ 50%", "Nghi ác; cắt bán phần / bóc u"],
-          ["IV", "Nốt sùi đặc / khối mô mềm ngấm thuốc mạnh", "> 85–90%", "Ác (Cystic RCC); cắt thận triệt căn / bán phần"]
+          ["I", "Nang thành mỏng nhẵn, dịch đồng nhất −9…20 HU, không vách, không vôi, không ngấm", "≈ 0%", "Lành; không theo dõi"],
+          ["II", "Thành mỏng nhẵn + ≤ 3 vách mỏng (có thể ngấm); vôi hóa bất kỳ; nang đồng nhất ≥ 70 HU trước tiêm (nang xuất huyết/protein) hoặc 21–30 HU/ không đo được, không ngấm", "< 1%", "Lành; không theo dõi"],
+          ["IIF", "Thành hoặc vách dày tối thiểu (3 mm) nhẵn, ngấm; hoặc ≥ 4 vách mỏng nhẵn ngấm; không nốt", "≈ 5–10%", "Theo dõi CT/MRI 6 tháng → 12 tháng → hằng năm 5 năm"],
+          ["III", "Thành/vách dày (≥ 4 mm) ngấm, hoặc bờ không đều (lồi ≤ 3 mm, bờ tù) ngấm", "≈ 50%", "Nghi ác; hội chẩn ngoại tiết niệu (cắt bán phần / theo dõi tích cực)"],
+          ["IV", "Nốt ngấm thuốc ≥ 4 mm bờ tù, hoặc bất kỳ nốt ngấm thuốc bờ nhọn", "≈ 90%", "Ác (RCC dạng nang); phẫu thuật"]
         ]
       }},
       { tieuDe: "Quy tắc ngấm thuốc & đặc điểm u", items: [
@@ -5920,6 +5920,7 @@ window.SOTAY_QUYTRINH = [
   },
   {
     id: "ct-toan-than-da-chan-thuong-khong-tiem",
+    an: true, // ẨN khỏi giao diện cho tới khi có nội dung được duyệt
     phanHe: "ct-mri", modality: "CT", nhom: "Toàn thân",
     ten: "Chụp CLVT toàn thân không tiêm thuốc",
     tuKhoa: ["toan than da chan thuong", "pan scan khong tiem", "polytrauma"],
@@ -5933,7 +5934,7 @@ window.SOTAY_QUYTRINH = [
   },
 
   /* ============================================================ */
-  /* CT — THAM KHẢO KỸ THUẬT (Từ điển CT / CT Angiography / Liều thấp / Tưới máu) */
+  /* CT — THAM KHẢO KỸ THUẬT (Từ điển CT / CT Angiography / Liều thấp)            */
   /* Nguồn: Từ điển CT – Wikiradiology KTV 3 Miền (giấy phép CC BY-SA) + công cụ    */
   /* CT Coronary Smart Protocol. Bổ trợ cho QUY TRÌNH CLVT của khoa; con số kỹ      */
   /* thuật đã được Trưởng khoa / BS duyệt (16/10/2026).                            */
@@ -6094,12 +6095,12 @@ window.SOTAY_QUYTRINH = [
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     khanCap: true,
     ten: "MRI đột quỵ / nhồi máu não cấp",
-    tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "penumbra", "perfusion", "lvo"],
+    tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "lvo"],
     thongSo: [
       { ten: "1. Axial DWI/ADC", giaTri: "Bắt buộc đầu tiên — phát hiện nhồi máu tối cấp (1–4h), xác định tuổi tổn thương" },
       { ten: "2. Axial GRE/SWI", giaTri: "Phát hiện sớm xuất huyết nhu mô / vi xuất huyết đi kèm" },
       { ten: "3–4. T2W FSE · FLAIR", giaTri: "Đánh giá nhu mô kéo dài T2 và diện phù nề, tổn thương chất trắng" },
-      { ten: "5–7. MRA TOF-3D · PC 2D · PWI", giaTri: "Tắc/hẹp mạch & vòng Willis · hướng dòng chảy · diện giảm tưới máu (penumbra)" }
+      { ten: "5–6. MRA TOF-3D · PC 2D", giaTri: "Tắc/hẹp mạch & vòng Willis · hướng dòng chảy các mạch máu lớn" }
     ],
     noiDung: [
       { tieuDe: "Thứ tự ưu tiên các chuỗi xung (cắt giảm tối đa thời gian cấp cứu)", items: [
@@ -6108,12 +6109,11 @@ window.SOTAY_QUYTRINH = [
         "3. Axial T2W FSE: tổn thương nhu mô kéo dài thời gian T2.",
         "4. Axial FLAIR: diện phù nề và tổn thương chất trắng.",
         "5. MRA TOF-3D: tắc/hẹp động mạch nội sọ và vòng Willis (không tiêm thuốc).",
-        "6. MRA 2D Phase Contrast: thông tin hướng dòng chảy các mạch máu lớn.",
-        "7. Perfusion PWI: diện giảm tưới máu để xác định vùng tranh tối tranh sáng (penumbra)."
+        "6. MRA 2D Phase Contrast: thông tin hướng dòng chảy các mạch máu lớn."
       ]},
       { tieuDe: "Cảnh báo — Time is Brain", items: [
         "DWI/ADC phải là chuỗi xung đầu tiên; GRE/SWI loại trừ xuất huyết trước khi cân nhắc tiêu sợi huyết.",
-        "Chỉ tiêm thuốc khi thực hiện PWI hoặc MRA-CE."
+        "Chỉ tiêm thuốc khi thực hiện MRA-CE."
       ]}
     ],
     nguon: "Protocol MRI sọ não & bệnh lý — Khoa CĐHA BVHVGL"
@@ -6127,8 +6127,8 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Bảng tra cứu nhanh theo định hướng lâm sàng", bang: {
         cols: ["Chỉ định lâm sàng", "Chuỗi xung bổ sung / đặc biệt", "Chỉ định tiêm Gadolinium"],
         rows: [
-          ["U não / di căn", "T1 3D FS, FLAIR+C, pMRI, MRS (TE 35/144), DTI", "Bắt buộc: T1 3D FS+C, FLAIR+C"],
-          ["Đột quỵ cấp", "DWI/ADC (ưu tiên), GRE/SWI, MRA TOF-3D, PWI", "Chỉ khi làm PWI hoặc MRA-CE"],
+          ["U não / di căn", "T1 3D FS, FLAIR+C, MRS (TE 35/144), DTI", "Bắt buộc: T1 3D FS+C, FLAIR+C"],
+          ["Đột quỵ cấp", "DWI/ADC (ưu tiên), GRE/SWI, MRA TOF-3D", "Chỉ khi làm MRA-CE"],
           ["Tuyến yên / vùng yên", "T1/T2 Cor-Sag mỏng 2mm, Dynamic T1 Coronal 5-phase", "Bắt buộc: Dynamic T1 + T1 FS+C"],
           ["Động kinh / hải mã", "Axial IR, Axial FLAIR 3mm, Coronal FLAIR 3mm vuông góc hồi hải mã", "Khi nghi u/dị dạng, hoặc khởi phát > 65 tuổi"],
           ["Cavernoma / vi xuất huyết", "T2*GRE (TE>25ms) hoặc SWI", "Thường không ngấm thuốc"],
@@ -6189,7 +6189,7 @@ window.SOTAY_QUYTRINH = [
       { ten: "Khảo sát khu trú", giaTri: "FOV nhỏ 180–200 mm · lát cắt mỏng 2.0–3.0 mm" },
       { ten: "Định hướng", giaTri: "Coronal & Sagittal song song/vuông góc với hoành yên và cuống tuyến yên" },
       { ten: "Chuỗi cốt lõi", giaTri: "T1W Sag & Cor mỏng 2mm (trước tiêm) · T2W Cor FS · Dynamic T1 Coronal 5-phase · T1W FS+C (Sag/Cor/Ax)" },
-      { ten: "Dynamic", giaTri: "Tiêm 5 ml Gadolinium tốc độ 1.2–2.0 ml/s; chụp 5 lát lặp lại tại 30s, 60s, 90s, 120s" }
+      { ten: "Dynamic", giaTri: "Tiêm Gd 0,1 mmol/kg theo cân nặng (0,2 mL/kg thuốc 0,5 M · 0,1 mL/kg thuốc 1,0 M; một số nơi dùng nửa liều 0,05 mmol/kg cho dynamic tuyến yên) tốc độ 1,2–2,0 mL/s; chụp 5 lát lặp lại tại 30s, 60s, 90s, 120s" }
     ],
     noiDung: [
       { tieuDe: "Chỉ định", items: [
@@ -6265,11 +6265,10 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-u-nao",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI u não",
-    tuKhoa: ["u nao", "brain tumor", "glioma", "di can", "mrs", "pho", "tuoi mau", "perfusion", "dti"],
+    tuKhoa: ["u nao", "brain tumor", "glioma", "di can", "mrs", "pho", "dti"],
     thongSo: [
       { ten: "Cốt lõi sau tiêm", giaTri: "T1W 3D FS + Gd (cả 3 mặt phẳng) · FLAIR + Gd" },
       { ten: "Cộng hưởng từ Phổ (MRS)", giaTri: "Single Voxel (TE 35 & 144 ms) · Multi-Voxel cho glioma thâm nhiễm" },
-      { ten: "Tưới máu (pMRI)", giaTri: "Đánh giá thể tích máu não tương đối (rCBV) — phân độ ác tính glioma" },
       { ten: "DTI", giaTri: "Đánh giá chèn ép/đứt gãy bó sợi thần kinh vận động trước mổ" }
     ],
     noiDung: [
@@ -6277,7 +6276,6 @@ window.SOTAY_QUYTRINH = [
         "T1W 3D FS + Gd (3 mặt phẳng): đánh giá mức độ ngấm thuốc, ranh giới khối u, hoại tử trung tâm và phá vỡ hàng rào máu não.",
         "FLAIR + Gd bổ sung: phát hiện thâm nhiễm màng mềm (carcinomatosis màng mềm) hoặc u xâm lấn khoang dưới nhện.",
         "Cộng hưởng từ Phổ (MRS): Single Voxel (TE 35 & 144 ms) cho tổn thương mới phát hiện; Multi-Voxel cho glioma thâm nhiễm.",
-        "Tưới máu MRI (pMRI): đánh giá rCBV giúp phân độ ác tính glioma.",
         "DTI (Diffusion Tensor Imaging): đánh giá chèn ép/đứt gãy các bó sợi thần kinh vận động trước phẫu thuật."
       ]},
       { tieuDe: "Lưu ý", items: [
@@ -6368,7 +6366,7 @@ window.SOTAY_QUYTRINH = [
     tuKhoa: ["gadolinium", "tiem thuoc", "doi quang tu", "egfr", "dynamic", "ce-mra", "care bolus"],
     thongSo: [
       { ten: "Đường truyền", giaTri: "Kim 22G tại tĩnh mạch khuỷu tay; kiểm tra eGFR > 30 mL/min/1.73m²" },
-      { ten: "Liều lượng", giaTri: "0.1 mmol/kg (≈ 5–10 ml) + 20 ml NaCl 0.9% đuổi thuốc" },
+      { ten: "Liều lượng", giaTri: "0,1 mmol/kg — thuốc 0,5 mmol/mL (Dotarem, Magnevist…): 0,2 mL/kg · thuốc 1,0 mmol/mL (Gadovist): 0,1 mL/kg · + 20 mL NaCl 0,9% đuổi thuốc" },
       { ten: "Tốc độ tiêm thường", giaTri: "1.5–2.0 ml/s; chụp T1W sau tiêm 2–3 phút" }
     ],
     noiDung: [
@@ -6377,7 +6375,8 @@ window.SOTAY_QUYTRINH = [
         "Kiểm tra chức năng thận: eGFR > 30 mL/min/1.73m²."
       ]},
       { tieuDe: "Liều lượng thuốc", items: [
-        "Gadolinium tiêu chuẩn 0.1 mmol/kg thể trọng (tương đương 5–10 ml) + 20 ml dung dịch Natri Clorid 0.9% đuổi thuốc."
+        "Gadolinium tiêu chuẩn 0,1 mmol/kg thể trọng. QUY ĐỔI THEO NỒNG ĐỘ LỌ THUỐC: thuốc 0,5 mmol/mL (Dotarem, Magnevist, Omniscan…) = 0,2 mL/kg (BN 60 kg → 12 mL); thuốc 1,0 mmol/mL (Gadovist) = 0,1 mL/kg (BN 60 kg → 6 mL). Luôn đọc nồng độ trên nhãn lọ trước khi rút thuốc.",
+        "Đuổi thuốc 20 mL NaCl 0,9% cùng tốc độ. Thuốc gan đặc hiệu Primovist (0,25 mmol/mL): 0,025 mmol/kg = 0,1 mL/kg."
       ]},
       { tieuDe: "Kỹ thuật tiêm theo bệnh lý", items: [
         "Tiêm thông thường: bơm thuốc 1.5–2.0 ml/s; chụp các chuỗi T1W post-contrast sau 2–3 phút.",
@@ -6736,6 +6735,7 @@ window.SOTAY_QUYTRINH = [
   },
   {
     id: "mri-bung-ruot-thua-thai",
+    an: true, // ẨN khỏi giao diện cho tới khi có protocol riêng
     phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
     ten: "MRI bụng — ruột thừa ở bệnh nhân có thai",
     tuKhoa: ["ruot thua", "viem ruot thua", "co thai", "mang thai", "appendicitis", "pregnancy", "khong ion hoa"],
@@ -6767,7 +6767,7 @@ window.SOTAY_QUYTRINH = [
       { ten: "Tư thế", giaTri: "Nằm ngửa, cổ trung tính; dặn giữ đầu, không cử động lưỡi / nuốt khi phát xung" },
       { ten: "FOV", giaTri: "Phủ liên tục từ nền sọ xuống khớp ức đòn / quai động mạch chủ (không bỏ sót hạch cổ sâu)" },
       { ten: "Chống xảo ảnh", giaTri: "Đặt Flow Saturation Bands trên & dưới trường chụp để triệt xảo ảnh đập ĐM/TM cảnh" },
-      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg (0.2 ml/kg), 1.5–2.0 ml/s; T1 FS + C BẮT BUỘC sau tiêm" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0,1 mmol/kg (= 0,2 mL/kg thuốc 0,5 mmol/mL · 0,1 mL/kg thuốc 1,0 mmol/mL), 1.5–2.0 ml/s; T1 FS + C BẮT BUỘC sau tiêm" },
       { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
     ],
     noiDung: [
@@ -6789,7 +6789,7 @@ window.SOTAY_QUYTRINH = [
         "DWI & ADC Map: phân biệt u lành vs ác, hạch viêm (ADC cao) vs hạch di căn (ADC thấp), áp xe mủ đặc (hạn chế khuếch tán mạnh) vs u hoại tử dịch lỏng."
       ]},
       { tieuDe: "Quy trình tiêm thuốc (+C)", items: [
-        "Bắt buộc tiêm cho mọi trường hợp nghi U, viêm, áp xe hoặc hạch cổ. Gd 0.1 mmol/kg (0.2 ml/kg), tĩnh mạch khuỷu 1.5–2.0 ml/s.",
+        "Bắt buộc tiêm cho mọi trường hợp nghi U, viêm, áp xe hoặc hạch cổ. Gd 0,1 mmol/kg (= 0,2 mL/kg thuốc 0,5 mmol/mL · 0,1 mL/kg thuốc 1,0 mmol/mL), tĩnh mạch khuỷu 1.5–2.0 ml/s.",
         "Quy tắc BẮT BUỘC: T1W sau tiêm phải XÓA MỠ (T1 FS + C) — vì mỡ cổ sáng trên T1 sẽ che khuất tổn thương ngấm thuốc nếu không xóa mỡ.",
         "Chụp T1 FS + C ít nhất 2 mặt phẳng (Axial & Coronal/Sagittal) hoặc 3D T1 e-THRIVE xóa mỡ mỏng 1.5 mm."
       ]},
@@ -6977,7 +6977,7 @@ window.SOTAY_QUYTRINH = [
       { ten: "Chuẩn bị", giaTri: "Thụt tháo trực tràng sạch khí/phân · Buscopan 20 mg (IV/IM) · bàng quang vừa phải (tiểu hết trước 30–60 phút)" },
       { ten: "Phân vùng giải phẫu", giaTri: "PZ ngoại vi (70–80% thể tích, 70–75% ung thư) · TZ chuyển tiếp (~20%, BPH + 20% ung thư) · CZ trung tâm · AFMS mô đệm xơ cơ trước" },
       { ten: "Bộ xung mpMRI", giaTri: "T2W High-Res + DWI/ADC (high-b ≥ 1400) + DCE Dynamic 3D" },
-      { ten: "Tiêm thuốc", giaTri: "Gd 0.1 mmol/kg (0.2 ml/kg), 2.0–3.0 ml/s; DCE ≤ 15s/thì, kéo dài > 2 phút" },
+      { ten: "Tiêm thuốc", giaTri: "Gd 0,1 mmol/kg (= 0,2 mL/kg thuốc 0,5 mmol/mL · 0,1 mL/kg thuốc 1,0 mmol/mL), 2.0–3.0 ml/s; DCE ≤ 15s/thì, kéo dài > 2 phút" },
       { ten: "Máy", giaTri: "1.5T Philips (Achieva / Ingenia / Multiva)" }
     ],
     noiDung: [
@@ -7529,7 +7529,7 @@ window.SOTAY_QUYTRINH = [
         rows: [
           ["Từ trường tĩnh B0 (1.0–3.0T)", "Tồn tại liên tục 24/7; lực hút vật sắt từ", "Hiệu ứng đạn bắn (xe lăn, bình oxy, kéo → đạn); momen xoắn dịch chuyển cấy ghép (clip phình mạch, van tim)", "Kiểm soát tuyệt đối kim loại vào Zone IV; nam châm thử cầm tay > 1000 Gauss; sàng lọc tiền sử cấy ghép"],
           ["Gradient từ trường (dB/dt)", "Bật/tắt liên tục cuộn chênh từ (lực Lorentz)", "Tiếng ồn > 120 dB; kích thích thần kinh ngoại vi (PNS, châm chích/co cơ); chớp sáng (phosphenes)", "BẮT BUỘC tai nghe/nút tai giảm > 30 dB; giới hạn slew rate an toàn; khuyên không đan tay/chân"],
-          ["Trường vô tuyến RF (B1)", "Xung RF gây cộng hưởng & tích nhiệt mô", "SAR (W/kg) tăng nhiệt cơ thể (nhất là mắt & tinh hoàn); BỎNG NHIỆT do vòng lặp dòng điện", "Giới hạn SAR < 0.4 W/kg (toàn thân) hoặc < 4.0 W/kg (cục bộ); tránh vòng lặp; đệm cách ly da–da & da–máy"]
+          ["Trường vô tuyến RF (B1)", "Xung RF gây cộng hưởng & tích nhiệt mô", "SAR (W/kg) tăng nhiệt cơ thể (nhất là mắt & tinh hoàn); BỎNG NHIỆT do vòng lặp dòng điện", "Giới hạn SAR chế độ bình thường (IEC 60601-2-33): toàn thân ≤ 2 W/kg · đầu ≤ 3,2 W/kg · cục bộ ≤ 10 W/kg (thân) / 20 W/kg (chi); tránh vòng lặp; đệm cách ly da–da & da–máy"]
         ]
       }},
       { tieuDe: "Bốn khu vực an toàn (ACR 4-Zone Model)", bang: {
@@ -7557,7 +7557,7 @@ window.SOTAY_QUYTRINH = [
         cols: ["Phân loại", "Thiết bị / vật thể cấy ghép", "Hướng dẫn xử lý & điều kiện"],
         rows: [
           ["Chống chỉ định TUYỆT ĐỐI", "Máy tạo nhịp tim không tương thích MRI; máy khử rung ICD; ốc tai điện tử; clip phình ĐM sắt từ; dị vật kim loại nội nhãn; bơm truyền tĩnh mạch cấy ghép", "HOÀN TOÀN KHÔNG cho vào Zone IV. Nguy cơ: xoắn vặn rách mạch, hỏng/tái lập trình mạch điện tử, dịch chuyển dị vật nội nhãn gây đứt TK thị / mù"],
-          ["Tương đối — MR Conditional", "Clip phình ĐM Titanium; stent, van tim nhân tạo (sau 6 tuần); khớp giả / nẹp đinh phi sắt từ; mảnh kim loại xa cơ quan quan trọng; máy tạo nhịp 'MR Conditional'", "BẮT BUỘC hồ sơ rõ: xác minh nhãn/model MR Conditional; chụp XQ/CT kiểm tra dị vật nhãn cầu trước; đánh giá lợi ích/rủi ro + đồng ý văn bản"],
+          ["Tương đối — MR Conditional", "Clip phình ĐM Titanium; stent mạch vành/mạch máu & van tim nhân tạo (hầu hết an toàn ở 1,5T ngay sau đặt — ACR: không cần chờ 6 tuần, nhưng phải xác minh nhãn); khớp giả / nẹp đinh phi sắt từ; mảnh kim loại xa cơ quan quan trọng; máy tạo nhịp / ICD 'MR Conditional'", "BẮT BUỘC hồ sơ rõ: xác minh nhãn/model MR Conditional (thẻ cấy ghép, tra cứu mrisafety.com); máy tạo nhịp MR Conditional: lập trình chế độ MRI trước & sau chụp, có BS tim mạch/ kỹ thuật viên hãng phối hợp, theo dõi ECG/SpO₂ liên tục; chụp XQ/CT kiểm tra dị vật nhãn cầu trước; đánh giá lợi ích/rủi ro + đồng ý văn bản"],
           ["MR Safe (an toàn tuyệt đối)", "Cấy ghép phi kim loại hoàn toàn (nhựa, gốm, thủy tinh, Titanium phi sắt từ)", "Chụp MRI an toàn ở mọi cường độ từ trường, không cần điều kiện hạn chế"]
         ]
       }},
@@ -7593,7 +7593,7 @@ window.SOTAY_QUYTRINH = [
         rows: [
           ["BN mang thai", "An toàn ở bất kỳ giai đoạn thai kỳ nếu có chỉ định lâm sàng rõ", "Đánh giá lợi ích/rủi ro + đồng ý văn bản; HẠN CHẾ TỐI ĐA tiêm Gadolinium (qua nhau thai & nước ối)"],
           ["Nhân viên MR mang thai", "Được tiếp tục làm việc trong môi trường MRI", "Tuyệt đối KHÔNG ở trong Zone IV khi máy đang phát xung"],
-          ["Phụ nữ cho con bú", "Gadolinium bài tiết lượng rất nhỏ vào sữa", "Vắt bỏ sữa, không cho trẻ bú trong 36–48 giờ sau tiêm thuốc"],
+          ["Phụ nữ cho con bú", "Gadolinium bài tiết < 0,04% liều vào sữa trong 24 giờ, trẻ hấp thu < 1% lượng đó (ACR Manual on Contrast Media)", "KHÔNG cần ngừng cho bú sau tiêm Gd (ACR, ESUR). Nếu mẹ vẫn lo ngại: có thể vắt bỏ sữa 12–24 giờ — là lựa chọn của mẹ, không phải yêu cầu y khoa"],
           ["Cấp cứu & Quench (xả Heli)", "Cấp cứu y khoa hoặc Quench (bay hơi Heli lỏng → mất từ trường)", "Đưa BN RA KHỎI Zone IV (về Zone II/III) trước khi hồi sức; Quench: bật quạt thông gió khẩn, di tản ngay (ngạt & tăng áp chặn cửa)"]
         ]
       }},
@@ -8049,7 +8049,7 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Ứng dụng", items: [
         "DWI: đột quỵ nhồi máu siêu cấp (<30 phút), phân biệt áp xe vs u hoại tử, phân loại ác tính (ADC thấp = ác tính).",
         "DTI (Tractography): bản đồ bó sợi trước mổ u não; chấn thương sợi trục vi thể (DAI).",
-        "DKI (≥3 b-value tới 2000–2500): phân độ u thần kinh đệm. IVIM (nhiều b thấp 0–200): tách khuếch tán thật & tưới máu, u gan/xơ gan không thuốc. NODDI: multi-shell, vi cấu trúc sợi trục (nghiên cứu)."
+        "DKI (≥3 b-value tới 2000–2500): phân độ u thần kinh đệm. NODDI: multi-shell, vi cấu trúc sợi trục (nghiên cứu)."
       ]}
     ],
     nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
@@ -8060,12 +8060,12 @@ window.SOTAY_QUYTRINH = [
     ten: "EPI & biến thể (SE-EPI, GRE-EPI, RESOLVE, MUSE, ZOOMit)",
     tuKhoa: ["epi", "echo planar", "se-epi", "gre-epi", "resolve", "muse", "zoomit", "focus", "meo hinh"],
     thongSo: [
-      { ten: "EPI", giaTri: "Thu toàn k-space 1 lát sau 1 xung RF (vài chục ms) — nền của DWI/DTI/DSC/fMRI" }
+      { ten: "EPI", giaTri: "Thu toàn k-space 1 lát sau 1 xung RF (vài chục ms) — nền của DWI/DTI/fMRI" }
     ],
     noiDung: [
       { tieuDe: "Đặc điểm & biến thể", items: [
         "EPI cần slew rate cực cao; nhược điểm: méo hình ở ranh giới mô-khí & chemical shift lớn → FatSat triệt để.",
-        "SE-EPI: chuẩn cho DWI lâm sàng, giảm méo vùng nền sọ/tiền liệt. GRE-EPI: nhanh nhất, cho fMRI & DSC (không dùng DWI).",
+        "SE-EPI: chuẩn cho DWI lâm sàng, giảm méo vùng nền sọ/tiền liệt. GRE-EPI: nhanh nhất, cho fMRI (không dùng DWI).",
         "RESOLVE/RS-EPI (multi-shot + navigator): DWI độ phân giải cao, ít méo — vàng cho DWI tiền liệt/cổ tử cung. MUSE: DWI bụng. ZOOMit/FOCUS (reduced FOV): DWI khu trú tủy sống/u nhỏ."
       ]}
     ],
@@ -8123,25 +8123,6 @@ window.SOTAY_QUYTRINH = [
         "PC-MRA: định lượng vận tốc dòng (CSF, van tim), không bị shine-through máu tụ.",
         "CE-MRA: thành bại ở canh thuốc (Bolus Tracking/Test Bolus); đa pha TWIST/TRICKS loại rủi ro trượt thuốc.",
         "Không tiêm gating tim: NATIVE/FBI/TRANCE, QISS (ưu việt cho MRA chi dưới PAD), REACT (không cần ECG) — cho bệnh nhân suy thận chống chỉ định Gd."
-      ]}
-    ],
-    nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."
-  },
-  {
-    id: "mri-cx-tuoi-mau",
-    phanHe: "ct-mri", modality: "MRI", nhom: "Chuỗi xung MRI",
-    ten: "Tưới máu: ASL (pCASL/PASL/FAIR), DSC, DCE",
-    tuKhoa: ["asl", "pcasl", "pasl", "fair", "dsc", "dce", "tuoi mau", "perfusion", "cbf", "cbv", "ktrans"],
-    thongSo: [
-      { ten: "ASL", giaTri: "Không tiêm — dán nhãn từ máu ĐM cổ; pCASL là chuẩn hiện nay" },
-      { ten: "DSC", giaTri: "T2* EPI + bolus Gd nhanh 4–5 ml/s — CBV/CBF/MTT/TTP" },
-      { ten: "DCE", giaTri: "T1 3D nhanh nhiều pha + Gd — đường cong TIC, Ktrans/Kep/Ve" }
-    ],
-    noiDung: [
-      { tieuDe: "Ứng dụng", items: [
-        "ASL: tưới máu não không thuốc (trẻ em, thai phụ, suy thận); u tái phát vs hoại tử sau xạ; Moya Moya. pCASL hiệu suất >80% ở 3T; PASL/FAIR nhẹ SAR hơn.",
-        "DSC: đột quỵ (Mismatch với DWI → Penumbra); CBV tăng trong u ác cao (Glioblastoma).",
-        "DCE: ung thư vú (TIC type 3 wash-out), tiền liệt tuyến, u phần mềm; đánh giá đáp ứng kháng sinh mạch."
       ]}
     ],
     nguon: "Từ điển MRI – Wikiradiology KTV 3 Miền (CC BY-SA)."

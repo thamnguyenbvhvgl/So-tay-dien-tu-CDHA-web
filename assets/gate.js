@@ -10,7 +10,7 @@
 (function () {
   "use strict";
   var KEY = "sotay-auth-v1";
-  // SHA-256 của "khoacdha:KhoaCDHA@HVGL2026"
+  // KHÔNG ghi mật khẩu gốc ở đây (file này công khai). Cách đổi: printf '%s' 'user:matkhau' | sha256sum, dán kết quả vào CRED_HASH và đổi KEY (vd "sotay-auth-v2") để mọi máy đăng nhập lại.
   var CRED_HASH = "cbfd8b80d92a310df7e346f505b734f6345a66c35d19ab14ffdb7f9f12974880";
 
   // Đã đăng nhập (áp dụng cả iframe cùng nguồn) → bỏ qua

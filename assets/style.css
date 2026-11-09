@@ -19,9 +19,10 @@
   --line-soft: #eef2f7;
   /* màu thương hiệu & phân hệ */
   --brand:     #15509c;   /* navy – chủ đạo & MRI */
+  --brand-solid:#15509c;   /* nền cho chữ trắng (nút/tab/tiêu đề bảng đang chọn) */
   --brand-ink: #0e3a73;
   --brand-wash:#eaf1fb;
-  --xq:        #1f8ec2;   /* X-quang – cyan */
+  --xq:        #157ab0;   /* X-quang – cyan */
   --ct:        #3f6ea6;   /* CT – xanh thép */
   --mri:       #15509c;   /* MRI – navy */
   --warn-bg:   #fff7e8;
@@ -49,11 +50,12 @@
   --line:      #314158;
   --line-soft: #26324a;
   --brand:     #5b9be8;
+  --brand-solid:#2c64b0;
   --brand-ink: #bcd6f7;
   --brand-wash:#182b47;
-  --xq:        #43c0f0;
-  --ct:        #86add8;
-  --mri:       #5b9be8;
+  --xq:        #1d7fb3;
+  --ct:        #3d6aa3;
+  --mri:       #2c64b0;
   --warn-bg:   #352a12;
   --warn-line: #7a5f21;
   --warn-ink:  #ffcf7a;
@@ -150,7 +152,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; line
   background: var(--surface); color: var(--text-soft); cursor: pointer;
 }
 .tab:hover { border-color: var(--brand); color: var(--text); }
-.tab.is-active { background: var(--brand); color: #fff; border-color: var(--brand); }
+.tab.is-active { background: var(--brand-solid); color: #fff; border-color: var(--brand); }
 
 /* ------------------------------------------------------------- KHẨU HIỆU */
 .tagline {
@@ -174,7 +176,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; line
   color: var(--text-soft); cursor: pointer; white-space: nowrap;
 }
 .chip:hover { border-color: var(--brand); color: var(--text); }
-.chip.is-active { background: var(--brand); color: #fff; border-color: var(--brand); font-weight: 600; }
+.chip.is-active { background: var(--brand-solid); color: #fff; border-color: var(--brand); font-weight: 600; }
 
 .result-meta { color: var(--text-soft); font-size: 13.5px; margin: 0 0 10px; }
 
@@ -321,7 +323,7 @@ table.bang { width: 100%; border-collapse: collapse; font-size: 13.5px; min-widt
 table.bang th, table.bang td {
   border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top;
 }
-table.bang th { background: var(--brand); color: #fff; font-weight: 700; font-size: 13px; }
+table.bang th { background: var(--brand-solid); color: #fff; font-weight: 700; font-size: 13px; }
 table.bang tbody tr:nth-child(even) td { background: var(--surface-2); }
 table.bang td:first-child { font-weight: 600; color: var(--brand-ink); white-space: nowrap; }
 @media (max-width: 560px) { table.bang td:first-child { white-space: normal; } }
@@ -440,7 +442,7 @@ table.bang td:first-child { font-weight: 600; color: var(--brand-ink); white-spa
 .enc-panel .enc-pass:focus { outline: none; border-color: var(--cyan, var(--xq)); }
 .enc-panel .enc-btn {
   font-size: 14px; font-weight: 600; padding: 8px 14px;
-  border: 1px solid var(--brand); background: var(--brand); color: #fff;
+  border: 1px solid var(--brand); background: var(--brand-solid); color: #fff;
   border-radius: var(--pill); cursor: pointer;
 }
 .enc-panel .enc-btn:disabled { opacity: .6; cursor: default; }

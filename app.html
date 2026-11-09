@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
 <title>Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261035">
+<link rel="stylesheet" href="assets/style.css?v=20261109">
 <style>
   /* ===== THANH ỨNG DỤNG (dùng chung mọi màn hình) ===== */
   .appbar { position: sticky; top: 0; z-index: 30; background: var(--surface);
@@ -21,7 +22,7 @@
              border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
              color: var(--text-soft); font-size: 13.5px; font-weight: 600; cursor: pointer; }
   .navpill:hover { border-color: var(--brand); color: var(--text); }
-  .navpill.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .navpill.active { background: var(--brand-solid); border-color: var(--brand); color: #fff; }
   .navpill .cnt { font-weight: 600; opacity: .8; font-size: 12.5px; }
   .navpill .dot { width: 8px; height: 8px; border-radius: 2px; transform: rotate(45deg); flex: none; }
   .barsp { flex: 1 1 60px; }
@@ -90,7 +91,7 @@
   .subtab { border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
             padding: 8px 15px; border-radius: 999px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
   .subtab:hover { border-color: var(--brand); color: var(--text); }
-  .subtab.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .subtab.active { background: var(--brand-solid); color: #fff; border-color: var(--brand); }
   .panel { padding: 18px; min-height: 360px; }
   .panel > h2 { margin: 0 0 4px; font-size: 20px; font-weight: 800; color: var(--text); }
   .panel .desc { color: var(--text-soft); font-size: 14px; margin: 0 0 16px; }
@@ -99,8 +100,42 @@
   .stub b { color: var(--brand-ink); }
   .stub ul { margin: 10px 0 0; padding-left: 20px; } .stub li { margin-bottom: 5px; font-size: 14px; }
 
+  /* kết quả tìm kiếm trên thanh app */
+  .qres { position: absolute; top: 44px; left: 0; right: 0; z-index: 40; max-height: 60vh; overflow-y: auto;
+          background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(15,23,43,.18); padding: 6px; }
+  .qres button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 10px; border: none; border-radius: 8px;
+                 background: none; color: var(--text); font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
+  .qres button:hover, .qres button.sel { background: var(--surface-2); }
+  .qres .qm { flex: none; font-size: 11.5px; font-weight: 700; color: #fff; border-radius: 999px; padding: 2px 8px; }
+  .qres .qnone { padding: 12px; font-size: 13.5px; color: var(--text-soft); }
+  .pinbox { padding: 0 16px 14px; } .pinbox > b { display: block; font-size: 13px; color: var(--brand-ink); margin-bottom: -4px; }
+  .pinbox .quicklinks { padding: 10px 0 0; }
+  .pinhint { margin: 0; padding: 0 16px 14px; font-size: 12.5px; color: var(--text-soft); }
+  /* ảnh phóng to (nhận từ khung protocol) */
+  .lbx { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; background: rgba(0,0,0,.9);
+         display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .lbx[hidden] { display: none; }
+  .lbx img { max-width: 100%; max-height: 100%; border-radius: 8px; background: #fff; }
+  .lbx button { position: absolute; top: 14px; right: 16px; width: 48px; height: 48px; border-radius: 50%; border: none;
+                background: rgba(255,255,255,.18); color: #fff; font-size: 22px; cursor: pointer; }
+
   @media (max-width: 900px) { .modgrid { grid-template-columns: 1fr 1fr; } .homerow { grid-template-columns: 1fr; } }
-  @media (max-width: 560px) { .modgrid { grid-template-columns: 1fr; } .appbar .brand b { font-size: 15px; } }
+  @media (max-width: 560px) {
+    .modgrid { grid-template-columns: 1fr; } .appbar .brand b { font-size: 15px; }
+    /* điện thoại: thanh app không dính (đỡ chiếm ~30% màn hình), Khẩn cấp lên hàng đầu, ô nhập 16px (iOS không tự zoom) */
+    .appbar { position: static; }
+    .appbar .inner { gap: 8px; padding: 8px 12px; }
+    .appbar .brand { order: 1; } .btn-emg { order: 2; margin-left: auto; } .theme { order: 3; }
+    .barsearch { order: 4; flex: 1 1 100%; max-width: none; } .navpills { order: 5; } .barsp { display: none; }
+    .navpill, .btn-emg, .subtab, .quicklinks button { min-height: 44px; }
+    .navpill .cnt { display: none; }
+    .appbar .brand img { height: 30px; }
+  }
+  @media (max-width: 430px) {
+    .appbar .brand b { display: none; }  /* chừa chỗ cho Khẩn cấp + nút sáng/tối trên cùng một hàng */
+    .navpill { padding: 0 11px; }
+    .barsearch input, .qc input, .qc select, .field input, .field select { font-size: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -114,7 +149,8 @@
       <div class="barsp"></div>
       <form class="barsearch" id="barsearch" role="search" onsubmit="return false">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Tìm nhanh: bàn tay thẳng, CT sọ não…" aria-label="Tìm quy trình">
+        <input id="q" type="search" placeholder="Tìm nhanh: bàn tay thẳng, CT sọ não…" aria-label="Tìm quy trình" autocomplete="off" aria-controls="qres">
+        <div class="qres" id="qres" role="listbox" hidden></div>
       </form>
       <button class="btn-emg" id="emgBtn">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg> Khẩn cấp
@@ -131,6 +167,8 @@
     </main>
   </div>
 
+  <div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Ảnh phóng to" hidden><button id="lbxClose" aria-label="Đóng ảnh">✕</button><img id="lbxImg" alt=""></div>
+
   <footer id="appfoot" style="max-width:1200px;margin:10px auto 20px;padding:11px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;color:var(--text-soft,#667);border-top:1px solid var(--line,#e5e7eb)">
     <span id="statWrap" hidden style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
       <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">👁️ Lượt truy cập: <b id="visitTotal" style="color:var(--text,#111)">…</b></span>
@@ -145,11 +183,11 @@
   <script>
   (function () {
     "use strict";
-    var QT = window.SOTAY_QUYTRINH || [];
+    var QT = (window.SOTAY_QUYTRINH || []).filter(function (x) { return !x.an; }); // bỏ mục đánh dấu an:true (chưa duyệt)
     var CONGCU = window.SOTAY_CONGCU || {};
     function countMod(m) { return QT.filter(function (x) { return x.modality === m; }).length; }
     function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
-    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
     var SECTIONS = [
       { id:1, ten:"Công cụ khẩn cấp", en:"Emergency Toolkit", badge:"3", color:"var(--danger)",
@@ -204,9 +242,48 @@
 
     document.getElementById("brandBtn").onclick = showHome;
     document.getElementById("emgBtn").onclick = function(){ selectSection(1,0); };
+    // ============ TÌM KIẾM NGAY TRÊN THANH (gộp X-quang + CT + MRI, không dấu) ============
+    function boDau(s){ return (s||"").toString().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/đ/g,"d"); }
+    QT.forEach(function(it){ it._blob = boDau([it.ten, it.nhom, it.modality, (it.tuKhoa||[]).join(" ")].join(" ")); });
+    var MOD_SID = { "X-quang":2, "CT":3, "MRI":4 };
+    // Mở thẳng 1 kỹ thuật trong khung protocol (chon-protocol tự suy vùng/phân hệ từ ?item=)
+    function openItem(id){
+      var it = QT.filter(function(x){ return x.id === id; })[0]; if (!it) return;
+      var sid = MOD_SID[it.modality] || 2;
+      selectSection(sid, 0);
+      panel.innerHTML = "";
+      iframePane("chon-protocol.html?embed=1&item=" + encodeURIComponent(id), it.ten);
+      try { history.replaceState(null, "", "#" + sid + "?item=" + encodeURIComponent(id)); } catch (e) {}
+    }
+    var qIn = document.getElementById("q"), qBox = document.getElementById("qres"), qSel = -1;
+    function searchRun(){
+      var v = boDau(qIn.value.trim()); qSel = -1;
+      if (v.length < 2) { qBox.hidden = true; qBox.innerHTML = ""; return; }
+      var words = v.split(/\s+/);
+      var hits = QT.filter(function(it){ return words.every(function(w){ return it._blob.indexOf(w) >= 0; }); })
+        .sort(function(a,b){ return (boDau(a.ten).indexOf(words[0]) < 0) - (boDau(b.ten).indexOf(words[0]) < 0); })
+        .slice(0, 12);
+      qBox.innerHTML = hits.length
+        ? hits.map(function(it){ return '<button type="button" role="option" data-id="'+esc(it.id)+'"><span class="qm" style="background:var(--'+({"CT":"ct","MRI":"mri"}[it.modality]||"xq")+')">'+esc(it.modality)+'</span><span class="qt">'+esc(it.ten)+'</span></button>'; }).join("")
+        : '<div class="qnone">Không tìm thấy — thử từ khác (vd: "goi", "so nao", "nguc").</div>';
+      qBox.hidden = false;
+    }
+    function qPick(id){ qBox.hidden = true; qIn.value = ""; qIn.blur(); openItem(id); }
+    qIn.addEventListener("input", searchRun);
+    qIn.addEventListener("focus", searchRun);
+    qIn.addEventListener("keydown", function(e){
+      var bs = qBox.querySelectorAll("button");
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        if (!bs.length) return; e.preventDefault();
+        qSel = (qSel + (e.key === "ArrowDown" ? 1 : -1) + bs.length) % bs.length;
+        Array.prototype.forEach.call(bs, function(b,i){ b.classList.toggle("sel", i === qSel); });
+      } else if (e.key === "Escape") { qBox.hidden = true; }
+    });
+    qBox.addEventListener("mousedown", function(e){ var b = e.target.closest("button[data-id]"); if (b) { e.preventDefault(); qPick(b.getAttribute("data-id")); } });
+    qIn.addEventListener("blur", function(){ setTimeout(function(){ qBox.hidden = true; }, 150); });
     document.getElementById("barsearch").onsubmit = function(){
-      var v = (document.getElementById("q").value||"").trim();
-      location.href = "trang-v1.html" + (v ? "?q=" + encodeURIComponent(v) : "");
+      var bs = qBox.querySelectorAll("button[data-id]");
+      var b = bs[qSel >= 0 ? qSel : 0]; if (b) qPick(b.getAttribute("data-id"));
       return false;
     };
 
@@ -216,8 +293,16 @@
       sectionView.hidden = true; homeBox.hidden = false;
       setActiveNav("home");
       buildHome();
-      try { history.replaceState(null, "", "#home"); } catch (e) {}
+      try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} // không dùng "#home" (trùng id="home" → trình duyệt tự cuộn mất thanh app)
       window.scrollTo(0,0);
+    }
+    // Mục "Đã ghim" (nút Ghim trong trang chi tiết lưu vào localStorage "sotay-pins" trên máy này)
+    function pinsHtml(){
+      var pins = {}; try { pins = JSON.parse(localStorage.getItem("sotay-pins") || "{}"); } catch (e) {}
+      var list = QT.filter(function(x){ return pins[x.id]; });
+      if (!list.length) return '<p class="pinhint">Mẹo: bấm <b>Ghim</b> ở một kỹ thuật hay dùng — nó sẽ hiện ở đây để mở nhanh trên máy này.</p>';
+      return '<div class="pinbox"><b>Đã ghim trên máy này</b><div class="quicklinks">' +
+        list.map(function(x){ return '<button data-item="'+esc(x.id)+'">'+esc(x.ten)+'</button>'; }).join("") + '</div></div>';
     }
     function buildHome(){
       var cards = [2,3,4,1].map(function(id){
@@ -238,20 +323,19 @@
           '<h1>Bạn cần chụp gì hôm nay?</h1>' +
           '<p>Khoa Chẩn đoán hình ảnh · Bệnh viện Hùng Vương Gia Lai</p></div>' +
           '<div class="home-status">' +
-            '<span class="pillstat"><span class="d"></span>Nội dung duyệt 16/10/2026</span>' +
-            '<span class="pillstat"><span class="d"></span>Chạy không cần mạng · bản 1.0</span>' +
+            '<span class="pillstat"><span class="d"></span>' + QT.length + ' quy trình · cập nhật 08/11/2026</span>' +
+            '<span class="pillstat"><span class="d"></span>Bản 1.1 · dùng nội bộ Khoa CĐHA</span>' +
           '</div></div>' +
         '<div class="modgrid">'+cards+'</div>' +
         '<div class="homerow">' +
           '<div class="panelbox"><h3>Tra cứu nhanh</h3><div class="quicklinks">' +
-            '<button data-go="2">Phổi thẳng</button>' +
-            '<button data-go="2">Cột sống thắt lưng</button>' +
-            '<button data-go="2">Bàn tay thẳng</button>' +
-            '<button data-go="2">Khung chậu thẳng</button>' +
-            '<button data-go="3">CT sọ não</button>' +
-            '<button data-go="4">MRI gối</button>' +
-            '<button data-go="5">Ca lâm sàng tham khảo</button>' +
-          '</div></div>' +
+            '<button data-item="xq-long-nguc-thang">Phổi thẳng</button>' +
+            '<button data-item="xq-cotsong-tl-thang">Cột sống thắt lưng</button>' +
+            '<button data-item="xq-bantay-thang">Bàn tay thẳng</button>' +
+            '<button data-item="xq-khungchau-truocsau">Khung chậu thẳng</button>' +
+            '<button data-item="ct-so-nao-khong-tiem">CT sọ não</button>' +
+            '<button data-item="mri-khop-goi">MRI gối</button>' +
+          '</div>' + pinsHtml() + '</div>' +
           '<div class="panelbox"><h3>Tính nhanh liều cản quang</h3><div class="qc">' +
             '<div class="qc-row">' +
               '<div class="qc-f"><label for="h_cn">Cân nặng (kg)</label><input id="h_cn" type="number" value="60" min="3" max="200"></div>' +
@@ -266,12 +350,20 @@
       Array.prototype.forEach.call(homeBox.querySelectorAll("[data-go]"), function(b){
         b.onclick = function(){ selectSection(parseInt(b.getAttribute("data-go"),10), 0); };
       });
+      Array.prototype.forEach.call(homeBox.querySelectorAll("[data-item]"), function(b){
+        b.onclick = function(){ openItem(b.getAttribute("data-item")); };
+      });
       document.getElementById("h_full").onclick = function(){ selectSection(3,2); };
       function qc(){
         var w = parseFloat((document.getElementById("h_cn")||{}).value)||0;
         var i = parseInt((document.getElementById("h_loai")||{}).value,10)||0;
-        var L = ls[i]||ls[0];
-        document.getElementById("h_vol").textContent = w ? (Math.round(w*L.mlKgMin)+"–"+Math.round(w*L.mlKgMax)) : "—";
+        var L = ls[i]||ls[0], out = document.getElementById("h_vol"), note = document.querySelector(".qc-note");
+        var VOL_MAX = (CONGCU.lieuCanQuang||{}).tranTheTich || 150, KG_NHI = (CONGCU.lieuCanQuang||{}).canNangNhi || 15;
+        if (!w) { out.textContent = "—"; return; }
+        if (w < KG_NHI) { out.textContent = "Nhi"; if (note) note.textContent = "⚠ Trẻ < " + KG_NHI + " kg: liều nhi theo bác sĩ, không áp mức người lớn."; return; }
+        var lo = Math.min(Math.round(w*L.mlKgMin), VOL_MAX), hi = Math.min(Math.round(w*L.mlKgMax), VOL_MAX);
+        out.textContent = lo + "–" + hi;
+        if (note) note.textContent = (Math.round(w*L.mlKgMax) > VOL_MAX ? "⚠ Đã giới hạn ở trần " + VOL_MAX + " mL. " : "") + "Liều ml/kg theo Quy trình CLVT của khoa. Luôn đối chiếu eGFR và tiền sử dị ứng trước tiêm.";
       }
       ["h_cn","h_loai"].forEach(function(id){ var e=document.getElementById(id); if(e){ e.addEventListener("input",qc); e.addEventListener("change",qc);} });
       qc();
@@ -344,11 +436,25 @@
 
     // iframe tự co giãn theo nội dung (chon-protocol báo chiều cao qua postMessage) -> chỉ một mạch cuộn
     window.addEventListener("message", function (ev) {
-      var d = ev && ev.data; if (!d || typeof d.sotayH !== "number") return;
-      var f = panel.querySelector("iframe"); if (f) f.style.height = Math.max(480, d.sotayH + 4) + "px";
+      var d = ev && ev.data; if (!d) return;
+      var f = panel.querySelector("iframe"); if (!f || ev.source !== f.contentWindow) return;
+      if (typeof d.sotayH === "number") f.style.height = Math.max(480, Math.ceil(d.sotayH)) + "px";
+      // iframe báo vị trí khung chi tiết → cửa sổ cha cuộn tới (điện thoại: danh sách nằm trên chi tiết)
+      if (typeof d.sotayScroll === "number") {
+        var top = f.getBoundingClientRect().top + window.pageYOffset + d.sotayScroll - 70;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }
+      // ảnh phóng to hiển thị ở cửa sổ cha (lightbox trong iframe tự giãn sẽ lệch khỏi màn hình)
+      if (d.sotayLightbox) openLb(d.sotayLightbox, d.alt || "");
     });
+    var lbx = document.getElementById("lbx"), lbxImg = document.getElementById("lbxImg"), lbxBtn = document.getElementById("lbxClose"), lbxFrom = null;
+    function openLb(src, alt){ lbxFrom = document.activeElement; lbxImg.src = src; lbxImg.alt = alt; lbx.hidden = false; lbxBtn.focus(); }
+    function closeLb(){ lbx.hidden = true; lbxImg.src = ""; if (lbxFrom && lbxFrom.focus) try { lbxFrom.focus(); } catch (e) {} }
+    lbxBtn.onclick = closeLb;
+    lbx.onclick = function(e){ if (e.target === lbx) closeLb(); };
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !lbx.hidden) closeLb(); });
     function iframePane(src, title) {
-      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261039";
+      src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=20261109";
       var wrap = el("div");
       wrap.innerHTML = '<iframe src="' + src + '" title="' + esc(title) + '" scrolling="no" ' +
         'style="display:block;width:100%;height:720px;border:1px solid var(--line);border-radius:10px;background:var(--bg)"></iframe>';
@@ -387,22 +493,33 @@
       card.appendChild(form);
       card.appendChild(el("div","calc-result",
         '<div>Thể tích thuốc gợi ý: <span class="big" id="d_vol">—</span> ml</div>' +
-        '<div>Tốc độ tiêm: <span id="d_rate">—</span></div>'));
+        '<div>Tốc độ tiêm: <span id="d_rate">—</span></div>' +
+        '<div class="calc-flag" id="d_flag" aria-live="polite"></div>'));
       card.appendChild(el("div","sec", '<h3>Tính nhanh eGFR (CKD-EPI 2021, creatinin)</h3>'));
       var ef = el("div");
       ef.innerHTML =
         field("Tuổi", '<input id="e_age" type="number" value="50" min="1" max="120">') +
         field("Giới (chỉ dùng cho công thức eGFR)", '<select id="e_sex"><option value="nu">Nữ</option><option value="nam">Nam</option></select>') +
-        field("Creatinin", '<input id="e_scr" type="number" step="0.01" value="1.0"> <select id="e_unit"><option value="mgdl">mg/dL</option><option value="umol">µmol/L</option></select>');
+        field("Creatinin", '<input id="e_scr" type="number" step="0.01" value="1.0"> <select id="e_unit" aria-label="Đơn vị creatinin"><option value="mgdl">mg/dL</option><option value="umol">µmol/L</option></select>');
       card.appendChild(ef);
       card.appendChild(el("div","calc-result", '<div>eGFR ước tính: <span class="big" id="e_val">—</span> ml/ph/1,73m² — <span id="e_flag"></span></div>'));
       if (d.luuY) card.appendChild(el("div","sec", '<h3>Lưu ý</h3>' + liList(d.luuY)));
       panel.appendChild(card);
+      // Trần an toàn: người lớn thường không quá 150 mL / ≈ 45–50 gI một lần; trẻ < 15 kg dùng liều nhi theo bác sĩ.
+      var VOL_MAX = d.tranTheTich || 150, KG_NHI = d.canNangNhi || 15;
       function doseCalc(){
-        var w=parseFloat(val("d_cn"))||0, i=parseInt(val("d_loai"),10)||0;
-        var L=ls[i]||ls[0];
-        setTxt("d_vol", w ? (Math.round(w*L.mlKgMin)+"–"+Math.round(w*L.mlKgMax)) : "—");
+        var w=parseFloat(val("d_cn"))||0, i=parseInt(val("d_loai"),10)||0, nd=parseFloat(val("d_nd"))||350;
+        var L=ls[i]||ls[0], lo=Math.round(w*L.mlKgMin), hi=Math.round(w*L.mlKgMax), flag="";
+        if (!w) { setTxt("d_vol","—"); setTxt("d_rate","—"); setTxt("d_flag",""); return; }
+        if (w < KG_NHI) {
+          flag = "⚠ Trẻ em < " + KG_NHI + " kg: KHÔNG áp mức người lớn — liều nhi (thường 1,5–2 mL/kg, tối đa theo bác sĩ) và tốc độ bơm theo kim/cân nặng.";
+        } else if (hi > VOL_MAX) {
+          hi = Math.min(hi, VOL_MAX); lo = Math.min(lo, VOL_MAX);
+          flag = "⚠ Đã giới hạn ở trần " + VOL_MAX + " mL (≈ " + Math.round(VOL_MAX*nd/1000) + " gI). Vượt trần chỉ khi có chỉ định bác sĩ.";
+        }
+        setTxt("d_vol", lo + "–" + hi);
         setTxt("d_rate", L.tocDo||"—");
+        setTxt("d_flag", flag);
       }
       function egfrCalc(){
         var age=parseFloat(val("e_age"))||0, sex=val("e_sex"), scr=parseFloat(val("e_scr"))||0, unit=val("e_unit");
@@ -419,7 +536,8 @@
       doseCalc(); egfrCalc();
     }
 
-    function field(label, inner) { return '<div class="field"><label>' + label + '</label>' + inner + '</div>'; }
+    // nhãn gắn với ô nhập (for = id của ô đầu tiên) để trình đọc màn hình đọc đúng tên
+    function field(label, inner) { var m = /id="([^"]+)"/.exec(inner); return '<div class="field"><label' + (m ? ' for="' + m[1] + '"' : '') + '>' + label + '</label>' + inner + '</div>'; }
     function renderCCTA() {
       var d = CONGCU.lieuCCTA || {};
       var cn = d.canNang || {}, idr = d.idr || {}, tg = d.thoiGian || {};
@@ -435,7 +553,8 @@
       card.appendChild(form);
       card.appendChild(el("div", "calc-result",
         '<div>Tốc độ tiêm: <span class="big" id="c_flow">—</span> ml/s</div>' +
-        '<div>Tổng thể tích: <span class="big" id="c_vol">—</span> ml</div>'));
+        '<div>Tổng thể tích: <span class="big" id="c_vol">—</span> ml</div>' +
+        '<div class="calc-flag" id="c_flag" aria-live="polite"></div>'));
       if (d.bangThamChieu && d.bangThamChieu.length) {
         var t = '<div class="sec"><h3>Bảng tham chiếu kVp &amp; IDR theo cân nặng</h3><div class="ref-table"><table><thead><tr><th>Cân nặng</th><th>BMI</th><th>kVp</th><th>IDR</th></tr></thead><tbody>';
         d.bangThamChieu.forEach(function (r) { t += '<tr><td>' + esc(r.can) + '</td><td>' + esc(r.bmi) + '</td><td>' + esc(r.kvp) + '</td><td>' + esc(r.idr) + '</td></tr>'; });
@@ -451,6 +570,9 @@
         var flow = (w * i) / (nd / 1000), vol = flow * tt;
         document.getElementById("c_flow").textContent = flow ? flow.toFixed(1) : "—";
         document.getElementById("c_vol").textContent = vol ? Math.round(vol) : "—";
+        var fl = document.getElementById("c_flag");
+        if (fl) fl.textContent = (flow > 6) ? "⚠ Tốc độ > 6 mL/s vượt giới hạn kim 18G (20G ≈ ≤ 4–5 mL/s): giảm IDR, tăng nồng độ hoặc kéo dài thời gian tiêm; kiểm tra kim/đường truyền."
+          : (flow > 5) ? "Lưu ý: tốc độ > 5 mL/s cần kim ≥ 18G ở tĩnh mạch khuỷu, bơm điện 2 nòng." : "";
       }
       ["c_cn","c_idr","c_nd","c_tg"].forEach(function (id) {
         var e = document.getElementById(id); if (!e) return;
@@ -477,9 +599,14 @@
 
     // khởi động: theo hash (#home hoặc #1..#5), mặc định Trang chủ
     // #<phân hệ>/<tab phụ>, ví dụ #3/2 = CT > Máy tính liều & eGFR (dùng cho mã QR, link chia sẻ)
-    var h = (location.hash || "").replace("#","").split("/");
+    // #<phân hệ>?item=<id> = mở thẳng một kỹ thuật (do ô tìm kiếm / Tra cứu nhanh tạo ra)
+    var hs = (location.hash || "").replace("#",""), hItem = (hs.match(/[?&]item=([^&]+)/) || [])[1];
+    var h = hs.split("?")[0].split("/");
     var ini = parseInt(h[0], 10), iniSub = parseInt(h[1], 10) || 0;
-    if (ini >= 1 && ini <= 5) selectSection(ini, iniSub); else showHome();
+    if (hItem) { try { hItem = decodeURIComponent(hItem); } catch (e) {} }
+    if (hItem && QT.some(function(x){ return x.id === hItem; })) openItem(hItem);
+    else if (ini >= 1 && ini <= 5) { var s0 = sec(ini); selectSection(ini, Math.min(Math.max(iniSub, 0), s0.subs.length - 1)); }
+    else showHome();
 
     // ===== Lượt truy cập (Abacus — không cần đăng ký) + Góp ý (Google Form) =====
     (function () {
