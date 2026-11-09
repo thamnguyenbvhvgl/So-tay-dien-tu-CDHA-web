@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261115">
+<link rel="stylesheet" href="assets/style.css?v=20261116">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -136,6 +136,9 @@
   .pd-imgs-full .pimg.prow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
   .pd-imgs-full .pimg.prow figure { max-width: none; }
   .pd-imgs-full .pimg img { height: 230px; }
+  .pd-imgs-full.one .pimg.prow { grid-template-columns: minmax(0, 460px); }   /* chỉ 1 ảnh: không kéo khung rộng hết hàng */
+  .pd-imgs-full.one .pimg img { height: 300px; }
+  @media (max-width: 900px) { .pd-spec[style] { grid-column: auto !important; } }
   .pd-callout { padding: 11px 13px; border-radius: 9px; border: 1px solid; border-left-width: 4px; margin: 0 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--text); }
   .pd-callout.warn { background: rgba(220,38,38,.09); border-color: rgba(220,38,38,.45); }
   .pd-callout.note { background: rgba(202,138,4,.12); border-color: rgba(202,138,4,.5); }
@@ -554,10 +557,12 @@
         if (specs.length) {
           // số cột theo số thẻ để không có thẻ nằm lẻ một hàng: 1–4 thẻ → đúng số thẻ; 5–6 → 3; ≥7 → 4
           var sc = specs.length <= 4 ? specs.length : (specs.length <= 6 ? 3 : 4);
-          h += '<div class="pd-specs c' + sc + '">' + specs.map(function (t) {
-            return '<div class="pd-spec"><span>' + esc(t.ten) + '</span><b>' + esc(t.giaTri) + '</b></div>'; }).join("") + '</div>';
+          var rem = specs.length % sc;   // hàng cuối thiếu ô → thẻ cuối kéo dài lấp chỗ trống
+          h += '<div class="pd-specs c' + sc + '">' + specs.map(function (t, i) {
+            var span = (rem && i === specs.length - 1) ? ' style="grid-column: span ' + (sc - rem + 1) + '"' : '';
+            return '<div class="pd-spec"' + span + '><span>' + esc(t.ten) + '</span><b>' + esc(t.giaTri) + '</b></div>'; }).join("") + '</div>';
         }
-        if (imgsHtml) h += '<div class="pd-imgs-full">' + imgsHtml + '</div>';
+        if (imgsHtml) h += '<div class="pd-imgs-full' + ((it.hinhAnh || []).filter(function (x) { return x && x.src; }).length === 1 ? ' one' : '') + '">' + imgsHtml + '</div>';
       } else if (paramsHtml || imgsHtml) {
         h += '<div class="pd-top' + (imgsHtml ? "" : " noimg") + (paramsHtml ? "" : " noparams") + '">' +
              paramsHtml + (imgsHtml ? '<div class="pd-imgs">' + imgsHtml + '</div>' : "") + '</div>';

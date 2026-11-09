@@ -6447,6 +6447,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-cs-co",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
     ten: "MRI cột sống cổ",
+    chuoiXung: { chinh: ["Sagittal T1 TSE", "Sagittal T2 TSE", "Sagittal STIR", "Axial T2* mFFE", "Axial T2 TSE"], boSung: ["Coronal T2 TSE (rễ & đám rối cánh tay)", "Sagittal + Axial T1 FS + C (u, viêm, áp xe)"] },
     tuKhoa: ["cot song co", "cervical spine", "c-spine", "thoat vi dia dem co", "tuy co", "mffe", "stir", "chen ep re than kinh"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Head-Neck Array Coil đa kênh chuyên dụng" },
@@ -6495,12 +6496,17 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI (máy tạo nhịp, dị vật kim loại từ tính) trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-cs-co-axial-dia-dem.jpg", caption: "Tìm thoát vị: đặt lát Axial song song từng đĩa đệm (C2/3 → C7/T1), phủ từ mảnh sống dưới tới mảnh sống trên đĩa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 9.7" },
+      { src: "images/mri/mri-cs-co-axial-khu-tru.jpg", caption: "Nghi u, chấn thương, tổn thương tủy: khối lát Axial liên tục vuông góc trục tủy cổ qua vùng tổn thương", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 9.6" }
+    ],
     nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-cs-nguc",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
     ten: "MRI cột sống ngực",
+    chuoiXung: { chinh: ["Sagittal T1 TSE", "Sagittal T2 TSE", "Sagittal STIR", "Axial T2 TSE (khu trú đoạn tổn thương)"], boSung: ["Sagittal + Axial T1 FS + C (u, di căn, viêm tủy)"] },
     tuKhoa: ["cot song nguc", "thoracic spine", "t-spine", "ep tuy nguc", "di can xuong nguc", "viem tuy cat ngang", "ms tuy", "stir"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Spine Matrix Coil đa kênh vùng ngực" },
@@ -6546,12 +6552,16 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI và dùng Respiratory Trigger để loại nhiễu nhịp thở."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-cs-nguc-axial.jpg", caption: "Đặt lát Axial khu trú vuông góc đoạn tủy ngực tổn thương trên ảnh Sagittal T2 (đếm đốt sống theo marker định vị)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 9.12" }
+    ],
     nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-cs-tl",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
     ten: "MRI cột sống thắt lưng – cùng",
+    chuoiXung: { chinh: ["Sagittal T1 TSE", "Sagittal T2 TSE", "Sagittal STIR", "Axial T2 TSE (song song từng đĩa L3/4, L4/5, L5/S1)"], boSung: ["Coronal Oblique STIR (khớp cùng chậu)", "Axial + Sagittal T1 FS + C (mổ cũ / xơ sẹo, viêm, u)"] },
     tuKhoa: ["cot song that lung", "lumbar spine", "l-spine", "thoat vi dia dem", "truot dot song", "fbss", "mo cu", "ap xe co that lung chau", "psoas", "khop cung chau", "modic"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Spine Matrix Coil vùng thắt lưng – cùng" },
@@ -6599,12 +6609,16 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-cs-tl-axial-dia-dem.jpg", caption: "Đặt lát Axial song song từng khoảng đĩa đệm L3/4, L4/5, L5/S1: 3–4 lát/tầng, từ bờ dưới thân trên tới bờ trên thân dưới", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 9.16" }
+    ],
     nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-cs-toan-truc",
     phanHe: "ct-mri", modality: "MRI", nhom: "Cột sống",
     ten: "MRI toàn trục cột sống",
+    chuoiXung: { chinh: ["Sagittal T1 TSE toàn trục (ghép 3 trạm)", "Sagittal T2 TSE toàn trục (ghép 3 trạm)", "Sagittal STIR toàn trục (ghép 3 trạm)"], boSung: ["T1 FS + C 3 mặt phẳng hoặc 3D T1 e-THRIVE (u, viêm, di căn)"], anTS: ["Chuỗi xung chủ lực"] },
     tuKhoa: ["toan truc cot song", "whole spine", "ghep hinh", "auto-stitching", "mobiflex", "di can xuong da o", "da u tuy", "rong tuy", "syrinx", "ep tuy"],
     thongSo: [
       { ten: "Kỹ thuật ghép hình", giaTri: "Auto-Stitching / MobiFlex (Philips 1.5T), chia 3 trạm: C-spine · T-spine · L-spine/Sacrum" },
@@ -6638,6 +6652,9 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-cs-toan-truc-sagittal.jpg", caption: "Ảnh Sagittal toàn trục sau ghép 3 trạm: kiểm tra phủ đủ từ nền sọ tới xương cùng và chỗ nối giữa các trạm liền mạch", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 9.24a" }
+    ],
     nguon: "Protocol MRI cột sống chi tiết (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
 
@@ -6649,6 +6666,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-bung-nin-tho-tot",
     phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
     ten: "MRI bụng — bệnh nhân hợp tác tốt (nín thở)",
+    chuoiXung: { chinh: ["Axial Dual-Echo Dixon T1 FFE (In / Out-of-Phase) — nín thở 15 s", "Axial T2 TSE FS (Respiratory Triggered)", "Axial SS-TSE (HASTE)", "DWI / ADC (b0, b50, b800)", "3D e-THRIVE Dynamic: trước tiêm + 4 thì sau tiêm (nín thở 12–15 s/thì)"], boSung: ["MRCP 3D DRIVE (bệnh lý tụy – đường mật)", "MRCP 2D Thick-Slab SS-TSE (xem nhanh cây mật – tụy)", "Thì tế bào gan phút 15–20 (khi dùng Primovist)"] },
     tuKhoa: ["mri bung", "abdomen", "gan", "lien", "mrcp", "tuy", "than", "dynamic", "e-thrive", "thrive", "nin tho", "breath hold", "dixon", "hcc", "primovist", "tiem dong hoc", "care bolus"],
     thongSo: [
       { ten: "Đối tượng", giaTri: "BN trẻ, tỉnh táo, hợp tác tốt, nín thở ổn định 12–18 giây/lần phát xung" },
@@ -6722,12 +6740,19 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; thận trọng Buscopan ở bệnh nhân glôcôm góc đóng, bí tiểu do phì đại tiền liệt tuyến, nhịp tim nhanh."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-bung-gan-axial.jpg", caption: "Gan: đặt lát Axial trên ảnh định vị Coronal, phủ từ vòm hoành tới bờ dưới gan", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.2" },
+      { src: "images/mri/mri-bung-tuy-axial.jpg", caption: "Tụy: lát Axial mỏng khu trú qua toàn bộ tụy", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.16" },
+      { src: "images/mri/mri-bung-than-axial.jpg", caption: "Thận: khối lát Axial phủ từ cực trên tới cực dưới hai thận", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.13" },
+      { src: "images/mri/mri-bung-thuong-than-axial.jpg", caption: "Thượng thận: lát Axial mỏng khu trú qua vùng thượng thận (trên cực trên thận)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.14" }
+    ],
     nguon: "Protocol MRI vùng bụng & tiêm thuốc động học (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-bung-tho-tu-do",
     phanHe: "ct-mri", modality: "MRI", nhom: "Bụng",
     ten: "MRI bụng — bệnh nhân thở tự do",
+    chuoiXung: { chinh: ["Axial T2 TSE FS (Respiratory Triggered / Navigator)", "Axial SS-TSE (HASTE) thở tự do", "Free-Breathing DWI (NSA 4–6; b0, b50, b800)", "4D FreeBreathing Radial Stack-of-Stars: trước & sau tiêm (20–24 thì)"], boSung: ["MRCP 3D DRIVE + Triggering / Navigator (bệnh lý tụy – đường mật)"] },
     tuKhoa: ["mri bung", "tho tu do", "free breathing", "respiratory triggering", "dai tho", "bellows", "navigator", "4d radial", "stack of stars", "golden angle", "ss-tse", "haste", "dwi", "benh nhan nang"],
     thongSo: [
       { ten: "Đối tượng", giaTri: "BN cao tuổi, bệnh phổi/tim (COPD, suy tim), thở nông, trẻ em; nặng/hôn mê không nín thở được" },
@@ -6779,6 +6804,12 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Cảnh báo", items: [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-bung-gan-axial.jpg", caption: "Gan: đặt lát Axial trên ảnh định vị Coronal, phủ từ vòm hoành tới bờ dưới gan", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.2" },
+      { src: "images/mri/mri-bung-tuy-axial.jpg", caption: "Tụy: lát Axial mỏng khu trú qua toàn bộ tụy", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.16" },
+      { src: "images/mri/mri-bung-than-axial.jpg", caption: "Thận: khối lát Axial phủ từ cực trên tới cực dưới hai thận", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.13" },
+      { src: "images/mri/mri-bung-thuong-than-axial.jpg", caption: "Thượng thận: lát Axial mỏng khu trú qua vùng thượng thận (trên cực trên thận)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 11.14" }
     ],
     nguon: "Protocol MRI vùng bụng & tiêm thuốc động học (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
