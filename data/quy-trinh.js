@@ -6091,22 +6091,24 @@ window.SOTAY_QUYTRINH = [
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     khanCap: true,
     ten: "MRI đột quỵ / nhồi máu não cấp",
-    chuoiXung: { chinh: ["Axial DWI / ADC — chạy ĐẦU TIÊN", "Axial GRE / SWI", "Axial T2W FSE", "Axial FLAIR", "MRA TOF-3D", "MRA 2D Phase Contrast"], anTS: ["1. Axial DWI/ADC", "2. Axial GRE/SWI", "3–4. T2W FSE · FLAIR", "5–6. MRA TOF-3D · PC 2D"] },
+    chuoiXung: { chinh: ["Axial DWI / ADC — chạy ĐẦU TIÊN", "Axial GRE / SWI", "Axial FLAIR", "MRA TOF-3D", "T1 3D TFE", "Axial T2W FSE"], anTS: ["1. Axial DWI/ADC", "2. Axial GRE/SWI", "3. Axial FLAIR", "4. MRA TOF-3D", "5. T1 3D TFE", "6. Axial T2W FSE"] },
     tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "lvo"],
     thongSo: [
       { ten: "1. Axial DWI/ADC", giaTri: "Bắt buộc đầu tiên — phát hiện nhồi máu tối cấp (1–4h), xác định tuổi tổn thương" },
       { ten: "2. Axial GRE/SWI", giaTri: "Phát hiện sớm xuất huyết nhu mô / vi xuất huyết đi kèm" },
-      { ten: "3–4. T2W FSE · FLAIR", giaTri: "Đánh giá nhu mô kéo dài T2 và diện phù nề, tổn thương chất trắng" },
-      { ten: "5–6. MRA TOF-3D · PC 2D", giaTri: "Tắc/hẹp mạch & vòng Willis · hướng dòng chảy các mạch máu lớn" }
+      { ten: "3. Axial FLAIR", giaTri: "Diện phù nề và tổn thương chất trắng" },
+      { ten: "4. MRA TOF-3D", giaTri: "Tắc/hẹp động mạch nội sọ & vòng Willis (không tiêm thuốc)" },
+      { ten: "5. T1 3D TFE", giaTri: "Ảnh T1 thể tích, tái tạo đa mặt phẳng" },
+      { ten: "6. Axial T2W FSE", giaTri: "Tổn thương nhu mô kéo dài thời gian T2" }
     ],
     noiDung: [
       { tieuDe: "Thứ tự ưu tiên các chuỗi xung (cắt giảm tối đa thời gian cấp cứu)", items: [
         "1. Axial DWI/ADC: bắt buộc đầu tiên — nhồi máu tối cấp (1–4h) và xác định tuổi tổn thương.",
         "2. Axial GRE/SWI: phát hiện sớm xuất huyết nhu mô hoặc vi xuất huyết đi kèm.",
-        "3. Axial T2W FSE: tổn thương nhu mô kéo dài thời gian T2.",
-        "4. Axial FLAIR: diện phù nề và tổn thương chất trắng.",
-        "5. MRA TOF-3D: tắc/hẹp động mạch nội sọ và vòng Willis (không tiêm thuốc).",
-        "6. MRA 2D Phase Contrast: thông tin hướng dòng chảy các mạch máu lớn."
+        "3. Axial FLAIR: diện phù nề và tổn thương chất trắng.",
+        "4. MRA TOF-3D: tắc/hẹp động mạch nội sọ và vòng Willis (không tiêm thuốc).",
+        "5. T1 3D TFE: ảnh T1 thể tích, tái tạo đa mặt phẳng.",
+        "6. Axial T2W FSE: tổn thương nhu mô kéo dài thời gian T2."
       ]},
       { tieuDe: "Cảnh báo — Time is Brain", items: [
         "DWI/ADC phải là chuỗi xung đầu tiên; GRE/SWI loại trừ xuất huyết trước khi cân nhắc tiêu sợi huyết.",
@@ -6808,6 +6810,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-matco-chung",
     phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
     ten: "MRI mặt – cổ (u, viêm, áp xe, hạch, tuyến nước bọt)",
+    chuoiXung: { chinh: ["Axial T1W TSE", "Axial / Coronal / Sagittal T2W TSE", "Axial / Coronal T2 FS (hoặc STIR) — xóa mỡ", "Axial DWI / ADC (b0, b500, b1000)", "Axial T1 FS + C", "Coronal / Sagittal T1 FS + C"], boSung: ["3D T1 e-THRIVE FS mỏng 1,5 mm (thay T1 FS + C 2D)", "Dynamic T1 3D e-THRIVE 5–6 thì (u tuyến nước bọt)", "STIR / T1 Dixon nếu T1 FS bị xảo ảnh"] },
     tuKhoa: ["mat co", "vung co", "face neck", "u vom hong", "hau hong", "thanh quan", "ap xe khoang co", "hach co", "tuyen nuoc bot", "mang tai", "duoi ham", "warthin", "t1 fs"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Head-Neck Array Coil đa kênh chuyên dụng" },
@@ -6866,12 +6869,18 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-matco-co-axial.jpg", caption: "Đặt lát Axial trên ảnh định vị Coronal: từ nền sọ xuống (vùng hầu tới sụn giáp); u / hạch cổ kéo dài tới khớp ức đòn – quai ĐMC theo protocol khoa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.48" },
+      { src: "images/mri/mri-matco-co-coronal.jpg", caption: "Đặt lát Coronal trên ảnh định vị Sagittal: phủ từ bờ sau tủy cổ tới mặt trước cổ", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.47" },
+      { src: "images/mri/mri-matco-co-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh định vị Coronal: phủ từ thành bên trái tới thành bên phải hầu", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.49" }
+    ],
     nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-matco-hoc-mat",
     phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
     ten: "MRI hốc mắt (orbit)",
+    chuoiXung: { chinh: ["Axial T1W", "Axial T2W", "Axial T2 FS / STIR mỏng 3 mm (song song dây TK thị)", "Coronal T2 FS / STIR mỏng 3 mm (vuông góc dây TK thị)", "T1 FS + C (Axial / Coronal / Sagittal chếch)"], anTS: ["Mặt cắt chủ lực"] },
     tuKhoa: ["hoc mat", "orbit", "u hoc mat", "viem hoc mat", "mat giap trang", "graves", "day than kinh thi", "co van nhan", "t1 fs"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Head / Head-Neck Array Coil" },
@@ -6905,12 +6914,17 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-matco-hoc-mat-axial-chech.jpg", caption: "Đặt lát Axial chếch song song dây thần kinh thị: từ bờ dưới ổ mắt tới trên giao thoa thị giác", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.40" },
+      { src: "images/mri/mri-matco-hoc-mat-coronal.jpg", caption: "Đặt lát Coronal vuông góc dây thần kinh thị: phủ từ nhãn cầu tới sau giao thoa thị giác", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.41" }
+    ],
     nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-matco-day-tk-so",
     phanHe: "ct-mri", modality: "MRI", nhom: "Mặt cổ",
     ten: "MRI dây thần kinh sọ (góc cầu tiểu não – CPA)",
+    chuoiXung: { chinh: ["Axial T1W", "Axial T2W", "3D CISS / FIESTA / DRIVE 0,6–0,7 mm", "3D T1 FS + C (e-THRIVE / MP-RAGE) hố sau"], anTS: ["Chuỗi xung chủ lực"] },
     tuKhoa: ["day than kinh so", "cpa", "goc cau tieu nao", "u day than kinh", "acoustic neuroma", "schwannoma", "day v", "day vii", "day viii", "3d ciss", "fiesta", "drive", "xung dot than kinh mach mau"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Head Array Coil" },
@@ -6933,12 +6947,16 @@ window.SOTAY_QUYTRINH = [
         cols: ["Chuỗi xung", "Mặt cắt", "TR (ms)", "TE (ms)", "Slice thickness", "Gap", "FOV (mm)", "Mục đích"],
         rows: [
           ["3D DRIVE / CISS", "Axial 3D", "1500", "200", "0.7mm", "0%", "180–200", "Dựng 3D khảo sát dây VII, VIII trong góc cầu tiểu não"],
-          ["3D T1 FS + C", "3D hố sau", "e-THRIVE", "MP-RAGE", "~1.5mm", "—", "hố sau", "U dây thần kinh ngấm thuốc (acoustic neuroma)"]
+          ["3D T1 FS + C (e-THRIVE / MP-RAGE)", "3D hố sau", "—", "—", "~1.5mm", "—", "hố sau", "U dây thần kinh ngấm thuốc (acoustic neuroma)"]
         ]
       }},
       { tieuDe: "Cảnh báo", items: [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-matco-ong-tai-trong-axial.jpg", caption: "Đặt lát Axial mỏng qua ống tai trong – góc cầu tiểu não (hố sau)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.27" },
+      { src: "images/mri/mri-matco-ong-tai-trong-coronal.jpg", caption: "Đặt lát Coronal: phủ từ bờ sau tiểu não tới dốc nền (clivus)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 8.29" }
     ],
     nguon: "Protocol MRI mặt cổ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
