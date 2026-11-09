@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
-<link rel="stylesheet" href="assets/style.css?v=20261114">
+<link rel="stylesheet" href="assets/style.css?v=20261115">
 <style>
   /* ---- layout 3 cột cho màn hình chọn protocol ---- */
   .pb-wrap { max-width: 1480px; margin: 0 auto; padding: 0 14px 30px; }
@@ -105,6 +105,37 @@
   .pd-prow span { font-size: 12.5px; color: var(--text-soft); }
   .pd-prow b { font-size: 13.5px; font-weight: 700; text-align: right; }
   .pd-imgs .psub:first-child { margin-top: 0; }
+  /* ===== MRI: khối "Chuỗi xung cần chụp" (điểm nhìn đầu tiên của KTV) ===== */
+  .pd-seq { border: 1px solid var(--line); border-left: 4px solid var(--brand); border-radius: 12px; background: var(--brand-wash);
+            padding: 12px 16px 14px; margin: 0 0 14px; }
+  .pd-seq-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+  .pd-seq-h .ttl { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--brand-ink); }
+  .pd-seq-h .cnt { font-size: 12px; color: var(--text-soft); font-weight: 600; }
+  .pd-seq-nen { font-size: 13px; color: var(--text-soft); margin: 0 0 8px; }
+  .pd-seq-nen b { color: var(--text); }
+  .pd-seq-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+  .pd-seq-list li { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; border-radius: 9px;
+                    background: var(--surface); border: 1px solid var(--line); font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.3; }
+  .pd-seq-list .n { flex: none; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+                    background: var(--brand-solid); color: #fff; font-size: 12.5px; font-weight: 800; }
+  .pd-seq-sub { font-size: 12px; font-weight: 700; color: var(--text-soft); margin: 12px 0 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .pd-seq-opt { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .pd-seq-opt li { padding: 6px 12px; border-radius: 999px; border: 1px dashed var(--brand); color: var(--brand-ink); font-size: 13px; font-weight: 600; background: var(--surface); }
+  /* ===== MRI: thông số dạng lưới thẻ (nhãn trên, giá trị căn trái) ===== */
+  .pd-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 14px; }
+  .pd-specs.c1 { grid-template-columns: minmax(0, 1fr); } .pd-specs.c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pd-specs.c4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 900px) { .pd-specs.c3, .pd-specs.c4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .pd-specs, .pd-specs.c2, .pd-specs.c3, .pd-specs.c4 { grid-template-columns: minmax(0, 1fr); } }
+  .pd-spec { border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); padding: 9px 12px; }
+  .pd-spec span { display: block; font-size: 11.5px; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .pd-spec b { display: block; font-size: 13.5px; font-weight: 600; color: var(--text); line-height: 1.4; }
+  /* ===== MRI: ảnh đặt lát cắt trải đều toàn chiều rộng ===== */
+  .pd-imgs-full { margin: 0 0 14px; }
+  .pd-imgs-full .psub { margin-top: 0; }
+  .pd-imgs-full .pimg.prow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .pd-imgs-full .pimg.prow figure { max-width: none; }
+  .pd-imgs-full .pimg img { height: 230px; }
   .pd-callout { padding: 11px 13px; border-radius: 9px; border: 1px solid; border-left-width: 4px; margin: 0 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--text); }
   .pd-callout.warn { background: rgba(220,38,38,.09); border-color: rgba(220,38,38,.45); }
   .pd-callout.note { background: rgba(202,138,4,.12); border-color: rgba(202,138,4,.5); }
@@ -506,7 +537,28 @@
         paramsHtml += '</div>';
       }
 
-      if (paramsHtml || imgsHtml) {
+      if (it.modality === "MRI") {
+        // ===== Bố cục MRI: (1) Chuỗi xung cần chụp  (2) lưới thẻ thông số  (3) ảnh đặt lát cắt toàn chiều rộng =====
+        // chỉ hiện khi mục đã có danh sách chuỗi xung soạn chuẩn (trường chuoiXung) — không tự suy từ bảng để tránh thiếu chuỗi
+        var cx = it.chuoiXung || null;
+        if (cx && (cx.chinh || []).length) {
+          h += '<div class="pd-seq"><div class="pd-seq-h"><span class="ttl">Chuỗi xung cần chụp</span><span class="cnt">' + cx.chinh.length + ' chuỗi' +
+               (cx.boSung && cx.boSung.length ? ' · ' + cx.boSung.length + ' bổ sung' : '') + '</span></div>' +
+               (cx.nen ? '<div class="pd-seq-nen">Nền: <b>' + esc(cx.nen) + '</b> rồi chạy thêm:</div>' : '') +
+               '<ol class="pd-seq-list">' + cx.chinh.map(function (x, i) { return '<li><b class="n">' + (i + 1) + '</b><span>' + esc(x) + '</span></li>'; }).join("") + '</ol>' +
+               (cx.boSung && cx.boSung.length ? '<div class="pd-seq-sub">Bổ sung khi có chỉ định</div><ul class="pd-seq-opt">' +
+                 cx.boSung.map(function (x) { return '<li>+ ' + esc(x) + '</li>'; }).join("") + '</ul>' : '') + '</div>';
+        }
+        var hide = (it.chuoiXung && it.chuoiXung.anTS) || [];
+        var specs = ts.filter(function (t) { return hide.indexOf(t.ten) < 0; });
+        if (specs.length) {
+          // số cột theo số thẻ để không có thẻ nằm lẻ một hàng: 1–4 thẻ → đúng số thẻ; 5–6 → 3; ≥7 → 4
+          var sc = specs.length <= 4 ? specs.length : (specs.length <= 6 ? 3 : 4);
+          h += '<div class="pd-specs c' + sc + '">' + specs.map(function (t) {
+            return '<div class="pd-spec"><span>' + esc(t.ten) + '</span><b>' + esc(t.giaTri) + '</b></div>'; }).join("") + '</div>';
+        }
+        if (imgsHtml) h += '<div class="pd-imgs-full">' + imgsHtml + '</div>';
+      } else if (paramsHtml || imgsHtml) {
         h += '<div class="pd-top' + (imgsHtml ? "" : " noimg") + (paramsHtml ? "" : " noparams") + '">' +
              paramsHtml + (imgsHtml ? '<div class="pd-imgs">' + imgsHtml + '</div>' : "") + '</div>';
       }

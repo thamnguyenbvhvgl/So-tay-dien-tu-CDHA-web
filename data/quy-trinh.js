@@ -6091,6 +6091,7 @@ window.SOTAY_QUYTRINH = [
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     khanCap: true,
     ten: "MRI đột quỵ / nhồi máu não cấp",
+    chuoiXung: { chinh: ["Axial DWI / ADC — chạy ĐẦU TIÊN", "Axial GRE / SWI", "Axial T2W FSE", "Axial FLAIR", "MRA TOF-3D", "MRA 2D Phase Contrast"], anTS: ["1. Axial DWI/ADC", "2. Axial GRE/SWI", "3–4. T2W FSE · FLAIR", "5–6. MRA TOF-3D · PC 2D"] },
     tuKhoa: ["dot quy", "stroke", "nhoi mau", "dwi", "adc", "lvo"],
     thongSo: [
       { ten: "1. Axial DWI/ADC", giaTri: "Bắt buộc đầu tiên — phát hiện nhồi máu tối cấp (1–4h), xác định tuổi tổn thương" },
@@ -6143,6 +6144,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-nao-thuong-quy",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI sọ não thường quy",
+    chuoiXung: { chinh: ["Axial / Sagittal T1WI (SE/TSE)", "Axial / Coronal T2WI (FSE)", "Axial / Coronal T2 FLAIR", "Axial DWI / ADC (b0, b1000)", "Axial T2*GRE / SWI"], boSung: ["TOF 3D MRA (không tiêm)", "T1W + Gd (khi có chỉ định)"], anTS: ["Chuỗi cơ bản", "Nâng cao"] },
     tuKhoa: ["mri so nao", "cong huong tu dau", "cht so nao", "brain mri", "routine brain", "flair", "dwi", "swi", "mra"],
     thongSo: [
       { ten: "Cuộn thu tín hiệu", giaTri: "Head Coil chuyên dụng; tia laser định vị tại ụ trán giữa / giữa hai chân mày" },
@@ -6189,6 +6191,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-tuyen-yen",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI tuyến yên",
+    chuoiXung: { chinh: ["Sagittal T1W mỏng 2 mm (trước tiêm)", "Coronal T1W mỏng 2 mm (trước tiêm)", "Coronal T2W FS", "Dynamic T1 Coronal 5 thì (+ Gd)", "T1W FS + C (Sag / Cor / Ax)"], anTS: ["Chuỗi cốt lõi"] },
     tuKhoa: ["tuyen yen", "pituitary", "microadenoma", "macroadenoma", "rathke", "dynamic", "prolactin"],
     thongSo: [
       { ten: "Khảo sát khu trú", giaTri: "FOV nhỏ 180–200 mm · lát cắt mỏng 2.0–3.0 mm" },
@@ -6222,6 +6225,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-dong-kinh",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI động kinh / xơ cứng hồi hải mã",
+    chuoiXung: { nen: "Protocol sọ thường quy (T1, T2, FLAIR, DWI/ADC, GRE)", chinh: ["Axial IR", "Axial FLAIR 3 mm", "Coronal FLAIR 3 mm ⟂ hồi hải mã (cốt lõi)", "T1 3D MP-RAGE / SPGR 1 mm"] },
     tuKhoa: ["dong kinh", "epilepsy", "hai ma", "hippocampal sclerosis", "loan san vo nao", "cortical dysplasia"],
     thongSo: [
       { ten: "Axial IR", giaTri: "TR 7000 ms, TE 70 ms — tăng tương phản chất trắng/chất xám" },
@@ -6255,6 +6259,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-di-dang-mach",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI dị dạng mạch máu não",
+    chuoiXung: { chinh: ["TOF 3D MRA khu trú", "MRV", "T2*GRE / SWI (bắt buộc với cavernoma)", "T1W 3D + C"], boSung: ["CE-MRA thời gian (phân biệt thì động / tĩnh mạch)"], anTS: ["Dựng hình mạch", "Phát hiện hemosiderin", "Sau tiêm"] },
     tuKhoa: ["di dang mach", "avm", "davf", "cavernoma", "dva", "mra", "mrv"],
     thongSo: [
       { ten: "Dựng hình mạch", giaTri: "TOF 3D MRA khu trú · MRV · CE-MRA thời gian (phân biệt thì động/tĩnh mạch)" },
@@ -6282,6 +6287,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-u-nao",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI u não",
+    chuoiXung: { nen: "Protocol sọ thường quy", chinh: ["T1W 3D FS + Gd (3 mặt phẳng)", "FLAIR + Gd"], boSung: ["MRS (TE 35 & 144 ms)", "DTI"], anTS: ["Cốt lõi sau tiêm"] },
     tuKhoa: ["u nao", "brain tumor", "glioma", "di can", "mrs", "pho", "dti"],
     thongSo: [
       { ten: "Cốt lõi sau tiêm", giaTri: "T1W 3D FS + Gd (cả 3 mặt phẳng) · FLAIR + Gd" },
@@ -6309,6 +6315,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-viem-mang-nao",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI viêm màng não / áp xe não",
+    chuoiXung: { nen: "Protocol sọ thường quy + DWI/ADC", chinh: ["Axial T1W + C", "Coronal T1W FS + C", "FLAIR + Gd"], anTS: ["Nền", "Sau tiêm"] },
     tuKhoa: ["viem mang nao", "meningitis", "ap xe nao", "abscess", "flair gd", "leptomeningitis"],
     thongSo: [
       { ten: "Nền", giaTri: "Protocol sọ thường quy + DWI/ADC" },
@@ -6333,6 +6340,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-huy-myelin",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI bệnh hủy Myelin / xơ cứng rải rác (MS)",
+    chuoiXung: { nen: "Protocol sọ thường quy", chinh: ["Sagittal FLAIR mỏng đường giữa", "3D DIR", "T1W FS + C"], anTS: ["Nền", "Bổ sung"] },
     tuKhoa: ["huy myelin", "xo cung rai rac", "multiple sclerosis", "ms", "dawson", "3d dir"],
     thongSo: [
       { ten: "Nền", giaTri: "Protocol sọ thường quy" },
@@ -6356,6 +6364,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-chan-thuong",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI chấn thương sọ & xuất huyết",
+    chuoiXung: { nen: "Protocol sọ thường quy", chinh: ["Axial GRE (TE > 25 ms) hoặc SWI"], boSung: ["T1 + C và FLAIR + C (xuất huyết không do chấn thương)"], anTS: ["Nền", "Bắt buộc", "Xuất huyết không do chấn thương"] },
     tuKhoa: ["chan thuong so", "xuat huyet", "dai", "diffuse axonal injury", "gre", "swi"],
     thongSo: [
       { ten: "Nền", giaTri: "Protocol sọ thường quy" },
@@ -6379,6 +6388,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-so-sa-sut-tri-tue",
     phanHe: "ct-mri", modality: "MRI", nhom: "Sọ não",
     ten: "MRI sa sút trí tuệ & bệnh lý ngoại tháp",
+    chuoiXung: { chinh: ["Sagittal T1", "Axial T1 / T2", "DWI", "Coronal FLAIR mỏng ⟂ trục dài thùy thái dương", "T1 3D SPGR / MP-RAGE (đo thể tích hải mã)"], anTS: ["Sa sút trí tuệ (Alzheimer)"] },
     tuKhoa: ["sa sut tri tue", "dementia", "alzheimer", "parkinson", "ngoai thap", "hai ma", "mp-rage"],
     thongSo: [
       { ten: "Sa sút trí tuệ (Alzheimer)", giaTri: "Sag T1 · Ax T1/T2 · DWI · Coronal FLAIR mỏng vuông góc trục dài thùy thái dương · T1 3D SPGR/MP-RAGE (đo thể tích hải mã)" },
