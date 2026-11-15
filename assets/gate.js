@@ -9,9 +9,9 @@
    ============================================================ */
 (function () {
   "use strict";
-  var KEY = "sotay-auth-v1";
+  var KEY = "sotay-auth-v2";
   // KHÔNG ghi mật khẩu gốc ở đây (file này công khai). Cách đổi: printf '%s' 'user:matkhau' | sha256sum, dán kết quả vào CRED_HASH và đổi KEY (vd "sotay-auth-v2") để mọi máy đăng nhập lại.
-  var CRED_HASH = "cbfd8b80d92a310df7e346f505b734f6345a66c35d19ab14ffdb7f9f12974880";
+  var CRED_HASH = "b3fe52b12f60650dbe547b3ceb97796d119a691c10a9d4cf2af19e7a3637ed99";
 
   // Đã đăng nhập (áp dụng cả iframe cùng nguồn) → bỏ qua
   try { if (localStorage.getItem(KEY) === "1") return; } catch (e) {}
