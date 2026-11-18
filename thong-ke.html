@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+<script src="assets/gate.js"></script>
+<title>Thống kê tra cứu – Sổ tay điện tử CĐHA</title>
+<link rel="stylesheet" href="assets/style.css?v=20261116">
+<style>
+  body { background: var(--bg, #f6f7f9); color: var(--text, #111); font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; }
+  .tk-wrap { max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; }
+  .tk-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .tk-head h1 { font-size: 20px; margin: 0; flex: 1 1 auto; }
+  .tk-head a, .tk-head button { font: inherit; font-size: 13px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line, #e5e7eb); background: var(--surface, #fff); color: var(--text, #111); text-decoration: none; cursor: pointer; }
+  .tk-head button.primary { background: var(--brand, #1d4ed8); color: #fff; border-color: transparent; }
+  .tk-note { font-size: 13px; color: var(--text-soft, #667); margin: 0 0 14px; line-height: 1.5; }
+  .tk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .tk-card { background: var(--surface, #fff); border: 1px solid var(--line, #e5e7eb); border-radius: 14px; padding: 14px 16px; }
+  .tk-card h2 { font-size: 15px; margin: 0 0 8px; }
+  .tk-card.wide { grid-column: 1 / -1; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line, #eef0f3); vertical-align: top; }
+  th { font-weight: 600; color: var(--text-soft, #667); font-size: 12px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .bar { height: 6px; border-radius: 3px; background: var(--brand, #1d4ed8); opacity: .75; margin-top: 4px; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--bg, #f1f3f5); color: var(--text-soft, #667); margin-left: 4px; }
+  .muted { color: var(--text-soft, #667); font-size: 12.5px; }
+  .ctrl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; margin: 0 0 10px; }
+  .ctrl input { font: inherit; padding: 5px 8px; border: 1px solid var(--line, #e5e7eb); border-radius: 8px; background: var(--surface, #fff); color: inherit; }
+  #prog { font-size: 12.5px; color: var(--text-soft, #667); }
+  #deny { padding: 40px 16px; text-align: center; color: var(--text-soft, #667); }
+</style>
+</head>
+<body>
+  <div class="tk-wrap">
+    <div class="tk-head">
+      <h1>📊 Thống kê tra cứu theo người dùng &amp; kỹ thuật</h1>
+      <a href="app.html">← Về Sổ tay</a>
+      <button type="button" id="btnCsv">⬇ Tải CSV</button>
+      <button type="button" id="btnReload" class="primary">⟳ Tải lại số liệu</button>
+    </div>
+    <div id="deny" hidden>Trang này dành cho người quản trị đề án. Hãy đăng nhập bằng tài khoản quản trị.</div>
+    <div id="main" hidden>
+      <p class="tk-note">Số liệu lấy từ bộ đếm công khai (Abacus) do website tự cộng mỗi khi một mục được mở: 1 lượt = 1 lần mở mục, cùng mục trong 60 giây chỉ tính 1 lần. Bộ đếm chỉ có tổng số, không có thời điểm; nhật ký chi tiết (ai, lúc nào, mục gì) nằm trong Google Sheets nếu đã cấu hình. Lượt của tài khoản chung <b>cdha</b> (bác sĩ / khách) tách riêng.</p>
+      <div class="ctrl">
+        <span>Lượt theo ngày của từng người, từ</span> <input type="date" id="d1"> <span>đến</span> <input type="date" id="d2">
+        <span id="prog"></span>
+      </div>
+      <div class="tk-grid">
+        <div class="tk-card"><h2>Tổng lượt tra cứu theo người dùng</h2><table id="tUser"><thead><tr><th>Tài khoản</th><th class="num">Lượt</th></tr></thead><tbody></tbody></table></div>
+        <div class="tk-card"><h2>Tổng quan</h2><table id="tSum"><tbody></tbody></table><p class="muted" style="margin:10px 0 0">"Kỹ thuật" = mở một kỹ thuật / protocol cụ thể. "Tab / công cụ" = mở các tab như Cấp cứu, Máy tính liều, Thông số &amp; An toàn, Ca lâm sàng.</p></div>
+        <div class="tk-card wide"><h2>Lượt theo ngày của từng người</h2><div style="overflow:auto"><table id="tDay"><thead></thead><tbody></tbody></table></div></div>
+        <div class="tk-card wide"><h2>Kỹ thuật / protocol được tra cứu nhiều nhất</h2><table id="tItem"><thead><tr><th>#</th><th>Kỹ thuật</th><th>Phân hệ</th><th class="num">Lượt</th></tr></thead><tbody></tbody></table><p class="muted" style="margin:8px 0 0">Chỉ liệt kê mục có ít nhất 1 lượt. Tổng số mục trong sổ tay: <span id="nItems"></span>.</p></div>
+        <div class="tk-card wide"><h2>Tab &amp; công cụ</h2><table id="tTab"><thead><tr><th>Tab / công cụ</th><th class="num">Lượt</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/quy-trinh.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var ADMIN = ["tham"];
+    var USERS = ["phong","tung","tinh","vinh","tho","nhan","luyen","tham","nguyetha","thang","xuanha","thao","danh","phu","cdha"];
+    var SECTIONS = {1:["Công cụ khẩn cấp",["Sốc phản vệ","Ngưng tuần hoàn (CPR)","Thoát mạch thuốc cản quang"]],
+                    2:["Quy trình X-quang",["Chọn theo vùng cơ thể","Thông số & An toàn"]],
+                    3:["Quy trình CT",["Không tiêm","Có tiêm","Máy tính liều & eGFR","Thông số & An toàn"]],
+                    4:["Quy trình MRI",["Theo vùng giải phẫu","Thông số & An toàn"]],
+                    5:["Ca lâm sàng tham khảo",["Danh sách ca"]]};
+    var NS = "sotay-cdha-hvgl", BASE = "https://abacus.jasoncameron.dev";
+    var QT = (window.SOTAY_QUYTRINH || []).filter(function (x) { return !x.an && x.id; });
+
+    function esc(x){ return (x||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+    function fmt(n){ try { return Number(n).toLocaleString("vi-VN"); } catch (e) { return String(n); } }
+    function key(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60); }
+    function ymd(d){ return d.getFullYear() + ("0" + (d.getMonth() + 1)).slice(-2) + ("0" + d.getDate()).slice(-2); }
+    function iso(d){ return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+
+    function getCount(k) {
+      return fetch(BASE + "/get/" + NS + "/" + k).then(function (r) {
+        if (r.status === 404) return 0;
+        return r.json().then(function (j) { return (j && typeof j.value !== "undefined") ? Number(j.value) : 0; });
+      }).catch(function () { return 0; });
+    }
+    // chạy tuần tự theo lô để không dội dịch vụ đếm
+    function getAll(keys, onProg) {
+      var out = {}, i = 0, CONC = 6, done = 0;
+      return new Promise(function (resolve) {
+        function next() {
+          if (i >= keys.length) { if (done >= keys.length) resolve(out); return; }
+          var k = keys[i++];
+          getCount(k).then(function (v) { out[k] = v; done++; if (onProg) onProg(done, keys.length); next(); });
+        }
+        for (var c = 0; c < CONC; c++) next();
+        if (!keys.length) resolve(out);
+      });
+    }
+
+    var user = window.SOTAY_USER || "";
+    function allowed() { return ADMIN.indexOf(user) >= 0; }
+    function init() {
+      user = window.SOTAY_USER || "";
+      document.getElementById("deny").hidden = allowed();
+      document.getElementById("main").hidden = !allowed();
+      if (allowed()) load();
+    }
+    window.addEventListener("sotay-login", init);
+
+    var LAST = null;
+    function load() {
+      var prog = document.getElementById("prog");
+      var d1 = document.getElementById("d1"), d2 = document.getElementById("d2");
+      if (!d1.value || !d2.value) { var t = new Date(), f = new Date(); f.setDate(t.getDate() - 6); d1.value = iso(f); d2.value = iso(t); }
+      var days = [], a = new Date(d1.value), b = new Date(d2.value);
+      for (var d = new Date(a); d <= b && days.length < 62; d.setDate(d.getDate() + 1)) days.push(new Date(d));
+
+      var keys = [];
+      USERS.forEach(function (u) { keys.push("u-" + u); days.forEach(function (d) { keys.push("ud-" + u + "-" + ymd(d)); }); });
+      QT.forEach(function (it) { keys.push("i-" + key(it.id)); });
+      Object.keys(SECTIONS).forEach(function (sid) { SECTIONS[sid][1].forEach(function (_, i) { keys.push("i-tab-" + sid + "-" + i); }); });
+      keys.push("total");
+      prog.textContent = "Đang tải 0/" + keys.length + "…";
+      getAll(keys, function (n, N) { prog.textContent = "Đang tải " + n + "/" + N + "…"; }).then(function (C) {
+        prog.textContent = "Cập nhật lúc " + new Date().toLocaleTimeString("vi-VN");
+        render(C, days);
+      });
+    }
+
+    function render(C, days) {
+      var ktTotal = 0, tabTotal = 0, userTotal = 0;
+      // người dùng
+      var tb = document.querySelector("#tUser tbody"); tb.innerHTML = "";
+      var rows = USERS.map(function (u) { return { u: u, n: C["u-" + u] || 0 }; }).sort(function (x, y) { return y.n - x.n; });
+      var mx = Math.max.apply(null, rows.map(function (r) { return r.n; }).concat([1]));
+      rows.forEach(function (r) {
+        if (r.u !== "cdha") userTotal += r.n;
+        tb.insertAdjacentHTML("beforeend", '<tr><td>' + esc(r.u) + (r.u === "cdha" ? '<span class="tag">chung</span>' : '') + '<div class="bar" style="width:' + Math.round(100 * r.n / mx) + '%"></div></td><td class="num">' + fmt(r.n) + '</td></tr>');
+      });
+      // kỹ thuật
+      var items = QT.map(function (it) { return { it: it, n: C["i-" + key(it.id)] || 0 }; }).filter(function (r) { return r.n > 0; }).sort(function (x, y) { return y.n - x.n; });
+      QT.forEach(function (it) { ktTotal += C["i-" + key(it.id)] || 0; });
+      var ti = document.querySelector("#tItem tbody"); ti.innerHTML = "";
+      items.forEach(function (r, i) { ti.insertAdjacentHTML("beforeend", '<tr><td class="num">' + (i + 1) + '</td><td>' + esc(r.it.ten) + '</td><td>' + esc(r.it.modality) + (r.it.nhom ? '<span class="tag">' + esc(r.it.nhom) + '</span>' : '') + '</td><td class="num">' + fmt(r.n) + '</td></tr>'); });
+      if (!items.length) ti.innerHTML = '<tr><td colspan="4" class="muted">Chưa có lượt nào.</td></tr>';
+      document.getElementById("nItems").textContent = fmt(QT.length);
+      // tab
+      var tt = document.querySelector("#tTab tbody"); tt.innerHTML = "";
+      Object.keys(SECTIONS).forEach(function (sid) { SECTIONS[sid][1].forEach(function (name, i) {
+        var n = C["i-tab-" + sid + "-" + i] || 0; tabTotal += n;
+        tt.insertAdjacentHTML("beforeend", '<tr><td>' + esc(SECTIONS[sid][0]) + ' › ' + esc(name) + '</td><td class="num">' + fmt(n) + '</td></tr>');
+      }); });
+      // theo ngày
+      var th = document.querySelector("#tDay thead"), td = document.querySelector("#tDay tbody");
+      th.innerHTML = '<tr><th>Tài khoản</th>' + days.map(function (d) { return '<th class="num">' + ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + '</th>'; }).join("") + '<th class="num">Cộng</th></tr>';
+      td.innerHTML = "";
+      USERS.forEach(function (u) {
+        var sum = 0, cells = days.map(function (d) { var n = C["ud-" + u + "-" + ymd(d)] || 0; sum += n; return '<td class="num">' + (n ? fmt(n) : '<span class="muted">·</span>') + '</td>'; }).join("");
+        td.insertAdjacentHTML("beforeend", '<tr><td>' + esc(u) + '</td>' + cells + '<td class="num"><b>' + fmt(sum) + '</b></td></tr>');
+      });
+      // tổng quan
+      var active = rows.filter(function (r) { return r.n > 0 && r.u !== "cdha"; }).length;
+      document.querySelector("#tSum tbody").innerHTML =
+        '<tr><td>Lượt truy cập website (từ khi đếm)</td><td class="num">' + fmt(C["total"] || 0) + '</td></tr>' +
+        '<tr><td>Lượt mở kỹ thuật / protocol</td><td class="num">' + fmt(ktTotal) + '</td></tr>' +
+        '<tr><td>Lượt mở tab / công cụ</td><td class="num">' + fmt(tabTotal) + '</td></tr>' +
+        '<tr><td>Lượt tra cứu của KTV (không tính tài khoản chung)</td><td class="num">' + fmt(userTotal) + '</td></tr>' +
+        '<tr><td>Số KTV đã tra cứu ít nhất 1 lần</td><td class="num">' + active + ' / ' + (USERS.length - 1) + '</td></tr>' +
+        '<tr><td>Số kỹ thuật đã được mở ít nhất 1 lần</td><td class="num">' + items.length + ' / ' + QT.length + '</td></tr>';
+      LAST = { C: C, days: days, items: items, rows: rows };
+    }
+
+    document.getElementById("btnReload").onclick = load;
+    ["d1", "d2"].forEach(function (id) { document.getElementById(id).onchange = load; });
+    document.getElementById("btnCsv").onclick = function () {
+      if (!LAST) return;
+      var L = [["Loại", "Mã / Tài khoản", "Tên", "Phân hệ", "Lượt"]];
+      LAST.rows.forEach(function (r) { L.push(["nguoi-dung", r.u, "", "", r.n]); });
+      LAST.items.forEach(function (r) { L.push(["ky-thuat", r.it.id, r.it.ten, r.it.modality, r.n]); });
+      USERS.forEach(function (u) { LAST.days.forEach(function (d) { var n = LAST.C["ud-" + u + "-" + ymd(d)] || 0; if (n) L.push(["theo-ngay", u, iso(d), "", n]); }); });
+      var csv = "﻿" + L.map(function (r) { return r.map(function (c) { return '"' + String(c).replace(/"/g, '""') + '"'; }).join(","); }).join("\r\n");
+      var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" })); a.download = "thong-ke-tra-cuu-" + ymd(new Date()) + ".csv"; a.click();
+    };
+    init();
+  })();
+  </script>
+</body>
+</html>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
+<script src="assets/log.js"></script>
 <title>Sổ tay điện tử CĐHA</title>
 <link rel="stylesheet" href="assets/style.css?v=20261116">
 <style>
@@ -174,6 +175,7 @@
       <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">👁️ Lượt truy cập: <b id="visitTotal" style="color:var(--text,#111)">…</b></span>
       <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">📅 Hôm nay: <b id="visitToday" style="color:var(--text,#111)">…</b></span>
     </span>
+    <span id="userWrap" hidden style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--line,#e5e7eb);border-radius:999px;background:var(--surface,#fff)">👤 <b id="userName" style="color:var(--text,#111)"></b> · <a href="#" id="logoutBtn" style="color:var(--brand,#1d4ed8);text-decoration:none">Đổi người dùng</a></span>
     <span style="flex:1 1 auto"></span>
     <a id="gopyBtn" href="#" target="_blank" rel="noopener" hidden style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;background:var(--brand,#1d4ed8);color:#fff;text-decoration:none;font-weight:600">💬 Góp ý</a>
   </footer>
@@ -382,6 +384,8 @@
         subtabsBox.appendChild(t);
       });
       renderPanel(s, curSub);
+      // nhật ký: tab/công cụ (các kỹ thuật cụ thể được ghi trong chon-protocol.html)
+      if (window.SOTAY_LOG) SOTAY_LOG("tab", "tab-" + id + "-" + curSub, s.ten + " › " + s.subs[curSub], s.ten);
       try { history.replaceState(null, "", "#" + id + (curSub ? "/" + curSub : "")); } catch (e) {}
       window.scrollTo(0,0);
     }
@@ -625,6 +629,16 @@
       // Góp ý: dán link Google Form vào GOPY_URL (https://forms.gle/… hoặc …/viewform) để bật nút
       var GOPY_URL = "";
       if (GOPY_URL) { var g = document.getElementById("gopyBtn"); if (g) { g.href = GOPY_URL; g.hidden = false; } }
+
+      // Người dùng hiện tại (từ gate.js) + nút Đổi người dùng
+      function showUser(){
+        var u = window.SOTAY_USER || "", w = document.getElementById("userWrap"), n = document.getElementById("userName");
+        if (w && n && u) { n.textContent = u; w.hidden = false; }
+      }
+      showUser();
+      window.addEventListener("sotay-login", showUser);
+      var lo = document.getElementById("logoutBtn");
+      if (lo) lo.onclick = function (ev) { ev.preventDefault(); if (window.SOTAY_LOGOUT) SOTAY_LOGOUT(); };
     })();
   })();
   </script>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
 <script src="assets/gate.js"></script>
+<script src="assets/log.js"></script>
 <title>Chọn Protocol Chụp – Sổ tay điện tử CĐHA</title>
 <link rel="stylesheet" href="assets/style.css?v=20261116">
 <style>
@@ -450,6 +451,8 @@
           Array.prototype.forEach.call(list.children, function (c) { c.classList.remove("active"); c.removeAttribute("aria-current"); });
           b.classList.add("active"); b.setAttribute("aria-current", "true");
           showDetail(it);
+          // nhật ký tra cứu: chỉ ghi khi người dùng chủ động chọn (hoặc mở qua ?item=), không ghi mục tự chọn đầu danh sách
+          if (window.SOTAY_LOG && it.id) SOTAY_LOG("kt", it.id, it.ten, it.modality);
           revealDetail();
         };
         list.appendChild(b);
