@@ -15,20 +15,20 @@
   "use strict";
   var KEY = "sotay-auth-v3";
   var USERS = {
-    "phong":    "8b6d1d90653d9b06a4cbd833d4bc46c61954eb6ac7100a8677c18ee6eab6150d",
-    "tung":     "491db76b6a68a0fa7fbc335e19258eb9765eaffc8d99054c5fc61a43d3452ff7",
-    "tinh":     "ba5eec0be4002fcaebc7329840860f85783a6f0884ac0927b3524c0caa30247f",
-    "vinh":     "1d9bb6b1723d3f2ec1edef09e04c67cc5c8aa626e4259b64609802640e63b245",
-    "tho":      "bbde78a45396faa8d08555e3fd2d301de0f31f15a99276948932cb37c7012536",
-    "nhan":     "f1d7c1a6818b29284b8189505bfea659bfa7167dc70a3fe39e1af8fa7cb7633d",
-    "luyen":    "92bef0bb28c90fa891507a394a95a6b6c7b32745b4d04088491f4899ceb916a2",
-    "tham":     "d24b51183b3b3ec48ff16e928915c606b9950a0178479bd7f9a2a3a7d976c9cc",
-    "nguyetha": "b2bae32761743e30052bd26f2267d31ace8f4bd807a805e07a3955a481073dc9",
-    "thang":    "8e5f90cbafbc48a121a8bad9bafdd5c951ed5499999fd7e830dfba1df7038dfd",
-    "xuanha":   "6ca4b44e302825b06ba2e2f6095ba79e478223db516cbf11113e72c0dd690b0f",
-    "thao":     "fc0b3dfe54a6bcef2ce9c3faa5a4cb53b5ef4735fc4904e8b884cb94a56dcd81",
-    "danh":     "0320813c48254687f46ed6b2b42ebc0f049e89884f3abda7d3c4261aee6cc3a4",
-    "phu":      "69e2a7beca3f29eee893144988002a7bf5819510543dfa255e355ed04ae0c987",
+    "phong":    "2359c48fcd7800dd9c09cbc94ec5490d387af6d12ff3bda81452a4fd29523a0c",
+    "tung":     "32d54c59fc5e7c1c76d3e379a44d33123075d8c9ac80032cc973e3d026151e9c",
+    "tinh":     "c25a4e23020dc0ac0c32ffdf88737a27dde7ebb7135bd1f31eedbbc0f7ea1110",
+    "vinh":     "e07cd0bf04465f76a0dab380cec74a65a0a7aed49e8c1383b7eaf1788da21cd6",
+    "tho":      "bd827567c663d13a4d8972171144869cd21a01f23a05d66b1f6edfcd529cffe3",
+    "nhan":     "12f72ebe1ef7c9f338fec2bdbf18633f6e39b8e7aaed08ddab430cf0cd53a284",
+    "luyen":    "444f66445edc4991d35a405c34a4411a25ddcd3ef38c2e5acbc2e562eb307284",
+    "tham":     "d1df9a85d523fdaf8b67d9a2734f2add22cf44bec01cf8ee927eab4b0813157b",
+    "nguyetha": "32314ec7ddda50cc326a4b9b76a6bb10e79342901460bb538a8401bda6374c4a",
+    "thang":    "4764699a19f536d89476df8699e17d116bab9a636bce694d9f6778e6b7ef6cb2",
+    "xuanha":   "e8a74c94bba8ac6640793e1a628f65ffe9a50d62bc66df2983c5bb7aa162a0ab",
+    "thao":     "94687e49dfb70216ad01c6f8c3f45b1ca13cdb9fa138b5c81b5007d5ff2193c2",
+    "danh":     "afba38c89106112b4b0a8324c136cea051634845fc4495ad95cbe26b6f4ff7d2",
+    "phu":      "9cb1f4cca33d8e8486f5b96e572283908e0edb6e63938f5221c968cdc93f9df5",
     "cdha":     "b3fe52b12f60650dbe547b3ceb97796d119a691c10a9d4cf2af19e7a3637ed99"  /* tài khoản chung: bác sĩ / khách */
   };
 
