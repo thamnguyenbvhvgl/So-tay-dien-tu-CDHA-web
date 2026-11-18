@@ -15,7 +15,7 @@
 (function () {
   "use strict";
   var NS = "sotay-cdha-hvgl", BASE = "https://abacus.jasoncameron.dev";
-  var LOG_URL = "";   // ← dán URL Apps Script (https://script.google.com/macros/s/.../exec)
+  var LOG_URL = "https://script.google.com/macros/s/AKfycby2zbmite7p5xRvUBmzJvX9edJK5HVuzc2BYiUJrY9-avZYXY-UwCdhwP1CrcwF8_uw/exec";   // Apps Script "Ứng dụng web" → Google Sheets "Nhat ky tra cuu So tay CDHA" (bật 18/11/2026)
   var seen = {};
   function ymd() {
     var d = new Date();
