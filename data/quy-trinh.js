@@ -7000,6 +7000,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-chau-phu-khoa-nu",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
     ten: "MRI chậu – phụ khoa nữ",
+    chuoiXung: { chinh: ["Sagittal T2W TSE High-Res (theo trục dọc tử cung)", "Axial-Obl T2W High-Res (vuông góc thân / cổ tử cung)", "Coronal-Obl T2W High-Res (song song thân tử cung)", "Axial T1W TSE + T1 Fat Sat", "Axial DWI / ADC (b0, b500, b800–1000)"], boSung: ["Dynamic 3D T1 FS + C (K cổ TC, K niêm mạc TC, u buồng trứng nghi ác, DIE)", "Axial / Coronal T1 FS + C"], anTS: ["Mặt phẳng T2 High-Res"] },
     tuKhoa: ["chau nu", "phu khoa", "female pelvis", "u xo tu cung", "adenomyosis", "lac noi mac", "endometriosis", "die", "u buong trung", "o-rads", "ung thu co tu cung", "ung thu niem mac tu cung", "junctional zone"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Sense Torso Coil, phủ từ mào chậu xuống hết khớp mu & tầng sinh môn" },
@@ -7061,12 +7062,17 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; thận trọng Buscopan ở bệnh nhân glôcôm góc đóng, bí tiểu do phì đại tiền liệt tuyến, nhịp tim nhanh."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-chau-axial.jpg", caption: "Đặt lát Axial phủ khung chậu: từ sàn chậu tới mào chậu trên ảnh định vị Coronal. Các lát chếch theo tử cung / tiền liệt tuyến / ống hậu môn / trực tràng đặt trên ảnh Sagittal T2 theo protocol khoa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.5" },
+      { src: "images/mri/mri-chau-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh định vị Coronal: phủ từ thành chậu trái tới thành chậu phải", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.3" }
+    ],
     nguon: "Protocol MRI chậu nữ & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-chau-tien-liet",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
     ten: "MRI tiền liệt tuyến (mpMRI, PI-RADS v2.1)",
+    chuoiXung: { chinh: ["Sagittal T2W TSE", "Axial-Obl T2W High-Res ≤ 3 mm", "Coronal T2W High-Res", "Axial-Obl DWI / ADC (b0, b800–1000, high-b ≥ 1400)", "DCE Dynamic 3D + Gd (≤ 15 s/thì, kéo dài > 2 phút)", "Axial T1W / T2W FOV lớn (hạch & xương chậu)"], boSung: ["3D Dynamic thở tự do 4D Radial (BN không nín thở)"], anTS: ["Bộ xung mpMRI"] },
     tuKhoa: ["tien liet tuyen", "prostate", "mpmri", "pi-rads", "pirads", "dwi", "adc", "dce", "vung ngoai vi", "pz", "vung chuyen tiep", "tz", "ung thu tien liet tuyen", "phu khoa nam"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil (tối đa SNR vùng tiểu khung)" },
@@ -7129,12 +7135,17 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI; thận trọng Buscopan (glôcôm góc đóng, bí tiểu, nhịp nhanh)."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-chau-axial.jpg", caption: "Đặt lát Axial phủ khung chậu: từ sàn chậu tới mào chậu trên ảnh định vị Coronal. Các lát chếch theo tử cung / tiền liệt tuyến / ống hậu môn / trực tràng đặt trên ảnh Sagittal T2 theo protocol khoa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.5" },
+      { src: "images/mri/mri-chau-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh định vị Coronal: phủ từ thành chậu trái tới thành chậu phải", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.3" }
+    ],
     nguon: "Protocol MRI tiền liệt tuyến mpMRI (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-chau-ro-hau-mon",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
     ten: "MRI đường rò & áp xe hậu môn",
+    chuoiXung: { chinh: ["Sagittal T2W (định vị góc nghiêng ống hậu môn)", "Axial-Obl T2 FS / STIR ≤ 3 mm (vuông góc ống hậu môn)", "Coronal-Obl T2 FS / STIR ≤ 3 mm (song song ống hậu môn)", "Axial-Obl T2W High-Res", "Coronal-Obl T2W High-Res", "T1 FS + C 3 mặt phẳng (bắt buộc)"], anTS: ["Mặt cắt chủ lực"] },
     tuKhoa: ["ro hau mon", "duong ro hau mon", "ap xe hau mon", "anal fistula", "perianal abscess", "parks", "co that", "tang sinh mon", "stir", "t1 fs", "co nang hau mon"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil, phủ từ mào chậu đến tầng sinh môn" },
@@ -7188,12 +7199,17 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-chau-axial.jpg", caption: "Đặt lát Axial phủ khung chậu: từ sàn chậu tới mào chậu trên ảnh định vị Coronal. Các lát chếch theo tử cung / tiền liệt tuyến / ống hậu môn / trực tràng đặt trên ảnh Sagittal T2 theo protocol khoa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.5" },
+      { src: "images/mri/mri-chau-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh định vị Coronal: phủ từ thành chậu trái tới thành chậu phải", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.3" }
+    ],
     nguon: "Protocol MRI đường rò hậu môn & ung thư trực tràng (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-chau-ung-thu-truc-trang",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chậu",
     ten: "MRI ung thư trực tràng (chẩn đoán giai đoạn)",
+    chuoiXung: { chinh: ["Sagittal T2W High-Res (định vị u thấp / giữa / cao)", "Axial-Obl T2W High-Res ≤ 3 mm VUÔNG GÓC thành trực tràng tại u", "Axial DWI / ADC (b0, b800, b1000–1400)"], boSung: ["Coronal-Obl T2W (u thấp)", "3D T1 FS e-THRIVE + C (nghi tái phát, sau NCRT, xâm lấn bàng quang)"], anTS: ["Mặt cắt quyết định"] },
     tuKhoa: ["ung thu truc trang", "rectal cancer", "dai trang doan thap", "t-staging", "t-stage", "mrf", "crm", "ncrt", "mac treo truc trang", "dwi", "gel truc trang"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Pelvic Phased-Array Coil, phủ mào chậu → tầng sinh môn" },
@@ -7245,6 +7261,10 @@ window.SOTAY_QUYTRINH = [
         "Khi có tiêm: chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-chau-axial.jpg", caption: "Đặt lát Axial phủ khung chậu: từ sàn chậu tới mào chậu trên ảnh định vị Coronal. Các lát chếch theo tử cung / tiền liệt tuyến / ống hậu môn / trực tràng đặt trên ảnh Sagittal T2 theo protocol khoa", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.5" },
+      { src: "images/mri/mri-chau-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh định vị Coronal: phủ từ thành chậu trái tới thành chậu phải", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 12.3" }
+    ],
     nguon: "Protocol MRI đường rò hậu môn & ung thư trực tràng (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
 
@@ -7256,6 +7276,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-chi-xuong-mo-mem",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI xương & mô mềm chi",
+    chuoiXung: { chinh: ["T1W TSE (≥ 2 mặt phẳng, phủ toàn bộ chiều dài xương)", "T2 FS / STIR (Axial & Coronal / Sagittal)", "PD FS (Axial / Coronal)", "Axial DWI / ADC (b0, 500, 800–1000)", "Axial T2* mFFE / GE"], boSung: ["T1 FS + C 3 mặt phẳng (nghi u, viêm xương tủy, áp xe)", "T1 3D e-THRIVE Dynamic (DCE 5–6 thì) + ảnh trừ", "T2 FS FOV lớn so sánh 2 bên"] },
     tuKhoa: ["xuong chi", "mo mem chi", "canh tay", "cang tay", "dui", "cang chan", "u xuong", "osteosarcoma", "ewing", "u mo mem", "sarcoma", "lipoma", "liposarcoma", "viem xuong tuy", "ap xe", "penumbra", "skip lesion", "dce"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Body Array / Torso / Dedicated Limb Coil; đặt chi ở Isocenter để xóa mỡ đều" },
@@ -7316,12 +7337,16 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-chi-xuong-dai-coronal.jpg", caption: "Đặt lát Coronal dọc trục chi, phủ toàn bộ chiều dài xương hai bên để so sánh và tìm tổn thương nhảy cóc; lát Axial vượt quá trên và dưới tổn thương", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.20" }
+    ],
     nguon: "Protocol MRI xương & mô mềm chi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-vai",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp vai",
+    chuoiXung: { chinh: ["Coronal-Obl PD FS (song song gân trên gai)", "Sagittal-Obl PD FS (vuông góc gân trên gai)", "Axial-Obl PD FS (vuông góc ổ chảo)", "Coronal-Obl T1 TSE"], boSung: ["3D FFE (sụn viền / sụn khớp)", "Direct MR Arthrography — T1 FS 3 mặt phẳng (nghi rách SLAP / Bankart)"] },
     tuKhoa: ["khop vai", "shoulder", "chop xoay", "gan tren gai", "sun vien", "o chao", "slap", "bankart", "mr arthrography", "ctm"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Shoulder Dedicated Coil" },
@@ -7347,12 +7372,18 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-vai-coronal-chech.jpg", caption: "Đặt lát Coronal chếch trên ảnh Axial: song song cơ / gân trên gai, phủ từ cơ dưới gai (sau) tới cơ trên gai (trước)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.6" },
+      { src: "images/mri/mri-khop-vai-sagittal-chech.jpg", caption: "Đặt lát Sagittal chếch trên ảnh Coronal chếch: vuông góc gân trên gai, phủ từ trong ổ chảo tới rãnh nhị đầu", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.9" },
+      { src: "images/mri/mri-khop-vai-axial.jpg", caption: "Đặt lát Axial: phủ từ đỉnh khớp cùng – đòn tới dưới bờ dưới ổ chảo", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.3" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-goi",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp gối",
+    chuoiXung: { chinh: ["Sagittal-Obl PD FS (song song dây chằng chéo trước)", "Coronal PD FS", "Axial PD FS (khớp bánh chè – đùi)", "Coronal T1 TSE"], boSung: ["3D DESS / MEDIC (bản đồ sụn khớp)", "T1 FS + C (nghi u / viêm / nhiễm trùng sau mổ)"] },
     tuKhoa: ["khop goi", "knee", "acl", "day chang cheo truoc", "pcl", "sun chem", "meniscus", "sun khop", "dess", "medic"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Knee Dedicated Coil" },
@@ -7377,12 +7408,17 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-goi-sagittal-chech.jpg", caption: "Đặt lát Sagittal chếch trên ảnh Axial: nghiêng 5–10° song song dây chằng chéo trước, phủ từ dây chằng bên ngoài tới dây chằng bên trong", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.11" },
+      { src: "images/mri/mri-khop-goi-coronal.jpg", caption: "Đặt lát Coronal trên ảnh Sagittal: song song bờ sau hai lồi cầu đùi, phủ từ lồi cầu đùi (sau) tới xương bánh chè (trước)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.14" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-hang",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp háng",
+    chuoiXung: { chinh: ["Coronal STIR 2 bên (tầm soát, FOV 360–400)", "Coronal T1 2 bên", "PD FS Oblique 1 bên (song song cổ xương đùi)", "T1 Oblique 1 bên"], boSung: ["Direct MR Arthrography (nghi rách sụn viền ổ cối – FAI)"] },
     tuKhoa: ["khop hang", "hip", "avn", "hoai tu vo mach", "chom xuong dui", "gay co xuong dui", "fai", "va cham hang o coi", "sun vien o coi"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Body/Pelvic Array (tầm soát 2 bên) + Surface Coil (khu trú 1 bên)" },
@@ -7406,12 +7442,17 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-hang-axial.jpg", caption: "Đặt lát Axial 2 bên trên ảnh Coronal: phủ toàn bộ khớp háng hai bên (tầm soát)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.3" },
+      { src: "images/mri/mri-khop-hang-sagittal.jpg", caption: "Đặt lát Sagittal 1 bên: phủ từ mặt ngoài mấu chuyển lớn qua toàn bộ phần khớp của ổ cối", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.4" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-khuyu",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp khuỷu tay",
+    chuoiXung: { chinh: ["Coronal-Obl PD FS (song song 2 lồi cầu cánh tay)", "Axial-Obl PD FS", "Sagittal PD FS", "T1 TSE"], boSung: ["3D FFE (đánh giá sụn)", "T1 FS + C (nghi u / viêm / áp xe)"] },
     tuKhoa: ["khop khuyu", "elbow", "tennis elbow", "golfer elbow", "viem loi cau", "gan nhi dau", "superman"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Elbow / Surface Coil" },
@@ -7435,12 +7476,17 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-khuyu-axial.jpg", caption: "Đặt lát Axial trên ảnh Coronal: vuông góc trục dài xương cánh tay – cẳng tay", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.21" },
+      { src: "images/mri/mri-khop-khuyu-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh Coronal: vuông góc mặt phẳng Coronal, phủ từ trong ra ngoài khớp khuỷu", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.18" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-co-tay",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp cổ tay",
+    chuoiXung: { chinh: ["Coronal PD FS (song song mỏm trâm quay – trâm trụ)", "Axial PD FS", "Sagittal PD FS", "T1 TSE"], boSung: ["3D FFE (dây chằng & sụn)", "Direct MR Arthrography (nghi rách TFCC / dây chằng nội tại)", "T1 FS + C (nghi u / viêm)"] },
     tuKhoa: ["khop co tay", "wrist", "tfcc", "sun soi tam giac", "day chang thuyen nguyet", "hoai tu xuong thuyen", "kienbock", "xuong nguyet"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Wrist Dedicated Coil" },
@@ -7463,12 +7509,18 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-co-tay-coronal.jpg", caption: "Đặt lát Coronal trên ảnh Axial: song song hàng xương cổ tay gần (khớp quay – trụ dưới thường không cùng trục)", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.25" },
+      { src: "images/mri/mri-khop-co-tay-axial.jpg", caption: "Đặt lát Axial trên ảnh Coronal: qua khớp / vùng tổn thương", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.30" },
+      { src: "images/mri/mri-khop-co-tay-sagittal.jpg", caption: "Đặt lát Sagittal trên ảnh Coronal: vuông góc mặt phẳng Coronal", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 13.33" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-khop-co-chan",
     phanHe: "ct-mri", modality: "MRI", nhom: "Chi & các khớp",
     ten: "MRI khớp cổ chân",
+    chuoiXung: { chinh: ["Sagittal PD FS", "Axial-Obl PD FS", "Coronal-Obl PD FS", "T1 TSE"], boSung: ["STIR (cổ chân lệch tâm Isocenter)", "T1 FS + C (nghi u / viêm / áp xe)"] },
     tuKhoa: ["khop co chan", "ankle", "gan achilles", "day chang sen mac", "got mac", "can ban chan", "vom sen", "olt"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Ankle / Foot Dedicated Coil" },
@@ -7492,6 +7544,10 @@ window.SOTAY_QUYTRINH = [
         ]
       }}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-khop-co-chan-axial.jpg", caption: "Đặt lát Axial trên ảnh Sagittal: phủ từ gốc gân Achilles tới hết xương gót", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.22" },
+      { src: "images/mri/mri-khop-co-chan-coronal.jpg", caption: "Đặt lát Coronal trên ảnh Sagittal: phủ từ gân Achilles tới nền các xương bàn chân", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 14.26" }
+    ],
     nguon: "Protocol MRI khớp ngoại vi (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
 
@@ -7503,6 +7559,7 @@ window.SOTAY_QUYTRINH = [
     id: "mri-vu-dong-hoc",
     phanHe: "ct-mri", modality: "MRI", nhom: "Vú",
     ten: "MRI động học tuyến vú (DCE-MRI, BI-RADS)",
+    chuoiXung: { chinh: ["Axial T2W Fat Sat / STIR", "Axial T1W Non-Fat Sat", "Axial DWI / ADC (b0, b800–1000)", "DCE 3D T1 FS (mTHRIVE): 1 thì Native + 5–6 thì sau tiêm, 60 s/thì", "Coronal T1 FS sau tiêm (hạch nách)"] },
     tuKhoa: ["vu", "tuyen vu", "breast", "dce-mri", "dce", "dynamic", "bi-rads", "birads", "duong cong dong hoc", "kinetic", "ung thu vu", "idc", "ilc", "dcis", "subtraction", "mip", "prone"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Breast Dedicated Phased-Array Coil (7–16 kênh) — không dùng coil bề mặt thường" },
@@ -7558,12 +7615,16 @@ window.SOTAY_QUYTRINH = [
         "Chỉ tiêm Gadolinium khi eGFR > 30 mL/phút/1.73m²; kiểm tra chống chỉ định MRI trước khi chụp."
       ]}
     ],
+    hinhAnh: [
+      { src: "images/mri/mri-vu-axial.jpg", caption: "Phạm vi Axial cả hai vú (nằm sấp): từ xương ức vào trong tới hõm nách ra ngoài; từ đuôi nách phía trên tới núm vú, phía sau phủ cơ ngực lớn và thành ngực", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 10.25" }
+    ],
     nguon: "Protocol MRI vú & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
   {
     id: "mri-vu-tui-nguc",
     phanHe: "ct-mri", modality: "MRI", nhom: "Vú",
     ten: "MRI vú kiểm tra túi ngực (silicone)",
+    chuoiXung: { chinh: ["Axial Silicone-only T2W (xóa nước & mỡ)", "Axial Water-only T2W (xóa silicone)", "Axial T2W FSE Non-Fat Sat"], boSung: ["DCE 3D T1 FS + C (nghi u vú đi kèm, viêm bao xơ, BIA-ALCL)"], anTS: ["Chuỗi xung chuyên biệt"] },
     tuKhoa: ["tui nguc", "implant", "silicone", "vo tui nguc", "linguine sign", "keyhole", "teardrop", "bao xo", "bia-alcl", "silicone-only", "water-only", "granuloma", "prone"],
     thongSo: [
       { ten: "Cuộn thu (Coil)", giaTri: "Breast Dedicated Phased-Array Coil" },
@@ -7598,6 +7659,9 @@ window.SOTAY_QUYTRINH = [
           ["Axial T2W FSE Non-FS", "Axial", "4000", "80", "4.0mm", "10%", "320–340", "Vỏ bao: nếp gấp sinh lý vs dải vỡ"]
         ]
       }}
+    ],
+    hinhAnh: [
+      { src: "images/mri/mri-vu-axial.jpg", caption: "Phạm vi Axial cả hai vú (nằm sấp): từ xương ức vào trong tới hõm nách ra ngoài; từ đuôi nách phía trên tới núm vú, phía sau phủ cơ ngực lớn và thành ngực", nguon: "Westbrook C. Handbook of MRI Technique, Fig. 10.25" }
     ],
     nguon: "Protocol MRI vú & bệnh lý (1.5T Philips) — Khoa CĐHA BVHVGL"
   },
