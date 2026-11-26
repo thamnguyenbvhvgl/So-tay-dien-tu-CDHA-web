@@ -5269,7 +5269,7 @@ window.SOTAY_QUYTRINH = [
       { ten: "Phạm vi & chiều quét", giaTri: "Từ đáy phổi (vòm hoành) → đỉnh phổi; chiều quét BẮT BUỘC dưới → trên (Caudocranial)" },
       { ten: "Điện thế / Dòng", giaTri: "100–120 kVp (80–100 kVp ở 64 dãy để tăng đậm độ I-ốt) · Auto mA 150–350" },
       { ten: "Thuốc cản quang", giaTri: "50–75 mL (350–370 mgI/mL) · 4.5–5.0 mL/s + đuổi 30–40 mL NaCl" },
-      { ten: "Định thì", giaTri: "Bolus tracking — ROI THÂN ĐM phổi chính, ngưỡng 70–100 HU, delay 2–3 giây (đạt đỉnh nhanh 8–12 giây)" },
+      { ten: "Định thì", giaTri: "Bolus tracking — ROI THÂN ĐM phổi chính, ngưỡng 90–100 HU, delay 3–4 giây (đạt đỉnh nhanh 8–12 giây)" },
       { ten: "Tái tạo & cửa sổ", giaTri: "0.625–1.25 mm; cửa sổ mạch máu WL 150–180 / WW 700" }
     ],
     noiDung: [
@@ -5295,7 +5295,7 @@ window.SOTAY_QUYTRINH = [
       { tieuDe: "Tiêm thuốc & định thì", items: [
         "Bolus ngắn đậm 50–70 mL, tốc độ rất cao 4.5–5.0 mL/s (máy 2 nòng).",
         "Bơm đuổi 30–40 mL NaCl cùng tốc độ — rửa sạch thuốc đọng ở tim phải & TMC trên, triệt xảo ảnh cứng hóa chùm tia che ĐM phổi phải.",
-        "Bolus tracking ROI thân ĐM phổi chính, ngưỡng 70–100 HU, kích hoạt tức thì (delay 2–3 giây)."
+        "Bolus tracking ROI thân ĐM phổi chính, ngưỡng 90–100 HU, delay 3–4 giây sau kích hoạt."
       ]},
       { tieuDe: "Cửa sổ, dựng hình & tiêu chuẩn đạt", items: [
         "Cửa sổ: Mạch máu (WL 150–180 / WW 600–800), Trung thất, Phổi (WL −600…−700 / WW 1200–1600 — tìm nhồi máu phổi hình nêm Hampton's Hump).",
