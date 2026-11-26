@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Đo thời gian tra cứu – Sổ tay điện tử CĐHA</title>
+<style>
+  :root{--bg:#f4f6fa;--surface:#fff;--text:#0f172b;--soft:#526079;--line:#e2e8f0;
+        --brand:#15509c;--brand-ink:#0e3a73;--wash:rgba(21,80,156,.08);--danger:#d81f26;--ok:#1b7f4b;--warn:#b26a00}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  header{background:var(--surface);border-bottom:1px solid var(--line);padding:12px 16px}
+  header b{color:var(--brand-ink);font-size:16px}
+  header span{color:var(--soft);font-size:13px;margin-left:8px}
+  main{max-width:720px;margin:20px auto 48px;padding:0 16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+  h1{font-size:22px;margin:0 0 4px} h2{font-size:18px;margin:0 0 10px}
+  p.sub{color:var(--soft);margin:0 0 16px;font-size:13.5px}
+  label{display:block;font-size:13px;color:var(--soft);margin:12px 0 4px}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--line);border-radius:9px;padding:0 12px;font:inherit;background:#fff;color:var(--text)}
+  textarea{height:84px;padding:10px 12px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+  .seg{display:flex;gap:8px;flex-wrap:wrap}
+  .seg button{flex:1 1 120px}
+  button{height:44px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 16px}
+  button.pri{background:var(--brand);border-color:var(--brand);color:#fff}
+  button.big{height:64px;font-size:20px;width:100%}
+  button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+  button.no{background:var(--danger);border-color:var(--danger);color:#fff}
+  button.sel{background:var(--wash);border-color:var(--brand);color:var(--brand-ink)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  .q{font-size:19px;font-weight:600;margin:6px 0 14px}
+  .meta{display:flex;justify-content:space-between;color:var(--soft);font-size:13px}
+  .clock{font-size:64px;font-weight:800;text-align:center;font-variant-numeric:tabular-nums;letter-spacing:-.02em;margin:10px 0}
+  .clock.warn{color:var(--warn)} .clock.over{color:var(--danger)}
+  .bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:16px}
+  .bar i{display:block;height:100%;background:var(--brand);width:0}
+  .key{background:var(--wash);border-left:4px solid var(--brand);border-radius:8px;padding:10px 12px;margin:12px 0;font-size:14px}
+  .hint{font-size:13px;color:var(--soft)}
+  .err{color:var(--danger);font-size:13px;min-height:18px;margin-top:8px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+  th{color:var(--soft);font-weight:600}
+  .tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;font-weight:700}
+  .t-dung{background:#e3f4ea;color:var(--ok)} .t-sai{background:#fde6e6;color:var(--danger)} .t-ko{background:#fff1dc;color:var(--warn)} .t-cho{background:var(--wash);color:var(--brand-ink)}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .hide{display:none}
+  .lk{border-top:1px solid var(--line);padding:12px 0}
+  .lk p{margin:0 0 8px;font-weight:600}
+  .lk .opts{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  .lk .opts button{height:auto;min-height:58px;padding:6px 2px;font-size:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.2}
+  .lk .opts button small{font-size:11.5px;font-weight:500;color:var(--soft)}
+  .lk .opts button.sel small{color:var(--brand-ink)}
+  .chk{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:15px}
+  .chk input{width:20px;height:20px;flex:none}
+  .lk.miss{background:#fde6e6;border-radius:8px;padding:12px 8px}
+</style>
+</head>
+<body>
+<header><b>Đo thời gian tra cứu</b><span>Sổ tay điện tử CĐHA · BV Hùng Vương Gia Lai</span></header>
+<main>
+
+<!-- ===================== MÀN 1: THÔNG TIN ===================== -->
+<section id="scrSetup" class="card">
+  <h1>Thông tin lượt thử</h1>
+  <p class="sub">Người giám sát điền trước khi người thử bắt đầu. Không ghi họ tên, chỉ ghi mã.</p>
+  <div class="row">
+    <div><label>Mã người thử *</label><input id="fMa" placeholder="VD: KTV01" autocomplete="off"></div>
+    <div><label>Người giám sát</label><input id="fGs" placeholder="VD: GS01" autocomplete="off"></div>
+  </div>
+  <label>Thâm niên *</label>
+  <div class="seg" data-f="thamNien"><button>&lt; 2 năm</button><button>2–5 năm</button><button>&gt; 5 năm</button></div>
+  <label>Phương pháp tra cứu *</label>
+  <div class="seg" data-f="phuongPhap"><button>Tài liệu giấy/Word</button><button>Sổ tay điện tử</button></div>
+  <label>Bộ đề *</label>
+  <div class="seg" data-f="boDe"><button>A</button><button>B</button></div>
+  <div class="err" id="setupErr"></div>
+  <div class="actions"><button class="pri" id="btnVao">Vào bài →</button></div>
+</section>
+
+<!-- ===================== MÀN 2: CÂU HỎI ===================== -->
+<section id="scrQ" class="card hide">
+  <div class="meta"><span id="qPos">Câu 1/5</span><span id="qWho"></span></div>
+  <div class="bar"><i id="qBar"></i></div>
+  <div class="q" id="qText"></div>
+
+  <!-- bước a: đọc đề -->
+  <div id="stRead">
+    <p class="hint">Đọc kỹ đề. Đồng hồ <b>chưa chạy</b>. Khi sẵn sàng tra cứu, bấm Bắt đầu.</p>
+    <button class="pri big" id="btnStart">▶ Bắt đầu</button>
+  </div>
+
+  <!-- bước b: đang tra -->
+  <div id="stRun" class="hide">
+    <div class="clock" id="clock">0.0</div>
+    <p class="hint" style="text-align:center">Giới hạn <span id="limTxt"></span> giây. Tra bằng phương pháp đã chọn.</p>
+    <button class="ok big" id="btnFound">✓ Đã tìm thấy</button>
+    <div class="actions"><button id="btnGiveUp">Không tìm được</button></div>
+  </div>
+
+  <!-- bước c: thí sinh ghi câu trả lời (không hiện đáp án) -->
+  <div id="stGrade" class="hide">
+    <div class="clock" id="clockFinal"></div>
+    <p class="hint" style="text-align:center">Đồng hồ đã dừng. Thời gian ghi câu trả lời không tính vào kết quả.</p>
+    <label>Câu trả lời của bạn *</label>
+    <textarea id="fTraLoi" placeholder="Ghi đủ các ý đề yêu cầu"></textarea>
+    <div class="err" id="ansErr"></div>
+    <div class="actions"><button class="pri big" id="btnSubmit">Gửi câu trả lời →</button></div>
+  </div>
+</section>
+
+<!-- ===================== MÀN 2b: KHẢO SÁT HÀI LÒNG ===================== -->
+<section id="scrSurvey" class="card hide">
+  <h2>Khảo sát mức độ hài lòng với Sổ tay điện tử</h2>
+  <p class="sub">Khoảng 3 phút. Không có câu trả lời đúng hay sai; xin trả lời theo cảm nhận thật của anh/chị sau khi đã dùng Sổ tay. Kết quả chỉ dùng để cải tiến Sổ tay.</p>
+  <h3 style="font-size:15px;margin:8px 0 0">Phần 1. Mức độ dễ sử dụng</h3>
+  <p class="hint" style="margin:2px 0 4px">Mỗi câu chọn 1 mức: 1 Hoàn toàn không đồng ý · 2 Không đồng ý · 3 Phân vân · 4 Đồng ý · 5 Hoàn toàn đồng ý</p>
+  <div id="susBox"></div>
+  <h3 style="font-size:15px;margin:16px 0 0">Phần 2. Đánh giá chung</h3>
+  <div id="extraBox"></div>
+  <div class="lk"><p>13. Anh/chị sẽ mở Sổ tay trong những tình huống nào? (chọn nhiều)</p><div id="thBox"></div></div>
+  <div class="lk"><p>14. Góp ý để Sổ tay tốt hơn (không bắt buộc)</p><textarea id="fGopY" placeholder="Nội dung còn thiếu, khó tìm, cần sửa…"></textarea></div>
+  <div class="err" id="svErr"></div>
+  <div class="actions"><button class="pri big" id="btnSurvey">Gửi khảo sát →</button></div>
+</section>
+
+<!-- ===================== MÀN 3: TỔNG KẾT ===================== -->
+<section id="scrDone" class="card hide">
+  <h2>Hoàn thành lượt thử</h2>
+  <p class="hint">Câu trả lời sẽ được chấm sau theo barem của khoa.</p>
+  <p class="sub" id="doneSub"></p>
+  <table><thead><tr><th>Câu</th><th>Thời gian (giây)</th><th>Trạng thái</th></tr></thead><tbody id="doneBody"></tbody></table>
+  <div class="actions">
+    <button class="pri" id="btnNext">Lượt thử tiếp theo</button>
+    <button id="btnCsv">⬇ Tải CSV toàn bộ</button>
+    <button id="btnCsvKs">⬇ Tải CSV khảo sát</button>
+  </div>
+  <p class="hint" id="sendNote" style="margin-top:12px"></p>
+</section>
+
+</main>
+<script>
+/* ============================================================================
+   CẤU HÌNH — SỬA Ở ĐÂY
+   ----------------------------------------------------------------------------
+   ĐÁP ÁN KHÔNG ĐỂ TRONG FILE NÀY (trang công khai, xem được mã nguồn).
+   Barem chấm nằm ở file riêng "dap-an-cham-diem.csv" — chỉ người chấm giữ.
+   Bộ A và Bộ B: cùng dạng câu, cùng số ý chấm (xem barem).
+   ============================================================================ */
+var GIOI_HAN_GIAY = 180;
+
+// Cùng địa chỉ Apps Script mà assets/log.js đang dùng (nhật ký tra cứu).
+var LOG_URL = "https://script.google.com/macros/s/AKfycby2zbmite7p5xRvUBmzJvX9edJK5HVuzc2BYiUJrY9-avZYXY-UwCdhwP1CrcwF8_uw/exec";
+
+var BO_DE = {
+  // BỘ ĐỀ A — dùng cho lượt đo Trước (Pre-test)
+  A: [
+    { ten: "X-quang – tư thế bổ sung",
+      de:  "Bệnh nhân nam 28 tuổi ngã chống tay, đau chói đầu dưới xương quay; phim cổ tay thẳng – nghiêng chuẩn chưa rõ đường gãy xương thuyền. Nêu tên tư thế bổ sung tối ưu nhất và góc hướng tia trung tâm (CR)."  },
+    { ten: "CT – liều thuốc & thì chụp",
+      de:  "Bệnh nhân nam 64 kg, chức năng thận bình thường, chỉ định CT hệ tiết niệu (CTU) tiêm một lần (single-bolus) đánh giá sỏi niệu quản và đường bài xuất. Theo protocol của khoa: nêu thể tích thuốc cản quang, tốc độ tiêm và thời gian chờ chụp pha bài tiết."  },
+    { ten: "MRI – protocol chuyên sâu",
+      de:  "Chụp MRI tuyến tiền liệt đa thông số (mpMRI) trên máy 1.5T Philips, bệnh nhân lớn tuổi khó nín thở khi chụp chuỗi xung động học tiêm thuốc (DCE). Nêu tên kỹ thuật thu nhận giúp bệnh nhân thở tự do và cách lấy mẫu k-space của kỹ thuật này."  },
+    { ten: "An toàn MRI – sàng lọc",
+      de:  "Bệnh nhân chuẩn bị chụp MRI sọ não khai đã đặt stent mạch vành cách đây 3 tuần và có mảnh kim loại nhỏ nghi trong hốc mắt do làm nghề hàn xì. Nêu hướng xử trí an toàn bắt buộc với từng yếu tố trước khi đưa vào phòng từ trường 1.5T."  },
+    { ten: "Cấp cứu – phản vệ độ IV",
+      de:  "Trong phòng CT, 1 phút sau tiêm thuốc cản quang, bệnh nhân người lớn đột ngột tím tái, mất ý thức, ngừng thở, không bắt được mạch cảnh (phản vệ độ IV). Nêu 2 hành động ưu tiên thực hiện đồng thời, tỷ lệ ép tim : thổi ngạt và liều adrenalin tĩnh mạch."  },
+    { ten: "X-quang – thông số phát tia",
+      de:  "Chụp X-quang khung chậu tư thế trước sau (khớp háng hai bên) cho người lớn. Theo quy trình của khoa: nêu thông số kV/mAs và có dùng lưới lọc hay không." },
+    { ten: "CT – định thì bolus tracking",
+      de:  "Chụp CT động mạch phổi (CTPA) nghi thuyên tắc phổi, định thì bằng bolus tracking. Nêu vị trí đặt ROI, ngưỡng kích hoạt (HU) và thời gian trễ sau kích hoạt." },
+    { ten: "MRI – cột sống",
+      de:  "Bệnh nhân đau thắt lưng lan chân, chỉ định MRI cột sống thắt lưng nghi thoát vị đĩa đệm. Nêu cuộn thu (coil) sử dụng, cách đặt lát cắt Axial và có cần tiêm thuốc đối quang từ không." },
+    { ten: "MRI – sọ não chuyên sâu",
+      de:  "Bệnh nhân nữ tăng Prolactin, chỉ định MRI tuyến yên tìm vi u. Nêu yêu cầu FOV và độ dày lát cắt, thời điểm khởi chạy chuỗi Dynamic T1 Coronal so với lúc bơm thuốc, và tốc độ tiêm thuốc đối quang từ." },
+    { ten: "An toàn – thuốc đối quang từ & đối tượng đặc biệt",
+      de:  "Bệnh nhân nặng 60 kg chụp MRI có tiêm, dùng thuốc đối quang từ nồng độ 0,5 mmol/mL (Dotarem). Nêu điều kiện chức năng thận bắt buộc kiểm tra và thể tích thuốc cần tiêm." }
+  ],
+  // BỘ ĐỀ B — dùng cho lượt đo Sau (Post-test). Song song với Bộ A theo từng vị trí câu
+  // (cùng phân hệ, cùng đường tra, cùng số ý chấm). Đáp án đối chiếu nội dung website.
+  B: [
+    { ten: "X-quang – tư thế bổ sung",
+      de:  "Bệnh nhân lớn tuổi nghi tắc ruột, quá yếu, không thể đứng hoặc ngồi để chụp X-quang bụng không chuẩn bị. Nêu tư thế nằm thay thế và hướng tia trung tâm (CR)."  },
+    { ten: "CT – liều thuốc & thì chụp",
+      de:  "Bệnh nhân nặng 65 kg chụp CT gan 3 pha tầm soát ung thư biểu mô tế bào gan (HCC). Theo máy tính liều cản quang và protocol của khoa: nêu thể tích thuốc cản quang, tốc độ tiêm và thời điểm chụp thì động mạch muộn."  },
+    { ten: "MRI – protocol chuyên sâu",
+      de:  "Phụ nữ 42 tuổi chưa mãn kinh, chỉ định MRI vú động học tiêm thuốc (DCE-MRI) trên máy 1.5T Philips. Nêu thời điểm chụp tối ưu theo chu kỳ kinh nguyệt và tư thế bệnh nhân."  },
+    { ten: "An toàn MRI – sàng lọc",
+      de:  "Bệnh nhân chuẩn bị chụp MRI cột sống thắt lưng khai đang mang máy tạo nhịp tim có nhãn \"MR Conditional\" và từng mổ kẹp phình mạch não bằng clip chưa rõ chất liệu. Nêu hướng xử trí an toàn bắt buộc với từng yếu tố trước khi đưa vào phòng từ trường 1.5T."  },
+    { ten: "Cấp cứu – thoát mạch thuốc cản quang",
+      de:  "Đang bơm thuốc cản quang 4,5 mL/s, vùng khuỷu tay bệnh nhân sưng nề, căng tức do thoát mạch khoảng 40 mL thuốc không ion hóa. Sau khi ngừng bơm và báo bác sĩ, nêu 3 việc xử trí tại chỗ."  },
+    { ten: "X-quang – thông số phát tia",
+      de:  "Chụp X-quang khớp gối tư thế trước sau cho người lớn. Theo quy trình của khoa: nêu thông số kV/mAs và có dùng lưới lọc hay không." },
+    { ten: "CT – định thì bolus tracking",
+      de:  "Chụp CT động mạch vành (CCTA), định thì bằng bolus tracking. Nêu vị trí đặt ROI, ngưỡng kích hoạt (HU) và thời gian trễ sau kích hoạt." },
+    { ten: "MRI – cột sống",
+      de:  "Bệnh nhân đau vai gáy lan tay, chỉ định MRI cột sống cổ nghi thoát vị đĩa đệm. Nêu cuộn thu (coil) sử dụng, chuỗi xung Axial dùng để phân biệt gai xương vôi hóa với thoát vị đĩa đệm mềm, và có cần tiêm thuốc đối quang từ không." },
+    { ten: "MRI – sọ não chuyên sâu",
+      de:  "Bệnh nhân động kinh kháng thuốc, chỉ định MRI tìm xơ cứng hồi hải mã. Nêu chuỗi xung cốt lõi, cách định hướng chuỗi xung đó, và chuỗi xung 3D dùng để đánh giá cấu trúc hải mã." },
+    { ten: "An toàn – thuốc đối quang từ & đối tượng đặc biệt",
+      de:  "Sản phụ đang cho con bú vừa chụp MRI có tiêm Gadolinium hỏi có phải ngừng cho con bú không; một bệnh nhân khác có thai 3 tháng có chỉ định chụp MRI. Nêu khuyến cáo cho từng trường hợp." }
+  ],
+
+  // CÂU DỰ PHÒNG (không nằm trong bài đo, đáp án giữ ở file barem): chỉ dùng khi đã xử lý lưu ý.
+  // - Metformin: hiện chỉ nằm trong mục "Chụp niệu đồ tĩnh mạch (UIV)", ô tìm kiếm không tìm thấy → thêm từ khóa "metformin" trước.
+  // - CCTA: máy tính (3,6 mL/s; 47 mL ở 60 kg, IDR 0,021, 13 s) đang lệch với mục quy trình CCTA (4,5–5,5 mL/s; 60–80 mL).
+};
+/* ======================= HẾT PHẦN CẤU HÌNH ======================= */
+
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+  var STORE = "sotay-do-thoi-gian";
+  var luot = null, idx = 0, t0 = 0, tick = null, giay = 0, ketQuaLuot = [];
+
+  function loadAll(){ try { return JSON.parse(localStorage.getItem(STORE) || "[]"); } catch(e){ return []; } }
+  function saveAll(a){ try { localStorage.setItem(STORE, JSON.stringify(a)); } catch(e){} }
+  var tatCa = loadAll();          // bản lưu dự phòng trên máy (mọi lượt thử)
+  var memAll = tatCa.slice();     // dùng khi trình duyệt không cho lưu
+  var STORE_KS = "sotay-khao-sat";
+  var ksAll = (function(){ try { return JSON.parse(localStorage.getItem(STORE_KS) || "[]"); } catch(e){ return []; } })();
+
+  function show(id){ ["scrSetup","scrQ","scrSurvey","scrDone"].forEach(function(s){ $(s).classList.toggle("hide", s!==id); }); }
+  function step(id){ ["stRead","stRun","stGrade"].forEach(function(s){ $(s).classList.toggle("hide", s!==id); }); }
+
+  /* ---------- màn 1 ---------- */
+  var chon = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".seg[data-f]"), function(g){
+    g.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      Array.prototype.forEach.call(g.children, function(x){ x.classList.toggle("sel", x===b); });
+      chon[g.getAttribute("data-f")] = b.textContent.trim();
+    });
+  });
+  $("btnVao").onclick = function(){
+    var ma = $("fMa").value.trim();
+    if(!ma || !chon.thamNien || !chon.phuongPhap || !chon.boDe){ $("setupErr").textContent = "Cần điền mã người thử và chọn đủ Thâm niên, Phương pháp, Bộ đề."; return; }
+    $("setupErr").textContent = "";
+    luot = { ma: ma, giamSat: $("fGs").value.trim(), thamNien: chon.thamNien, phuongPhap: chon.phuongPhap, boDe: chon.boDe };
+    idx = 0; ketQuaLuot = [];
+    $("limTxt").textContent = GIOI_HAN_GIAY;
+    showQ(); show("scrQ");
+  };
+
+  /* ---------- màn 2 ---------- */
+  function deHienTai(){ return BO_DE[luot.boDe][idx]; }
+  function showQ(){
+    var n = BO_DE[luot.boDe].length, q = deHienTai();
+    $("qPos").textContent = "Câu " + (idx+1) + "/" + n + " · " + q.ten;
+    $("qWho").textContent = luot.ma + " · " + luot.phuongPhap + " · Bộ " + luot.boDe;
+    $("qBar").style.width = (idx / n * 100) + "%";
+    $("qText").textContent = q.de;
+    $("clock").textContent = "0.0"; $("clock").className = "clock";
+    $("fTraLoi").value = "";
+    step("stRead");
+  }
+  $("btnStart").onclick = function(){
+    t0 = performance.now(); step("stRun");
+    tick = setInterval(function(){
+      var s = (performance.now() - t0) / 1000;
+      $("clock").textContent = s.toFixed(1);
+      $("clock").className = "clock" + (s >= GIOI_HAN_GIAY*0.8 ? " warn" : "");
+      if(s >= GIOI_HAN_GIAY){ dung(true); }
+    }, 100);
+  };
+  function dung(quaGio){
+    clearInterval(tick); tick = null;
+    giay = quaGio ? GIOI_HAN_GIAY : Math.round((performance.now() - t0) / 100) / 10;
+    $("clockFinal").textContent = giay.toFixed(1) + " s";
+    $("clockFinal").className = "clock" + (quaGio ? " over" : "");
+    step("stGrade");
+    if(quaGio){ ghi("Không tìm được"); }
+  }
+  $("btnFound").onclick = function(){ dung(false); };
+  $("btnGiveUp").onclick = function(){
+    clearInterval(tick); tick = null;
+    giay = GIOI_HAN_GIAY; ghi("Không tìm được");
+  };
+  $("btnSubmit").onclick = function(){
+    if(!$("fTraLoi").value.trim()){ $("ansErr").textContent = "Cần ghi câu trả lời trước khi gửi."; return; }
+    $("ansErr").textContent = "";
+    ghi("Chưa chấm");
+  };
+
+  /* ---------- ghi kết quả ---------- */
+  function ghi(kq){
+    var q = deHienTai();
+    var rec = {
+      thoiDiem: new Date().toISOString(), maNguoiThu: luot.ma, giamSat: luot.giamSat,
+      thamNien: luot.thamNien, phuongPhap: luot.phuongPhap, boDe: luot.boDe,
+      cau: idx + 1, tenCau: q.ten, giay: giay, ketQua: kq, traLoi: $("fTraLoi").value.trim()
+    };
+    ketQuaLuot.push(rec);
+    memAll.push(rec); saveAll(memAll);
+    gui(rec);
+    idx++;
+    if(idx < BO_DE[luot.boDe].length){ showQ(); } else if(luot.boDe === "B"){ moKhaoSat(); } else { tongKet(); }
+  }
+  function gui(r){
+    if(!LOG_URL) return;
+    // Dùng đúng các trường log.js đang gửi (t, u, loai, id, ten, phanHe, page) để
+    // Apps Script hiện tại vẫn ghi được dòng; thêm các trường riêng cho bản script mới.
+    var body = {
+      t: r.thoiDiem, u: r.maNguoiThu, loai: "do-thoi-gian",
+      id: "bo" + r.boDe + "-cau" + r.cau,
+      ten: "Câu " + r.cau + " | " + r.giay + " giây | " + r.ketQua + " | " + r.thamNien + " | GS " + (r.giamSat || "-"),
+      phanHe: r.phuongPhap, page: "do-thoi-gian.html",
+      maNguoiThu: r.maNguoiThu, giamSat: r.giamSat, thamNien: r.thamNien, phuongPhap: r.phuongPhap,
+      boDe: r.boDe, cau: r.cau, tenCau: r.tenCau, giay: r.giay, ketQua: r.ketQua, traLoi: r.traLoi
+    };
+    try {
+      fetch(LOG_URL, { method:"POST", mode:"no-cors", keepalive:true,
+        headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify(body) }).catch(function(){});
+    } catch(e){}
+  }
+
+  /* ---------- màn 2b: khảo sát (thang SUS 10 câu + đánh giá chung) ---------- */
+  var SUS = [
+    "Tôi nghĩ tôi sẽ muốn sử dụng Sổ tay điện tử thường xuyên.",
+    "Tôi thấy Sổ tay phức tạp một cách không cần thiết.",
+    "Tôi thấy Sổ tay dễ sử dụng.",
+    "Tôi nghĩ tôi cần người hướng dẫn kỹ thuật mới sử dụng được Sổ tay.",
+    "Tôi thấy các chức năng của Sổ tay được kết hợp tốt với nhau.",
+    "Tôi thấy Sổ tay có quá nhiều điểm không thống nhất.",
+    "Tôi nghĩ hầu hết đồng nghiệp sẽ học cách dùng Sổ tay rất nhanh.",
+    "Tôi thấy Sổ tay rườm rà, khó dùng.",
+    "Tôi cảm thấy tự tin khi sử dụng Sổ tay.",
+    "Tôi phải học nhiều thứ trước khi có thể sử dụng được Sổ tay."
+  ];
+  // Nhãn 5 mức
+  var THANG_DONG_Y   = ["Hoàn toàn không đồng ý", "Không đồng ý", "Phân vân", "Đồng ý", "Hoàn toàn đồng ý"];
+  var THANG_HAI_LONG = ["Rất không hài lòng", "Không hài lòng", "Bình thường", "Hài lòng", "Rất hài lòng"];
+  var EXTRA = [
+    { k:"haiLong", q:"11. Mức độ hài lòng chung của anh/chị với Sổ tay điện tử", thang: THANG_HAI_LONG },
+    { k:"tinCay",  q:"12. Nội dung Sổ tay đáng tin cậy, có thể áp dụng trong công việc", thang: THANG_DONG_Y }
+  ];
+  var TINH_HUONG = ["Kỹ thuật ít gặp, cần nhớ lại protocol", "Tính liều thuốc cản quang / eGFR", "Cấp cứu (phản vệ, thoát mạch, ngừng tuần hoàn)",
+                    "Ca trực đêm / trực một mình", "Hướng dẫn KTV mới, sinh viên thực tập", "Ít có nhu cầu sử dụng"];
+  var ks = {};
+  function likert(key, text, thang){
+    var d = document.createElement("div"); d.className = "lk"; d.id = "lk-" + key;
+    d.innerHTML = "<p>" + esc(text) + "</p><div class='opts'>" + [1,2,3,4,5].map(function(v){
+      return "<button type='button' data-v='" + v + "'><b>" + v + "</b><small>" + esc(thang[v-1]) + "</small></button>"; }).join("") + "</div>";
+    d.querySelector(".opts").addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.classList.toggle("sel", x===b); });
+      ks[key] = +b.getAttribute("data-v"); d.classList.remove("miss");
+    });
+    return d;
+  }
+  function moKhaoSat(){
+    ks = {};
+    $("susBox").innerHTML = ""; $("extraBox").innerHTML = ""; $("fGopY").value = ""; $("svErr").textContent = "";
+    SUS.forEach(function(q, i){ $("susBox").appendChild(likert("q" + (i+1), (i+1) + ". " + q, THANG_DONG_Y)); });
+    EXTRA.forEach(function(x){ $("extraBox").appendChild(likert(x.k, x.q, x.thang)); });
+    $("thBox").innerHTML = TINH_HUONG.map(function(t, i){ return "<label class='chk'><input type='checkbox' value='" + esc(t) + "'> " + esc(t) + "</label>"; }).join("");
+    show("scrSurvey"); window.scrollTo(0,0);
+  }
+  $("btnSurvey").onclick = function(){
+    var keys = SUS.map(function(_, i){ return "q" + (i+1); }).concat(EXTRA.map(function(x){ return x.k; }));
+    var thieu = keys.filter(function(k){ return !ks[k]; });
+    thieu.forEach(function(k){ $("lk-" + k).classList.add("miss"); });
+    if(thieu.length){ $("svErr").textContent = "Còn " + thieu.length + " câu chưa chọn (tô đỏ)."; $("lk-" + thieu[0]).scrollIntoView({ block:"center" }); return; }
+    var tong = 0;
+    for(var i = 1; i <= 10; i++){ tong += (i % 2 ? ks["q"+i] - 1 : 5 - ks["q"+i]); }
+    var rec = { thoiDiem: new Date().toISOString(), maNguoiThu: luot.ma, giamSat: luot.giamSat, thamNien: luot.thamNien,
+      sus: tong * 2.5, haiLong: ks.haiLong, tinCay: ks.tinCay,
+      tinhHuong: Array.prototype.filter.call(document.querySelectorAll("#thBox input"), function(c){ return c.checked; }).map(function(c){ return c.value; }).join("; "),
+      gopY: $("fGopY").value.trim() };
+    for(var j = 1; j <= 10; j++) rec["q" + j] = ks["q" + j];
+    ksAll.push(rec); try { localStorage.setItem(STORE_KS, JSON.stringify(ksAll)); } catch(e){}
+    if(LOG_URL){
+      var body = { t: rec.thoiDiem, u: rec.maNguoiThu, loai: "khao-sat", id: "sus", ten: "SUS " + rec.sus + " | Hài lòng " + rec.haiLong + "/5",
+        phanHe: "", page: "do-thoi-gian.html" };
+      for(var k in rec) body[k] = rec[k];
+      try { fetch(LOG_URL, { method:"POST", mode:"no-cors", keepalive:true, headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify(body) }).catch(function(){}); } catch(e){}
+    }
+    tongKet();
+  };
+
+  /* ---------- màn 3 ---------- */
+  function tongKet(){
+    $("doneSub").textContent = luot.ma + " · " + luot.thamNien + " · " + luot.phuongPhap + " · Bộ " + luot.boDe;
+    $("doneBody").innerHTML = ketQuaLuot.map(function(r){
+      var cls = r.ketQua === "Không tìm được" ? "t-ko" : "t-cho";
+      return "<tr><td>" + r.cau + ". " + esc(r.tenCau) + "</td><td>" + r.giay.toFixed(1) + "</td><td><span class='tag " + cls + "'>" + r.ketQua + "</span></td></tr>";
+    }).join("");
+    $("sendNote").textContent = "Kết quả đã gửi về Google Sheets và lưu dự phòng trên máy này (" + memAll.length + " dòng). Nên tải CSV sau mỗi buổi thử để chắc chắn không mất dữ liệu.";
+    show("scrDone");
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  $("btnNext").onclick = function(){
+    $("fMa").value = ""; chon = {};
+    Array.prototype.forEach.call(document.querySelectorAll(".seg[data-f] button"), function(b){ b.classList.remove("sel"); });
+    show("scrSetup"); window.scrollTo(0,0);
+  };
+  $("btnCsvKs").onclick = function(){
+    var cols = ["thoiDiem","maNguoiThu","giamSat","thamNien","q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","sus","haiLong","tinCay","tinhHuong","gopY"];
+    taiCsv(cols, ksAll, "khao-sat-hai-long.csv");
+  };
+  function taiCsv(cols, rows, ten){
+    var q = function(v){ v = v == null ? "" : String(v); return /[",\n;]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v; };
+    var csv = "\uFEFF" + cols.join(",") + "\n" + rows.map(function(r){ return cols.map(function(c){ return q(r[c]); }).join(","); }).join("\n");
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv], { type:"text/csv;charset=utf-8" }));
+    a.download = ten; document.body.appendChild(a); a.click(); a.remove();
+  }
+  $("btnCsv").onclick = function(){
+    var cols = ["thoiDiem","maNguoiThu","giamSat","thamNien","phuongPhap","boDe","cau","tenCau","giay","ketQua","traLoi"];
+    var q = function(v){ v = v == null ? "" : String(v); return /[",\n;]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v; };
+    var csv = "﻿" + cols.join(",") + "\n" + memAll.map(function(r){ return cols.map(function(c){ return q(r[c]); }).join(","); }).join("\n");
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv], { type:"text/csv;charset=utf-8" }));
+    a.download = "do-thoi-gian-tra-cuu.csv"; document.body.appendChild(a); a.click(); a.remove();
+  };
+})();
+</script>
+</body>
+</html>
